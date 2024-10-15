@@ -6,90 +6,98 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <nav>
+      <box-icon
+        id="return-btn"
+        color="#f4fcf4"
+        name="home"
+        type="solid"
+        animation="tada-hover"
+      ></box-icon>
+      <box-icon
+        id="next-btn"
+        color="#f4fcf4"
+        name="right-arrow-circle"
+        type="solid"
+        animation="tada-hover"
+      ></box-icon>
+      <box-icon
+        id="submit-btn"
+        color="#f4fcf4"
+        name="right-arrow-circle"
+        type="solid"
+        animation="tada-hover"
+      ></box-icon>
+    </nav>
+
     <div id="welcome-page">
-      <h1>1712 Pracice Quiz</h1>
+      <div id="welcome">
+        <h1>1712 Pracice Quiz</h1>
+        <form id="quiz-selection">
+          <b>Which module(s) do you want to practice?</b><br />
+          <input
+            type="checkbox"
+            id="module1SelectBox"
+            onclick="selectOther()"
+          />
+          <label for="module1SelectBox"> Module 1: The Life Cycle </label><br />
+          <input
+            type="checkbox"
+            id="module2SelectBox"
+            onclick="selectOther()"
+          />
+          <label for="module2SelectBox"> Module 2: Methodologies </label><br />
+          <input
+            type="checkbox"
+            id="module3SelectBox"
+            onclick="selectOther()"
+          />
+          <label for="module3SelectBox"> Module 3: Requirements </label><br />
+          <input
+            type="checkbox"
+            id="module4SelectBox"
+            onclick="selectOther()"
+          />
+          <label for="module4SelectBox"> Module 4: Use Cases </label><br />
+          <input
+            type="checkbox"
+            id="module5SelectBox"
+            onclick="selectOther()"
+          />
+          <label for="module5SelectBox"> Module 5: Data Flow Diagrams </label
+          ><br />
+          <input
+            type="checkbox"
+            id="module6SelectBox"
+            onclick="selectOther()"
+          />
+          <label for="module6SelectBox"> Module 6: Data Modeling </label><br />
+          <input
+            type="checkbox"
+            id="moduleAllSelectBox"
+            onclick="selectAll()"
+          />
+          <label for="moduleAllSelectBox"> All of them! </label><br />
+          <br />
 
-      <form id="quiz-selection">
-        <p>Which module(s) do you want to practice?</p>
-        <input
-          type="checkbox"
-          id="module1"
-          name="module1"
-          value="module1"
-          onclick="selectOther()"
-        />
-        <label for="module1"> Module 1 </label><br />
-        <input
-          type="checkbox"
-          id="module2"
-          name="module2"
-          value="module2"
-          onclick="selectOther()"
-        />
-        <label for="module2"> Module 2 </label><br />
-        <input
-          type="checkbox"
-          id="module3"
-          name="module3"
-          value="module3"
-          onclick="selectOther()"
-        />
-        <label for="module3"> Module 3 </label><br />
-        <input
-          type="checkbox"
-          id="module4"
-          name="module4"
-          value="module4"
-          onclick="selectOther()"
-        />
-        <label for="module4"> Module 4 </label><br />
-        <input
-          type="checkbox"
-          id="module5"
-          name="module5"
-          value="module5"
-          onclick="selectOther()"
-        />
-        <label for="module5"> Module 5 </label><br />
-        <input
-          type="checkbox"
-          id="module6"
-          name="module6"
-          value="module6"
-          onclick="selectOther()"
-        />
-        <label for="module6"> Module 6 </label><br />
-        <input
-          type="checkbox"
-          id="moduleALL"
-          name="moduleALL"
-          value="moduleALL"
-          onclick="selectAll()"
-        />
-        <label for="moduleALL"> All of them!</label><br />
-        <br />
-
-        <label for="questionNum">How many questions per attempt? </label>
-        <select name="questionNum" id="questionNum">
-          <option value="10">10</option>
-          <option value="20">20</option>
-          <option value="30">30</option>
-          <option value="40">40</option>
-          <option value="50">50</option>
-          <option value="ALL">All of them!</option>
-        </select>
-        <br /><br />
-
-        <button type="button" onclick="startQuiz()">Start quiz</button>
-      </form>
+          <label for="questionNum"
+            ><b>How many questions per attempt?</b>
+          </label>
+          <select name="questionNum" id="questionNum">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+            <option value="ALL">All of them!</option>
+          </select>
+        </form>
+      </div>
     </div>
 
-    <div id="quiz-page">
-      <button type="button" onclick="returnHome()">Back</button>
-      <ol id="questions">
-        <li>Question 1</li>
-      </ol>
-    </div>
+    <div id="quiz-page"></div>
+
     <script src="script.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   </body>
 </html>
