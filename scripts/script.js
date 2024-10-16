@@ -126,6 +126,8 @@ submitButton.addEventListener("click", (event) => {
         }
         if (isCorrect) {
             ++correctAnswers;
+        } else {
+            question.className += " incorrect"
         }
     }
     for (let input of quiz.getElementsByTagName("input")) {
@@ -161,6 +163,12 @@ function populateData() {
 }
 
 function generateQuiz(data) {
+    /*
+    <div id="quiz">
+      <h1> Attempt # <h1/>
+      <div id="Q#" class="question"> ... <div/>
+    <div/>
+    */
     div = document.createElement("div")
     div.id = "quiz"
 
@@ -175,6 +183,19 @@ function generateQuiz(data) {
 }
 
 function generateQuestion(question, questionIndex) {
+    /*
+    <div id="Q#" class="question">
+      <p> 
+        <b> Question #. <b/> ... 
+      <p/>
+      <ul>
+        <li>
+            <input type="radio/checkbox" id="Q#/#" class="correct/incorrect">
+            <label for="Q#/#"> <span> ... <span/> <label/> 
+        <li/>
+      <ul/>
+    <div/>
+    */
     const questionText = question[0];
     const choices = Object.entries(question[1].choices)
     const isMultiSelect = question[1].multi_select;
@@ -186,9 +207,9 @@ function generateQuestion(question, questionIndex) {
     const p = document.createElement("p")
 
     const title = document.createElement("b");
-    title.appendChild(document.createTextNode("Question " + (questionIndex + 1) + ". "));
+    title.appendChild(document.createTextNode("Question " + (questionIndex + 1) + "."));
     p.appendChild(title);
-    p.appendChild(document.createTextNode(questionText));
+    p.appendChild(document.createTextNode(" " + questionText));
     div.appendChild(p)
 
     const ul = document.createElement("ul");
@@ -207,8 +228,9 @@ function generateQuestion(question, questionIndex) {
 
         const label = document.createElement("label");
         label.setAttribute("for", input.id);
-        label.setAttribute("class", isCorrect ? "correct" : "incorrect");
-        label.appendChild(document.createTextNode(choiceText));
+        const span = document.createElement("span");
+        span.appendChild(document.createTextNode(choiceText))
+        label.appendChild(span);
         li.appendChild(label);
 
         ul.appendChild(li);
@@ -220,6 +242,18 @@ function generateQuestion(question, questionIndex) {
 
 
 function generateResultsTable() {
+    /*
+    <table id="result-table">
+      <tr>
+        <th> Attempt <th/>
+        <th> Result <th/>
+      <tr/>
+      <tr>
+        <td> # <td/>
+        <td> ...% <td/>
+      <tr>
+    <table/>
+    */
     const table = document.createElement("table");
     table.id = "result-table";
 

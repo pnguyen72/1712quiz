@@ -44,25 +44,37 @@ body > div {
   margin-bottom: 4em;
 }
 
-#quiz label {
-  display: inline-block;
-  width: 50%;
+input {
+  width: 1.15em;
+  height: 1.15em;
 }
-
+select {
+  font-size: 12pt;
+}
+ul label {
+  display: inline-block;
+  margin-left: 0.2em;
+  width: 95%;
+}
 ul {
   list-style-type: none;
   padding-inline-start: 1.5em;
 }
-
 li {
   margin: 0.5em;
 }
-.submitted .correct {
-  background-color: hsl(100, 80%, 70%);
+li:hover input:enabled {
+  transform: scale(1.2);
 }
 
-.submitted .incorrect:checked + label {
-  background-color: hsl(0, 80%, 70%);
+.submitted input.correct + label span {
+  background-color: hsl(100, 80%, 70%);
+}
+.submitted input.correct:not(:checked) {
+  outline: 0.25em solid rgb(0, 127, 0);
+}
+.submitted .incorrect.question > p > b {
+  background-color: hsla(0, 80%, 70%, 75%);
 }
 
 table {
