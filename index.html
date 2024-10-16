@@ -30,75 +30,47 @@
       ></box-icon>
     </nav>
 
-    <div id="welcome-page">
-      <div id="welcome">
-        <h1>1712 Pracice Quiz</h1>
-        <form id="quiz-selection">
-          <b>Which module(s) do you want to practice?</b><br />
-          <input
-            type="checkbox"
-            id="module1SelectBox"
-            onclick="selectOther()"
-          />
-          <label for="module1SelectBox"> Module 1: The Life Cycle </label><br />
-          <input
-            type="checkbox"
-            id="module2SelectBox"
-            onclick="selectOther()"
-          />
-          <label for="module2SelectBox"> Module 2: Methodologies </label><br />
-          <input
-            type="checkbox"
-            id="module3SelectBox"
-            onclick="selectOther()"
-          />
-          <label for="module3SelectBox"> Module 3: Requirements </label><br />
-          <input
-            type="checkbox"
-            id="module4SelectBox"
-            onclick="selectOther()"
-          />
-          <label for="module4SelectBox"> Module 4: Use Cases </label><br />
-          <input
-            type="checkbox"
-            id="module5SelectBox"
-            onclick="selectOther()"
-          />
-          <label for="module5SelectBox"> Module 5: Data Flow Diagrams </label
-          ><br />
-          <input
-            type="checkbox"
-            id="module6SelectBox"
-            onclick="selectOther()"
-          />
-          <label for="module6SelectBox"> Module 6: Data Modeling </label><br />
-          <input
-            type="checkbox"
-            id="moduleAllSelectBox"
-            onclick="selectAll()"
-          />
-          <label for="moduleAllSelectBox"> All of them! </label><br />
-          <br />
+    <div id="home-page">
+      <h1>1712 Pracice Quiz</h1>
+      <form>
+        <b>Which module(s) do you want to practice?</b><br />
+        <input type="checkbox" id="module1SelectBox" onclick="selectOther()" />
+        <label for="module1SelectBox"> Module 1: The Life Cycle </label><br />
+        <input type="checkbox" id="module2SelectBox" onclick="selectOther()" />
+        <label for="module2SelectBox"> Module 2: Methodologies </label><br />
+        <input type="checkbox" id="module3SelectBox" onclick="selectOther()" />
+        <label for="module3SelectBox"> Module 3: Requirements </label><br />
+        <input type="checkbox" id="module4SelectBox" onclick="selectOther()" />
+        <label for="module4SelectBox"> Module 4: Use Cases </label><br />
+        <input type="checkbox" id="module5SelectBox" onclick="selectOther()" />
+        <label for="module5SelectBox"> Module 5: Data Flow Diagrams </label
+        ><br />
+        <input type="checkbox" id="module6SelectBox" onclick="selectOther()" />
+        <label for="module6SelectBox"> Module 6: Data Modeling </label><br />
+        <input type="checkbox" id="moduleAllSelectBox" onclick="selectAll()" />
+        <label for="moduleAllSelectBox"> All of them! </label><br />
+        <br />
 
-          <label for="questionNum"
-            ><b>How many questions per attempt?</b>
-          </label>
-          <select name="questionNum" id="questionNum">
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-            <option value="50">50</option>
-            <option value="ALL">All of them!</option>
-          </select>
-        </form>
-      </div>
+        <label for="questionNum"><b>How many questions per attempt?</b> </label>
+        <select name="questionNum" id="questionNum">
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+          <option value="50">50</option>
+          <option value="ALL">All of them!</option>
+        </select>
+        <br />
+        <br />
+        <br />
+      </form>
+
+      <div id="past-results"></div>
     </div>
 
     <div id="quiz-page"></div>
 
-    <footer id="result-panel">
-    </footer>
+    <footer id="result-panel"></footer>
 
     <script src="script.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>

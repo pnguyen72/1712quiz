@@ -5,13 +5,13 @@ for (let i = 0; i < 6; i++) {
         .then((data) => modules[i] = data);
 }
 
-const welcomePage = document.getElementById("welcome-page");
+const homePage = document.getElementById("home-page");
 const quizPage = document.getElementById("quiz-page");
 const resultPanel = document.getElementById("result-panel");
+const pastResultsContainer = document.getElementById("past-results");
 const nextButton = document.getElementById("next-btn");
 const submitButton = document.getElementById("submit-btn");
 const homeButon = document.getElementById("return-btn");
-const quizSelectionForm = document.getElementById("quiz-selection");
 const questionNum = document.getElementById("questionNum");
 const moduleAllSelectBox = document.getElementById("moduleAllSelectBox")
 const moduleSelectBox = [
@@ -47,18 +47,23 @@ function selectOther() {
 }
 
 let quizData = {};
-let attemptNum = 1;
+let pastResults = [];
 
 homeButon.addEventListener('click', (event) => {
     quizData = {};
     quizPage.childNodes.forEach((element) => element.remove());
     resultPanel.childNodes.forEach((element) => element.remove());
+    resultPanel.childNodes.forEach((element) => element.remove());
+    pastResultsContainer.childNodes.forEach((element) => element.remove());
+    if (pastResults.length > 0) {
+        pastResultsContainer.appendChild(generateResultsTable());
+    }
 
     hideElement(submitButton);
     hideElement(quizPage);
     hideElement(resultPanel);
     showElement(nextButton);
-    showElement(welcomePage);
+    showElement(homePage);
 });
 
 nextButton.addEventListener("click", (event) => {
@@ -78,17 +83,13 @@ nextButton.addEventListener("click", (event) => {
 
     resultPanel.childNodes.forEach((element) => element.remove());
     hideElement(nextButton);
-    hideElement(welcomePage);
+    hideElement(homePage);
     hideElement(resultPanel);
     showElement(submitButton);
     showElement(quizPage);
 });
 
-
-
 submitButton.addEventListener("click", (event) => {
-    ++attemptNum;
-
     const quiz = document.getElementById("quiz");
     quiz.setAttribute("class", "submitted");
 
@@ -108,16 +109,12 @@ submitButton.addEventListener("click", (event) => {
     }
 
     p = document.createElement("p");
-    p.id = "result";
     const accuracy = 100 * correctAnswers / questions.length;
-    result = `${correctAnswers}/${questions.length} (${accuracy.toFixed(2)}%)`;
-    p.appendChild(document.createTextNode(result));
+    pastResults.push(accuracy);
+    resultText = `${correctAnswers}/${questions.length} (${accuracy.toFixed(2)}%)`;
+    p.appendChild(document.createTextNode(resultText));
     resultPanel.appendChild(p);
-
-    const H = 2 * Math.max(accuracy - 50, 0);
-    const S = 80;
-    const L = 60 + 1 / 5 * Math.max(accuracy - 50, 0);
-    resultPanel.style.backgroundColor = `hsl(${H}, ${S}%, ${L}%)`;
+    resultPanel.style.backgroundColor = getColor(accuracy);
 
     hideElement(submitButton);
     showElement(nextButton);
@@ -135,6 +132,12 @@ function shuffle(array) {
     }
 }
 
+function getColor(accuracy, A = 1) {
+    const H = 4 / 3 * Math.max(accuracy - 25, 0);
+    const S = 80;
+    const L = 40 + 3 / 10 * accuracy;
+    return `hsla(${H}, ${S}%, ${L}%, ${A})`
+}
 
 function generateQuiz() {
     const number = questionNum.value
@@ -146,7 +149,7 @@ function generateQuiz() {
     div.id = "quiz"
 
     heading = document.createElement("h1")
-    heading.appendChild(document.createTextNode(`Attempt ${attemptNum}`));
+    heading.appendChild(document.createTextNode(`Attempt ${pastResults.length + 1}`));
     div.appendChild(heading)
 
     quizData.forEach((question, questionIndex) => {
@@ -196,3 +199,39 @@ function generateQuestion(question, questionIndex) {
     return div;
 }
 
+
+function generateResultsTable() {
+    const table = document.createElement("table");
+    table.id = "result-table";
+
+    let tr = document.createElement("tr");
+    {
+        let th = document.createElement("th");
+        th.appendChild(document.createTextNode("Attempt"));
+        tr.appendChild(th)
+    }
+    {
+        let th = document.createElement("th");
+        th.appendChild(document.createTextNode("Result"));
+        tr.appendChild(th);
+    }
+    table.appendChild(tr);
+
+    pastResults.forEach((accuracy, attemptNum) => {
+        let tr = document.createElement("tr");
+        {
+            let td = document.createElement("td");
+            td.appendChild(document.createTextNode(attemptNum + 1));
+            tr.appendChild(td);
+        }
+        {
+            let td = document.createElement("td");
+            td.appendChild(document.createTextNode(`${accuracy.toFixed(0)}%`));
+            tr.appendChild(td);
+        }
+        tr.style.backgroundColor = getColor(accuracy, 0.75)
+        table.appendChild(tr);
+    });
+
+    return table;
+}

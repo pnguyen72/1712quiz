@@ -12,6 +12,11 @@ nav {
   height: 4em;
   display: flex;
 }
+#home-page,
+#quiz-page {
+  display: flex;
+  flex-direction: column;
+}
 
 #result-panel {
   position: fixed;
@@ -33,8 +38,7 @@ box-icon {
   margin: auto;
 }
 
-#welcome,
-#quiz {
+body > div {
   margin-left: 2em;
   margin-right: 2em;
   margin-top: 5em;
@@ -42,9 +46,22 @@ box-icon {
 }
 
 .submitted .correct {
-  background-color: hsl(100, 80%, 60%);
+  background-color: hsl(100, 80%, 70%);
 }
 
 .submitted .incorrect:checked + label {
   background-color: hsl(0, 80%, 70%);
+}
+
+table {
+  border-collapse: collapse;
+  width: 66%;
+  text-align: center;
+}
+td,
+th {
+  border: 1.2pt solid black;
+}
+td:first-child {
+  width: 33%;
 }
