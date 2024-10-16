@@ -5,6 +5,7 @@ for (let i = 0; i < 6; i++) {
         .then((data) => modules[i] = data);
 }
 
+const navbar = document.getElementById("navbar");
 const homePage = document.getElementById("home-page");
 const quizPage = document.getElementById("quiz-page");
 const resultPanel = document.getElementById("result-panel");
@@ -12,7 +13,7 @@ const pastResultsContainer = document.getElementById("past-results");
 const nextButton = document.getElementById("next-btn");
 const submitButton = document.getElementById("submit-btn");
 const homeButon = document.getElementById("return-btn");
-const questionNum = document.getElementById("questionNum");
+const questionNumChoice = document.getElementById("questionNumChoice");
 const moduleAllSelectBox = document.getElementById("moduleAllSelectBox")
 const moduleSelectBox = [
     document.getElementById("module1SelectBox"),
@@ -46,11 +47,14 @@ function selectOther() {
     moduleAllSelectBox.checked = false;
 }
 
-let quizData = {};
+let quizData = [];
 let pastResults = [];
+let currentIndex = 0;
 
 homeButon.addEventListener('click', (event) => {
-    quizData = {};
+    quizData = [];
+    currentIndex = 0;
+
     quizPage.childNodes.forEach((element) => element.remove());
     resultPanel.childNodes.forEach((element) => element.remove());
     resultPanel.childNodes.forEach((element) => element.remove());
@@ -67,21 +71,28 @@ homeButon.addEventListener('click', (event) => {
 });
 
 nextButton.addEventListener("click", (event) => {
-    quizData = {};
-    for (let i = 0; i < 6; i++) {
-        if (moduleSelectBox[i].checked) {
-            quizData = { ...quizData, ...modules[i] }
-        }
+    const questionsNum = questionNumChoice.value;
+    if (questionsNum == "ALL" || currentIndex + questionsNum >= quizData.length) {
+        populateData();
+        currentIndex = 0;
     }
-    quizData = Object.entries(quizData)
 
-    if (quizData.length == 0) return;
+    if (quizData.length == 0) {
+        alert("Invalid selection.");
+        return;
+    }
 
-    shuffle(quizData)
+    let data = quizData
+    if (questionsNum != "ALL") {
+        data = quizData.slice(currentIndex, currentIndex + questionsNum);
+        currentIndex += questionsNum;
+    }
+
     quizPage.childNodes.forEach((element) => element.remove());
-    quizPage.appendChild(generateQuiz());
-
     resultPanel.childNodes.forEach((element) => element.remove());
+    quizPage.appendChild(generateQuiz(data));
+    scrollTo(0, 0);
+
     hideElement(nextButton);
     hideElement(homePage);
     hideElement(resultPanel);
@@ -90,69 +101,74 @@ nextButton.addEventListener("click", (event) => {
 });
 
 submitButton.addEventListener("click", (event) => {
-    const quiz = document.getElementById("quiz");
-    quiz.setAttribute("class", "submitted");
+    let forceSubmit = false;
 
+    const quiz = document.getElementById("quiz");
     const questions = quiz.getElementsByClassName("question");
     let correctAnswers = 0;
     for (let question of questions) {
+        let isAnswered = forceSubmit;
         let isCorrect = true;
         for (let choice of question.getElementsByTagName("input")) {
-            choice.disabled = true;
+            isAnswered = isAnswered || choice.checked || choice.type == "checkbox";
             if (!((choice.className == "correct") == choice.checked)) {
                 isCorrect = false;
             }
+        }
+        if (!isAnswered) {
+            if (!confirm("There are unanswered question(s). Submit anyway?")) {
+                question.style.animation = "blink 1s";
+                question.scrollIntoView();
+                scrollBy(0, -1.33 * navbar.offsetHeight);
+                return;
+            }
+            forceSubmit = true;
         }
         if (isCorrect) {
             ++correctAnswers;
         }
     }
+    for (let input of quiz.getElementsByTagName("input")) {
+        input.disabled = true;
+    }
 
     p = document.createElement("p");
     const accuracy = 100 * correctAnswers / questions.length;
     pastResults.push(accuracy);
-    resultText = `${correctAnswers}/${questions.length} (${accuracy.toFixed(2)}%)`;
+    resultText = `${correctAnswers}/${questions.length} (${accuracy.toFixed(1)}%)`;
     p.appendChild(document.createTextNode(resultText));
     resultPanel.appendChild(p);
     resultPanel.style.backgroundColor = getColor(accuracy);
+    quiz.setAttribute("class", "submitted");
+    scrollTo(0, 0);
 
     hideElement(submitButton);
     showElement(nextButton);
     showElement(resultPanel);
 });
 
-function shuffle(array) {
-    if (array[0][0] == "True") return;
 
-    let currentIndex = array.length;
-    while (currentIndex != 0) {
-        let randomIndex = Math.floor(Math.random() * currentIndex);
-        --currentIndex;
-        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+
+function populateData() {
+    quizData = {};
+    for (let i = 0; i < 6; i++) {
+        if (moduleSelectBox[i].checked) {
+            quizData = { ...quizData, ...modules[i] }
+        }
     }
+    quizData = Object.entries(quizData)
+    shuffle(quizData);
 }
 
-function getColor(accuracy, A = 1) {
-    const H = 4 / 3 * Math.max(accuracy - 25, 0);
-    const S = 80;
-    const L = 40 + 3 / 10 * accuracy;
-    return `hsla(${H}, ${S}%, ${L}%, ${A})`
-}
-
-function generateQuiz() {
-    const number = questionNum.value
-    if (number != "ALL") {
-        quizData = quizData.slice(0, number);
-    }
-
+function generateQuiz(data) {
     div = document.createElement("div")
     div.id = "quiz"
 
     heading = document.createElement("h1")
     heading.appendChild(document.createTextNode(`Attempt ${pastResults.length + 1}`));
-    div.appendChild(heading)
+    div.appendChild(heading);
 
-    quizData.forEach((question, questionIndex) => {
+    data.forEach((question, questionIndex) => {
         div.appendChild(generateQuestion(question, questionIndex))
     });
     return div;
@@ -175,27 +191,30 @@ function generateQuestion(question, questionIndex) {
     p.appendChild(document.createTextNode(questionText));
     div.appendChild(p)
 
+    const ul = document.createElement("ul");
     choices.forEach((choice, choiceIndex) => {
         const choiceText = choice[0];
         const isCorrect = choice[1];
+
+        const li = document.createElement("li");
 
         const input = document.createElement("input")
         input.type = isMultiSelect ? "checkbox" : "radio";
         input.name = "Q" + questionIndex;
         input.id = "Q" + questionIndex + "/" + choiceIndex;
         input.setAttribute("class", isCorrect ? "correct" : "incorrect");
-        div.appendChild(input);
+        li.appendChild(input);
 
         const label = document.createElement("label");
         label.setAttribute("for", input.id);
         label.setAttribute("class", isCorrect ? "correct" : "incorrect");
         label.appendChild(document.createTextNode(choiceText));
-        div.appendChild(label);
+        li.appendChild(label);
 
-        div.appendChild(document.createElement("br"));
-        div.appendChild(document.createElement("br"));
+        ul.appendChild(li);
     });
-
+    div.appendChild(ul);
+    div.addEventListener("animationend", () => div.style.animation = "initial");
     return div;
 }
 
@@ -226,7 +245,7 @@ function generateResultsTable() {
         }
         {
             let td = document.createElement("td");
-            td.appendChild(document.createTextNode(`${accuracy.toFixed(0)}%`));
+            td.appendChild(document.createTextNode(`${accuracy.toFixed(1)}%`));
             tr.appendChild(td);
         }
         tr.style.backgroundColor = getColor(accuracy, 0.75)
@@ -234,4 +253,22 @@ function generateResultsTable() {
     });
 
     return table;
+}
+
+function shuffle(array) {
+    if (array[0][0] == "True") return;
+
+    let currentIndex = array.length;
+    while (currentIndex != 0) {
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        --currentIndex;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    }
+}
+
+function getColor(accuracy, A = 1) {
+    const H = 4 / 3 * Math.max(accuracy - 25, 0);
+    const S = 80;
+    const L = 40 + 3 / 10 * accuracy;
+    return `hsla(${H}, ${S}%, ${L}%, ${A})`
 }

@@ -1,5 +1,5 @@
 body {
-  font-size: 13pt;
+  font-size: 14pt;
   margin: 0;
   background-color: #f4fcf4;
 }
@@ -9,7 +9,7 @@ nav {
   top: 0;
   background-color: #04442c;
   width: 100%;
-  height: 4em;
+  height: 3em;
   display: flex;
 }
 #home-page,
@@ -21,30 +21,42 @@ nav {
 #result-panel {
   position: fixed;
   bottom: 0;
-  background-color: hsl(100, 80%, 60%);
   width: 100%;
-  height: 4em;
+  height: 3em;
   display: flex;
 }
 
 #result-panel > p {
   margin: auto;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 box-icon {
-  width: 2.5em;
-  height: 2.5em;
+  width: 2em;
+  height: 2em;
   margin: auto;
 }
 
 body > div {
   margin-left: 2em;
   margin-right: 2em;
-  margin-top: 5em;
+  margin-top: 4em;
   margin-bottom: 4em;
 }
 
+#quiz label {
+  display: inline-block;
+  width: 50%;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 1.5em;
+}
+
+li {
+  margin: 0.5em;
+}
 .submitted .correct {
   background-color: hsl(100, 80%, 70%);
 }
@@ -64,4 +76,13 @@ th {
 }
 td:first-child {
   width: 33%;
+}
+
+@keyframes blink {
+  0% {
+    background-color: hsl(0, 80%, 70%);
+  }
+  100% {
+    background-color: transparent;
+  }
 }
