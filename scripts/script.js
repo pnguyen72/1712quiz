@@ -251,7 +251,7 @@ function generateResultsTable() {
       <tr>
         <td> # <td/>
         <td> ...% <td/>
-      <tr>
+      <tr/>
     <table/>
     */
     const table = document.createElement("table");
