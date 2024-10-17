@@ -133,16 +133,6 @@
         },
         "multi_select": false
     },
-    "Balance occurs between DFDs and ERDs when the data stores _____": {
-        "choices": {
-            "Can be equated to entities on the ERD and when entities are referred to by data stores on the DFD": true,
-            "Are uniquely named": false,
-            "Have only one input and one output flow": false,
-            "Are named the same as the relationships on the ERD": false,
-            "Can be compared to ERD data flows and attributes on the ERD are included in data stores on the DFD": false
-        },
-        "multi_select": false
-    },
     "A graphical illustration that shows the information that is created, stored, and used by a business system would be an ERD.": {
         "choices": {
             "True": true,
@@ -277,13 +267,6 @@
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
-    },
-    "CRUD stands for create, read, update and delete and can be used to verify DFDs and ERDs.": {
-        "choices": {
-            "True": true,
-            "False": false
         },
         "multi_select": false
     },
