@@ -12,5 +12,7 @@ Pros:
 
 Cons:
 
-- May be buggy (I tried my best 😓).
-- By using this app you agree to wear a Hawaiian shirt to the exam (see LICENSE).
+- By using this app you agree to wear a Hawaiian shirt to the exam.
+
+![home](images/home.png)
+![quiz](images/quiz.png)
