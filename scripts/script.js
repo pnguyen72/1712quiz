@@ -13,9 +13,10 @@ const pastResultsContainer = document.getElementById("past-results");
 const nextButton = document.getElementById("next-btn");
 const submitButton = document.getElementById("submit-btn");
 const homeButon = document.getElementById("return-btn");
+const moduleSelection = document.getElementById("module-selection");
 const questionNumChoice = document.getElementById("questionNumChoice");
 const moduleAllSelectBox = document.getElementById("moduleAllSelectBox")
-const moduleSelectBox = [
+const moduleSelectBoxes = [
     document.getElementById("module1SelectBox"),
     document.getElementById("module2SelectBox"),
     document.getElementById("module3SelectBox"),
@@ -32,13 +33,14 @@ function showElement(element) {
     element.style.display = "flex";
 }
 
-
 hideElement(quizPage);
 hideElement(submitButton)
 hideElement(resultPanel);
 
+moduleSelection.addEventListener("animationend", () => moduleSelection.style.animation = "initial");
+
 function selectAll() {
-    moduleSelectBox.forEach(
+    moduleSelectBoxes.forEach(
         (element) => element.checked = moduleAllSelectBox.checked
     );
 }
@@ -73,13 +75,26 @@ homeButon.addEventListener('click', (event) => {
 nextButton.addEventListener("click", (event) => {
     const questionsNum = questionNumChoice.value;
     if (questionsNum == "ALL" || currentIndex + questionsNum >= quizData.length) {
-        populateData();
         currentIndex = 0;
-    }
 
-    if (quizData.length == 0) {
-        alert("Invalid selection.");
-        return;
+        var isChecked = false;
+        quizData = {};
+        for (let i = 0; i < 6; i++) {
+            if (moduleSelectBoxes[i].checked) {
+                isChecked = true;
+                quizData = { ...quizData, ...modules[i] }
+            }
+        }
+        quizData = Object.entries(quizData)
+        shuffle(quizData);
+
+        if (!isChecked) {
+            moduleSelection.style.animation = "blink 1s";
+            return;
+        } else if (quizData.length == 0) {
+            alert("Unable to fetch data.");
+            return;
+        }
     }
 
     let data = quizData
@@ -154,7 +169,7 @@ submitButton.addEventListener("click", (event) => {
 function populateData() {
     quizData = {};
     for (let i = 0; i < 6; i++) {
-        if (moduleSelectBox[i].checked) {
+        if (moduleSelectBoxes[i].checked) {
             quizData = { ...quizData, ...modules[i] }
         }
     }

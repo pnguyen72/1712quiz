@@ -33,65 +33,69 @@
     <div id="home-page">
       <h1>1712 Pracice Quiz</h1>
       <form>
-        <p>Which module(s) do you want to practice?</p>
-        <ul>
-          <li>
-            <input
-              type="checkbox"
-              id="module1SelectBox"
-              onclick="selectOther()"
-            />
-            <label for="module1SelectBox"> Module 1: The Life Cycle </label>
-          </li>
-          <li>
-            <input
-              type="checkbox"
-              id="module2SelectBox"
-              onclick="selectOther()"
-            />
-            <label for="module2SelectBox"> Module 2: Methodologies </label>
-          </li>
-          <li>
-            <input
-              type="checkbox"
-              id="module3SelectBox"
-              onclick="selectOther()"
-            />
-            <label for="module3SelectBox"> Module 3: Requirements </label>
-          </li>
-          <li>
-            <input
-              type="checkbox"
-              id="module4SelectBox"
-              onclick="selectOther()"
-            />
-            <label for="module4SelectBox"> Module 4: Use Cases </label>
-          </li>
-          <li>
-            <input
-              type="checkbox"
-              id="module5SelectBox"
-              onclick="selectOther()"
-            />
-            <label for="module5SelectBox"> Module 5: Data Flow Diagrams </label>
-          </li>
-          <li>
-            <input
-              type="checkbox"
-              id="module6SelectBox"
-              onclick="selectOther()"
-            />
-            <label for="module6SelectBox"> Module 6: Data Modeling </label>
-          </li>
-          <li>
-            <input
-              type="checkbox"
-              id="moduleAllSelectBox"
-              onclick="selectAll()"
-            />
-            <label for="moduleAllSelectBox"> <b>All of them!</b> </label>
-          </li>
-        </ul>
+        <div id="module-selection">
+          <p>Which module(s) do you want to practice?</p>
+          <ul>
+            <li>
+              <input
+                type="checkbox"
+                id="module1SelectBox"
+                onclick="selectOther()"
+              />
+              <label for="module1SelectBox"> Module 1: The Life Cycle </label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="module2SelectBox"
+                onclick="selectOther()"
+              />
+              <label for="module2SelectBox"> Module 2: Methodologies </label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="module3SelectBox"
+                onclick="selectOther()"
+              />
+              <label for="module3SelectBox"> Module 3: Requirements </label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="module4SelectBox"
+                onclick="selectOther()"
+              />
+              <label for="module4SelectBox"> Module 4: Use Cases </label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="module5SelectBox"
+                onclick="selectOther()"
+              />
+              <label for="module5SelectBox">
+                Module 5: Data Flow Diagrams
+              </label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="module6SelectBox"
+                onclick="selectOther()"
+              />
+              <label for="module6SelectBox"> Module 6: Data Modeling </label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="moduleAllSelectBox"
+                onclick="selectAll()"
+              />
+              <label for="moduleAllSelectBox"> <b>All of them!</b> </label>
+            </li>
+          </ul>
+        </div>
         <br />
         <label for="questionNumChoice">How many questions per attempt? </label>
         <select name="questionNumChoice" id="questionNumChoice">
