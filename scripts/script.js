@@ -13,6 +13,7 @@ const pastResultsContainer = document.getElementById("past-results");
 const nextButton = document.getElementById("next-btn");
 const submitButton = document.getElementById("submit-btn");
 const homeButon = document.getElementById("return-btn");
+const form = document.getElementById("form");
 const moduleSelection = document.getElementById("module-selection");
 const questionNumChoice = document.getElementById("questionNumChoice");
 const moduleAllSelectBox = document.getElementById("moduleAllSelectBox")
@@ -63,6 +64,9 @@ homeButon.addEventListener('click', (event) => {
     pastResultsContainer.childNodes.forEach((element) => element.remove());
     if (pastResults.length > 0) {
         pastResultsContainer.appendChild(generateResultsTable());
+    }
+    if (submitButton.style.display == "none") {
+        form.reset()
     }
 
     hideElement(submitButton);
