@@ -232,16 +232,6 @@
         },
         "multi_select": false
     },
-    "Parallel methodology is BEST characterized as:": {
-        "choices": {
-            "A series of versions": true,
-            "A 'Quick and Dirty' system": false,
-            "A method for exploring design alternatives": false,
-            "A method for stressing customer satisfaction": false,
-            "More explicit testing": false
-        },
-        "multi_select": false
-    },
     "Which of the following methodologies might be most appropriate if you have a system project with: clear requirements; very familiar technologies; not all that complex; reasonably reliable; a short time schedule and the schedule visibility is not important?": {
         "choices": {
             "Parallel": true,
