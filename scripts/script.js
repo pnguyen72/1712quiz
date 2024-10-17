@@ -65,7 +65,7 @@ homeButon.addEventListener('click', (event) => {
     if (pastResults.length > 0) {
         pastResultsContainer.appendChild(generateResultsTable());
     }
-    if (submitButton.style.display == "none") {
+    if (homePage.style.display != "none") {
         form.reset()
     }
 
