@@ -199,6 +199,9 @@ function generateQuestion(question, questionIndex) {
     const questionText = question[0];
     const choices = Object.entries(question[1].choices)
     const isMultiSelect = question[1].multi_select;
+    if (choices[0][0] != "True") {
+        shuffle(choices);
+    }
 
     const div = document.createElement("div");
     div.id = "Q" + questionIndex;
@@ -290,8 +293,6 @@ function generateResultsTable() {
 }
 
 function shuffle(array) {
-    if (array[0][0] == "True") return;
-
     let currentIndex = array.length;
     while (currentIndex != 0) {
         let randomIndex = Math.floor(Math.random() * currentIndex);
