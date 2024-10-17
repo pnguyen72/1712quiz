@@ -210,7 +210,7 @@ function generateQuestion(question, questionIndex) {
       <ul>
         <li>
             <input type="radio/checkbox" id="Q#/#" class="correct/incorrect">
-            <label for="Q#/#"> <span> ... <span/> <label/> 
+            <label for="Q#/#"> ... <label/> 
         <li/>
       <ul/>
     <div/>
@@ -250,9 +250,7 @@ function generateQuestion(question, questionIndex) {
 
         const label = document.createElement("label");
         label.setAttribute("for", input.id);
-        const span = document.createElement("span");
-        span.appendChild(document.createTextNode(choiceText))
-        label.appendChild(span);
+        label.appendChild(document.createTextNode(choiceText));
         li.appendChild(label);
 
         ul.appendChild(li);
