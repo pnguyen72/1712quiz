@@ -116,10 +116,10 @@ submitButton.addEventListener("click", (event) => {
             }
         }
         if (!isAnswered) {
+            question.style.animation = "blink 1s";
+            question.scrollIntoView();
+            scrollBy(0, -1.33 * navbar.offsetHeight);
             if (!confirm("There are unanswered question(s). Submit anyway?")) {
-                question.style.animation = "blink 1s";
-                question.scrollIntoView();
-                scrollBy(0, -1.33 * navbar.offsetHeight);
                 return;
             }
             forceSubmit = true;
