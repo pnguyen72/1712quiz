@@ -61,8 +61,10 @@ ul {
 li {
   margin: 0.5rem;
 }
-input:hover:enabled {
-  transform: scale(1.2);
+@media not all and (hover: none) {
+  input:hover:enabled {
+    transform: scale(1.2);
+  }
 }
 
 .submitted input.correct + label {
