@@ -1,7 +1,5 @@
 # COMP-1712 Practice Quiz
 
-Run `index.html` using vscode's Live Preview. (Just opening the file with a browser won't work!)
-
 Compared to Learning Hub's version:
 
 Pros:
