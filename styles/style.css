@@ -98,3 +98,21 @@ td:first-child {
     background-color: transparent;
   }
 }
+
+@media (pointer: none), (pointer: coarse) {
+  nav,
+  #result-panel {
+    height: 6rem;
+  }
+  box-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+  body > div {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+  }
+  #result-panel > p {
+    font-size: 3rem;
+  }
+}
