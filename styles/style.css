@@ -103,17 +103,17 @@ td:first-child {
 @media (pointer: none), (pointer: coarse) {
   nav,
   footer {
-    height: 6rem;
+    height: 4.5rem;
   }
   box-icon {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
   }
   body > div {
-    margin-top: 7rem;
-    margin-bottom: 7rem;
+    margin-top: 5.5rem;
+    margin-bottom: 5.5rem;
   }
   #result {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
 }
