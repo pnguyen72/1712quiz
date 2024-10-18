@@ -320,7 +320,7 @@ function shuffle(array) {
 
 function getColor(accuracy, A = 1) {
     const H = 4 / 3 * Math.max(accuracy - 25, 0);
-    const S = 80;
-    const L = 40 + 3 / 10 * accuracy;
-    return `hsla(${H}, ${S}%, ${L}%, ${A})`
+    const S = 85;
+    const L = 45 + 20 / 100 * 4 / 3 * (Math.min(accuracy + 25, 100) - 25);
+    return `hsla(${H}, ${S}%, ${L}%, ${A})`;
 }
