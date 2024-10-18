@@ -1,4 +1,5 @@
 const navbar = document.getElementById("navbar");
+const attempt = document.getElementById("attempt");
 const homePage = document.getElementById("home-page");
 const quizPage = document.getElementById("quiz-page");
 const footer = document.getElementById("footer");
@@ -27,20 +28,17 @@ function removeElementById(id) {
     }
 }
 hideElement(quizPage);
-hideElement(submitButton)
+hideElement(submitButton);
 
 moduleSelection.addEventListener("animationend", () => moduleSelection.style.animation = "initial");
 
 const modules = []
 let quizData = [];
 let pastResults = [];
-let currentIndex = 0;
+let attemptsCount = 0;
 generateModuleSelection();
 
 homeButon.addEventListener('click', () => {
-    quizData = [];
-    currentIndex = 0;
-
     removeElementById("quiz");
     removeElementById("result");
     removeElementById("result-table");
@@ -51,7 +49,7 @@ homeButon.addEventListener('click', () => {
         form.reset()
     }
     footer.style.backgroundColor = "initial";
-
+    attempt.style.visibility = "hidden";
     hideElement(submitButton);
     hideElement(quizPage);
     showElement(license);
@@ -60,41 +58,27 @@ homeButon.addEventListener('click', () => {
 });
 
 nextButton.addEventListener("click", () => {
+    attempt.innerText = `Attempt ${attemptsCount + 1}`;
+
     const questionsNum = questionNumChoice.value;
-    if (questionsNum == "ALL" || currentIndex + questionsNum >= quizData.length) {
-        currentIndex = 0;
-
-        var isChecked = false;
-        quizData = {};
-        for (let i = 0; i < 6; i++) {
-            if (moduleSelectBoxes[i].checked) {
-                isChecked = true;
-                quizData = { ...quizData, ...modules[i] }
-            }
-        }
-        quizData = Object.entries(quizData)
-        shuffle(quizData);
-
-        if (!isChecked) {
+    if (questionsNum == "ALL") {
+        questionsNum = 100000;
+    }
+    if (quizData.length < questionsNum) {
+        populateData();
+        if (quizData.length == 9) {
             moduleSelection.style.animation = "blink 1s";
             return;
-        } else if (quizData.length == 0) {
-            alert("Unable to fetch data.");
-            return;
         }
     }
-
-    let data = quizData
-    if (questionsNum != "ALL") {
-        data = quizData.slice(currentIndex, currentIndex + questionsNum);
-        currentIndex += questionsNum;
-    }
+    let data = quizData.slice(0, questionsNum);
 
     removeElementById("quiz");
     removeElementById("result");
     quizPage.appendChild(generateQuiz(data));
     scrollTo(0, 0);
 
+    attempt.style.visibility = "visible";
     hideElement(nextButton);
     hideElement(homePage);
     hideElement(license);
@@ -136,18 +120,26 @@ submitButton.addEventListener("click", () => {
     for (let input of quiz.getElementsByTagName("input")) {
         input.disabled = true;
     }
+    if (questionNumChoice.value != "ALL") {
+        quizData.splice(0, questionNumChoice.value);
+    } else {
+        quizData = [];
+    }
 
     p = document.createElement("p");
     p.id = "result";
     const accuracy = 100 * correctAnswers / questions.length;
     pastResults.push(accuracy);
-    resultText = `${correctAnswers}/${questions.length} (${accuracy.toFixed(1)}%)`;
+    const roundedNumber = Math.round((accuracy + Number.EPSILON) * 100) / 100;
+    resultText = `${correctAnswers}/${questions.length} (${roundedNumber}%)`;
     p.appendChild(document.createTextNode(resultText));
     footer.appendChild(p);
     footer.style.backgroundColor = getColor(accuracy);
     quiz.setAttribute("class", "submitted");
     scrollTo(0, 0);
 
+    ++attemptsCount;
+    attempt.style.visibility = "visible";
     hideElement(submitButton);
     showElement(nextButton);
 });
@@ -230,17 +222,11 @@ function generateModuleSelection() {
 function generateQuiz(data) {
     /*
     <div id="quiz">
-      <h1> Attempt # </h1>
       <div id="Q#" class="question"> ... </div>
     </div>
     */
     div = document.createElement("div")
     div.id = "quiz"
-
-    heading = document.createElement("h1")
-    heading.appendChild(document.createTextNode(`Attempt ${pastResults.length + 1}`));
-    div.appendChild(heading);
-
     data.forEach((question, questionIndex) => {
         div.appendChild(generateQuestion(question, questionIndex))
     });
@@ -266,6 +252,7 @@ function generateQuestion(question, questionIndex) {
     const questionText = question[0];
     const choices = Object.entries(question[1].choices)
     const isMultiSelect = question[1].multi_select;
+
     if (choices[0][0] != "True") {
         shuffle(choices);
     }
@@ -349,7 +336,8 @@ function generateResultsTable() {
         }
         {
             let td = document.createElement("td");
-            td.appendChild(document.createTextNode(`${accuracy.toFixed(1)}%`));
+            const roundedNumber = Math.round((accuracy + Number.EPSILON) * 100) / 100;
+            td.appendChild(document.createTextNode(`${roundedNumber}%`));
             tr.appendChild(td);
         }
         tr.style.backgroundColor = getColor(accuracy, 0.75)
