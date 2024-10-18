@@ -1,5 +1,5 @@
 body {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   margin: 0;
   background-color: #f4fcf4;
 }
@@ -30,6 +30,7 @@ footer {
   bottom: 0;
   width: 100%;
   height: 3rem;
+  background-color: #f4fcf4;
   display: flex;
 }
 footer > p {
@@ -40,7 +41,7 @@ footer > p {
   font-size: 1.5rem;
 }
 #license {
-  font-size: 0.75em;
+  font-size: 1rem;
 }
 #moduleALLSelect + span {
   font-weight: bold;
@@ -111,20 +112,21 @@ td:first-child {
 }
 
 @media (pointer: none), (pointer: coarse) {
-  nav,
-  footer {
-    height: 4rem;
+  body {
+    font-size: 1.1rem;
+  }
+  #license {
+    font-size: 0.8rem;
+  }
+  nav {
+    height: 3.5rem;
   }
   box-icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.25rem;
+    height: 2.25rem;
   }
   body > div {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-  }
-  nav,
-  #result {
-    font-size: 2rem;
+    margin-top: 4.5rem;
+    margin-bottom: 4.5rem;
   }
 }
