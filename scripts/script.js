@@ -8,7 +8,8 @@ for (let i = 0; i < 6; i++) {
 const navbar = document.getElementById("navbar");
 const homePage = document.getElementById("home-page");
 const quizPage = document.getElementById("quiz-page");
-const resultPanel = document.getElementById("result-panel");
+const footer = document.getElementById("footer");
+const license = document.getElementById("license");
 const pastResultsContainer = document.getElementById("past-results");
 const nextButton = document.getElementById("next-btn");
 const submitButton = document.getElementById("submit-btn");
@@ -34,9 +35,13 @@ function showElement(element) {
     element.style.display = "flex";
 }
 
+function removeElementById(id) {
+    if (document.contains(document.getElementById(id))) {
+        document.getElementById(id).remove();
+    }
+}
 hideElement(quizPage);
 hideElement(submitButton)
-hideElement(resultPanel);
 
 moduleSelection.addEventListener("animationend", () => moduleSelection.style.animation = "initial");
 
@@ -58,20 +63,20 @@ homeButon.addEventListener('click', (event) => {
     quizData = [];
     currentIndex = 0;
 
-    quizPage.childNodes.forEach((element) => element.remove());
-    resultPanel.childNodes.forEach((element) => element.remove());
-    resultPanel.childNodes.forEach((element) => element.remove());
-    pastResultsContainer.childNodes.forEach((element) => element.remove());
+    removeElementById("quiz");
+    removeElementById("result");
+    removeElementById("result-table");
     if (pastResults.length > 0) {
         pastResultsContainer.appendChild(generateResultsTable());
     }
     if (homePage.style.display != "none") {
         form.reset()
     }
+    footer.style.backgroundColor = "initial";
 
     hideElement(submitButton);
     hideElement(quizPage);
-    hideElement(resultPanel);
+    showElement(license);
     showElement(nextButton);
     showElement(homePage);
 });
@@ -107,14 +112,14 @@ nextButton.addEventListener("click", (event) => {
         currentIndex += questionsNum;
     }
 
-    quizPage.childNodes.forEach((element) => element.remove());
-    resultPanel.childNodes.forEach((element) => element.remove());
+    removeElementById("quiz");
+    removeElementById("result");
     quizPage.appendChild(generateQuiz(data));
     scrollTo(0, 0);
 
     hideElement(nextButton);
     hideElement(homePage);
-    hideElement(resultPanel);
+    hideElement(license);
     showElement(submitButton);
     showElement(quizPage);
 });
@@ -154,18 +159,18 @@ submitButton.addEventListener("click", (event) => {
     }
 
     p = document.createElement("p");
+    p.id = "result";
     const accuracy = 100 * correctAnswers / questions.length;
     pastResults.push(accuracy);
     resultText = `${correctAnswers}/${questions.length} (${accuracy.toFixed(1)}%)`;
     p.appendChild(document.createTextNode(resultText));
-    resultPanel.appendChild(p);
-    resultPanel.style.backgroundColor = getColor(accuracy);
+    footer.appendChild(p);
+    footer.style.backgroundColor = getColor(accuracy);
     quiz.setAttribute("class", "submitted");
     scrollTo(0, 0);
 
     hideElement(submitButton);
     showElement(nextButton);
-    showElement(resultPanel);
 });
 
 
