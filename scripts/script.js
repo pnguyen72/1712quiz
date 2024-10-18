@@ -29,12 +29,16 @@ function removeElementById(id) {
 hideElement(quizPage);
 hideElement(submitButton);
 
-moduleSelection.addEventListener("animationend", () => moduleSelection.style.animation = "initial");
 
 const modules = []
 let quizData = [];
 let pastResults = [];
 let attemptsCount = 0;
+let formChanged = false;
+
+moduleSelection.addEventListener("animationend", () => moduleSelection.style.animation = "initial");
+form.addEventListener("input", () => formChanged = true);
+
 generateModuleSelection();
 
 homeButon.addEventListener('click', () => {
@@ -63,8 +67,9 @@ nextButton.addEventListener("click", () => {
     if (questionsNum == "ALL") {
         questionsNum = 100000;
     }
-    if (quizData.length < questionsNum) {
+    if (formChanged || quizData.length < questionsNum) {
         populateData();
+        formChanged = false;
         if (quizData.length == 0) {
             moduleSelection.style.animation = "blink 1s";
             return;
