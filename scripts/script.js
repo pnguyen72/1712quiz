@@ -11,7 +11,6 @@ const homeButon = document.getElementById("return-btn");
 const form = document.getElementById("form");
 const moduleSelection = document.getElementById("module-selection");
 const questionNumChoice = document.getElementById("questionNumChoice");
-const moduleAllSelectBox = document.getElementById("moduleAllSelectBox")
 const moduleSelectBoxes = []
 
 function hideElement(element) {
@@ -60,13 +59,13 @@ homeButon.addEventListener('click', () => {
 nextButton.addEventListener("click", () => {
     attempt.innerText = `Attempt ${attemptsCount + 1}`;
 
-    const questionsNum = questionNumChoice.value;
+    let questionsNum = questionNumChoice.value;
     if (questionsNum == "ALL") {
         questionsNum = 100000;
     }
     if (quizData.length < questionsNum) {
         populateData();
-        if (quizData.length == 9) {
+        if (quizData.length == 0) {
             moduleSelection.style.animation = "blink 1s";
             return;
         }
