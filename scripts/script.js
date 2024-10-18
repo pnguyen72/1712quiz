@@ -38,14 +38,17 @@ let quizData = [];
 let pastResults = [];
 let attemptsCount = 0;
 let formChanged = false;
+let newQuizNeeded = true;
 
 moduleSelection.addEventListener("animationend", () => moduleSelection.style.animation = "initial");
-form.addEventListener("input", () => formChanged = true);
+form.addEventListener("input", () => {
+    formChanged = true;
+    newQuizNeeded = true;
+});
 
 generateModuleSelection();
 
 homeButon.addEventListener('click', () => {
-    removeElementById("quiz");
     removeElementById("result");
     removeElementById("result-table");
     if (pastResults.length > 0) {
@@ -85,11 +88,7 @@ nextButton.addEventListener("click", () => {
     }
     let data = quizData.slice(0, questionsNum);
 
-    removeElementById("quiz");
     removeElementById("result");
-    quizPage.appendChild(generateQuiz(data));
-    scrollTo(0, 0);
-
     footer.style.backgroundColor = "initial";
     attempt.style.visibility = "visible";
     hideElement(nextButton);
@@ -97,6 +96,26 @@ nextButton.addEventListener("click", () => {
     hideElement(license);
     showElement(submitButton);
     showElement(quizPage);
+
+    if (newQuizNeeded) {
+        scrollTo(0, 0);
+        removeElementById("quiz");
+        quizPage.appendChild(generateQuiz(data));
+        newQuizNeeded = false;
+    } else {
+        const quiz = document.getElementById("quiz");
+        for (let question of quiz.getElementsByClassName("question")) {
+            let isAnswered = false;
+            for (let choice of question.getElementsByTagName("input")) {
+                isAnswered = isAnswered || choice.checked;
+            }
+            if (!isAnswered) {
+                question.scrollIntoView();
+                scrollBy(0, -1.33 * navbar.offsetHeight);
+                break;
+            }
+        }
+    }
 });
 
 submitButton.addEventListener("click", () => {
@@ -138,6 +157,7 @@ submitButton.addEventListener("click", () => {
     } else {
         quizData = [];
     }
+    newQuizNeeded = true;
 
     p = document.createElement("p");
     p.id = "result";
