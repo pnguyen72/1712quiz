@@ -38,20 +38,35 @@
         <div id="module-selection">
           <p>Which module(s) do you want to practice?</p>
         </div>
-        <br />
-        <label for="questionNumChoice">How many questions per attempt? </label>
-        <select name="questionNumChoice" id="questionNumChoice">
-          <option value="10">10</option>
-          <option value="20">20</option>
-          <option value="40">40</option>
-          <option value="80">80</option>
-          <option value="ALL">All of them!</option>
-        </select>
-        <br />
-        <br />
-        <br />
+        <div id="questionBank-selection">
+          <p>Choose the question bank:</p>
+          <ul>
+            <li>
+              <label>
+                <input id="LH" type="checkbox" checked="true" />
+                <span>Learning Hub practice quizzes</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input id="AI" type="checkbox" />
+                <span>AI-generated questions</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div id="questionNum-selection">
+          <label>How many questions per attempt? </label>
+          <select name="questionNumChoice" id="questionNumChoice">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="40">40</option>
+            <option value="80">80</option>
+            <option value="ALL">All of them!</option>
+          </select>
+        </div>
       </form>
-
+      <br />
       <div id="past-results"></div>
     </div>
 

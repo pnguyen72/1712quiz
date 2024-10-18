@@ -10,6 +10,9 @@ const submitButton = document.getElementById("submit-btn");
 const homeButon = document.getElementById("return-btn");
 const form = document.getElementById("form");
 const moduleSelection = document.getElementById("module-selection");
+const questionBankSelection = document.getElementById("questionBank-selection");
+const AIChoice = document.getElementById("AI");
+const LHChoice = document.getElementById("LH");
 const questionNumChoice = document.getElementById("questionNumChoice");
 const moduleSelectBoxes = []
 
@@ -50,6 +53,7 @@ homeButon.addEventListener('click', () => {
     }
     if (homePage.style.display != "none") {
         form.reset()
+        formChanged = false;
     }
     footer.style.backgroundColor = "initial";
     attempt.style.visibility = "hidden";
@@ -68,12 +72,16 @@ nextButton.addEventListener("click", () => {
         questionsNum = 100000;
     }
     if (formChanged || quizData.length < questionsNum) {
-        populateData();
-        formChanged = false;
-        if (quizData.length == 0) {
+        if (moduleSelectBoxes.every(box => !box.checked)) {
             moduleSelection.style.animation = "blink 1s";
             return;
         }
+        if (!AIChoice.checked && !LHChoice.checked) {
+            questionBankSelection.style.animation = "blink 1s";
+            return;
+        }
+        populateData();
+        formChanged = false;
     }
     let data = quizData.slice(0, questionsNum);
 
@@ -152,10 +160,15 @@ submitButton.addEventListener("click", () => {
 
 
 function populateData() {
-    quizData = {};
-    for (let i = 0; i < 6; i++) {
+    quizData = {}
+    for (let i = 0; i < modules.length; i++) {
         if (moduleSelectBoxes[i].checked) {
-            quizData = { ...quizData, ...modules[i] }
+            if (LHChoice.checked) {
+                quizData = { ...quizData, ...modules[i]["LH"] }
+            }
+            if (AIChoice.checked) {
+                quizData = { ...quizData, ...modules[i]["AI"] }
+            }
         }
     }
     quizData = Object.entries(quizData)
@@ -179,9 +192,13 @@ function generateModuleSelection() {
         .then((response) => response.json())
         .then((moduleList) => {
             moduleList.forEach((moduleName, index) => {
+                modules[index] = {}
                 fetch(`./data/module${index + 1}.json`)
                     .then((response) => response.json())
-                    .then((data) => modules[index] = data);
+                    .then((data) => modules[index]["LH"] = data);
+                fetch(`./data/module${index + 1}.ai.json`)
+                    .then((response) => response.json())
+                    .then((data) => modules[index]["AI"] = data);
 
                 const li = document.createElement("li");
                 const label = document.createElement("label");

@@ -1,0 +1,362 @@
+{
+    "What is the main goal of requirements determination in system development?": {
+        "choices": {
+            "To define system architecture": false,
+            "To gather and document business needs": true,
+            "To write the system code": false,
+            "To create user manuals": false
+        },
+        "multi_select": false
+    },
+    "Which of the following is a functional requirement?": {
+        "choices": {
+            "The system must support 100 concurrent users": false,
+            "The system must have an uptime of 99.9%": false,
+            "The system must generate monthly reports": true,
+            "The system must be available 24/7": false
+        },
+        "multi_select": false
+    },
+    "Which of the following is a non-functional requirement?": {
+        "choices": {
+            "Users must be able to generate sales reports": false,
+            "The system must process transactions within 2 seconds": true,
+            "The system must allow users to login": false,
+            "The system must produce invoices": false
+        },
+        "multi_select": false
+    },
+    "What is the purpose of a use case in requirements determination?": {
+        "choices": {
+            "To define system architecture": false,
+            "To describe the interaction between users and the system": true,
+            "To outline testing scenarios": false,
+            "To gather system costs": false
+        },
+        "multi_select": false
+    },
+    "Which of the following techniques is used to gather system requirements?": {
+        "choices": {
+            "Joint Application Development (JAD)": true,
+            "Code reviews": false,
+            "Data migration": false,
+            "Debugging": false
+        },
+        "multi_select": false
+    },
+    "What is a key benefit of conducting Joint Application Development (JAD) sessions?": {
+        "choices": {
+            "Writing system code more quickly": false,
+            "Improving communication between stakeholders and developers": true,
+            "Reducing hardware costs": false,
+            "Developing system architecture": false
+        },
+        "multi_select": false
+    },
+    "Which document is a primary output of the requirements determination phase?": {
+        "choices": {
+            "System architecture diagram": false,
+            "Requirements specification document": true,
+            "Project charter": false,
+            "Feasibility study": false
+        },
+        "multi_select": false
+    },
+    "What is a functional requirement in a system?": {
+        "choices": {
+            "Describes system performance characteristics": false,
+            "Describes system features and functions": true,
+            "Refers to system uptime and availability": false,
+            "Describes technical constraints": false
+        },
+        "multi_select": false
+    },
+    "Which of the following is an example of a technical requirement?": {
+        "choices": {
+            "The system must support multiple languages": false,
+            "The system must be compatible with existing hardware": true,
+            "Users must be able to update their profile information": false,
+            "The system must generate daily reports": false
+        },
+        "multi_select": false
+    },
+    "Which of the following best describes the purpose of a requirements specification?": {
+        "choices": {
+            "To provide a detailed system design": false,
+            "To document business needs and system functions": true,
+            "To outline project risks": false,
+            "To create the project schedule": false
+        },
+        "multi_select": false
+    },
+    "What does a requirements specification document include?": {
+        "choices": {
+            "System hardware specifications": false,
+            "A list of business needs and system requirements": true,
+            "A testing plan": false,
+            "User training materials": false
+        },
+        "multi_select": false
+    },
+    "What is the role of a systems analyst in requirements determination?": {
+        "choices": {
+            "Writing system code": false,
+            "Gathering and analyzing business requirements": true,
+            "Managing the project budget": false,
+            "Installing hardware": false
+        },
+        "multi_select": false
+    },
+    "Which of the following is a commonly used method for gathering system requirements?": {
+        "choices": {
+            "Conducting interviews with users": true,
+            "Writing test cases": false,
+            "Writing system documentation": false,
+            "Performing system maintenance": false
+        },
+        "multi_select": false
+    },
+    "Which of the following is a characteristic of a non-functional requirement?": {
+        "choices": {
+            "It defines what the system should do": false,
+            "It describes how the system should perform": true,
+            "It specifies the system's budget": false,
+            "It outlines the system's development timeline": false
+        },
+        "multi_select": false
+    },
+    "What is a use case diagram typically used for in requirements determination?": {
+        "choices": {
+            "To visually represent user interactions with the system": true,
+            "To show the system\u2019s hardware architecture": false,
+            "To outline project milestones": false,
+            "To define the project\u2019s budget": false
+        },
+        "multi_select": false
+    },
+    "Which of the following is NOT a technique for gathering system requirements?": {
+        "choices": {
+            "Brainstorming": false,
+            "Prototyping": false,
+            "Data migration": true,
+            "Document analysis": false
+        },
+        "multi_select": false
+    },
+    "What is a typical outcome of the requirements determination phase?": {
+        "choices": {
+            "A detailed system design": false,
+            "A clear set of business and system requirements": true,
+            "System implementation": false,
+            "Test cases": false
+        },
+        "multi_select": false
+    },
+    "Which technique is often used in Joint Application Development (JAD) sessions to gather system requirements?": {
+        "choices": {
+            "User testing": false,
+            "Brainstorming": true,
+            "Debugging": false,
+            "Regression testing": false
+        },
+        "multi_select": false
+    },
+    "Which document serves as a foundation for system design and implementation?": {
+        "choices": {
+            "The project plan": false,
+            "The requirements specification": true,
+            "The system test plan": false,
+            "The user manual": false
+        },
+        "multi_select": false
+    },
+    "What is a common technique for verifying that system requirements have been met?": {
+        "choices": {
+            "Performing system testing": true,
+            "Reviewing system documentation": false,
+            "Conducting user interviews": false,
+            "Analyzing test cases": false
+        },
+        "multi_select": false
+    },
+    "Which of the following best describes a business requirement?": {
+        "choices": {
+            "A technical constraint of the system": false,
+            "A specific need or feature that the system must fulfill": true,
+            "A budgetary restriction": false,
+            "A timeline for project completion": false
+        },
+        "multi_select": false
+    },
+    "Which document is often referred to during the design and development phases of the SDLC?": {
+        "choices": {
+            "Feasibility study": false,
+            "Requirements specification document": true,
+            "Business case": false,
+            "Project charter": false
+        },
+        "multi_select": false
+    },
+    "What is the purpose of conducting interviews during requirements determination?": {
+        "choices": {
+            "To train users on the system": false,
+            "To gather detailed insights into user needs and system functionality": true,
+            "To develop test cases": false,
+            "To review system code": false
+        },
+        "multi_select": false
+    },
+    "Which of the following best describes a stakeholder in the requirements determination phase?": {
+        "choices": {
+            "A developer responsible for writing code": false,
+            "A person or group with an interest in the system\u2019s success": true,
+            "A project manager responsible for budget management": false,
+            "A technical expert who oversees testing": false
+        },
+        "multi_select": false
+    },
+    "Which of the following is a primary reason for gathering system requirements?": {
+        "choices": {
+            "To ensure the system aligns with business needs": true,
+            "To define the system\u2019s hardware architecture": false,
+            "To gather test cases for the system": false,
+            "To create a user manual": false
+        },
+        "multi_select": false
+    },
+    "What is a benefit of creating a requirements specification document?": {
+        "choices": {
+            "It defines the system\u2019s hardware specifications": false,
+            "It provides clear communication between stakeholders and developers": true,
+            "It reduces system testing efforts": false,
+            "It ensures system documentation is complete": false
+        },
+        "multi_select": false
+    },
+    "Which of the following is a challenge in gathering system requirements?": {
+        "choices": {
+            "Defining the project budget": false,
+            "Translating vague business needs into specific system requirements": true,
+            "Writing system code": false,
+            "Installing hardware": false
+        },
+        "multi_select": false
+    },
+    "Which technique is commonly used to validate system requirements?": {
+        "choices": {
+            "User interviews": false,
+            "System documentation reviews": false,
+            "System testing": false,
+            "Use case reviews": true
+        },
+        "multi_select": false
+    },
+    "What is the primary purpose of a use case?": {
+        "choices": {
+            "To describe user interactions with the system": true,
+            "To define system architecture": false,
+            "To outline project milestones": false,
+            "To create test cases": false
+        },
+        "multi_select": false
+    },
+    "What is one of the risks of not properly defining system requirements?": {
+        "choices": {
+            "Reduced system performance": false,
+            "System misalignment with business needs": true,
+            "Increased hardware costs": false,
+            "Difficulty in writing user manuals": false
+        },
+        "multi_select": false
+    },
+    "What is a key role of a systems analyst in the requirements determination phase?": {
+        "choices": {
+            "Managing project schedules": false,
+            "Gathering and analyzing user needs and business requirements": true,
+            "Developing user interfaces": false,
+            "Writing technical documentation": false
+        },
+        "multi_select": false
+    },
+    "Which of the following is typically part of a requirements specification document?": {
+        "choices": {
+            "A list of user needs and system functions": true,
+            "A list of system hardware components": false,
+            "A test plan": false,
+            "A system maintenance schedule": false
+        },
+        "multi_select": false
+    },
+    "Which of the following is an outcome of successful requirements gathering?": {
+        "choices": {
+            "A detailed system design": false,
+            "A clear understanding of business needs and system functions": true,
+            "Completed system testing": false,
+            "A project plan": false
+        },
+        "multi_select": false
+    },
+    "What is the purpose of conducting document analysis during the requirements gathering phase?": {
+        "choices": {
+            "To gather system requirements by reviewing existing documentation": true,
+            "To create test cases for the system": false,
+            "To identify project milestones": false,
+            "To review system code": false
+        },
+        "multi_select": false
+    },
+    "Which of the following is a key benefit of conducting a Joint Application Development (JAD) session?": {
+        "choices": {
+            "Improving communication between business stakeholders and developers": true,
+            "Developing system test cases": false,
+            "Reducing system development costs": false,
+            "Creating hardware specifications": false
+        },
+        "multi_select": false
+    },
+    "What is one challenge of using interviews as a method for gathering system requirements?": {
+        "choices": {
+            "Time-consuming and resource-intensive": true,
+            "Difficult to manage stakeholder expectations": false,
+            "Limited access to system documentation": false,
+            "Reduced communication between stakeholders": false
+        },
+        "multi_select": false
+    },
+    "What is the purpose of a stakeholder analysis during the requirements determination phase?": {
+        "choices": {
+            "To identify all individuals and groups impacted by the system": true,
+            "To create system documentation": false,
+            "To define the system\u2019s architecture": false,
+            "To gather system test cases": false
+        },
+        "multi_select": false
+    },
+    "What is a common method for validating the completeness of system requirements?": {
+        "choices": {
+            "Conducting user interviews": false,
+            "Reviewing use cases and requirements documents": true,
+            "Writing system code": false,
+            "Creating user manuals": false
+        },
+        "multi_select": false
+    },
+    "What is the purpose of prototyping during requirements determination?": {
+        "choices": {
+            "To create a working model of the system to gather user feedback": true,
+            "To document system requirements": false,
+            "To define system performance metrics": false,
+            "To conduct system testing": false
+        },
+        "multi_select": false
+    },
+    "Which of the following is a risk of incomplete requirements gathering?": {
+        "choices": {
+            "Reduced system costs": false,
+            "Misalignment between the system and business needs": true,
+            "Increased system performance": false,
+            "Early project completion": false
+        },
+        "multi_select": false
+    }
+}
