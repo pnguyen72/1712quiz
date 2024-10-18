@@ -1,10 +1,3 @@
-const modules = []
-for (let i = 0; i < 6; i++) {
-    fetch(`./data/quiz-data${i + 1}.json`)
-        .then((response) => response.json())
-        .then((data) => modules[i] = data);
-}
-
 const navbar = document.getElementById("navbar");
 const homePage = document.getElementById("home-page");
 const quizPage = document.getElementById("quiz-page");
@@ -18,14 +11,7 @@ const form = document.getElementById("form");
 const moduleSelection = document.getElementById("module-selection");
 const questionNumChoice = document.getElementById("questionNumChoice");
 const moduleAllSelectBox = document.getElementById("moduleAllSelectBox")
-const moduleSelectBoxes = [
-    document.getElementById("module1SelectBox"),
-    document.getElementById("module2SelectBox"),
-    document.getElementById("module3SelectBox"),
-    document.getElementById("module4SelectBox"),
-    document.getElementById("module5SelectBox"),
-    document.getElementById("module6SelectBox"),
-]
+const moduleSelectBoxes = []
 
 function hideElement(element) {
     element.style.display = "none";
@@ -45,21 +31,13 @@ hideElement(submitButton)
 
 moduleSelection.addEventListener("animationend", () => moduleSelection.style.animation = "initial");
 
-function selectAll() {
-    moduleSelectBoxes.forEach(
-        (element) => element.checked = moduleAllSelectBox.checked
-    );
-}
-
-function selectOther() {
-    moduleAllSelectBox.checked = false;
-}
-
+const modules = []
 let quizData = [];
 let pastResults = [];
 let currentIndex = 0;
+generateModuleSelection();
 
-homeButon.addEventListener('click', (event) => {
+homeButon.addEventListener('click', () => {
     quizData = [];
     currentIndex = 0;
 
@@ -81,7 +59,7 @@ homeButon.addEventListener('click', (event) => {
     showElement(homePage);
 });
 
-nextButton.addEventListener("click", (event) => {
+nextButton.addEventListener("click", () => {
     const questionsNum = questionNumChoice.value;
     if (questionsNum == "ALL" || currentIndex + questionsNum >= quizData.length) {
         currentIndex = 0;
@@ -124,7 +102,7 @@ nextButton.addEventListener("click", (event) => {
     showElement(quizPage);
 });
 
-submitButton.addEventListener("click", (event) => {
+submitButton.addEventListener("click", () => {
     let forceSubmit = false;
 
     const quiz = document.getElementById("quiz");
@@ -133,9 +111,10 @@ submitButton.addEventListener("click", (event) => {
     for (let question of questions) {
         let isAnswered = forceSubmit;
         let isCorrect = true;
-        for (let choice of question.getElementsByTagName("input")) {
-            isAnswered = isAnswered || choice.checked || choice.type == "checkbox";
-            if (!((choice.className == "correct") == choice.checked)) {
+        for (let choice of question.getElementsByTagName("li")) {
+            input = choice.getElementsByTagName("input")[0];
+            isAnswered = isAnswered || input.checked || input.type == "checkbox";
+            if (!((choice.className == "correct") == input.checked)) {
                 isCorrect = false;
             }
         }
@@ -186,12 +165,74 @@ function populateData() {
     shuffle(quizData);
 }
 
+function generateModuleSelection() {
+    /*
+    <ul>
+      <li>
+        <label> 
+          <input type="checkbox"/>
+          <span> Module #: ... </span>
+        </label>
+      </li>
+    </ul>
+    */
+
+    const ul = document.createElement("ul");
+    fetch("./data/modules.json")
+        .then((response) => response.json())
+        .then((moduleList) => {
+            moduleList.forEach((moduleName, index) => {
+                fetch(`./data/module${index + 1}.json`)
+                    .then((response) => response.json())
+                    .then((data) => modules[index] = data);
+
+                const li = document.createElement("li");
+                const label = document.createElement("label");
+
+                const input = document.createElement("input");
+                input.type = "checkbox";
+                input.addEventListener("click", () => document.getElementById("moduleALLSelect").checked = false);
+                moduleSelectBoxes.push(input)
+
+                const span = document.createElement("span");
+                const title = `Module ${index + 1}: ${moduleName}`;
+                span.appendChild(document.createTextNode(title));
+
+                label.appendChild(input);
+                label.appendChild(span);
+
+                li.append(label);
+                ul.appendChild(li);
+            });
+
+            const li = document.createElement("li");
+            const label = document.createElement("label");
+
+            const input = document.createElement("input");
+            input.type = "checkbox";
+            input.id = "moduleALLSelect"
+            input.addEventListener("click", () => moduleSelectBoxes.forEach(
+                (element) => element.checked = input.checked
+            ));
+
+            const span = document.createElement("span");
+            span.appendChild(document.createTextNode("All of them!"));
+
+            label.appendChild(input);
+            label.appendChild(span);
+
+            li.append(label);
+            ul.appendChild(li);
+        });
+    moduleSelection.append(ul);
+}
+
 function generateQuiz(data) {
     /*
     <div id="quiz">
-      <h1> Attempt # <h1/>
-      <div id="Q#" class="question"> ... <div/>
-    <div/>
+      <h1> Attempt # </h1>
+      <div id="Q#" class="question"> ... </div>
+    </div>
     */
     div = document.createElement("div")
     div.id = "quiz"
@@ -210,15 +251,17 @@ function generateQuestion(question, questionIndex) {
     /*
     <div id="Q#" class="question">
       <p> 
-        <b> Question #. <b/> ... 
-      <p/>
+        <b> Question #. </b> ... 
+      </p>
       <ul>
-        <li>
-            <input type="radio/checkbox" id="Q#/#" class="correct/incorrect">
-            <label for="Q#/#"> ... <label/> 
-        <li/>
-      <ul/>
-    <div/>
+        <li class="correct/incorrect">
+          <label for="Q#/#"> 
+            <input type="radio/checkbox" id="Q#/#">
+            <span> .. </span> 
+          </label> 
+        </li>
+      </ul>
+    </div>
     */
     const questionText = question[0];
     const choices = Object.entries(question[1].choices)
@@ -241,21 +284,23 @@ function generateQuestion(question, questionIndex) {
 
     const ul = document.createElement("ul");
     choices.forEach((choice, choiceIndex) => {
-        const choiceText = choice[0];
-        const isCorrect = choice[1];
+        const [choiceText, isCorrect] = choice;
 
         const li = document.createElement("li");
+        li.className = isCorrect ? "correct" : "incorrect"
+
+        const label = document.createElement("label");
 
         const input = document.createElement("input")
         input.type = isMultiSelect ? "checkbox" : "radio";
-        input.name = "Q" + questionIndex;
-        input.id = "Q" + questionIndex + "/" + choiceIndex;
-        input.setAttribute("class", isCorrect ? "correct" : "incorrect");
-        li.appendChild(input);
+        input.name = `Q${questionIndex + 1}`;
 
-        const label = document.createElement("label");
-        label.setAttribute("for", input.id);
-        label.appendChild(document.createTextNode(choiceText));
+        const span = document.createElement("span")
+        span.appendChild(document.createTextNode(choiceText));
+
+        label.appendChild(input);
+        label.appendChild(span);
+
         li.appendChild(label);
 
         ul.appendChild(li);
@@ -270,14 +315,14 @@ function generateResultsTable() {
     /*
     <table id="result-table">
       <tr>
-        <th> Attempt <th/>
-        <th> Result <th/>
-      <tr/>
+        <th> Attempt </th>
+        <th> Result </th>
+      </tr>
       <tr>
-        <td> # <td/>
-        <td> ...% <td/>
-      <tr/>
-    <table/>
+        <td> # </td>
+        <td> ...% </td>
+      </tr>
+    </table>
     */
     const table = document.createElement("table");
     table.id = "result-table";

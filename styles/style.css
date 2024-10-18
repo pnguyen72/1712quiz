@@ -32,7 +32,12 @@ footer > p {
 #result {
   font-size: 1.5rem;
 }
-
+#license {
+  font-size: 0.8em;
+}
+#moduleALLSelect + span {
+  font-weight: bold;
+}
 box-icon {
   width: 2rem;
   height: 2rem;
@@ -53,8 +58,8 @@ input {
 select {
   font-size: 1rem;
 }
-ul label {
-  margin-left: 0.2rem;
+ul label span {
+  margin-left: 0.25rem;
 }
 ul {
   list-style-type: none;
@@ -69,11 +74,8 @@ li {
   }
 }
 
-.submitted input.correct + label {
+.submitted li.correct label {
   background-color: hsl(100, 80%, 70%);
-}
-.submitted input.correct:not(:checked) {
-  outline: 0.25rem solid rgb(0, 127, 0);
 }
 .submitted .incorrect.question > p > b {
   background-color: hsla(0, 80%, 70%, 75%);
