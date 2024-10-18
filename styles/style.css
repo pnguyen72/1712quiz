@@ -26,6 +26,7 @@ footer {
   display: flex;
 }
 footer > p {
+  text-align: center;
   margin: auto;
 }
 #result {
@@ -103,17 +104,17 @@ td:first-child {
 @media (pointer: none), (pointer: coarse) {
   nav,
   footer {
-    height: 4.5rem;
+    height: 4rem;
   }
   box-icon {
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
   body > div {
-    margin-top: 5.5rem;
-    margin-bottom: 5.5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
   #result {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 }
