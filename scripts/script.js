@@ -78,6 +78,7 @@ nextButton.addEventListener("click", () => {
     quizPage.appendChild(generateQuiz(data));
     scrollTo(0, 0);
 
+    footer.style.backgroundColor = "initial";
     attempt.style.visibility = "visible";
     hideElement(nextButton);
     hideElement(homePage);
