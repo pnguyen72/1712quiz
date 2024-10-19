@@ -50,7 +50,7 @@
         },
         "multi_select": false
     },
-    "Andrew, an analyst for PaxMedia Inc., has just learned that the business rules for a system he has been working on have changed. This means wjat": {
+    "Andrew, an analyst for PaxMedia Inc., has just learned that the business rules for a system he has been working on have changed. This means what?": {
         "choices": {
             "The ERD components will have to be changed": true,
             "Nothing \u2013 once the ERD data models have been drawn, they are 'frozen' for the system": false,
