@@ -277,13 +277,6 @@
         },
         "multi_select": false
     },
-    "In defining LAST-NAME in the data dictionary, we might describe it as a character field having from 1 to 15 alphabetic characters.": {
-        "choices": {
-            "True": false,
-            "False": true
-        },
-        "multi_select": false
-    },
     "ERD's are data modeling techniques.": {
         "choices": {
             "True": true,
