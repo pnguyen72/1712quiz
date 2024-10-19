@@ -589,5 +589,12 @@
             "False": true
         },
         "multi_select": false
+    },
+    "COMP 1712 is your favorite class. (You must answer correctly AND honestly!)": {
+        "choices": {
+            "True": false,
+            "False": false
+        },
+        "multi_select": false
     }
 }
