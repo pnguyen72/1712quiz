@@ -41,7 +41,7 @@ let formChanged = false;
 let newQuizNeeded = true;
 
 moduleSelection.addEventListener("animationend", () => moduleSelection.style.animation = "");
-questionBankSelection.addEventListener("animationend", () => moduleSelection.style.animation = "");
+questionBankSelection.addEventListener("animationend", () => questionBankSelection.style.animation = "");
 
 form.addEventListener("input", () => {
     formChanged = true;
