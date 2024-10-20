@@ -180,7 +180,7 @@ submitButton.addEventListener("click", () => {
 
     p = document.createElement("p");
     p.id = "result";
-    const accuracy = 100 * correctAnswers / answers;
+    const accuracy = 100 * correctAnswers / (answers + Number.EPSILON);
     pastResults.push(accuracy);
     const roundedNumber = Math.round((accuracy + Number.EPSILON) * 100) / 100;
     resultText = `${correctAnswers}/${answers} (${roundedNumber}%)`;
