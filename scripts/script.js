@@ -125,56 +125,48 @@ submitButton.addEventListener("click", () => {
 
     const quiz = document.getElementById("quiz");
     const questions = quiz.getElementsByClassName("question");
+
+    let answers = 0;
     let correctAnswers = 0;
+
     for (let question of questions) {
         let isCorrect = true;
+        let isAnswered = false;
 
-        if (question.classList.contains("joke")) {
-            let isAnswered = false;
-            for (let choice of question.getElementsByTagName("li")) {
-                input = choice.getElementsByTagName("input")[0];
-                isAnswered = isAnswered || input.checked;
+        for (let choice of question.getElementsByTagName("li")) {
+            input = choice.getElementsByTagName("input")[0];
+            isAnswered =
+                isAnswered || input.checked || input.type == "checkbox";
+            if (question.classList.contains("joke")) {
                 if (input.checked) {
                     isCorrect = false;
-                    choice.className = "icorrect";
+                    choice.className = "incorrect";
                 } else {
                     choice.className = "correct";
                 }
-            }
-            if (!isAnswered) {
+            } else if (!((choice.className == "correct") == input.checked)) {
                 isCorrect = false;
-                for (let choice of question.getElementsByTagName("li")) {
-                    choice.className = "incorrect";
-                }
             }
-        } else {
-            let isAnswered = forceSubmit;
-
-            for (let choice of question.getElementsByTagName("li")) {
-                input = choice.getElementsByTagName("input")[0];
-                isAnswered =
-                    isAnswered || input.checked || input.type == "checkbox";
-                if (!((choice.className == "correct") == input.checked)) {
-                    isCorrect = false;
-                }
-            }
-            if (!isAnswered) {
-                question.scrollIntoView();
-                scrollBy(0, -1.33 * navbar.offsetHeight);
-                if (
-                    !confirm("There are unanswered question(s). Submit anyway?")
-                ) {
-                    question.style.animation = "blink 1s";
-                    return;
-                }
+        }
+        if (isAnswered) {
+            // unanswered questions don't count toward the score
+            ++answers;
+            if (isCorrect)
+                ++correctAnswers;
+            else
+                question.classList.add("incorrect");
+        } else if (!forceSubmit) {
+            question.scrollIntoView();
+            scrollBy(0, -1.33 * navbar.offsetHeight);
+            if (confirm("There are unanswered question(s). Submit anyway?"))
                 forceSubmit = true;
+            else {
+                question.style.animation = "blink 1s";
+                return;
             }
+
         }
-        if (isCorrect) {
-            ++correctAnswers;
-        } else {
-            question.classList.add("incorrect");
-        }
+
     }
     for (let input of quiz.getElementsByTagName("input")) {
         input.disabled = true;
@@ -188,10 +180,10 @@ submitButton.addEventListener("click", () => {
 
     p = document.createElement("p");
     p.id = "result";
-    const accuracy = 100 * correctAnswers / questions.length;
+    const accuracy = 100 * correctAnswers / answers;
     pastResults.push(accuracy);
     const roundedNumber = Math.round((accuracy + Number.EPSILON) * 100) / 100;
-    resultText = `${correctAnswers}/${questions.length} (${roundedNumber}%)`;
+    resultText = `${correctAnswers}/${answers} (${roundedNumber}%)`;
     p.appendChild(document.createTextNode(resultText));
     footer.appendChild(p);
     footer.style.backgroundColor = getColor(accuracy);
