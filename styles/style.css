@@ -83,10 +83,10 @@ li {
 }
 
 .submitted li.correct label {
-  background-color: hsl(100, 80%, 70%);
+  background-color: hsl(120, 80%, 75%);
 }
 .submitted .incorrect.question > p > b {
-  background-color: hsla(0, 80%, 70%, 75%);
+  background-color: hsla(0, 80%, 75%, 75%);
 }
 
 table {
