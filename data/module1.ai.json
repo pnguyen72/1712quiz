@@ -125,15 +125,6 @@
         },
         "multi_select": false
     },
-    "Which of the following best describes a 'system'?": {
-        "choices": {
-            "A network of computers": false,
-            "A collection of hardware and software": false,
-            "A set of interrelated components working together to achieve a goal": true,
-            "A specific software application": false
-        },
-        "multi_select": false
-    },
     "What does 'implementation' refer to in the SDLC?": {
         "choices": {
             "Writing code and creating databases": false,
