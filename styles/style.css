@@ -1,7 +1,7 @@
 body {
   font-size: 1.2rem;
   margin: 0;
-  background-color: #f4fcf4;
+  background-color: rgb(244, 248, 244);
 }
 
 nav {
@@ -13,7 +13,7 @@ nav {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
-  color: #f4fcf4;
+  color: rgb(244, 248, 244);
 }
 #attempt {
   visibility: hidden;
@@ -30,7 +30,7 @@ footer {
   bottom: 0;
   width: 100%;
   height: 3rem;
-  background-color: #f4fcf4;
+  background-color: rgb(244, 248, 244);
   display: flex;
 }
 footer > p {
