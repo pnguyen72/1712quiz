@@ -125,28 +125,53 @@ submitButton.addEventListener("click", () => {
     const questions = quiz.getElementsByClassName("question");
     let correctAnswers = 0;
     for (let question of questions) {
-        let isAnswered = forceSubmit;
         let isCorrect = true;
-        for (let choice of question.getElementsByTagName("li")) {
-            input = choice.getElementsByTagName("input")[0];
-            isAnswered = isAnswered || input.checked || input.type == "checkbox";
-            if (!((choice.className == "correct") == input.checked)) {
+
+        if (question.classList.contains("joke")) {
+            let isAnswered = false;
+            for (let choice of question.getElementsByTagName("li")) {
+                input = choice.getElementsByTagName("input")[0];
+                isAnswered = isAnswered || input.checked;
+                if (input.checked) {
+                    isCorrect = false;
+                    choice.className = "icorrect";
+                } else {
+                    choice.className = "correct";
+                }
+            }
+            if (!isAnswered) {
                 isCorrect = false;
+                for (let choice of question.getElementsByTagName("li")) {
+                    choice.className = "incorrect";
+                }
             }
-        }
-        if (!isAnswered) {
-            question.scrollIntoView();
-            scrollBy(0, -1.33 * navbar.offsetHeight);
-            if (!confirm("There are unanswered question(s). Submit anyway?")) {
-                question.style.animation = "blink 1s";
-                return;
+        } else {
+            let isAnswered = forceSubmit;
+
+            for (let choice of question.getElementsByTagName("li")) {
+                input = choice.getElementsByTagName("input")[0];
+                isAnswered =
+                    isAnswered || input.checked || input.type == "checkbox";
+                if (!((choice.className == "correct") == input.checked)) {
+                    isCorrect = false;
+                }
             }
-            forceSubmit = true;
+            if (!isAnswered) {
+                question.scrollIntoView();
+                scrollBy(0, -1.33 * navbar.offsetHeight);
+                if (
+                    !confirm("There are unanswered question(s). Submit anyway?")
+                ) {
+                    question.style.animation = "blink 1s";
+                    return;
+                }
+                forceSubmit = true;
+            }
         }
         if (isCorrect) {
             ++correctAnswers;
         } else {
-            question.className += " incorrect"
+            question.classList.add("incorrect");
         }
     }
     for (let input of quiz.getElementsByTagName("input")) {
@@ -310,6 +335,12 @@ function generateQuestion(question, questionIndex) {
     p.appendChild(title);
     p.appendChild(document.createTextNode(" " + questionText));
     div.appendChild(p)
+    if (
+        questionText ==
+        "COMP 1712 is your favorite class. (You must answer correctly AND honestly!)"
+    ) {
+        div.classList.add("joke");
+    }
 
     const ul = document.createElement("ul");
     choices.forEach((choice, choiceIndex) => {
