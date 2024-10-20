@@ -406,7 +406,7 @@
         },
         "multi_select": false
     },
-    "Austin is a systems analyst. Which of the follow people might be the most valuable to him in developing a use case for an accounts payable system upgrade?": {
+    "Austin is a systems analyst. Which of the following people might be the most valuable to him in developing a use case for an accounts payable system upgrade?": {
         "choices": {
             "Amy, a team manager in the accounts payable department": true,
             "Casey, a fellow analyst who is more experienced in making use cases": false,
