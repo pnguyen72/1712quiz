@@ -588,5 +588,23 @@
             "there is inadequate funding for the analysis phase to do a complete analysis": false
         },
         "multi_select": false
+    },
+    "Which of the following types of questions are close-ended?": {
+        "choices": {
+            "Multiple Choice questions": true,
+            "True or False questions": true,
+            "Multi-Select questions": true,
+            "Written Response questions": false
+        },
+        "multi_select": true
+    },
+    "What does it mean for a process to be fragmented?": {
+        "choices": {
+            "There are too many steps required to complete the process.": true,
+            "There are too many actors involved in completing the process.": true,
+            "The major steps required to complete the process cost too much.": false,
+            "The major steps in the process are completed in parallel.": false
+        },
+        "multi_select": true
     }
 }
