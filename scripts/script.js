@@ -21,7 +21,7 @@ function hideElement(element) {
 }
 
 function showElement(element) {
-    element.style.display = "flex";
+    element.style.display = "";
 }
 
 function removeElementById(id) {
@@ -40,7 +40,9 @@ let attemptsCount = 0;
 let formChanged = false;
 let newQuizNeeded = true;
 
-moduleSelection.addEventListener("animationend", () => moduleSelection.style.animation = "initial");
+moduleSelection.addEventListener("animationend", () => moduleSelection.style.animation = "");
+questionBankSelection.addEventListener("animationend", () => moduleSelection.style.animation = "");
+
 form.addEventListener("input", () => {
     formChanged = true;
     newQuizNeeded = true;
@@ -58,7 +60,7 @@ homeButon.addEventListener('click', () => {
         form.reset()
         formChanged = false;
     }
-    footer.style.backgroundColor = "initial";
+    footer.style.backgroundColor = "";
     attempt.style.visibility = "hidden";
     hideElement(submitButton);
     hideElement(quizPage);
@@ -89,7 +91,7 @@ nextButton.addEventListener("click", () => {
     let data = quizData.slice(0, questionsNum);
 
     removeElementById("result");
-    footer.style.backgroundColor = "initial";
+    footer.style.backgroundColor = "transparent";
     attempt.style.visibility = "visible";
     hideElement(nextButton);
     hideElement(homePage);
@@ -366,7 +368,7 @@ function generateQuestion(question, questionIndex) {
         ul.appendChild(li);
     });
     div.appendChild(ul);
-    div.addEventListener("animationend", () => div.style.animation = "initial");
+    div.addEventListener("animationend", () => div.style.animation = "");
     return div;
 }
 
