@@ -46,12 +46,11 @@
     },
     "Which of the following is a project management methodology used in system development?": {
         "choices": {
-            "Agile": false,
-            "V-Model": false,
-            "Waterfall": false,
-            "All of the above": true
+            "Agile": true,
+            "V-Model": true,
+            "Waterfall": true
         },
-        "multi_select": false
+        "multi_select": true
     },
     "The project scope statement is used to:": {
         "choices": {
