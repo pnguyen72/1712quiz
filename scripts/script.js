@@ -232,10 +232,10 @@ function generateModuleSelection() {
         .then((moduleList) => {
             moduleList.forEach((moduleName, index) => {
                 modules[index] = {}
-                fetch(`./data/module${index + 1}.json`)
+                fetch(`./data/LH/module${index + 1}.json`)
                     .then((response) => response.json())
                     .then((data) => modules[index]["LH"] = data);
-                fetch(`./data/module${index + 1}.ai.json`)
+                fetch(`./data/AI/module${index + 1}.json`)
                     .then((response) => response.json())
                     .then((data) => modules[index]["AI"] = data);
 
