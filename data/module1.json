@@ -6,8 +6,7 @@
             "Analytical": false,
             "Interpersonal": false,
             "Ethical": false
-        },
-        "multi_select": false
+        }
     },
     "Robert is doing an economic analysis using today's dollar values. He is doing:": {
         "choices": {
@@ -16,8 +15,7 @@
             "Return on investment analysis": false,
             "Break-even point analysis": false,
             "Internal rate of return analysis": false
-        },
-        "multi_select": false
+        }
     },
     "The type of skill that is common to systems analysts to deal fairly and honestly with other project team members is:": {
         "choices": {
@@ -26,22 +24,19 @@
             "Business": false,
             "Technical": false,
             "Analytical": false
-        },
-        "multi_select": false
+        }
     },
     "Systems analysis and design projects are highly effective, with less than 3% of all projects cancelled or abandoned.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "Systems that are cancelled or abandoned are frequently due to a lack of clarity about how the system should support an organization's goals and improve processes..": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following project roles would probably make a presentation about the objectives of a proposed project and its benefits to executives who will benefit directly from the project?": {
         "choices": {
@@ -50,8 +45,7 @@
             "Systems analyst": false,
             "Requirements analyst": false,
             "Chief Information Officer (CIO)": false
-        },
-        "multi_select": false
+        }
     },
     "Alice is calculating whether a system will lower costs or increase revenues. What SDLC phase is she in?": {
         "choices": {
@@ -60,8 +54,7 @@
             "Design": false,
             "Evaluation": false,
             "Analysis": false
-        },
-        "multi_select": false
+        }
     },
     "Ramona is preparing an economic feasibility study. She is calculating the payback period. She is calculating:": {
         "choices": {
@@ -70,15 +63,13 @@
             "Internal rate of return": false,
             "Net present value": false,
             "Cash flow": false
-        },
-        "multi_select": false
+        }
     },
     "The primary output of the planning phase is the system request.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "Which is an activity the users probably will NOT do on a project?": {
         "choices": {
@@ -87,15 +78,13 @@
             "Perform hands-on activities for the project": false,
             "Be assigned specific tasks to perform (with clear deadlines)": false,
             "Have some official roles on the project team": false
-        },
-        "multi_select": false
+        }
     },
     "Anne has asked users and managers to identify problems with the as-is system and to describe how to solve them in the to-be system. She is probably in the analysis phase of SDLC.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "Which would normally NOT be a reason for a project?": {
         "choices": {
@@ -104,22 +93,19 @@
             "A consultant has suggested a new customer relationship management system": false,
             "An existing system just isn't working properly and the workaround is tedious": false,
             "To support a new business initiative": false
-        },
-        "multi_select": false
+        }
     },
     "A system request will generally have these items: project sponsor; business need; business requirements; business value; special issues or constraints.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "The normal sequence of SDLC phase outputs (from beginning to end) would be: system request; system proposal; system specifications; and installed system.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following project roles would insure that the system conforms to information systems standards?": {
         "choices": {
@@ -128,15 +114,13 @@
             "Infrastructure analyst": false,
             "Change management analyst": false,
             "Project manager": false
-        },
-        "multi_select": false
+        }
     },
     "A support plan for the system is established in the implementation phase of the SDLC.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "Kallie is creating use cases, data flow diagrams, and entity relationship diagrams. In what phase of the SDLC would she do this?": {
         "choices": {
@@ -145,15 +129,13 @@
             "Design": false,
             "Construction": false,
             "Implementation": false
-        },
-        "multi_select": false
+        }
     },
     "The three feasibility analyses in the text were: organizational feasibility, technical feasibility, and economic feasibility.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "Because the cost can be immense, _________ is one of the most critical steps in implementation.": {
         "choices": {
@@ -162,8 +144,7 @@
             "Coding": false,
             "Developing a conversion strategy": false,
             "Training": false
-        },
-        "multi_select": false
+        }
     },
     "Linda is a clerk in the accounting department. She was interviewed by David and is excited about the proposed system that will utilize electronic funds transfer. This would be an example of ______.": {
         "choices": {
@@ -172,8 +153,7 @@
             "Cash flow": false,
             "Break-even analysis": false,
             "Return on investment": false
-        },
-        "multi_select": false
+        }
     },
     "The outcome of the planning phase is the:": {
         "choices": {
@@ -182,29 +162,25 @@
             "System proposal document": false,
             "System specification document": false,
             "Business process document": false
-        },
-        "multi_select": false
+        }
     },
     "The planning phase of the SDLC will have two steps: project initiation and requirements determination.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "Numerous studies report that projects involving information technology experience failure rates from 30% - 70%.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "The project sponsor should have an idea of the business value to be gained from the system.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following project roles would focus on stakeholder requirements?": {
         "choices": {
@@ -213,8 +189,7 @@
             "Business analyst": false,
             "Infrastructure analyst": false,
             "Change management analyst": false
-        },
-        "multi_select": false
+        }
     },
     "Amy is planning on talking with a clerk and a manager in the accounts payable area, a manager in the procurement department, and two vendors. She is probably doing:": {
         "choices": {
@@ -223,8 +198,7 @@
             "JAD": false,
             "Documentation analysis": false,
             "Organizational Feasibility": false
-        },
-        "multi_select": false
+        }
     },
     "Which is NOT an attribute of a systems analyst?": {
         "choices": {
@@ -233,15 +207,13 @@
             "Understanding what to change": false,
             "Serving as a change agent": false,
             "Convincing others of the need to change": false
-        },
-        "multi_select": false
+        }
     },
     "The primary output of the analysis phase is the system proposal.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "Which is NOT true for systems analysts?": {
         "choices": {
@@ -250,15 +222,13 @@
             "They enable the organization to perform work better": false,
             "They do things and challenge the current way that an organization works": false,
             "They play a key role in information systems development projects": false
-        },
-        "multi_select": false
+        }
     },
     "Using 'net present value' in calculating economic feasibility will allow for variations in the time value of money.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "Joan's project is to take a fairly straight-forward manual process and make it an electronic process. This will make the processing more efficient. Which of the following requirements analysis strategies is she using?": {
         "choices": {
@@ -267,8 +237,7 @@
             "Business process renovation": false,
             "Business process internalization": false,
             "Business process reengineering": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following project roles would serve as a primary point of contact for a project?": {
         "choices": {
@@ -277,8 +246,7 @@
             "Business analyst": false,
             "Infrastructure analyst": false,
             "Change management analyst": false
-        },
-        "multi_select": false
+        }
     },
     "The outcome of the design phase is the:": {
         "choices": {
@@ -287,15 +255,13 @@
             "System request document": false,
             "Feasibility analysis document": false,
             "Business process document": false
-        },
-        "multi_select": false
+        }
     },
     "Because of the need to be focused on providing information about the business value of a system, a systems analyst will probably have much training or experience in programming or application development.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "Chang is working on \"How will this system work.\" What SDLC phase is he in?": {
         "choices": {
@@ -304,8 +270,7 @@
             "Analysis": false,
             "Implementation": false,
             "Transition": false
-        },
-        "multi_select": false
+        }
     },
     "The outcome of the analysis phase is the:": {
         "choices": {
@@ -314,8 +279,7 @@
             "System specification document": false,
             "System request document": false,
             "Business process document": false
-        },
-        "multi_select": false
+        }
     },
     "Which phase is generally the longest and most expensive part of the development process?": {
         "choices": {
@@ -324,8 +288,7 @@
             "Analysis": false,
             "Design": false,
             "Feasibility": false
-        },
-        "multi_select": false
+        }
     },
     "The type of skill that is common to systems analysts to understand how IT can be applied to business situations and to ensure that the IT delivers real business value is:": {
         "choices": {
@@ -334,8 +297,7 @@
             "Interpersonal": false,
             "Technical": false,
             "Analytical": false
-        },
-        "multi_select": false
+        }
     },
     "Wayne is a senior director of finance. His company only recently came under Sarbanes-Oxley regulations and is the project sponsor to become compliant. He realizes that examining the as-is system may not be much help as the regulations are so radical that a major analysis and design project must be completed to make the company compliant. He is leaning towards: ______________": {
         "choices": {
@@ -344,36 +306,31 @@
             "Business process improvement": false,
             "Business process internalization": false,
             "Business process renovation": false
-        },
-        "multi_select": false
+        }
     },
     "The document that describes the business reasons for building a system and the value that the system is expected to provide is called the \"System Proposal.\"": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "Systems analysts are generally experts in business, finance, and application development.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "Interviewing is generally done in the analysis phase of the SDLC.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "To be compatible, all costs and benefits should use the current value of money since variations over time will (a) not affect the return on investment and (b) it is difficult (or impossible) to estimate future value of money.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "Ramya is preparing an economic feasibility study. She has a calculation where she takes total benefits minus total costs and divides that answer by the total costs. She is calculating:": {
         "choices": {
@@ -382,29 +339,25 @@
             "Break-even point": false,
             "Net present value": false,
             "Internal rate of return": false
-        },
-        "multi_select": false
+        }
     },
     "Juan is creating use cases. He is working in the design phase of the SDLC.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "Developing navigation methods, database, and file specifications and what architecture to use would occur in the design phase of the SDLC.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "When compared to a systems analyst, the business analyst will probably have more responsibility for determining business value.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "PCM Incorporated will need to purchase new servers for a system. This would be a:": {
         "choices": {
@@ -413,36 +366,31 @@
             "Intangible benefit": false,
             "Operating cost": false,
             "Intangible cost": false
-        },
-        "multi_select": false
+        }
     },
     "If the development team of an organization is not familiar with the technologies that may be used, the project should be cancelled.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "The key person in the SDLC is the systems analyst who analyzed the business situation, identifies opportunities for improvements and design an information system to implement the improvements.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "The three factors in the text for a feasibility analysis are: technical feasibility; organizational feasibility and economic feasibility.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "The SDLC generally can be broken into four phases: planning, analysis, design and implementation.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "Another outcome of the planning phase is the:": {
         "choices": {
@@ -451,15 +399,13 @@
             "System specification document": false,
             "System proposal document": false,
             "Business process document": false
-        },
-        "multi_select": false
+        }
     },
     "The requirements analyst role includes complete and accurate determination of what the system requirements consist of for all stakeholders.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following project roles would analyze the key business aspects of the system?": {
         "choices": {
@@ -468,8 +414,7 @@
             "Infrastructure analyst": false,
             "Change management analyst": false,
             "Project manager": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following project roles would identify how technology can improve business processes?": {
         "choices": {
@@ -478,15 +423,13 @@
             "Infrastructure analyst": false,
             "Requirements analyst": false,
             "Change management analyst": false
-        },
-        "multi_select": false
+        }
     },
     "The business analyst role focuses on the business issues surrounding the system.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "Moderate changes to existing processes falls under the _________ analysis.": {
         "choices": {
@@ -495,29 +438,25 @@
             "Business process reengineering (BPR)": false,
             "Business process blue-skying (BPB)": false,
             "Business process efficiency (BPE)": false
-        },
-        "multi_select": false
+        }
     },
     "The primary goal of a system is to create value for the organization.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "The champion supports the project with resources and political support.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "The question 'Can we build it' is asked in the design phase.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "TJ has prepared a spreadsheet where the total benefits are $182,000; the total cumulative costs are $120,000. The ROI would be:": {
         "choices": {
@@ -526,15 +465,13 @@
             "About 34%": false,
             "About 65.3%": false,
             "Less than 20%": false
-        },
-        "multi_select": false
+        }
     },
     "When compared to a business analyst, the systems analyst will identify how the system will provide business value.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "Rocky is dealing one-on-one with users and business managers (including some that have little experience with technology). He is demonstrating what system analyst skill?": {
         "choices": {
@@ -543,8 +480,7 @@
             "Business": false,
             "Analytical": false,
             "Ethical": false
-        },
-        "multi_select": false
+        }
     },
     "Michaela is a systems analyst who is determining business requirements. What would most likely be the SDLC phase for her?": {
         "choices": {
@@ -553,8 +489,7 @@
             "Design": false,
             "Implementation": false,
             "Business requirements are not developed by systems analysts, but by business analysts": false
-        },
-        "multi_select": false
+        }
     },
     "Jack is going over financial numbers for a proposed project. Which of the following system analyst skills is he exhibiting currently?": {
         "choices": {
@@ -563,8 +498,7 @@
             "Management": false,
             "Technical": false,
             "Interpersonal": false
-        },
-        "multi_select": false
+        }
     },
     "Which was NOT given as a method for determining business requirements?": {
         "choices": {
@@ -573,28 +507,24 @@
             "Observation": false,
             "Document analysis": false,
             "Questionnaires and surveys": false
-        },
-        "multi_select": false
+        }
     },
     "Determining business requirements is generally done in the planning phase of the SDLC.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "In SDLC, analysis is generally divided into three steps: understanding the as-is system; developing a cost-benefit analysis; and understanding the technical feasibility.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "COMP 1712 is your favorite class. (You must answer correctly AND honestly!)": {
         "choices": {
             "True": false,
             "False": false
-        },
-        "multi_select": false
+        }
     }
 }

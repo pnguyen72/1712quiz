@@ -5,8 +5,7 @@
             "To develop and maintain information systems": true,
             "To design hardware systems": false,
             "To create business strategies": false
-        },
-        "multi_select": false
+        }
     },
     "The Systems Development Life Cycle (SDLC) is:": {
         "choices": {
@@ -14,8 +13,7 @@
             "A structured approach for creating software systems": true,
             "A process for project management": false,
             "A method for system maintenance": false
-        },
-        "multi_select": false
+        }
     },
     "Which phase of the SDLC involves gathering and defining business requirements?": {
         "choices": {
@@ -23,8 +21,7 @@
             "Analysis": true,
             "Implementation": false,
             "Testing": false
-        },
-        "multi_select": false
+        }
     },
     "Who is responsible for ensuring that business requirements are translated into technical solutions?": {
         "choices": {
@@ -32,8 +29,7 @@
             "Systems Analyst": true,
             "Database Administrator": false,
             "Project Manager": false
-        },
-        "multi_select": false
+        }
     },
     "What is the role of a systems analyst in the SDLC?": {
         "choices": {
@@ -41,8 +37,7 @@
             "To analyze and translate business needs into system requirements": true,
             "To manage the project budget": false,
             "To install hardware systems": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following best describes a system?": {
         "choices": {
@@ -50,8 +45,7 @@
             "A collection of components that work together to achieve a goal": true,
             "A software program": false,
             "A business report": false
-        },
-        "multi_select": false
+        }
     },
     "The Planning phase of the SDLC is primarily focused on:": {
         "choices": {
@@ -59,8 +53,7 @@
             "Defining the scope, objectives, and feasibility of the project": true,
             "Writing technical documentation": false,
             "Designing the user interface": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following is a key characteristic of the Waterfall model?": {
         "choices": {
@@ -68,8 +61,7 @@
             "Sequential phases": true,
             "Continuous testing": false,
             "Real-time feedback": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following roles works closely with both business stakeholders and technical teams during the SDLC?": {
         "choices": {
@@ -77,8 +69,7 @@
             "Network Administrator": false,
             "Software Developer": false,
             "Hardware Engineer": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following is NOT a phase of the SDLC?": {
         "choices": {
@@ -86,8 +77,7 @@
             "Testing": false,
             "Documentation": true,
             "Implementation": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following best describes the role of a project manager in systems development?": {
         "choices": {
@@ -95,8 +85,7 @@
             "Ensuring the project is completed on time and within budget": true,
             "Creating the system's data model": false,
             "Testing the final product": false
-        },
-        "multi_select": false
+        }
     },
     "What does the term 'feasibility analysis' refer to in the SDLC?": {
         "choices": {
@@ -104,8 +93,7 @@
             "A report on the system's technical specifications": false,
             "A summary of the testing process": false,
             "An analysis of the system's hardware requirements": false
-        },
-        "multi_select": false
+        }
     },
     "In the SDLC, the design phase primarily focuses on:": {
         "choices": {
@@ -113,8 +101,7 @@
             "Gathering business requirements": false,
             "Developing and testing the system": false,
             "Creating the project timeline": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following is a key deliverable of the planning phase in the SDLC?": {
         "choices": {
@@ -122,8 +109,7 @@
             "A detailed system design": false,
             "A project implementation plan": false,
             "A system prototype": false
-        },
-        "multi_select": false
+        }
     },
     "What does 'implementation' refer to in the SDLC?": {
         "choices": {
@@ -131,8 +117,7 @@
             "Deploying the new system and training users": true,
             "Designing the system architecture": false,
             "Developing a business plan": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following is the primary reason for conducting a post-implementation review in the SDLC?": {
         "choices": {
@@ -140,8 +125,7 @@
             "To revise the technical specifications": false,
             "To gather requirements for the next system": false,
             "To hire new personnel for system maintenance": false
-        },
-        "multi_select": false
+        }
     },
     "The analysis phase of the SDLC focuses on:": {
         "choices": {
@@ -149,8 +133,7 @@
             "Designing the technical solution": false,
             "Defining the business requirements and system specifications": true,
             "Implementing the hardware": false
-        },
-        "multi_select": false
+        }
     },
     "In systems analysis, a 'stakeholder' is best described as:": {
         "choices": {
@@ -158,8 +141,7 @@
             "Anyone who has an interest in the system's success": true,
             "The person responsible for system security": false,
             "A member of the project testing team": false
-        },
-        "multi_select": false
+        }
     },
     "What is one of the key reasons for the failure of system development projects?": {
         "choices": {
@@ -167,8 +149,7 @@
             "Misalignment between business needs and system capabilities": true,
             "Limited testing resources": false,
             "Overabundance of system documentation": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following is NOT a typical deliverable of the SDLC planning phase?": {
         "choices": {
@@ -176,8 +157,7 @@
             "Feasibility study": false,
             "Business requirements": true,
             "Implementation schedule": false
-        },
-        "multi_select": false
+        }
     },
     "What is the primary purpose of the feasibility study in the planning phase?": {
         "choices": {
@@ -185,8 +165,7 @@
             "To determine if the project is technically, economically, and operationally feasible": true,
             "To create detailed system documentation": false,
             "To design user interfaces": false
-        },
-        "multi_select": false
+        }
     },
     "In systems development, which of the following best defines a 'requirement'?": {
         "choices": {
@@ -194,8 +173,7 @@
             "A suggestion for system improvement": false,
             "A security protocol": false,
             "A hardware specification": false
-        },
-        "multi_select": false
+        }
     },
     "What is one of the primary goals of the analysis phase in the SDLC?": {
         "choices": {
@@ -203,8 +181,7 @@
             "Gathering and analyzing business requirements": true,
             "Installing hardware and software": false,
             "Creating test cases": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following describes an 'as-is system'?": {
         "choices": {
@@ -212,8 +189,7 @@
             "A system that has completed development": false,
             "A new system that is under development": false,
             "A system that has failed during implementation": false
-        },
-        "multi_select": false
+        }
     },
     "What is the role of a systems request in the SDLC?": {
         "choices": {
@@ -221,8 +197,7 @@
             "To initiate the process of evaluating and potentially starting a new system project": true,
             "To provide a detailed implementation timeline": false,
             "To present the system design": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following is a key challenge during the analysis phase of the SDLC?": {
         "choices": {
@@ -230,8 +205,7 @@
             "Gathering accurate and complete business requirements": true,
             "Hiring the project team": false,
             "Creating a system prototype": false
-        },
-        "multi_select": false
+        }
     },
     "Which phase of the SDLC is responsible for ensuring the system is working correctly through testing?": {
         "choices": {
@@ -239,8 +213,7 @@
             "Design": false,
             "Implementation": false,
             "Testing": true
-        },
-        "multi_select": false
+        }
     },
     "What is the difference between 'functional requirements' and 'non-functional requirements'?": {
         "choices": {
@@ -248,8 +221,7 @@
             "Functional requirements focus on user experience, while non-functional requirements focus on security": false,
             "Non-functional requirements are optional, while functional requirements are mandatory": false,
             "Functional requirements define hardware specifications, while non-functional requirements define software features": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following is typically part of the system documentation process during the SDLC?": {
         "choices": {
@@ -257,8 +229,7 @@
             "Creating user manuals and technical documentation": true,
             "Designing network infrastructure": false,
             "Scheduling system updates": false
-        },
-        "multi_select": false
+        }
     },
     "The main objective of the design phase in the SDLC is to:": {
         "choices": {
@@ -266,8 +237,7 @@
             "Translate the business requirements into a detailed system design": true,
             "Perform system testing": false,
             "Create system documentation": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following best defines a system prototype?": {
         "choices": {
@@ -275,8 +245,7 @@
             "An early version of the system used to test design concepts": true,
             "A backup of the current system": false,
             "A network diagram for system architecture": false
-        },
-        "multi_select": false
+        }
     },
     "What is the role of 'user acceptance testing' in the SDLC?": {
         "choices": {
@@ -284,8 +253,7 @@
             "To ensure that the system meets the user\u2019s needs before it goes live": true,
             "To verify that all system components are working together": false,
             "To check for code errors": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following is a key activity during the implementation phase of the SDLC?": {
         "choices": {
@@ -293,8 +261,7 @@
             "Installing the system and training users": true,
             "Gathering business requirements": false,
             "Defining the system\u2019s architecture": false
-        },
-        "multi_select": false
+        }
     },
     "Which phase of the SDLC includes creating system documentation and user guides?": {
         "choices": {
@@ -302,8 +269,7 @@
             "Analysis": false,
             "Design": false,
             "Implementation": true
-        },
-        "multi_select": false
+        }
     },
     "Which of the following is an example of a non-functional requirement?": {
         "choices": {
@@ -311,8 +277,7 @@
             "The system must be available 24/7": true,
             "The system must generate monthly sales reports": false,
             "The system must process sales transactions": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following best describes 'scope creep' in systems development?": {
         "choices": {
@@ -320,8 +285,7 @@
             "The reduction of system features to stay within budget": false,
             "The process of hiring additional project staff": false,
             "The failure to complete system documentation": false
-        },
-        "multi_select": false
+        }
     },
     "What is a common risk in the implementation phase of the SDLC?": {
         "choices": {
@@ -329,8 +293,7 @@
             "Incomplete technical documentation": false,
             "The system fails during deployment": true,
             "Lack of user participation": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following is the most likely result of skipping the testing phase in the SDLC?": {
         "choices": {
@@ -338,8 +301,7 @@
             "Faster system deployment": false,
             "Increased likelihood of system failure": true,
             "Improved system performance": false
-        },
-        "multi_select": false
+        }
     },
     "What is the purpose of conducting a post-implementation review?": {
         "choices": {
@@ -347,7 +309,6 @@
             "To gather business requirements for the next system": false,
             "To develop the project\u2019s budget": false,
             "To monitor network infrastructure": false
-        },
-        "multi_select": false
+        }
     }
 }
