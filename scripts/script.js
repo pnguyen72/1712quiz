@@ -2,8 +2,8 @@ const navbar = document.getElementById("navbar");
 const attempt = document.getElementById("attempt");
 const homePage = document.getElementById("home-page");
 const quizPage = document.getElementById("quiz-page");
-const footer = document.getElementById("footer");
-const license = document.getElementById("license");
+const licensePanel = document.getElementById("license-panel");
+const resultPanel = document.getElementById("result-panel");
 const pastResultsContainer = document.getElementById("past-results");
 const nextButton = document.getElementById("next-btn");
 const homeButon = document.getElementById("return-btn");
@@ -51,6 +51,7 @@ form.addEventListener("input", () => {
   newQuizNeeded = true;
 });
 
+hideElement(resultPanel);
 generateModuleSelection();
 
 homeButon.addEventListener("click", returnHome);
@@ -75,10 +76,10 @@ function returnHome() {
     form.reset();
     formChanged = false;
   }
-  footer.style.backgroundColor = "";
   attempt.style.visibility = "hidden";
   hideElement(quizPage);
-  showElement(license);
+  hideElement(resultPanel);
+  showElement(licensePanel);
   showElement(homePage);
 }
 
@@ -104,10 +105,10 @@ function nextQuiz() {
   let data = quizData.slice(0, questionsNum);
 
   removeElementById("result");
-  footer.style.backgroundColor = "transparent";
   attempt.style.visibility = "visible";
+  hideElement(licensePanel);
+  hideElement(resultPanel);
   hideElement(homePage);
-  hideElement(license);
   showElement(quizPage);
 
   if (newQuizNeeded) {
@@ -191,13 +192,14 @@ function submit() {
   const roundedNumber = Math.round((accuracy + Number.EPSILON) * 100) / 100;
   resultText = `${correctAnswers}/${answers} (${roundedNumber}%)`;
   p.appendChild(document.createTextNode(resultText));
-  footer.appendChild(p);
-  footer.style.backgroundColor = getColor(accuracy);
+  resultPanel.appendChild(p);
+  resultPanel.style.backgroundColor = getColor(accuracy);
   quiz.setAttribute("class", "submitted");
   scrollTo(0, 0);
 
   ++attemptsCount;
   attempt.style.visibility = "visible";
+  showElement(resultPanel);
 }
 
 function populateData() {
