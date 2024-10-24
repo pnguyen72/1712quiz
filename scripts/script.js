@@ -6,7 +6,6 @@ const footer = document.getElementById("footer");
 const license = document.getElementById("license");
 const pastResultsContainer = document.getElementById("past-results");
 const nextButton = document.getElementById("next-btn");
-const submitButton = document.getElementById("submit-btn");
 const homeButon = document.getElementById("return-btn");
 const form = document.getElementById("form");
 const moduleSelection = document.getElementById("module-selection");
@@ -30,7 +29,6 @@ function removeElementById(id) {
   }
 }
 hideElement(quizPage);
-hideElement(submitButton);
 
 const modules = [];
 let quizData = [];
@@ -55,7 +53,19 @@ form.addEventListener("input", () => {
 
 generateModuleSelection();
 
-homeButon.addEventListener("click", () => {
+homeButon.addEventListener("click", returnHome);
+nextButton.addEventListener("click", () => {
+  if (quizPage.style.display == "none") {
+    return nextQuiz();
+  }
+  const quiz = document.getElementById("quiz");
+  if (quiz.className == "submitted") {
+    return nextQuiz();
+  }
+  submit();
+});
+
+function returnHome() {
   removeElementById("result");
   removeElementById("result-table");
   if (pastResults.length > 0) {
@@ -67,14 +77,12 @@ homeButon.addEventListener("click", () => {
   }
   footer.style.backgroundColor = "";
   attempt.style.visibility = "hidden";
-  hideElement(submitButton);
   hideElement(quizPage);
   showElement(license);
-  showElement(nextButton);
   showElement(homePage);
-});
+}
 
-nextButton.addEventListener("click", () => {
+function nextQuiz() {
   attempt.innerText = `Attempt ${attemptsCount + 1}`;
 
   let questionsNum = questionNumChoice.value;
@@ -98,10 +106,8 @@ nextButton.addEventListener("click", () => {
   removeElementById("result");
   footer.style.backgroundColor = "transparent";
   attempt.style.visibility = "visible";
-  hideElement(nextButton);
   hideElement(homePage);
   hideElement(license);
-  showElement(submitButton);
   showElement(quizPage);
 
   if (newQuizNeeded) {
@@ -123,9 +129,9 @@ nextButton.addEventListener("click", () => {
       }
     }
   }
-});
+}
 
-submitButton.addEventListener("click", () => {
+function submit() {
   let forceSubmit = false;
 
   const quiz = document.getElementById("quiz");
@@ -192,9 +198,7 @@ submitButton.addEventListener("click", () => {
 
   ++attemptsCount;
   attempt.style.visibility = "visible";
-  hideElement(submitButton);
-  showElement(nextButton);
-});
+}
 
 function populateData() {
   quizData = {};
