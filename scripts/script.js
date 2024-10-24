@@ -313,7 +313,6 @@ function generateQuestion(question, questionIndex) {
     const questionText = question[0];
     const choices = Object.entries(question[1].choices)
     const isMultiSelect = question[1].select_all_that_apply;
-    console.log(isMultiSelect);
 
     if (choices[0][0] != "True") {
         shuffle(choices);
