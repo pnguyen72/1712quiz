@@ -51,7 +51,7 @@ form.addEventListener("input", () => {
   newQuizNeeded = true;
 });
 
-hideElement(resultPanel);
+returnHome();
 generateModuleSelection();
 
 homeButon.addEventListener("click", returnHome);
@@ -278,6 +278,7 @@ function generateModuleSelection() {
       );
 
       const span = document.createElement("span");
+      span.style.fontWeight = "bold";
       span.appendChild(document.createTextNode("All of them!"));
 
       label.appendChild(input);

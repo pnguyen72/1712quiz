@@ -1,0 +1,8 @@
+@keyframes blink {
+  0% {
+    background-color: hsl(0, 80%, 70%);
+  }
+  100% {
+    background-color: transparent;
+  }
+}

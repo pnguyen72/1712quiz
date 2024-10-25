@@ -1,0 +1,74 @@
+.panel {
+  display: flex;
+  height: 3rem;
+  width: 100%;
+  align-items: center;
+  position: fixed;
+  p {
+    text-align: center;
+    margin: auto;
+  }
+}
+
+#result-panel {
+  top: 0;
+
+  #result {
+    font-size: 1.5rem;
+  }
+}
+
+nav {
+  bottom: 0;
+  background-color: #04442c;
+  color: hsl(120, 24%, 96%);
+
+  #attempt {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  box-icon {
+    width: 2rem;
+    height: 2rem;
+    margin: auto;
+  }
+}
+
+#license-panel {
+  bottom: 3rem;
+  background-color: hsl(120, 24%, 96%);
+
+  #license {
+    font-size: 0.8rem;
+
+    @media (width >=500px) {
+      font-size: 1rem;
+    }
+    @media (width >= 400px) {
+      #license-br {
+        display: none;
+      }
+    }
+    /* if hover is available */
+    @media not all and (hover: none) {
+      a:not(:hover) {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* on touch device */
+@media (pointer: none), (pointer: coarse) {
+  .panel {
+    height: 3.25rem;
+  }
+  #attempt {
+    font-size: 1.75rem;
+  }
+  box-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}

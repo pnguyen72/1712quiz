@@ -1,0 +1,14 @@
+table {
+  border-collapse: collapse;
+  text-align: center;
+  width: max(min(32rem, 100%), 66%);
+
+  td,
+  th {
+    border: 1.2pt solid black;
+
+    &:first-child {
+      width: 33%;
+    }
+  }
+}

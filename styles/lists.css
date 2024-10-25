@@ -1,0 +1,32 @@
+ul {
+  list-style-type: none;
+  padding-inline-start: 1.5rem;
+
+  li {
+    margin: 0.5rem;
+
+    input {
+      width: 1rem;
+      height: 1rem;
+
+      /* if hover is available */
+      @media not all and (hover: none) {
+        &:enabled:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+    label span {
+      margin-left: 0.25rem;
+    }
+  }
+}
+
+.submitted {
+  li.correct span {
+    background-color: hsl(120, 80%, 75%);
+  }
+  .question.incorrect > p > b {
+    background-color: hsla(0, 80%, 75%, 75%);
+  }
+}

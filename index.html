@@ -4,10 +4,14 @@
     <title>1712 Practice Quiz</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/panels.css" />
+    <link rel="stylesheet" href="./styles/lists.css" />
+    <link rel="stylesheet" href="./styles/tables.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
-    <nav id="navbar">
+    <nav id="navbar" class="panel">
       <box-icon
         id="return-btn"
         color="hsl(120, 24%, 96%)"
@@ -25,8 +29,17 @@
       ></box-icon>
     </nav>
 
-    <div id="home-page">
-      <h1>1712 Practice Quiz</h1>
+    <div id="home-page" class="page">
+      <div id="title">
+        <h1>1712 Practice Quiz</h1>
+        <a
+          href="https://github.com/pnguyen72/pnguyen72.github.io"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <box-icon type="logo" name="github" animation="tada-hover"></box-icon>
+        </a>
+      </div>
       <form id="form">
         <div id="module-selection">
           <p>Modules:</p>
@@ -50,7 +63,11 @@
         </div>
         <div id="questionNum-selection">
           <label>Questions per attempt: </label>
-          <select name="questionNumChoice" id="questionNumChoice">
+          <select
+            name="questionNumChoice"
+            id="questionNumChoice"
+            style="font-size: 1rem"
+          >
             <option value="10">10</option>
             <option value="20">20</option>
             <option value="40">40</option>
@@ -64,20 +81,22 @@
       <div id="past-results"></div>
     </div>
 
-    <div id="quiz-page"></div>
+    <div id="quiz-page" class="page"></div>
 
-    <footer id="license-panel" class="panel">
+    <div id="license-panel" class="panel">
       <p id="license">
         <a
           href="https://github.com/pnguyen72/pnguyen72.github.io/blob/main/LICENSE"
           target="_blank"
           rel="noopener noreferrer"
         >
-          By using this website you agree to wear a Hawaiian shirt to the exam.
+          By using this website
+          <br id="license-br" />
+          you agree to wear a Hawaiian shirt to the exam.
         </a>
       </p>
-    </footer>
-    <footer id="result-panel" class="panel"></footer>
+    </div>
+    <div id="result-panel" class="panel"></div>
 
     <script src="./scripts/script.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
