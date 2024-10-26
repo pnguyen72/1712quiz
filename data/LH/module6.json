@@ -44,15 +44,6 @@
             "False": false
         }
     },
-    "Andrew, an analyst for PaxMedia Inc., has just learned that the business rules for a system he has been working on have changed. This means what?": {
-        "choices": {
-            "The ERD components will have to be changed": true,
-            "Nothing \u2013 once the ERD data models have been drawn, they are 'frozen' for the system": false,
-            "Andrew will be reassigned to a different project that is in its beginning stages": false,
-            "The ERD data model will have to be put on hold while new DFD diagrams are created": false,
-            "The project will have to be scrapped and restarted": false
-        }
-    },
     "The three steps in creating an ERD are: (1) identify the entities; (2) identify the processes; (3) identify the relationships": {
         "choices": {
             "True": false,
@@ -215,15 +206,6 @@
             "False": true
         }
     },
-    "What is true about creating an entity relationship diagram?": {
-        "choices": {
-            "It is an iterative process": true,
-            "There will be at most seven entities": false,
-            "There will be at most seven relationships": false,
-            "If you identify more than seven entities, analyze and combine until you have seven or less": false,
-            "Entities will have at most seven attributes": false
-        }
-    },
     "Data modeling is an iterative process.": {
         "choices": {
             "True": true,
@@ -312,15 +294,6 @@
         "choices": {
             "True": false,
             "False": true
-        }
-    },
-    "Omar has a model with 85 entities. He can do which of the following?": {
-        "choices": {
-            "Group these into related subject areas": true,
-            "Compress these into at most seven entity grouping units": false,
-            "Stop \u2013 he has all entities defined": false,
-            "Sort the entities alphabetically": false,
-            "Co-validate the entities with the level 2 DFD diagrams": false
         }
     },
     "An ERD is a picture that shows how data and information is processed and transformed by a business system.": {
