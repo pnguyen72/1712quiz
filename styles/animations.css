@@ -6,3 +6,15 @@
     background-color: transparent;
   }
 }
+
+@keyframes flashing {
+  0% {
+    background-color: #04442c;
+  }
+  50% {
+    background: darkred;
+  }
+  100% {
+    background: #04442c;
+  }
+}

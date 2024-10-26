@@ -11,7 +11,6 @@ function returnHome() {
   attempt.style.visibility = "hidden";
   quizPage.hide();
   resultPanel.hide();
-  licensePanel.unhide();
   homePage.unhide();
 }
 
@@ -38,7 +37,6 @@ function nextQuiz() {
 
   removeElementById("result");
   attempt.style.visibility = "visible";
-  licensePanel.hide();
   resultPanel.hide();
   homePage.hide();
   quizPage.unhide();

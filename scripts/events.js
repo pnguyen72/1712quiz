@@ -13,6 +13,21 @@ form.addEventListener("input", () => {
   newQuizNeeded = true;
 });
 
+licenceAgreeBtn.addEventListener("click", () => {
+  licenseNotice.style.display = "none";
+  navbar.unhide();
+});
+licenseDisagreeBtn.addEventListener("click", () => {
+  if (++disagreeNum < 4) {
+    alert("You can't disagree, dummy!");
+  } else {
+    alert(
+      "Alright, for you alone I'll make an exception,\nyou don't have to wear a Hawaiian shirt to the exam."
+    );
+    licenceAgreeBtn.click();
+  }
+});
+
 homeButon.addEventListener("click", returnHome);
 
 nextButton.addEventListener("click", () => {

@@ -1,0 +1,93 @@
+#main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  #license-notice {
+    position: relative;
+    height: 75vh;
+
+    #hawaiian {
+      height: 100%;
+      object-fit: contain;
+    }
+    #license-text {
+      font-size: 4vh;
+      text-align: center;
+      position: absolute;
+      bottom: 8vh;
+      background-color: hsla(120, 24%, 96%);
+    }
+    #license-agree-btn {
+      display: flex;
+      position: absolute;
+      bottom: 2.5vh;
+      width: 40%;
+      height: 8vh;
+      left: 30%;
+      align-items: center;
+      cursor: pointer;
+      animation: flashing 1.5s infinite ease-in;
+
+      #license-agree-text {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 4vh;
+        font-weight: bold;
+        color: hsl(120, 24%, 96%);
+        margin: auto;
+      }
+
+      &:hover {
+        animation: none;
+        background-color: hsl(120, 80%, 70%);
+
+        #license-agree-text {
+          color: black;
+        }
+      }
+    }
+    #license-disagree-btn {
+      position: absolute;
+      bottom: 0.75rem;
+      right: 0.75rem;
+
+      #license-disagree-text {
+        cursor: pointer;
+        font-size: 0.5rem;
+        margin: 0;
+      }
+
+      &:hover {
+        #license-disagree-text {
+          color: red;
+        }
+      }
+    }
+  }
+
+  @media (aspect-ratio < 8/7) {
+    flex-direction: column;
+
+    #license-notice {
+      height: auto;
+      width: calc(100vw-6rem);
+      max-width: 408px;
+
+      #hawaiian {
+        width: 100%;
+      }
+      #license-text {
+        font-size: min(5vw, 36px);
+        bottom: min(10vw, 60px);
+      }
+      #license-agree-btn {
+        bottom: min(3vw, 20px);
+        height: min(10vw, 60px);
+
+        #license-agree-text {
+          font-size: min(5vw, 36px);
+        }
+      }
+    }
+  }
+}

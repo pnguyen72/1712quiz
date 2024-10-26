@@ -6,12 +6,13 @@ body {
   .page {
     display: flex;
     flex-direction: column;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 7rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
 
     #title {
+      height: 4rem;
       font-family: sans-serif;
       display: flex;
       align-items: center;
@@ -20,12 +21,12 @@ body {
         font-size: 2.25rem;
       }
       a {
+        margin: auto;
         margin-left: 0.75rem;
 
         box-icon {
           width: 2rem;
           height: 2rem;
-          margin: auto;
         }
       }
     }
@@ -38,6 +39,8 @@ body {
     font-size: 1.1rem;
 
     .page {
+      margin-left: 2rem;
+      margin-right: 2rem;
       margin-bottom: 7.5rem;
 
       #title {

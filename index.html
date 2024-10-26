@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./styles/lists.css" />
     <link rel="stylesheet" href="./styles/tables.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
-    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/license.css" />
+    <link rel="stylesheet" href="./styles/page.css" />
   </head>
   <body>
     <div id="result-panel" class="panel"></div>
@@ -23,62 +24,66 @@
           <box-icon type="logo" name="github"></box-icon>
         </a>
       </div>
-      <form id="form">
-        <div id="module-selection">
-          <p>Modules:</p>
-        </div>
-        <div id="questionBank-selection">
-          <p>Question banks:</p>
-          <ul>
-            <li>
-              <label>
-                <input id="LH" type="checkbox" checked="true" />
-                <span>Learning Hub practice quizzes</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input id="AI" type="checkbox" />
-                <span>AI-generated questions</span>
-              </label>
-            </li>
-          </ul>
-        </div>
-        <div id="questionNum-selection">
-          <label>Questions per attempt: </label>
-          <select
-            name="questionNumChoice"
-            id="questionNumChoice"
-            style="font-size: 1rem"
-          >
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="40">40</option>
-            <option value="80">80</option>
-            <option value="ALL">All of them!</option>
-          </select>
-          <br />
-          <br />
-        </div>
-      </form>
+      <div id="main">
+        <form id="form">
+          <div id="module-selection">
+            <p>Modules:</p>
+          </div>
+          <div id="questionBank-selection">
+            <p>Question banks:</p>
+            <ul>
+              <li>
+                <label>
+                  <input id="LH" type="checkbox" checked="true" />
+                  <span>Learning Hub practice quizzes</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input id="AI" type="checkbox" />
+                  <span>AI-generated questions</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div id="questionNum-selection">
+            <label>Questions per attempt: </label>
+            <select
+              name="questionNumChoice"
+              id="questionNumChoice"
+              style="font-size: 1rem"
+            >
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="40">40</option>
+              <option value="80">80</option>
+              <option value="ALL">All of them!</option>
+            </select>
+            <br />
+            <br />
+          </div>
+        </form>
+        <figure id="license-notice">
+          <img
+            src="images/hawaiian.jpg"
+            alt="man wearing a Hawaiian shirt"
+            id="hawaiian"
+          />
+          <p id="license-text">
+            By using this website you agree to wear a Hawaiian shirt to the
+            exam.
+          </p>
+          <div id="license-agree-btn">
+            <p id="license-agree-text">Agree</p>
+          </div>
+          <div id="license-disagree-btn">
+            <p id="license-disagree-text">no</p>
+          </div>
+        </figure>
+      </div>
       <div id="past-results"></div>
     </div>
-
     <div id="quiz-page" class="page"></div>
-
-    <div id="license-panel" class="panel">
-      <p id="license">
-        <a
-          href="https://github.com/pnguyen72/pnguyen72.github.io/blob/main/LICENSE"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          By using this website
-          <br id="license-br" />
-          you agree to wear a Hawaiian shirt to the exam.
-        </a>
-      </p>
-    </div>
     <nav id="navbar" class="panel">
       <box-icon
         id="return-btn"
