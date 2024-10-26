@@ -62,13 +62,11 @@ nav {
 /* on touch device */
 @media (pointer: none), (pointer: coarse) {
   .panel {
-    height: 3.25rem;
-  }
-  #attempt {
-    font-size: 1.75rem;
-  }
-  box-icon {
-    width: 2.25rem;
-    height: 2.25rem;
+    height: 3.5rem;
+
+    box-icon {
+      width: 2.25rem;
+      height: 2.25rem;
+    }
   }
 }
