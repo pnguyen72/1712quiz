@@ -40,9 +40,15 @@ body {
     .page {
       margin-bottom: 7.5rem;
 
-      #title h1 {
-        font-size: 1.75rem;
-        text-align: center;
+      #title {
+        h1 {
+          font-size: 1.75rem;
+          text-align: center;
+        }
+        a box-icon {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
       }
     }
   }
