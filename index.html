@@ -11,22 +11,7 @@
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
-    <nav id="navbar" class="panel">
-      <box-icon
-        id="return-btn"
-        color="hsl(120, 24%, 96%)"
-        name="home"
-        type="solid"
-      ></box-icon>
-      <span id="attempt">Attempt 0</span>
-      <box-icon
-        id="next-btn"
-        color="hsl(120, 24%, 96%)"
-        name="right-arrow-circle"
-        type="solid"
-      ></box-icon>
-    </nav>
-
+    <div id="result-panel" class="panel"></div>
     <div id="home-page" class="page">
       <div id="title">
         <h1>1712 Practice Quiz</h1>
@@ -94,7 +79,21 @@
         </a>
       </p>
     </div>
-    <div id="result-panel" class="panel"></div>
+    <nav id="navbar" class="panel">
+      <box-icon
+        id="return-btn"
+        color="hsl(120, 24%, 96%)"
+        name="home"
+        type="solid"
+      ></box-icon>
+      <span id="attempt">Attempt 0</span>
+      <box-icon
+        id="next-btn"
+        color="hsl(120, 24%, 96%)"
+        name="right-arrow-circle"
+        type="solid"
+      ></box-icon>
+    </nav>
 
     <script src="./scripts/elements.js"></script>
     <script src="./scripts/globalVar.js"></script>
