@@ -44,7 +44,7 @@ function nextQuiz() {
       questionBankSelection.style.animation = "blink 1s";
       return;
     }
-    populateData();
+    _populateData();
     formChanged = false;
   }
   let data = quizData.slice(0, questionsNum);
@@ -146,7 +146,7 @@ function submit() {
   resultPanel.unhide();
 }
 
-function populateData() {
+function _populateData() {
   quizData = {};
   for (let i = 0; i < modulesData.length; i++) {
     if (moduleSelectBoxes[i].checked) {

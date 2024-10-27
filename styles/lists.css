@@ -1,39 +1,74 @@
 ul {
   list-style-type: none;
-  padding-inline-start: 1.5rem;
+  padding-inline-start: 0.5rem;
 
   li {
     margin: 0.5rem;
 
-    input {
-      width: 1rem;
-      height: 1rem;
+    label {
+      .help {
+        visibility: hidden;
+        font-weight: bold;
+        color: blue;
+        cursor: pointer;
+        margin-right: 0.25rem;
+      }
+      input {
+        width: 1rem;
+        height: 1rem;
 
-      /* if hover is available */
-      @media not all and (hover: none) {
-        &:enabled:hover {
-          transform: scale(1.2);
+        /* if hover is available */
+        @media not all and (hover: none) {
+          &:enabled:hover {
+            transform: scale(1.2);
+          }
+        }
+
+        + span {
+          margin-left: 0.25rem;
         }
       }
-    }
-    label span {
-      margin-left: 0.25rem;
     }
   }
 }
 
-.submitted {
-  li.correct span {
+#home-page ul {
+  padding-inline-start: 1.5rem;
+}
+
+#quiz-page .submitted {
+  li.correct label input + span {
     background-color: hsl(120, 80%, 75%);
   }
   .question.incorrect > p > b {
     background-color: hsla(0, 80%, 75%, 75%);
   }
+
+  /* if hover is available */
+  @media not all and (hover: none) {
+    label {
+      &:hover .help {
+        visibility: visible;
+      }
+      .help:hover {
+        color: rgb(0, 200, 255);
+      }
+    }
+  }
+  /* if hover is not available */
+  @media (hover: none) {
+    .help {
+      visibility: visible;
+    }
+  }
 }
 
 /* on touch device */
 @media (pointer: none), (pointer: coarse) {
-  ul {
+  #home-page ul {
     padding-inline-start: 0.75rem;
+  }
+  #quiz-page ul {
+    padding-inline-start: 0;
   }
 }

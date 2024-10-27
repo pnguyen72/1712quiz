@@ -97,9 +97,9 @@ function generateQuiz(data) {
 
   div = document.createElement("div");
   div.id = "quiz";
-  data.forEach((question, questionIndex) => {
-    div.appendChild(generateQuestion(question, questionIndex));
-  });
+  data.forEach((question, index) =>
+    div.appendChild(generateQuestion(question, index))
+  );
   return div;
 }
 
@@ -149,13 +149,34 @@ function generateQuestion(question, questionIndex) {
   }
 
   const ul = document.createElement("ul");
-  choices.forEach((choice, choiceIndex) => {
-    const [choiceText, isCorrect] = choice;
+  choices.forEach((choice) => {
+    const [choiceText, choiceInfo] = choice;
+    const isCorrect = choiceInfo.isCorrect;
+    const reason = choiceInfo.reason;
 
     const li = document.createElement("li");
     li.className = isCorrect ? "correct" : "incorrect";
 
     const label = document.createElement("label");
+
+    const help = document.createElement("span");
+    help.className = "help";
+    if (!reason) {
+      help.style.visibility = "hidden";
+    } else {
+      let toggle = true;
+      help.addEventListener("click", () => {
+        if (toggle) {
+          span.innerHTML = reason;
+          span.style.fontStyle = "italic";
+        } else {
+          span.innerHTML = choiceText;
+          span.style.fontStyle = "normal";
+        }
+        toggle = !toggle;
+      });
+    }
+    help.appendChild(document.createTextNode("?"));
 
     const input = document.createElement("input");
     input.type = isMultiSelect ? "checkbox" : "radio";
@@ -164,6 +185,7 @@ function generateQuestion(question, questionIndex) {
     const span = document.createElement("span");
     span.appendChild(document.createTextNode(choiceText));
 
+    label.appendChild(help);
     label.appendChild(input);
     label.appendChild(span);
 

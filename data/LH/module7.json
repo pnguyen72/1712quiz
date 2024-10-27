@@ -1,46 +1,118 @@
 {
     "Balance occurs between DFDs and ERDs when the data stores _____": {
         "choices": {
-            "Can be equated to entities on the ERD and when entities are referred to by data stores on the DFD": true,
-            "Are uniquely named": false,
-            "Have only one input and one output flow": false,
-            "Are named the same as the relationships on the ERD": false,
-            "Can be compared to ERD data flows and attributes on the ERD are included in data stores on the DFD": false
+            "Can be equated to entities on the ERD and when entities are referred to by data stores on the DFD": {
+                "isCorrect": true,
+                "reason": ""
+            },
+            "Are uniquely named": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "Have only one input and one output flow": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "Are named the same as the relationships on the ERD": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "Can be compared to ERD data flows and attributes on the ERD are included in data stores on the DFD": {
+                "isCorrect": false,
+                "reason": ""
+            }
         },
-        "multi_select": false
+        "multi_select": {
+            "isCorrect": false,
+            "reason": ""
+        }
     },
     "CRUD stands for create, read, update and delete and can be used to verify DFDs and ERDs.": {
         "choices": {
-            "True": true,
-            "False": false
+            "True": {
+                "isCorrect": true,
+                "reason": ""
+            },
+            "False": {
+                "isCorrect": false,
+                "reason": ""
+            }
         },
-        "multi_select": false
+        "multi_select": {
+            "isCorrect": false,
+            "reason": ""
+        }
     },
     "Omar has a model with 85 entities. He can do which of the following?": {
         "choices": {
-            "Group these into related subject areas": true,
-            "Compress these into at most seven entity grouping units": false,
-            "Stop \u2013 he has all entities defined": false,
-            "Sort the entities alphabetically": false,
-            "Co-validate the entities with the level 2 DFD diagrams": false
+            "Group these into related subject areas": {
+                "isCorrect": true,
+                "reason": ""
+            },
+            "Compress these into at most seven entity grouping units": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "Stop \u2013 he has all entities defined": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "Sort the entities alphabetically": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "Co-validate the entities with the level 2 DFD diagrams": {
+                "isCorrect": false,
+                "reason": ""
+            }
         }
     },
     "Andrew, an analyst for PaxMedia Inc., has just learned that the business rules for a system he has been working on have changed. This means what?": {
         "choices": {
-            "The ERD components will have to be changed": true,
-            "Nothing \u2013 once the ERD data models have been drawn, they are 'frozen' for the system": false,
-            "Andrew will be reassigned to a different project that is in its beginning stages": false,
-            "The ERD data model will have to be put on hold while new DFD diagrams are created": false,
-            "The project will have to be scrapped and restarted": false
+            "The ERD components will have to be changed": {
+                "isCorrect": true,
+                "reason": ""
+            },
+            "Nothing \u2013 once the ERD data models have been drawn, they are 'frozen' for the system": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "Andrew will be reassigned to a different project that is in its beginning stages": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "The ERD data model will have to be put on hold while new DFD diagrams are created": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "The project will have to be scrapped and restarted": {
+                "isCorrect": false,
+                "reason": ""
+            }
         }
     },
     "What is true about creating an entity relationship diagram?": {
         "choices": {
-            "It is an iterative process": true,
-            "There will be at most seven entities": false,
-            "There will be at most seven relationships": false,
-            "If you identify more than seven entities, analyze and combine until you have seven or less": false,
-            "Entities will have at most seven attributes": false
+            "It is an iterative process": {
+                "isCorrect": true,
+                "reason": ""
+            },
+            "There will be at most seven entities": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "There will be at most seven relationships": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "If you identify more than seven entities, analyze and combine until you have seven or less": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "Entities will have at most seven attributes": {
+                "isCorrect": false,
+                "reason": ""
+            }
         }
     }
 }

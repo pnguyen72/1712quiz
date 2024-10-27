@@ -1,4 +1,3 @@
-const root = document.querySelector(":root");
 const navbar = document.getElementById("navbar");
 const attempt = document.getElementById("attempt");
 const homePage = document.getElementById("home-page");
