@@ -30,3 +30,10 @@ ul {
     background-color: hsla(0, 80%, 75%, 75%);
   }
 }
+
+/* on touch device */
+@media (pointer: none), (pointer: coarse) {
+  ul {
+    padding-inline-start: 0.75rem;
+  }
+}

@@ -68,7 +68,7 @@
   }
 
   @media (aspect-ratio < 8/7) {
-    flex-direction: column;
+    flex-direction: column-reverse;
 
     #license-notice {
       height: auto;
