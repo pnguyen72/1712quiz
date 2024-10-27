@@ -11,7 +11,7 @@ function generateModuleSelection() {
   */
 
   const ul = document.createElement("ul");
-  fetch("./data/modules.json")
+  const promise = fetch("./data/modules.json")
     .then((response) => response.json())
     .then((moduleList) => {
       moduleList.forEach((moduleName, index) => {
@@ -68,6 +68,7 @@ function generateModuleSelection() {
       ul.appendChild(li);
     });
   moduleSelection.append(ul);
+  return promise;
 }
 
 function generateQuiz(data) {

@@ -1,3 +1,17 @@
+function licenseLock() {
+  for (input of form.querySelectorAll("input,select")) {
+    input.disabled = true;
+  }
+  navbar.hide();
+}
+
+function licenseUnlock() {
+  for (input of form.querySelectorAll("input,select")) {
+    input.disabled = false;
+  }
+  navbar.unhide();
+}
+
 function returnHome() {
   removeElementById("result");
   removeElementById("result-table");

@@ -15,14 +15,15 @@ form.addEventListener("input", () => {
 
 licenceAgreeBtn.addEventListener("click", () => {
   licenseNotice.style.display = "none";
-  navbar.unhide();
+  licenseUnlock();
 });
 licenseDisagreeBtn.addEventListener("click", () => {
   if (++disagreeNum < 4) {
     alert("You can't disagree, dummy!");
   } else {
     alert(
-      "Alright, for you alone I'll make an exception,\nyou don't have to wear a Hawaiian shirt to the exam."
+      "Alright, for you alone I'll make an exception,\n" +
+        "you don't have to wear a Hawaiian shirt to the exam."
     );
     licenceAgreeBtn.click();
   }

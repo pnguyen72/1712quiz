@@ -5,6 +5,5 @@ if (matchMedia("not all and (hover: none)").matches) {
   }
 }
 
-navbar.hide();
 returnHome();
-generateModuleSelection();
+generateModuleSelection().then(licenseLock);
