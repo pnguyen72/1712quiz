@@ -56,9 +56,12 @@
         margin: 0;
       }
 
-      &:hover {
-        #license-disagree-text {
-          color: red;
+      /* if hover is available */
+      @media not all and (hover: none) {
+        &:hover {
+          #license-disagree-text {
+            color: red;
+          }
         }
       }
     }
