@@ -109,6 +109,12 @@ function generateQuestion(question, questionIndex) {
       <p> 
         <b> Question #. </b> ... 
       </p>
+
+      // if question contains image
+      <figure> 
+        <img src="...">
+      <figure>
+    
       <ul>
         <li class="correct/incorrect">
           <label for="Q#/#"> 
@@ -120,16 +126,16 @@ function generateQuestion(question, questionIndex) {
     </div>
   */
 
-  const questionText = question[0];
-  const choices = Object.entries(question[1].choices);
-  const isMultiSelect = question[1].select_all_that_apply;
+  const [questionText, questionInfo] = question;
+  const choices = Object.entries(questionInfo.choices);
+  const isMultiSelect = questionInfo.select_all_that_apply;
 
-  if (choices[0][0] != "True") {
+  if (choices[0][0] != "True" && isNaN(choices[0][0])) {
     shuffle(choices);
   }
 
   const div = document.createElement("div");
-  div.id = "Q" + questionIndex;
+  div.id = "Q" + (questionIndex + 1);
   div.setAttribute("class", "question");
 
   const p = document.createElement("p");
@@ -146,6 +152,14 @@ function generateQuestion(question, questionIndex) {
     "COMP 1712 is your favorite class. (You must answer correctly AND honestly!)"
   ) {
     div.classList.add("joke");
+  }
+
+  if (questionInfo.img) {
+    figure = document.createElement("figure");
+    img = document.createElement("img");
+    img.setAttribute("src", "./data/resources/" + questionInfo.img);
+    figure.appendChild(img);
+    div.appendChild(figure);
   }
 
   const ul = document.createElement("ul");
