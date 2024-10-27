@@ -114,5 +114,238 @@
                 "reason": ""
             }
         }
+    },
+    "Once we have an ERD, we can be sure we have a good database structure.": {
+        "choices": {
+            "True": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "False": {
+                "isCorrect": true,
+                "reason": ""
+            }
+        }
+    },
+    "Our goal with normalization is to completely eliminate redundancy.": {
+        "choices": {
+            "True": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "False": {
+                "isCorrect": true,
+                "reason": ""
+            }
+        }
+    },
+    "Some redundancies in a relational DB are necessary.": {
+        "choices": {
+            "True": {
+                "isCorrect": true,
+                "reason": ""
+            },
+            "False": {
+                "isCorrect": false,
+                "reason": ""
+            }
+        }
+    },
+    "Foreign keys in a relational DB are an example of _____": {
+        "choices": {
+            "necessary redundancy": {
+                "isCorrect": true,
+                "reason": ""
+            },
+            "FKs are not redundancy at all": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "unwanted/unnecessary redundancy": {
+                "isCorrect": false,
+                "reason": ""
+            }
+        }
+    },
+    "In a relational table, when we say attribute A functionally defines attribute B (A --> B) , it means that:": {
+        "choices": {
+            "there is only one value of B for any given value of A": {
+                "isCorrect": true,
+                "reason": ""
+            },
+            "there is only one value of A for any given value of B.": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "A and B must both be part of the PK.": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "A and B must not be part of the PK.": {
+                "isCorrect": false,
+                "reason": ""
+            }
+        }
+    },
+    "In a functional dependence, the determinant is always a single attribute.": {
+        "choices": {
+            "True": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "False": {
+                "isCorrect": true,
+                "reason": ""
+            }
+        }
+    },
+    "In a functional dependence, the dependent is always a single attribute.": {
+        "choices": {
+            "True": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "False": {
+                "isCorrect": true,
+                "reason": ""
+            }
+        }
+    },
+    "Relational tables that have a single-attribute PK, are immediately in 2NF.": {
+        "choices": {
+            "True": {
+                "isCorrect": true,
+                "reason": ""
+            },
+            "False": {
+                "isCorrect": false,
+                "reason": ""
+            }
+        }
+    },
+    "Partial dependency is a form of functional dependency.": {
+        "choices": {
+            "True": {
+                "isCorrect": true,
+                "reason": ""
+            },
+            "False": {
+                "isCorrect": false,
+                "reason": ""
+            }
+        }
+    },
+    "A transitive dependency is a form of partial dependency.": {
+        "choices": {
+            "True": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "False": {
+                "isCorrect": true,
+                "reason": ""
+            }
+        }
+    },
+    "Select all that applies to various normal forms:": {
+        "choices": {
+            "A table in 3NF is also in 1NF": {
+                "isCorrect": true,
+                "reason": ""
+            },
+            "A table in 2NF is also in 1NF.": {
+                "isCorrect": true,
+                "reason": ""
+            },
+            "A table in 3NF is also in 2NF": {
+                "isCorrect": true,
+                "reason": ""
+            }
+        },
+        "select_all_that_apply": true
+    },
+    "The following table is _____": {
+        "choices": {
+            "not a relational table": {
+                "isCorrect": true,
+                "reason": ""
+            },
+            "a relational table that is only 1NF": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "a relational table in 2NF": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "a relational table in 3NF": {
+                "isCorrect": false,
+                "reason": ""
+            }
+        },
+        "img": "LH_7_1.png"
+    },
+    "How many non-prime attributes do you see in the following dependency diagram?": {
+        "choices": {
+            "2": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "3": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "4": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "5": {
+                "isCorrect": true,
+                "reason": ""
+            }
+        },
+        "img": "LH_7_2.png"
+    },
+    "The following table is in 1NF. If we normalize this table to 2NF, how many tables in total would exist in our relational DB after normalizing to 2NF?": {
+        "choices": {
+            "1": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "2": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "3": {
+                "isCorrect": true,
+                "reason": ""
+            },
+            "4": {
+                "isCorrect": false,
+                "reason": ""
+            }
+        },
+        "img": "LH_7_3.png"
+    },
+    "The following table is in 1NF. if we normalize this table to 2NF, how many tables in total would exist in the resulting DB?": {
+        "choices": {
+            "1": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "2": {
+                "isCorrect": false,
+                "reason": ""
+            },
+            "3": {
+                "isCorrect": true,
+                "reason": ""
+            },
+            "4": {
+                "isCorrect": false,
+                "reason": ""
+            }
+        },
+        "img": "LH_7_4.png"
     }
 }

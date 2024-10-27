@@ -7,5 +7,7 @@
         "Data Flow Diagrams",
         "Entity Relationship Diagrams"
     ],
-    "final": [ ]
+    "final": [
+        "Normalization"
+     ]
 }
