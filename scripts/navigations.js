@@ -148,13 +148,13 @@ function submit() {
 
 function populateData() {
   quizData = {};
-  for (let i = 0; i < modules.length; i++) {
+  for (let i = 0; i < modulesData.length; i++) {
     if (moduleSelectBoxes[i].checked) {
       if (LHChoice.checked) {
-        quizData = { ...quizData, ...modules[i]["LH"] };
+        quizData = { ...quizData, ...modulesData[i]["LH"] };
       }
       if (AIChoice.checked) {
-        quizData = { ...quizData, ...modules[i]["AI"] };
+        quizData = { ...quizData, ...modulesData[i]["AI"] };
       }
     }
   }

@@ -13,6 +13,8 @@ form.addEventListener("input", () => {
   newQuizNeeded = true;
 });
 
+moduleGroupSelection.addEventListener("input", generateModuleSelection);
+
 licenceAgreeBtn.addEventListener("click", () => {
   licenseNotice.style.display = "none";
   licenseUnlock();

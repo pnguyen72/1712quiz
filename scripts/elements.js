@@ -11,12 +11,13 @@ const pastResultsContainer = document.getElementById("past-results");
 const nextButton = document.getElementById("next-btn");
 const homeButon = document.getElementById("return-btn");
 const form = document.getElementById("form");
+const moduleGroupSelection = document.getElementById("moduleGroup-selection");
+const midtermChoice = document.getElementById("midterm");
 const moduleSelection = document.getElementById("module-selection");
 const questionBankSelection = document.getElementById("questionBank-selection");
 const AIChoice = document.getElementById("AI");
 const LHChoice = document.getElementById("LH");
 const questionNumChoice = document.getElementById("questionNumChoice");
-const moduleSelectBoxes = [];
 
 homePage.hide = () => (homePage.style.display = "none");
 homePage.unhide = () => (homePage.style.display = "");

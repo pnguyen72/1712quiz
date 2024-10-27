@@ -1,8 +1,11 @@
-[
-    "The Life Cycle",
-    "Methodologies",
-    "Requirements",
-    "Use Cases",
-    "Data Flow Diagrams",
-    "Entity Relationship Diagrams"
-]
+{
+    "midterm": [
+        "The Life Cycle",
+        "Methodologies",
+        "Requirements",
+        "Use Cases",
+        "Data Flow Diagrams",
+        "Entity Relationship Diagrams"
+    ],
+    "final": [ ]
+}
