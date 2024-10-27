@@ -27,13 +27,12 @@
       left: 30%;
       align-items: center;
       cursor: pointer;
-      animation: flashing 1.5s infinite ease-in;
+      animation: flashing 1.5s infinite ease-in-out;
 
       #license-agree-text {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 4vh;
         font-weight: bold;
-        color: hsl(120, 24%, 96%);
         margin: auto;
       }
 

@@ -9,12 +9,12 @@
 
 @keyframes flashing {
   0% {
-    background-color: #04442c;
+    background-color: red;
   }
   50% {
-    background: darkred;
+    background-color: cyan;
   }
   100% {
-    background: #04442c;
+    background-color: red;
   }
 }
