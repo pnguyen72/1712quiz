@@ -23,20 +23,20 @@ Note that this website is organized by lecture modules, not textbook chapters.
 
 The questions for each module are stored in `LH/module#.json` if they are from Learning Hub, or `AI/module#.json` if they are AI-generated. The file is in this format:
 
-```json
+```yaml
 {
     "Question 1 text": {
-        "img": "image_file_name", // optional, only if the question includes an image
-        "select_all_that_apply": true/false, // whether the question is multi-select
+        "img": "image_file_name", # optional, only if the question includes an image
+        "select_all_that_apply": true/false, # whether the question is multi-select
         "choices": {
             "choice 1 text": {
-                "isCorrect": true/false, // whether the choice is correct
-                "reason": "a brief explanation of why this choice is true/false" // optional
+                "isCorrect": true/false, # whether the choice is correct
+                "reason": "a brief explanation of why this choice is true/false" # optional
             },
-            // etc. for choice 2, 3,...
+            # etc. for choice 2, 3,...
         }
     },
-    // etc. for question 2, 3,...
+    # etc. for question 2, 3,...
 }
 
 ```
