@@ -169,7 +169,7 @@
     },
     "In a relational table, when we say attribute A functionally defines attribute B (A --> B) , it means that:": {
         "choices": {
-            "there is only one value of B for any given value of A": {
+            "there is only one value of B for any given value of A.": {
                 "isCorrect": true,
                 "reason": ""
             },
@@ -249,7 +249,7 @@
     },
     "Select all that applies to various normal forms:": {
         "choices": {
-            "A table in 3NF is also in 1NF": {
+            "A table in 3NF is also in 1NF.": {
                 "isCorrect": true,
                 "reason": ""
             },
@@ -327,7 +327,7 @@
         },
         "img": "LH_7_3.png"
     },
-    "The following table is in 1NF. if we normalize this table to 2NF, how many tables in total would exist in the resulting DB?": {
+    "The following table is in 1NF. If we normalize this table to 2NF, how many tables in total would exist in the resulting DB?": {
         "choices": {
             "1": {
                 "isCorrect": false,
