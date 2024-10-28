@@ -182,10 +182,10 @@ function generateQuestion(question, questionIndex) {
       help.addEventListener("click", () => {
         if (toggle) {
           span.innerHTML = reason;
-          span.style.fontStyle = "italic";
+          span.style.color = "blue";
         } else {
           span.innerHTML = choiceText;
-          span.style.fontStyle = "normal";
+          span.style.color = "";
         }
         toggle = !toggle;
       });

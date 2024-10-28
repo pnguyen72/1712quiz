@@ -38,28 +38,13 @@ ul {
 
 #quiz-page .submitted {
   li.correct label input + span {
-    background-color: hsl(120, 80%, 75%);
+    background-color: hsl(120, 80%, 80%);
   }
   .question.incorrect > p > b {
     background-color: hsla(0, 80%, 75%, 75%);
   }
-
-  /* if hover is available */
-  @media not all and (hover: none) {
-    label {
-      &:hover .help {
-        visibility: visible;
-      }
-      .help:hover {
-        color: rgb(0, 200, 255);
-      }
-    }
-  }
-  /* if hover is not available */
-  @media (hover: none) {
-    .help {
-      visibility: visible;
-    }
+  .help {
+    visibility: visible;
   }
 }
 
