@@ -16,3 +16,10 @@ function getColor(accuracy, A = 1) {
   const L = 45 + (((25 / 100) * 4) / 3) * (Math.min(accuracy + 25, 100) - 25);
   return `hsla(${H}, ${S}%, ${L}%, ${A})`;
 }
+
+function someOf(collection, func = (a) => a) {
+  for (item of collection) {
+    if (func(item)) return true;
+  }
+  return false;
+}

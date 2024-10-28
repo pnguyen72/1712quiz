@@ -144,6 +144,18 @@ function submit() {
   ++attemptsCount;
   attempt.style.visibility = "visible";
   resultPanel.unhide();
+
+  if (localStorage.getItem("helpPopupAppearedBefore") == null) {
+    const helps = quizPage.getElementsByClassName("help");
+    if (someOf(helps, (help) => help.style.visibility != "hidden")) {
+      setTimeout(
+        alert,
+        500,
+        "Click the blue question marks to reveal the reason for each answer."
+      );
+      localStorage.setItem("helpPopupAppearedBefore", "true");
+    }
+  }
 }
 
 function _populateData() {
