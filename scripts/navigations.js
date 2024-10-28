@@ -1,4 +1,9 @@
 function licenseLock() {
+  if (localStorage.getItem("licenseException") != null) {
+    return;
+  }
+
+  licenseNotice.style.display = "block";
   for (input of form.querySelectorAll("input,select")) {
     input.disabled = true;
   }
@@ -6,6 +11,7 @@ function licenseLock() {
 }
 
 function licenseUnlock() {
+  licenseNotice.style.display = "";
   for (input of form.querySelectorAll("input,select")) {
     input.disabled = false;
   }

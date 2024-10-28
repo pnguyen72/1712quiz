@@ -15,10 +15,7 @@ form.addEventListener("input", () => {
 
 moduleGroupSelection.addEventListener("input", generateModuleSelection);
 
-licenceAgreeBtn.addEventListener("click", () => {
-  licenseNotice.style.display = "none";
-  licenseUnlock();
-});
+licenceAgreeBtn.addEventListener("click", licenseUnlock);
 licenseDisagreeBtn.addEventListener("click", () => {
   if (++disagreeNum < 4) {
     alert("You can't disagree, dummy!");
@@ -28,6 +25,7 @@ licenseDisagreeBtn.addEventListener("click", () => {
         "you don't have to wear a Hawaiian shirt to the exam."
     );
     licenceAgreeBtn.click();
+    localStorage.setItem("licenseException", "true");
   }
 });
 

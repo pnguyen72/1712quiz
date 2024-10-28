@@ -4,6 +4,7 @@
   justify-content: space-between;
 
   #license-notice {
+    display: none;
     position: relative;
     height: 75vh;
 
