@@ -21,10 +21,6 @@
                 "isCorrect": false,
                 "reason": ""
             }
-        },
-        "multi_select": {
-            "isCorrect": false,
-            "reason": ""
         }
     },
     "CRUD stands for create, read, update and delete and can be used to verify DFDs and ERDs.": {
@@ -37,10 +33,6 @@
                 "isCorrect": false,
                 "reason": ""
             }
-        },
-        "multi_select": {
-            "isCorrect": false,
-            "reason": ""
         }
     },
     "Omar has a model with 85 entities. He can do which of the following?": {
