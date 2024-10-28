@@ -3,7 +3,7 @@
         "choices": {
             "Can be equated to entities on the ERD and when entities are referred to by data stores on the DFD": {
                 "isCorrect": true,
-                "reason": ""
+                "reason": "\"the DFD data components need to correspond with the ERD's data stores (i.e., entities) and the data elements that comprise the data flows (i.e., attributes)\" (p. 191)"
             },
             "Are uniquely named": {
                 "isCorrect": false,
@@ -19,7 +19,7 @@
             },
             "Can be compared to ERD data flows and attributes on the ERD are included in data stores on the DFD": {
                 "isCorrect": false,
-                "reason": ""
+                "reason": "There's no data flow in ERD."
             }
         }
     },
@@ -27,7 +27,7 @@
         "choices": {
             "True": {
                 "isCorrect": true,
-                "reason": ""
+                "reason": "\"A useful tool to clearly depict the interrelationship between process and data models is the create, read, update, delete (CRUD) matrix.\" (p. 192)"
             },
             "False": {
                 "isCorrect": false,
@@ -39,7 +39,7 @@
         "choices": {
             "Group these into related subject areas": {
                 "isCorrect": true,
-                "reason": ""
+                "reason": "\"If the model becomes too complex or busy, the model can be broken down into subject areas\" (p. 189)"
             },
             "Compress these into at most seven entity grouping units": {
                 "isCorrect": false,
@@ -63,7 +63,7 @@
         "choices": {
             "The ERD components will have to be changed": {
                 "isCorrect": true,
-                "reason": ""
+                "reason": "\"when business rules change, the relationships or other data model components will have to be altered\" (p. 189)"
             },
             "Nothing \u2013 once the ERD data models have been drawn, they are 'frozen' for the system": {
                 "isCorrect": false,
@@ -87,7 +87,7 @@
         "choices": {
             "It is an iterative process": {
                 "isCorrect": true,
-                "reason": ""
+                "reason": "\"Work iteratively and constantly challenge the data model with business rules and exceptions to see whether the diagram is communicating the business system appropriately.\" (p. 189)"
             },
             "There will be at most seven entities": {
                 "isCorrect": false,
@@ -115,7 +115,7 @@
             },
             "False": {
                 "isCorrect": true,
-                "reason": ""
+                "reason": "You also have to normalize it."
             }
         }
     },
@@ -163,7 +163,7 @@
         "choices": {
             "there is only one value of B for any given value of A.": {
                 "isCorrect": true,
-                "reason": ""
+                "reason": "\"We say PROJ_NUM functionally defines PROJ_Name, because only one name is associated with any given project number.\" (module 7 slide 10)"
             },
             "there is only one value of A for any given value of B.": {
                 "isCorrect": false,
@@ -187,7 +187,7 @@
             },
             "False": {
                 "isCorrect": true,
-                "reason": ""
+                "reason": "Multiple attributes may be required to determine another attribute, e.g. ISBN + Author_Num --> Royalty (Lab 7.1)"
             }
         }
     },
@@ -207,7 +207,7 @@
         "choices": {
             "True": {
                 "isCorrect": true,
-                "reason": ""
+                "reason": "A relational table is in 2NF if it does not have partial dependencies (when an attribute depends on only a part of the primary key). If the primary key is a single attribute, it has no parts, so there cannot be partial dependencies."
             },
             "False": {
                 "isCorrect": false,
@@ -219,7 +219,7 @@
         "choices": {
             "True": {
                 "isCorrect": true,
-                "reason": ""
+                "reason": "All dependencies in a relational database are functional."
             },
             "False": {
                 "isCorrect": false,
@@ -235,7 +235,7 @@
             },
             "False": {
                 "isCorrect": true,
-                "reason": ""
+                "reason": "Transitive means the determinant is a non-identifier. Partial means the determinant is a part of the identifier."
             }
         }
     },
@@ -243,15 +243,15 @@
         "choices": {
             "A table in 3NF is also in 1NF.": {
                 "isCorrect": true,
-                "reason": ""
+                "reason": "Because a table in 3NF is also in 2NF, and a table in 2NF is also in 1NF."
             },
             "A table in 2NF is also in 1NF.": {
                 "isCorrect": true,
-                "reason": ""
+                "reason": "\"Second normal form (2NF) requires that the data model is in 1NF\" (p. 199)"
             },
             "A table in 3NF is also in 2NF": {
                 "isCorrect": true,
-                "reason": ""
+                "reason": "\"Third normal form (3NF) occurs when a model is in both 1NF and 2NF\" (p. 199)"
             }
         },
         "select_all_that_apply": true
@@ -310,7 +310,7 @@
             },
             "3": {
                 "isCorrect": true,
-                "reason": ""
+                "reason": "1) Author_Num & LastName, 2) Author_Num & ISBN & Royalty, 3) ISBN & BookTitle & Publisher & Edition. (Lab 7.1)"
             },
             "4": {
                 "isCorrect": false,
