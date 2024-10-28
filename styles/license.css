@@ -47,12 +47,12 @@
     }
     #license-disagree-btn {
       position: absolute;
-      bottom: 0.75rem;
-      right: 0.75rem;
+      bottom: 1.5vh;
+      right: 1.5vh;
 
       #license-disagree-text {
         cursor: pointer;
-        font-size: 0.5rem;
+        font-size: 1vh;
         margin: 0;
       }
 
@@ -88,6 +88,14 @@
 
         #license-agree-text {
           font-size: min(5vw, 36px);
+        }
+      }
+      #license-disagree-btn {
+        bottom: min(2vw, 0.75rem);
+        right: min(2vw, 0.75rem);
+
+        #license-disagree-text {
+          font-size: min(1.5vw, 0.5rem);
         }
       }
     }
