@@ -1,8 +1,7 @@
 function licenseLock() {
-  if (localStorage.getItem("licenseException") != null) {
+  if (localStorage.getItem("licenseException") == "true") {
     return;
   }
-
   licenseNotice.style.display = "block";
   for (input of form.querySelectorAll("input,select")) {
     input.disabled = true;
@@ -16,6 +15,15 @@ function licenseUnlock() {
     input.disabled = false;
   }
   navbar.unhide();
+}
+
+function licenseGrantException() {
+  alert(
+    "Alright, for you alone I'll make an exception:\n\n" +
+      "You don't have to wear a Hawaiian shirt to the exam."
+  );
+  licenseUnlock();
+  localStorage.setItem("licenseException", "true");
 }
 
 function returnHome() {

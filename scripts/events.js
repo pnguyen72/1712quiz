@@ -20,12 +20,7 @@ licenseDisagreeBtn.addEventListener("click", () => {
   if (++disagreeNum < 4) {
     alert("You can't disagree, dummy!");
   } else {
-    alert(
-      "Alright, for you alone I'll make an exception,\n" +
-        "you don't have to wear a Hawaiian shirt to the exam."
-    );
-    licenceAgreeBtn.click();
-    localStorage.setItem("licenseException", "true");
+    licenseGrantException();
   }
 });
 
