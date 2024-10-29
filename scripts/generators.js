@@ -106,11 +106,11 @@ function generateQuiz(data) {
 function generateQuestion(question, questionIndex) {
   /*
     <div id="Q#" class="question">
-      <p> 
+      <p class="questionText"> 
         <b> Question #. </b> ... 
       </p>
 
-      // if question contains image
+      <!-- if question includes image -->
       <figure> 
         <img src="...">
       <figure>
@@ -118,11 +118,14 @@ function generateQuestion(question, questionIndex) {
       <ul>
         <li class="correct/incorrect">
           <label for="Q#/#"> 
-            <input type="radio/checkbox" id="Q#/#">
-            <span> .. </span> 
+            <input type="radio/checkbox" name="Q#">
+            <span> ... </span> 
           </label> 
         </li>
       </ul>
+
+      <!-- if explanation is available -->
+      <p class="explanation">...</p>
     </div>
   */
 
@@ -139,6 +142,7 @@ function generateQuestion(question, questionIndex) {
   div.setAttribute("class", "question");
 
   const p = document.createElement("p");
+  p.className = "questionText";
 
   const title = document.createElement("b");
   title.appendChild(
@@ -164,33 +168,12 @@ function generateQuestion(question, questionIndex) {
 
   const ul = document.createElement("ul");
   choices.forEach((choice) => {
-    const [choiceText, choiceInfo] = choice;
-    const isCorrect = choiceInfo.isCorrect;
-    const reason = choiceInfo.reason;
+    const [choiceText, isCorrect] = choice;
 
     const li = document.createElement("li");
     li.className = isCorrect ? "correct" : "incorrect";
 
     const label = document.createElement("label");
-
-    const help = document.createElement("span");
-    help.className = "help";
-    if (!reason) {
-      help.style.visibility = "hidden";
-    } else {
-      let toggle = true;
-      help.addEventListener("click", () => {
-        if (toggle) {
-          span.innerHTML = reason;
-          span.style.color = "blue";
-        } else {
-          span.innerHTML = choiceText;
-          span.style.color = "";
-        }
-        toggle = !toggle;
-      });
-    }
-    help.appendChild(document.createTextNode("?"));
 
     const input = document.createElement("input");
     input.type = isMultiSelect ? "checkbox" : "radio";
@@ -199,7 +182,6 @@ function generateQuestion(question, questionIndex) {
     const span = document.createElement("span");
     span.appendChild(document.createTextNode(choiceText));
 
-    label.appendChild(help);
     label.appendChild(input);
     label.appendChild(span);
 
@@ -208,6 +190,14 @@ function generateQuestion(question, questionIndex) {
     ul.appendChild(li);
   });
   div.appendChild(ul);
+
+  if (questionInfo.explanation) {
+    const explanation = document.createElement("p");
+    explanation.className = "explanation";
+    explanation.innerHTML = questionInfo.explanation;
+    div.appendChild(explanation);
+  }
+
   div.addEventListener("animationend", () => (div.style.animation = ""));
   return div;
 }

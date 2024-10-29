@@ -1,18 +1,12 @@
 ul {
+  /* margin: 0; */
   list-style-type: none;
-  padding-inline-start: 0.5rem;
+  padding-inline-start: 1.5rem;
 
   li {
     margin: 0.5rem;
 
     label {
-      .help {
-        visibility: hidden;
-        font-weight: bold;
-        color: blue;
-        cursor: pointer;
-        margin-right: 0.25rem;
-      }
       input {
         width: 1rem;
         height: 1rem;
@@ -32,28 +26,18 @@ ul {
   }
 }
 
-#home-page ul {
-  padding-inline-start: 1.5rem;
-}
-
-#quiz-page .submitted {
-  li.correct label input + span {
+.submitted {
+  li.correct label {
     background-color: hsl(120, 80%, 80%);
   }
-  .question.incorrect > p > b {
+  .question.incorrect .questionText > b {
     background-color: hsla(0, 80%, 75%, 75%);
-  }
-  .help {
-    visibility: visible;
   }
 }
 
 /* on touch device */
 @media (pointer: none), (pointer: coarse) {
-  #home-page ul {
+  ul {
     padding-inline-start: 0.75rem;
-  }
-  #quiz-page ul {
-    padding-inline-start: 0;
   }
 }

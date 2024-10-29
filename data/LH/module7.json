@@ -1,343 +1,170 @@
 {
     "Balance occurs between DFDs and ERDs when the data stores _____": {
         "choices": {
-            "Can be equated to entities on the ERD and when entities are referred to by data stores on the DFD": {
-                "isCorrect": true,
-                "reason": "\"the DFD data components need to correspond with the ERD's data stores (i.e., entities) and the data elements that comprise the data flows (i.e., attributes)\" (p. 191)"
-            },
-            "Are uniquely named": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Have only one input and one output flow": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Are named the same as the relationships on the ERD": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Can be compared to ERD data flows and attributes on the ERD are included in data stores on the DFD": {
-                "isCorrect": false,
-                "reason": "There's no data flow in ERD."
-            }
-        }
+            "Can be equated to entities on the ERD and when entities are referred to by data stores on the DFD": true,
+            "Are uniquely named": false,
+            "Have only one input and one output flow": false,
+            "Are named the same as the relationships on the ERD": false,
+            "Can be compared to ERD data flows and attributes on the ERD are included in data stores on the DFD": false
+        },
+        "explanation": "<i>\"The DFD data components need to correspond with the ERD's data stores (i.e., entities) and the data elements that comprise the data flows (i.e., attributes).\"</i> <b>(p. 191)</b>  <br/>  The other answer is false because \"ERD data flows\" is not a thing."
     },
     "CRUD stands for create, read, update and delete and can be used to verify DFDs and ERDs.": {
         "choices": {
-            "True": {
-                "isCorrect": true,
-                "reason": "\"A useful tool to clearly depict the interrelationship between process and data models is the create, read, update, delete (CRUD) matrix.\" (p. 192)"
-            },
-            "False": {
-                "isCorrect": false,
-                "reason": ""
-            }
-        }
+            "True": true,
+            "False": false
+        },
+        "explanation": "<i>\"A useful tool to clearly depict the interrelationship between process and data models is the create, read, update, delete (CRUD) matrix.\"</i> <b>(p. 192)</b>"
     },
     "Omar has a model with 85 entities. He can do which of the following?": {
         "choices": {
-            "Group these into related subject areas": {
-                "isCorrect": true,
-                "reason": "\"If the model becomes too complex or busy, the model can be broken down into subject areas\" (p. 189)"
-            },
-            "Compress these into at most seven entity grouping units": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Stop \u2013 he has all entities defined": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Sort the entities alphabetically": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Co-validate the entities with the level 2 DFD diagrams": {
-                "isCorrect": false,
-                "reason": ""
-            }
-        }
+            "Group these into related subject areas": true,
+            "Compress these into at most seven entity grouping units": false,
+            "Stop \u2013 he has all entities defined": false,
+            "Sort the entities alphabetically": false,
+            "Co-validate the entities with the level 2 DFD diagrams": false
+        },
+        "explanation": "<i>\"If the model becomes too complex or busy, the model can be broken down into subject areas.\"</i> <b>(p. 189)</b>"
     },
     "Andrew, an analyst for PaxMedia Inc., has just learned that the business rules for a system he has been working on have changed. This means what?": {
         "choices": {
-            "The ERD components will have to be changed": {
-                "isCorrect": true,
-                "reason": "\"when business rules change, the relationships or other data model components will have to be altered\" (p. 189)"
-            },
-            "Nothing \u2013 once the ERD data models have been drawn, they are 'frozen' for the system": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Andrew will be reassigned to a different project that is in its beginning stages": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "The ERD data model will have to be put on hold while new DFD diagrams are created": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "The project will have to be scrapped and restarted": {
-                "isCorrect": false,
-                "reason": ""
-            }
-        }
+            "The ERD components will have to be changed": true,
+            "Nothing \u2013 once the ERD data models have been drawn, they are 'frozen' for the system": false,
+            "Andrew will be reassigned to a different project that is in its beginning stages": false,
+            "The ERD data model will have to be put on hold while new DFD diagrams are created": false,
+            "The project will have to be scrapped and restarted": false
+        },
+        "explanation": "<i>\"When business rules change, the relationships or other data model components will have to be altered.\"</i> <b>(p. 189)</b>"
     },
     "What is true about creating an entity relationship diagram?": {
         "choices": {
-            "It is an iterative process": {
-                "isCorrect": true,
-                "reason": "\"Work iteratively and constantly challenge the data model with business rules and exceptions to see whether the diagram is communicating the business system appropriately.\" (p. 189)"
-            },
-            "There will be at most seven entities": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "There will be at most seven relationships": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "If you identify more than seven entities, analyze and combine until you have seven or less": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Entities will have at most seven attributes": {
-                "isCorrect": false,
-                "reason": ""
-            }
-        }
+            "It is an iterative process": true,
+            "There will be at most seven entities": false,
+            "There will be at most seven relationships": false,
+            "If you identify more than seven entities, analyze and combine until you have seven or less": false,
+            "Entities will have at most seven attributes": false
+        },
+        "explanation": "<i>\"Work iteratively and constantly challenge the data model with business rules and exceptions to see whether the diagram is communicating the business system appropriately.\"</i> <b>(p. 189)</b>"
     },
     "Once we have an ERD, we can be sure we have a good database structure.": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": true,
-                "reason": "You also have to normalize it."
-            }
-        }
+            "True": false,
+            "False": true
+        },
+        "explanation": "You also have to normalize it."
+
     },
     "Our goal with normalization is to completely eliminate redundancy.": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": true,
-                "reason": ""
-            }
+            "True": false,
+            "False": true
         }
     },
     "Some redundancies in a relational DB are necessary.": {
         "choices": {
-            "True": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "True": true,
+            "False": false
         }
     },
     "Foreign keys in a relational DB are an example of _____": {
         "choices": {
-            "necessary redundancy": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "FKs are not redundancy at all": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "unwanted/unnecessary redundancy": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "necessary redundancy": true,
+            "FKs are not redundancy at all": false,
+            "unwanted/unnecessary redundancy": false
         }
     },
     "In a relational table, when we say attribute A functionally defines attribute B (A --> B) , it means that:": {
         "choices": {
-            "there is only one value of B for any given value of A.": {
-                "isCorrect": true,
-                "reason": "\"We say PROJ_NUM functionally defines PROJ_Name, because only one name is associated with any given project number.\" (module 7 slide 10)"
-            },
-            "there is only one value of A for any given value of B.": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "A and B must both be part of the PK.": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "A and B must not be part of the PK.": {
-                "isCorrect": false,
-                "reason": ""
-            }
-        }
+            "there is only one value of B for any given value of A.": true,
+            "there is only one value of A for any given value of B.": false,
+            "A and B must both be part of the PK.": false,
+            "A and B must not be part of the PK.": false
+        },
+        "explanation": "<i>\"We say PROJ_NUM functionally defines PROJ_Name, because only one name is associated with any given project number.\"</i> <b>(module 7, slide 10)</b>"
+
     },
     "In a functional dependence, the determinant is always a single attribute.": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
+            "True": false,
             "False": {
                 "isCorrect": true,
-                "reason": "Multiple attributes may be required to determine another attribute, e.g. ISBN + Author_Num --> Royalty (Lab 7.1)"
+                "reason": "Multiple attributes may be required to determine another attribute, e.g. Royalty is determined by a combination of ISBN and Author_Num (lab 7.1)"
             }
         }
     },
     "In a functional dependence, the dependent is always a single attribute.": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": true,
-                "reason": ""
-            }
+            "True": false,
+            "False": true
         }
     },
     "Relational tables that have a single-attribute PK, are immediately in 2NF.": {
         "choices": {
-            "True": {
-                "isCorrect": true,
-                "reason": "A relational table is in 2NF if it does not have partial dependencies (when an attribute depends on only a part of the primary key). If the primary key is a single attribute, it has no parts, so there cannot be partial dependencies."
-            },
-            "False": {
-                "isCorrect": false,
-                "reason": ""
-            }
-        }
+            "True": true,
+            "False": false
+        },
+        "explanation": "A relational table is in 2NF if it does not have partial dependencies. <br/> Partial dependency means an attribute depends on only a part of the primary key. <br/> If the primary key is a single attribute, it has no parts, so by definition there cannot be partial dependencies."
+
     },
     "Partial dependency is a form of functional dependency.": {
         "choices": {
-            "True": {
-                "isCorrect": true,
-                "reason": "All dependencies in a relational database are functional."
-            },
-            "False": {
-                "isCorrect": false,
-                "reason": ""
-            }
-        }
+            "True": true,
+            "False": false
+        },
+        "explanation": "All dependencies in a relational database are functional."
     },
     "A transitive dependency is a form of partial dependency.": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": true,
-                "reason": "Transitive means the determinant is a non-identifier. Partial means the determinant is a part of the identifier."
-            }
-        }
+            "True": false,
+            "False": true
+        },
+        "explanation": "Transitive means the determinant is a non-identifier. Partial means the determinant is a part of the identifier."
     },
     "Select all that applies to various normal forms:": {
+        "select_all_that_apply": true,
         "choices": {
-            "A table in 3NF is also in 1NF.": {
-                "isCorrect": true,
-                "reason": "Because a table in 3NF is also in 2NF, and a table in 2NF is also in 1NF."
-            },
-            "A table in 2NF is also in 1NF.": {
-                "isCorrect": true,
-                "reason": "\"Second normal form (2NF) requires that the data model is in 1NF\" (p. 199)"
-            },
-            "A table in 3NF is also in 2NF": {
-                "isCorrect": true,
-                "reason": "\"Third normal form (3NF) occurs when a model is in both 1NF and 2NF\" (p. 199)"
-            }
+            "A table in 3NF is also in 1NF.": true,
+            "A table in 2NF is also in 1NF.": true,
+            "A table in 3NF is also in 2NF": true
         },
-        "select_all_that_apply": true
+        "explanation": "<i>\"Second normal form (2NF) requires that the data model is in 1NF.\" <br/> \"Third normal form (3NF) occurs when a model is in both 1NF and 2NF.\"<i> <b>(p. 199)</b>"
+
     },
     "The following table is _____": {
+        "img": "LH_7_1.png",
         "choices": {
-            "not a relational table": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "a relational table that is only 1NF": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "a relational table in 2NF": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "a relational table in 3NF": {
-                "isCorrect": false,
-                "reason": ""
-            }
-        },
-        "img": "LH_7_1.png"
+            "not a relational table": true,
+            "a relational table that is only 1NF": false,
+            "a relational table in 2NF": false,
+            "a relational table in 3NF": false
+        }
     },
     "How many non-prime attributes do you see in the following dependency diagram?": {
+        "img": "LH_7_2.png",
         "choices": {
-            "2": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "3": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "4": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "5": {
-                "isCorrect": true,
-                "reason": ""
-            }
-        },
-        "img": "LH_7_2.png"
+            "2": false,
+            "3": false,
+            "4": false,
+            "5": true
+        }
     },
     "The following table is in 1NF. If we normalize this table to 2NF, how many tables in total would exist in our relational DB after normalizing to 2NF?": {
+        "img": "LH_7_3.png",
         "choices": {
-            "1": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "2": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "3": {
-                "isCorrect": true,
-                "reason": "1) Author_Num & LastName, 2) Author_Num & ISBN & Royalty, 3) ISBN & BookTitle & Publisher & Edition. (Lab 7.1)"
-            },
-            "4": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "1": false,
+            "2": false,
+            "3": true,
+            "4": false
         },
-        "img": "LH_7_3.png"
+        "explanation": "1) Author_Num, LastName <br/> 2) Author_Num, ISBN, Royalty <br/> 3) ISBN, BookTitle, Publisher, Edition <br/> <b>(lab 7.1)</b>"
     },
     "The following table is in 1NF. If we normalize this table to 2NF, how many tables in total would exist in the resulting DB?": {
+        "img": "LH_7_4.png",
         "choices": {
-            "1": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "2": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "3": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "4": {
-                "isCorrect": false,
-                "reason": ""
-            }
-        },
-        "img": "LH_7_4.png"
+            "1": false,
+            "2": false,
+            "3": true,
+            "4": false
+        }
     }
 }

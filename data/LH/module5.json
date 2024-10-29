@@ -1,554 +1,254 @@
 {
     "Use cases contain all the information needed to build one part of a process model.": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": true,
-                "reason": ""
-            }
+            "True": false,
+            "False": true
         }
     },
     "Models that describe processes, without suggesting how they are conducted.": {
         "choices": {
-            "Logical process models": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "Physical models": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Physical process models": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Design models": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "Logical process models": true,
+            "Physical models": false,
+            "Physical process models": false,
+            "Design models": false
         },
         "select_all_that_apply": true
     },
     "Iteration is the cornerstone of good DFD design.": {
         "choices": {
-            "True": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "True": true,
+            "False": false
         }
     },
     "Every external entity has a name and a description.": {
         "choices": {
-            "True": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "True": true,
+            "False": false
         }
     },
     "It is important to ensure that the level 0 and level 1 DFDs are balanced.": {
         "choices": {
-            "True": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "True": true,
+            "False": false
         }
     },
     "All data stores must have at least one input data flow.": {
         "choices": {
-            "True": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "True": true,
+            "False": false
         }
     },
     "A collection of data that is stored in some way (which is determined later when creating the physical model).": {
         "choices": {
-            "Data store": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "Data flow": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Data file": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Database": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "Data store": true,
+            "Data flow": false,
+            "Data file": false,
+            "Database": false
         },
         "select_all_that_apply": true
     },
     "We use data flow diagrams (DFDs) to describe the to-be system's interactions with its environment, processes, flows of data, and data stores.": {
         "choices": {
-            "True": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "True": true,
+            "False": false
         }
     },
     "This type of English uses short sentences to describe the work that a process performs.": {
         "choices": {
-            "Structured": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "Process": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Minimal": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Simplified": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "If-then-else": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "Structured": true,
+            "Process": false,
+            "Minimal": false,
+            "Simplified": false,
+            "If-then-else": false
         }
     },
     "Processes must be computerized.": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": true,
-                "reason": ""
-            }
+            "True": false,
+            "False": true
         }
     },
     "In general, syntax errors are easier to find and fix than are semantics errors.": {
         "choices": {
-            "True": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "True": true,
+            "False": false
         }
     },
     "Below the top-level DFD in the DFD hierarchy is the diagram called the what?": {
         "choices": {
-            "Level-0 DFD": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "Major DFD": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Balancer": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Level-1 DFD": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Main DFD": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "Level-0 DFD": true,
+            "Major DFD": false,
+            "Balancer": false,
+            "Level-1 DFD": false,
+            "Main DFD": false
         }
     },
     "A bundle is an activity or a function that is performed for some specific business reason.": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": true,
-                "reason": ""
-            }
+            "True": false,
+            "False": true
         }
     },
     "The processes in the level 1 diagram are the _____ of the _____ process in the level 0 diagram.": {
         "choices": {
-            "Children, Parent": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "Leaders, Followers": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Parent, Children": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Followers, Leaders": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Balancers, Main": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "Children, Parent": true,
+            "Leaders, Followers": false,
+            "Parent, Children": false,
+            "Followers, Leaders": false,
+            "Balancers, Main": false
         }
     },
     "A single fact, such as Order ID (sometimes called a data element), or a logical collection of several facts (e.g., new shop work order).": {
         "choices": {
-            "Data flow": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "Data store": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Database": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Data file": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "Data flow": true,
+            "Data store": false,
+            "Database": false,
+            "Data file": false
         },
         "select_all_that_apply": true
     },
     "Process descriptions provide additional information that the DFD does not provide.": {
         "choices": {
-            "True": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "True": true,
+            "False": false
         }
     },
     "Data flows going into a data store indicate that there is a logical error.": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": true,
-                "reason": ""
-            }
+            "True": false,
+            "False": true
         }
     },
     "These display decision logic (IF statements) as a set of nodes (questions) and branches (answers).": {
         "choices": {
-            "Decision trees": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "Logic diagrams": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Decision diagrams": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "If-then-else diagrams": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Process diagrams": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "Decision trees": true,
+            "Logic diagrams": false,
+            "Decision diagrams": false,
+            "If-then-else diagrams": false,
+            "Process diagrams": false
         }
     },
     "The context diagram shows the entire system in context with its environment.": {
         "choices": {
-            "True": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "True": true,
+            "False": false
         }
     },
     "Most business processes can be explained in one DFD.": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": true,
-                "reason": ""
-            }
+            "True": false,
+            "False": true
         }
     },
     "The context diagram defines how the business process or computer system interacts with its Environment.": {
         "choices": {
-            "True": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "True": true,
+            "False": false
         }
     },
     "Data flows coming out of a data store indicate that information is retrieved from the data store.": {
         "choices": {
-            "True": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "True": true,
+            "False": false
         }
     },
     "These represent complex policy decisions as rules that link various conditions with actions.": {
         "choices": {
-            "Decision tables": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "Decision diagrams": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Branching tables": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Process diagrams": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "If-then-else diagrams": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "Decision tables": true,
+            "Decision diagrams": false,
+            "Branching tables": false,
+            "Process diagrams": false,
+            "If-then-else diagrams": false
         }
     },
     "Project teams usually draw process models by hand.": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": true,
-                "reason": ""
-            }
+            "True": false,
+            "False": true
         }
     },
     "An external entity is a person, organization, organization unit, or system that is external to the system and never interacts with it.": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": true,
-                "reason": ""
-            }
+            "True": false,
+            "False": true
         }
     },
     "Use cases are the same as process diagrams.": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": true,
-                "reason": ""
-            }
+            "True": false,
+            "False": true
         }
     },
     "The set of children and the parent are identical; they are simply different ways of looking at the same thing.": {
         "choices": {
-            "True": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "True": true,
+            "False": false
         }
     },
     "Synchronizing means ensuring that all information presented in a DFD at one level is accurately represented in the next-level": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": true,
-                "reason": ""
-            }
+            "True": false,
+            "False": true
         }
     },
     "Process models have just recently become a part of structured systems analysis and design techniques.": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": true,
-                "reason": ""
-            }
+            "True": false,
+            "False": true
         }
     },
     "The top-level DFD in every business process model, whether a manual system or a computerized system, is the what?": {
         "choices": {
-            "Context diagram": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "Main DFD": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Driver": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Level-0 DFD": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Major DFD": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "Context diagram": true,
+            "Main DFD": false,
+            "Driver": false,
+            "Level-0 DFD": false,
+            "Major DFD": false
         }
     },
     "There are no formal rules covering the layout of processes, data flows, data stores, and external entities within a DFD.": {
         "choices": {
-            "True": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "True": true,
+            "False": false
         }
     },
     "Models which provide information that is needed to ultimately build the system.": {
         "choices": {
-            "Physical models": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "Design models": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Logical process models": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "Physical process models": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "Physical models": true,
+            "Design models": false,
+            "Logical process models": false,
+            "Physical process models": false
         },
         "select_all_that_apply": true
     },
     "The next level under level 1 would be labeled as level 2.": {
         "choices": {
-            "True": {
-                "isCorrect": true,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": false,
-                "reason": ""
-            }
+            "True": true,
+            "False": false
         }
     },
     "Experienced analysts usually draw a DFD perfectly the first time.": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": true,
-                "reason": ""
-            }
+            "True": false,
+            "False": true
         }
     },
     "Semantics errors cause the fewest problems in system development.": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": true,
-                "reason": ""
-            }
+            "True": false,
+            "False": true
         }
     },
     "There are two fundamentally different types of problems that can occur in DFDs: syntax errors and English errors.": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": true,
-                "reason": ""
-            }
+            "True": false,
+            "False": true
         }
     },
     "Process models rarely have level 1 diagrams.": {
         "choices": {
-            "True": {
-                "isCorrect": false,
-                "reason": ""
-            },
-            "False": {
-                "isCorrect": true,
-                "reason": ""
-            }
+            "True": false,
+            "False": true
         }
     }
 }

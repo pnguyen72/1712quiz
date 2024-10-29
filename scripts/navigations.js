@@ -96,7 +96,7 @@ function submit() {
     let isAnswered = false;
 
     for (let choice of question.getElementsByTagName("li")) {
-      input = choice.getElementsByTagName("input")[0];
+      const input = choice.getElementsByTagName("input")[0];
       isAnswered = isAnswered || input.checked || input.type == "checkbox";
       if (question.classList.contains("joke")) {
         if (input.checked) {
@@ -151,15 +151,14 @@ function submit() {
   attempt.style.visibility = "visible";
   resultPanel.unhide();
 
-  if (localStorage.getItem("helpPopupAppearedBefore") == null) {
-    const helps = quizPage.getElementsByClassName("help");
-    if (someOf(helps, (help) => help.style.visibility != "hidden")) {
+  if (localStorage.getItem("explanationWarned") == null) {
+    if (quizPage.getElementsByClassName("explanation").length > 0) {
       setTimeout(
         alert,
         500,
-        "Click the blue question marks to reveal the reason for each answer."
+        "Unlike questions and answers which are from Learning Hub, the explanations (in blue) are written by your classmates.\n\nEveryone is welcome to contribute explanations. If you want to help, let me know and I'll give you commit right."
       );
-      localStorage.setItem("helpPopupAppearedBefore", "true");
+      localStorage.setItem("explanationWarned", "true");
     }
   }
 }
