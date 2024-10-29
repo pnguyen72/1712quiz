@@ -35,30 +35,6 @@ nav {
   }
 }
 
-#license-panel {
-  bottom: 3rem;
-  background-color: hsl(120, 24%, 96%);
-
-  #license {
-    font-size: 0.8rem;
-
-    @media (width >=500px) {
-      font-size: 1rem;
-    }
-    @media (width >= 400px) {
-      #license-br {
-        display: none;
-      }
-    }
-    /* if hover is available */
-    @media not all and (hover: none) {
-      a:not(:hover) {
-        text-decoration: none;
-      }
-    }
-  }
-}
-
 /* on touch device */
 @media (pointer: none), (pointer: coarse) {
   .panel {
