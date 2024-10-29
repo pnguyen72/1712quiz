@@ -16,14 +16,14 @@
         },
         "multi_select": false
     },
-    "At least one study suggests that <i>some</i> variation be appropriate in user interface design as the study suggests that when all forms tend to look the same, it can be confusing to some users.": {
+    "At least one study suggests that some variation be appropriate in user interface design as the study suggests that when all forms tend to look the same, it can be confusing to some users.": {
         "choices": {
             "True": true,
             "False": false
         },
         "multi_select": false
     },
-    "Omar has designed a paper form using &#39;sans serif&#39; fonts and for his screen (or web) forms he has used &#39;serif&#39; fonts. He is exercising good user interface design practices.": {
+    "Omar has designed a paper form using'sans serif'; fonts and for his screen (or web) forms he has used 'serif'; fonts. He is exercising good user interface design practices.": {
         "choices": {
             "True": false,
             "False": true
@@ -130,7 +130,7 @@
         },
         "multi_select": false
     },
-    "When implementing the &#39;minimize user effort&#39; factor, most interface designers follow what rule?": {
+    "When implementing the'minimize user effort'; factor, most interface designers follow what rule?": {
         "choices": {
             "Two-clicks rule": false,
             "Three-clicks rule": true,
@@ -295,7 +295,7 @@
         },
         "multi_select": false
     },
-    "Jamal is creating a user interface. He wants what he calls an &#39;oops&#39; button on every screen and form (or an &#39;undo&#39; button). This is a good design consideration.": {
+    "Jamal is creating a user interface. He wants what he calls an'oops'; button on every screen and form (or an'undo'; button). This is a good design consideration.": {
         "choices": {
             "True": true,
             "False": false
@@ -402,7 +402,7 @@
         },
         "multi_select": false
     },
-    "When creating navigational controls, you should either not display a command that cannot be used or &#39;gray&#39; it out (where it shows, but cannot be used).": {
+    "When creating navigational controls, you should either not display a command that cannot be used or'gray'; it out (where it shows, but cannot be used).": {
         "choices": {
             "True": true,
             "False": false
@@ -419,7 +419,7 @@
         },
         "multi_select": false
     },
-    "If a particular form or screen is used by a cadre of experienced users very frequently (like an accounting entry system), &#39;ease of use&#39; should be a high priority on these system interfaces.": {
+    "If a particular form or screen is used by a cadre of experienced users very frequently (like an accounting entry system),'ease of use'; should be a high priority on these system interfaces.": {
         "choices": {
             "True": true,
             "False": false
@@ -459,11 +459,11 @@
             "A dollar sign": false,
             "A computer diskette": true,
             "A hard drive image": false,
-            "A green &amp;quot;S&amp;quot;": false
+            "A green \"S\"": false
         },
         "multi_select": false
     },
-    "Infrequent users prefer user interfaces with &#39;ease of learning&#39; features (like more explicit menu choices, clear directions).": {
+    "Infrequent users prefer user interfaces with'ease of learning'; features (like more explicit menu choices, clear directions).": {
         "choices": {
             "True": true,
             "False": false
@@ -524,7 +524,7 @@
         },
         "multi_select": false
     },
-    "Experienced users prefer user interfaces with &#39;ease of learning&#39; features.": {
+    "Experienced users prefer user interfaces with'ease of learning'; features.": {
         "choices": {
             "True": false,
             "False": true
@@ -679,8 +679,8 @@
             "Limit menu items to at most ten items": false,
             "Color code common menu items with green (go) and red (stop)": false,
             "Simplify recovery from mistakes (like having an undo button)": true,
-            "Lock the user&amp;#39;s computer when a mistake has been made": false,
-            "Log all mistakes, and log the user&amp;#39;s computer when 1000 mistakes have been made": false
+            "Lock the user's computer when a mistake has been made": false,
+            "Log all mistakes, and log the user's computer when 1000 mistakes have been made": false
         },
         "multi_select": false
     },

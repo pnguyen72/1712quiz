@@ -49,7 +49,7 @@ for html_file in html_files:
 
         # check if the question is already in the dictionary
         if questionTitle in quiz_data:
-            print("Question already in dictionary! Skipping...")
+            print("Question already in dictionary! Skipping... " + questionTitle)
             continue
 
         answerOptions = questionBlocks[i].find_all("tr")
