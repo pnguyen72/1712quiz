@@ -5,7 +5,10 @@
         "Requirements",
         "Use Cases",
         "Data Flow Diagrams",
-        "Entity Relationship Diagrams"
+        "Entity Relationship Diagrams",
+        "",
+        "test friend :)"
+        
     ],
     "final": [
         "Normalization"

@@ -1,0 +1,172 @@
+{
+    "This output is poor at helping users recognize precise numeric values and should be replaced by tables when precision is important.": {
+        "choices": {
+            "Detail report": false,
+            "Summary report": false,
+            "Graphs": true,
+            "Turnaround document": false,
+            "None are poor": false
+        },
+        "multi_select": false
+    },
+    "Which of the following might be a good choice of an icon for saving on a user interface?": {
+        "choices": {
+            "A piggy bank": false,
+            "A dollar sign": false,
+            "A computer diskette": true,
+            "A hard drive image": false,
+            "A green &amp;quot;S&amp;quot;": false
+        },
+        "multi_select": false
+    },
+    "When creating navigational controls, you should either not display a command that cannot be used or &#39;gray&#39; it out (where it shows, but cannot be used).": {
+        "choices": {
+            "True": true,
+            "False": false
+        },
+        "multi_select": false
+    },
+    "Research shows that in an ideal world a menu should contain no more than four items and submenus should contain no fewer than six items.": {
+        "choices": {
+            "True": false,
+            "False": true
+        },
+        "multi_select": false
+    },
+    "When creating user interfaces, analysts should examine DFDs and use cases to see how users commonly perform various processes.": {
+        "choices": {
+            "True": true,
+            "False": false
+        },
+        "multi_select": false
+    },
+    "It is better to make menus how?": {
+        "choices": {
+            "Broad and shallow": true,
+            "Narrow and deep": false,
+            "Broad and deep": false,
+            "Narrow and shallow": false,
+            "Wide and tall": false
+        },
+        "multi_select": false
+    },
+    "A special type of drop-down list box that permits user to type as well as scroll the list.": {
+        "choices": {
+            "Up-down numeric control": false,
+            "Radio button selection list": false,
+            "On-screen selection list": false,
+            "Drop-down selection list": false,
+            "Combo box selection list": true
+        },
+        "multi_select": false
+    },
+    "Jamal is creating a user interface. He wants what he calls an &#39;oops&#39; button on every screen and form (or an &#39;undo&#39; button). This is a good design consideration.": {
+        "choices": {
+            "True": true,
+            "False": false
+        },
+        "multi_select": false
+    },
+    "Experienced users prefer user interfaces with &#39;ease of learning&#39; features.": {
+        "choices": {
+            "True": false,
+            "False": true
+        },
+        "multi_select": false
+    },
+    "Used in all systems.": {
+        "choices": {
+            "Error message": false,
+            "Confirmation message": false,
+            "Acknowledgment message": false,
+            "Delay message": false,
+            "Help message": true
+        },
+        "multi_select": false
+    },
+    "The following is used as a shortcut to commands for experienced users.": {
+        "choices": {
+            "Menu bar": false,
+            "Drop-down menu": false,
+            "Hyperlink menu": false,
+            "Pop-up menu": true,
+            "Tab menu": false
+        },
+        "multi_select": false
+    },
+    "Colors and patterns add pizzazz to a screen form and aid in its readability.": {
+        "choices": {
+            "True": false,
+            "False": true
+        },
+        "multi_select": false
+    },
+    "Aesthetics refers to designing information that can be navigated in three-clicks or less.": {
+        "choices": {
+            "True": false,
+            "False": true
+        },
+        "multi_select": false
+    },
+    "Presents a list of choices in a box.": {
+        "choices": {
+            "Check box selection list": false,
+            "Radio button selection list": false,
+            "On-screen selection list": true,
+            "Drop-down selection list": false,
+            "Combo box selection list": false
+        },
+        "multi_select": false
+    },
+    "For screen forms and reports, you should use a font of at least size 12.": {
+        "choices": {
+            "True": true,
+            "False": false
+        },
+        "multi_select": false
+    },
+    "Presents a complete list of mutually exclusive choices, each with a circle in front.": {
+        "choices": {
+            "Check box selection list": false,
+            "Radio button selection list": true,
+            "On-screen selection list": false,
+            "Drop-down selection list": false,
+            "Combo box selection list": false
+        },
+        "multi_select": false
+    },
+    "Which is generally NOT true for interface evaluations?": {
+        "choices": {
+            "It is iterative": false,
+            "It almost always identifies improvements": false,
+            "It generally involves users working with analysts": false,
+            "It is cyclic": false,
+            "It is built on ERDs": true
+        },
+        "multi_select": false
+    },
+    "A use scenario is one commonly used what?": {
+        "choices": {
+            "Path through a use case": true,
+            "Normalized ERD structure": false,
+            "Context diagram": false,
+            "Buy-in flowchart": false,
+            "Throwaway prototyping tool": false
+        },
+        "multi_select": false
+    },
+    "User interface design is a three-step process: (1) analyze the DFDs and use cases; (2) develop the interface diagrams; and (3) create the interface design prototype.": {
+        "choices": {
+            "True": false,
+            "False": true
+        },
+        "multi_select": false
+    },
+    "Infrequent users prefer user interfaces with &#39;ease of learning&#39; features (like more explicit menu choices, clear directions).": {
+        "choices": {
+            "True": true,
+            "False": false
+        },
+        "multi_select": false
+    }
+}
