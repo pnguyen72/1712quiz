@@ -110,8 +110,7 @@
         "choices": {
             "True": true,
             "False": false
-        },
-        "explanation": "All dependencies in a relational database are functional."
+        }
     },
     "A transitive dependency is a form of partial dependency.": {
         "choices": {
@@ -127,7 +126,7 @@
             "A table in 2NF is also in 1NF.": true,
             "A table in 3NF is also in 2NF": true
         },
-        "explanation": "<i>\"Second normal form (2NF) requires that the data model is in 1NF.\" <br/> \"Third normal form (3NF) occurs when a model is in both 1NF and 2NF.\"<i> <b>(p. 199)</b>"
+        "explanation": "<i>\"Second normal form (2NF) requires that the data model is in 1NF.\" <b>(p. 199)</b> <br/> \"Third normal form (3NF) occurs when a model is in both 1NF and 2NF.\"<i> <b>(p. 199)</b>"
 
     },
     "The following table is _____": {
@@ -156,7 +155,7 @@
             "3": true,
             "4": false
         },
-        "explanation": "1) Author_Num, LastName <br/> 2) Author_Num, ISBN, Royalty <br/> 3) ISBN, BookTitle, Publisher, Edition <br/> <b>(lab 7.1)</b>"
+        "explanation": "1. Author_Num, LastName <br/> 2. Author_Num, ISBN, Royalty <br/> 3. ISBN, BookTitle, Publisher, Edition <br/> <b>(lab 7.1)</b>"
     },
     "The following table is in 1NF. If we normalize this table to 2NF, how many tables in total would exist in the resulting DB?": {
         "img": "LH_7_4.png",
