@@ -168,6 +168,18 @@ function submit() {
   }
 }
 
+function toggleQuestionOfInterest(question) {
+  if (document.getElementById("quiz").className == "submitted") {
+    return;
+  }
+
+  if (question.style.backgroundColor == "yellow") {
+    question.style.backgroundColor = "";
+  } else {
+    question.style.backgroundColor = "yellow";
+  }
+}
+
 function _populateData() {
   quizData = {};
   for (let i = 0; i < modulesData.length; i++) {

@@ -26,15 +26,6 @@ ul {
   }
 }
 
-.submitted {
-  li.correct label {
-    background-color: hsl(120, 80%, 80%);
-  }
-  .question.incorrect .questionText > b {
-    background-color: hsla(0, 80%, 75%, 75%);
-  }
-}
-
 /* on touch device */
 @media (pointer: none), (pointer: coarse) {
   ul {

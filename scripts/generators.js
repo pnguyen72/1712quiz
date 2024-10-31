@@ -97,13 +97,14 @@ function generateQuiz(data) {
 
   div = document.createElement("div");
   div.id = "quiz";
+  div.className = "unsubmitted";
   data.forEach((question, index) =>
     div.appendChild(generateQuestion(question, index))
   );
   return div;
 }
 
-function generateQuestion(question, questionIndex) {
+function generateQuestion(question, qIndex) {
   /*
     <div id="Q#" class="question">
       <p class="questionText"> 
@@ -138,16 +139,17 @@ function generateQuestion(question, questionIndex) {
   }
 
   const div = document.createElement("div");
-  div.id = "Q" + (questionIndex + 1);
+  div.id = "Q" + (qIndex + 1);
   div.setAttribute("class", "question");
 
   const p = document.createElement("p");
   p.className = "questionText";
 
-  const title = document.createElement("b");
-  title.appendChild(
-    document.createTextNode("Question " + (questionIndex + 1) + ".")
-  );
+  const title = document.createElement("abbr");
+  title.title = "mark question as unsure"
+  title.className = "questionTitle";
+  title.appendChild(document.createTextNode(`Question ${qIndex + 1}.`));
+  title.addEventListener("click", () => toggleQuestionOfInterest(title));
   p.appendChild(title);
   p.appendChild(document.createTextNode(" " + questionText));
   div.appendChild(p);
@@ -177,7 +179,7 @@ function generateQuestion(question, questionIndex) {
 
     const input = document.createElement("input");
     input.type = isMultiSelect ? "checkbox" : "radio";
-    input.name = `Q${questionIndex + 1}`;
+    input.name = `Q${qIndex + 1}`;
 
     const span = document.createElement("span");
     span.appendChild(document.createTextNode(choiceText));

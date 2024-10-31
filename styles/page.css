@@ -31,33 +31,6 @@ body {
       }
     }
   }
-
-  #quiz-page {
-    figure {
-      margin: 0;
-
-      img {
-        width: 100%;
-        max-width: 900px;
-      }
-    }
-
-    .explanation {
-      margin-left: 1.5rem;
-      display: none;
-      color: blue;
-    }
-
-    .submitted .explanation {
-      display: block;
-    }
-
-    .question {
-      &:not(:last-child) {
-        margin-bottom: 2.5rem;
-      }
-    }
-  }
 }
 
 /* on touch device */
@@ -80,9 +53,6 @@ body {
           height: 1.5rem;
         }
       }
-    }
-    .explanation {
-      margin-left: 0.75rem;
     }
   }
 }
