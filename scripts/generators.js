@@ -240,11 +240,12 @@ function generateResultsTable() {
     }
     {
       let td = document.createElement("td");
-      const roundedNumber = Math.round((accuracy + Number.EPSILON) * 100) / 100;
+      const roundedNumber = Math.round((accuracy + Number.EPSILON) * 100);
       td.appendChild(document.createTextNode(`${roundedNumber}%`));
       tr.appendChild(td);
     }
-    tr.style.backgroundColor = getColor(accuracy, 0.75);
+    const [H, S, L] = getColor(accuracy);
+    tr.style.backgroundColor = `hsla(${H}, ${S}%, ${L}%, ${0.75})`;
     table.appendChild(tr);
   });
 

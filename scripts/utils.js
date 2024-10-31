@@ -10,9 +10,10 @@ function shuffle(array) {
   }
 }
 
-function getColor(accuracy, A = 1) {
+function getColor(accuracy) {
+  accuracy *= 100;
   const H = (8 / 5) * Math.max(accuracy - 25, 0);
   const S = 80;
   const L = 45 + (((25 / 100) * 4) / 3) * (Math.min(accuracy + 25, 100) - 25);
-  return `hsla(${H}, ${S}%, ${L}%, ${A})`;
+  return [H, S, L];
 }

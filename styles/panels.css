@@ -4,18 +4,6 @@
   width: 100%;
   align-items: center;
   position: fixed;
-  p {
-    text-align: center;
-    margin: auto;
-  }
-}
-
-#result-panel {
-  top: 0;
-
-  #result {
-    font-size: 1.5rem;
-  }
 }
 
 nav {
@@ -23,10 +11,11 @@ nav {
   background-color: #04442c;
   color: hsl(120, 24%, 96%);
 
-  #attempt {
+  span {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
+    text-align: center;
   }
   box-icon {
     width: 2rem;

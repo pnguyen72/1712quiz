@@ -27,7 +27,6 @@ function licenseGrantException() {
 }
 
 function returnHome() {
-  removeElementById("result");
   removeElementById("result-table");
   if (pastResults.length > 0) {
     pastResultsContainer.appendChild(generateResultsTable());
@@ -36,14 +35,15 @@ function returnHome() {
     form.reset();
     formChanged = false;
   }
-  attempt.style.visibility = "hidden";
+  navText.style.visibility = "hidden";
+  navbar.style.backgroundColor = "";
+  navbar.setColor("hsl(120, 24%, 96%)");
   quizPage.hide();
-  resultPanel.hide();
   homePage.unhide();
 }
 
 function nextQuiz() {
-  attempt.innerText = `Attempt ${attemptsCount + 1}`;
+  navText.innerText = `Attempt ${attemptsCount + 1}`;
 
   let questionsNum = questionNumChoice.value;
   if (questionsNum == "ALL") {
@@ -63,9 +63,9 @@ function nextQuiz() {
   }
   let data = quizData.slice(0, questionsNum);
 
-  removeElementById("result");
-  attempt.style.visibility = "visible";
-  resultPanel.hide();
+  navText.style.visibility = "visible";
+  navbar.style.backgroundColor = "";
+  navbar.setColor("hsl(120, 24%, 96%)");
   homePage.hide();
   quizPage.unhide();
 
@@ -143,21 +143,18 @@ function submit() {
   }
   newQuizNeeded = true;
 
-  p = document.createElement("p");
-  p.id = "result";
-  const accuracy = (100 * correctAnswers) / (answers + Number.EPSILON);
+  const accuracy = correctAnswers / (answers + Number.EPSILON);
   pastResults.push(accuracy);
-  const roundedNumber = Math.round((accuracy + Number.EPSILON) * 100) / 100;
-  resultText = `${correctAnswers}/${answers} (${roundedNumber}%)`;
-  p.appendChild(document.createTextNode(resultText));
-  resultPanel.appendChild(p);
-  resultPanel.style.backgroundColor = getColor(accuracy);
-  quiz.setAttribute("class", "submitted");
+  const roundedNumber = Math.round((accuracy + Number.EPSILON) * 100);
+  navText.innerText = `${correctAnswers}/${answers} (${roundedNumber}%)`;
+  const [H, S, L] = getColor(accuracy);
+  navbar.style.backgroundColor = `hsl(${H}, ${S}%, ${L}%)`;
+  navbar.setColor("black");
+
+  quiz.className = "submitted";
   scrollTo(0, 0);
 
   ++attemptsCount;
-  attempt.style.visibility = "visible";
-  resultPanel.unhide();
 
   if (localStorage.getItem("explanationWarned") == null) {
     if (quizPage.getElementsByClassName("explanation").length > 0) {
