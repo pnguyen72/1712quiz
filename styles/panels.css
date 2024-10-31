@@ -1,9 +1,38 @@
 .panel {
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   height: 3rem;
   width: 100%;
   align-items: center;
   position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+
+  span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  box-icon {
+    margin: auto;
+  }
+}
+
+#result-panel {
+  top: 0;
+  background-color: #04442c;
+
+  box-icon {
+    width: 1.65rem;
+    height: 1.65rem;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+  }
 }
 
 nav {
@@ -11,16 +40,9 @@ nav {
   background-color: #04442c;
   color: hsl(120, 24%, 96%);
 
-  span {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-  }
   box-icon {
     width: 2rem;
     height: 2rem;
-    margin: auto;
   }
 }
 
@@ -28,10 +50,17 @@ nav {
 @media (pointer: none), (pointer: coarse) {
   .panel {
     height: 3.5rem;
+  }
 
+  nav box-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  #result-panel {
     box-icon {
-      width: 2.25rem;
-      height: 2.25rem;
+      width: 1.85rem;
+      height: 1.85rem;
     }
   }
 }

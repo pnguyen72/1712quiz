@@ -34,5 +34,32 @@ nextButton.addEventListener("click", () => {
   if (quiz.className == "submitted") {
     return nextQuiz();
   }
+
   submit();
 });
+
+prevQuest.addEventListener("click", () =>
+  search(
+    highlightedQuestions,
+    document.documentElement.scrollTop,
+    (element) =>
+      element.getBoundingClientRect().top -
+      document.body.getBoundingClientRect().top
+  )
+    .prev()
+    .scrollTo()
+    .blink()
+);
+nextQuest.addEventListener("click", () =>
+  search(
+    highlightedQuestions,
+    document.documentElement.scrollTop,
+    (element) =>
+      element.getBoundingClientRect().top -
+      document.body.getBoundingClientRect().top -
+      0.38 * navbar.offsetHeight
+  )
+    .next()
+    .scrollTo()
+    .blink()
+);

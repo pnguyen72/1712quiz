@@ -13,6 +13,19 @@
     <link rel="stylesheet" href="./styles/quiz.css" />
   </head>
   <body>
+    <div id="result-panel" class="panel">
+      <div>
+        <box-icon type="solid" name="left-arrow"></box-icon>
+        Prev. question
+      </div>
+      <p>
+        <span id="quiz-result"></span>
+      </p>
+      <div>
+        <box-icon type="solid" name="right-arrow"></box-icon>
+        Next question
+      </div>
+    </div>
     <div id="home-page" class="page">
       <div id="title">
         <h1>1712 Practice Quiz</h1>
@@ -108,7 +121,7 @@
         name="home"
         type="solid"
       ></box-icon>
-      <span id="attempt">550/600 (91.67%)</span>
+      <span id="attempt">Attempt 00</span>
       <box-icon
         id="next-btn"
         color="hsl(120, 24%, 96%)"
@@ -119,10 +132,10 @@
 
     <script src="./scripts/elements.js"></script>
     <script src="./scripts/globalVar.js"></script>
+    <script src="./scripts/utils.js"></script>
     <script src="./scripts/generators.js"></script>
     <script src="./scripts/navigations.js"></script>
     <script src="./scripts/events.js"></script>
-    <script src="./scripts/utils.js"></script>
     <script src="./scripts/init.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   </body>

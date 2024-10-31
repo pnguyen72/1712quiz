@@ -146,7 +146,7 @@ function generateQuestion(question, qIndex) {
   p.className = "questionText";
 
   const title = document.createElement("abbr");
-  title.title = "mark question as unsure"
+  title.title = "mark question as unsure";
   title.className = "questionTitle";
   title.appendChild(document.createTextNode(`Question ${qIndex + 1}.`));
   title.addEventListener("click", () => toggleQuestionOfInterest(title));
@@ -201,6 +201,15 @@ function generateQuestion(question, qIndex) {
   }
 
   div.addEventListener("animationend", () => (div.style.animation = ""));
+  div.scrollTo = () => {
+    div.scrollIntoView(true);
+    scrollBy(0, -0.75 * navbar.offsetHeight);
+    if (resultPanel.style.display != "none") {
+      scrollBy(0, -navbar.offsetHeight);
+    }
+    return div;
+  };
+  div.blink = () => (div.style.animation = "blink 1s");
   return div;
 }
 

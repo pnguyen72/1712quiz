@@ -37,7 +37,7 @@ function returnHome() {
   }
   navText.style.visibility = "hidden";
   navbar.style.backgroundColor = "";
-  navbar.setColor("hsl(120, 24%, 96%)");
+  resultPanel.hide();
   quizPage.hide();
   homePage.unhide();
 }
@@ -65,9 +65,11 @@ function nextQuiz() {
 
   navText.style.visibility = "visible";
   navbar.style.backgroundColor = "";
-  navbar.setColor("hsl(120, 24%, 96%)");
+  resultPanel.hide();
   homePage.hide();
   quizPage.unhide();
+
+  highlightedQuestions = new Set();
 
   if (newQuizNeeded) {
     scrollTo(0, 0);
@@ -82,8 +84,7 @@ function nextQuiz() {
         isAnswered = isAnswered || choice.checked;
       }
       if (!isAnswered) {
-        question.scrollIntoView();
-        scrollBy(0, -0.33 * navbar.offsetHeight);
+        question.scrollTo();
         break;
       }
     }
@@ -120,15 +121,18 @@ function submit() {
     if (isAnswered) {
       // unanswered questions don't count toward the score
       ++answers;
-      if (isCorrect) ++correctAnswers;
-      else question.classList.add("incorrect");
+      if (isCorrect) {
+        ++correctAnswers;
+      } else {
+        question.classList.add("incorrect");
+        highlightedQuestions.add(question);
+      }
     } else if (!forceSubmit) {
-      question.scrollIntoView();
-      scrollBy(0, -0.33 * navbar.offsetHeight);
+      question.scrollTo();
       if (confirm("There are unanswered question(s). Submit anyway?"))
         forceSubmit = true;
       else {
-        question.style.animation = "blink 1s";
+        question.blink();
         return;
       }
     }
@@ -141,20 +145,25 @@ function submit() {
   } else {
     quizData = [];
   }
+
   newQuizNeeded = true;
+  quiz.className = "submitted";
+  scrollTo(0, 0);
+  ++attemptsCount;
+  highlightedQuestions = Array.from(highlightedQuestions).sort(
+    (p, q) => p.id.slice(1) - q.id.slice(1)
+  );
 
   const accuracy = correctAnswers / (answers + Number.EPSILON);
   pastResults.push(accuracy);
   const roundedNumber = Math.round((accuracy + Number.EPSILON) * 100);
-  navText.innerText = `${correctAnswers}/${answers} (${roundedNumber}%)`;
+  quizResultText.innerText = `${correctAnswers}/${answers} (${roundedNumber}%)`;
   const [H, S, L] = getColor(accuracy);
-  navbar.style.backgroundColor = `hsl(${H}, ${S}%, ${L}%)`;
-  navbar.setColor("black");
-
-  quiz.className = "submitted";
-  scrollTo(0, 0);
-
-  ++attemptsCount;
+  resultPanel.style.backgroundColor = `hsl(${H}, ${S}%, ${L}%)`;
+  resultPanel.unhide();
+  prevQuest.parentElement.style.display =
+    nextQuest.parentElement.style.display =
+      highlightedQuestions.length > 0 ? "" : "none";
 
   if (localStorage.getItem("explanationWarned") == null) {
     if (quizPage.getElementsByClassName("explanation").length > 0) {
@@ -173,10 +182,12 @@ function toggleQuestionOfInterest(question) {
     return;
   }
 
-  if (question.style.backgroundColor == "yellow") {
-    question.style.backgroundColor = "";
-  } else {
+  if (question.style.backgroundColor != "yellow") {
     question.style.backgroundColor = "yellow";
+    highlightedQuestions.add(question.parentElement.parentElement);
+  } else {
+    question.style.backgroundColor = "";
+    highlightedQuestions.delete(question.parentElement.parentElement);
   }
 }
 
