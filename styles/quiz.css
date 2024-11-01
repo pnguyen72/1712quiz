@@ -7,8 +7,10 @@
     text-decoration: none;
     cursor: help;
 
-    &:hover .questionTitle {
-      color: red;
+    @media not all and (hover: none) {
+      &:hover .questionTitle {
+        color: red;
+      }
     }
   }
 
