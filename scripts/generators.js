@@ -15,74 +15,69 @@ function generateModuleSelection() {
 
   const ul = document.createElement("ul");
   ul.id = "modulesList";
-  const promise = fetch("./data/modules.json")
-    .then((response) => response.json())
-    .then((modulesGroups) => {
-      let indexOffset;
-      if (midtermChoice.checked) {
-        indexOffset = 1;
-        modulesList = modulesGroups.midterm;
-      } else {
-        indexOffset = 1 + modulesGroups.midterm.length;
-        modulesList = modulesGroups.final;
-      }
-      modulesList.forEach((moduleName, index) => {
-        modulesData[index] = {};
-        fetch(`./data/LH/module${index + indexOffset}.json`)
-          .then((response) => response.json())
-          .then((data) => (modulesData[index]["LH"] = data));
-        fetch(`./data/AI/module${index + indexOffset}.json`)
-          .then((response) => response.json())
-          .then((data) => (modulesData[index]["AI"] = data));
+  const promise = getModuleNames().then((modulesGroups) => {
+    let indexOffset;
+    if (midtermChoice.checked) {
+      indexOffset = 1;
+      modulesList = modulesGroups.midterm;
+    } else {
+      indexOffset = 1 + modulesGroups.midterm.length;
+      modulesList = modulesGroups.final;
+    }
+    modulesList.forEach((moduleName, index) => {
+      modulesData[index] = {};
+      getModuleQuestions(index + indexOffset).then(
+        (data) => (modulesData[index] = data)
+      );
 
-        const li = document.createElement("li");
-        const label = document.createElement("label");
+      const li = document.createElement("li");
+      const label = document.createElement("label");
 
-        const input = document.createElement("input");
-        input.type = "checkbox";
-        input.addEventListener(
-          "click",
-          () => (document.getElementById("moduleALLSelect").checked = false)
-        );
-        moduleSelectBoxes.push(input);
+      const input = document.createElement("input");
+      input.type = "checkbox";
+      input.addEventListener(
+        "click",
+        () => (document.getElementById("moduleALLSelect").checked = false)
+      );
+      moduleSelectBoxes.push(input);
 
-        const span = document.createElement("span");
-        const title = `Module ${index + indexOffset}: ${moduleName}`;
-        span.appendChild(document.createTextNode(title));
+      const span = document.createElement("span");
+      const title = `Module ${index + indexOffset}: ${moduleName}`;
+      span.appendChild(document.createTextNode(title));
 
-        label.appendChild(input);
-        label.appendChild(span);
+      label.appendChild(input);
+      label.appendChild(span);
 
-        li.append(label);
-        ul.appendChild(li);
-      });
-
-      if (modulesList.length == 1) {
-        moduleSelectBoxes[0].checked = true;
-      } else if (modulesList.length >= 2) {
-        const li = document.createElement("li");
-        const label = document.createElement("label");
-
-        const input = document.createElement("input");
-        input.type = "checkbox";
-        input.id = "moduleALLSelect";
-        input.addEventListener("click", () =>
-          moduleSelectBoxes.forEach(
-            (element) => (element.checked = input.checked)
-          )
-        );
-
-        const span = document.createElement("span");
-        span.style.fontWeight = "bold";
-        span.appendChild(document.createTextNode("All of them!"));
-
-        label.appendChild(input);
-        label.appendChild(span);
-
-        li.append(label);
-        ul.appendChild(li);
-      }
+      li.append(label);
+      ul.appendChild(li);
     });
+
+    if (modulesList.length == 1) {
+      moduleSelectBoxes[0].checked = true;
+    } else if (modulesList.length >= 2) {
+      const li = document.createElement("li");
+      const label = document.createElement("label");
+
+      const input = document.createElement("input");
+      input.type = "checkbox";
+      input.id = "moduleALLSelect";
+      input.addEventListener("click", () =>
+        moduleSelectBoxes.forEach(
+          (element) => (element.checked = input.checked)
+        )
+      );
+
+      const span = document.createElement("span");
+      span.style.fontWeight = "bold";
+      span.appendChild(document.createTextNode("All of them!"));
+
+      label.appendChild(input);
+      label.appendChild(span);
+
+      li.append(label);
+      ul.appendChild(li);
+    }
+  });
 
   moduleSelection.append(ul);
   return promise;
@@ -165,7 +160,7 @@ function generateQuestion(question, qIndex) {
   if (questionInfo.img) {
     figure = document.createElement("figure");
     img = document.createElement("img");
-    img.setAttribute("src", "./data/resources/" + questionInfo.img);
+    img.setAttribute("src", "./data/images/" + questionInfo.img);
     figure.appendChild(img);
     div.appendChild(figure);
   }
