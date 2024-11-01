@@ -209,7 +209,7 @@
             "Open Ended questions": false,
             "Close ended questions": false
         },
-        "select_all_that_apply": true
+        "multi_select": true
     },
     "What information-eliciting strategy enables the analyst to see the reality of the situation rather than listen to others describe it?": {
         "choices": {
@@ -394,7 +394,7 @@
             "Ability to summarize key points": true,
             "Be happy": true
         },
-        "select_all_that_apply": true
+        "multi_select": true
     },
     "In preparing for an interview, TJ does research as to areas in which the interviewee has knowledge so that he does not ask questions that an interviewee cannot answer.": {
         "choices": {
@@ -528,7 +528,7 @@
             "Multi-Select questions": true,
             "Written Response questions": false
         },
-        "select_all_that_apply": true
+        "multi_select": true
     },
     "What does it mean for a process to be fragmented?": {
         "choices": {
@@ -537,6 +537,6 @@
             "The major steps required to complete the process cost too much.": false,
             "The major steps in the process are completed in parallel.": false
         },
-        "select_all_that_apply": true
+        "multi_select": true
     }
 }

@@ -45,7 +45,7 @@
             "V-Model": true,
             "Waterfall": true
         },
-        "select_all_that_apply": true
+        "multi_select": true
     },
     "The project scope statement is used to:": {
         "choices": {

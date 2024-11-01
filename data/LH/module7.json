@@ -120,7 +120,7 @@
         "explanation": "Transitive means the determinant is a non-identifier. Partial means the determinant is a part of the identifier."
     },
     "Select all that applies to various normal forms:": {
-        "select_all_that_apply": true,
+        "multi_select": true,
         "choices": {
             "A table in 3NF is also in 1NF.": true,
             "A table in 2NF is also in 1NF.": true,

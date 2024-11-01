@@ -402,7 +402,7 @@
             "Notes and issues": true,
             "Business rules": true
         },
-        "select_all_that_apply": true
+        "multi_select": true
     },
     "A use case is a formal way of representing how a business system interacts with its environment.": {
         "choices": {

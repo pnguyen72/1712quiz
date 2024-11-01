@@ -308,7 +308,7 @@
             "stored": true,
             "used": true
         },
-        "select_all_that_apply": true
+        "multi_select": true
     },
     "The last step in creating basic ERD's is to:": {
         "choices": {

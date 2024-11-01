@@ -30,7 +30,7 @@ The questions for each module are stored in `LH/module{#}.json` if they are from
 {
     "Question 1 text": {
         "img": "image_file_name", # optional, only if the question includes an image
-        "select_all_that_apply": true/false, # whether the question is multi-select
+        "multi_select": true/false, # whether the question is multi-select
         "choices": {
             "choice 1 text": true/false, # whether the choice is correct
             # etc. for choice 2, 3,...

@@ -132,7 +132,7 @@ function generateQuestion(question, qIndex) {
 
   const [questionText, questionInfo] = question;
   const choices = Object.entries(questionInfo.choices);
-  const isMultiSelect = questionInfo.select_all_that_apply;
+  const isMultiSelect = questionInfo.multi_select;
 
   if (choices[0][0] != "True" && isNaN(choices[0][0])) {
     shuffle(choices);

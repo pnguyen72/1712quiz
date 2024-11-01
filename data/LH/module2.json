@@ -45,7 +45,7 @@
             "Mission critical applications": false,
             "Large systems": false
         },
-        "select_all_that_apply": true
+        "multi_select": true
     },
     "Which is NOT suggested for IT development projects?": {
         "choices": {
@@ -443,7 +443,7 @@
             "Communication as a core value": true,
             "Simplicity as a core value": true
         },
-        "select_all_that_apply": true
+        "multi_select": true
     },
     "Extreme Programming (XP) stresses customer satisfaction and teamwork.": {
         "choices": {

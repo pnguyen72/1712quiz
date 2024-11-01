@@ -12,7 +12,7 @@
             "Physical process models": false,
             "Design models": false
         },
-        "select_all_that_apply": true
+        "multi_select": true
     },
     "Iteration is the cornerstone of good DFD design.": {
         "choices": {
@@ -45,7 +45,7 @@
             "Data file": false,
             "Database": false
         },
-        "select_all_that_apply": true
+        "multi_select": true
     },
     "We use data flow diagrams (DFDs) to describe the to-be system's interactions with its environment, processes, flows of data, and data stores.": {
         "choices": {
@@ -105,7 +105,7 @@
             "Database": false,
             "Data file": false
         },
-        "select_all_that_apply": true
+        "multi_select": true
     },
     "Process descriptions provide additional information that the DFD does not provide.": {
         "choices": {
@@ -219,7 +219,7 @@
             "Logical process models": false,
             "Physical process models": false
         },
-        "select_all_that_apply": true
+        "multi_select": true
     },
     "The next level under level 1 would be labeled as level 2.": {
         "choices": {
