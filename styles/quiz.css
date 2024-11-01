@@ -1,9 +1,14 @@
-#quiz-page {
-  .highlighted .questionTitle {
+.question {
+  &:not(:last-child) {
+    margin-bottom: 2.25rem;
+  }
+
+  &.unsure .questionTitle {
     background-color: yellow;
   }
 
   .questionText {
+    display: block;
     text-decoration: none;
     cursor: help;
 
@@ -14,45 +19,41 @@
     }
   }
 
-  .explanation {
-    margin-left: 1.5rem;
-    display: none;
-    color: blue;
-  }
-
-  .submitted {
-    li.correct label {
-      background-color: hsl(120, 80%, 80%);
-    }
-    .incorrect .questionTitle {
-      background-color: hsla(0, 80%, 75%, 75%) !important;
-    }
-    .highlighted,
-    .incorrect {
-      & ~ .explanation {
-        display: block;
-      }
-    }
-  }
-
   figure {
     margin: 0;
-
     img {
       width: 100%;
       max-width: 900px;
     }
   }
 
+  .explanation {
+    margin-left: 1.5rem;
+    display: none;
+    color: blue;
+  }
   @media (pointer: none), (pointer: coarse) {
     .explanation {
       margin-left: 0.75rem;
     }
   }
+}
+
+.submitted {
+  li.correct label {
+    background-color: hsl(120, 80%, 80%);
+  }
 
   .question {
-    &:not(:last-child) {
-      margin-bottom: 2.5rem;
+    &.wrongAnswer .questionTitle {
+      background-color: hsla(0, 80%, 75%, 75%) !important;
+    }
+
+    &.unsure,
+    &.wrongAnswer {
+      .explanation {
+        display: block;
+      }
     }
   }
 }

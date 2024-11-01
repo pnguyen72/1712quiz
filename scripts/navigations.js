@@ -122,9 +122,7 @@ function submit() {
       if (isCorrect) {
         ++correctAnswers;
       } else {
-        question
-          .getElementsByClassName("questionText")[0]
-          .parentElement.classList.add("incorrect");
+        question.classList.add("wrongAnswer");
       }
     } else if (!forceSubmit) {
       question.scrollTo();
@@ -158,12 +156,10 @@ function submit() {
   resultPanel.style.backgroundColor = `hsl(${H}, ${S}%, ${L}%)`;
   resultPanel.unhide();
 
-  const highlightedQuestions = quizPage.querySelectorAll(
-    "p.incorrect,p.highlighted"
-  );
+  const unsureQuestions = quizPage.querySelectorAll(".wrongAnswer,.unsure");
   prevQuest.parentElement.style.display =
     nextQuest.parentElement.style.display =
-      highlightedQuestions.length > 0 ? "" : "none";
+      unsureQuestions.length > 0 ? "" : "none";
 
   if (localStorage.getItem("explanationWarned") == null) {
     if (quizPage.getElementsByClassName("explanation").length > 0) {
@@ -178,18 +174,16 @@ function submit() {
 }
 
 function toggleMarkQuestionUnsure(question) {
-  if (question.classList.contains("highlighted")) {
-    question.classList.remove("highlighted");
+  if (question.classList.contains("unsure")) {
+    question.classList.remove("unsure");
   } else {
-    question.classList.add("highlighted");
+    question.classList.add("unsure");
   }
 
-  const highlightedQuestions = quizPage.querySelectorAll(
-    "p.incorrect,p.highlighted"
-  );
+  const unsureQuestions = quizPage.querySelectorAll(".wrongAnswer,.unsure");
   prevQuest.parentElement.style.display =
     nextQuest.parentElement.style.display =
-      highlightedQuestions.length > 0 ? "" : "none";
+      unsureQuestions.length > 0 ? "" : "none";
 }
 
 function _populateData() {

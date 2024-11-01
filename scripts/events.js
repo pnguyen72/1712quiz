@@ -40,19 +40,19 @@ nextButton.addEventListener("click", () => {
 
 prevQuest.addEventListener("click", () =>
   search(
-    quizPage.querySelectorAll("p.incorrect,p.highlighted"),
+    quizPage.querySelectorAll(".wrongAnswer,.unsure"),
     document.documentElement.scrollTop,
     (element) =>
       element.getBoundingClientRect().top -
       document.body.getBoundingClientRect().top
   )
     .prev()
-    .parentElement.scrollTo()
+    .scrollTo()
     .blink()
 );
 nextQuest.addEventListener("click", () =>
   search(
-    quizPage.querySelectorAll("p.incorrect,p.highlighted"),
+    quizPage.querySelectorAll(".wrongAnswer,.unsure"),
     document.documentElement.scrollTop,
     (element) =>
       element.getBoundingClientRect().top -
@@ -60,6 +60,6 @@ nextQuest.addEventListener("click", () =>
       0.38 * navbar.offsetHeight
   )
     .next()
-    .parentElement.scrollTo()
+    .scrollTo()
     .blink()
 );
