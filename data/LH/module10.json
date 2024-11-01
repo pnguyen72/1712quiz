@@ -6,29 +6,25 @@
             "Do an interface evaluation": false,
             "Examine DFDs and use cases to develop use scenarios": false,
             "Develop the interface structure diagram (ISD)": false
-        },
-        "multi_select": false
+        }
     },
     "Generally, headings on a paper form should be with Arial size 24 bold; the main text should be Times New Roman size 12. Subheadings should be Tahoma size 14, bold and italic and underlined. This makes a form easier to read and to delineate sections.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "At least one study suggests that some variation be appropriate in user interface design as the study suggests that when all forms tend to look the same, it can be confusing to some users.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "Omar has designed a paper form using'sans serif'; fonts and for his screen (or web) forms he has used 'serif'; fonts. He is exercising good user interface design practices.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "Typically, the first step in the user interface design process is what?": {
         "choices": {
@@ -37,8 +33,7 @@
             "Do an interface evaluation": false,
             "Examine DFDs and use cases to develop use scenarios": true,
             "Develop the interface structure diagram (ISD)": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following is NOT a common Interface Evaluation technique?": {
         "choices": {
@@ -47,8 +42,7 @@
             "Heuristic evaluation": false,
             "Use scenario normalization": true,
             "Formal usability testing": false
-        },
-        "multi_select": false
+        }
     },
     "Interface evaluations almost always do what?": {
         "choices": {
@@ -57,8 +51,7 @@
             "Find coding errors": false,
             "Are part of the training and implementation process": false,
             "Cause additional scope creep in the project": false
-        },
-        "multi_select": false
+        }
     },
     "Compare data against a data base (or file) to ensure that they are correct.": {
         "choices": {
@@ -67,8 +60,7 @@
             "Range check": false,
             "Consistency checks": false,
             "Database checks": true
-        },
-        "multi_select": false
+        }
     },
     "Seldom or never used.": {
         "choices": {
@@ -77,8 +69,7 @@
             "Acknowledgment message": true,
             "Delay message": false,
             "Help message": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following is NOT a suggestion for preventing mistakes?": {
         "choices": {
@@ -87,8 +78,7 @@
             "Limiting choices": false,
             "Gray-out commands that cannot be used": false,
             "Create secondary menus when there are many similar choices on a menu": false
-        },
-        "multi_select": false
+        }
     },
     "This defines the basic components of the interface and how they work together to provide functionality to users.": {
         "choices": {
@@ -97,8 +87,7 @@
             "Interface Metaphor": false,
             "Interface Structure Design": true,
             "Interface Template Design": false
-        },
-        "multi_select": false
+        }
     },
     "Displays selected item in one-line box that opens to reveal list of choices.": {
         "choices": {
@@ -107,8 +96,7 @@
             "On-screen selection list": false,
             "Drop-down selection list": true,
             "Combo box selection list": false
-        },
-        "multi_select": false
+        }
     },
     "In Use Scenario Development, the goal is:": {
         "choices": {
@@ -117,8 +105,7 @@
             "To accurately model all possible DFDs": false,
             "To give complex and complete narrative descriptions of all scenarios": false,
             "To effectively model all data flows and data models": false
-        },
-        "multi_select": false
+        }
     },
     "This output is poor at helping users recognize precise numeric values and should be replaced by tables when precision is important.": {
         "choices": {
@@ -127,8 +114,7 @@
             "Graphs": true,
             "Turnaround document": false,
             "None are poor": false
-        },
-        "multi_select": false
+        }
     },
     "When implementing the'minimize user effort'; factor, most interface designers follow what rule?": {
         "choices": {
@@ -137,8 +123,7 @@
             "Four-clicks rule": false,
             "User Experience rule": false,
             "The menu option rule": false
-        },
-        "multi_select": false
+        }
     },
     "Approximately what percent of men are color blind (and thus improper use of color can impair their ability to read information)": {
         "choices": {
@@ -147,8 +132,7 @@
             "15%": false,
             "20%": false,
             "More than 20%": false
-        },
-        "multi_select": false
+        }
     },
     "This is used when an extra digit is added to a coded field to make sure it the entered data is correct (like Social Security numbers).": {
         "choices": {
@@ -157,15 +141,13 @@
             "Range check": false,
             "Check digit check": true,
             "Consistency check": false
-        },
-        "multi_select": false
+        }
     },
     "Forms should have version numbers so that users, analysts and programmers can identify outdated materials.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "This is an outline of the steps that the users perform to accomplish some part of their work.": {
         "choices": {
@@ -174,8 +156,7 @@
             "Use scenario": true,
             "Process model": false,
             "Layout verification": false
-        },
-        "multi_select": false
+        }
     },
     "Informs the user that the computer system is working properly to perform a task that may take several seconds.": {
         "choices": {
@@ -184,8 +165,7 @@
             "Acknowledgment message": false,
             "Delay message": true,
             "Help message": false
-        },
-        "multi_select": false
+        }
     },
     "Informs the user that he or she has attempted to do something to which the system cannot respond.": {
         "choices": {
@@ -194,22 +174,19 @@
             "Acknowledgment message": false,
             "Delay message": false,
             "Help message": false
-        },
-        "multi_select": false
+        }
     },
     "Bob is designing input screens for a re-designed system for the shipping and inventory department. For order forms, he puts Zip code first (as the database will take the zip code and look up the city and state); for receiving forms, he puts them in the order of city, then state, then zip code. His design choices will help experienced users be more productive.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "Bias can be introduced into a report by the way in which lists of data are sorted.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "Asks the user to verify that he or she really wants to perform the action selected.": {
         "choices": {
@@ -218,8 +195,7 @@
             "Acknowledgment message": false,
             "Delay message": false,
             "Help message": false
-        },
-        "multi_select": false
+        }
     },
     "The objective of an interface evaluation is what?": {
         "choices": {
@@ -228,8 +204,7 @@
             "To understand how to improve the interface design": true,
             "To get users input on colors, menu names and flexibility": false,
             "To determine if all use cases and ERDs have been built into the interface": false
-        },
-        "multi_select": false
+        }
     },
     "Used as a shortcut for experienced Users.": {
         "choices": {
@@ -238,15 +213,13 @@
             "On-screen selection list": false,
             "Drop-down selection list": false,
             "Combo box selection list": true
-        },
-        "multi_select": false
+        }
     },
     "User experience refers to minimizing the number of clicks or commands to go from one field to another.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "Which is NOT true about the content awareness design principle?": {
         "choices": {
@@ -255,8 +228,7 @@
             "Field labels should be fairly short, yet with long enough so that users can not be confused": false,
             "Input fields should follow a logical progression that is familiar to users": false,
             "All printed forms should have version numbers for better control": false
-        },
-        "multi_select": false
+        }
     },
     "The following is used as a second-level menu, often from a menu bar.": {
         "choices": {
@@ -265,8 +237,7 @@
             "Hyperlink menu": false,
             "Pop-up menu": false,
             "Tab menu": false
-        },
-        "multi_select": false
+        }
     },
     "When designing navigational controls, which is NOT commonly assumed?": {
         "choices": {
@@ -275,15 +246,13 @@
             "That users do not have help readily at hand": false,
             "That users have knowledge of the system and the interface": true,
             "That users have not read the documentation": false
-        },
-        "multi_select": false
+        }
     },
     "Space is generally at a premium on forms and reports, thus squeezing information onto forms is considered a wise business decision.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "Presents a list of choices in a box.": {
         "choices": {
@@ -292,15 +261,13 @@
             "On-screen selection list": true,
             "Drop-down selection list": false,
             "Combo box selection list": false
-        },
-        "multi_select": false
+        }
     },
     "Jamal is creating a user interface. He wants what he calls an'oops'; button on every screen and form (or an'undo'; button). This is a good design consideration.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "Used when user does something that is not permitted or not possible.": {
         "choices": {
@@ -309,8 +276,7 @@
             "Acknowledgment message": false,
             "Delay message": false,
             "Help message": false
-        },
-        "multi_select": false
+        }
     },
     "Used when user selects a potentially dangerous choice, such as deleting a file.": {
         "choices": {
@@ -319,8 +285,7 @@
             "Acknowledgment message": false,
             "Delay message": false,
             "Help message": false
-        },
-        "multi_select": false
+        }
     },
     "The following is used as a main menu for a Web-based system.": {
         "choices": {
@@ -329,8 +294,7 @@
             "Hyperlink menu": true,
             "Pop-up menu": false,
             "Tab menu": false
-        },
-        "multi_select": false
+        }
     },
     "Ensure that combinations of data are valid.": {
         "choices": {
@@ -339,8 +303,7 @@
             "Range check": false,
             "Consistency checks": true,
             "Database checks": false
-        },
-        "multi_select": false
+        }
     },
     "Used seldom or never - only if there is insufficient room for check boxes or radio buttons": {
         "choices": {
@@ -349,8 +312,7 @@
             "On-screen selection list": true,
             "Drop-down selection list": false,
             "Combo box selection list": false
-        },
-        "multi_select": false
+        }
     },
     "The first principle of designing navigation controls is what?": {
         "choices": {
@@ -359,8 +321,7 @@
             "To prevent users from making mistakes": true,
             "See that all screens can be reached in the four-click rule": false,
             "Build appropriate icons (like a blank page for new document or form)": false
-        },
-        "multi_select": false
+        }
     },
     "Used when only one item can be selected from a set of mutually exclusive items.": {
         "choices": {
@@ -369,8 +330,7 @@
             "On-screen selection list": false,
             "Drop-down selection list": false,
             "Combo box selection list": false
-        },
-        "multi_select": false
+        }
     },
     "The following is used as a shortcut to commands for experienced users.": {
         "choices": {
@@ -379,8 +339,7 @@
             "Hyperlink menu": false,
             "Pop-up menu": true,
             "Tab menu": false
-        },
-        "multi_select": false
+        }
     },
     "Ensures that data are of the right type (e.g., numeric) and in the right format (e.g., month, day, year).": {
         "choices": {
@@ -389,8 +348,7 @@
             "Range check": false,
             "Consistency checks": false,
             "Database checks": false
-        },
-        "multi_select": false
+        }
     },
     "The following is used when the user needs to change several settings or perform several related commands.": {
         "choices": {
@@ -399,15 +357,13 @@
             "Hyperlink menu": false,
             "Pop-up menu": false,
             "Tab menu": true
-        },
-        "multi_select": false
+        }
     },
     "When creating navigational controls, you should either not display a command that cannot be used or'gray'; it out (where it shows, but cannot be used).": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "Informs the user that the system has accomplished what it was asked to do.": {
         "choices": {
@@ -416,22 +372,19 @@
             "Acknowledgment message": true,
             "Delay message": false,
             "Help message": false
-        },
-        "multi_select": false
+        }
     },
     "If a particular form or screen is used by a cadre of experienced users very frequently (like an accounting entry system),'ease of use'; should be a high priority on these system interfaces.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "When creating user interfaces, analysts should examine DFDs and use cases to see how users commonly perform various processes.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "Which is generally NOT true for interface evaluations?": {
         "choices": {
@@ -440,8 +393,7 @@
             "It generally involves users working with analysts": false,
             "It is cyclic": false,
             "It is built on ERDs": true
-        },
-        "multi_select": false
+        }
     },
     "This is used when you want to verify that data fits within correct minimum and maximum values.": {
         "choices": {
@@ -450,8 +402,7 @@
             "Range check": true,
             "Check digit check": false,
             "Consistency check": false
-        },
-        "multi_select": false
+        }
     },
     "Which of the following might be a good choice of an icon for saving on a user interface?": {
         "choices": {
@@ -460,22 +411,19 @@
             "A computer diskette": true,
             "A hard drive image": false,
             "A green \"S\"": false
-        },
-        "multi_select": false
+        }
     },
     "Infrequent users prefer user interfaces with'ease of learning'; features (like more explicit menu choices, clear directions).": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "Michelle is designing a series of user interfaces for a CRM system. She goes back and forth between various steps of use cases, DFDs, ERDs and JAD session notes.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "A special type of drop-down list box that permits user to type as well as scroll the list.": {
         "choices": {
@@ -484,8 +432,7 @@
             "On-screen selection list": false,
             "Drop-down selection list": false,
             "Combo box selection list": true
-        },
-        "multi_select": false
+        }
     },
     "Used when an activity takes more than seven seconds.": {
         "choices": {
@@ -494,8 +441,7 @@
             "Acknowledgment message": false,
             "Delay message": true,
             "Help message": false
-        },
-        "multi_select": false
+        }
     },
     "Presents a complete list of mutually exclusive choices, each with a circle in front.": {
         "choices": {
@@ -504,8 +450,7 @@
             "On-screen selection list": false,
             "Drop-down selection list": false,
             "Combo box selection list": false
-        },
-        "multi_select": false
+        }
     },
     "Ensures that all required data have been entered.": {
         "choices": {
@@ -514,22 +459,19 @@
             "Range check": false,
             "Consistency checks": false,
             "Database checks": false
-        },
-        "multi_select": false
+        }
     },
     "Interface Structures cannot directly interface with other interface structures on other menus and submenus, only the interface structures on the same menu or submenu.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "Experienced users prefer user interfaces with'ease of learning'; features.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "Use scenarios builds upon what?": {
         "choices": {
@@ -538,8 +480,7 @@
             "PERT charts": false,
             "Use cases": true,
             "HIPO charts": false
-        },
-        "multi_select": false
+        }
     },
     "Some systems that are used infrequently should probably emphasize:": {
         "choices": {
@@ -548,8 +489,7 @@
             "Ease of use": false,
             "More short-cut keys and built in keyboard functions": false,
             "Organizational feasibility": false
-        },
-        "multi_select": false
+        }
     },
     "Used when there is insufficient room to display all choices.": {
         "choices": {
@@ -558,8 +498,7 @@
             "On-screen selection list": false,
             "Drop-down selection list": true,
             "Combo box selection list": false
-        },
-        "multi_select": false
+        }
     },
     "Typically, the second step in the user interface design process is what?": {
         "choices": {
@@ -568,8 +507,7 @@
             "Do an interface evaluation": false,
             "Examine DFDs and use cases to develop use scenarios": false,
             "Develop the interface structure diagram (ISD)": true
-        },
-        "multi_select": false
+        }
     },
     "Ensures that numeric data are within correct minimum and maximum values.": {
         "choices": {
@@ -578,8 +516,7 @@
             "Range check": true,
             "Consistency checks": false,
             "Database checks": false
-        },
-        "multi_select": false
+        }
     },
     "Used when entering a numeric value.": {
         "choices": {
@@ -588,8 +525,7 @@
             "On-screen selection list": false,
             "Drop-down selection list": false,
             "Combo box selection list": false
-        },
-        "multi_select": false
+        }
     },
     "Typically, the fourth step in the user interface design process is what?": {
         "choices": {
@@ -598,8 +534,7 @@
             "Do an interface evaluation": false,
             "Examine DFDs and use cases to develop use scenarios": false,
             "Develop the interface structure diagram (ISD)": false
-        },
-        "multi_select": false
+        }
     },
     "This report is used when a user needs brief information on many items.": {
         "choices": {
@@ -608,8 +543,7 @@
             "Exception report": false,
             "Summary report": true,
             "Consistency check": false
-        },
-        "multi_select": false
+        }
     },
     "Presents a complete list of choices, each with a square box in front.": {
         "choices": {
@@ -618,8 +552,7 @@
             "On-screen selection list": false,
             "Drop-down selection list": false,
             "Combo box selection list": false
-        },
-        "multi_select": false
+        }
     },
     "This is used when all combinations of data are valid (like birth year is prior to marriage year).": {
         "choices": {
@@ -628,15 +561,13 @@
             "Range check": false,
             "Check digit check": false,
             "Consistency check": true
-        },
-        "multi_select": false
+        }
     },
     "Research shows that in an ideal world a menu should contain no more than four items and submenus should contain no fewer than six items.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "It is better to make menus how?": {
         "choices": {
@@ -645,8 +576,7 @@
             "Broad and deep": false,
             "Narrow and shallow": false,
             "Wide and tall": false
-        },
-        "multi_select": false
+        }
     },
     "Used in all systems.": {
         "choices": {
@@ -655,8 +585,7 @@
             "Acknowledgment message": false,
             "Delay message": false,
             "Help message": true
-        },
-        "multi_select": false
+        }
     },
     "There are many types of reports, they include which of the following?": {
         "choices": {
@@ -671,8 +600,7 @@
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "One strong suggestion for navigation design is what?": {
         "choices": {
@@ -681,15 +609,13 @@
             "Simplify recovery from mistakes (like having an undo button)": true,
             "Lock the user's computer when a mistake has been made": false,
             "Log all mistakes, and log the user's computer when 1000 mistakes have been made": false
-        },
-        "multi_select": false
+        }
     },
     "Range checks will validate if the data is numeric with two decimal places.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "The following is used as a main menu for a system.": {
         "choices": {
@@ -698,8 +624,7 @@
             "Hyperlink menu": false,
             "Pop-up menu": false,
             "Tab menu": false
-        },
-        "multi_select": false
+        }
     },
     "Provides additional information about the system and its components.": {
         "choices": {
@@ -708,8 +633,7 @@
             "Acknowledgment message": false,
             "Delay message": false,
             "Help message": true
-        },
-        "multi_select": false
+        }
     },
     "This is used when several fields must be entered before the form can be processed.": {
         "choices": {
@@ -718,29 +642,25 @@
             "Range check": false,
             "Check digit check": false,
             "Consistency check": false
-        },
-        "multi_select": false
+        }
     },
     "Colors and patterns add pizzazz to a screen form and aid in its readability.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "Aesthetics refers to designing information that can be navigated in three-clicks or less.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     },
     "For screen forms and reports, you should use a font of at least size 12.": {
         "choices": {
             "True": true,
             "False": false
-        },
-        "multi_select": false
+        }
     },
     "A use scenario is one commonly used what?": {
         "choices": {
@@ -749,14 +669,12 @@
             "Context diagram": false,
             "Buy-in flowchart": false,
             "Throwaway prototyping tool": false
-        },
-        "multi_select": false
+        }
     },
     "User interface design is a three-step process: (1) analyze the DFDs and use cases; (2) develop the interface diagrams; and (3) create the interface design prototype.": {
         "choices": {
             "True": false,
             "False": true
-        },
-        "multi_select": false
+        }
     }
 }
