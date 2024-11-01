@@ -30,6 +30,16 @@ body {
         }
       }
     }
+
+    #footer {
+      a, a:visited {
+        text-decoration: none;
+        color: #04442c;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
