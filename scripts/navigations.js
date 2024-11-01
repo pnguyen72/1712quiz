@@ -69,8 +69,6 @@ function nextQuiz() {
   homePage.hide();
   quizPage.unhide();
 
-  highlightedQuestions = new Set();
-
   if (newQuizNeeded) {
     scrollTo(0, 0);
     removeElementById("quiz");
@@ -124,8 +122,9 @@ function submit() {
       if (isCorrect) {
         ++correctAnswers;
       } else {
-        question.classList.add("incorrect");
-        highlightedQuestions.add(question);
+        question
+          .getElementsByClassName("questionText")[0]
+          .parentElement.classList.add("incorrect");
       }
     } else if (!forceSubmit) {
       question.scrollTo();
@@ -150,9 +149,6 @@ function submit() {
   quiz.className = "submitted";
   scrollTo(0, 0);
   ++attemptsCount;
-  highlightedQuestions = Array.from(highlightedQuestions).sort(
-    (p, q) => p.id.slice(1) - q.id.slice(1)
-  );
 
   const accuracy = correctAnswers / (answers + Number.EPSILON);
   pastResults.push(accuracy);
@@ -161,6 +157,10 @@ function submit() {
   const [H, S, L] = getColor(accuracy);
   resultPanel.style.backgroundColor = `hsl(${H}, ${S}%, ${L}%)`;
   resultPanel.unhide();
+
+  const highlightedQuestions = quizPage.querySelectorAll(
+    "p.incorrect,p.highlighted"
+  );
   prevQuest.parentElement.style.display =
     nextQuest.parentElement.style.display =
       highlightedQuestions.length > 0 ? "" : "none";
@@ -177,18 +177,19 @@ function submit() {
   }
 }
 
-function toggleQuestionOfInterest(question) {
-  if (document.getElementById("quiz").className == "submitted") {
-    return;
+function toggleMarkQuestionUnsure(question) {
+  if (question.classList.contains("highlighted")) {
+    question.classList.remove("highlighted");
+  } else {
+    question.classList.add("highlighted");
   }
 
-  if (question.style.backgroundColor != "yellow") {
-    question.style.backgroundColor = "yellow";
-    highlightedQuestions.add(question.parentElement.parentElement);
-  } else {
-    question.style.backgroundColor = "";
-    highlightedQuestions.delete(question.parentElement.parentElement);
-  }
+  const highlightedQuestions = quizPage.querySelectorAll(
+    "p.incorrect,p.highlighted"
+  );
+  prevQuest.parentElement.style.display =
+    nextQuest.parentElement.style.display =
+      highlightedQuestions.length > 0 ? "" : "none";
 }
 
 function _populateData() {

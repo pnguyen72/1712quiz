@@ -143,16 +143,21 @@ function generateQuestion(question, qIndex) {
   div.setAttribute("class", "question");
 
   const p = document.createElement("p");
-  p.className = "questionText";
+  p.addEventListener("click", () => toggleMarkQuestionUnsure(p));
 
-  const title = document.createElement("abbr");
-  title.title = "mark question as unsure";
+  const abbr = document.createElement("abbr");
+  abbr.title = "mark question as unsure";
+  abbr.className = "questionText";
+
+  const title = document.createElement("b");
   title.className = "questionTitle";
   title.appendChild(document.createTextNode(`Question ${qIndex + 1}.`));
-  title.addEventListener("click", () => toggleQuestionOfInterest(title));
-  p.appendChild(title);
-  p.appendChild(document.createTextNode(" " + questionText));
+  abbr.appendChild(title);
+  abbr.appendChild(document.createTextNode(" " + questionText));
+
+  p.appendChild(abbr);
   div.appendChild(p);
+
   if (
     questionText ==
     "COMP 1712 is your favorite class. (You must answer correctly AND honestly!)"

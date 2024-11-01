@@ -20,7 +20,7 @@ function getColor(accuracy) {
 
 function search(collection, item, map = (i) => i) {
   function binarySearch() {
-    const mappedCollection = collection.map(map);
+    const mappedCollection = [...collection].map(map);
 
     let start = 0;
     let end = collection.length - 1;
@@ -57,6 +57,5 @@ function search(collection, item, map = (i) => i) {
     index = Math.max(Math.min(index, collection.length - 1), 0);
     return collection[index];
   };
-
   return out;
 }
