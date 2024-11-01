@@ -141,9 +141,9 @@ function generateQuestion(question, qIndex) {
   const div = document.createElement("div");
   div.id = "Q" + (qIndex + 1);
   div.setAttribute("class", "question");
-  div.addEventListener("click", () => toggleMarkQuestionUnsure(div));
 
   const abbr = document.createElement("abbr");
+  abbr.addEventListener("click", () => toggleMarkQuestionUnsure(div));
   abbr.title = "mark question as unsure";
   abbr.className = "questionText";
 
