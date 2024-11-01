@@ -151,7 +151,7 @@ function generateQuestion(question, qIndex) {
   title.className = "questionTitle";
   title.appendChild(document.createTextNode(`Question ${qIndex + 1}.`));
   abbr.appendChild(title);
-  abbr.appendChild(document.createTextNode(" " + questionText));
+  abbr.innerHTML += " " + questionText;
 
   div.appendChild(abbr);
 
@@ -184,7 +184,7 @@ function generateQuestion(question, qIndex) {
     input.name = `Q${qIndex + 1}`;
 
     const span = document.createElement("span");
-    span.appendChild(document.createTextNode(choiceText));
+    span.innerHTML = choiceText;
 
     label.appendChild(input);
     label.appendChild(span);
