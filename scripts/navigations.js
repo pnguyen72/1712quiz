@@ -187,14 +187,21 @@ function toggleMarkQuestionUnsure(question) {
 }
 
 function _populateData() {
+  let modulesList;
+  if (midtermChoice.checked) {
+    modulesList = modulesData.midterm;
+  } else {
+    modulesList = modulesData.final;
+  }
+
   quizData = {};
-  for (let i = 0; i < modulesData.length; i++) {
+  for (let i = 0; i < modulesList.length; i++) {
     if (moduleSelectBoxes[i].checked) {
       if (LHChoice.checked) {
-        quizData = { ...quizData, ...modulesData[i]["LH"] };
+        quizData = { ...quizData, ...modulesList[i].LH };
       }
       if (AIChoice.checked) {
-        quizData = { ...quizData, ...modulesData[i]["AI"] };
+        quizData = { ...quizData, ...modulesList[i].AI };
       }
     }
   }

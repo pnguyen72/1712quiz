@@ -9,7 +9,33 @@ const app = firebase.initializeApp({
 const db = firebase.firestore();
 const storage = firebase.storage();
 
-function getModuleNames() {
+function getModulesData() {
+  return _getModuleNames().then((data) => {
+    const promises = [];
+
+    let indexOffset = 1;
+    for (let i = 0; i < data.midterm.length; ++i) {
+      promises.push(
+        _getModuleQuestions(i + indexOffset).then((questions) =>
+          modulesData.midterm.push({ name: data.midterm[i], ...questions })
+        )
+      );
+    }
+
+    indexOffset += data.midterm.length;
+    for (let i = 0; i < data.final.length; ++i) {
+      promises.push(
+        _getModuleQuestions(i + indexOffset).then((questions) =>
+          modulesData.final.push({ name: data.final[i], ...questions })
+        )
+      );
+    }
+
+    return Promise.all(promises);
+  });
+}
+
+function _getModuleNames() {
   return db
     .collection("modules")
     .doc("names")
@@ -17,7 +43,7 @@ function getModuleNames() {
     .then((doc) => doc.data());
 }
 
-function getModuleQuestions(moduleNum) {
+function _getModuleQuestions(moduleNum) {
   return db
     .collection("modules")
     .doc(`module${moduleNum}`)
