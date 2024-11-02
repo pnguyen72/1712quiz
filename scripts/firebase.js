@@ -35,6 +35,25 @@ function getModulesData() {
   });
 }
 
+function submitExplanation(explanation) {
+  const questionText =
+    explanation.parentElement.getElementsByClassName("questionBody")[0]
+      .innerText;
+  const explanationText = explanation.innerHTML;
+
+  const data = _findQuestion(questionText);
+  const module = `module${data.index}`;
+  const bank = data.bank;
+
+  return db
+    .collection("modules")
+    .doc(module)
+    .set(
+      { [bank]: { [questionText]: { explanation: explanationText } } },
+      { merge: true }
+    );
+}
+
 function _getModuleNames() {
   return db
     .collection("modules")
@@ -49,4 +68,44 @@ function _getModuleQuestions(moduleNum) {
     .doc(`module${moduleNum}`)
     .get()
     .then((doc) => doc.data());
+}
+
+function _findQuestion(question) {
+  let section;
+  let indexOffset;
+  if (midtermChoice.checked) {
+    section = "midterm";
+    indexOffset = 1;
+  } else {
+    section = "final";
+    indexOffset = 1 + modulesData.midterm.length;
+  }
+
+  for (let i = 0; i < moduleSelectBoxes.length; ++i) {
+    if (!moduleSelectBoxes[i].checked) {
+      continue;
+    }
+    if (
+      LHChoice.checked &&
+      modulesData[section][i].LH != null &&
+      Object.hasOwn(modulesData[section][i].LH, question)
+    ) {
+      return {
+        section: section,
+        index: i + indexOffset,
+        bank: "LH",
+      };
+    }
+    if (
+      AIChoice.checked &&
+      modulesData[section][i].AI != null &&
+      Object.hasOwn(modulesData[section][i].AI, question)
+    ) {
+      return {
+        section: section,
+        index: i + indexOffset,
+        bank: "AI",
+      };
+    }
+  }
 }

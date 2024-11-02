@@ -208,3 +208,53 @@ function _populateData() {
   quizData = Object.entries(quizData);
   shuffle(quizData);
 }
+
+function editExplanation(explanation) {
+  const form = document.createElement("form");
+
+  const textarea = document.createElement("textarea");
+  textarea.className = "explanation";
+  textarea.value = explanation.innerHTML.replaceAll(/\s*<br>\s*/g, "\n");
+  if (textarea.value == placeholderExplanation) {
+    textarea.value = "";
+  }
+
+  const submitBtn = document.createElement("button");
+  submitBtn.type = "submit";
+  submitBtn.innerText = "Submit";
+  const cancelBtn = document.createElement("button");
+  cancelBtn.type = "reset";
+  cancelBtn.innerText = "Cancel";
+
+  form.appendChild(textarea);
+  form.appendChild(cancelBtn);
+  form.appendChild(submitBtn);
+
+  const originalValue = explanation.innerHTML;
+
+  form.addEventListener("reset", (event) => {
+    event.preventDefault();
+    explanation.innerHTML = originalValue;
+    form.replaceWith(explanation);
+  });
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const explanationText = textarea.value.trim().replaceAll("\n", "<br>");
+    if (explanationText) {
+      explanation = document.createElement("p");
+    } else {
+      explanation = document.createElement("button");
+    }
+    explanation.className = "explanation";
+    explanation.innerHTML = explanationText;
+    form.replaceWith(explanation);
+    submitExplanation(explanation).then(() => {
+      if (!explanationText) {
+        explanation.innerText = placeholderExplanation;
+      }
+    });
+  });
+
+  explanation.replaceWith(form);
+}

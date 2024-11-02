@@ -6,3 +6,4 @@ let formChanged = false;
 let newQuizNeeded = true;
 let disagreeNum = 0;
 let moduleSelectBoxes = [];
+const placeholderExplanation = "Add explanation"

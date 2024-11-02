@@ -30,11 +30,37 @@
   .explanation {
     margin-left: 1.5rem;
     display: none;
+  }
+  p.explanation {
     color: blue;
+  }
+  textarea.explanation {
+    width: calc(100% - 3rem);
+    height: 4rem;
   }
   @media (pointer: none), (pointer: coarse) {
     .explanation {
       margin-left: 0.75rem;
+    }
+    textarea.explanation {
+      width: calc(100% - 2rem);
+    }
+  }
+
+  form {
+    position: relative;
+
+    button {
+      position: absolute;
+      font-weight: bold;
+    }
+    button[type="reset"] {
+      right: 5rem;
+      background-color: hsla(0, 80%, 75%);
+    }
+    button[type="submit"] {
+      right: 1rem;
+      background-color: hsla(120, 80%, 75%);
     }
   }
 }

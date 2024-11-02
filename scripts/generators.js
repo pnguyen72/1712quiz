@@ -134,11 +134,15 @@ function generateQuestion(question, qIndex) {
   abbr.title = "mark question as unsure";
   abbr.className = "questionText";
 
-  const title = document.createElement("b");
-  title.className = "questionTitle";
-  title.appendChild(document.createTextNode(`Question ${qIndex + 1}.`));
-  abbr.appendChild(title);
-  abbr.innerHTML += " " + questionText;
+  const b = document.createElement("b");
+  b.className = "questionTitle";
+  b.appendChild(document.createTextNode(`Question ${qIndex + 1}.`));
+  const span = document.createElement("span");
+  span.className = "questionBody";
+  span.innerText = questionText;
+  abbr.appendChild(b);
+  abbr.innerHTML += " ";
+  abbr.appendChild(span);
 
   div.appendChild(abbr);
 
@@ -182,12 +186,18 @@ function generateQuestion(question, qIndex) {
   });
   div.appendChild(ul);
 
+  let explanation;
   if (questionInfo.explanation) {
-    const explanation = document.createElement("p");
-    explanation.className = "explanation";
+    explanation = document.createElement("p");
     explanation.innerHTML = questionInfo.explanation;
-    div.appendChild(explanation);
+  } else {
+    explanation = document.createElement("button");
+    explanation.innerText = placeholderExplanation;
   }
+  explanation.className = "explanation";
+
+  explanation.addEventListener("click", () => editExplanation(explanation));
+  div.appendChild(explanation);
 
   div.addEventListener("animationend", () => (div.style.animation = ""));
   div.scrollTo = () => {
