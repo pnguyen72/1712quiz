@@ -245,6 +245,7 @@ function editExplanation(explanation) {
     }
     explanation.className = "explanation";
     explanation.innerHTML = explanationText;
+    explanation.addEventListener("click", () => editExplanation(explanation));
     form.replaceWith(explanation);
     submitExplanation(explanation).then(() => {
       if (!explanationText) {
