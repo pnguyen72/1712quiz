@@ -95,9 +95,7 @@ function submit() {
   const quiz = document.getElementById("quiz");
   const questions = quiz.getElementsByClassName("question");
 
-  let answers = 0;
   let correctAnswers = 0;
-
   for (let question of questions) {
     let isCorrect = true;
     let isAnswered = false;
@@ -116,15 +114,14 @@ function submit() {
         isCorrect = false;
       }
     }
-    if (isAnswered) {
-      // unanswered questions don't count toward the score
-      ++answers;
-      if (isCorrect) {
-        ++correctAnswers;
-      } else {
-        question.classList.add("wrongAnswer");
-      }
-    } else if (!forceSubmit) {
+
+    if (isCorrect) {
+      ++correctAnswers;
+    } else {
+      question.classList.add("wrongAnswer");
+    }
+
+    if (!isAnswered && !forceSubmit) {
       question.scrollTo();
       if (confirm("There are unanswered question(s). Submit anyway?"))
         forceSubmit = true;
@@ -148,10 +145,10 @@ function submit() {
   scrollTo(0, 0);
   ++attemptsCount;
 
-  const accuracy = correctAnswers / (answers + Number.EPSILON);
+  const accuracy = correctAnswers / questions.length;
   pastResults.push(accuracy);
   const roundedNumber = Math.round((accuracy + Number.EPSILON) * 100);
-  quizResultText.innerText = `${correctAnswers}/${answers} (${roundedNumber}%)`;
+  quizResultText.innerText = `${correctAnswers}/${questions.length} (${roundedNumber}%)`;
   const [H, S, L] = getColor(accuracy);
   resultPanel.style.backgroundColor = `hsl(${H}, ${S}%, ${L}%)`;
   resultPanel.unhide();
