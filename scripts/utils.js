@@ -10,6 +10,27 @@ function shuffle(array) {
   }
 }
 
+function isNumber(object) {
+  return !isNaN(object);
+}
+
+function arrange(choices) {
+  const firstChoice = choices[0];
+  const firstChoiceText = firstChoice[0];
+
+  if (firstChoiceText == "True") {
+    return;
+  }
+  if (firstChoiceText == "False") {
+    [choices[0], choices[1]] = [choices[1], choices[0]];
+    return;
+  }
+  if (choices.every((choice) => isNumber(choice[0]))) {
+    return;
+  }
+  shuffle(choices);
+}
+
 function getColor(accuracy) {
   accuracy *= 100;
   const H = (8 / 5) * Math.max(accuracy - 25, 0);
