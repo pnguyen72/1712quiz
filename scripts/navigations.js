@@ -163,7 +163,7 @@ function submit() {
       setTimeout(
         alert,
         500,
-        "Bware that unlike questions and answers which are from Learning Hub, the explanations (in blue) are written by your classmates, thus may be inaccurate.");
+        "Disclaimer: Unlike questions and answers which are from Learning Hub, the explanations (in blue) are written by your classmates, thus may be inaccurate.");
       localStorage.setItem("explanationWarned", "true");
     }
   }
