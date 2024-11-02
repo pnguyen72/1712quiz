@@ -163,8 +163,7 @@ function submit() {
       setTimeout(
         alert,
         500,
-        "Unlike questions and answers which are from Learning Hub, the explanations (in blue) are written by your classmates.\n\nEveryone is welcome to contribute explanations. If you want to help, let me know and I'll give you commit right."
-      );
+        "Bware that unlike questions and answers which are from Learning Hub, the explanations (in blue) are written by your classmates, thus may be inaccurate.);
       localStorage.setItem("explanationWarned", "true");
     }
   }
