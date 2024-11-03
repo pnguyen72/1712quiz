@@ -1,3 +1,13 @@
+midtermChoice.addEventListener("click", () => {
+  oldTestament.style.display = "";
+  newTestament.style.display = "none";
+});
+
+finalChoice.addEventListener("click", () => {
+  oldTestament.style.display = "none";
+  newTestament.style.display = "";
+});
+
 moduleSelection.addEventListener(
   "animationend",
   () => (moduleSelection.style.animation = "")

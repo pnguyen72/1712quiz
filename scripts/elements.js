@@ -14,11 +14,15 @@ const pastResultsContainer = document.getElementById("past-results");
 const form = document.getElementById("form");
 const moduleGroupSelection = document.getElementById("moduleGroup-selection");
 const midtermChoice = document.getElementById("midterm");
+const finalChoice = document.getElementById("final");
 const moduleSelection = document.getElementById("module-selection");
 const questionBankSelection = document.getElementById("questionBank-selection");
 const AIChoice = document.getElementById("AI");
 const LHChoice = document.getElementById("LH");
 const questionNumChoice = document.getElementById("questionNumChoice");
+const oldTestament = document.getElementById("old-testament");
+const newTestament = document.getElementById("new-testament");
+
 homePage.hide = () => (homePage.style.display = "none");
 homePage.unhide = () => (homePage.style.display = "");
 
