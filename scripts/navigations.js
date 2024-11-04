@@ -258,6 +258,18 @@ function editExplanation(explanation) {
       if (!explanationText) {
         explanation.innerText = placeholderExplanation;
       }
+      if (
+        // there 2 two ways to get exempt from the license, so we need 2 conditional checks
+        localStorage.getItem("licenseException") != "true" &&
+        localStorage.getItem("contributed") != "true"
+      ) {
+        alert(
+          "Thank you for your contribution. " +
+            "You are hereby exempt from the Hawaiian shirt rule."
+        );
+        localStorage.setItem("licenseException", "true");
+        localStorage.setItem("contributed", "true");
+      }
     });
   });
 
