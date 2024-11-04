@@ -136,7 +136,7 @@ function generateQuestion(question, qIndex) {
   b.appendChild(document.createTextNode(`Question ${qIndex + 1}.`));
   const span = document.createElement("span");
   span.className = "questionBody";
-  span.innerText = questionText;
+  span.innerHTML = questionText;
   p.appendChild(b);
   p.innerHTML += " ";
   p.appendChild(span);
