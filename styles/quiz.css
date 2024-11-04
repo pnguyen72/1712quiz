@@ -7,18 +7,6 @@
     background-color: yellow;
   }
 
-  .questionText {
-    display: block;
-    text-decoration: none;
-    cursor: help;
-
-    @media not all and (hover: none) {
-      &:hover .questionTitle {
-        color: red;
-      }
-    }
-  }
-
   figure {
     margin: 0;
     img {
@@ -61,6 +49,18 @@
     button[type="submit"] {
       right: 1rem;
       background-color: hsla(120, 80%, 75%);
+    }
+  }
+}
+
+.question:not(.wrongAnswer) {
+  .questionText {
+    cursor: help;
+
+    @media not all and (hover: none) {
+      &:hover .questionTitle {
+        color: red;
+      }
     }
   }
 }

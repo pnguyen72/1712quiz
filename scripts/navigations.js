@@ -115,12 +115,6 @@ function submit() {
       }
     }
 
-    if (isCorrect) {
-      ++correctAnswers;
-    } else {
-      question.classList.add("wrongAnswer");
-    }
-
     if (!isAnswered && !forceSubmit) {
       question.scrollTo();
       if (confirm("There are unanswered question(s). Submit anyway?"))
@@ -130,7 +124,20 @@ function submit() {
         return;
       }
     }
+
+    if (isCorrect) {
+      ++correctAnswers;
+      question
+        .getElementsByClassName("questionText")[0]
+        .setAttribute("title", "Show/hide explanation");
+    } else {
+      question.classList.add("wrongAnswer");
+      question
+        .getElementsByClassName("questionText")[0]
+        .removeAttribute("title");
+    }
   }
+
   for (let input of quiz.getElementsByTagName("input")) {
     input.disabled = true;
   }
@@ -163,7 +170,8 @@ function submit() {
       setTimeout(
         alert,
         500,
-        "Disclaimer: Unlike questions and answers which are from Learning Hub, the explanations (in blue) are written by your classmates, thus may be inaccurate.");
+        "Disclaimer: Unlike questions and answers which are from Learning Hub, the explanations (in blue) are written by your classmates, thus may be inaccurate."
+      );
       localStorage.setItem("explanationWarned", "true");
     }
   }
