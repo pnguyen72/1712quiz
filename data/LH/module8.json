@@ -347,7 +347,7 @@
   "A common need to the business should be satisfied by contracting with an Application Service Provider (ASP).": {
     "choices": { "True": true, "False": false }
   },
-  "The decision to make, to buy, or to the design tasks that are performed throughout the rest of the design phase.": {
+  "The decision to make, to buy, or to outsource influences the design tasks that are performed throughout the rest of the design phase.": {
     "choices": { "True": true, "False": false }
   },
   "System requirements are communicated through a collection of design documents and physical processes and data models.": {
