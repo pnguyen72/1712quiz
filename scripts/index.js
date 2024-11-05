@@ -4,5 +4,5 @@ if (matchMedia("not all and (hover: none)").matches) {
     icon.setAttribute("animation", "tada-hover");
   }
 }
-returnHome();
-getData().then(generateModuleSelection).then(licenseLock);
+
+getData().then(returnHome).then(licenseLock);

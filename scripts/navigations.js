@@ -33,6 +33,7 @@ function returnHome() {
   }
   if (homePage.style.display != "none") {
     form.reset();
+    generateModuleSelection();
     formChanged = false;
   }
   navText.style.visibility = "hidden";
