@@ -15,39 +15,60 @@
     }
   }
 
-  .explanation {
-    margin-left: 1.5rem;
+  .explanation-container {
     display: none;
-  }
-  p.explanation {
-    color: blue;
-  }
-  textarea.explanation {
-    width: calc(100% - 3rem);
-    height: 4rem;
-  }
-  @media (pointer: none), (pointer: coarse) {
+
     .explanation {
-      margin-left: 0.75rem;
-    }
-    textarea.explanation {
+      margin: 0;
+      color: blue;
       width: calc(100% - 2rem);
+
+      & + .bx {
+        display: block;
+        margin: auto;
+        font-size: 1.6rem;
+        color: blue;
+      }
     }
+    .explanation.empty {
+      color: gray;
+
+      & + .bx {
+        color: grey;
+      }
+    }
+
+    @media (pointer: none), (pointer: coarse) {
+      .explanation {
+        width: calc(100% - 3rem);
+
+        & + .bx {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  textarea.explanation {
+    width: calc(100% - 0.5rem);
+    height: 4rem;
   }
 
   form {
     position: relative;
+    height: 6rem;
 
     button {
+      bottom: 0;
       position: absolute;
       font-weight: bold;
     }
     button[type="reset"] {
-      right: 5rem;
-      background-color: hsla(0, 80%, 75%);
+      right: 4rem;
+      background-color: hsla(0, 80%, 80%);
     }
     button[type="submit"] {
-      right: 1rem;
+      right: 0;
       background-color: hsla(120, 80%, 75%);
     }
   }
@@ -77,8 +98,8 @@
 
     &.unsure,
     &.wrongAnswer {
-      .explanation {
-        display: block;
+      .explanation-container {
+        display: flex;
       }
     }
   }

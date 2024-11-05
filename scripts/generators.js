@@ -112,7 +112,10 @@ function generateQuestion(question, qIndex) {
         </li>
       </ul>
 
-      <p class="explanation">...</p>
+      <div class="explanation-container">
+        <p class="explanation">...</p>
+        <button>edit</button>
+      </div>
     </div>
   */
 
@@ -133,12 +136,12 @@ function generateQuestion(question, qIndex) {
   const b = document.createElement("b");
   b.className = "questionTitle";
   b.appendChild(document.createTextNode(`Question ${qIndex + 1}.`));
-  const span = document.createElement("span");
-  span.className = "questionBody";
-  span.innerHTML = questionText;
+  const questionBody = document.createElement("span");
+  questionBody.className = "questionBody";
+  questionBody.innerHTML = questionText;
   p.appendChild(b);
   p.innerHTML += " ";
-  p.appendChild(span);
+  p.appendChild(questionBody);
 
   div.appendChild(p);
 
@@ -182,6 +185,31 @@ function generateQuestion(question, qIndex) {
   });
   div.appendChild(ul);
 
+  const container = document.createElement("div");
+  container.className = "explanation-container";
+  const explanation = document.createElement("p");
+  explanation.className = "explanation";
+  explanation.write = (value) => {
+    if (value) {
+      explanation.classList.remove("empty");
+    } else {
+      explanation.classList.add("empty");
+      value = placeholderExplanation;
+    }
+    explanation.innerHTML = value;
+  };
+
+  const editBtn = document.createElement("i");
+  editBtn.className = "bx bx-edit";
+  editBtn.title = "edit"
+  if (matchMedia("not all and (hover: none)").matches) {
+    editBtn.className += " bx-tada-hover";
+  }
+  editBtn.addEventListener("click", () => editExplanation(explanation));
+  container.appendChild(explanation);
+  container.appendChild(editBtn);
+  div.appendChild(container);
+
   div.addEventListener("animationend", () => (div.style.animation = ""));
   div.scrollTo = () => {
     div.scrollIntoView(true);
@@ -192,21 +220,12 @@ function generateQuestion(question, qIndex) {
     return div;
   };
   div.blink = () => (div.style.animation = "blink 1s");
+  div.explain = () => {
+    getExplanation(questionBody.innerHTML)
+      .then((explanationText) => explanation.write(explanationText))
+      .then(giveExplanationDisclaimer);
+  };
   return div;
-}
-
-function generateExplanation(value) {
-  let explanation;
-  if (value) {
-    explanation = document.createElement("p");
-    explanation.innerHTML = value;
-  } else {
-    explanation = document.createElement("button");
-    explanation.innerHTML = placeholderExplanation;
-  }
-  explanation.className = "explanation";
-  explanation.addEventListener("click", () => editExplanation(explanation));
-  return explanation;
 }
 
 function generateResultsTable() {

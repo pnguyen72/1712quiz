@@ -135,13 +135,7 @@ function submit() {
       question
         .getElementsByClassName("questionText")[0]
         .removeAttribute("title");
-      getExplanation(
-        question.getElementsByClassName("questionBody")[0].innerHTML
-      )
-        .then((explanationText) =>
-          question.appendChild(generateExplanation(explanationText))
-        )
-        .then(giveExplanationDisclaimer);
+      question.explain();
     }
   }
 
@@ -190,6 +184,7 @@ function toggleMarkQuestionUnsure(question) {
     question.classList.remove("unsure");
   } else {
     question.classList.add("unsure");
+    question.explain();
   }
 
   const unsureQuestions = quizPage.querySelectorAll(".wrongAnswer,.unsure");
@@ -222,6 +217,7 @@ function _populateData() {
 }
 
 function editExplanation(explanation) {
+  const container = explanation.parentElement;
   const form = document.createElement("form");
 
   const textarea = document.createElement("textarea");
@@ -242,12 +238,9 @@ function editExplanation(explanation) {
   form.appendChild(cancelBtn);
   form.appendChild(submitBtn);
 
-  const originalValue = explanation.innerHTML;
-
   form.addEventListener("reset", (event) => {
     event.preventDefault();
-    explanation.innerHTML = originalValue;
-    form.replaceWith(explanation);
+    form.replaceWith(container);
   });
 
   form.addEventListener("submit", (event) => {
@@ -255,8 +248,8 @@ function editExplanation(explanation) {
     const questionText =
       form.parentElement.getElementsByClassName("questionBody")[0].innerHTML;
     const explanationText = textarea.value.trim().replaceAll("\n", "<br>");
-    const newExplanation = generateExplanation(explanationText);
-    form.replaceWith(newExplanation);
+    explanation.write(explanationText);
+    form.replaceWith(container);
 
     submitExplanation(questionText, explanationText).then(() => {
       if (!localStorage.getItem("licenseException")) {
@@ -269,5 +262,5 @@ function editExplanation(explanation) {
     });
   });
 
-  explanation.replaceWith(form);
+  container.replaceWith(form);
 }

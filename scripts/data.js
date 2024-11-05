@@ -57,15 +57,13 @@ function getExplanation(questionText) {
   db.collection("explanations")
     .doc(questionText.replaceAll("/", "#"))
     .onSnapshot((doc) => {
-      const explanationText = doc.data()?.explanation ?? "";
+      let explanationText = doc.data()?.explanation ?? "";
       explanations[questionText] = explanationText;
       for (question of quizPage.getElementsByClassName("question")) {
         const questionBody = question.getElementsByClassName("questionBody")[0];
         if (questionBody.innerHTML == questionText) {
-          const explanations = question.getElementsByClassName("explanation");
-          if (explanations.length > 0) {
-            explanations[0].replaceWith(generateExplanation(explanationText));
-          }
+          const explanation = question.getElementsByClassName("explanation")[0];
+          explanation.write(explanationText);
         }
       }
     });
@@ -73,7 +71,7 @@ function getExplanation(questionText) {
     .collection("explanations")
     .doc(questionText.replaceAll("/", "#"))
     .get()
-    .then((doc) => doc.data()?.explanation);
+    .then((doc) => doc.data()?.explanation ?? "");
 }
 
 function submitExplanation(question, explanation) {
