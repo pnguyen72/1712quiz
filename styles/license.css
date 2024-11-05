@@ -28,7 +28,7 @@
       left: 30%;
       align-items: center;
       cursor: pointer;
-      animation: flashing 1.5s infinite ease-in-out;
+      animation: flash 1.5s infinite ease-in-out;
 
       #license-agree-text {
         font-family: Arial, Helvetica, sans-serif;
@@ -40,10 +40,6 @@
       &:hover {
         animation: none;
         background-color: hsl(120, 80%, 70%);
-
-        #license-agree-text {
-          color: black;
-        }
       }
     }
     #license-disagree-btn {

@@ -7,7 +7,7 @@
   }
 }
 
-@keyframes flashing {
+@keyframes flash {
   0% {
     background-color: red;
   }
