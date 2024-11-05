@@ -172,10 +172,14 @@ function submit() {
       unsureQuestions.length > 0 ? "" : "none";
 }
 
-function giveExplanationDisclaimer() {
-  if (localStorage.getItem("explanationWarned") == null) {
+function giveExplanationDisclaimer(explanationText) {
+  if (
+    explanationText &&
+    document.getElementById("quiz").classList.contains("submitted") &&
+    !localStorage.getItem("explanationWarned")
+  ) {
     alert(
-      "Disclaimer:\n" +
+      "Disclaimer:\n\n" +
         "Unlike questions and answers which are from Learning Hub, " +
         "the explanations (in blue) are written by your classmates, " +
         "thus could be inaccurate."
@@ -259,8 +263,8 @@ function editExplanation(explanation) {
     submitExplanation(questionText, explanationText).then(() => {
       if (!localStorage.getItem("licenseException")) {
         alert(
-          "Thank you for your contribution. " +
-            "You are hereby exempt from the Hawaiian shirt rule."
+          "Thank you for your contribution.\n" +
+            "You are exempt from the Hawaiian shirt rule."
         );
         localStorage.setItem("licenseException", "true");
       }

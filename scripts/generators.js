@@ -192,16 +192,17 @@ function generateQuestion(question, qIndex) {
   explanation.write = (value) => {
     if (value) {
       explanation.classList.remove("empty");
+      explanation.innerHTML = value;
     } else {
       explanation.classList.add("empty");
-      value = placeholderExplanation;
+      explanation.innerHTML = placeholderExplanation;
     }
-    explanation.innerHTML = value;
+    return value;
   };
 
   const editBtn = document.createElement("i");
   editBtn.className = "bx bx-edit";
-  editBtn.title = "edit"
+  editBtn.title = "edit";
   if (matchMedia("not all and (hover: none)").matches) {
     editBtn.className += " bx-tada-hover";
   }
@@ -222,7 +223,7 @@ function generateQuestion(question, qIndex) {
   div.blink = () => (div.style.animation = "blink 1s");
   div.explain = () => {
     getExplanation(questionBody.innerHTML)
-      .then((explanationText) => explanation.write(explanationText))
+      .then(explanation.write)
       .then(giveExplanationDisclaimer);
   };
   return div;
