@@ -5,4 +5,4 @@ if (matchMedia("not all and (hover: none)").matches) {
   }
 }
 returnHome();
-getModulesData().then(generateModuleSelection).then(licenseLock);
+getData().then(generateModuleSelection).then(licenseLock);

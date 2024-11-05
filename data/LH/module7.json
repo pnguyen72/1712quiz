@@ -1,0 +1,116 @@
+{
+  "What is true about creating an entity relationship diagram?": {
+    "choices": {
+      "There will be at most seven entities": false,
+      "It is an iterative process": true,
+      "If you identify more than seven entities, analyze and combine until you have seven or less": false,
+      "There will be at most seven relationships": false,
+      "Entities will have at most seven attributes": false
+    }
+  },
+  "Select all that applies to various normal forms:": {
+    "choices": {
+      "A table in 3NF is also in 2NF": true,
+      "A table in 3NF is also in 1NF.": true,
+      "A table in 2NF is also in 1NF.": true
+    },
+
+    "multi_select": true
+  },
+  "Relational tables that have a single-attribute PK, are immediately in 2NF.": {
+    "choices": { "True": true, "False": false }
+  },
+  "Some redundancies in a relational DB are necessary.": {
+    "choices": { "True": true, "False": false }
+  },
+  "Once we have an ERD, we can be sure we have a good database structure.": {
+    "choices": { "True": false, "False": true }
+  },
+  "The following table is _____": {
+    "choices": {
+      "not a relational table": true,
+      "a relational table in 3NF": false,
+      "a relational table that is only 1NF": false,
+      "a relational table in 2NF": false
+    },
+    "img": "LH_7_1.png"
+  },
+  "Foreign keys in a relational DB are an example of _____": {
+    "choices": {
+      "unwanted/unnecessary redundancy": false,
+      "FKs are not redundancy at all": false,
+      "necessary redundancy": true
+    }
+  },
+  "Partial dependency is a form of functional dependency.": {
+    "choices": { "True": true, "False": false }
+  },
+  "Our goal with normalization is to completely eliminate redundancy.": {
+    "choices": { "True": false, "False": true }
+  },
+  "Balance occurs between DFDs and ERDs when the data stores _____": {
+    "choices": {
+      "Can be equated to entities on the ERD and when entities are referred to by data stores on the DFD": true,
+      "Are uniquely named": false,
+      "Have only one input and one output flow": false,
+      "Are named the same as the relationships on the ERD": false,
+      "Can be compared to ERD data flows and attributes on the ERD are included in data stores on the DFD": false
+    }
+  },
+  "The following table is in 1NF. If we normalize this table to 2NF, how many tables in total would exist in our relational DB after normalizing to 2NF?": {
+    "choices": { "1": false, "2": false, "3": true, "4": false },
+    "img": "LH_7_3.png"
+  },
+  "Omar has a model with 85 entities. He can do which of the following?": {
+    "choices": {
+      "Stop – he has all entities defined": false,
+      "Co-validate the entities with the level 2 DFD diagrams": false,
+      "Compress these into at most seven entity grouping units": false,
+      "Sort the entities alphabetically": false,
+      "Group these into related subject areas": true
+    }
+  },
+  "In a functional dependence, the determinant is always a single attribute.": {
+    "choices": {
+      "False": {
+        "reason": "Multiple attributes may be required to determine another attribute, e.g. Royalty is determined by a combination of ISBN and Author_Num (lab 7.1)",
+        "isCorrect": true
+      },
+      "True": false
+    }
+  },
+  "In a functional dependence, the dependent is always a single attribute.": {
+    "choices": { "True": false, "False": true }
+  },
+  "CRUD stands for create, read, update and delete and can be used to verify DFDs and ERDs.": {
+    "choices": { "True": true, "False": false }
+  },
+  "A transitive dependency is a form of partial dependency.": {
+    "choices": { "True": false, "False": true }
+  },
+  "The following table is in 1NF. If we normalize this table to 2NF, how many tables in total would exist in the resulting DB?": {
+    "img": "LH_7_4.png",
+    "choices": { "1": false, "2": false, "3": true, "4": false }
+  },
+  "How many non-prime attributes do you see in the following dependency diagram?": {
+    "img": "LH_7_2.png",
+    "choices": { "2": false, "3": false, "4": false, "5": true }
+  },
+  "Andrew, an analyst for PaxMedia Inc., has just learned that the business rules for a system he has been working on have changed. This means what?": {
+    "choices": {
+      "Andrew will be reassigned to a different project that is in its beginning stages": false,
+      "The project will have to be scrapped and restarted": false,
+      "The ERD data model will have to be put on hold while new DFD diagrams are created": false,
+      "The ERD components will have to be changed": true,
+      "Nothing – once the ERD data models have been drawn, they are 'frozen' for the system": false
+    }
+  },
+  "In a relational table, when we say attribute A functionally defines attribute B (A --> B) , it means that:": {
+    "choices": {
+      "A and B must both be part of the PK.": false,
+      "there is only one value of B for any given value of A.": true,
+      "A and B must not be part of the PK.": false,
+      "there is only one value of A for any given value of B.": false
+    }
+  }
+}

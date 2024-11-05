@@ -16,16 +16,16 @@ function generateModuleSelection() {
   let modulesList;
   if (midtermChoice.checked) {
     indexOffset = 1;
-    modulesList = modulesData.midterm;
+    modulesList = modulesName.midterm;
   } else {
-    indexOffset = 1 + modulesData.midterm.length;
-    modulesList = modulesData.final;
+    indexOffset = 1 + modulesName.midterm.length;
+    modulesList = modulesName.final;
   }
 
   const ul = document.createElement("ul");
   ul.id = "modulesList";
 
-  modulesList.forEach((moduleData, index) => {
+  modulesList.forEach((name, index) => {
     const li = document.createElement("li");
     const label = document.createElement("label");
 
@@ -38,7 +38,7 @@ function generateModuleSelection() {
     moduleSelectBoxes.push(input);
 
     const span = document.createElement("span");
-    const title = `Module ${index + indexOffset}: ${moduleData.name}`;
+    const title = `Module ${index + indexOffset}: ${name}`;
     span.appendChild(document.createTextNode(title));
 
     label.appendChild(input);
@@ -112,7 +112,6 @@ function generateQuestion(question, qIndex) {
         </li>
       </ul>
 
-      <!-- if explanation is available -->
       <p class="explanation">...</p>
     </div>
   */
@@ -183,19 +182,6 @@ function generateQuestion(question, qIndex) {
   });
   div.appendChild(ul);
 
-  let explanation;
-  if (questionInfo.explanation) {
-    explanation = document.createElement("p");
-    explanation.innerHTML = questionInfo.explanation;
-  } else {
-    explanation = document.createElement("button");
-    explanation.innerText = placeholderExplanation;
-  }
-  explanation.className = "explanation";
-
-  explanation.addEventListener("click", () => editExplanation(explanation));
-  div.appendChild(explanation);
-
   div.addEventListener("animationend", () => (div.style.animation = ""));
   div.scrollTo = () => {
     div.scrollIntoView(true);
@@ -207,6 +193,20 @@ function generateQuestion(question, qIndex) {
   };
   div.blink = () => (div.style.animation = "blink 1s");
   return div;
+}
+
+function generateExplanation(value) {
+  let explanation;
+  if (value) {
+    explanation = document.createElement("p");
+    explanation.innerHTML = value;
+  } else {
+    explanation = document.createElement("button");
+    explanation.innerHTML = placeholderExplanation;
+  }
+  explanation.className = "explanation";
+  explanation.addEventListener("click", () => editExplanation(explanation));
+  return explanation;
 }
 
 function generateResultsTable() {

@@ -1,4 +1,3 @@
-const modulesData = { midterm: [], final: [] };
 let quizData = [];
 let pastResults = [];
 let attemptsCount = 0;

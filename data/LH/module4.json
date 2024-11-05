@@ -1,0 +1,320 @@
+{
+  "Use cases can vary from one organization to another in terms of the degree of formality employed.": {
+    "choices": { "True": true, "False": false }
+  },
+  "It is common practice to create smaller, more focused use cases breaking the whole process down into parts.": {
+    "choices": { "True": true, "False": false }
+  },
+  "Use cases will have inputs and outputs.": {
+    "choices": { "True": true, "False": false }
+  },
+  "The actor in a use case is generally:": {
+    "choices": {
+      "The Champion": false,
+      "The Systems Analyst": false,
+      "The Project Sponsor": false,
+      "An external user of the system": true,
+      "The Project manager": false
+    }
+  },
+  "Use cases are especially valuable for business system applications and websites.": {
+    "choices": { "True": true, "False": false }
+  },
+  "Which is probably NOT true about building use cases?": {
+    "choices": {
+      "External or internal triggers are analyzed": false,
+      "Users are involved": false,
+      "Major processes are analyzed": false,
+      "Analysts are involved": false,
+      "Major costs are analyzed": true
+    }
+  },
+  "Use cases are especially valuable for batch processes, computationally intensive applications, and data warehousing.": {
+    "choices": { "True": false, "False": true }
+  },
+  "Omar is an analyst building a use case. Which of the following project roles might be the most important in terms of getting information about building the use case?": {
+    "choices": {
+      "Other analysts": false,
+      "Programmers": false,
+      "Project Sponsor": false,
+      "Users": true,
+      "Equipment vendors": false
+    }
+  },
+  "Liang has identified the payroll authorization office as the actor in a use case. This would be incorrect as primary actors need to be singular like a customer or a patient or a student.": {
+    "choices": { "True": false, "False": true }
+  },
+  "Role-playing the use case with actual users is a good way to do what?": {
+    "choices": {
+      "Identify elements within steps": false,
+      "Identify the use case": false,
+      "Identify the major steps within each use case": false,
+      "Confirm the use case": true,
+      "Identify the primary actor": false
+    }
+  },
+  "The most common ways to elicit information for use cases is with questionnaires of the affected users.": {
+    "choices": { "True": false, "False": true }
+  },
+  "Use cases are a type of 'data-driven modeling'.": {
+    "choices": { "True": false, "False": true }
+  },
+  "What is probably NOT a part of a use case?": {
+    "choices": {
+      "Name": false,
+      "Number": false,
+      "Statement of business value": true,
+      "Major inputs": false,
+      "Trigger": false
+    }
+  },
+  "A temporal trigger might be related to time, such as 30 days have passed and a late fee needs to be assessed.": {
+    "choices": { "True": true, "False": false }
+  },
+  "Use cases give more detail about requirements.": {
+    "choices": { "True": true, "False": false }
+  },
+  "Use cases sometimes are called 'business scenarios'.": {
+    "choices": { "True": true, "False": false }
+  },
+  "Use cases normally contain ten to twelve major steps.": {
+    "choices": { "True": true, "False": false }
+  },
+  "Ralph wants to illustrate how a system interacts with the environment. The best solution for him would be to use a what?": {
+    "choices": {
+      "Use case": true,
+      "Requirements flow chart": false,
+      "Storyboard": false,
+      "HIPO chart (hierarchy, input, process, output)": false,
+      "Gantt chart": false
+    }
+  },
+  "Use cases are always internal and rarely shared or discussed with business users.": {
+    "choices": { "True": false, "False": true }
+  },
+  "Destination would be described on a use case in which of the following areas?": {
+    "choices": {
+      "Importance level": false,
+      "Major inputs": false,
+      "Destination": true,
+      "Trigger": false,
+      "Primary actor": false
+    }
+  },
+  "Dr. O'Brien's dental office calls a patient three days before an appointment. This could be an example of a temporal trigger.": {
+    "choices": { "True": true, "False": false }
+  },
+  "Tina is a systems analyst and is describing how a system should react to an event. She is creating a use case.": {
+    "choices": { "True": true, "False": false }
+  },
+  "Each use case has a name and a number.": {
+    "choices": { "True": true, "False": false }
+  },
+  "Austin is a systems analyst. Which of the following people might be the most valuable to him in developing a use case for an accounts payable system upgrade?": {
+    "choices": {
+      "Beth, a software vendor for Peachtree Accounting Software": false,
+      "Casey, a fellow analyst who is more experienced in making use cases": false,
+      "Amy, a team manager in the accounts payable department": true,
+      "Bill, a Java programmer in the applications development area.": false,
+      "Lisa, the project manager for the project": false
+    }
+  },
+  "Marta has asked the users of a system to picture themselves performing the processes and to write down those processes in a sequential order. She should get a good idea of what?": {
+    "choices": {
+      "The use case": false,
+      "The temporal triggers": false,
+      "The external actors": false,
+      "The elements within steps": false,
+      "The major steps for each use case": true
+    }
+  },
+  "Use cases are diagrams with three components: selection, process, iteration.": {
+    "choices": { "True": false, "False": true }
+  },
+  "A trigger is based on cost/benefit analysis, like an employee labor report, a sale of an item, or the purchase of new hardware.": {
+    "choices": { "True": false, "False": true }
+  },
+  "The event that causes the use case to begin is referred to as the name.": {
+    "choices": { "True": false, "False": true }
+  },
+  "The 'actor' is the external user that triggers the event to which the system responds.": {
+    "choices": { "True": true, "False": false }
+  },
+  "Which of the following is probably NOT a step for writing a use case?": {
+    "choices": {
+      "Identify the use case": false,
+      "Identify elements within steps": false,
+      "Identify the major steps within each use case": false,
+      "Identify the analyst": true,
+      "Confirm the use case": false
+    }
+  },
+  "External triggers might be something like a customer calling a doctor for an appointment or a student registering for a class.": {
+    "choices": { "True": true, "False": false }
+  },
+  "Each use case contains a fairly complete description of all the activities that occur in response to a trigger event.": {
+    "choices": { "True": true, "False": false }
+  },
+  "The actor of a use case refers to only a person that interacts with the system.": {
+    "choices": { "True": false, "False": true }
+  },
+  "Barton is an analyst developing a use case. Which of the following will probably NOT be on his use case?": {
+    "choices": {
+      "Description of data flows": true,
+      "Use case name": false,
+      "A use case number": false,
+      "Source for the major inputs": false,
+      "Type of trigger": false
+    }
+  },
+  "A 'temporal' trigger might be which of the following:": {
+    "choices": {
+      "The date changes to the first day of the month": true,
+      "A new shipping of goods arrives and needs to be added to the inventory": false,
+      "A patient calls to make an appointment with a doctor": false,
+      "The accounting department needs information for a report": false,
+      "The human resources department needs a tax withholding form to be filled out by a new employee": false
+    }
+  },
+  "The final step in building use cases is to use a CASE analysis tool to verify that the inputs and outputs are discrete items triggered by external events.": {
+    "choices": { "True": false, "False": true }
+  },
+  "Which of the following is probably NOT a part of most use cases?": {
+    "choices": {
+      "Actor": false,
+      "Identification of the trigger": false,
+      "Major inputs descriptions": false,
+      "Major steps performed": false,
+      "Secondary Actor": true
+    }
+  },
+  "Use cases generally have up to 20 major steps spelled out in great detail.": {
+    "choices": { "True": false, "False": true }
+  },
+  "A use case is a formal way of representing how a business system interacts with its environment.": {
+    "choices": { "True": true, "False": false }
+  },
+  "Project managers, business analysts and systems analysts create all use cases without user input.": {
+    "choices": { "True": false, "False": true }
+  },
+  "Use cases can be identified by reviewing the functional requirements.": {
+    "choices": { "True": false, "False": true }
+  },
+  "Use cases are a type of 'event-driven modeling'.": {
+    "choices": { "True": true, "False": false }
+  },
+  "Each use case has a name, a number, importance level, brief description, primary actor, trigger, major inputs and outputs, and a list of major steps.": {
+    "choices": { "True": false, "False": true }
+  },
+  "Which is NOT true of use cases?": {
+    "choices": {
+      "They illustrates the activities that are performed by the users of the system": false,
+      "They illustrate what starts (or triggers) an event, all the people that are involved, and how the system provides value": true,
+      "They sometimes are called 'business scenarios' (although 'use case' is generally preferred)": false,
+      "They can be thought of as an external or functional view of a business process": false,
+      "They are formal ways of representing how a business system interacts with its environment": false
+    }
+  },
+  "When developing the major inputs and major outputs for a use case, the analyst and users should consider which of the following?": {
+    "choices": {
+      "What triggers these inputs and outputs": false,
+      "Using activity elimination to see if these inputs and outputs are really needed": false,
+      "Only the common inputs and outputs": false,
+      "All possible inputs and outputs (even with rare occurrences)": true,
+      "Developing separate use cases for every possible input and every possible output": false
+    }
+  },
+  "Use cases are used to more fully delineate what?": {
+    "choices": {
+      "System proposals": false,
+      "Requirements definition": true,
+      "Data flows": false,
+      "System boundaries": false,
+      "Resources used in the system": false
+    }
+  },
+  "Use cases are always numbered sequentially from start to finish.": {
+    "choices": { "True": false, "False": true }
+  },
+  "Special cases (like customer cancels an appointment or returns an item) are what?": {
+    "choices": {
+      "Not of importance at this stage": false,
+      "Described on special 'exception' use cases": false,
+      "Given use case ID's of \"SC\" (for special case) and a number": false,
+      "Frequently overlooked by users": true,
+      "Written as exceptions at the bottom of the relevant use case": false
+    }
+  },
+  "Use cases can vary from one organization to another in terms of the content included.": {
+    "choices": { "True": true, "False": false }
+  },
+  "Each use case has the same name (like \"Customer Relationship Management System\") followed by an identifying letter (\"A\", \"B\", etc.).": {
+    "choices": { "True": false, "False": true }
+  },
+  "The 'actor' is the internal action that occurs based on a SQL query (like: sort, select).": {
+    "choices": { "True": false, "False": true }
+  },
+  "Barb is an analyst developing a use case. Which of the following will probably NOT be on her use case?": {
+    "choices": {
+      "Importance level": false,
+      "Short Description": false,
+      "Information for steps": false,
+      "Destination for the major inputs": true,
+      "Type of trigger": false
+    }
+  },
+  "A use case depicts a set of activities performed to produce some output result.": {
+    "choices": { "True": true, "False": false }
+  },
+  "Triggers are referred to as external or internal.": {
+    "choices": { "True": false, "False": true }
+  },
+  "After working with Chris (who is a staff member in the registrar's office) on major steps in the registration process, Maureen (a systems analyst) will next do what?": {
+    "choices": {
+      "Create use cases": true,
+      "Create narrative storyboards": false,
+      "Create data-entity maps": false,
+      "Create user interface screens": false,
+      "Discuss these steps with Thomas, the project manager": false
+    }
+  },
+  "Use cases illustrate the activities that are performed by the users of the system.": {
+    "choices": { "True": true, "False": false }
+  },
+  "As a last step in building a use case for the study-abroad registration system, Brianna will do what?": {
+    "choices": {
+      "Ask Drew in the students affairs office to confirm the use case": false,
+      "Ask Patrick in the study abroad office to confirm the use case": false,
+      "Ask Wendy in the registrar's office to confirm the use case": true,
+      "Ask Jonathan, a student who just completed a study-abroad experience, to confirm the use case": false,
+      "Ask Taylor, another systems analyst to confirm the use case": false
+    }
+  },
+  "You might have to go back and adjust the steps in a use case, if what happens?": {
+    "choices": {
+      "There are more than three major inputs to a step": false,
+      "The importance level is 'high'": false,
+      "The primary actor is an external customer": false,
+      "The trigger is an external one": false,
+      "The steps are of varying size": true
+    }
+  },
+  "A use case helps do which of the following?": {
+    "choices": {
+      "Understand system activities and requirements": true,
+      "Clarify ongoing costs for a system": false,
+      "Identify risks with the project": false,
+      "Refine project management milestones": false,
+      "Define interview questions": false
+    }
+  },
+  "Some organizations may choose to include additional sections on their use case forms, these may include which of the following?": {
+    "multi_select": true,
+    "choices": {
+      "Frequency of use": true,
+      "Notes and issues": true,
+      "Alternative paths": true,
+      "Business rules": true
+    }
+  }
+}

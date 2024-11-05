@@ -135,6 +135,13 @@ function submit() {
       question
         .getElementsByClassName("questionText")[0]
         .removeAttribute("title");
+      getExplanation(
+        question.getElementsByClassName("questionBody")[0].innerHTML
+      )
+        .then((explanationText) =>
+          question.appendChild(generateExplanation(explanationText))
+        )
+        .then(giveExplanationDisclaimer);
     }
   }
 
@@ -164,16 +171,17 @@ function submit() {
   prevQuest.parentElement.style.display =
     nextQuest.parentElement.style.display =
       unsureQuestions.length > 0 ? "" : "none";
+}
 
+function giveExplanationDisclaimer() {
   if (localStorage.getItem("explanationWarned") == null) {
-    if (quizPage.getElementsByClassName("explanation").length > 0) {
-      setTimeout(
-        alert,
-        500,
-        "Disclaimer: Unlike questions and answers which are from Learning Hub, the explanations (in blue) are written by your classmates, thus may be inaccurate."
-      );
-      localStorage.setItem("explanationWarned", "true");
-    }
+    alert(
+      "Disclaimer:\n" +
+        "Unlike questions and answers which are from Learning Hub, " +
+        "the explanations (in blue) are written by your classmates, " +
+        "thus could be inaccurate."
+    );
+    localStorage.setItem("explanationWarned", "true");
   }
 }
 
@@ -191,21 +199,21 @@ function toggleMarkQuestionUnsure(question) {
 }
 
 function _populateData() {
-  let modulesList;
-  if (midtermChoice.checked) {
-    modulesList = modulesData.midterm;
-  } else {
-    modulesList = modulesData.final;
+  let offset = 1;
+  let length = modulesName.midterm.length;
+  if (finalChoice.checked) {
+    offset += length;
+    length = modulesName.final.length;
   }
 
   quizData = {};
-  for (let i = 0; i < modulesList.length; i++) {
+  for (let i = 0; i < length; i++) {
     if (moduleSelectBoxes[i].checked) {
       if (LHChoice.checked) {
-        quizData = { ...quizData, ...modulesList[i].LH };
+        quizData = { ...quizData, ...modulesData.LH[i + offset] };
       }
       if (AIChoice.checked) {
-        quizData = { ...quizData, ...modulesList[i].AI };
+        quizData = { ...quizData, ...modulesData.AI[i + offset] };
       }
     }
   }
@@ -244,31 +252,19 @@ function editExplanation(explanation) {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+    const questionText =
+      form.parentElement.getElementsByClassName("questionBody")[0].innerHTML;
     const explanationText = textarea.value.trim().replaceAll("\n", "<br>");
-    if (explanationText) {
-      explanation = document.createElement("p");
-    } else {
-      explanation = document.createElement("button");
-    }
-    explanation.className = "explanation";
-    explanation.innerHTML = explanationText;
-    explanation.addEventListener("click", () => editExplanation(explanation));
-    form.replaceWith(explanation);
-    submitExplanation(explanation).then(() => {
-      if (!explanationText) {
-        explanation.innerText = placeholderExplanation;
-      }
-      if (
-        // there 2 two ways to get exempt from the license, so we need 2 conditional checks
-        localStorage.getItem("licenseException") != "true" &&
-        localStorage.getItem("contributed") != "true"
-      ) {
+    const newExplanation = generateExplanation(explanationText);
+    form.replaceWith(newExplanation);
+
+    submitExplanation(questionText, explanationText).then(() => {
+      if (!localStorage.getItem("licenseException")) {
         alert(
           "Thank you for your contribution. " +
             "You are hereby exempt from the Hawaiian shirt rule."
         );
         localStorage.setItem("licenseException", "true");
-        localStorage.setItem("contributed", "true");
       }
     });
   });
