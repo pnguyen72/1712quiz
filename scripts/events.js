@@ -79,11 +79,11 @@ window.addEventListener("beforeprint", () => {
   if (!quiz && !quiz.classList.contains("submitted")) {
     return;
   }
-  // Force explaining all questions
+  // Normally, to save firebase reads,
+  // only questions that were answered incorrectly or marked unsure are explained.
+  // This forces explaining all questions.
   for (question of quiz.getElementsByClassName("question")) {
     question.explain();
-    // They show up aftering printing, because css also requires that
-    // the question was answered incorrectly, or is marked unsure.
-    // We only do this when printing to save firebase reads.
+    // No need to hide the explanation after printing; css already takes care of it.
   }
 });
