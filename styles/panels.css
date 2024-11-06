@@ -64,3 +64,9 @@ nav {
     }
   }
 }
+
+@media print {
+  .panel {
+    display: none !important;
+  }
+}

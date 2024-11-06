@@ -73,3 +73,17 @@ nextQuest.addEventListener("click", () =>
     .scrollTo()
     .blink()
 );
+
+window.addEventListener("beforeprint", () => {
+  const quiz = document.getElementById("quiz");
+  if (!quiz && !quiz.classList.contains("submitted")) {
+    return;
+  }
+  // Force explaining all questions
+  for (question of quiz.getElementsByClassName("question")) {
+    question.explain();
+    // They show up aftering printing, because css also requires that
+    // the question was answered incorrectly, or is marked unsure.
+    // We only do this when printing to save firebase reads.
+  }
+});

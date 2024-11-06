@@ -66,3 +66,13 @@ body {
     }
   }
 }
+
+@media print {
+  body {
+    background-color: white !important;
+
+    .page {
+      margin: 1rem !important;
+    }
+  }
+}

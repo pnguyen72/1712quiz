@@ -93,7 +93,7 @@
 
   .question {
     &.wrongAnswer .questionTitle {
-      background-color: hsla(0, 80%, 75%, 75%) !important;
+      background-color: hsla(0, 80%, 75%, 75%);
     }
 
     &.unsure,
@@ -102,5 +102,23 @@
         display: flex;
       }
     }
+  }
+}
+
+@media print {
+  .questionTitle {
+    background-color: transparent !important;
+  }
+
+  .explanation-container {
+    display: flex !important;
+  }
+
+  .explanation-container:has(.explanation.empty) {
+    display: none !important;
+  }
+
+  .explanation + .bx {
+    display: none !important;
   }
 }
