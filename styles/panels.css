@@ -7,6 +7,7 @@
   align-items: center;
   position: fixed;
   font-family: Arial, Helvetica, sans-serif;
+  z-index: 1;
 
   span {
     font-size: 1.5rem;
