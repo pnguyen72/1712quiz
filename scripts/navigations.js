@@ -254,11 +254,19 @@ function editExplanation(explanation) {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    const questionText =
-      form.parentElement.getElementsByClassName("questionBody")[0].innerHTML;
-    const explanationText = textarea.value.trim().replaceAll("\n", "<br>");
-    explanation.write(explanationText);
     form.replaceWith(container);
+
+    // prettier-ignore
+    const questionText = container
+                          .parentElement
+                          .getElementsByClassName("questionBody")[0]
+                          .innerHTML;
+    const explanationText = textarea.value.trim().replaceAll("\n", "<br>");
+
+    if (explanationText == explanation.innerHTML) {
+      return;
+    }
+    explanation.write(explanationText);
 
     submitExplanation(questionText, explanationText).then(() => {
       if (!localStorage.getItem("licenseException")) {

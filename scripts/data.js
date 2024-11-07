@@ -7,7 +7,6 @@ const app = firebase.initializeApp({
   appId: "1:85405487202:web:208def2286c1f22c03c13b",
 });
 const db = firebase.firestore();
-const storage = firebase.storage();
 
 let modulesName;
 let modulesData = { LH: {}, AI: {} };
@@ -75,10 +74,12 @@ function getExplanation(questionText) {
 }
 
 function submitExplanation(question, explanation) {
-  return db
-    .collection("explanations")
-    .doc(question.replaceAll("/", "#"))
-    .set({ explanation: explanation });
+  const doc = db.collection("explanations").doc(question.replaceAll("/", "#"));
+  if (explanation) {
+    return doc.set({ explanation: explanation });
+  } else {
+    return doc.delete();
+  }
 }
 
 function _getModules() {
