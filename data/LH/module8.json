@@ -125,7 +125,7 @@
   "The Design phase of the SDLC uses the requirements that were gathered during analysis to actually build (and code if necessary) the final system.": {
     "choices": { "True": false, "False": true }
   },
-  "In regards to packaged software, the time frame is to implement is flexible to long.": {
+  "In regards to packaged software, the time frame to implement is flexible to long.": {
     "choices": { "True": false, "False": true }
   },
   "For efficiency purposes, it is wise to do what when there is a basic software need to be satisfied?": {
