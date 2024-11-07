@@ -247,6 +247,12 @@ function editExplanation(explanation) {
   form.appendChild(cancelBtn);
   form.appendChild(submitBtn);
 
+  textarea.addEventListener("input", () => {
+    textarea.style.height = 0;
+    textarea.style.height = textarea.scrollHeight + "px";
+    form.style.height = `calc(2rem + ${textarea.style.height}`;
+  });
+
   form.addEventListener("reset", (event) => {
     event.preventDefault();
     form.replaceWith(container);
