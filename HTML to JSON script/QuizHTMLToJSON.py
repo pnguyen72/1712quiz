@@ -71,4 +71,4 @@ for html_file in html_files:
 
 # Save the parsed data to a JSON file
 with open(outputPath, "w", encoding="utf-8") as outfile:
-    json.dump(quiz_data, outfile, indent=4)
+    json.dump(quiz_data, outfile, indent=2)
