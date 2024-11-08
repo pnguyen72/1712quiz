@@ -676,5 +676,13 @@
       "True": false,
       "False": true
     }
+  },
+  "Which of these are good strategies to succeed in this course?": {
+    "choices": {
+      "Contribute to the Bible": true,
+      "Contribute explanations to this website": true,
+      "Yell <span style=\"font-size: 2rem\">BINGO!</span> in the middle of the class": false
+    },
+    "multi_select": true
   }
 }
