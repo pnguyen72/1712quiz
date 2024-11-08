@@ -1,7 +1,7 @@
 #main {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 10vw;
 
   #license-notice {
     display: none;
@@ -64,8 +64,9 @@
     }
   }
 
-  @media (aspect-ratio < 8/7) {
+  @media (aspect-ratio < 1.25) {
     flex-direction: column-reverse;
+    gap: 0;
 
     #license-notice {
       height: auto;
