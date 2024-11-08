@@ -28,7 +28,7 @@
       left: 30%;
       align-items: center;
       cursor: pointer;
-      animation: flash 1.5s infinite ease-in-out;
+      animation: flash 1.25s infinite ease-in-out;
 
       #license-agree-text {
         font-family: Arial, Helvetica, sans-serif;
