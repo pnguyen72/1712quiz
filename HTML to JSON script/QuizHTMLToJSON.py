@@ -67,10 +67,7 @@ for html_file in html_files:
             # append this: answer: is_correct
             choices[answer] = is_correct    
 
-        quiz_data[questionTitle] = {
-            "choices": choices,
-            "multi_select": False
-        }
+        quiz_data[questionTitle] = {"choices": choices}
 
 # Save the parsed data to a JSON file
 with open(outputPath, "w", encoding="utf-8") as outfile:
