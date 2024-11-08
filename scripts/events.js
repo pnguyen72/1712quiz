@@ -51,10 +51,8 @@ nextButton.addEventListener("click", () => {
 prevQuest.addEventListener("click", () =>
   search(
     quizPage.querySelectorAll(".wrongAnswer,.unsure"),
-    document.documentElement.scrollTop,
-    (element) =>
-      element.getBoundingClientRect().top -
-      document.body.getBoundingClientRect().top
+    0,
+    (element) => element.getBoundingClientRect().top - 1.5 * navbar.offsetHeight
   )
     .prev()
     .scrollTo()
@@ -63,11 +61,8 @@ prevQuest.addEventListener("click", () =>
 nextQuest.addEventListener("click", () =>
   search(
     quizPage.querySelectorAll(".wrongAnswer,.unsure"),
-    document.documentElement.scrollTop,
-    (element) =>
-      element.getBoundingClientRect().top -
-      document.body.getBoundingClientRect().top -
-      0.38 * navbar.offsetHeight
+    0,
+    (element) => element.getBoundingClientRect().top - 1.6 * navbar.offsetHeight
   )
     .next()
     .scrollTo()

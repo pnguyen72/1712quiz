@@ -187,8 +187,11 @@ function generateQuestion(question, qIndex) {
 
   const container = document.createElement("div");
   container.className = "explanation-container";
-  const explanation = document.createElement("p");
-  explanation.className = "explanation";
+  const explanation = document.createElement("div");
+  // mark explanation empty by default, 
+  // because it takes a while for firebase to respond with an explanation,
+  // it looks nicer this way
+  explanation.className = "explanation empty";
   explanation.write = (value) => {
     if (value) {
       explanation.classList.remove("empty");
@@ -214,7 +217,7 @@ function generateQuestion(question, qIndex) {
   div.addEventListener("animationend", () => (div.style.animation = ""));
   div.scrollTo = () => {
     div.scrollIntoView(true);
-    scrollBy(0, -0.75 * navbar.offsetHeight);
+    scrollBy(0, -0.55 * navbar.offsetHeight);
     if (resultPanel.style.display != "none") {
       scrollBy(0, -navbar.offsetHeight);
     }

@@ -1,6 +1,9 @@
 .question {
+  &:last-child {
+    margin-bottom: 1rem;
+  }
   &:not(:last-child) {
-    margin-bottom: 2.25rem;
+    margin-bottom: 2rem;
   }
 
   &.unsure .questionTitle {
@@ -17,11 +20,13 @@
 
   .explanation-container {
     display: none;
+    margin-right: 2rem;
+    width: calc(100% - 2rem);
 
     .explanation {
-      margin: 0;
       color: blue;
-      width: calc(100% - 2rem);
+      margin-left: 2rem;
+      width: calc(100% - 5rem);
 
       & + .bx {
         display: block;
@@ -39,8 +44,12 @@
     }
 
     @media (pointer: none), (pointer: coarse) {
+      margin-right: 1.5rem;
+      width: calc(100% - 1.5rem);
+
       .explanation {
-        width: calc(100% - 3rem);
+        margin-left: 1.5rem;
+        width: calc(100% - 4rem);
 
         & + .bx {
           font-size: 1.5rem;
