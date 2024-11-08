@@ -35,11 +35,6 @@ function returnHome() {
   if (pastResults.length > 0) {
     pastResultsContainer.appendChild(generateResultsTable());
   }
-  if (homePage.style.display != "none") {
-    form.reset();
-    generateModuleSelection();
-    formChanged = false;
-  }
   navText.style.visibility = "hidden";
   navbar.style.backgroundColor = "";
   resultPanel.hide();
