@@ -11,33 +11,50 @@ body {
     margin-top: 2rem;
     margin-bottom: 5rem;
 
-    #title {
-      height: 4rem;
-      font-family: sans-serif;
+    #footer {
       display: flex;
-      align-items: center;
+      justify-content: space-between;
 
-      h1 {
-        font-size: 2.25rem;
-      }
-      a {
-        margin: auto;
-        margin-left: 0.75rem;
+      #links {
+        display: flex;
+        flex-direction: row;
 
-        box-icon {
-          width: 2rem;
-          height: 2rem;
+        a {
+          text-decoration: none;
+          color: #04442c;
+
+          &:first-child {
+            margin-right: 2rem;
+          }
+        }
+
+        /* 
+         * Do not disable hover on mobile in this particular case.
+         * The 2 links are a bit close, it's possible to misclick,
+         * the hover effect indicates which one the user just clicked.
+         */
+        a:hover {
+          text-decoration: underline;
+        }
+
+        @media (width <=650px) {
+          flex-direction: column;
+
+          a:first-child {
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+          }
         }
       }
-    }
 
-    #footer {
-      a {
-        text-decoration: none;
-        color: #04442c;
-      }
-      a:hover {
-        text-decoration: underline;
+      #social {
+        display: flex;
+        align-items: center;
+
+        box-icon {
+          height: 1.75rem;
+          width: 1.75rem;
+        }
       }
     }
   }

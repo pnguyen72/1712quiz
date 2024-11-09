@@ -20,8 +20,6 @@ const questionBankSelection = document.getElementById("questionBank-selection");
 const AIChoice = document.getElementById("AI");
 const LHChoice = document.getElementById("LH");
 const questionNumChoice = document.getElementById("questionNumChoice");
-const oldTestament = document.getElementById("old-testament");
-const newTestament = document.getElementById("new-testament");
 
 homePage.hide = () => (homePage.style.display = "none");
 homePage.unhide = () => (homePage.style.display = "");
