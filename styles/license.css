@@ -1,3 +1,7 @@
+#home-page > h1 {
+  display: none;
+}
+
 #main {
   display: flex;
   flex-direction: row;
@@ -6,7 +10,7 @@
   #license-notice {
     display: none;
     position: relative;
-    height: 75vh;
+    height: 80vh;
 
     #hawaiian {
       height: 100%;
@@ -63,10 +67,23 @@
       }
     }
   }
+}
 
-  @media (aspect-ratio < 1.25) {
+@media (aspect-ratio < 1.3) {
+  #home-page > h1 {
+    display: block;
+  }
+
+  #main {
     flex-direction: column-reverse;
     gap: 0;
+
+    & > h1 {
+      display: block;
+    }
+    form > h1 {
+      display: none;
+    }
 
     #license-notice {
       height: auto;
