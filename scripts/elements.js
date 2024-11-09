@@ -8,6 +8,7 @@ navText.style.width = getComputedStyle(navText).width;
 const homePage = document.getElementById("home-page");
 const quizPage = document.getElementById("quiz-page");
 const licenseNotice = document.getElementById("license-notice");
+const licenseText = document.getElementById("license-text");
 const licenceAgreeBtn = document.getElementById("license-agree-btn");
 const licenseDisagreeBtn = document.getElementById("license-disagree-btn");
 const pastResultsContainer = document.getElementById("past-results");

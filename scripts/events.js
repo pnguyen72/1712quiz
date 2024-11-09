@@ -1,3 +1,8 @@
+licenseText.addEventListener(
+  "animationend",
+  () => (licenseText.style.animation = "")
+);
+
 moduleSelection.addEventListener(
   "animationend",
   () => (moduleSelection.style.animation = "")
@@ -8,6 +13,11 @@ questionBankSelection.addEventListener(
   () => (questionBankSelection.style.animation = "")
 );
 
+form.addEventListener("click", () => {
+  if (licenseNotice.style.display) {
+    licenseText.style.animation = "blink 1s";
+  }
+});
 form.addEventListener("input", () => {
   formChanged = true;
   newQuizNeeded = true;
