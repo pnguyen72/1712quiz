@@ -89,12 +89,13 @@
       height: auto;
       width: calc(100vw-6rem);
       max-width: 408px;
+      margin: 0;
 
       #hawaiian {
         width: 100%;
       }
       #license-text {
-        font-size: min(5vw, 36px);
+        font-size: min(6vw, 36px);
         bottom: min(10vw, 60px);
       }
       #license-agree-btn {
