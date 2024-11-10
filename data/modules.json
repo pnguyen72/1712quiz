@@ -7,10 +7,5 @@
     "Data Flow Diagrams",
     "Entity Relationship Diagrams"
   ],
-  "final": [
-    "Normalization",
-    "Design Strategy",
-    "Architecture Design",
-    "Interface Design"
-  ]
+  "final": ["Normalization", "Design Strategy", "Architecture Design"]
 }
