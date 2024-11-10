@@ -253,10 +253,12 @@ function editExplanation(explanation) {
   form.appendChild(textarea);
   form.appendChild(cancelBtn);
   form.appendChild(submitBtn);
+  container.replaceWith(form);
+  _initializeHeight(textarea);
 
   textarea.addEventListener("input", () => {
     textarea.style.height = 0;
-    textarea.style.height = textarea.scrollHeight + "px";
+    textarea.style.height = `max(3rem, ${textarea.scrollHeight + "px"})`;
     form.style.height = `calc(2rem + ${textarea.style.height}`;
   });
 
@@ -284,6 +286,21 @@ function editExplanation(explanation) {
       }
     });
   });
+}
 
-  container.replaceWith(form);
+function _initializeHeight(textarea) {
+  const tempDiv = document.createElement("div");
+  tempDiv.style.fontSize = getComputedStyle(textarea).fontSize;
+  tempDiv.style.fontFamily = getComputedStyle(textarea).fontFamily;
+  tempDiv.style.display = "inline-block";
+  tempDiv.style.width = getComputedStyle(textarea).width;
+  tempDiv.style.position = "absolute";
+  tempDiv.style.top = 0;
+  tempDiv.style.left = 0;
+  tempDiv.innerText = textarea.value;
+  document.body.appendChild(tempDiv);
+  const targetHeight = getComputedStyle(tempDiv).height;
+  textarea.style.height = `max(3rem, calc(${targetHeight} + 4.4px))`;
+  textarea.parentElement.style.height = `calc(2rem + ${textarea.style.height}`;
+  tempDiv.remove();
 }

@@ -98,12 +98,10 @@
 
   textarea.explanation {
     width: 100%;
-    height: 4rem;
   }
 
   form {
     position: relative;
-    height: 6rem;
 
     button {
       bottom: 0;
