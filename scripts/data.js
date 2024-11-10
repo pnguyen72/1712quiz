@@ -10,7 +10,6 @@ const db = firebase.firestore();
 
 let modulesName;
 let modulesData = { LH: {}, AI: {} };
-let explanations = {};
 
 function getData() {
   return _getModules().then((data) => {
@@ -50,38 +49,62 @@ function getData() {
 }
 
 function getExplanation(questionText) {
-  if (Object.hasOwn(explanations, questionText)) {
-    return Promise.resolve(explanations[questionText]);
-  }
   db.collection("explanations")
     .doc(questionText.replaceAll("/", "#"))
     .onSnapshot((doc) => {
-      let explanationText = doc.data()?.explanation ?? "";
-      explanations[questionText] = explanationText;
+      const explanationText = doc.data()?.explanation ?? "";
+      const editing = doc.data()?.editing;
+
       for (question of quizPage.getElementsByClassName("question")) {
         const questionBody =
           question.getElementsByClassName("question-body")[0];
         if (questionBody.innerHTML == questionText) {
           const explanation = question.getElementsByClassName("explanation")[0];
-          if (explanation.tagName.toLowerCase() != "textarea") {
-            explanation.write(explanationText);
+          if (explanation.tagName.toLowerCase() == "textarea") {
+            if (explanation.getAttribute("key") != randomKey) {
+              explanation.parentElement.reset();
+            }
+            break;
           }
+          if (editing != null) {
+            const expire = editing + 90000; // 90 seconds timeout
+            const now = Date.now();
+            if (expire > now) {
+              explanation.classList.add("editing");
+              setTimeout(() => editSignal(questionText, false), expire - now);
+            } else {
+              editSignal(questionText, false);
+            }
+          } else {
+            explanation.classList.remove("editing");
+          }
+          explanation.write(explanationText);
+          giveExplanationDisclaimer(explanationText);
+          break;
         }
       }
     });
-  return db
-    .collection("explanations")
-    .doc(questionText.replaceAll("/", "#"))
-    .get()
-    .then((doc) => doc.data()?.explanation ?? "");
 }
 
-function submitExplanation(question, explanation) {
-  const doc = db.collection("explanations").doc(question.replaceAll("/", "#"));
-  if (explanation) {
-    return doc.set({ explanation: explanation });
+function submitExplanation(questionText, explanationText) {
+  const doc = db
+    .collection("explanations")
+    .doc(questionText.replaceAll("/", "#"));
+  if (explanationText) {
+    return doc.set({ explanation: explanationText });
   } else {
     return doc.delete();
+  }
+}
+
+function editSignal(questionText, isEditing) {
+  const doc = db
+    .collection("explanations")
+    .doc(questionText.replaceAll("/", "#"));
+  if (isEditing) {
+    doc.set({ editing: Date.now() }, { merge: true });
+  } else {
+    doc.update({ editing: firebase.firestore.FieldValue.delete() });
   }
 }
 

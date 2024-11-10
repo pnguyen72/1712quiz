@@ -230,10 +230,18 @@ function editExplanation(explanation) {
 
   const textarea = document.createElement("textarea");
   textarea.className = "explanation";
+  textarea.setAttribute("key", randomKey); // prevent 2 users from simutaneously editing a field
   textarea.value = explanation.innerHTML.replaceAll(/\s*<br>\s*/g, "\n");
   if (textarea.value == placeholderExplanation) {
     textarea.value = "";
   }
+
+  // prettier-ignore
+  const questionText =
+    container.parentElement
+      .getElementsByClassName("question-body")[0]
+      .innerHTML;
+  editSignal(questionText, true);
 
   const submitBtn = document.createElement("button");
   submitBtn.type = "submit";
@@ -254,6 +262,7 @@ function editExplanation(explanation) {
 
   form.addEventListener("reset", (event) => {
     event.preventDefault();
+    editSignal(questionText, false);
     form.replaceWith(container);
   });
 
@@ -261,18 +270,10 @@ function editExplanation(explanation) {
     event.preventDefault();
     form.replaceWith(container);
 
-    // prettier-ignore
-    const questionText = container
-                          .parentElement
-                          .getElementsByClassName("question-body")[0]
-                          .innerHTML;
     const explanationText = textarea.value.trim().replaceAll("\n", "<br>");
-
     if (explanationText == explanation.innerHTML) {
       return;
     }
-    explanation.write(explanationText);
-
     submitExplanation(questionText, explanationText).then(() => {
       if (!localStorage.getItem("licenseException")) {
         alert(

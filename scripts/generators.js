@@ -172,7 +172,6 @@ function generateQuestion(questionData, questionIndex) {
       explanation.classList.add("empty");
       explanation.innerHTML = placeholderExplanation;
     }
-    return value;
   };
 
   const editBtn = document.createElement("i");
@@ -182,8 +181,13 @@ function generateQuestion(questionData, questionIndex) {
     editBtn.className += " bx-tada-hover";
   }
   editBtn.addEventListener("click", () => editExplanation(explanation));
+  const editingIndicator = document.createElement("i");
+  editingIndicator.className = "bx bx-loader bx-spin";
+  editingIndicator.title = "someone is typing";
+  editingIndicator.style.animation = "spin 2s infinite linear";
   container.appendChild(explanation);
   container.appendChild(editBtn);
+  container.appendChild(editingIndicator);
   question.appendChild(container);
 
   question.addEventListener(
@@ -199,11 +203,7 @@ function generateQuestion(questionData, questionIndex) {
     return question;
   };
   question.blink = () => (question.style.animation = "blink 1s");
-  question.explain = () => {
-    getExplanation(questionBody.innerHTML)
-      .then(explanation.write)
-      .then(giveExplanationDisclaimer);
-  };
+  question.explain = () => getExplanation(questionBody.innerHTML);
   return question;
 }
 

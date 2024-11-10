@@ -44,19 +44,38 @@
       color: blue;
       width: calc(100% - 3rem);
 
-      & + .bx {
+      & ~ .bx {
         display: block;
         margin: auto;
         margin-right: 0;
         font-size: 1.6rem;
         color: blue;
       }
-    }
-    .explanation.empty {
-      color: gray;
 
-      & + .bx {
-        color: grey;
+      & ~ .bx-loader {
+        display: none;
+      }
+
+      &.empty {
+        color: gray;
+
+        & ~ .bx {
+          color: grey;
+        }
+      }
+
+      &.editing {
+        &:not(.empty) {
+          color: rgb(92, 92, 255);
+        }
+
+        & ~ .bx-edit {
+          display: none;
+        }
+
+        & ~ .bx-loader {
+          display: initial;
+        }
       }
     }
 
@@ -68,7 +87,7 @@
       div.explanation {
         width: calc(100% - 2.5rem);
 
-        & + .bx {
+        & ~ .bx {
           font-size: 1.5rem;
         }
       }

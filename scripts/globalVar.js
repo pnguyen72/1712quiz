@@ -1,3 +1,4 @@
+const randomKey = Math.random();
 let quizData = [];
 let pastResults = [];
 let attemptsCount = 0;
