@@ -65,16 +65,11 @@
       }
 
       &.editing {
-        &:not(.empty) {
-          color: rgb(92, 92, 255);
-        }
-
         & ~ .bx-edit {
           display: none;
         }
-
         & ~ .bx-loader {
-          display: initial;
+          display: block;
         }
       }
     }
