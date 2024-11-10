@@ -65,6 +65,13 @@
       }
 
       &.editing {
+        &.empty {
+          visibility: hidden;
+        }
+        &:not(.empty) {
+          color: rgb(127, 127, 255);
+        }
+
         & ~ .bx-edit {
           display: none;
         }
@@ -150,7 +157,7 @@
     display: none !important;
   }
 
-  .explanation + .bx {
+  .explanation ~ .bx {
     display: none !important;
   }
 }
