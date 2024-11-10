@@ -2,11 +2,7 @@
   margin-bottom: 2.5rem;
 
   &:last-child {
-    margin-bottom: 0;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    margin-bottom: 0rem;
   }
 
   &.unsure .question-title {
@@ -19,6 +15,7 @@
 
     .unsure-label {
       color: gray;
+      margin-right: 2.5rem;
     }
   }
 
@@ -31,10 +28,6 @@
     img {
       width: 100%;
     }
-  }
-
-  .question-choices {
-    margin-top: 0.5rem;
   }
 
   .explanation-container {

@@ -8,6 +8,7 @@
   justify-content: space-between;
 
   #license-notice {
+    margin: 0;
     display: none;
     position: relative;
     height: 80vh;
@@ -76,7 +77,6 @@
 
   #main {
     flex-direction: column-reverse;
-    gap: 0;
 
     & > h1 {
       display: block;
