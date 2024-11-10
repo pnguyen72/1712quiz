@@ -5,7 +5,7 @@
 #main {
   display: flex;
   flex-direction: row;
-  gap: 10vw;
+  justify-content: space-between;
 
   #license-notice {
     display: none;

@@ -1,28 +1,9 @@
 ul {
-  /* margin: 0; */
   list-style-type: none;
   padding-inline-start: 1.5rem;
 
   li {
     margin: 0.5rem;
-
-    label {
-      input {
-        width: 1rem;
-        height: 1rem;
-
-        /* if hover is available */
-        @media not all and (hover: none) {
-          &:enabled:hover {
-            transform: scale(1.2);
-          }
-        }
-
-        + span {
-          margin-left: 0.25rem;
-        }
-      }
-    }
   }
 }
 

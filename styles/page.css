@@ -11,6 +11,27 @@ body {
     margin-top: 2rem;
     margin-bottom: 5rem;
 
+    @media screen {
+      > h1,
+      #main,
+      #past-results,
+      footer {
+        margin: 0 auto;
+        width: 1000px;
+        max-width: 100%;
+      }
+      #main {
+        margin: 1rem auto;
+      }
+      #quiz {
+        margin: 1rem auto;
+        max-width: 1000px;
+      }
+      footer {
+        margin-top: 1rem;
+      }
+    }
+
     #footer {
       display: flex;
       justify-content: space-between;

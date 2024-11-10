@@ -1,32 +1,51 @@
 .question {
+  margin-bottom: 2.5rem;
+
   &:last-child {
-    margin-bottom: 1rem;
-  }
-  &:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
-  &.unsure .questionTitle {
+  &.unsure .question-title {
     background-color: yellow;
   }
 
+  .question-header {
+    display: flex;
+    justify-content: space-between;
+
+    .unsure-label {
+      color: gray;
+    }
+  }
+
+  .question-body {
+    margin: 0.5rem 0;
+  }
+
   figure {
-    margin: 0;
+    margin: auto;
     img {
       width: 100%;
-      max-width: 900px;
     }
+  }
+
+  .question-choices {
+    margin-top: 0.5rem;
   }
 
   .explanation-container {
     display: none;
+    margin-left: 2rem;
     margin-right: 2rem;
-    width: calc(100% - 2rem);
+    width: calc(100% - 4rem);
 
-    .explanation {
+    div.explanation {
       color: blue;
-      margin-left: 2rem;
-      width: calc(100% - 5rem);
+      width: calc(100% - 3rem);
 
       & + .bx {
         display: block;
@@ -44,22 +63,18 @@
     }
 
     @media (pointer: none), (pointer: coarse) {
-      margin-right: 1.5rem;
-      width: calc(100% - 1.5rem);
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
 
-      .explanation {
-        margin-left: 1.5rem;
-        width: calc(100% - 4rem);
-
-        & + .bx {
-          font-size: 1.5rem;
-        }
+      div.explanation + .bx {
+        font-size: 1.5rem;
       }
     }
   }
 
   textarea.explanation {
-    width: calc(100% - 0.5rem);
+    width: 100%;
     height: 4rem;
   }
 
@@ -83,25 +98,13 @@
   }
 }
 
-.question:not(.wrongAnswer) {
-  .questionText {
-    cursor: help;
-
-    @media not all and (hover: none) {
-      &:hover .questionTitle {
-        color: red;
-      }
-    }
-  }
-}
-
 .submitted {
   li.correct label {
     background-color: hsl(120, 80%, 80%);
   }
 
   .question {
-    &.wrongAnswer .questionTitle {
+    &.wrongAnswer .question-title {
       background-color: hsla(0, 80%, 75%, 75%);
     }
 
@@ -115,8 +118,12 @@
 }
 
 @media print {
-  .questionTitle {
+  .question-title {
     background-color: transparent !important;
+  }
+
+  .unsure-label {
+    display: none !important;
   }
 
   .explanation-container {

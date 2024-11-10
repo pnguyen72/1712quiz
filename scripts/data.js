@@ -59,10 +59,13 @@ function getExplanation(questionText) {
       let explanationText = doc.data()?.explanation ?? "";
       explanations[questionText] = explanationText;
       for (question of quizPage.getElementsByClassName("question")) {
-        const questionBody = question.getElementsByClassName("questionBody")[0];
+        const questionBody =
+          question.getElementsByClassName("question-body")[0];
         if (questionBody.innerHTML == questionText) {
           const explanation = question.getElementsByClassName("explanation")[0];
-          explanation.write(explanationText);
+          if (explanation.tagName.toLowerCase() != "textarea") {
+            explanation.write(explanationText);
+          }
         }
       }
     });

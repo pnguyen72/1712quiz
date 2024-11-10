@@ -128,18 +128,21 @@ function submit() {
     if (isCorrect) {
       ++correctAnswers;
       question
-        .getElementsByClassName("questionText")[0]
-        .setAttribute("title", "Show/hide explanation");
-    } else {
-      question.classList.add("wrongAnswer");
-      question
-        .getElementsByClassName("questionText")[0]
+        .getElementsByClassName("unsure-label")[0]
         .removeAttribute("title");
+      //prettier-ignore
+      question
+        .getElementsByClassName("unsure-text")[0]
+        .innerText = "Show explanation";
+    } else {
+      question.classList.remove("unsure");
+      question.classList.add("wrongAnswer");
+      question.getElementsByClassName("unsure-label")[0].remove();
       question.explain();
     }
   }
 
-  for (let input of quiz.getElementsByTagName("input")) {
+  for (let input of quiz.getElementsByClassName("choice-input")) {
     input.disabled = true;
   }
   if (questionNumChoice.value != "ALL") {
@@ -162,9 +165,9 @@ function submit() {
   resultPanel.unhide();
 
   const unsureQuestions = quizPage.querySelectorAll(".wrongAnswer,.unsure");
-  prevQuest.parentElement.style.display =
-    nextQuest.parentElement.style.display =
-      unsureQuestions.length > 0 ? "" : "none";
+  prevQuest.parentElement.style.visibility =
+    nextQuest.parentElement.style.visibility =
+      unsureQuestions.length > 0 ? "visible" : "hidden";
 }
 
 function giveExplanationDisclaimer(explanationText) {
@@ -192,9 +195,9 @@ function toggleMarkQuestionUnsure(question) {
   }
 
   const unsureQuestions = quizPage.querySelectorAll(".wrongAnswer,.unsure");
-  prevQuest.parentElement.style.display =
-    nextQuest.parentElement.style.display =
-      unsureQuestions.length > 0 ? "" : "none";
+  prevQuest.parentElement.style.visibility =
+    nextQuest.parentElement.style.visibility =
+      unsureQuestions.length > 0 ? "visible" : "hidden";
 }
 
 function _populateData() {
@@ -223,6 +226,7 @@ function _populateData() {
 function editExplanation(explanation) {
   const container = explanation.parentElement;
   const form = document.createElement("form");
+  form.className = "explanation-container";
 
   const textarea = document.createElement("textarea");
   textarea.className = "explanation";
@@ -260,7 +264,7 @@ function editExplanation(explanation) {
     // prettier-ignore
     const questionText = container
                           .parentElement
-                          .getElementsByClassName("questionBody")[0]
+                          .getElementsByClassName("question-body")[0]
                           .innerHTML;
     const explanationText = textarea.value.trim().replaceAll("\n", "<br>");
 

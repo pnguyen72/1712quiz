@@ -1,14 +1,4 @@
 function generateModuleSelection() {
-  /*
-    <ul id="modulesList">
-      <li>
-        <label> 
-          <input type="checkbox"/>
-          <span> Module #: ... </span>
-        </label>
-      </li>
-    </ul>
-  */
   removeElementById("modulesList");
   moduleSelectBoxes = [];
 
@@ -76,12 +66,6 @@ function generateModuleSelection() {
 }
 
 function generateQuiz(data) {
-  /*
-    <div id="quiz">
-      <div id="Q#" class="question"> ... </div>
-    </div>
-  */
-
   div = document.createElement("div");
   div.id = "quiz";
   div.className = "unsubmitted";
@@ -91,65 +75,51 @@ function generateQuiz(data) {
   return div;
 }
 
-function generateQuestion(question, qIndex) {
-  /*
-    <div id="Q#" class="question">
-      <p class="questionText"> 
-        <b> Question #. </b> ... 
-      </p>
-
-      <!-- if question includes image -->
-      <figure> 
-        <img src="...">
-      <figure>
-    
-      <ul>
-        <li class="correct/incorrect">
-          <label for="Q#/#"> 
-            <input type="radio/checkbox" name="Q#">
-            <span> ... </span> 
-          </label> 
-        </li>
-      </ul>
-
-      <div class="explanation-container">
-        <p class="explanation">...</p>
-        <button>edit</button>
-      </div>
-    </div>
-  */
-
-  const [questionText, questionInfo] = question;
+function generateQuestion(questionData, questionIndex) {
+  const [questionText, questionInfo] = questionData;
   const choices = Object.entries(questionInfo.choices);
   arrange(choices);
   const isMultiSelect = questionInfo.multi_select;
 
-  const div = document.createElement("div");
-  div.id = "Q" + (qIndex + 1);
-  div.setAttribute("class", "question");
+  const question = document.createElement("div");
+  question.id = "Q" + (questionIndex + 1);
+  question.className = "question";
 
-  const p = document.createElement("p");
-  p.addEventListener("click", () => toggleMarkQuestionUnsure(div));
-  p.title = "mark question as unsure";
-  p.className = "questionText";
+  const questionHeader = document.createElement("div");
+  const questionTitle = document.createElement("b");
+  const unsureLabel = document.createElement("label");
+  const unsureCheck = document.createElement("input");
+  const unsureText = document.createElement("span");
 
-  const b = document.createElement("b");
-  b.className = "questionTitle";
-  b.appendChild(document.createTextNode(`Question ${qIndex + 1}.`));
-  const questionBody = document.createElement("span");
-  questionBody.className = "questionBody";
+  questionHeader.className = "question-header";
+  questionTitle.className = "question-title";
+  questionTitle.innerText = `Question ${questionIndex + 1}.`;
+  unsureLabel.className = "unsure-label";
+  unsureLabel.title = "Mark question as unsure to review later";
+  unsureCheck.className = "unsure-check";
+  unsureText.className = "unsure-text";
+  unsureText.innerText = "I'm not sure";
+  unsureCheck.type = "checkbox";
+  unsureCheck.addEventListener("input", () =>
+    toggleMarkQuestionUnsure(question)
+  );
+
+  unsureLabel.appendChild(unsureCheck);
+  unsureLabel.appendChild(unsureText);
+  questionHeader.appendChild(questionTitle);
+  questionHeader.appendChild(unsureLabel);
+  question.appendChild(questionHeader);
+
+  const questionBody = document.createElement("p");
+  questionBody.className = "question-body";
   questionBody.innerHTML = questionText;
-  p.appendChild(b);
-  p.innerHTML += " ";
-  p.appendChild(questionBody);
-
-  div.appendChild(p);
+  question.appendChild(questionBody);
 
   if (
     questionText ==
     "COMP 1712 is your favorite class. (You must answer correctly AND honestly!)"
   ) {
-    div.classList.add("joke");
+    question.classList.add("joke");
   }
 
   if (questionInfo.img) {
@@ -157,10 +127,11 @@ function generateQuestion(question, qIndex) {
     img = document.createElement("img");
     img.setAttribute("src", "./data/images/" + questionInfo.img);
     figure.appendChild(img);
-    div.appendChild(figure);
+    question.appendChild(figure);
   }
 
-  const ul = document.createElement("ul");
+  const questionChoices = document.createElement("ul");
+  questionChoices.className = "question-choices";
   choices.forEach((choice) => {
     const [choiceText, isCorrect] = choice;
 
@@ -169,26 +140,27 @@ function generateQuestion(question, qIndex) {
 
     const label = document.createElement("label");
 
-    const input = document.createElement("input");
-    input.type = isMultiSelect ? "checkbox" : "radio";
-    input.name = `Q${qIndex + 1}`;
+    const choiceInput = document.createElement("input");
+    choiceInput.className = "choice-input";
+    choiceInput.type = isMultiSelect ? "checkbox" : "radio";
+    choiceInput.name = `Q${questionIndex + 1}`;
 
     const span = document.createElement("span");
     span.innerHTML = choiceText;
 
-    label.appendChild(input);
+    label.appendChild(choiceInput);
     label.appendChild(span);
 
     li.appendChild(label);
 
-    ul.appendChild(li);
+    questionChoices.appendChild(li);
   });
-  div.appendChild(ul);
+  question.appendChild(questionChoices);
 
   const container = document.createElement("div");
   container.className = "explanation-container";
   const explanation = document.createElement("div");
-  // mark explanation empty by default, 
+  // mark explanation empty by default,
   // because it takes a while for firebase to respond with an explanation,
   // it looks nicer this way
   explanation.className = "explanation empty";
@@ -212,39 +184,30 @@ function generateQuestion(question, qIndex) {
   editBtn.addEventListener("click", () => editExplanation(explanation));
   container.appendChild(explanation);
   container.appendChild(editBtn);
-  div.appendChild(container);
+  question.appendChild(container);
 
-  div.addEventListener("animationend", () => (div.style.animation = ""));
-  div.scrollTo = () => {
-    div.scrollIntoView(true);
+  question.addEventListener(
+    "animationend",
+    () => (question.style.animation = "")
+  );
+  question.scrollTo = () => {
+    question.scrollIntoView(true);
     scrollBy(0, -0.55 * navbar.offsetHeight);
     if (resultPanel.style.display != "none") {
       scrollBy(0, -navbar.offsetHeight);
     }
-    return div;
+    return question;
   };
-  div.blink = () => (div.style.animation = "blink 1s");
-  div.explain = () => {
+  question.blink = () => (question.style.animation = "blink 1s");
+  question.explain = () => {
     getExplanation(questionBody.innerHTML)
       .then(explanation.write)
       .then(giveExplanationDisclaimer);
   };
-  return div;
+  return question;
 }
 
 function generateResultsTable() {
-  /*
-    <table id="result-table">
-      <tr>
-        <th> Attempt </th>
-        <th> Result </th>
-      </tr>
-      <tr>
-        <td> # </td>
-        <td> ...% </td>
-      </tr>
-    </table>
-    */
   const table = document.createElement("table");
   table.id = "result-table";
 

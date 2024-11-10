@@ -1,0 +1,15 @@
+input {
+  width: 1rem;
+  height: 1rem;
+
+  /* if hover is available */
+  @media not all and (hover: none) {
+    &:enabled:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  + span {
+    margin-left: 0.25rem;
+  }
+}
