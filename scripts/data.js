@@ -61,22 +61,17 @@ function getExplanation(questionText) {
         if (questionBody.innerHTML == questionText) {
           const explanation = question.getElementsByClassName("explanation")[0];
           if (explanation.tagName.toLowerCase() == "textarea") {
-            if (explanation.getAttribute("key") != randomKey) {
-              explanation.parentElement.reset();
-            }
             break;
           }
-          if (editing != null) {
-            const expire = editing + 90000; // 90 seconds timeout
+          if (editing == null) explanation.classList.remove("editing");
+          else {
+            const expiring = editing + 90000; // 90 seconds timeout
             const now = Date.now();
-            if (expire > now) {
+            if (expiring <= now) editSignal(questionText, false);
+            else {
               explanation.classList.add("editing");
-              setTimeout(() => editSignal(questionText, false), expire - now);
-            } else {
-              editSignal(questionText, false);
+              setTimeout(() => editSignal(questionText, false), expiring - now);
             }
-          } else {
-            explanation.classList.remove("editing");
           }
           explanation.write(explanationText);
           giveExplanationDisclaimer(explanationText);

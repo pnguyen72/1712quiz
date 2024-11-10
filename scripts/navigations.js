@@ -230,7 +230,6 @@ function editExplanation(explanation) {
 
   const textarea = document.createElement("textarea");
   textarea.className = "explanation";
-  textarea.setAttribute("key", randomKey); // prevent 2 users from simutaneously editing a field
   textarea.value = explanation.innerHTML.replaceAll(/\s*<br>\s*/g, "\n");
   if (textarea.value == placeholderExplanation) {
     textarea.value = "";
