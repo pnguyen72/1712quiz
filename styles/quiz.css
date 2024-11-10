@@ -16,6 +16,10 @@
     .unsure-label {
       color: gray;
       margin-right: 2.5rem;
+
+      @media (pointer: none), (pointer: coarse) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -43,6 +47,7 @@
       & + .bx {
         display: block;
         margin: auto;
+        margin-right: 0;
         font-size: 1.6rem;
         color: blue;
       }
@@ -60,8 +65,12 @@
       margin-right: 0;
       width: 100%;
 
-      div.explanation + .bx {
-        font-size: 1.5rem;
+      div.explanation {
+        width: calc(100% - 2.5rem);
+
+        & + .bx {
+          font-size: 1.5rem;
+        }
       }
     }
   }
