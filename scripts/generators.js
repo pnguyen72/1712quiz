@@ -184,7 +184,6 @@ function generateQuestion(questionData, questionIndex) {
   const editingIndicator = document.createElement("i");
   editingIndicator.className = "bx bx-loader bx-spin";
   editingIndicator.title = "someone is typing";
-  editingIndicator.style.animation = "spin 2s infinite linear";
   container.appendChild(explanation);
   container.appendChild(editBtn);
   container.appendChild(editingIndicator);
