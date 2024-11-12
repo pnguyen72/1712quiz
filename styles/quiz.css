@@ -122,9 +122,10 @@
       bottom: 0;
       position: absolute;
       font-weight: bold;
+      font-size: 1rem;
     }
     button[type="reset"] {
-      right: 4rem;
+      right: 4.75rem;
       background-color: hsla(0, 80%, 80%);
     }
     button[type="submit"] {
