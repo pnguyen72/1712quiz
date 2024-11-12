@@ -90,31 +90,17 @@ function nextQuiz() {
 }
 
 function submit() {
-  let forceSubmit = false;
-
   const quiz = document.getElementById("quiz");
   const questions = quiz.getElementsByClassName("question");
 
-  let correctAnswers = 0;
+  let forceSubmit = false;
   for (let question of questions) {
-    let isCorrect = true;
     let isAnswered = false;
-
     for (let choice of question.getElementsByTagName("li")) {
       const input = choice.getElementsByTagName("input")[0];
       isAnswered = isAnswered || input.checked || input.type == "checkbox";
-      if (question.classList.contains("joke")) {
-        if (input.checked) {
-          isCorrect = false;
-          choice.className = "incorrect";
-        } else {
-          choice.className = "correct";
-        }
-      } else if (!((choice.className == "correct") == input.checked)) {
-        isCorrect = false;
-      }
+      if (isAnswered) break;
     }
-
     if (!isAnswered && !forceSubmit) {
       question.scrollTo();
       if (confirm("There are unanswered question(s). Submit anyway?"))
@@ -124,7 +110,25 @@ function submit() {
         return;
       }
     }
+  }
 
+  let correctAnswers = 0;
+  for (let question of questions) {
+    let isCorrect = true;
+    for (let choice of question.getElementsByTagName("li")) {
+      const input = choice.getElementsByTagName("input")[0];
+      if (question.classList.contains("joke")) {
+        if (input.checked) {
+          isCorrect = false;
+          choice.className = "incorrect";
+        } else {
+          choice.className = "correct";
+        }
+      } else if ((choice.className == "correct") != input.checked) {
+        isCorrect = false;
+        break;
+      }
+    }
     if (isCorrect) {
       ++correctAnswers;
       question
