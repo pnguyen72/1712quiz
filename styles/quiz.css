@@ -112,6 +112,7 @@
 
   textarea.explanation {
     width: 100%;
+    font-size: 1rem;
   }
 
   form {

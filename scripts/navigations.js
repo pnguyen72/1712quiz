@@ -261,7 +261,7 @@ function editExplanation(explanation) {
 
   textarea.addEventListener("input", () => {
     textarea.style.height = 0;
-    textarea.style.height = `max(3rem, ${textarea.scrollHeight + "px"})`;
+    textarea.style.height = `max(4rem, ${textarea.scrollHeight + "px"})`;
     form.style.height = `calc(2rem + ${textarea.style.height}`;
   });
 
@@ -304,7 +304,7 @@ function _initializeHeight(textarea) {
   tempDiv.innerText = textarea.value;
   document.body.appendChild(tempDiv);
   const targetHeight = getComputedStyle(tempDiv).height;
-  textarea.style.height = `max(3rem, calc(${targetHeight} + 4.4px))`;
+  textarea.style.height = `max(4rem, calc(${targetHeight} + 4.4px))`;
   textarea.parentElement.style.height = `calc(2rem + ${textarea.style.height}`;
   tempDiv.remove();
 }
