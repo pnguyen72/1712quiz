@@ -13,11 +13,19 @@
     display: flex;
     justify-content: space-between;
 
+    .AI-label {
+      color: grey;
+
+      @media (width >= 400px) {
+        margin-left: 0.5rem;
+      }
+    }
+
     .unsure-label {
       color: gray;
       margin-right: 2.5rem;
 
-      @media (pointer: none), (pointer: coarse) {
+      @media (width < 600px) {
         margin-right: 0;
       }
     }
@@ -81,7 +89,7 @@
       }
     }
 
-    @media (pointer: none), (pointer: coarse) {
+    @media (width < 600px) {
       margin-left: 0;
       margin-right: 0;
       width: 100%;
@@ -92,6 +100,12 @@
         & ~ .bx {
           font-size: 1.5rem;
         }
+      }
+    }
+
+    @media (width < 550px) {
+      #placeholder-expansion {
+        display: none;
       }
     }
   }

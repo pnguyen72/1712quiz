@@ -13,14 +13,15 @@ const licenceAgreeBtn = document.getElementById("license-agree-btn");
 const licenseDisagreeBtn = document.getElementById("license-disagree-btn");
 const pastResultsContainer = document.getElementById("past-results");
 const form = document.getElementById("form");
-const moduleGroupSelection = document.getElementById("moduleGroup-selection");
+const examSelection = document.getElementById("exam-selection");
 const midtermChoice = document.getElementById("midterm");
 const finalChoice = document.getElementById("final");
 const moduleSelection = document.getElementById("module-selection");
-const questionBankSelection = document.getElementById("questionBank-selection");
+//prettier-ignore
+const questionBankSelection = document.getElementById("question-bank-selection");
 const AIChoice = document.getElementById("AI");
 const LHChoice = document.getElementById("LH");
-const questionNumChoice = document.getElementById("questionNumChoice");
+const questionNumChoice = document.getElementById("questions-num-choice");
 
 homePage.hide = () => (homePage.style.display = "none");
 homePage.unhide = () => (homePage.style.display = "");
@@ -30,52 +31,24 @@ quizPage.unhide = () => (quizPage.style.display = "");
 
 resultPanel.hide = () => {
   resultPanel.style.display = "none";
-  _removeTopMargin();
+  resultPanel.removeAttribute("visible");
 };
 resultPanel.unhide = () => {
   resultPanel.style.display = "";
-  _addTopMargin();
+  resultPanel.setAttribute("visible", "");
 };
 
 navbar.hide = () => {
   navbar.style.display = "none";
-  _removeBottomMargin();
+  navbar.removeAttribute("visible");
 };
 navbar.unhide = () => {
   navbar.style.display = "";
-  _addBottomMargin();
+  navbar.setAttribute("visible", "");
 };
 
 function removeElementById(id) {
   if (document.contains(document.getElementById(id))) {
     document.getElementById(id).remove();
   }
-}
-
-function _removeTopMargin() {
-  const margin = parseFloat(getComputedStyle(homePage).marginLeft.slice(0, 2));
-  homePage.style.marginTop = (2 / 3) * margin + "px";
-  quizPage.style.marginTop = (2 / 3) * margin + "px";
-}
-
-function _addTopMargin() {
-  const margin = parseFloat(getComputedStyle(homePage).marginLeft.slice(0, 2));
-  const panelHeight = parseFloat(getComputedStyle(navbar).height.slice(0, -2));
-  const newMargin = (2 / 3) * margin + panelHeight;
-  homePage.style.marginTop = newMargin + "px";
-  quizPage.style.marginTop = newMargin + "px";
-}
-
-function _removeBottomMargin() {
-  const margin = parseFloat(getComputedStyle(homePage).marginLeft.slice(0, 2));
-  homePage.style.marginBottom = (2 / 3) * margin + "px";
-  quizPage.style.marginBottom = (2 / 3) * margin + "px";
-}
-
-function _addBottomMargin() {
-  const margin = parseFloat(getComputedStyle(homePage).marginLeft.slice(0, 2));
-  const panelHeight = parseFloat(getComputedStyle(navbar).height.slice(0, -2));
-  const newMargin = (2 / 3) * margin + panelHeight;
-  homePage.style.marginBottom = newMargin + "px";
-  quizPage.style.marginBottom = newMargin + "px";
 }

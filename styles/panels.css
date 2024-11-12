@@ -1,3 +1,8 @@
+.page {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .panel {
   display: flex;
   flex-direction: row;
@@ -34,6 +39,10 @@
     flex-direction: column;
     font-size: 1rem;
   }
+
+  &[visible] ~ .page {
+    margin-top: 5rem;
+  }
 }
 
 nav {
@@ -45,9 +54,13 @@ nav {
     width: 2rem;
     height: 2rem;
   }
+
+  &[visible] ~ .page {
+    margin-bottom: 4.5rem;
+  }
 }
 
-/* on touch device */
+/* enlarge touch icons on touch device */
 @media (pointer: none), (pointer: coarse) {
   .panel {
     height: 3.5rem;

@@ -23,7 +23,7 @@ form.addEventListener("input", () => {
   newQuizNeeded = true;
 });
 
-moduleGroupSelection.addEventListener("input", generateModuleSelection);
+examSelection.addEventListener("input", generateModuleSelection);
 
 licenceAgreeBtn.addEventListener("click", licenseUnlock);
 licenseDisagreeBtn.addEventListener("click", () => {

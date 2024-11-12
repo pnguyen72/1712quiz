@@ -8,8 +8,6 @@ body {
     flex-direction: column;
     margin-left: 3rem;
     margin-right: 3rem;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
 
     @media screen {
       & > h1,
@@ -60,7 +58,7 @@ body {
             text-decoration: underline;
           }
 
-          @media (width <=650px) {
+          @media (width < 650px) {
             flex-direction: column;
 
             a:first-child {
@@ -84,25 +82,27 @@ body {
   }
 }
 
-/* on touch device */
-@media (pointer: none), (pointer: coarse) {
+@media (width < 500px) {
   body {
     font-size: 1.1rem;
 
     .page {
+      margin-left: 2.5rem;
+      margin-right: 2.5rem;
+    }
+  }
+}
+
+@media (width < 400px) {
+  body {
+    font-size: 1rem;
+
+    .page {
       margin-left: 2rem;
       margin-right: 2rem;
-      margin-bottom: 4.75rem;
 
-      #title {
-        h1 {
-          font-size: 1.75rem;
-          text-align: center;
-        }
-        a box-icon {
-          width: 1.5rem;
-          height: 1.5rem;
-        }
+      > h1 {
+        font-size: 8vw;
       }
     }
   }

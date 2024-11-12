@@ -7,8 +7,39 @@ table {
   th {
     border: 1.2pt solid black;
 
-    &:first-child {
-      width: 33%;
+    @media (width >= 500px) {
+      &.attempt {
+        width: 110px;
+      }
+      &.banks {
+        width: 180px;
+      }
+    }
+
+    @media (width < 700px) {
+      &.banks {
+        display: none;
+      }
+    }
+
+    @media (width < 500px) {
+      &.modules {
+        display: none;
+      }
+    }
+  }
+
+  td.attempt {
+    cursor: pointer;
+    color: blue;
+
+    /* if hover is available */
+    @media not all and (hover: none) {
+      font-weight: normal;
+
+      &:hover {
+        font-weight: bold;
+      }
     }
   }
 }

@@ -34,12 +34,27 @@
         Next question
       </div>
     </div>
+    <nav id="navbar" class="panel" visible>
+      <box-icon
+        id="return-btn"
+        color="hsl(120, 28%, 95%)"
+        name="home"
+        type="solid"
+      ></box-icon>
+      <span id="attempt">Attempt 00</span>
+      <box-icon
+        id="next-btn"
+        color="hsl(120, 28%, 95%)"
+        name="right-arrow-circle"
+        type="solid"
+      ></box-icon>
+    </nav>
     <div id="home-page" class="page">
       <h1>1712 Practice Quiz</h1>
       <div id="main">
         <form id="form">
           <h1>1712 Practice Quiz</h1>
-          <div id="moduleGroup-selection">
+          <div id="exam-selection">
             <p>Studying for:</p>
             <ul>
               <li>
@@ -59,7 +74,7 @@
           <div id="module-selection">
             <p>Modules:</p>
           </div>
-          <div id="questionBank-selection">
+          <div id="question-bank-selection">
             <p>Question banks:</p>
             <ul>
               <li>
@@ -76,13 +91,9 @@
               </li>
             </ul>
           </div>
-          <div id="questionNum-selection">
+          <div>
             <label>Questions per attempt: </label>
-            <select
-              name="questionNumChoice"
-              id="questionNumChoice"
-              style="font-size: 1rem"
-            >
+            <select id="questions-num-choice" style="font-size: 1rem">
               <option value="10">10</option>
               <option value="20">20</option>
               <option value="40">40</option>
@@ -144,22 +155,6 @@
       </footer>
     </div>
     <div id="quiz-page" class="page"></div>
-    <nav id="navbar" class="panel">
-      <box-icon
-        id="return-btn"
-        color="hsl(120, 28%, 95%)"
-        name="home"
-        type="solid"
-      ></box-icon>
-      <span id="attempt">Attempt 00</span>
-      <box-icon
-        id="next-btn"
-        color="hsl(120, 28%, 95%)"
-        name="right-arrow-circle"
-        type="solid"
-      ></box-icon>
-    </nav>
-
     <script src="./scripts/data.js"></script>
     <script src="./scripts/elements.js"></script>
     <script src="./scripts/globalVar.js"></script>
