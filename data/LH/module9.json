@@ -228,8 +228,8 @@
   },
   "Mobile application architectures are where the:": {
     "choices": {
-      "Client devise is responsible for presentation logic": true,
-      "Client devise is responsible for business logic": true,
+      "Client device is responsible for presentation logic": true,
+      "Client device is responsible for business logic": true,
       "The server is responsible for data access logic": true,
       "The server stores the data": true
     },
