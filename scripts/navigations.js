@@ -273,6 +273,7 @@ function editExplanation(explanation) {
 
     const explanationText = textarea.value.trim().replaceAll("\n", "<br>");
     if (explanationText == explanation.innerHTML) {
+      editSignal(questionText, false);
       return;
     }
     submitExplanation(questionText, explanationText).then(() => {
