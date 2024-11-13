@@ -97,7 +97,7 @@ function submit() {
   for (let question of questions) {
     let isAnswered = false;
     for (let choice of question.getElementsByTagName("li")) {
-      const input = choice.getElementsByTagName("input")[0];
+      const input = choice.querySelector("input");
       isAnswered = isAnswered || input.checked || input.type == "checkbox";
       if (isAnswered) break;
     }
@@ -116,7 +116,7 @@ function submit() {
   for (let question of questions) {
     let isCorrect = true;
     for (let choice of question.getElementsByTagName("li")) {
-      const input = choice.getElementsByTagName("input")[0];
+      const input = choice.querySelector("input");
       if (question.classList.contains("joke")) {
         if (input.checked) {
           isCorrect = false;
@@ -131,17 +131,12 @@ function submit() {
     }
     if (isCorrect) {
       ++correctAnswers;
-      question
-        .getElementsByClassName("unsure-label")[0]
-        .removeAttribute("title");
-      //prettier-ignore
-      question
-        .getElementsByClassName("unsure-text")[0]
-        .innerText = "Show explanation";
+      question.querySelector(".unsure-label").removeAttribute("title");
+      question.querySelector(".unsure-text").innerText = "Show explanation";
     } else {
       question.classList.remove("unsure");
       question.classList.add("wrongAnswer");
-      question.getElementsByClassName("unsure-label")[0].remove();
+      question.querySelector(".unsure-label").remove();
       question.explain();
     }
   }
@@ -239,11 +234,8 @@ function editExplanation(explanation) {
     textarea.value = "";
   }
 
-  // prettier-ignore
   const questionText =
-    container.parentElement
-      .getElementsByClassName("question-body")[0]
-      .innerHTML;
+    container.parentElement.querySelector(".question-body").innerHTML;
   editSignal(questionText, true);
 
   const submitBtn = document.createElement("button");

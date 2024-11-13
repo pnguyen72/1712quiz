@@ -56,10 +56,9 @@ function getExplanation(questionText) {
       const editing = doc.data()?.editing;
 
       for (question of quizPage.getElementsByClassName("question")) {
-        const questionBody =
-          question.getElementsByClassName("question-body")[0];
+        const questionBody = question.querySelector(".question-body");
         if (questionBody.innerHTML == questionText) {
-          const explanation = question.getElementsByClassName("explanation")[0];
+          const explanation = question.querySelector(".explanation");
           if (explanation.tagName.toLowerCase() == "textarea") {
             break;
           }
