@@ -272,7 +272,7 @@
     "choices": {
       "Transmissions require 300K of data": true,
       "The systems uptime will be 99%": false,
-      "Response time must be &amp;lt;2.8 seconds for any transactions": false,
+      "Response time must be &lt;2.8 seconds for any transactions": false,
       "The inventory database will be updated in real time": false
     },
     "multi_select": true
