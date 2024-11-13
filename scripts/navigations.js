@@ -299,8 +299,13 @@ function _initializeHeight(textarea) {
   tempDiv.style.left = 0;
   tempDiv.innerText = textarea.value;
   document.body.appendChild(tempDiv);
+
   const targetHeight = getComputedStyle(tempDiv).height;
-  textarea.style.height = `max(4rem, calc(${targetHeight} + 4.4px))`;
-  textarea.parentElement.style.height = `calc(2.3rem + ${textarea.style.height})`;
+  textarea.style.height = `max(4rem, calc(${targetHeight} + 4.4px))`; // no idea what 4.4px is
   tempDiv.remove();
+
+  const form = textarea.parentElement;
+  const textHeight = textarea.offsetHeight;
+  const btnHeight = form.querySelector("button").offsetHeight;
+  form.style.height = `calc(4px + ${btnHeight}px + ${textHeight}px)`;
 }

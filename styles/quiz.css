@@ -110,13 +110,13 @@
     }
   }
 
-  textarea.explanation {
-    width: 100%;
-    font-size: 1rem;
-  }
-
   form {
     position: relative;
+
+    .explanation {
+      width: 100%;
+      font-size: 1rem;
+    }
 
     button {
       bottom: 0;
@@ -125,12 +125,32 @@
       font-size: 1rem;
     }
     button[type="reset"] {
-      right: 4.75rem;
+      right: 5rem;
       background-color: hsla(0, 80%, 80%);
     }
     button[type="submit"] {
       right: 0;
       background-color: hsla(120, 80%, 75%);
+    }
+
+    @media (width < 500px) {
+      .explanation,
+      button {
+        font-size: 0.92rem;
+      }
+      button[type="reset"] {
+        right: 4.6rem;
+      }
+    }
+
+    @media (width < 400px) {
+      .explanation,
+      button {
+        font-size: 0.83rem;
+      }
+      button[type="reset"] {
+        right: 4.2rem;
+      }
     }
   }
 }
