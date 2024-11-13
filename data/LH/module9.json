@@ -150,7 +150,7 @@
       "Encryption": false,
       "Virtualization": true,
       "Dynamic Creation": false,
-      "Alternative Devises": false
+      "Alternative Devices": false
     },
     "multi_select": true
   },
