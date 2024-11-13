@@ -233,6 +233,7 @@ function editExplanation(explanation) {
   if (textarea.value == placeholderExplanation) {
     textarea.value = "";
   }
+  const originalTextareaValue = textarea.value;
 
   const questionText =
     container.parentElement.querySelector(".question-body").innerHTML;
@@ -259,21 +260,24 @@ function editExplanation(explanation) {
 
   form.addEventListener("reset", (event) => {
     event.preventDefault();
-    editSignal(questionText, false);
-    form.replaceWith(container);
+    textarea.value = originalTextareaValue;
+    submit();
   });
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+    submit();
+  });
+
+  function submit() {
     form.replaceWith(container);
 
     const explanationText = textarea.value.trim().replaceAll("\n", "<br>");
-    if (explanationText == explanation.innerHTML) {
-      editSignal(questionText, false);
-      return;
-    }
     submitExplanation(questionText, explanationText).then(() => {
-      if (!localStorage.getItem("licenseException")) {
+      if (
+        !localStorage.getItem("licenseException") &&
+        textarea.value != originalTextareaValue
+      ) {
         alert(
           "Thank you for your contribution.\n" +
             "You are exempt from the Hawaiian shirt rule."
@@ -281,7 +285,7 @@ function editExplanation(explanation) {
         localStorage.setItem("licenseException", "true");
       }
     });
-  });
+  }
 }
 
 function _initializeHeight(textarea) {
