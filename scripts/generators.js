@@ -7,9 +7,11 @@ function generateModuleSelection() {
   if (midtermChoice.checked) {
     indexOffset = 1;
     modulesList = modulesName.midterm;
+    questionBankSelection.querySelector("li:last-child").style.display = "am";
   } else {
     indexOffset = 1 + modulesName.midterm.length;
     modulesList = modulesName.final;
+    questionBankSelection.querySelector("li:last-child").style.display = "none";
   }
 
   const ul = document.createElement("ul");
