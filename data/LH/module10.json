@@ -20,7 +20,7 @@
       "False": false
     }
   },
-  "Omar has designed a paper form using'sans serif'; fonts and for his screen (or web) forms he has used 'serif'; fonts. He is exercising good user interface design practices.": {
+  "Omar has designed a paper form using 'sans serif' fonts and for his screen (or web) forms he has used 'serif' fonts. He is exercising good user interface design practices.": {
     "choices": {
       "True": false,
       "False": true
@@ -116,7 +116,7 @@
       "None are poor": false
     }
   },
-  "When implementing the'minimize user effort'; factor, most interface designers follow what rule?": {
+  "When implementing the 'minimize user effort' factor, most interface designers follow what rule?": {
     "choices": {
       "Two-clicks rule": false,
       "Three-clicks rule": true,
@@ -359,7 +359,7 @@
       "Tab menu": true
     }
   },
-  "When creating navigational controls, you should either not display a command that cannot be used or'gray'; it out (where it shows, but cannot be used).": {
+  "When creating navigational controls, you should either not display a command that cannot be used or 'gray' it out (where it shows, but cannot be used).": {
     "choices": {
       "True": true,
       "False": false
@@ -374,7 +374,7 @@
       "Help message": false
     }
   },
-  "If a particular form or screen is used by a cadre of experienced users very frequently (like an accounting entry system),'ease of use'; should be a high priority on these system interfaces.": {
+  "If a particular form or screen is used by a cadre of experienced users very frequently (like an accounting entry system), 'ease of use' should be a high priority on these system interfaces.": {
     "choices": {
       "True": true,
       "False": false
@@ -413,7 +413,7 @@
       "A green \"S\"": false
     }
   },
-  "Infrequent users prefer user interfaces with'ease of learning'; features (like more explicit menu choices, clear directions).": {
+  "Infrequent users prefer user interfaces with 'ease of learning' features (like more explicit menu choices, clear directions).": {
     "choices": {
       "True": true,
       "False": false
@@ -467,7 +467,7 @@
       "False": true
     }
   },
-  "Experienced users prefer user interfaces with'ease of learning'; features.": {
+  "Experienced users prefer user interfaces with 'ease of learning' features.": {
     "choices": {
       "True": false,
       "False": true
