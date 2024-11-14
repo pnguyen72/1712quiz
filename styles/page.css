@@ -115,6 +115,7 @@ body {
 
 @media print {
   body {
+    font-size: 1rem !important;
     background-color: white !important;
 
     .page {
