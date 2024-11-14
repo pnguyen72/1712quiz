@@ -39,7 +39,7 @@
     margin-top: 5rem;
 
     @media (width < 450px) {
-      margin-top: 4.5rem;
+      margin-top: 4rem;
     }
   }
 }
@@ -59,25 +59,6 @@ nav {
 
     @media (width < 450px) {
       margin-bottom: 4rem;
-    }
-  }
-}
-
-/* enlarge touch icons on touch device */
-@media (pointer: none), (pointer: coarse) {
-  .panel {
-    height: 3.5rem;
-  }
-
-  nav box-icon {
-    width: 2.25rem;
-    height: 2.25rem;
-  }
-
-  #result-panel {
-    box-icon {
-      width: 1.85rem;
-      height: 1.85rem;
     }
   }
 }
