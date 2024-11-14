@@ -38,11 +38,8 @@
   &[visible] ~ .page {
     margin-top: 5rem;
 
-    @media (width < 500px) {
+    @media (width < 450px) {
       margin-top: 4.5rem;
-    }
-    @media (width < 400px) {
-      margin-top: 4rem;
     }
   }
 }
@@ -60,11 +57,8 @@ nav {
   &[visible] ~ .page {
     margin-bottom: 4.5rem;
 
-    @media (width < 500px) {
+    @media (width < 450px) {
       margin-bottom: 4rem;
-    }
-    @media (width < 400px) {
-      margin-bottom: 3.5rem;
     }
   }
 }

@@ -84,7 +84,7 @@ body {
   }
 }
 
-@media (width < 500px) {
+@media (width < 600px) {
   body {
     font-size: 1.1rem;
 
@@ -96,7 +96,7 @@ body {
     }
   }
 }
-@media (width < 400px) {
+@media (width < 450px) {
   body {
     font-size: 1rem;
 

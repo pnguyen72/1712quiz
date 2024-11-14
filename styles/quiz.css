@@ -16,18 +16,13 @@
     .AI-label {
       color: grey;
 
-      @media (width >= 400px) {
+      @media (width >= 450px) {
         margin-left: 0.5rem;
       }
     }
 
     .unsure-label {
       color: gray;
-      margin-right: 2.5rem;
-
-      @media (width < 600px) {
-        margin-right: 0;
-      }
     }
   }
 
@@ -45,8 +40,7 @@
   .explanation-container {
     display: none;
     margin-left: 2rem;
-    margin-right: 2rem;
-    width: calc(100% - 4rem);
+    width: calc(100% - 2rem);
 
     div.explanation {
       color: blue;
@@ -89,13 +83,18 @@
       }
     }
 
-    @media (width < 600px) {
+    @media (width < 700px) {
       margin-left: 0;
-      margin-right: 0;
       width: 100%;
 
       div.explanation {
         width: calc(100% - 2.5rem);
+      }
+    }
+
+    @media (width < 600px) {
+      div.explanation {
+        width: calc(100% - 2rem);
 
         & ~ .bx {
           font-size: 1.5rem;
@@ -106,6 +105,16 @@
     @media (width < 525px) {
       #placeholder-expansion {
         display: none;
+      }
+    }
+
+    @media (width < 450px) {
+      div.explanation {
+        width: calc(100% - 1.5rem);
+
+        & ~ .bx {
+          font-size: 1.4rem;
+        }
       }
     }
   }
@@ -133,7 +142,7 @@
       background-color: hsla(120, 80%, 75%);
     }
 
-    @media (width < 500px) {
+    @media (width < 600px) {
       .explanation,
       button {
         font-size: 0.92rem;
@@ -143,7 +152,7 @@
       }
     }
 
-    @media (width < 400px) {
+    @media (width < 450px) {
       .explanation,
       button {
         font-size: 0.83rem;
