@@ -7,7 +7,7 @@ function generateModuleSelection() {
   if (midtermChoice.checked) {
     indexOffset = 1;
     modulesList = modulesName.midterm;
-    questionBankSelection.querySelector("li:last-child").style.display = "am";
+    questionBankSelection.querySelector("li:last-child").style.display = "";
   } else {
     indexOffset = 1 + modulesName.midterm.length;
     modulesList = modulesName.final;
