@@ -1,5 +1,5 @@
 let quizData = [];
-let pastResults = [];
+let pastAttempts = [];
 let attemptsCount = 0;
 let formChanged = false;
 let newQuizNeeded = true;

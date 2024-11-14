@@ -21,6 +21,7 @@ function generateModuleSelection() {
 
     const input = document.createElement("input");
     input.type = "checkbox";
+    input.id = `module${index + indexOffset}`;
     input.addEventListener(
       "click",
       () => (document.getElementById("moduleALLSelect").checked = false)
@@ -66,27 +67,32 @@ function generateModuleSelection() {
 }
 
 function generateQuiz(data) {
-  div = document.createElement("div");
-  div.id = "quiz";
-  div.className = "unsubmitted";
+  const quiz = document.createElement("div");
+  quiz.id = "quiz";
+  quiz.className = "unsubmitted";
   data.forEach((question, index) =>
-    div.appendChild(generateQuestion(question, index))
+    quiz.appendChild(generateQuestion(question, index))
   );
-  return div;
+  return setupQuiz(quiz);
 }
 
 function generateQuestion(questionData, questionIndex) {
   const [questionText, questionInfo] = questionData;
-  const choices = Object.entries(questionInfo.choices);
-  arrange(choices);
   const isMultiSelect = questionInfo.multi_select;
+  const img = questionInfo.img;
+  const isAI = questionInfo.tags?.includes("AI");
+  const choicesData = Object.entries(questionInfo.choices);
+  arrange(choicesData);
 
   const question = document.createElement("div");
   question.id = "Q" + (questionIndex + 1);
   question.className = "question";
 
+  // header
   const questionHeader = document.createElement("div");
+  const questionTitleContainter = document.createElement("span");
   const questionTitle = document.createElement("b");
+  const AILabel = document.createElement("span");
   const unsureLabel = document.createElement("label");
   const unsureCheck = document.createElement("input");
   const unsureText = document.createElement("span");
@@ -94,151 +100,197 @@ function generateQuestion(questionData, questionIndex) {
   questionHeader.className = "question-header";
   questionTitle.className = "question-title";
   questionTitle.innerText = `Question ${questionIndex + 1}.`;
+  AILabel.className = "AI-label";
+  AILabel.innerText = "(AI-generated)";
   unsureLabel.className = "unsure-label";
   unsureLabel.title = "Mark question as unsure to review later";
   unsureCheck.className = "unsure-check";
   unsureText.className = "unsure-text";
   unsureText.innerText = "I'm not sure";
   unsureCheck.type = "checkbox";
-  unsureCheck.addEventListener("input", () =>
-    toggleMarkQuestionUnsure(question)
-  );
 
   unsureLabel.appendChild(unsureCheck);
   unsureLabel.appendChild(unsureText);
-  questionHeader.appendChild(questionTitle);
+  questionTitleContainter.appendChild(questionTitle);
+  if (isAI) questionTitleContainter.appendChild(AILabel);
+  questionHeader.appendChild(questionTitleContainter);
   questionHeader.appendChild(unsureLabel);
   question.appendChild(questionHeader);
 
+  // body
   const questionBody = document.createElement("p");
   questionBody.className = "question-body";
   questionBody.innerHTML = questionText;
   question.appendChild(questionBody);
 
-  if (
-    questionText ==
-    "COMP 1712 is your favorite class. (You must answer correctly AND honestly!)"
-  ) {
-    question.classList.add("joke");
-  }
-
-  if (questionInfo.img) {
-    figure = document.createElement("figure");
-    img = document.createElement("img");
-    img.setAttribute("src", "./data/images/" + questionInfo.img);
-    figure.appendChild(img);
+  // figure
+  if (img) {
+    const figure = document.createElement("figure");
+    const image = document.createElement("img");
+    image.setAttribute("src", `./data/images/${img}`);
+    figure.appendChild(image);
     question.appendChild(figure);
   }
 
+  // choices
   const questionChoices = document.createElement("ul");
   questionChoices.className = "question-choices";
-  choices.forEach((choice) => {
-    const [choiceText, isCorrect] = choice;
+  choicesData.forEach((choiceData) => {
+    const [text, isCorrect] = choiceData;
 
-    const li = document.createElement("li");
-    li.className = isCorrect ? "correct" : "incorrect";
-
-    const label = document.createElement("label");
-
+    const choice = document.createElement("li");
+    const choiceLabel = document.createElement("label");
     const choiceInput = document.createElement("input");
+    const choiceText = document.createElement("span");
+
+    choice.className = isCorrect ? "correct" : "incorrect";
     choiceInput.className = "choice-input";
     choiceInput.type = isMultiSelect ? "checkbox" : "radio";
     choiceInput.name = `Q${questionIndex + 1}`;
+    choiceText.innerHTML = text;
 
-    const span = document.createElement("span");
-    span.innerHTML = choiceText;
-
-    label.appendChild(choiceInput);
-    label.appendChild(span);
-
-    li.appendChild(label);
-
-    questionChoices.appendChild(li);
+    choiceLabel.appendChild(choiceInput);
+    choiceLabel.appendChild(choiceText);
+    choice.appendChild(choiceLabel);
+    questionChoices.appendChild(choice);
   });
   question.appendChild(questionChoices);
 
-  const container = document.createElement("div");
-  container.className = "explanation-container";
+  // explanation
+  const explanationContainer = document.createElement("div");
   const explanation = document.createElement("div");
-  // mark explanation empty by default,
-  // because it takes a while for firebase to respond with an explanation,
-  // it looks nicer this way
-  explanation.className = "explanation empty";
-  explanation.write = (value) => {
-    if (value) {
-      explanation.classList.remove("empty");
-      explanation.innerHTML = value;
-    } else {
-      explanation.classList.add("empty");
-      explanation.innerHTML = placeholderExplanation;
-    }
-  };
-
   const editBtn = document.createElement("i");
+  const editingIndicator = document.createElement("i");
+
+  explanationContainer.className = "explanation-container";
+  explanation.className = "explanation empty";
   editBtn.className = "bx bx-edit";
   editBtn.title = "edit";
-  if (matchMedia("not all and (hover: none)").matches) {
-    editBtn.className += " bx-tada-hover";
-  }
-  editBtn.addEventListener("click", () => editExplanation(explanation));
-  const editingIndicator = document.createElement("i");
   editingIndicator.className = "bx bx-loader bx-spin";
   editingIndicator.title = "someone is typing";
-  container.appendChild(explanation);
-  container.appendChild(editBtn);
-  container.appendChild(editingIndicator);
-  question.appendChild(container);
 
-  question.addEventListener(
-    "animationend",
-    () => (question.style.animation = "")
-  );
-  question.scrollTo = () => {
-    question.scrollIntoView(true);
-    scrollBy(0, -0.55 * navbar.offsetHeight);
-    if (resultPanel.style.display != "none") {
-      scrollBy(0, -navbar.offsetHeight);
-    }
-    return question;
-  };
-  question.blink = () => (question.style.animation = "blink 1s");
-  question.explain = () => getExplanation(questionBody.innerHTML);
+  explanationContainer.appendChild(explanation);
+  explanationContainer.appendChild(editBtn);
+  explanationContainer.appendChild(editingIndicator);
+  question.appendChild(explanationContainer);
+
   return question;
 }
 
-function generateResultsTable() {
+function setupQuiz(quiz) {
+  for (let question of quiz.getElementsByClassName("question")) {
+    question.addEventListener(
+      "animationend",
+      () => (question.style.animation = "")
+    );
+    question.scrollTo = () => {
+      question.scrollIntoView(true);
+      scrollBy(0, -0.55 * navbar.offsetHeight);
+      if (resultPanel.style.display != "none") {
+        scrollBy(0, -navbar.offsetHeight);
+      }
+      return question;
+    };
+    question.blink = () => (question.style.animation = "blink 1s");
+
+    const questionBody = question.querySelector(".question-body");
+    question.explain = () => getExplanation(questionBody.innerHTML);
+
+    const unsureCheck = question.querySelector(".unsure-check");
+    unsureCheck.addEventListener("input", () => toggleUnsure(question));
+
+    const explanation = question.querySelector(".explanation");
+    explanation.write = (value) => {
+      if (value) {
+        explanation.classList.remove("empty");
+        explanation.innerHTML = value;
+      } else {
+        explanation.classList.add("empty");
+        explanation.innerHTML = placeholderExplanation;
+      }
+    };
+
+    const editBtn = question.querySelector(".bx-edit");
+    if (matchMedia("not all and (hover: none)").matches) {
+      editBtn.classList.add("bx-tada-hover");
+    }
+    editBtn.addEventListener("click", () => editExplanation(explanation));
+  }
+  return quiz;
+}
+
+function generatePastAttemptsTable() {
   const table = document.createElement("table");
+  const header = document.createElement("tr");
+  const attemptNum = document.createElement("th");
+  const banks = document.createElement("th");
+  const modules = document.createElement("th");
+  const result = document.createElement("th");
+
+  attemptNum.className = "attempt";
+  attemptNum.innerText = "Attempt";
+
+  banks.className = "banks";
+  banks.innerText = "Question banks";
+
+  modules.className = "modules";
+  modules.innerText = "Modules";
+
+  result.className = "result";
+  result.innerText = "Result";
+
+  header.className = "header";
+  header.appendChild(attemptNum);
+  header.appendChild(banks);
+  header.appendChild(modules);
+  header.appendChild(result);
+
   table.id = "result-table";
+  table.appendChild(header);
 
-  let tr = document.createElement("tr");
-  {
-    let th = document.createElement("th");
-    th.appendChild(document.createTextNode("Attempt"));
-    tr.appendChild(th);
-  }
-  {
-    let th = document.createElement("th");
-    th.appendChild(document.createTextNode("Result"));
-    tr.appendChild(th);
-  }
-  table.appendChild(tr);
-
-  pastResults.forEach((accuracy, attemptNum) => {
-    let tr = document.createElement("tr");
-    {
-      let td = document.createElement("td");
-      td.appendChild(document.createTextNode(attemptNum + 1));
-      tr.appendChild(td);
-    }
-    {
-      let td = document.createElement("td");
-      const roundedNumber = Math.round((accuracy + Number.EPSILON) * 100);
-      td.appendChild(document.createTextNode(`${roundedNumber}%`));
-      tr.appendChild(td);
-    }
+  pastAttempts.forEach((attempt, index) => {
+    const score = attempt.score;
+    const outOf = attempt.outOf;
+    const accuracy = score / (outOf + Number.EPSILON);
+    const roundedAccuracy = Math.round((accuracy + Number.EPSILON) * 100);
     const [H, S, L] = getColor(accuracy);
-    tr.style.backgroundColor = `hsla(${H}, ${S}%, ${L}%, ${0.75})`;
-    table.appendChild(tr);
+
+    const row = document.createElement("tr");
+    const attemptNum = document.createElement("td");
+    const banks = document.createElement("td");
+    const modules = document.createElement("td");
+    const result = document.createElement("td");
+
+    attemptNum.className = "attempt";
+    attemptNum.innerText = index + 1;
+    attemptNum.addEventListener("click", () => {
+      toQuizPage();
+      removeElementById("quiz");
+      newQuizNeeded = true;
+      quizPage.appendChild(attempt.quiz);
+      showResult(score, outOf);
+      navText.innerText = `Attempt ${index + 1}`;
+      for (question of quizPage.querySelectorAll(".wrongAnswer,.unsure")) {
+        question.explain();
+      }
+    });
+
+    banks.className = "banks";
+    banks.innerText = attempt.banks;
+
+    modules.className = "modules";
+    modules.innerText = attempt.modules;
+
+    result.className = "result";
+    result.innerText = `${score}/${outOf} (${roundedAccuracy}%)`;
+    result.style.backgroundColor = `hsla(${H}, ${S}%, ${L}%, ${0.75})`;
+
+    row.className = "row";
+    row.appendChild(attemptNum);
+    row.appendChild(banks);
+    row.appendChild(modules);
+    row.appendChild(result);
+    table.appendChild(row);
   });
 
   return table;

@@ -30,10 +30,10 @@ function licenseGrantException() {
   localStorage.setItem("licenseException", "true");
 }
 
-function returnHome() {
+function tohomePage() {
   removeElementById("result-table");
-  if (pastResults.length > 0) {
-    pastResultsContainer.appendChild(generateResultsTable());
+  if (pastAttempts.length > 0) {
+    pastAttemptsContainer.appendChild(generatePastAttemptsTable());
   }
   navText.style.visibility = "hidden";
   navbar.style.backgroundColor = "";
@@ -42,12 +42,19 @@ function returnHome() {
   homePage.unhide();
 }
 
-function nextQuiz() {
-  navText.innerText = `Attempt ${attemptsCount + 1}`;
+function toQuizPage() {
+  navText.style.visibility = "visible";
+  navbar.style.backgroundColor = "";
+  resultPanel.hide();
+  homePage.hide();
+  quizPage.unhide();
+  scrollTo(0, 0);
+}
 
+function nextQuiz() {
   let questionsNum = questionNumChoice.value;
   if (questionsNum == "ALL") {
-    questionsNum = 100000;
+    questionsNum = Number.MAX_VALUE;
   }
   if (formChanged || quizData.length < questionsNum) {
     if (moduleSelectBoxes.every((box) => !box.checked)) {
@@ -61,13 +68,10 @@ function nextQuiz() {
     _populateData();
     formChanged = false;
   }
-  let data = quizData.slice(0, questionsNum);
 
-  navText.style.visibility = "visible";
-  navbar.style.backgroundColor = "";
-  resultPanel.hide();
-  homePage.hide();
-  quizPage.unhide();
+  let data = quizData.slice(0, questionsNum);
+  navText.innerText = `Attempt ${pastAttempts.length + 1}`;
+  toQuizPage();
 
   if (newQuizNeeded) {
     scrollTo(0, 0);
@@ -93,6 +97,7 @@ function submit() {
   const quiz = document.getElementById("quiz");
   const questions = quiz.getElementsByClassName("question");
 
+  // check if all questions are answered
   let forceSubmit = false;
   for (let question of questions) {
     let isAnswered = false;
@@ -112,23 +117,19 @@ function submit() {
     }
   }
 
+  // grade
   let correctAnswers = 0;
   for (let question of questions) {
     let isCorrect = true;
+
     for (let choice of question.getElementsByTagName("li")) {
       const input = choice.querySelector("input");
-      if (question.classList.contains("joke")) {
-        if (input.checked) {
-          isCorrect = false;
-          choice.className = "incorrect";
-        } else {
-          choice.className = "correct";
-        }
-      } else if ((choice.className == "correct") != input.checked) {
+      if ((choice.className == "correct") != input.checked) {
         isCorrect = false;
         break;
       }
     }
+
     if (isCorrect) {
       ++correctAnswers;
       question.querySelector(".unsure-label").removeAttribute("title");
@@ -136,11 +137,12 @@ function submit() {
     } else {
       question.classList.remove("unsure");
       question.classList.add("wrongAnswer");
-      question.querySelector(".unsure-label").remove();
+      question.querySelector(".unsure-label").style.display = "none";
       question.explain();
     }
   }
 
+  // post-grading errands
   for (let input of quiz.getElementsByClassName("choice-input")) {
     input.disabled = true;
   }
@@ -149,16 +151,33 @@ function submit() {
   } else {
     quizData = [];
   }
-
   newQuizNeeded = true;
   quiz.className = "submitted";
   scrollTo(0, 0);
-  ++attemptsCount;
+  showResult(correctAnswers, questions.length);
 
-  const accuracy = correctAnswers / questions.length;
-  pastResults.push(accuracy);
-  const roundedNumber = Math.round((accuracy + Number.EPSILON) * 100);
-  quizResultText.innerText = `${correctAnswers}/${questions.length} (${roundedNumber}%)`;
+  // update past attemps
+  const modules = moduleSelectBoxes
+    .filter((box) => box.checked)
+    .map((box) => box.id.slice(6))
+    .join(", ");
+  const banks = [LHChoice, AIChoice]
+    .filter((box) => box.checked)
+    .map((box) => box.id)
+    .join(", ");
+  pastAttempts.push({
+    quiz: setupQuiz(quiz.cloneNode(true)),
+    modules: modules,
+    banks: banks,
+    score: correctAnswers,
+    outOf: questions.length,
+  });
+}
+
+function showResult(score, outOf) {
+  const accuracy = score / (outOf + Number.EPSILON);
+  const roundedAccuracy = Math.round((accuracy + Number.EPSILON) * 100);
+  quizResultText.innerText = `${score}/${outOf} (${roundedAccuracy}%)`;
   const [H, S, L] = getColor(accuracy);
   resultPanel.style.backgroundColor = `hsl(${H}, ${S}%, ${L}%)`;
   resultPanel.unhide();
@@ -185,7 +204,7 @@ function giveExplanationDisclaimer(explanationText) {
   }
 }
 
-function toggleMarkQuestionUnsure(question) {
+function toggleUnsure(question) {
   if (question.classList.contains("unsure")) {
     question.classList.remove("unsure");
   } else {

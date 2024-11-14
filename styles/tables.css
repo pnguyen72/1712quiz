@@ -8,12 +8,12 @@ table {
   th {
     border: 1.2pt solid black;
 
-    @media (width >= 500px) {
+    @media (width >= 450px) {
       &.attempt {
         width: 110px;
       }
       &.banks {
-        width: 180px;
+        width: 170px;
       }
     }
 
@@ -23,7 +23,7 @@ table {
       }
     }
 
-    @media (width < 500px) {
+    @media (width < 450px) {
       &.modules {
         display: none;
       }
@@ -33,6 +33,7 @@ table {
   td.attempt {
     cursor: pointer;
     color: blue;
+    font-weight: bold;
 
     /* if hover is available */
     @media not all and (hover: none) {

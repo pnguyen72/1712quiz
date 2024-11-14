@@ -34,7 +34,7 @@ licenseDisagreeBtn.addEventListener("click", () => {
   }
 });
 
-homeButon.addEventListener("click", returnHome);
+homeButon.addEventListener("click", tohomePage);
 
 nextButton.addEventListener("click", () => {
   if (quizPage.style.display == "none") {

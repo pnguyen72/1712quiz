@@ -14,7 +14,7 @@ body {
     @media screen {
       & > h1,
       #main,
-      #past-results,
+      #past-attempts,
       footer {
         margin-left: auto;
         margin-right: auto;
