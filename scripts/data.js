@@ -37,11 +37,6 @@ function getData() {
           (questions) => (modulesData.LH[i + finalOffset] = questions)
         )
       );
-      promises.push(
-        _getQuestions(i + finalOffset, "AI").then(
-          (questions) => (modulesData.AI[i + finalOffset] = questions)
-        )
-      );
     }
 
     return Promise.all(promises);
