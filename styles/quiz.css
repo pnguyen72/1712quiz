@@ -3,6 +3,10 @@
 
   &:last-child {
     margin-bottom: 0rem;
+
+    .explanation-container {
+      margin-bottom: 0.5rem;
+    }
   }
 
   &.unsure .question-title {
