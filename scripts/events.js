@@ -46,7 +46,7 @@ nextButton.addEventListener("click", () => {
 
 prevQuest.addEventListener("click", () =>
   search(
-    quizPage.querySelectorAll(".wrongAnswer,.unsure"),
+    quizPage.querySelectorAll(".wrong-answer,.unsure"),
     0,
     (element) => element.getBoundingClientRect().top - 1.5 * navbar.offsetHeight
   )
@@ -56,7 +56,7 @@ prevQuest.addEventListener("click", () =>
 );
 nextQuest.addEventListener("click", () =>
   search(
-    quizPage.querySelectorAll(".wrongAnswer,.unsure"),
+    quizPage.querySelectorAll(".wrong-answer,.unsure"),
     0,
     (element) => element.getBoundingClientRect().top - 1.6 * navbar.offsetHeight
   )

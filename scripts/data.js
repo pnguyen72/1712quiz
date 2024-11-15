@@ -48,7 +48,7 @@ function loadData() {
   });
 }
 
-function getData(banks, modules, count) {
+function getQuestions(banks, modules, count) {
   let result = [];
   const selectionSize = {};
   for (const bank of banks) {
@@ -62,18 +62,28 @@ function getData(banks, modules, count) {
   for (const [selection, size] of Object.entries(selectionSize)) {
     const [bank, module] = selection.split(".");
     const getAmount = Math.floor((effectiveSize * size) / totalSize);
-    result = result.concat(modulesData[bank][module].get(getAmount));
+    const data = modulesData[bank][module].get(getAmount, "beginning");
+    result = result.concat(data);
   }
   if (result.length < effectiveSize) {
     shuffle(selections);
     for (const selection of selections) {
       const [bank, module] = selection.split(".");
-      result.push(...modulesData[bank][module].get(1));
+      result.push(...modulesData[bank][module].get(1, "end"));
       if (result.length >= effectiveSize) break;
     }
   }
   shuffle(result);
   return result;
+}
+
+function resolveQuestions(questions) {
+  for (question of questions) {
+    const bank = question.getAttribute("bank");
+    const module = question.getAttribute("module");
+    const questionText = question.querySelector(".question-body").innerHTML;
+    modulesData[bank][module].resolve(questionText);
+  }
 }
 
 function getExplanation(questionText) {
@@ -136,7 +146,7 @@ function _getModules() {
 
 function _getQuestions(moduleNum, bank) {
   return fetch(`./data/${bank}/module${moduleNum}.json`).then((response) => {
-    if (!response.ok) return [];
+    if (!response.ok) return {};
     return response.json();
   });
 }
@@ -144,18 +154,38 @@ function _getQuestions(moduleNum, bank) {
 function _data(questions) {
   return {
     _origin: questions,
-    _data: [],
-    size: questions.length,
-    get: function (num) {
-      const length = this._data.length;
-      if (length == 0) {
-        shuffle(this._origin);
-        this._data = [...this._origin];
-      } else if (length < num) {
-        shuffle(this._origin);
-        this._data = this._data.concat(this._origin.slice(0, num - length));
+    _data: { ...questions },
+    _pull: function (count) {
+      if (count == undefined) {
+        this._data = { ...this._origin };
+        return;
       }
-      return this._data.splice(0, num);
+      const origin = Object.entries(this._origin);
+      shuffle(origin);
+      const slicedOrigin = origin.slice(0, count);
+      this._data = { ...this._data, ...Object.fromEntries(slicedOrigin) };
     },
+    get: function (count, position) {
+      // pull data from origin if necessary
+      const length = Object.keys(this._data).length;
+      if (length == 0) {
+        this._pull();
+      } else if (length < count) {
+        this._pull(count - length);
+      }
+      // slice data to specified amount, either from the beginning or end of the pool
+      let data = [];
+      let entries = Object.entries(this._data);
+      if (position == "end") entries.reverse();
+      for (const [question, questionData] of entries) {
+        data.push({ question: question, ...questionData });
+        if (data.length >= count) break;
+      }
+      return data;
+    },
+    resolve: function (question) {
+      delete this._data[question];
+    },
+    size: Object.keys(questions).length,
   };
 }

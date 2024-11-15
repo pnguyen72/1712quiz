@@ -79,12 +79,15 @@ function generateQuestion(questionData, questionIndex) {
   const img = questionData.img;
   const choicesData = Object.entries(questionData.choices);
   const isMultiSelect = questionData.multi_select;
-  const isAI = questionData.AI;
+  const bank = questionData.AI ? "AI" : "LH";
+  const module = questionData.module;
   arrange(choicesData);
 
   const question = document.createElement("div");
   question.id = "Q" + (questionIndex + 1);
   question.className = "question";
+  question.setAttribute("bank", bank);
+  question.setAttribute("module", module);
 
   // header
   const questionHeader = document.createElement("div");
@@ -110,7 +113,7 @@ function generateQuestion(questionData, questionIndex) {
   unsureLabel.appendChild(unsureCheck);
   unsureLabel.appendChild(unsureText);
   questionTitleContainter.appendChild(questionTitle);
-  if (isAI) questionTitleContainter.appendChild(AILabel);
+  questionTitleContainter.appendChild(AILabel);
   questionHeader.appendChild(questionTitleContainter);
   questionHeader.appendChild(unsureLabel);
   question.appendChild(questionHeader);
@@ -266,7 +269,7 @@ function generateAttemptsTable() {
       document.getElementById("quiz").replaceWith(attempt.quiz);
       showResult(score, outOf);
       navText.innerText = `Attempt ${index + 1}`;
-      for (question of quizPage.querySelectorAll(".wrongAnswer,.unsure")) {
+      for (question of quizPage.querySelectorAll(".wrong-answer,.unsure")) {
         question.explain();
       }
     });

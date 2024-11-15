@@ -1,402 +1,402 @@
-[
-  {
-    "question": "What is the purpose of a stakeholder analysis during the requirements determination phase?",
+{
+  "What is the purpose of a stakeholder analysis during the requirements determination phase?": {
     "choices": {
       "To define the system’s architecture": false,
       "To create system documentation": false,
       "To gather system test cases": false,
       "To identify all individuals and groups impacted by the system": true
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "What is the role of a systems analyst in requirements determination?",
+  "What is the role of a systems analyst in requirements determination?": {
     "choices": {
       "Installing hardware": false,
       "Writing system code": false,
       "Managing the project budget": false,
       "Gathering and analyzing business requirements": true
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "What is a key benefit of conducting Joint Application Development (JAD) sessions?",
+  "What is a key benefit of conducting Joint Application Development (JAD) sessions?": {
     "choices": {
       "Writing system code more quickly": false,
       "Improving communication between stakeholders and developers": true,
       "Developing system architecture": false,
       "Reducing hardware costs": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which of the following is a risk of incomplete requirements gathering?",
+  "Which of the following is a risk of incomplete requirements gathering?": {
     "choices": {
       "Increased system performance": false,
       "Reduced system costs": false,
       "Misalignment between the system and business needs": true,
       "Early project completion": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "What is the purpose of a use case in requirements determination?",
+  "What is the purpose of a use case in requirements determination?": {
     "choices": {
       "To describe the interaction between users and the system": true,
       "To outline testing scenarios": false,
       "To gather system costs": false,
       "To define system architecture": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "What does a requirements specification document include?",
+  "What does a requirements specification document include?": {
     "choices": {
       "User training materials": false,
       "A testing plan": false,
       "A list of business needs and system requirements": true,
       "System hardware specifications": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which of the following is typically part of a requirements specification document?",
+  "Which of the following is typically part of a requirements specification document?": {
     "choices": {
       "A system maintenance schedule": false,
       "A list of system hardware components": false,
       "A list of user needs and system functions": true,
       "A test plan": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which of the following is an outcome of successful requirements gathering?",
+  "Which of the following is an outcome of successful requirements gathering?": {
     "choices": {
       "A project plan": false,
       "Completed system testing": false,
       "A clear understanding of business needs and system functions": true,
       "A detailed system design": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which of the following is a characteristic of a non-functional requirement?",
+  "Which of the following is a characteristic of a non-functional requirement?": {
     "choices": {
       "It defines what the system should do": false,
       "It specifies the system's budget": false,
       "It describes how the system should perform": true,
       "It outlines the system's development timeline": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "What is the primary purpose of a use case?",
+  "What is the primary purpose of a use case?": {
     "choices": {
       "To create test cases": false,
       "To define system architecture": false,
       "To outline project milestones": false,
       "To describe user interactions with the system": true
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which of the following is NOT a technique for gathering system requirements?",
+  "Which of the following is NOT a technique for gathering system requirements?": {
     "choices": {
       "Brainstorming": false,
       "Data migration": true,
       "Document analysis": false,
       "Prototyping": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which of the following is a primary reason for gathering system requirements?",
+  "Which of the following is a primary reason for gathering system requirements?": {
     "choices": {
       "To create a user manual": false,
       "To gather test cases for the system": false,
       "To define the system’s hardware architecture": false,
       "To ensure the system aligns with business needs": true
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which of the following best describes the purpose of a requirements specification?",
+  "Which of the following best describes the purpose of a requirements specification?": {
     "choices": {
       "To outline project risks": false,
       "To provide a detailed system design": false,
       "To document business needs and system functions": true,
       "To create the project schedule": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which of the following is a functional requirement?",
+  "Which of the following is a functional requirement?": {
     "choices": {
       "The system must generate monthly reports": true,
       "The system must support 100 concurrent users": false,
       "The system must have an uptime of 99.9%": false,
       "The system must be available 24/7": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which document serves as a foundation for system design and implementation?",
+  "Which document serves as a foundation for system design and implementation?": {
     "choices": {
       "The project plan": false,
       "The user manual": false,
       "The system test plan": false,
       "The requirements specification": true
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which of the following is an example of a technical requirement?",
+  "Which of the following is an example of a technical requirement?": {
     "choices": {
       "Users must be able to update their profile information": false,
       "The system must be compatible with existing hardware": true,
       "The system must generate daily reports": false,
       "The system must support multiple languages": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which of the following is a key benefit of conducting a Joint Application Development (JAD) session?",
+  "Which of the following is a key benefit of conducting a Joint Application Development (JAD) session?": {
     "choices": {
       "Improving communication between business stakeholders and developers": true,
       "Developing system test cases": false,
       "Creating hardware specifications": false,
       "Reducing system development costs": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which of the following best describes a business requirement?",
+  "Which of the following best describes a business requirement?": {
     "choices": {
       "A timeline for project completion": false,
       "A budgetary restriction": false,
       "A technical constraint of the system": false,
       "A specific need or feature that the system must fulfill": true
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "What is one of the risks of not properly defining system requirements?",
+  "What is one of the risks of not properly defining system requirements?": {
     "choices": {
       "Increased hardware costs": false,
       "Difficulty in writing user manuals": false,
       "Reduced system performance": false,
       "System misalignment with business needs": true
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which of the following techniques is used to gather system requirements?",
+  "Which of the following techniques is used to gather system requirements?": {
     "choices": {
       "Joint Application Development (JAD)": true,
       "Data migration": false,
       "Debugging": false,
       "Code reviews": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "What is a key role of a systems analyst in the requirements determination phase?",
+  "What is a key role of a systems analyst in the requirements determination phase?": {
     "choices": {
       "Gathering and analyzing user needs and business requirements": true,
       "Writing technical documentation": false,
       "Managing project schedules": false,
       "Developing user interfaces": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "What is a common technique for verifying that system requirements have been met?",
+  "What is a common technique for verifying that system requirements have been met?": {
     "choices": {
       "Reviewing system documentation": false,
       "Analyzing test cases": false,
       "Conducting user interviews": false,
       "Performing system testing": true
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "What is the purpose of conducting document analysis during the requirements gathering phase?",
+  "What is the purpose of conducting document analysis during the requirements gathering phase?": {
     "choices": {
       "To gather system requirements by reviewing existing documentation": true,
       "To review system code": false,
       "To create test cases for the system": false,
       "To identify project milestones": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "What is the purpose of prototyping during requirements determination?",
+  "What is the purpose of prototyping during requirements determination?": {
     "choices": {
       "To conduct system testing": false,
       "To create a working model of the system to gather user feedback": true,
       "To document system requirements": false,
       "To define system performance metrics": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "What is a benefit of creating a requirements specification document?",
+  "What is a benefit of creating a requirements specification document?": {
     "choices": {
       "It reduces system testing efforts": false,
       "It provides clear communication between stakeholders and developers": true,
       "It defines the system’s hardware specifications": false,
       "It ensures system documentation is complete": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "What is a common method for validating the completeness of system requirements?",
+  "What is a common method for validating the completeness of system requirements?": {
     "choices": {
       "Reviewing use cases and requirements documents": true,
       "Conducting user interviews": false,
       "Creating user manuals": false,
       "Writing system code": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "What is a functional requirement in a system?",
+  "What is a functional requirement in a system?": {
     "choices": {
       "Describes system performance characteristics": false,
       "Refers to system uptime and availability": false,
       "Describes system features and functions": true,
       "Describes technical constraints": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "What is the main goal of requirements determination in system development?",
+  "What is the main goal of requirements determination in system development?": {
     "choices": {
       "To write the system code": false,
       "To gather and document business needs": true,
       "To define system architecture": false,
       "To create user manuals": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "What is a typical outcome of the requirements determination phase?",
+  "What is a typical outcome of the requirements determination phase?": {
     "choices": {
       "System implementation": false,
       "A detailed system design": false,
       "A clear set of business and system requirements": true,
       "Test cases": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "What is a use case diagram typically used for in requirements determination?",
+  "What is a use case diagram typically used for in requirements determination?": {
     "choices": {
       "To outline project milestones": false,
       "To define the project’s budget": false,
       "To show the system’s hardware architecture": false,
       "To visually represent user interactions with the system": true
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "What is one challenge of using interviews as a method for gathering system requirements?",
+  "What is one challenge of using interviews as a method for gathering system requirements?": {
     "choices": {
       "Time-consuming and resource-intensive": true,
       "Reduced communication between stakeholders": false,
       "Difficult to manage stakeholder expectations": false,
       "Limited access to system documentation": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which of the following best describes a stakeholder in the requirements determination phase?",
+  "Which of the following best describes a stakeholder in the requirements determination phase?": {
     "choices": {
       "A person or group with an interest in the system’s success": true,
       "A technical expert who oversees testing": false,
       "A developer responsible for writing code": false,
       "A project manager responsible for budget management": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which document is a primary output of the requirements determination phase?",
+  "Which document is a primary output of the requirements determination phase?": {
     "choices": {
       "System architecture diagram": false,
       "Project charter": false,
       "Feasibility study": false,
       "Requirements specification document": true
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which of the following is a non-functional requirement?",
+  "Which of the following is a non-functional requirement?": {
     "choices": {
       "The system must produce invoices": false,
       "The system must process transactions within 2 seconds": true,
       "The system must allow users to login": false,
       "Users must be able to generate sales reports": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "What is the purpose of conducting interviews during requirements determination?",
+  "What is the purpose of conducting interviews during requirements determination?": {
     "choices": {
       "To train users on the system": false,
       "To review system code": false,
       "To develop test cases": false,
       "To gather detailed insights into user needs and system functionality": true
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which document is often referred to during the design and development phases of the SDLC?",
+  "Which document is often referred to during the design and development phases of the SDLC?": {
     "choices": {
       "Requirements specification document": true,
       "Business case": false,
       "Project charter": false,
       "Feasibility study": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which of the following is a commonly used method for gathering system requirements?",
+  "Which of the following is a commonly used method for gathering system requirements?": {
     "choices": {
       "Performing system maintenance": false,
       "Writing test cases": false,
       "Conducting interviews with users": true,
       "Writing system documentation": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which of the following is a challenge in gathering system requirements?",
+  "Which of the following is a challenge in gathering system requirements?": {
     "choices": {
       "Installing hardware": false,
       "Writing system code": false,
       "Defining the project budget": false,
       "Translating vague business needs into specific system requirements": true
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which technique is commonly used to validate system requirements?",
+  "Which technique is commonly used to validate system requirements?": {
     "choices": {
       "User interviews": false,
       "Use case reviews": true,
       "System testing": false,
       "System documentation reviews": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   },
-  {
-    "question": "Which technique is often used in Joint Application Development (JAD) sessions to gather system requirements?",
+  "Which technique is often used in Joint Application Development (JAD) sessions to gather system requirements?": {
     "choices": {
       "Regression testing": false,
       "Debugging": false,
       "Brainstorming": true,
       "User testing": false
     },
-    "AI": true
+    "AI": true,
+    "module": 3
   }
-]
+}

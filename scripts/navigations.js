@@ -71,7 +71,7 @@ function nextQuiz() {
     questionBankSelection.style.animation = "blink 1s";
     return;
   }
-  const data = getData(banks, modules, questionsNum);
+  const data = getQuestions(banks, modules, questionsNum);
   navText.innerText = `Attempt ${pastAttempts.length + 1}`;
   toQuizPage();
   document.getElementById("quiz").replaceWith(generateQuiz(data));
@@ -121,7 +121,7 @@ function submit() {
       question.querySelector(".unsure-text").innerText = "Show explanation";
     } else {
       question.classList.remove("unsure");
-      question.classList.add("wrongAnswer");
+      question.classList.add("wrong-answer");
       question.querySelector(".unsure-label").style.display = "none";
       question.explain();
     }
@@ -139,6 +139,9 @@ function submit() {
   quiz.className = "submitted";
   scrollTo(0, 0);
   showResult(correctAnswers, questions.length);
+  resolveQuestions(
+    quiz.querySelectorAll(".question:not(.wrong-answer,.unsure")
+  );
 
   // update past attemps
   pastAttempts.push({
@@ -166,7 +169,7 @@ function showResult(score, outOf) {
   resultPanel.style.backgroundColor = `hsl(${H}, ${S}%, ${L}%)`;
   resultPanel.unhide();
 
-  const unsureQuestions = quizPage.querySelectorAll(".wrongAnswer,.unsure");
+  const unsureQuestions = quizPage.querySelectorAll(".wrong-answer,.unsure");
   prevQuest.parentElement.style.visibility =
     nextQuest.parentElement.style.visibility =
       unsureQuestions.length > 0 ? "visible" : "hidden";
@@ -196,7 +199,7 @@ function toggleUnsure(question) {
     question.explain();
   }
 
-  const unsureQuestions = quizPage.querySelectorAll(".wrongAnswer,.unsure");
+  const unsureQuestions = quizPage.querySelectorAll(".wrong-answer,.unsure");
   prevQuest.parentElement.style.visibility =
     nextQuest.parentElement.style.visibility =
       unsureQuestions.length > 0 ? "visible" : "hidden";

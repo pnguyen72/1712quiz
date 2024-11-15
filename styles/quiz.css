@@ -13,6 +13,12 @@
     background-color: yellow;
   }
 
+  &:not([bank="AI"]) {
+    .AI-label {
+      display: none;
+    }
+  }
+
   .question-header {
     display: flex;
     justify-content: space-between;
@@ -174,12 +180,12 @@
   }
 
   .question {
-    &.wrongAnswer .question-title {
+    &.wrong-answer .question-title {
       background-color: hsla(0, 80%, 75%, 75%);
     }
 
     &.unsure,
-    &.wrongAnswer {
+    &.wrong-answer {
       .explanation-container {
         display: flex;
       }
