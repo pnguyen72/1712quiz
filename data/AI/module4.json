@@ -1,5 +1,6 @@
-{
-  "Which of the following is an example of an actor in a use case diagram?": {
+[
+  {
+    "question": "Which of the following is an example of an actor in a use case diagram?",
     "choices": {
       "A technical process running on the server": false,
       "A customer interacting with a shopping cart system": true,
@@ -7,7 +8,8 @@
       "A network administrator updating system software": false
     }
   },
-  "Which of the following components are typically represented in a use case diagram?": {
+  {
+    "question": "Which of the following components are typically represented in a use case diagram?",
     "choices": {
       "Hardware components and system architecture": false,
       "Actors and system processes": true,
@@ -15,7 +17,8 @@
       "Database entities and attributes": false
     }
   },
-  "Which of the following is NOT a benefit of using use case diagrams?": {
+  {
+    "question": "Which of the following is NOT a benefit of using use case diagrams?",
     "choices": {
       "Helps to identify system functionalities": false,
       "Outlines technical specifications for system design": true,
@@ -23,7 +26,8 @@
       "Provides a high-level view of user-system interactions": false
     }
   },
-  "Which of the following best describes the purpose of a use case?": {
+  {
+    "question": "Which of the following best describes the purpose of a use case?",
     "choices": {
       "To outline project milestones": false,
       "To create test cases": false,
@@ -31,7 +35,8 @@
       "To describe user interactions with the system": true
     }
   },
-  "What is the purpose of a use case in requirements determination?": {
+  {
+    "question": "What is the purpose of a use case in requirements determination?",
     "choices": {
       "To describe the interaction between users and the system": true,
       "To outline testing scenarios": false,
@@ -39,7 +44,8 @@
       "To define system architecture": false
     }
   },
-  "A use case is commonly used to:": {
+  {
+    "question": "A use case is commonly used to:",
     "choices": {
       "Identify how the system interacts with external entities": true,
       "Document the system’s database structure": false,
@@ -47,7 +53,8 @@
       "Analyze system performance": false
     }
   },
-  "What does a use case help define during the system analysis phase?": {
+  {
+    "question": "What does a use case help define during the system analysis phase?",
     "choices": {
       "System hardware requirements": false,
       "The system’s network architecture": false,
@@ -55,7 +62,8 @@
       "The system’s budget": false
     }
   },
-  "How do use case diagrams help in requirements gathering?": {
+  {
+    "question": "How do use case diagrams help in requirements gathering?",
     "choices": {
       "By defining hardware specifications": false,
       "By providing a visual representation of user-system interactions": true,
@@ -63,7 +71,8 @@
       "By managing system databases": false
     }
   },
-  "Which of the following statements is true about use cases?": {
+  {
+    "question": "Which of the following statements is true about use cases?",
     "choices": {
       "They focus solely on system hardware": false,
       "They describe the project budget": false,
@@ -71,7 +80,8 @@
       "They help define user interactions and system functions": true
     }
   },
-  "What is the purpose of creating multiple use cases during system development?": {
+  {
+    "question": "What is the purpose of creating multiple use cases during system development?",
     "choices": {
       "To manage system hardware configurations": false,
       "To analyze the system's performance": false,
@@ -79,7 +89,8 @@
       "To document multiple system bugs": false
     }
   },
-  "What is the primary role of a use case diagram in system design?": {
+  {
+    "question": "What is the primary role of a use case diagram in system design?",
     "choices": {
       "To define system security": false,
       "To analyze system hardware": false,
@@ -87,7 +98,8 @@
       "To document user interactions with the system": true
     }
   },
-  "Which of the following best describes a use case?": {
+  {
+    "question": "Which of the following best describes a use case?",
     "choices": {
       "A description of how the user interacts with the system": true,
       "A technical specification of system architecture": false,
@@ -95,7 +107,8 @@
       "A detailed flowchart of how the system works": false
     }
   },
-  "What does a use case scenario describe?": {
+  {
+    "question": "What does a use case scenario describe?",
     "choices": {
       "System performance metrics": false,
       "Specific user interactions with the system under different conditions": true,
@@ -103,7 +116,8 @@
       "Hardware configuration options": false
     }
   },
-  "Which of the following is a key benefit of creating use case diagrams?": {
+  {
+    "question": "Which of the following is a key benefit of creating use case diagrams?",
     "choices": {
       "It provides detailed technical specifications for system development": false,
       "It helps calculate project costs": false,
@@ -111,7 +125,8 @@
       "It outlines the system’s network infrastructure": false
     }
   },
-  "What kind of system behavior does a use case typically describe?": {
+  {
+    "question": "What kind of system behavior does a use case typically describe?",
     "choices": {
       "How data flows within the system": false,
       "The system’s performance metrics": false,
@@ -119,7 +134,8 @@
       "The system’s hardware configuration": false
     }
   },
-  "What is a use case used for in systems analysis?": {
+  {
+    "question": "What is a use case used for in systems analysis?",
     "choices": {
       "To outline the project budget": false,
       "To define system hardware requirements": false,
@@ -127,7 +143,8 @@
       "To model data flow between system components": false
     }
   },
-  "What is a use case diagram typically used for in requirements determination?": {
+  {
+    "question": "What is a use case diagram typically used for in requirements determination?",
     "choices": {
       "To outline project milestones": false,
       "To show the system’s hardware architecture": false,
@@ -135,7 +152,8 @@
       "To visually represent user interactions with the system": true
     }
   },
-  "What is an actor in a use case diagram?": {
+  {
+    "question": "What is an actor in a use case diagram?",
     "choices": {
       "A system process": false,
       "A data storage point": false,
@@ -143,7 +161,8 @@
       "A piece of hardware interacting with the user": false
     }
   },
-  "What is the difference between a use case diagram and a process flow diagram?": {
+  {
+    "question": "What is the difference between a use case diagram and a process flow diagram?",
     "choices": {
       "A use case diagram defines data flow, while a process flow diagram defines system interactions": false,
       "Use case diagrams are for hardware design, while process flow diagrams are for software": false,
@@ -151,7 +170,8 @@
       "A use case diagram shows user interactions, while a process flow diagram shows system workflows": true
     }
   },
-  "Which of the following is a limitation of use case diagrams?": {
+  {
+    "question": "Which of the following is a limitation of use case diagrams?",
     "choices": {
       "They are difficult for non-technical stakeholders to understand": false,
       "They do not show detailed system architecture": true,
@@ -159,4 +179,4 @@
       "They cannot represent user interactions": false
     }
   }
-}
+]

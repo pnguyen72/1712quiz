@@ -1,5 +1,6 @@
-{
-  "The V-model pays more explicit attention to ___________:": {
+[
+  {
+    "question": "The V-model pays more explicit attention to ___________:",
     "choices": {
       "Testing": true,
       "Iteration": false,
@@ -8,7 +9,8 @@
       "Return on investment (ROI)": false
     }
   },
-  "Bob is selecting a systems analysis and design methodology. What might be the first step?": {
+  {
+    "question": "Bob is selecting a systems analysis and design methodology. What might be the first step?",
     "choices": {
       "Selecting the shortest methodology": false,
       "Researching the organizations standards and policies for 'approved' methodologies": true,
@@ -17,13 +19,22 @@
       "Interviewing senior management as to their suggestions on methodologies": false
     }
   },
-  "Most IT departments face a demand for IT projects that far exceed the ability to do them.": {
-    "choices": { "True": true, "False": false }
+  {
+    "question": "Most IT departments face a demand for IT projects that far exceed the ability to do them.",
+    "choices": {
+      "True": true,
+      "False": false
+    }
   },
-  "The project methodology that takes the longest to complete is Extreme Programming Methodology.": {
-    "choices": { "True": false, "False": true }
+  {
+    "question": "The project methodology that takes the longest to complete is Extreme Programming Methodology.",
+    "choices": {
+      "True": false,
+      "False": true
+    }
   },
-  "The most common reason for schedule and cost overruns is what?": {
+  {
+    "question": "The most common reason for schedule and cost overruns is what?",
     "choices": {
       "Adding people to a late project": false,
       "Team conflict": false,
@@ -32,7 +43,8 @@
       "Scope creep": true
     }
   },
-  "System prototyping is BEST characterized as:": {
+  {
+    "question": "System prototyping is BEST characterized as:",
     "choices": {
       "More explicit testing": false,
       "A method for exploring design alternatives": false,
@@ -41,13 +53,22 @@
       "A series of versions": false
     }
   },
-  "Scrum, XP and Dynamic systems development method (DSDM) are all classified as 'agile development' concepts.": {
-    "choices": { "True": true, "False": false }
+  {
+    "question": "Scrum, XP and Dynamic systems development method (DSDM) are all classified as 'agile development' concepts.",
+    "choices": {
+      "True": true,
+      "False": false
+    }
   },
-  "Project teams of 12 to 15 are generally considered optimum": {
-    "choices": { "True": false, "False": true }
+  {
+    "question": "Project teams of 12 to 15 are generally considered optimum",
+    "choices": {
+      "True": false,
+      "False": true
+    }
   },
-  "Which of the following methodologies might be most appropriate if you have a system project with: clear requirements; very familiar technologies; not all that complex; must be reliable; a somewhat longer schedule and the schedule visibility is not important?": {
+  {
+    "question": "Which of the following methodologies might be most appropriate if you have a system project with: clear requirements; very familiar technologies; not all that complex; must be reliable; a somewhat longer schedule and the schedule visibility is not important?",
     "choices": {
       "Iterative": false,
       "V-model": true,
@@ -56,7 +77,8 @@
       "System prototyping": false
     }
   },
-  "If the skills required by a project cannot be met by the available project team, which would probably NOT be a reasonable solution?": {
+  {
+    "question": "If the skills required by a project cannot be met by the available project team, which would probably NOT be a reasonable solution?",
     "choices": {
       "Mentor a team member (like sending a person to work on a similar project to acquire the necessary skills)": false,
       "Use a contract employee": false,
@@ -65,7 +87,8 @@
       "Train the project team (or some of the team) on the skills needed": false
     }
   },
-  "A critical success factor in project management is to do which of the following?": {
+  {
+    "question": "A critical success factor in project management is to do which of the following?",
     "choices": {
       "Use a CASE tool to delineate requirements from work tasks": false,
       "Say \"no\" to all requests as they add to 'scope creep'": false,
@@ -74,7 +97,8 @@
       "Start with a realistic assessment of the work that needs to be done": true
     }
   },
-  "Throwaway prototyping is BEST characterized as:": {
+  {
+    "question": "Throwaway prototyping is BEST characterized as:",
     "choices": {
       "A method for exploring design alternatives": true,
       "More explicit testing": false,
@@ -83,7 +107,8 @@
       "A method for stressing customer satisfaction": false
     }
   },
-  "Agile development is a group of programming-centric methodologies that focus on which of the following?": {
+  {
+    "question": "Agile development is a group of programming-centric methodologies that focus on which of the following?",
     "choices": {
       "Working with a highly controversial project that may have political implications": false,
       "Making assignments for a project": false,
@@ -92,10 +117,15 @@
       "Streamlining the SDLC": true
     }
   },
-  "Scope creep happens when new requirements are added to the project after the original project scope was defined.": {
-    "choices": { "True": true, "False": false }
+  {
+    "question": "Scope creep happens when new requirements are added to the project after the original project scope was defined.",
+    "choices": {
+      "True": true,
+      "False": false
+    }
   },
-  "Which of the following might result in version 1; version 2 (etc.) of a system?": {
+  {
+    "question": "Which of the following might result in version 1; version 2 (etc.) of a system?",
     "choices": {
       "System Prototyping": false,
       "Waterfall Development": false,
@@ -103,22 +133,43 @@
       "Iterative Development": true
     }
   },
-  "A classic planning mistake mentioned in the textbook is having an 'overly optimistic schedule'.": {
-    "choices": { "True": true, "False": false }
+  {
+    "question": "A classic planning mistake mentioned in the textbook is having an 'overly optimistic schedule'.",
+    "choices": {
+      "True": true,
+      "False": false
+    }
   },
-  "PMP is People – Management – Project – the three components of successful project management.": {
-    "choices": { "True": false, "False": true }
+  {
+    "question": "PMP is People – Management – Project – the three components of successful project management.",
+    "choices": {
+      "True": false,
+      "False": true
+    }
   },
-  "The margin of error in cost and time estimates can be as much as 20% in the planning phase for the system proposal deliverable.": {
-    "choices": { "True": false, "False": true }
+  {
+    "question": "The margin of error in cost and time estimates can be as much as 20% in the planning phase for the system proposal deliverable.",
+    "choices": {
+      "True": false,
+      "False": true
+    }
   },
-  "If you had a project with very clear requirements; familiar technologies; not super complex; reliable; a very long time schedule and where the need for schedule visibility is low – the best methodology might be Extreme programming.": {
-    "choices": { "True": false, "False": true }
+  {
+    "question": "If you had a project with very clear requirements; familiar technologies; not super complex; reliable; a very long time schedule and where the need for schedule visibility is low – the best methodology might be Extreme programming.",
+    "choices": {
+      "True": false,
+      "False": true
+    }
   },
-  "Nate is managing a project that is behind by one month with five months to go. He should add four to six staff persons to the project to get it back up to speed.": {
-    "choices": { "True": false, "False": true }
+  {
+    "question": "Nate is managing a project that is behind by one month with five months to go. He should add four to six staff persons to the project to get it back up to speed.",
+    "choices": {
+      "True": false,
+      "False": true
+    }
   },
-  "TJ is coordinating a project. Which would he probably NOT use to avoid conflicts?": {
+  {
+    "question": "TJ is coordinating a project. Which would he probably NOT use to avoid conflicts?",
     "choices": {
       "Develop a project charter": false,
       "Communicate the business value to the team": false,
@@ -127,7 +178,8 @@
       "Look at other projects and priorities and see how that might impact the project": false
     }
   },
-  "Interpersonal skills for a project manager might be important when:": {
+  {
+    "question": "Interpersonal skills for a project manager might be important when:",
     "choices": {
       "Creating the system proposal": false,
       "Using the V-model variation of the Waterfall Methodology.": false,
@@ -136,7 +188,8 @@
       "Making assignments for a project": false
     }
   },
-  "Which of the following would BEST describe \"system reliability\"?": {
+  {
+    "question": "Which of the following would BEST describe \"system reliability\"?",
     "choices": {
       "The aspect of how quickly the system can be developed and implemented": false,
       "The aspect of how complex the system must be": false,
@@ -145,7 +198,8 @@
       "The aspect of how accurate the system must be (such as medical equipment or for games)": true
     }
   },
-  "Rapid Application Development is a collection of methodologies that include all of the following except:": {
+  {
+    "question": "Rapid Application Development is a collection of methodologies that include all of the following except:",
     "choices": {
       "Iterative Development": false,
       "V-model Methodology": true,
@@ -153,16 +207,29 @@
       "Throwaway Prototyping": false
     }
   },
-  "Throwaway Prototyping balances the benefits of well-thought-out analysis and design phases with the advantages of using prototypes to refine key issues before a system is built.": {
-    "choices": { "True": true, "False": false }
+  {
+    "question": "Throwaway Prototyping balances the benefits of well-thought-out analysis and design phases with the advantages of using prototypes to refine key issues before a system is built.",
+    "choices": {
+      "True": true,
+      "False": false
+    }
   },
-  "Agile Development stresses analysis, modeling and documentation over programming.": {
-    "choices": { "True": false, "False": true }
+  {
+    "question": "Agile Development stresses analysis, modeling and documentation over programming.",
+    "choices": {
+      "True": false,
+      "False": true
+    }
   },
-  "A classic planning mistake mentioned in the textbook is motivating employees with financial rewards instead of recognition and genuine thanks.": {
-    "choices": { "True": false, "False": true }
+  {
+    "question": "A classic planning mistake mentioned in the textbook is motivating employees with financial rewards instead of recognition and genuine thanks.",
+    "choices": {
+      "True": false,
+      "False": true
+    }
   },
-  "Extreme programming requires a great deal of discipline and it is recommended for:": {
+  {
+    "question": "Extreme programming requires a great deal of discipline and it is recommended for:",
     "choices": {
       "Large systems": false,
       "Mission critical applications": false,
@@ -171,10 +238,15 @@
     },
     "multi_select": true
   },
-  "Extreme Programming (XP) stresses customer satisfaction and teamwork.": {
-    "choices": { "True": true, "False": false }
+  {
+    "question": "Extreme Programming (XP) stresses customer satisfaction and teamwork.",
+    "choices": {
+      "True": true,
+      "False": false
+    }
   },
-  "Which of the following methodologies might be most appropriate if you have a system project with: somewhat unclear requirements; somewhat unfamiliar technologies; that is complex; reasonably reliable; a short time schedule and high schedule visibility?": {
+  {
+    "question": "Which of the following methodologies might be most appropriate if you have a system project with: somewhat unclear requirements; somewhat unfamiliar technologies; that is complex; reasonably reliable; a short time schedule and high schedule visibility?",
     "choices": {
       "System prototyping": false,
       "Waterfall": false,
@@ -183,13 +255,22 @@
       "Throwaway prototyping": false
     }
   },
-  "The corporate IT department carefully needs to prioritize, select and manage a portfolio of projects.": {
-    "choices": { "True": true, "False": false }
+  {
+    "question": "The corporate IT department carefully needs to prioritize, select and manage a portfolio of projects.",
+    "choices": {
+      "True": true,
+      "False": false
+    }
   },
-  "A critical success factor for project management is to start with a realistic assessment of the work that needs to be accomplished.": {
-    "choices": { "True": true, "False": false }
+  {
+    "question": "A critical success factor for project management is to start with a realistic assessment of the work that needs to be accomplished.",
+    "choices": {
+      "True": true,
+      "False": false
+    }
   },
-  "Suggestions for motivation might include all of these EXCEPT:": {
+  {
+    "question": "Suggestions for motivation might include all of these EXCEPT:",
     "choices": {
       "Recognize and reward good efforts": false,
       "Setting realistic deadlines": false,
@@ -198,7 +279,8 @@
       "Having a good working environment": false
     }
   },
-  "Which of the following methodologies might be most appropriate if you have a system project with: unclear requirements; very familiar technologies; not all that complex; reasonably reliable; a short time schedule and the schedule visibility is somewhat important?": {
+  {
+    "question": "Which of the following methodologies might be most appropriate if you have a system project with: unclear requirements; very familiar technologies; not all that complex; reasonably reliable; a short time schedule and the schedule visibility is somewhat important?",
     "choices": {
       "Iterative": false,
       "Waterfall": false,
@@ -207,13 +289,22 @@
       "Agile development": true
     }
   },
-  "CIO is an acronym for \"Chief Information Officer\".": {
-    "choices": { "True": true, "False": false }
+  {
+    "question": "CIO is an acronym for \"Chief Information Officer\".",
+    "choices": {
+      "True": true,
+      "False": false
+    }
   },
-  "Project Managers must be certified as PMP (Project Management Professionals)": {
-    "choices": { "True": false, "False": true }
+  {
+    "question": "Project Managers must be certified as PMP (Project Management Professionals)",
+    "choices": {
+      "True": false,
+      "False": true
+    }
   },
-  "Which of the following is not a project characteristic that will affect the methodology selection decision?": {
+  {
+    "question": "Which of the following is not a project characteristic that will affect the methodology selection decision?",
     "choices": {
       "Schedule visibility": false,
       "Complexity of the system": false,
@@ -222,7 +313,8 @@
       "User requirements clarity": false
     }
   },
-  "Which of the following methodologies might be most appropriate if you have a system project with: unclear user requirements; unfamiliar technologies; very complex; must be reliable; a short to medium time schedule and the schedule visibility is somewhat important?": {
+  {
+    "question": "Which of the following methodologies might be most appropriate if you have a system project with: unclear user requirements; unfamiliar technologies; very complex; must be reliable; a short to medium time schedule and the schedule visibility is somewhat important?",
     "choices": {
       "Iterative": false,
       "System prototyping": false,
@@ -231,7 +323,8 @@
       "Parallel": false
     }
   },
-  "The main difference between the Parallel Development Methodology and the Iterative Development Methodology is that:": {
+  {
+    "question": "The main difference between the Parallel Development Methodology and the Iterative Development Methodology is that:",
     "choices": {
       "The Parallel Development Methodology will have various releases (like version 1.0; 2.0, etc.) and the Iterative will not": false,
       "The Iterative Methodology will create various models or prototypes with user involvement before setting on design concepts and the Parallel Methodology will not": false,
@@ -240,7 +333,8 @@
       "The Parallel Methodology will create various models or prototypes with user involvement before setting on design concepts and the Iterative will not": false
     }
   },
-  "Which is a true statement about IT projects?": {
+  {
+    "question": "Which is a true statement about IT projects?",
     "choices": {
       "Project Managers must be certified as PMP (Project Management Professionals)": false,
       "Project teams of 12 to 15 are generally considered optimum": false,
@@ -249,7 +343,8 @@
       "The majority of projects taken on by IT departments are not strategic to the business": false
     }
   },
-  "Extreme programming emphasizes:": {
+  {
+    "question": "Extreme programming emphasizes:",
     "multi_select": true,
     "choices": {
       "Simplicity as a core value": true,
@@ -258,7 +353,8 @@
       "Communication as a core value": true
     }
   },
-  "Garrett has been told by management that his project MUST be completed on time. His best estimates are more than two weeks after the absolute deadline. Which technique could he use to get a functional system on time?": {
+  {
+    "question": "Garrett has been told by management that his project MUST be completed on time. His best estimates are more than two weeks after the absolute deadline. Which technique could he use to get a functional system on time?",
     "choices": {
       "Benchmarking": false,
       "System prototyping": false,
@@ -267,13 +363,22 @@
       "Risk management": false
     }
   },
-  "The Iterative approach of the RAD methodology breaks the overall project into a series of release versions.": {
-    "choices": { "True": true, "False": false }
+  {
+    "question": "The Iterative approach of the RAD methodology breaks the overall project into a series of release versions.",
+    "choices": {
+      "True": true,
+      "False": false
+    }
   },
-  "The majority of projects taken on by IT departments are not strategic to the business": {
-    "choices": { "True": false, "False": true }
+  {
+    "question": "The majority of projects taken on by IT departments are not strategic to the business",
+    "choices": {
+      "True": false,
+      "False": true
+    }
   },
-  "Which of the following methodologies takes the longest to complete all the SDLC steps?": {
+  {
+    "question": "Which of the following methodologies takes the longest to complete all the SDLC steps?",
     "choices": {
       "Iterative": false,
       "Parallel": false,
@@ -282,10 +387,15 @@
       "Waterfall": true
     }
   },
-  "The Waterfall Methodology breaks the overall project into a series of release versions.": {
-    "choices": { "True": false, "False": true }
+  {
+    "question": "The Waterfall Methodology breaks the overall project into a series of release versions.",
+    "choices": {
+      "True": false,
+      "False": true
+    }
   },
-  "Which is NOT suggested for IT development projects?": {
+  {
+    "question": "Which is NOT suggested for IT development projects?",
     "choices": {
       "Projects need to give a positive return on investment within four years": true,
       "Projects need to give value to the business": false,
@@ -294,13 +404,22 @@
       "Projects need to be carefully selected": false
     }
   },
-  "The Throwaway Prototyping methodology is especially good for exploring design alternatives.": {
-    "choices": { "True": true, "False": false }
+  {
+    "question": "The Throwaway Prototyping methodology is especially good for exploring design alternatives.",
+    "choices": {
+      "True": true,
+      "False": false
+    }
   },
-  "Either systems prototyping or throwaway prototyping are generally a good methodology choice when the project has unclear user requirements.": {
-    "choices": { "True": true, "False": false }
+  {
+    "question": "Either systems prototyping or throwaway prototyping are generally a good methodology choice when the project has unclear user requirements.",
+    "choices": {
+      "True": true,
+      "False": false
+    }
   },
-  "Which of the following methodologies might be most appropriate if you have a system project with: clear requirements; very familiar technologies; not all that complex; reasonably reliable; a very long time schedule, and the schedule visibility is not important?": {
+  {
+    "question": "Which of the following methodologies might be most appropriate if you have a system project with: clear requirements; very familiar technologies; not all that complex; reasonably reliable; a very long time schedule, and the schedule visibility is not important?",
     "choices": {
       "System prototyping": false,
       "Waterfall": true,
@@ -309,7 +428,8 @@
       "Iterative": false
     }
   },
-  "Which of the following would BEST describe \"system complexity\"?": {
+  {
+    "question": "Which of the following would BEST describe \"system complexity\"?",
     "choices": {
       "The aspect of using technologies that analysts and developers are familiar with": false,
       "The aspect of what the business side really wants the system to do": false,
@@ -318,7 +438,8 @@
       "The aspect of how quickly the system can be developed and implemented": false
     }
   },
-  "Which would generally NOT be taken into consideration for project portfolio management in an organization?": {
+  {
+    "question": "Which would generally NOT be taken into consideration for project portfolio management in an organization?",
     "choices": {
       "The number of tactical projects": false,
       "The number of high risk projects": false,
@@ -327,13 +448,22 @@
       "The number of financially feasible projects": true
     }
   },
-  "In most IT departments, the demand for IT projects is generally about the same as the department's ability to supply them.": {
-    "choices": { "True": false, "False": true }
+  {
+    "question": "In most IT departments, the demand for IT projects is generally about the same as the department's ability to supply them.",
+    "choices": {
+      "True": false,
+      "False": true
+    }
   },
-  "The project methodology that takes the longest to complete is the Waterfall Development Methodology.": {
-    "choices": { "True": true, "False": false }
+  {
+    "question": "The project methodology that takes the longest to complete is the Waterfall Development Methodology.",
+    "choices": {
+      "True": true,
+      "False": false
+    }
   },
-  "Which of the following methodologies might be most appropriate if you have a system project with: unclear user requirements; unfamiliar technologies; somewhat complex; needs to be reliable; time is not an issue and the schedule visibility is somewhat important?": {
+  {
+    "question": "Which of the following methodologies might be most appropriate if you have a system project with: unclear user requirements; unfamiliar technologies; somewhat complex; needs to be reliable; time is not an issue and the schedule visibility is somewhat important?",
     "choices": {
       "Parallel": false,
       "Iterative": false,
@@ -342,7 +472,8 @@
       "System prototyping": false
     }
   },
-  "A team of developers and customers are in close communication, with frequent communications, simplicity, feedback and courage. This would best describe:": {
+  {
+    "question": "A team of developers and customers are in close communication, with frequent communications, simplicity, feedback and courage. This would best describe:",
     "choices": {
       "The extreme programming methodology": true,
       "The parallel development methodology": false,
@@ -351,7 +482,8 @@
       "The waterfall development methodology": false
     }
   },
-  "RAD is an acronym for:": {
+  {
+    "question": "RAD is an acronym for:",
     "choices": {
       "Rapid Authentic Development": false,
       "Real Autonomous Development": false,
@@ -360,7 +492,8 @@
       "Rapid Application Development": true
     }
   },
-  "Micah is a fairly new project manager. He estimated for a project plan (on the planning phase) that the project would cost $50,000 and take 20 weeks. According to the margin of error guidelines for well-done estimates, that could range from:": {
+  {
+    "question": "Micah is a fairly new project manager. He estimated for a project plan (on the planning phase) that the project would cost $50,000 and take 20 weeks. According to the margin of error guidelines for well-done estimates, that could range from:",
     "choices": {
       "0 and $100,000 – and between 15 and 25 weeks": true,
       "25,000 and $75,000 – and between 10 and 30 weeks": false,
@@ -369,7 +502,8 @@
       "0 and $100,000 – and between 0 and 40 weeks": false
     }
   },
-  "Extreme Programming (XP) is BEST characterized as:": {
+  {
+    "question": "Extreme Programming (XP) is BEST characterized as:",
     "choices": {
       "A method for exploring design alternatives": false,
       "A method for emphasizing customer satisfaction": true,
@@ -378,7 +512,8 @@
       "More explicit testing": false
     }
   },
-  "Which of the following is NOT a classic planning mistake?": {
+  {
+    "question": "Which of the following is NOT a classic planning mistake?",
     "choices": {
       "Adding people to a late project": false,
       "Omitting key requirements": true,
@@ -387,13 +522,22 @@
       "Overly optimistic schedule": false
     }
   },
-  "The science (or art) of project management is setting a schedule and sticking to it no matter what – even if that includes working weekends and adding staff to reach the deadline on time.": {
-    "choices": { "True": false, "False": true }
+  {
+    "question": "The science (or art) of project management is setting a schedule and sticking to it no matter what – even if that includes working weekends and adding staff to reach the deadline on time.",
+    "choices": {
+      "True": false,
+      "False": true
+    }
   },
-  "The Throwaway Prototyping methodology is good at creating release version 1.0 for users; and then the methodology shifts to system prototyping to finish the system.": {
-    "choices": { "True": false, "False": true }
+  {
+    "question": "The Throwaway Prototyping methodology is good at creating release version 1.0 for users; and then the methodology shifts to system prototyping to finish the system.",
+    "choices": {
+      "True": false,
+      "False": true
+    }
   },
-  "What the MAIN difference between systems prototyping and throwaway prototyping?": {
+  {
+    "question": "What the MAIN difference between systems prototyping and throwaway prototyping?",
     "choices": {
       "Throwaway prototyping develops systems that will be use as 'stop-gap' systems – and generally for less than six months; while systems prototyping results in systems that will be used extensively for several years.": false,
       "Throwaway prototyping involves users while systems prototyping does not": false,
@@ -402,10 +546,15 @@
       "Systems prototyping involves users while throwaway prototyping does not": false
     }
   },
-  "Project estimates tend to have a built-in buffer of time": {
-    "choices": { "True": false, "False": true }
+  {
+    "question": "Project estimates tend to have a built-in buffer of time",
+    "choices": {
+      "True": false,
+      "False": true
+    }
   },
-  "Which of the following methodologies might be most appropriate if you have a system project with: clear requirements; very familiar technologies; not all that complex; reasonably reliable; a short time schedule and the schedule visibility is not important?": {
+  {
+    "question": "Which of the following methodologies might be most appropriate if you have a system project with: clear requirements; very familiar technologies; not all that complex; reasonably reliable; a short time schedule and the schedule visibility is not important?",
     "choices": {
       "System prototyping": false,
       "Waterfall": false,
@@ -414,4 +563,4 @@
       "Parallel": true
     }
   }
-}
+]

@@ -61,20 +61,17 @@ function nextQuiz() {
   if (questionsNum == "ALL") {
     questionsNum = Number.MAX_VALUE;
   }
-  if (formChanged || quizData.length < questionsNum) {
-    if (moduleSelectBoxes.every((box) => !box.checked)) {
-      moduleSelection.style.animation = "blink 1s";
-      return;
-    }
-    if (!AIChoice.checked && !LHChoice.checked) {
-      questionBankSelection.style.animation = "blink 1s";
-      return;
-    }
-    _populateData();
-    formChanged = false;
+  const modules = getSelectedModules();
+  if (modules.length == 0) {
+    moduleSelection.style.animation = "blink 1s";
+    return;
   }
-
-  let data = quizData.slice(0, questionsNum);
+  const banks = getSelectedBanks();
+  if (banks.length == 0) {
+    questionBankSelection.style.animation = "blink 1s";
+    return;
+  }
+  const data = getData(banks, modules, questionsNum);
   navText.innerText = `Attempt ${pastAttempts.length + 1}`;
   toQuizPage();
   document.getElementById("quiz").replaceWith(generateQuiz(data));
@@ -144,21 +141,21 @@ function submit() {
   showResult(correctAnswers, questions.length);
 
   // update past attemps
-  const modules = moduleSelectBoxes
-    .filter((box) => box.checked)
-    .map((box) => box.id.slice(6))
-    .join(", ");
-  const banks = [LHChoice, AIChoice]
-    .filter((box) => box.checked)
-    .map((box) => box.id)
-    .join(", ");
   pastAttempts.push({
     quiz: setupQuiz(quiz.cloneNode(true)),
-    modules: modules,
-    banks: banks,
+    banks: getSelectedBanks().join(", "),
+    modules: getSelectedModules().join(", "),
     score: correctAnswers,
     outOf: questions.length,
   });
+}
+
+function getSelectedModules() {
+  return moduleSelectBoxes.filter((box) => box.checked).map((box) => box.id);
+}
+
+function getSelectedBanks() {
+  return [LHChoice, AIChoice].filter((box) => box.checked).map((box) => box.id);
 }
 
 function showResult(score, outOf) {
@@ -203,29 +200,6 @@ function toggleUnsure(question) {
   prevQuest.parentElement.style.visibility =
     nextQuest.parentElement.style.visibility =
       unsureQuestions.length > 0 ? "visible" : "hidden";
-}
-
-function _populateData() {
-  let offset = 1;
-  let length = modulesName.midterm.length;
-  if (finalChoice.checked) {
-    offset += length;
-    length = modulesName.final.length;
-  }
-
-  quizData = {};
-  for (let i = 0; i < length; i++) {
-    if (moduleSelectBoxes[i].checked) {
-      if (LHChoice.checked) {
-        quizData = { ...quizData, ...modulesData.LH[i + offset] };
-      }
-      if (AIChoice.checked) {
-        quizData = { ...quizData, ...modulesData.AI[i + offset] };
-      }
-    }
-  }
-  quizData = Object.entries(quizData);
-  shuffle(quizData);
 }
 
 function editExplanation(explanation) {

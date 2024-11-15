@@ -11,7 +11,7 @@ const db = firebase.firestore();
 let modulesName;
 let modulesData = { LH: {}, AI: {} };
 
-function getData() {
+function loadData() {
   return _getModules().then((data) => {
     modulesName = data;
     const promises = [];
@@ -20,12 +20,12 @@ function getData() {
     for (let i = 0; i < data.midterm.length; ++i) {
       promises.push(
         _getQuestions(i + midtermOffset, "LH").then(
-          (questions) => (modulesData.LH[i + midtermOffset] = questions)
+          (questions) => (modulesData.LH[i + midtermOffset] = _data(questions))
         )
       );
       promises.push(
         _getQuestions(i + midtermOffset, "AI").then(
-          (questions) => (modulesData.AI[i + midtermOffset] = questions)
+          (questions) => (modulesData.AI[i + midtermOffset] = _data(questions))
         )
       );
     }
@@ -34,13 +34,40 @@ function getData() {
     for (let i = 0; i < data.final.length; ++i) {
       promises.push(
         _getQuestions(i + finalOffset, "LH").then(
-          (questions) => (modulesData.LH[i + finalOffset] = questions)
+          (questions) => (modulesData.LH[i + finalOffset] = _data(questions))
         )
       );
     }
 
     return Promise.all(promises);
   });
+}
+
+function getData(banks, modules, count) {
+  let result = [];
+  const selectionSize = {};
+  for (const bank of banks) {
+    for (const module of modules) {
+      selectionSize[`${bank}.${module}`] = modulesData[bank][module].size;
+    }
+  }
+  const selections = Object.keys(selectionSize);
+  const totalSize = Object.values(selectionSize).reduce((a, b) => a + b, 0);
+  const effectiveSize = Math.min(totalSize, count);
+  for (const [selection, size] of Object.entries(selectionSize)) {
+    const [bank, module] = selection.split(".");
+    const getAmount = Math.floor((effectiveSize * size) / totalSize);
+    result = result.concat(modulesData[bank][module].get(getAmount));
+  }
+  if (result.length < effectiveSize) {
+    shuffle(selections);
+    for (const selection of selections) {
+      const [bank, module] = selection.split(".");
+      result.push(modulesData[bank][module].get(1)[0]);
+      if (result.length >= effectiveSize) break;
+    }
+  }
+  return result;
 }
 
 function getExplanation(questionText) {
@@ -102,7 +129,27 @@ function _getModules() {
 }
 
 function _getQuestions(moduleNum, bank) {
-  return fetch(`./data/${bank}/module${moduleNum}.json`)
-    .then((response) => response.json())
-    .catch(() => new Object());
+  return fetch(`./data/${bank}/module${moduleNum}.json`).then((response) => {
+    if (!response.ok) return [];
+    return response.json();
+  });
+}
+
+function _data(questions) {
+  return {
+    _origin: questions,
+    _data: [],
+    size: questions.length,
+    get: function (num) {
+      const length = this._data.length;
+      if (length == 0) {
+        shuffle(this._origin);
+        this._data = [...this._origin];
+      } else if (length < num) {
+        shuffle(this._origin);
+        this._data = this._data.concat(this._origin.slice(0, num - length));
+      }
+      return this._data.splice(0, num);
+    },
+  };
 }

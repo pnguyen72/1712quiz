@@ -1,5 +1,6 @@
-{
-  "Which of the following best describes the use of an Entity-Relationship Diagram (ERD)?": {
+[
+  {
+    "question": "Which of the following best describes the use of an Entity-Relationship Diagram (ERD)?",
     "choices": {
       "To outline the system’s hardware components": false,
       "To create the system’s budget": false,
@@ -7,7 +8,8 @@
       "To visually represent the relationships between data entities in a system": true
     }
   },
-  "Which of the following is a common use of an Entity-Relationship Diagram (ERD)?": {
+  {
+    "question": "Which of the following is a common use of an Entity-Relationship Diagram (ERD)?",
     "choices": {
       "To define the project’s timeline": false,
       "To document the system’s hardware architecture": false,
@@ -15,7 +17,8 @@
       "To create system test cases": false
     }
   },
-  "Which of the following best describes a foreign key in data modeling?": {
+  {
+    "question": "Which of the following best describes a foreign key in data modeling?",
     "choices": {
       "A process that manipulates data in the system": false,
       "A constraint that limits data input": false,
@@ -23,7 +26,8 @@
       "A unique identifier for a record in an entity": false
     }
   },
-  "Which of the following is a key concept in data modeling?": {
+  {
+    "question": "Which of the following is a key concept in data modeling?",
     "choices": {
       "System performance testing": false,
       "System architecture": false,
@@ -31,7 +35,8 @@
       "User interface design": false
     }
   },
-  "What is the purpose of a primary key in a database?": {
+  {
+    "question": "What is the purpose of a primary key in a database?",
     "choices": {
       "To create user interfaces": false,
       "To define the system’s architecture": false,
@@ -39,7 +44,8 @@
       "To uniquely identify each record in a table": true
     }
   },
-  "Which of the following is true about a primary key in an entity?": {
+  {
+    "question": "Which of the following is true about a primary key in an entity?",
     "choices": {
       "It describes how entities interact with external systems": false,
       "It is a unique identifier for each record within the entity": true,
@@ -47,7 +53,8 @@
       "It defines the system’s architecture": false
     }
   },
-  "What is a many-to-many relationship in data modeling?": {
+  {
+    "question": "What is a many-to-many relationship in data modeling?",
     "choices": {
       "A relationship where many records in one entity are linked to many records in another entity": true,
       "A relationship where one record in an entity is linked to multiple records in another entity": false,
@@ -55,7 +62,8 @@
       "A relationship where one record in an entity is linked to only one record in another entity": false
     }
   },
-  "What is the role of a foreign key in relational databases?": {
+  {
+    "question": "What is the role of a foreign key in relational databases?",
     "choices": {
       "To create user interfaces": false,
       "To document system test cases": false,
@@ -63,7 +71,8 @@
       "To define system architecture": false
     }
   },
-  "What does a relationship represent in an Entity-Relationship Diagram (ERD)?": {
+  {
+    "question": "What does a relationship represent in an Entity-Relationship Diagram (ERD)?",
     "choices": {
       "The interaction between the user and the system": false,
       "The user’s role within the system": false,
@@ -71,7 +80,8 @@
       "The flow of data between processes": false
     }
   },
-  "What is the primary function of a foreign key in relational databases?": {
+  {
+    "question": "What is the primary function of a foreign key in relational databases?",
     "choices": {
       "To store system configuration settings": false,
       "To ensure data integrity": false,
@@ -79,7 +89,8 @@
       "To define system security": false
     }
   },
-  "Which of the following is an example of a one-to-many relationship in data modeling?": {
+  {
+    "question": "Which of the following is an example of a one-to-many relationship in data modeling?",
     "choices": {
       "One employee can manage only one department": false,
       "One customer can place multiple orders": true,
@@ -87,7 +98,8 @@
       "One product is associated with only one category": false
     }
   },
-  "Which of the following is an example of an entity in an Entity-Relationship Diagram (ERD)?": {
+  {
+    "question": "Which of the following is an example of an entity in an Entity-Relationship Diagram (ERD)?",
     "choices": {
       "A data flow": false,
       "A system process": false,
@@ -95,7 +107,8 @@
       "A hardware component": false
     }
   },
-  "Which of the following describes the function of a foreign key in relational databases?": {
+  {
+    "question": "Which of the following describes the function of a foreign key in relational databases?",
     "choices": {
       "It defines the system’s hardware components": false,
       "It provides a unique identifier for records within an entity": false,
@@ -103,7 +116,8 @@
       "It links related records between tables to establish relationships": true
     }
   },
-  "What is the purpose of a foreign key in a database?": {
+  {
+    "question": "What is the purpose of a foreign key in a database?",
     "choices": {
       "To define system performance metrics": false,
       "To store user information": false,
@@ -111,7 +125,8 @@
       "To uniquely identify records within an entity": false
     }
   },
-  "What is a one-to-one relationship in data modeling?": {
+  {
+    "question": "What is a one-to-one relationship in data modeling?",
     "choices": {
       "One record in an entity is linked to multiple records in another entity": false,
       "Many records in one entity are linked to many records in another entity": false,
@@ -119,7 +134,8 @@
       "One record in an entity is linked to only one record in another entity": true
     }
   },
-  "What is a cardinality constraint in an Entity-Relationship Diagram (ERD)?": {
+  {
+    "question": "What is a cardinality constraint in an Entity-Relationship Diagram (ERD)?",
     "choices": {
       "It defines the number of instances of one entity that can be associated with another entity": true,
       "It describes the attributes of an entity": false,
@@ -127,7 +143,8 @@
       "It outlines the system’s security requirements": false
     }
   },
-  "What is the role of attributes in an Entity-Relationship Diagram (ERD)?": {
+  {
+    "question": "What is the role of attributes in an Entity-Relationship Diagram (ERD)?",
     "choices": {
       "They define the system’s architecture": false,
       "They outline the project’s timeline": false,
@@ -135,7 +152,8 @@
       "They represent data flows": false
     }
   },
-  "Which of the following best describes the purpose of data modeling in system analysis?": {
+  {
+    "question": "Which of the following best describes the purpose of data modeling in system analysis?",
     "choices": {
       "To define how the system will store, process, and manage data": true,
       "To outline the system’s performance metrics": false,
@@ -143,7 +161,8 @@
       "To define the system’s hardware components": false
     }
   },
-  "What is the purpose of creating a data model in system analysis?": {
+  {
+    "question": "What is the purpose of creating a data model in system analysis?",
     "choices": {
       "To write system test cases": false,
       "To outline the system’s hardware specifications": false,
@@ -151,7 +170,8 @@
       "To visually represent the structure and relationships of the system’s data": true
     }
   },
-  "In an Entity-Relationship Diagram (ERD), what does a relationship describe?": {
+  {
+    "question": "In an Entity-Relationship Diagram (ERD), what does a relationship describe?",
     "choices": {
       "The connection between two or more entities": true,
       "The system’s user interface": false,
@@ -159,7 +179,8 @@
       "The attributes of an entity": false
     }
   },
-  "What does an entity represent in an Entity-Relationship Diagram (ERD)?": {
+  {
+    "question": "What does an entity represent in an Entity-Relationship Diagram (ERD)?",
     "choices": {
       "A collection of related data": true,
       "A project milestone": false,
@@ -167,7 +188,8 @@
       "A user interface": false
     }
   },
-  "Which of the following is a key benefit of data modeling?": {
+  {
+    "question": "Which of the following is a key benefit of data modeling?",
     "choices": {
       "It outlines the system’s budget": false,
       "It defines the system’s user interface design": false,
@@ -175,7 +197,8 @@
       "It helps ensure that the system’s data is stored, processed, and managed efficiently": true
     }
   },
-  "What is the role of relationships in an Entity-Relationship Diagram (ERD)?": {
+  {
+    "question": "What is the role of relationships in an Entity-Relationship Diagram (ERD)?",
     "choices": {
       "To outline project milestones": false,
       "To define system functions": false,
@@ -183,7 +206,8 @@
       "To define hardware specifications": false
     }
   },
-  "Which of the following describes the purpose of a primary key in an entity?": {
+  {
+    "question": "Which of the following describes the purpose of a primary key in an entity?",
     "choices": {
       "To uniquely identify each record in the entity": true,
       "To describe the attributes of the entity": false,
@@ -191,7 +215,8 @@
       "To link related records between different entities": false
     }
   },
-  "Which of the following is a benefit of using data models in system development?": {
+  {
+    "question": "Which of the following is a benefit of using data models in system development?",
     "choices": {
       "They outline the project’s timeline": false,
       "They create user interfaces": false,
@@ -199,7 +224,8 @@
       "They define the system’s hardware components": false
     }
   },
-  "Which of the following is an example of a one-to-one relationship in data modeling?": {
+  {
+    "question": "Which of the following is an example of a one-to-one relationship in data modeling?",
     "choices": {
       "One customer can place many orders": false,
       "Many students can enroll in many courses": false,
@@ -207,7 +233,8 @@
       "One person is assigned to one office": true
     }
   },
-  "What is the purpose of a relationship in data modeling?": {
+  {
+    "question": "What is the purpose of a relationship in data modeling?",
     "choices": {
       "To develop user interfaces": false,
       "To link entities together and describe how they are related": true,
@@ -215,7 +242,8 @@
       "To define system architecture": false
     }
   },
-  "What is the primary goal of data modeling in system development?": {
+  {
+    "question": "What is the primary goal of data modeling in system development?",
     "choices": {
       "To define the structure and relationships of the system’s data": true,
       "To write system code": false,
@@ -223,7 +251,8 @@
       "To develop hardware specifications": false
     }
   },
-  "In data modeling, what is the purpose of a foreign key?": {
+  {
+    "question": "In data modeling, what is the purpose of a foreign key?",
     "choices": {
       "To link records between different entities": true,
       "To describe the system’s performance": false,
@@ -231,7 +260,8 @@
       "To define system test cases": false
     }
   },
-  "Which of the following best describes the use of a one-to-many relationship in data modeling?": {
+  {
+    "question": "Which of the following best describes the use of a one-to-many relationship in data modeling?",
     "choices": {
       "One record in an entity is linked to only one record in another entity": false,
       "Many records in an entity are linked to many records in another entity": false,
@@ -239,7 +269,8 @@
       "One entity has no relationships with other entities": false
     }
   },
-  "What is the role of an attribute in an Entity-Relationship Diagram (ERD)?": {
+  {
+    "question": "What is the role of an attribute in an Entity-Relationship Diagram (ERD)?",
     "choices": {
       "It defines the system’s architecture": false,
       "It links records between related tables": false,
@@ -247,7 +278,8 @@
       "It describes the characteristics of an entity, such as its properties or traits": true
     }
   },
-  "Which of the following is an attribute in an Entity-Relationship Diagram (ERD)?": {
+  {
+    "question": "Which of the following is an attribute in an Entity-Relationship Diagram (ERD)?",
     "choices": {
       "An entity’s characteristics, such as customer name or product price": true,
       "A process that manipulates data in the system": false,
@@ -255,7 +287,8 @@
       "A constraint on system performance": false
     }
   },
-  "Which of the following is a key characteristic of a foreign key in data modeling?": {
+  {
+    "question": "Which of the following is a key characteristic of a foreign key in data modeling?",
     "choices": {
       "It defines system test cases": false,
       "It is used to establish relationships between tables in a database": true,
@@ -263,7 +296,8 @@
       "It ensures that data is stored in a consistent manner": false
     }
   },
-  "What is an attribute in an Entity-Relationship Diagram (ERD)?": {
+  {
+    "question": "What is an attribute in an Entity-Relationship Diagram (ERD)?",
     "choices": {
       "A characteristic or property of an entity": true,
       "A flow of data between entities": false,
@@ -271,7 +305,8 @@
       "A process that the system performs": false
     }
   },
-  "What is the purpose of an Entity-Relationship Diagram (ERD)?": {
+  {
+    "question": "What is the purpose of an Entity-Relationship Diagram (ERD)?",
     "choices": {
       "To design user interfaces": false,
       "To outline the project’s budget": false,
@@ -279,7 +314,8 @@
       "To define the system’s hardware components": false
     }
   },
-  "What is a primary key in a database?": {
+  {
+    "question": "What is a primary key in a database?",
     "choices": {
       "A process that manipulates data": false,
       "A system’s access control feature": false,
@@ -287,7 +323,8 @@
       "A unique identifier for each record in an entity": true
     }
   },
-  "Which of the following best describes a many-to-many relationship in data modeling?": {
+  {
+    "question": "Which of the following best describes a many-to-many relationship in data modeling?",
     "choices": {
       "One entity is not related to other entities": false,
       "One record in an entity is linked to only one record in another entity": false,
@@ -295,7 +332,8 @@
       "Many records in one entity are linked to multiple records in another entity": false
     }
   },
-  "Which of the following best describes a one-to-many relationship in data modeling?": {
+  {
+    "question": "Which of the following best describes a one-to-many relationship in data modeling?",
     "choices": {
       "One record in an entity is linked to only one record in another entity": false,
       "One entity has no relationship with any other entities": false,
@@ -303,7 +341,8 @@
       "One record in an entity is linked to multiple records in another entity": true
     }
   },
-  "Which diagram is commonly used to represent entities and relationships in data modeling?": {
+  {
+    "question": "Which diagram is commonly used to represent entities and relationships in data modeling?",
     "choices": {
       "Data Flow Diagram (DFD)": false,
       "Use case diagram": false,
@@ -311,4 +350,4 @@
       "Class diagram": false
     }
   }
-}
+]

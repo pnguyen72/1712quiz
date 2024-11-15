@@ -23,7 +23,7 @@ function generateModuleSelection() {
 
     const input = document.createElement("input");
     input.type = "checkbox";
-    input.id = `module${index + indexOffset}`;
+    input.id = `${index + indexOffset}`;
     input.addEventListener(
       "click",
       () => (document.getElementById("moduleALLSelect").checked = false)
@@ -70,18 +70,18 @@ function generateQuiz(data) {
   const quiz = document.createElement("div");
   quiz.id = "quiz";
   quiz.className = "unsubmitted";
-  data.forEach((question, index) =>
-    quiz.appendChild(generateQuestion(question, index))
+  data.forEach((questionData, questionIndex) =>
+    quiz.appendChild(generateQuestion(questionData, questionIndex))
   );
   return setupQuiz(quiz);
 }
 
 function generateQuestion(questionData, questionIndex) {
-  const [questionText, questionInfo] = questionData;
-  const isMultiSelect = questionInfo.multi_select;
-  const img = questionInfo.img;
-  const isAI = questionInfo.tags?.includes("AI");
-  const choicesData = Object.entries(questionInfo.choices);
+  const questionText = questionData.question;
+  const img = questionData.img;
+  const choicesData = Object.entries(questionData.choices);
+  const isMultiSelect = questionData.multi_select;
+  const isAI = questionData.AI;
   arrange(choicesData);
 
   const question = document.createElement("div");
