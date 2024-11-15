@@ -36,7 +36,6 @@ function tohomePage() {
     pastAttemptsContainer.appendChild(generatePastAttemptsTable());
   }
   navText.style.visibility = "hidden";
-  navbar.style.backgroundColor = "";
   resultPanel.hide();
   quizPage.hide();
   homePage.unhide();
@@ -44,7 +43,6 @@ function tohomePage() {
 
 function toQuizPage() {
   navText.style.visibility = "visible";
-  navbar.style.backgroundColor = "";
   resultPanel.hide();
   homePage.hide();
   quizPage.unhide();
