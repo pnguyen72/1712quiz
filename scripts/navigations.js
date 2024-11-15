@@ -31,6 +31,12 @@ function licenseGrantException() {
 }
 
 function tohomePage() {
+  if (
+    document.querySelector(".unsubmitted .choice-input:checked") &&
+    !confirm("You will lose progress on the current attempt. Continue anyway?")
+  ) {
+    return;
+  }
   removeElementById("result-table");
   if (pastAttempts.length > 0) {
     pastAttemptsContainer.appendChild(generatePastAttemptsTable());
@@ -70,25 +76,9 @@ function nextQuiz() {
   let data = quizData.slice(0, questionsNum);
   navText.innerText = `Attempt ${pastAttempts.length + 1}`;
   toQuizPage();
-
-  if (newQuizNeeded) {
-    scrollTo(0, 0);
-    removeElementById("quiz");
-    quizPage.appendChild(generateQuiz(data));
-    newQuizNeeded = false;
-  } else {
-    const quiz = document.getElementById("quiz");
-    for (let question of quiz.getElementsByClassName("question")) {
-      let isAnswered = false;
-      for (let choice of question.getElementsByTagName("input")) {
-        isAnswered = isAnswered || choice.checked;
-      }
-      if (!isAnswered) {
-        question.scrollTo();
-        break;
-      }
-    }
-  }
+  removeElementById("quiz");
+  quizPage.appendChild(generateQuiz(data));
+  scrollTo(0, 0);
 }
 
 function submit() {
@@ -149,7 +139,6 @@ function submit() {
   } else {
     quizData = [];
   }
-  newQuizNeeded = true;
   quiz.className = "submitted";
   scrollTo(0, 0);
   showResult(correctAnswers, questions.length);

@@ -18,10 +18,7 @@ form.addEventListener("click", () => {
     licenseText.style.animation = "blink 1s";
   }
 });
-form.addEventListener("input", () => {
-  formChanged = true;
-  newQuizNeeded = true;
-});
+form.addEventListener("input", () => (formChanged = true));
 
 examSelection.addEventListener("input", generateModuleSelection);
 

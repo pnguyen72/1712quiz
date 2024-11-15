@@ -268,7 +268,6 @@ function generatePastAttemptsTable() {
     attemptNum.addEventListener("click", () => {
       toQuizPage();
       removeElementById("quiz");
-      newQuizNeeded = true;
       quizPage.appendChild(attempt.quiz);
       showResult(score, outOf);
       navText.innerText = `Attempt ${index + 1}`;
