@@ -23,19 +23,13 @@ const AIChoice = document.getElementById("AI");
 const LHChoice = document.getElementById("LH");
 const questionNumChoice = document.getElementById("questions-num-choice");
 
-homePage.hide = () => (homePage.style.display = "none");
-homePage.unhide = () => (homePage.style.display = "");
-
-quizPage.hide = () => (quizPage.style.display = "none");
-quizPage.unhide = () => (quizPage.style.display = "");
-
 resultPanel.hide = () => {
   resultPanel.style.display = "none";
   resultPanel.removeAttribute("visible");
 };
 resultPanel.unhide = () => {
   resultPanel.style.display = "";
-  resultPanel.setAttribute("visible", "");
+  resultPanel.setAttribute("visible", true);
 };
 
 navbar.hide = () => {
@@ -44,11 +38,5 @@ navbar.hide = () => {
 };
 navbar.unhide = () => {
   navbar.style.display = "";
-  navbar.setAttribute("visible", "");
+  navbar.setAttribute("visible", true);
 };
-
-function removeElementById(id) {
-  if (document.contains(document.getElementById(id))) {
-    document.getElementById(id).remove();
-  }
-}

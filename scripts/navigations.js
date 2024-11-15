@@ -37,21 +37,22 @@ function tohomePage() {
   ) {
     return;
   }
-  removeElementById("result-table");
   if (pastAttempts.length > 0) {
-    pastAttemptsContainer.appendChild(generatePastAttemptsTable());
+    document
+      .getElementById("attempts-table")
+      .replaceWith(generateAttemptsTable());
   }
   navText.style.visibility = "hidden";
+  quizPage.style.display = "none";
+  homePage.style.display = "";
   resultPanel.hide();
-  quizPage.hide();
-  homePage.unhide();
 }
 
 function toQuizPage() {
   navText.style.visibility = "visible";
+  homePage.style.display = "none";
+  quizPage.style.display = "";
   resultPanel.hide();
-  homePage.hide();
-  quizPage.unhide();
   scrollTo(0, 0);
 }
 
@@ -76,8 +77,7 @@ function nextQuiz() {
   let data = quizData.slice(0, questionsNum);
   navText.innerText = `Attempt ${pastAttempts.length + 1}`;
   toQuizPage();
-  removeElementById("quiz");
-  quizPage.appendChild(generateQuiz(data));
+  document.getElementById("quiz").replaceWith(generateQuiz(data));
   scrollTo(0, 0);
 }
 

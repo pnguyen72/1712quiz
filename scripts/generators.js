@@ -1,5 +1,4 @@
 function generateModuleSelection() {
-  removeElementById("modulesList");
   moduleSelectBoxes = [];
 
   let indexOffset;
@@ -15,7 +14,8 @@ function generateModuleSelection() {
   }
 
   const ul = document.createElement("ul");
-  ul.id = "modulesList";
+  ul.id = "modules-list";
+  document.getElementById("modules-list").replaceWith(ul);
 
   modulesList.forEach((name, index) => {
     const li = document.createElement("li");
@@ -64,8 +64,6 @@ function generateModuleSelection() {
     li.append(label);
     ul.appendChild(li);
   }
-
-  moduleSelection.append(ul);
 }
 
 function generateQuiz(data) {
@@ -221,7 +219,7 @@ function setupQuiz(quiz) {
   return quiz;
 }
 
-function generatePastAttemptsTable() {
+function generateAttemptsTable() {
   const table = document.createElement("table");
   const header = document.createElement("tr");
   const attemptNum = document.createElement("th");
@@ -247,7 +245,7 @@ function generatePastAttemptsTable() {
   header.appendChild(modules);
   header.appendChild(result);
 
-  table.id = "result-table";
+  table.id = "attempts-table";
   table.appendChild(header);
 
   pastAttempts.forEach((attempt, index) => {
@@ -267,8 +265,7 @@ function generatePastAttemptsTable() {
     attemptNum.innerText = index + 1;
     attemptNum.addEventListener("click", () => {
       toQuizPage();
-      removeElementById("quiz");
-      quizPage.appendChild(attempt.quiz);
+      document.getElementById("quiz").replaceWith(attempt.quiz);
       showResult(score, outOf);
       navText.innerText = `Attempt ${index + 1}`;
       for (question of quizPage.querySelectorAll(".wrongAnswer,.unsure")) {
