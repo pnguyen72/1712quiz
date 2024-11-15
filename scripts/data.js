@@ -72,6 +72,7 @@ function getData(banks, modules, count) {
       if (result.length >= effectiveSize) break;
     }
   }
+  shuffle(result);
   return result;
 }
 
