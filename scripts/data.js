@@ -68,7 +68,7 @@ function getData(banks, modules, count) {
     shuffle(selections);
     for (const selection of selections) {
       const [bank, module] = selection.split(".");
-      result.push(modulesData[bank][module].get(1)[0]);
+      result.push(...modulesData[bank][module].get(1));
       if (result.length >= effectiveSize) break;
     }
   }
