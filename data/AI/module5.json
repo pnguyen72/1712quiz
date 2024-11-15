@@ -6,7 +6,8 @@
       "To define system test cases": false,
       "To outline system hardware components": false,
       "To define user interactions": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is the purpose of a context diagram?",
@@ -15,7 +16,8 @@
       "To outline the system's hardware architecture": false,
       "To describe the user interface": false,
       "To show the system as a single process with external entities": true
-    }
+    },
+    "AI": true
   },
   {
     "question": "What does a Data Flow Diagram (DFD) primarily show?",
@@ -24,7 +26,8 @@
       "The physical hardware of the system": false,
       "The flow of data between processes in the system": true,
       "The software architecture": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is a 'sink' in a Data Flow Diagram (DFD)?",
@@ -33,7 +36,8 @@
       "A data flow": false,
       "A data store": false,
       "An external entity that receives data from the system": true
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following best describes the purpose of a Data Flow Diagram (DFD)?",
@@ -42,7 +46,8 @@
       "To represent the flow of data within a system": true,
       "To create a project timeline": false,
       "To design the system’s architecture": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What does a process symbol in a Data Flow Diagram (DFD) represent?",
@@ -51,7 +56,8 @@
       "An action or operation performed on data": true,
       "A system boundary": false,
       "A data store": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which diagram is used in process modeling to represent how data moves through a system?",
@@ -60,7 +66,8 @@
       "Data Flow Diagram (DFD)": true,
       "Class diagram": false,
       "Entity-Relationship Diagram (ERD)": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following is NOT a symbol used in Data Flow Diagrams (DFDs)?",
@@ -69,7 +76,8 @@
       "Triangle": true,
       "Arrow": false,
       "Rectangle": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following is a key concept in Data Flow Diagrams (DFDs)?",
@@ -78,7 +86,8 @@
       "Database tables": false,
       "System architecture": false,
       "User interface design": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is a primary advantage of using Data Flow Diagrams (DFDs)?",
@@ -87,7 +96,8 @@
       "They help determine the project budget": false,
       "They allow for easy debugging of system code": false,
       "They describe system hardware architecture": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which level of Data Flow Diagram (DFD) provides the highest-level view of a system?",
@@ -96,7 +106,8 @@
       "Context diagram": true,
       "Level 1 DFD": false,
       "Level 0 DFD": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is the purpose of a data store in a Data Flow Diagram (DFD)?",
@@ -105,7 +116,8 @@
       "To store data that is used or produced by the system": true,
       "To represent user interactions": false,
       "To define system boundaries": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which type of diagram breaks down a process into its subprocesses?",
@@ -114,7 +126,8 @@
       "Gantt chart": false,
       "Use case diagram": false,
       "Entity-Relationship Diagram (ERD)": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is the primary purpose of process modeling in system development?",
@@ -123,7 +136,8 @@
       "To document how the system will perform its functions": true,
       "To manage system requirements": false,
       "To design the user interface": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "In a DFD, which of the following best describes an external entity?",
@@ -132,7 +146,8 @@
       "A data store": false,
       "A process that manipulates data": false,
       "A system boundary": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following best describes a data flow in a Data Flow Diagram (DFD)?",
@@ -141,7 +156,8 @@
       "The relationships between entities in a database": false,
       "The movement of data from one part of the system to another": true,
       "The flow of user interactions": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following is an example of an external entity in a Data Flow Diagram (DFD)?",
@@ -150,7 +166,8 @@
       "A process that manipulates data": false,
       "A data store within the system": false,
       "A system function": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which symbol in a Data Flow Diagram (DFD) represents a process?",
@@ -159,7 +176,8 @@
       "Arrow": false,
       "Circle or rounded rectangle": true,
       "Rectangle": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is a 'source' in a Data Flow Diagram (DFD)?",
@@ -168,7 +186,8 @@
       "A process that manipulates data": false,
       "An external entity that provides input to the system": true,
       "A system boundary": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is the purpose of leveling in Data Flow Diagrams (DFDs)?",
@@ -177,6 +196,7 @@
       "To break down complex processes into simpler subprocesses": true,
       "To show user interactions": false,
       "To define hardware specifications": false
-    }
+    },
+    "AI": true
   }
 ]

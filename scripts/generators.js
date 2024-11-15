@@ -101,7 +101,7 @@ function generateQuestion(questionData, questionIndex) {
   questionTitle.className = "question-title";
   questionTitle.innerText = `Question ${questionIndex + 1}.`;
   AILabel.className = "AI-label";
-  AILabel.innerText = "(AI-generated)";
+  AILabel.innerText = " (AI-generated)";
   unsureLabel.className = "unsure-label";
   unsureLabel.title = "Mark question as unsure to review later";
   unsureCheck.className = "unsure-check";

@@ -6,7 +6,8 @@
       "Project initiation": false,
       "Project execution": false,
       "Project planning": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which document typically authorizes the start of a project?",
@@ -15,7 +16,8 @@
       "Business case": false,
       "Risk analysis report": false,
       "System requirements document": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "A project risk is best described as:",
@@ -24,7 +26,8 @@
       "A task that has not yet been completed": false,
       "A system feature that is still under development": false,
       "An uncertain event that could affect the project’s success": true
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which project management methodology focuses on iterative development and frequent feedback?",
@@ -33,7 +36,8 @@
       "Spiral": false,
       "Agile": true,
       "Waterfall": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "A project kick-off meeting is held to:",
@@ -42,7 +46,8 @@
       "Review the system's technical architecture": false,
       "Officially start the project and align stakeholders": true,
       "Plan future system updates": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What does the term 'deliverable' refer to in project management?",
@@ -51,7 +56,8 @@
       "A tangible or intangible output of the project": true,
       "A system test case": false,
       "A project milestone": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following best describes project scope creep?",
@@ -60,7 +66,8 @@
       "The addition of new requirements during the project lifecycle": true,
       "The intentional reduction of project deliverables": false,
       "The removal of stakeholders from the project": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is a common consequence of scope creep in project management?",
@@ -69,7 +76,8 @@
       "Decreased stakeholder involvement": false,
       "Reduced project resources": false,
       "Increased project costs and delays": true
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is a work breakdown structure (WBS) used for in project management?",
@@ -78,7 +86,8 @@
       "To divide the project into manageable tasks": true,
       "To define the detailed project costs": false,
       "To assign personnel to projects": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which project management methodology emphasizes flexibility and customer feedback?",
@@ -87,7 +96,8 @@
       "RAD (Rapid Application Development)": false,
       "Agile": true,
       "Waterfall": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What does a project status report typically include?",
@@ -96,7 +106,8 @@
       "System documentation": false,
       "Risk assessments": false,
       "Code review results": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "The main purpose of project closure is to:",
@@ -105,7 +116,8 @@
       "Write system documentation": false,
       "Finalize project deliverables and close contracts": true,
       "Complete the system testing": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following is a tool used to calculate and track project costs?",
@@ -114,7 +126,8 @@
       "Gantt chart": false,
       "Risk management plan": false,
       "Cost estimation tool": true
-    }
+    },
+    "AI": true
   },
   {
     "question": "In project management, what is the purpose of risk mitigation strategies?",
@@ -123,7 +136,8 @@
       "To avoid unnecessary testing": false,
       "To reduce the likelihood and impact of potential risks": true,
       "To improve system architecture": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following is NOT typically a responsibility of a project manager?",
@@ -132,7 +146,8 @@
       "Monitoring project risks": false,
       "Managing stakeholder expectations": false,
       "Writing user manuals": true
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following is NOT typically included in a project plan?",
@@ -141,7 +156,8 @@
       "Budget": false,
       "Schedule": false,
       "System testing results": true
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which phase in project management involves tracking project progress and managing changes?",
@@ -150,7 +166,8 @@
       "Project initiation": false,
       "Project closure": false,
       "Project planning": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is the main focus of the project execution phase?",
@@ -159,7 +176,8 @@
       "Monitoring and controlling project activities to ensure they stay on track": true,
       "Developing the system’s architecture": false,
       "Defining the system’s budget": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following is an example of a project milestone?",
@@ -168,7 +186,8 @@
       "Completing the design phase": true,
       "Creating a Gantt chart": false,
       "Holding a project meeting": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which project management technique focuses on defining and organizing tasks?",
@@ -177,7 +196,8 @@
       "Unit testing": false,
       "Budget estimation": false,
       "System requirements specification": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which project management tool is used to visualize tasks and their relationships over time?",
@@ -186,7 +206,8 @@
       "Business case": false,
       "Gantt chart": true,
       "System architecture diagram": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following is NOT a project management phase?",
@@ -195,7 +216,8 @@
       "Project initiation": false,
       "Project execution": false,
       "Project selection": true
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which project management phase involves identifying the project goals and defining its feasibility?",
@@ -204,7 +226,8 @@
       "Project initiation": true,
       "Project closure": false,
       "Project execution": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which document defines the business need and high-level project objectives?",
@@ -213,7 +236,8 @@
       "Gantt chart": false,
       "Business case": true,
       "Feasibility study": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is the main purpose of risk management in a project?",
@@ -222,7 +246,8 @@
       "To gather system requirements": false,
       "To develop the system architecture": false,
       "To identify, analyze, and mitigate project risks": true
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is a key deliverable of the project planning phase?",
@@ -231,7 +256,8 @@
       "The user interface": false,
       "The test environment": false,
       "The project schedule": true
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is the primary goal of project management in systems development?",
@@ -240,7 +266,8 @@
       "To ensure the project is completed on time, within budget, and according to specifications": true,
       "To create detailed hardware specifications": false,
       "To write system code": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is the purpose of a project stakeholder analysis?",
@@ -249,7 +276,8 @@
       "To conduct system tests": false,
       "To evaluate project costs": false,
       "To define technical requirements": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "A Gantt chart is primarily used for:",
@@ -258,7 +286,8 @@
       "Documenting system requirements": false,
       "Scheduling and tracking project tasks": true,
       "Conducting system testing": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is the primary purpose of a project charter?",
@@ -267,7 +296,8 @@
       "To identify the system requirements": false,
       "To create test cases for the system": false,
       "To document the user interface": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "A key responsibility of the project manager is to:",
@@ -276,7 +306,8 @@
       "Create system test cases": false,
       "Write the system code": false,
       "Manage the project budget and resources": true
-    }
+    },
+    "AI": true
   },
   {
     "question": "The critical path in a project schedule refers to:",
@@ -285,7 +316,8 @@
       "The sequence of tasks that determines the minimum project duration": true,
       "The most important features in a system": false,
       "The resources required to complete the project": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which document is created during the project planning phase to estimate the project's costs?",
@@ -294,7 +326,8 @@
       "Work breakdown structure (WBS)": false,
       "Budget estimate": true,
       "Project charter": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is a key element of a project plan?",
@@ -303,7 +336,8 @@
       "Programming languages": false,
       "User manuals": false,
       "Risk assessment": true
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following is a typical project management activity?",
@@ -312,7 +346,8 @@
       "Testing the system": false,
       "Writing program code": false,
       "Managing project risks and issues": true
-    }
+    },
+    "AI": true
   },
   {
     "question": "The project scope statement is used to:",
@@ -321,7 +356,8 @@
       "Test the system functionality": false,
       "Create a user interface": false,
       "Specify hardware requirements": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is the purpose of a project management software tool?",
@@ -330,7 +366,8 @@
       "To track project tasks, timelines, and resources": true,
       "To document system requirements": false,
       "To create system architecture diagrams": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is a project’s critical path?",
@@ -339,7 +376,8 @@
       "The tasks that determine the minimum duration of the project": true,
       "A list of key stakeholders in the project": false,
       "The technical specifications of the system": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following is a project management methodology used in system development?",
@@ -348,7 +386,8 @@
       "Agile": true,
       "Waterfall": true
     },
-    "multi_select": true
+    "multi_select": true,
+    "AI": true
   },
   {
     "question": "Which project management technique is used to forecast and manage project costs?",
@@ -357,6 +396,7 @@
       "Unit testing": false,
       "Gantt chart creation": false,
       "Budget estimation": true
-    }
+    },
+    "AI": true
   }
 ]

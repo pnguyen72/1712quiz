@@ -6,7 +6,8 @@
       "A customer interacting with a shopping cart system": true,
       "A database storing customer data": false,
       "A network administrator updating system software": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following components are typically represented in a use case diagram?",
@@ -15,7 +16,8 @@
       "Actors and system processes": true,
       "System performance metrics": false,
       "Database entities and attributes": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following is NOT a benefit of using use case diagrams?",
@@ -24,7 +26,8 @@
       "Outlines technical specifications for system design": true,
       "Visually represents the interaction between users and the system": false,
       "Provides a high-level view of user-system interactions": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following best describes the purpose of a use case?",
@@ -33,7 +36,8 @@
       "To create test cases": false,
       "To define system architecture": false,
       "To describe user interactions with the system": true
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is the purpose of a use case in requirements determination?",
@@ -42,7 +46,8 @@
       "To outline testing scenarios": false,
       "To gather system costs": false,
       "To define system architecture": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "A use case is commonly used to:",
@@ -51,7 +56,8 @@
       "Document the system’s database structure": false,
       "Design the user interface": false,
       "Analyze system performance": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What does a use case help define during the system analysis phase?",
@@ -60,7 +66,8 @@
       "The system’s network architecture": false,
       "User interactions with the system": true,
       "The system’s budget": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "How do use case diagrams help in requirements gathering?",
@@ -69,7 +76,8 @@
       "By providing a visual representation of user-system interactions": true,
       "By documenting system code": false,
       "By managing system databases": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following statements is true about use cases?",
@@ -78,7 +86,8 @@
       "They describe the project budget": false,
       "They are primarily used during system coding": false,
       "They help define user interactions and system functions": true
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is the purpose of creating multiple use cases during system development?",
@@ -87,7 +96,8 @@
       "To analyze the system's performance": false,
       "To describe various user scenarios and system functionalities": true,
       "To document multiple system bugs": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is the primary role of a use case diagram in system design?",
@@ -96,7 +106,8 @@
       "To analyze system hardware": false,
       "To create the project timeline": false,
       "To document user interactions with the system": true
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following best describes a use case?",
@@ -105,7 +116,8 @@
       "A technical specification of system architecture": false,
       "A visual representation of data flows": false,
       "A detailed flowchart of how the system works": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What does a use case scenario describe?",
@@ -114,7 +126,8 @@
       "Specific user interactions with the system under different conditions": true,
       "Database storage details": false,
       "Hardware configuration options": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following is a key benefit of creating use case diagrams?",
@@ -123,7 +136,8 @@
       "It helps calculate project costs": false,
       "It simplifies communication between users and system developers": true,
       "It outlines the system’s network infrastructure": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What kind of system behavior does a use case typically describe?",
@@ -132,7 +146,8 @@
       "The system’s performance metrics": false,
       "How users interact with the system": true,
       "The system’s hardware configuration": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is a use case used for in systems analysis?",
@@ -141,7 +156,8 @@
       "To define system hardware requirements": false,
       "To describe user interactions with the system in different scenarios": true,
       "To model data flow between system components": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is a use case diagram typically used for in requirements determination?",
@@ -150,7 +166,8 @@
       "To show the system’s hardware architecture": false,
       "To define the project’s budget": false,
       "To visually represent user interactions with the system": true
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is an actor in a use case diagram?",
@@ -159,7 +176,8 @@
       "A data storage point": false,
       "An external entity interacting with the system": true,
       "A piece of hardware interacting with the user": false
-    }
+    },
+    "AI": true
   },
   {
     "question": "What is the difference between a use case diagram and a process flow diagram?",
@@ -168,7 +186,8 @@
       "Use case diagrams are for hardware design, while process flow diagrams are for software": false,
       "Both show the exact same information but in different ways": false,
       "A use case diagram shows user interactions, while a process flow diagram shows system workflows": true
-    }
+    },
+    "AI": true
   },
   {
     "question": "Which of the following is a limitation of use case diagrams?",
@@ -177,6 +196,7 @@
       "They do not show detailed system architecture": true,
       "They provide too much technical detail for developers": false,
       "They cannot represent user interactions": false
-    }
+    },
+    "AI": true
   }
 ]
