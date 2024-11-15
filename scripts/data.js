@@ -37,6 +37,11 @@ function loadData() {
           (questions) => (modulesData.LH[i + finalOffset] = _data(questions))
         )
       );
+      promises.push(
+        _getQuestions(i + finalOffset, "AI").then(
+          (questions) => (modulesData.AI[i + finalOffset] = _data(questions))
+        )
+      );
     }
 
     return Promise.all(promises);
