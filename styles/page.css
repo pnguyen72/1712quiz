@@ -14,16 +14,16 @@ body {
     @media screen {
       & > h1,
       #main,
+      #quiz,
       #past-attempts,
       footer {
         margin-left: auto;
         margin-right: auto;
-        width: 1000px;
+        width: 900px;
         max-width: 100%;
       }
       #quiz {
         margin: 1rem auto;
-        max-width: 1000px;
       }
     }
 
