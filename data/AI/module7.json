@@ -1,0 +1,202 @@
+{
+  "What is the primary purpose of normalization?": {
+    "choices": {
+      "To ensure data redundancy": false,
+      "To validate the relationships in an ERD": true,
+      "To create composite attributes": false,
+      "To remove derived attributes": true
+    },
+    "AI": true,
+    "module": 7
+  },
+  "What is required for a data model to be in 1NF?": {
+    "choices": {
+      "No repeating groups or attributes": true,
+      "Composite attributes must be used": false,
+      "Every attribute depends on the identifier": false,
+      "Data flows must match attributes": false
+    },
+    "AI": true,
+    "module": 7
+  },
+  "Which of these causes a violation of 2NF?": {
+    "choices": {
+      "Repeating attributes": false,
+      "Attributes dependent on part of a composite identifier": true,
+      "Attributes depending on non-key attributes": false,
+      "Attributes repeating across entities": false
+    },
+    "AI": true,
+    "module": 7
+  },
+  "How can an M:N relationship be resolved in a normalized data model?": {
+    "choices": {
+      "By adding a primary key": false,
+      "By creating an intersection entity": true,
+      "By removing derived attributes": false,
+      "By applying transitive dependency rules": false
+    },
+    "AI": true,
+    "module": 7
+  },
+  "Which of the following is a step in placing a data model in 3NF?": {
+    "choices": {
+      "Removing attributes dependent on non-identifier attributes": true,
+      "Adding derived attributes to ensure completeness": false,
+      "Eliminating all foreign keys": false,
+      "Combining attributes to create composite keys": false
+    },
+    "AI": true,
+    "module": 7
+  },
+  "What is an example of a transitive dependency in an ERD?": {
+    "choices": {
+      "An attribute depends on a non-key attribute": true,
+      "An attribute depends directly on the identifier": false,
+      "Repeating groups are used within an entity": false,
+      "A key relationship is missing in an entity": false
+    },
+    "AI": true,
+    "module": 7
+  },
+  "What is the purpose of decomposing an ERD into smaller relations?": {
+    "choices": {
+      "To make ERDs easier to read": false,
+      "To ensure they comply with normalization rules": true,
+      "To reduce the number of attributes": false,
+      "To simplify foreign keys": false
+    },
+    "AI": true,
+    "module": 7
+  },
+  "Which normal form eliminates partial dependencies?": {
+    "choices": {
+      "1NF": false,
+      "2NF": true,
+      "3NF": false,
+      "BCNF": false
+    },
+    "AI": true,
+    "module": 7
+  },
+  "What is the effect of normalization on database design?": {
+    "choices": {
+      "Increases redundancy": false,
+      "Reduces redundancy": true,
+      "Simplifies queries": false,
+      "Adds derived attributes": false
+    },
+    "AI": true,
+    "module": 7
+  },
+  "When should denormalization be considered?": {
+    "choices": {
+      "To improve database efficiency": true,
+      "To remove partial dependencies": false,
+      "To comply with 2NF": false,
+      "To create more foreign keys": false
+    },
+    "AI": true,
+    "module": 7
+  },
+  "What is a composite key?": {
+    "choices": {
+      "A primary key composed of multiple attributes": true,
+      "A foreign key used in multiple tables": false,
+      "An attribute that depends on another attribute": false,
+      "A derived attribute stored in the database": false
+    },
+    "AI": true,
+    "module": 7
+  },
+  "How does normalization affect foreign keys?": {
+    "choices": {
+      "It adds unnecessary foreign keys": false,
+      "It creates foreign keys to establish relationships": true,
+      "It removes foreign keys": false,
+      "It converts foreign keys to primary keys": false
+    },
+    "AI": true,
+    "module": 7
+  },
+  "What is a dependency diagram?": {
+    "choices": {
+      "A diagram showing all keys in a database": false,
+      "A visual representation of attribute dependencies in a relation": true,
+      "A flowchart for normalization steps": false,
+      "An ERD showing only primary keys": false
+    },
+    "AI": true,
+    "module": 7
+  },
+  "What happens if a relation is not in 1NF?": {
+    "choices": {
+      "It cannot be in higher normal forms": true,
+      "It will always have derived attributes": false,
+      "It cannot contain primary keys": false,
+      "It must have composite attributes": false
+    },
+    "AI": true,
+    "module": 7
+  },
+  "How is normalization related to business rules?": {
+    "choices": {
+      "Normalization enforces business rules on data structure": true,
+      "Normalization replaces business rules": false,
+      "Normalization makes business rules optional": false,
+      "Normalization does not consider business rules": false
+    },
+    "AI": true,
+    "module": 7
+  },
+  "What is the result of normalization to 3NF?": {
+    "choices": {
+      "All attributes are dependent on the primary key": true,
+      "No dependencies remain in the relations": false,
+      "All attributes are indexed": false,
+      "Data redundancy increases": false
+    },
+    "AI": true,
+    "module": 7
+  },
+  "Which of the following attributes can cause a violation of BCNF?": {
+    "choices": {
+      "Attributes fully dependent on composite keys": false,
+      "Attributes dependent on a non-candidate key": true,
+      "Attributes dependent on a derived attribute": false,
+      "Attributes depending on foreign keys": false
+    },
+    "AI": true,
+    "module": 7
+  },
+  "What is the role of a surrogate key in normalization?": {
+    "choices": {
+      "To uniquely identify rows in a table": true,
+      "To replace foreign keys": false,
+      "To introduce derived attributes": false,
+      "To create repeating groups": false
+    },
+    "AI": true,
+    "module": 7
+  },
+  "Why is it important to validate a normalized ERD?": {
+    "choices": {
+      "To ensure the design meets business needs": true,
+      "To remove all primary keys": false,
+      "To reduce foreign keys": false,
+      "To increase data redundancy": false
+    },
+    "AI": true,
+    "module": 7
+  },
+  "Which of the following steps is essential for achieving 1NF?": {
+    "choices": {
+      "Removing repeating groups": true,
+      "Eliminating all foreign keys": false,
+      "Combining all attributes into one table": false,
+      "Creating composite keys": false
+    },
+    "AI": true,
+    "module": 7
+  }
+}
