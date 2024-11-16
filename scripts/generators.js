@@ -113,7 +113,7 @@ function generateQuestion(questionData, questionIndex) {
   unsureLabel.appendChild(unsureCheck);
   unsureLabel.appendChild(unsureText);
   questionTitleContainter.appendChild(questionTitle);
-  questionTitleContainter.appendChild(AILabel);
+  if (bank == "AI") questionTitleContainter.appendChild(AILabel);
   questionHeader.appendChild(questionTitleContainter);
   questionHeader.appendChild(unsureLabel);
   question.appendChild(questionHeader);

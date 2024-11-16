@@ -13,12 +13,6 @@
     background-color: yellow;
   }
 
-  &:not([bank="AI"]) {
-    .AI-label {
-      display: none;
-    }
-  }
-
   .question-header {
     display: flex;
     justify-content: space-between;
