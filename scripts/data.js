@@ -154,16 +154,14 @@ function _getQuestions(moduleNum, bank) {
 function _data(questions) {
   return {
     _origin: questions,
-    _data: { ...questions },
+    _data: {},
     _pull: function (count) {
-      if (count == undefined) {
-        this._data = { ...this._origin };
-        return;
-      }
       const origin = Object.entries(this._origin);
       shuffle(origin);
-      const slicedOrigin = origin.slice(0, count);
-      this._data = { ...this._data, ...Object.fromEntries(slicedOrigin) };
+      this._data = {
+        ...this._data,
+        ...Object.fromEntries(origin.slice(0, count)),
+      };
     },
     get: function (count, position) {
       // pull data from origin if necessary
@@ -173,15 +171,15 @@ function _data(questions) {
       } else if (length < count) {
         this._pull(count - length);
       }
-      // slice data to specified amount, either from the beginning or end of the pool
-      let data = [];
+      // slice data to specified amount, either from beginning or end of the pool
+      let result = [];
       let entries = Object.entries(this._data);
       if (position == "end") entries.reverse();
       for (const [question, questionData] of entries) {
-        data.push({ question: question, ...questionData });
-        if (data.length >= count) break;
+        result.push({ question: question, ...questionData });
+        if (result.length >= count) break;
       }
-      return data;
+      return result;
     },
     resolve: function (question) {
       delete this._data[question];
