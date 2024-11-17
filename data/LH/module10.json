@@ -1,772 +1,772 @@
 {
-  "Typically, the third step in the user interface design process is what?": {
+  "LH.10.01": {
+    "question": "Typically, the third step in the user interface design process is what?",
     "choices": {
       "Design interface standards": true,
       "Creating an interface design prototype": false,
       "Do an interface evaluation": false,
       "Examine DFDs and use cases to develop use scenarios": false,
       "Develop the interface structure diagram (ISD)": false
-    },
-    "module": 10
+    }
   },
-  "Generally, headings on a paper form should be with Arial size 24 bold; the main text should be Times New Roman size 12. Subheadings should be Tahoma size 14, bold and italic and underlined. This makes a form easier to read and to delineate sections.": {
+  "LH.10.02": {
+    "question": "Generally, headings on a paper form should be with Arial size 24 bold; the main text should be Times New Roman size 12. Subheadings should be Tahoma size 14, bold and italic and underlined. This makes a form easier to read and to delineate sections.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 10
+    }
   },
-  "At least one study suggests that some variation be appropriate in user interface design as the study suggests that when all forms tend to look the same, it can be confusing to some users.": {
+  "LH.10.03": {
+    "question": "At least one study suggests that some variation be appropriate in user interface design as the study suggests that when all forms tend to look the same, it can be confusing to some users.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 10
+    }
   },
-  "Omar has designed a paper form using 'sans serif' fonts and for his screen (or web) forms he has used 'serif' fonts. He is exercising good user interface design practices.": {
+  "LH.10.04": {
+    "question": "Omar has designed a paper form using 'sans serif' fonts and for his screen (or web) forms he has used 'serif' fonts. He is exercising good user interface design practices.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 10
+    }
   },
-  "Typically, the first step in the user interface design process is what?": {
+  "LH.10.05": {
+    "question": "Typically, the first step in the user interface design process is what?",
     "choices": {
       "Design interface standards": false,
       "Creating an interface design prototype": false,
       "Do an interface evaluation": false,
       "Examine DFDs and use cases to develop use scenarios": true,
       "Develop the interface structure diagram (ISD)": false
-    },
-    "module": 10
+    }
   },
-  "Which of the following is NOT a common Interface Evaluation technique?": {
+  "LH.10.06": {
+    "question": "Which of the following is NOT a common Interface Evaluation technique?",
     "choices": {
       "Interactive evaluation": false,
       "Walk-through evaluation": false,
       "Heuristic evaluation": false,
       "Use scenario normalization": true,
       "Formal usability testing": false
-    },
-    "module": 10
+    }
   },
-  "Interface evaluations almost always do what?": {
+  "LH.10.07": {
+    "question": "Interface evaluations almost always do what?",
     "choices": {
       "Identify improvements": true,
       "Are conducted with other analysts in a structured walkthrough": false,
       "Find coding errors": false,
       "Are part of the training and implementation process": false,
       "Cause additional scope creep in the project": false
-    },
-    "module": 10
+    }
   },
-  "Compare data against a data base (or file) to ensure that they are correct.": {
+  "LH.10.08": {
+    "question": "Compare data against a data base (or file) to ensure that they are correct.",
     "choices": {
       "Completeness check": false,
       "Format check": false,
       "Range check": false,
       "Consistency checks": false,
       "Database checks": true
-    },
-    "module": 10
+    }
   },
-  "Seldom or never used.": {
+  "LH.10.09": {
+    "question": "Seldom or never used.",
     "choices": {
       "Error message": false,
       "Confirmation message": false,
       "Acknowledgment message": true,
       "Delay message": false,
       "Help message": false
-    },
-    "module": 10
+    }
   },
-  "Which of the following is NOT a suggestion for preventing mistakes?": {
+  "LH.10.10": {
+    "question": "Which of the following is NOT a suggestion for preventing mistakes?",
     "choices": {
       "Label commands and actions appropriately": false,
       "Place menu items in alphabetical order": true,
       "Limiting choices": false,
       "Gray-out commands that cannot be used": false,
       "Create secondary menus when there are many similar choices on a menu": false
-    },
-    "module": 10
+    }
   },
-  "This defines the basic components of the interface and how they work together to provide functionality to users.": {
+  "LH.10.11": {
+    "question": "This defines the basic components of the interface and how they work together to provide functionality to users.",
     "choices": {
       "Use Scenario Design": false,
       "Interface Standards Design": false,
       "Interface Metaphor": false,
       "Interface Structure Design": true,
       "Interface Template Design": false
-    },
-    "module": 10
+    }
   },
-  "Displays selected item in one-line box that opens to reveal list of choices.": {
+  "LH.10.12": {
+    "question": "Displays selected item in one-line box that opens to reveal list of choices.",
     "choices": {
       "Check box selection list": false,
       "Radio button selection list": false,
       "On-screen selection list": false,
       "Drop-down selection list": true,
       "Combo box selection list": false
-    },
-    "module": 10
+    }
   },
-  "In Use Scenario Development, the goal is:": {
+  "LH.10.13": {
+    "question": "In Use Scenario Development, the goal is:",
     "choices": {
       "To describe all possible use scenarios within a use case": false,
       "To describe the most commonly occurring use scenarios": true,
       "To accurately model all possible DFDs": false,
       "To give complex and complete narrative descriptions of all scenarios": false,
       "To effectively model all data flows and data models": false
-    },
-    "module": 10
+    }
   },
-  "This output is poor at helping users recognize precise numeric values and should be replaced by tables when precision is important.": {
+  "LH.10.14": {
+    "question": "This output is poor at helping users recognize precise numeric values and should be replaced by tables when precision is important.",
     "choices": {
       "Detail report": false,
       "Summary report": false,
       "Graphs": true,
       "Turnaround document": false,
       "None are poor": false
-    },
-    "module": 10
+    }
   },
-  "When implementing the 'minimize user effort' factor, most interface designers follow what rule?": {
+  "LH.10.15": {
+    "question": "When implementing the 'minimize user effort' factor, most interface designers follow what rule?",
     "choices": {
       "Two-clicks rule": false,
       "Three-clicks rule": true,
       "Four-clicks rule": false,
       "User Experience rule": false,
       "The menu option rule": false
-    },
-    "module": 10
+    }
   },
-  "Approximately what percent of men are color blind (and thus improper use of color can impair their ability to read information)": {
+  "LH.10.16": {
+    "question": "Approximately what percent of men are color blind (and thus improper use of color can impair their ability to read information)",
     "choices": {
       "5%": false,
       "10%": true,
       "15%": false,
       "20%": false,
       "More than 20%": false
-    },
-    "module": 10
+    }
   },
-  "This is used when an extra digit is added to a coded field to make sure it the entered data is correct (like Social Security numbers).": {
+  "LH.10.17": {
+    "question": "This is used when an extra digit is added to a coded field to make sure it the entered data is correct (like Social Security numbers).",
     "choices": {
       "Completeness check": false,
       "Format check": false,
       "Range check": false,
       "Check digit check": true,
       "Consistency check": false
-    },
-    "module": 10
+    }
   },
-  "Forms should have version numbers so that users, analysts and programmers can identify outdated materials.": {
+  "LH.10.18": {
+    "question": "Forms should have version numbers so that users, analysts and programmers can identify outdated materials.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 10
+    }
   },
-  "This is an outline of the steps that the users perform to accomplish some part of their work.": {
+  "LH.10.19": {
+    "question": "This is an outline of the steps that the users perform to accomplish some part of their work.",
     "choices": {
       "Step walkthrough": false,
       "User design flow": false,
       "Use scenario": true,
       "Process model": false,
       "Layout verification": false
-    },
-    "module": 10
+    }
   },
-  "Informs the user that the computer system is working properly to perform a task that may take several seconds.": {
+  "LH.10.20": {
+    "question": "Informs the user that the computer system is working properly to perform a task that may take several seconds.",
     "choices": {
       "Error message": false,
       "Confirmation message": false,
       "Acknowledgment message": false,
       "Delay message": true,
       "Help message": false
-    },
-    "module": 10
+    }
   },
-  "Informs the user that he or she has attempted to do something to which the system cannot respond.": {
+  "LH.10.21": {
+    "question": "Informs the user that he or she has attempted to do something to which the system cannot respond.",
     "choices": {
       "Error message": true,
       "Confirmation message": false,
       "Acknowledgment message": false,
       "Delay message": false,
       "Help message": false
-    },
-    "module": 10
+    }
   },
-  "Bob is designing input screens for a re-designed system for the shipping and inventory department. For order forms, he puts Zip code first (as the database will take the zip code and look up the city and state); for receiving forms, he puts them in the order of city, then state, then zip code. His design choices will help experienced users be more productive.": {
+  "LH.10.22": {
+    "question": "Bob is designing input screens for a re-designed system for the shipping and inventory department. For order forms, he puts Zip code first (as the database will take the zip code and look up the city and state); for receiving forms, he puts them in the order of city, then state, then zip code. His design choices will help experienced users be more productive.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 10
+    }
   },
-  "Bias can be introduced into a report by the way in which lists of data are sorted.": {
+  "LH.10.23": {
+    "question": "Bias can be introduced into a report by the way in which lists of data are sorted.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 10
+    }
   },
-  "Asks the user to verify that he or she really wants to perform the action selected.": {
+  "LH.10.24": {
+    "question": "Asks the user to verify that he or she really wants to perform the action selected.",
     "choices": {
       "Error message": false,
       "Confirmation message": true,
       "Acknowledgment message": false,
       "Delay message": false,
       "Help message": false
-    },
-    "module": 10
+    }
   },
-  "The objective of an interface evaluation is what?": {
+  "LH.10.25": {
+    "question": "The objective of an interface evaluation is what?",
     "choices": {
       "To measure the processing speed of an interface design": false,
       "To determine the database processing requirements for an interface": false,
       "To understand how to improve the interface design": true,
       "To get users input on colors, menu names and flexibility": false,
       "To determine if all use cases and ERDs have been built into the interface": false
-    },
-    "module": 10
+    }
   },
-  "Used as a shortcut for experienced Users.": {
+  "LH.10.26": {
+    "question": "Used as a shortcut for experienced Users.",
     "choices": {
       "Up-down numeric control": false,
       "Radio button selection list": false,
       "On-screen selection list": false,
       "Drop-down selection list": false,
       "Combo box selection list": true
-    },
-    "module": 10
+    }
   },
-  "User experience refers to minimizing the number of clicks or commands to go from one field to another.": {
+  "LH.10.27": {
+    "question": "User experience refers to minimizing the number of clicks or commands to go from one field to another.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 10
+    }
   },
-  "Which is NOT true about the content awareness design principle?": {
+  "LH.10.28": {
+    "question": "Which is NOT true about the content awareness design principle?",
     "choices": {
       "A date of 8/6/09 will be understood internationally": true,
       "Drawing boxes around related items (like name / address / city / state / zip) will help users": false,
       "Field labels should be fairly short, yet with long enough so that users can not be confused": false,
       "Input fields should follow a logical progression that is familiar to users": false,
       "All printed forms should have version numbers for better control": false
-    },
-    "module": 10
+    }
   },
-  "The following is used as a second-level menu, often from a menu bar.": {
+  "LH.10.29": {
+    "question": "The following is used as a second-level menu, often from a menu bar.",
     "choices": {
       "Menu bar": false,
       "Drop-down menu": true,
       "Hyperlink menu": false,
       "Pop-up menu": false,
       "Tab menu": false
-    },
-    "module": 10
+    }
   },
-  "When designing navigational controls, which is NOT commonly assumed?": {
+  "LH.10.30": {
+    "question": "When designing navigational controls, which is NOT commonly assumed?",
     "choices": {
       "That users have not read the manual": false,
       "That users have not attended training": false,
       "That users do not have help readily at hand": false,
       "That users have knowledge of the system and the interface": true,
       "That users have not read the documentation": false
-    },
-    "module": 10
+    }
   },
-  "Space is generally at a premium on forms and reports, thus squeezing information onto forms is considered a wise business decision.": {
+  "LH.10.31": {
+    "question": "Space is generally at a premium on forms and reports, thus squeezing information onto forms is considered a wise business decision.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 10
+    }
   },
-  "Presents a list of choices in a box.": {
+  "LH.10.32": {
+    "question": "Presents a list of choices in a box.",
     "choices": {
       "Check box selection list": false,
       "Radio button selection list": false,
       "On-screen selection list": true,
       "Drop-down selection list": false,
       "Combo box selection list": false
-    },
-    "module": 10
+    }
   },
-  "Jamal is creating a user interface. He wants what he calls an 'oops' button on every screen and form (or an 'undo' button). This is a good design consideration.": {
+  "LH.10.33": {
+    "question": "Jamal is creating a user interface. He wants what he calls an 'oops' button on every screen and form (or an 'undo' button). This is a good design consideration.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 10
+    }
   },
-  "Used when user does something that is not permitted or not possible.": {
+  "LH.10.34": {
+    "question": "Used when user does something that is not permitted or not possible.",
     "choices": {
       "Error message": true,
       "Confirmation message": false,
       "Acknowledgment message": false,
       "Delay message": false,
       "Help message": false
-    },
-    "module": 10
+    }
   },
-  "Used when user selects a potentially dangerous choice, such as deleting a file.": {
+  "LH.10.35": {
+    "question": "Used when user selects a potentially dangerous choice, such as deleting a file.",
     "choices": {
       "Error message": false,
       "Confirmation message": true,
       "Acknowledgment message": false,
       "Delay message": false,
       "Help message": false
-    },
-    "module": 10
+    }
   },
-  "The following is used as a main menu for a Web-based system.": {
+  "LH.10.36": {
+    "question": "The following is used as a main menu for a Web-based system.",
     "choices": {
       "Menu bar": false,
       "Drop-down menu": false,
       "Hyperlink menu": true,
       "Pop-up menu": false,
       "Tab menu": false
-    },
-    "module": 10
+    }
   },
-  "Ensure that combinations of data are valid.": {
+  "LH.10.37": {
+    "question": "Ensure that combinations of data are valid.",
     "choices": {
       "Completeness check": false,
       "Format check": false,
       "Range check": false,
       "Consistency checks": true,
       "Database checks": false
-    },
-    "module": 10
+    }
   },
-  "Used seldom or never - only if there is insufficient room for check boxes or radio buttons": {
+  "LH.10.38": {
+    "question": "Used seldom or never - only if there is insufficient room for check boxes or radio buttons",
     "choices": {
       "Up-down numeric control": false,
       "Half-sized radio button selection list": false,
       "On-screen selection list": true,
       "Drop-down selection list": false,
       "Combo box selection list": false
-    },
-    "module": 10
+    }
   },
-  "The first principle of designing navigation controls is what?": {
+  "LH.10.39": {
+    "question": "The first principle of designing navigation controls is what?",
     "choices": {
       "It was tough to build, it should be tough to use": false,
       "Users have attended training": false,
       "To prevent users from making mistakes": true,
       "See that all screens can be reached in the four-click rule": false,
       "Build appropriate icons (like a blank page for new document or form)": false
-    },
-    "module": 10
+    }
   },
-  "Used when only one item can be selected from a set of mutually exclusive items.": {
+  "LH.10.40": {
+    "question": "Used when only one item can be selected from a set of mutually exclusive items.",
     "choices": {
       "Check box selection list": false,
       "Radio button selection list": true,
       "On-screen selection list": false,
       "Drop-down selection list": false,
       "Combo box selection list": false
-    },
-    "module": 10
+    }
   },
-  "The following is used as a shortcut to commands for experienced users.": {
+  "LH.10.41": {
+    "question": "The following is used as a shortcut to commands for experienced users.",
     "choices": {
       "Menu bar": false,
       "Drop-down menu": false,
       "Hyperlink menu": false,
       "Pop-up menu": true,
       "Tab menu": false
-    },
-    "module": 10
+    }
   },
-  "Ensures that data are of the right type (e.g., numeric) and in the right format (e.g., month, day, year).": {
+  "LH.10.42": {
+    "question": "Ensures that data are of the right type (e.g., numeric) and in the right format (e.g., month, day, year).",
     "choices": {
       "Completeness check": false,
       "Format check": true,
       "Range check": false,
       "Consistency checks": false,
       "Database checks": false
-    },
-    "module": 10
+    }
   },
-  "The following is used when the user needs to change several settings or perform several related commands.": {
+  "LH.10.43": {
+    "question": "The following is used when the user needs to change several settings or perform several related commands.",
     "choices": {
       "Menu bar": false,
       "Drop-down menu": false,
       "Hyperlink menu": false,
       "Pop-up menu": false,
       "Tab menu": true
-    },
-    "module": 10
+    }
   },
-  "When creating navigational controls, you should either not display a command that cannot be used or 'gray' it out (where it shows, but cannot be used).": {
+  "LH.10.44": {
+    "question": "When creating navigational controls, you should either not display a command that cannot be used or 'gray' it out (where it shows, but cannot be used).",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 10
+    }
   },
-  "Informs the user that the system has accomplished what it was asked to do.": {
+  "LH.10.45": {
+    "question": "Informs the user that the system has accomplished what it was asked to do.",
     "choices": {
       "Error message": false,
       "Confirmation message": false,
       "Acknowledgment message": true,
       "Delay message": false,
       "Help message": false
-    },
-    "module": 10
+    }
   },
-  "If a particular form or screen is used by a cadre of experienced users very frequently (like an accounting entry system), 'ease of use' should be a high priority on these system interfaces.": {
+  "LH.10.46": {
+    "question": "If a particular form or screen is used by a cadre of experienced users very frequently (like an accounting entry system), 'ease of use' should be a high priority on these system interfaces.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 10
+    }
   },
-  "When creating user interfaces, analysts should examine DFDs and use cases to see how users commonly perform various processes.": {
+  "LH.10.47": {
+    "question": "When creating user interfaces, analysts should examine DFDs and use cases to see how users commonly perform various processes.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 10
+    }
   },
-  "Which is generally NOT true for interface evaluations?": {
+  "LH.10.48": {
+    "question": "Which is generally NOT true for interface evaluations?",
     "choices": {
       "It is iterative": false,
       "It almost always identifies improvements": false,
       "It generally involves users working with analysts": false,
       "It is cyclic": false,
       "It is built on ERDs": true
-    },
-    "module": 10
+    }
   },
-  "This is used when you want to verify that data fits within correct minimum and maximum values.": {
+  "LH.10.49": {
+    "question": "This is used when you want to verify that data fits within correct minimum and maximum values.",
     "choices": {
       "Completeness check": false,
       "Format check": false,
       "Range check": true,
       "Check digit check": false,
       "Consistency check": false
-    },
-    "module": 10
+    }
   },
-  "Which of the following might be a good choice of an icon for saving on a user interface?": {
+  "LH.10.50": {
+    "question": "Which of the following might be a good choice of an icon for saving on a user interface?",
     "choices": {
       "A piggy bank": false,
       "A dollar sign": false,
       "A computer diskette": true,
       "A hard drive image": false,
       "A green \"S\"": false
-    },
-    "module": 10
+    }
   },
-  "Infrequent users prefer user interfaces with 'ease of learning' features (like more explicit menu choices, clear directions).": {
+  "LH.10.51": {
+    "question": "Infrequent users prefer user interfaces with 'ease of learning' features (like more explicit menu choices, clear directions).",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 10
+    }
   },
-  "Michelle is designing a series of user interfaces for a CRM system. She goes back and forth between various steps of use cases, DFDs, ERDs and JAD session notes.": {
+  "LH.10.52": {
+    "question": "Michelle is designing a series of user interfaces for a CRM system. She goes back and forth between various steps of use cases, DFDs, ERDs and JAD session notes.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 10
+    }
   },
-  "A special type of drop-down list box that permits user to type as well as scroll the list.": {
+  "LH.10.53": {
+    "question": "A special type of drop-down list box that permits user to type as well as scroll the list.",
     "choices": {
       "Up-down numeric control": false,
       "Radio button selection list": false,
       "On-screen selection list": false,
       "Drop-down selection list": false,
       "Combo box selection list": true
-    },
-    "module": 10
+    }
   },
-  "Used when an activity takes more than seven seconds.": {
+  "LH.10.54": {
+    "question": "Used when an activity takes more than seven seconds.",
     "choices": {
       "Error message": false,
       "Confirmation message": false,
       "Acknowledgment message": false,
       "Delay message": true,
       "Help message": false
-    },
-    "module": 10
+    }
   },
-  "Presents a complete list of mutually exclusive choices, each with a circle in front.": {
+  "LH.10.55": {
+    "question": "Presents a complete list of mutually exclusive choices, each with a circle in front.",
     "choices": {
       "Check box selection list": false,
       "Radio button selection list": true,
       "On-screen selection list": false,
       "Drop-down selection list": false,
       "Combo box selection list": false
-    },
-    "module": 10
+    }
   },
-  "Ensures that all required data have been entered.": {
+  "LH.10.56": {
+    "question": "Ensures that all required data have been entered.",
     "choices": {
       "Completeness check": true,
       "Format check": false,
       "Range check": false,
       "Consistency checks": false,
       "Database checks": false
-    },
-    "module": 10
+    }
   },
-  "Interface Structures cannot directly interface with other interface structures on other menus and submenus, only the interface structures on the same menu or submenu.": {
+  "LH.10.57": {
+    "question": "Interface Structures cannot directly interface with other interface structures on other menus and submenus, only the interface structures on the same menu or submenu.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 10
+    }
   },
-  "Experienced users prefer user interfaces with 'ease of learning' features.": {
+  "LH.10.58": {
+    "question": "Experienced users prefer user interfaces with 'ease of learning' features.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 10
+    }
   },
-  "Use scenarios builds upon what?": {
+  "LH.10.59": {
+    "question": "Use scenarios builds upon what?",
     "choices": {
       "Entity relationship diagrams": false,
       "JAD sessions": false,
       "PERT charts": false,
       "Use cases": true,
       "HIPO charts": false
-    },
-    "module": 10
+    }
   },
-  "Some systems that are used infrequently should probably emphasize:": {
+  "LH.10.60": {
+    "question": "Some systems that are used infrequently should probably emphasize:",
     "choices": {
       "Ease of learning": true,
       "Higher user flexibility": false,
       "Ease of use": false,
       "More short-cut keys and built in keyboard functions": false,
       "Organizational feasibility": false
-    },
-    "module": 10
+    }
   },
-  "Used when there is insufficient room to display all choices.": {
+  "LH.10.61": {
+    "question": "Used when there is insufficient room to display all choices.",
     "choices": {
       "Check box selection list": false,
       "Radio button selection list": false,
       "On-screen selection list": false,
       "Drop-down selection list": true,
       "Combo box selection list": false
-    },
-    "module": 10
+    }
   },
-  "Typically, the second step in the user interface design process is what?": {
+  "LH.10.62": {
+    "question": "Typically, the second step in the user interface design process is what?",
     "choices": {
       "Design interface standards": false,
       "Creating an interface design prototype": false,
       "Do an interface evaluation": false,
       "Examine DFDs and use cases to develop use scenarios": false,
       "Develop the interface structure diagram (ISD)": true
-    },
-    "module": 10
+    }
   },
-  "Ensures that numeric data are within correct minimum and maximum values.": {
+  "LH.10.63": {
+    "question": "Ensures that numeric data are within correct minimum and maximum values.",
     "choices": {
       "Completeness check": false,
       "Format check": false,
       "Range check": true,
       "Consistency checks": false,
       "Database checks": false
-    },
-    "module": 10
+    }
   },
-  "Used when entering a numeric value.": {
+  "LH.10.64": {
+    "question": "Used when entering a numeric value.",
     "choices": {
       "Up-down numeric control": true,
       "Radio button selection list": false,
       "On-screen selection list": false,
       "Drop-down selection list": false,
       "Combo box selection list": false
-    },
-    "module": 10
+    }
   },
-  "Typically, the fourth step in the user interface design process is what?": {
+  "LH.10.65": {
+    "question": "Typically, the fourth step in the user interface design process is what?",
     "choices": {
       "Design interface standards": false,
       "Creating an interface design prototype": true,
       "Do an interface evaluation": false,
       "Examine DFDs and use cases to develop use scenarios": false,
       "Develop the interface structure diagram (ISD)": false
-    },
-    "module": 10
+    }
   },
-  "This report is used when a user needs brief information on many items.": {
+  "LH.10.66": {
+    "question": "This report is used when a user needs brief information on many items.",
     "choices": {
       "Detail Report": false,
       "Turnaround document": false,
       "Exception report": false,
       "Summary report": true,
       "Consistency check": false
-    },
-    "module": 10
+    }
   },
-  "Presents a complete list of choices, each with a square box in front.": {
+  "LH.10.67": {
+    "question": "Presents a complete list of choices, each with a square box in front.",
     "choices": {
       "Check box selection list": true,
       "Radio button selection list": false,
       "On-screen selection list": false,
       "Drop-down selection list": false,
       "Combo box selection list": false
-    },
-    "module": 10
+    }
   },
-  "This is used when all combinations of data are valid (like birth year is prior to marriage year).": {
+  "LH.10.68": {
+    "question": "This is used when all combinations of data are valid (like birth year is prior to marriage year).",
     "choices": {
       "Completeness check": false,
       "Format check": false,
       "Range check": false,
       "Check digit check": false,
       "Consistency check": true
-    },
-    "module": 10
+    }
   },
-  "Research shows that in an ideal world a menu should contain no more than four items and submenus should contain no fewer than six items.": {
+  "LH.10.69": {
+    "question": "Research shows that in an ideal world a menu should contain no more than four items and submenus should contain no fewer than six items.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 10
+    }
   },
-  "It is better to make menus how?": {
+  "LH.10.70": {
+    "question": "It is better to make menus how?",
     "choices": {
       "Broad and shallow": true,
       "Narrow and deep": false,
       "Broad and deep": false,
       "Narrow and shallow": false,
       "Wide and tall": false
-    },
-    "module": 10
+    }
   },
-  "Used in all systems.": {
+  "LH.10.71": {
+    "question": "Used in all systems.",
     "choices": {
       "Error message": false,
       "Confirmation message": false,
       "Acknowledgment message": false,
       "Delay message": false,
       "Help message": true
-    },
-    "module": 10
+    }
   },
-  "There are many types of reports, they include which of the following?": {
+  "LH.10.72": {
+    "question": "There are many types of reports, they include which of the following?",
     "choices": {
       "Summary reports": true,
       "Exception reports": true,
       "Turnaround documents": true,
       "Graphs": true
     },
-    "multi_select": true,
-    "module": 10
+    "multiSelect": true
   },
-  "If the density on a single page form is too high, it might not be as effective for some users as creating a two-page form.": {
+  "LH.10.73": {
+    "question": "If the density on a single page form is too high, it might not be as effective for some users as creating a two-page form.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 10
+    }
   },
-  "One strong suggestion for navigation design is what?": {
+  "LH.10.74": {
+    "question": "One strong suggestion for navigation design is what?",
     "choices": {
       "Limit menu items to at most ten items": false,
       "Color code common menu items with green (go) and red (stop)": false,
       "Simplify recovery from mistakes (like having an undo button)": true,
       "Lock the user's computer when a mistake has been made": false,
       "Log all mistakes, and log the user's computer when 1000 mistakes have been made": false
-    },
-    "module": 10
+    }
   },
-  "Range checks will validate if the data is numeric with two decimal places.": {
+  "LH.10.75": {
+    "question": "Range checks will validate if the data is numeric with two decimal places.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 10
+    }
   },
-  "The following is used as a main menu for a system.": {
+  "LH.10.76": {
+    "question": "The following is used as a main menu for a system.",
     "choices": {
       "Menu bar": true,
       "Drop-down menu": false,
       "Hyperlink menu": false,
       "Pop-up menu": false,
       "Tab menu": false
-    },
-    "module": 10
+    }
   },
-  "Provides additional information about the system and its components.": {
+  "LH.10.77": {
+    "question": "Provides additional information about the system and its components.",
     "choices": {
       "Error message": false,
       "Confirmation message": false,
       "Acknowledgment message": false,
       "Delay message": false,
       "Help message": true
-    },
-    "module": 10
+    }
   },
-  "This is used when several fields must be entered before the form can be processed.": {
+  "LH.10.78": {
+    "question": "This is used when several fields must be entered before the form can be processed.",
     "choices": {
       "Completeness check": true,
       "Format check": false,
       "Range check": false,
       "Check digit check": false,
       "Consistency check": false
-    },
-    "module": 10
+    }
   },
-  "Colors and patterns add pizzazz to a screen form and aid in its readability.": {
+  "LH.10.79": {
+    "question": "Colors and patterns add pizzazz to a screen form and aid in its readability.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 10
+    }
   },
-  "Aesthetics refers to designing information that can be navigated in three-clicks or less.": {
+  "LH.10.80": {
+    "question": "Aesthetics refers to designing information that can be navigated in three-clicks or less.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 10
+    }
   },
-  "For screen forms and reports, you should use a font of at least size 12.": {
+  "LH.10.81": {
+    "question": "For screen forms and reports, you should use a font of at least size 12.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 10
+    }
   },
-  "A use scenario is one commonly used what?": {
+  "LH.10.82": {
+    "question": "A use scenario is one commonly used what?",
     "choices": {
       "Path through a use case": true,
       "Normalized ERD structure": false,
       "Context diagram": false,
       "Buy-in flowchart": false,
       "Throwaway prototyping tool": false
-    },
-    "module": 10
+    }
   },
-  "User interface design is a three-step process: (1) analyze the DFDs and use cases; (2) develop the interface diagrams; and (3) create the interface design prototype.": {
+  "LH.10.83": {
+    "question": "User interface design is a three-step process: (1) analyze the DFDs and use cases; (2) develop the interface diagrams; and (3) create the interface design prototype.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 10
+    }
   },
-  "Which of these are good strategies to succeed in this course?": {
+  "LH.10.84": {
+    "question": "Which of these are good strategies to succeed in this course?",
     "choices": {
       "Contribute to the Bible": true,
       "Contribute explanations to this website": true,
       "Yell <span style=\"font-size: 2rem\">BINGO!</span> in the middle of the class": false
     },
-    "multi_select": true,
-    "module": 10
+    "multiSelect": true
   }
 }

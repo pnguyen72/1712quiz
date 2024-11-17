@@ -1,600 +1,600 @@
 {
-  "Linda is a clerk in the accounting department. She was interviewed by David and is excited about the proposed system that will utilize electronic funds transfer. This would be an example of ______.": {
+  "LH.01.01": {
+    "question": "Linda is a clerk in the accounting department. She was interviewed by David and is excited about the proposed system that will utilize electronic funds transfer. This would be an example of ______.",
     "choices": {
       "Intangible benefit": true,
       "Tangible benefit": false,
       "Cash flow": false,
       "Return on investment": false,
       "Break-even analysis": false
-    },
-    "module": 1
+    }
   },
-  "Jack is going over financial numbers for a proposed project. Which of the following system analyst skills is he exhibiting currently?": {
+  "LH.01.02": {
+    "question": "Jack is going over financial numbers for a proposed project. Which of the following system analyst skills is he exhibiting currently?",
     "choices": {
       "Technical": false,
       "Management": false,
       "Interpersonal": false,
       "Analytical": true,
       "Business": false
-    },
-    "module": 1
+    }
   },
-  "To be compatible, all costs and benefits should use the current value of money since variations over time will (a) not affect the return on investment and (b) it is difficult (or impossible) to estimate future value of money.": {
+  "LH.01.03": {
+    "question": "To be compatible, all costs and benefits should use the current value of money since variations over time will (a) not affect the return on investment and (b) it is difficult (or impossible) to estimate future value of money.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 1
+    }
   },
-  "The requirements analyst role includes complete and accurate determination of what the system requirements consist of for all stakeholders.": {
+  "LH.01.04": {
+    "question": "The requirements analyst role includes complete and accurate determination of what the system requirements consist of for all stakeholders.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "Which of the following project roles would insure that the system conforms to information systems standards?": {
+  "LH.01.05": {
+    "question": "Which of the following project roles would insure that the system conforms to information systems standards?",
     "choices": {
       "Systems analyst": true,
       "Project manager": false,
       "Change management analyst": false,
       "Business analyst": false,
       "Infrastructure analyst": false
-    },
-    "module": 1
+    }
   },
-  "The three factors in the text for a feasibility analysis are: technical feasibility; organizational feasibility and economic feasibility.": {
+  "LH.01.06": {
+    "question": "The three factors in the text for a feasibility analysis are: technical feasibility; organizational feasibility and economic feasibility.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "Kallie is creating use cases, data flow diagrams, and entity relationship diagrams. In what phase of the SDLC would she do this?": {
+  "LH.01.07": {
+    "question": "Kallie is creating use cases, data flow diagrams, and entity relationship diagrams. In what phase of the SDLC would she do this?",
     "choices": {
       "Design": false,
       "Analysis": true,
       "Planning": false,
       "Construction": false,
       "Implementation": false
-    },
-    "module": 1
+    }
   },
-  "Interviewing is generally done in the analysis phase of the SDLC.": {
+  "LH.01.08": {
+    "question": "Interviewing is generally done in the analysis phase of the SDLC.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "Another outcome of the planning phase is the:": {
+  "LH.01.09": {
+    "question": "Another outcome of the planning phase is the:",
     "choices": {
       "Project plan": true,
       "Business process document": false,
       "System specification document": false,
       "Feasibility analysis document": false,
       "System proposal document": false
-    },
-    "module": 1
+    }
   },
-  "Robert is doing an economic analysis using today's dollar values. He is doing:": {
+  "LH.01.10": {
+    "question": "Robert is doing an economic analysis using today's dollar values. He is doing:",
     "choices": {
       "Internal rate of return analysis": false,
       "Break-even point analysis": false,
       "Net present value analysis": true,
       "Cash flow analysis": false,
       "Return on investment analysis": false
-    },
-    "module": 1
+    }
   },
-  "Joan's project is to take a fairly straight-forward manual process and make it an electronic process. This will make the processing more efficient. Which of the following requirements analysis strategies is she using?": {
+  "LH.01.11": {
+    "question": "Joan's project is to take a fairly straight-forward manual process and make it an electronic process. This will make the processing more efficient. Which of the following requirements analysis strategies is she using?",
     "choices": {
       "Business process automation": true,
       "Business process renovation": false,
       "Business process internalization": false,
       "Business process reengineering": false,
       "Business process improvement": false
-    },
-    "module": 1
+    }
   },
-  "Using 'net present value' in calculating economic feasibility will allow for variations in the time value of money.": {
+  "LH.01.12": {
+    "question": "Using 'net present value' in calculating economic feasibility will allow for variations in the time value of money.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "In SDLC, analysis is generally divided into three steps: understanding the as-is system; developing a cost-benefit analysis; and understanding the technical feasibility.": {
+  "LH.01.13": {
+    "question": "In SDLC, analysis is generally divided into three steps: understanding the as-is system; developing a cost-benefit analysis; and understanding the technical feasibility.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 1
+    }
   },
-  "Developing navigation methods, database, and file specifications and what architecture to use would occur in the design phase of the SDLC.": {
+  "LH.01.14": {
+    "question": "Developing navigation methods, database, and file specifications and what architecture to use would occur in the design phase of the SDLC.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "Anne has asked users and managers to identify problems with the as-is system and to describe how to solve them in the to-be system. She is probably in the analysis phase of SDLC.": {
+  "LH.01.15": {
+    "question": "Anne has asked users and managers to identify problems with the as-is system and to describe how to solve them in the to-be system. She is probably in the analysis phase of SDLC.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "Amy is planning on talking with a clerk and a manager in the accounts payable area, a manager in the procurement department, and two vendors. She is probably doing:": {
+  "LH.01.16": {
+    "question": "Amy is planning on talking with a clerk and a manager in the accounts payable area, a manager in the procurement department, and two vendors. She is probably doing:",
     "choices": {
       "Documentation analysis": false,
       "JAD": false,
       "Organizational Feasibility": false,
       "Observation": false,
       "Interviews": true
-    },
-    "module": 1
+    }
   },
-  "PCM Incorporated will need to purchase new servers for a system. This would be a:": {
+  "LH.01.17": {
+    "question": "PCM Incorporated will need to purchase new servers for a system. This would be a:",
     "choices": {
       "Intangible cost": false,
       "Intangible benefit": false,
       "Ongoing cost": false,
       "Operating cost": false,
       "Development cost": true
-    },
-    "module": 1
+    }
   },
-  "COMP 1712 is your favorite class. (You must answer correctly AND honestly!)": {
+  "LH.01.18": {
+    "question": "COMP 1712 is your favorite class. (You must answer correctly AND honestly!)",
     "choices": {
       "True": false,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "The three feasibility analyses in the text were: organizational feasibility, technical feasibility, and economic feasibility.": {
+  "LH.01.19": {
+    "question": "The three feasibility analyses in the text were: organizational feasibility, technical feasibility, and economic feasibility.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "Which is NOT true for systems analysts?": {
+  "LH.01.20": {
+    "question": "Which is NOT true for systems analysts?",
     "choices": {
       "They are the project sponsors for system proposals": true,
       "They play a key role in information systems development projects": false,
       "They do things and challenge the current way that an organization works": false,
       "They create value for an organization": false,
       "They enable the organization to perform work better": false
-    },
-    "module": 1
+    }
   },
-  "A system request will generally have these items: project sponsor; business need; business requirements; business value; special issues or constraints.": {
+  "LH.01.21": {
+    "question": "A system request will generally have these items: project sponsor; business need; business requirements; business value; special issues or constraints.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "Which of the following project roles would focus on stakeholder requirements?": {
+  "LH.01.22": {
+    "question": "Which of the following project roles would focus on stakeholder requirements?",
     "choices": {
       "Infrastructure analyst": false,
       "Business analyst": false,
       "Requirements analyst": true,
       "Systems analyst": false,
       "Change management analyst": false
-    },
-    "module": 1
+    }
   },
-  "If the development team of an organization is not familiar with the technologies that may be used, the project should be cancelled.": {
+  "LH.01.23": {
+    "question": "If the development team of an organization is not familiar with the technologies that may be used, the project should be cancelled.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 1
+    }
   },
-  "Which was NOT given as a method for determining business requirements?": {
+  "LH.01.24": {
+    "question": "Which was NOT given as a method for determining business requirements?",
     "choices": {
       "Benchmarking": true,
       "Interviewing": false,
       "Observation": false,
       "Questionnaires and surveys": false,
       "Document analysis": false
-    },
-    "module": 1
+    }
   },
-  "The normal sequence of SDLC phase outputs (from beginning to end) would be: system request; system proposal; system specifications; and installed system.": {
+  "LH.01.25": {
+    "question": "The normal sequence of SDLC phase outputs (from beginning to end) would be: system request; system proposal; system specifications; and installed system.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "When compared to a business analyst, the systems analyst will identify how the system will provide business value.": {
+  "LH.01.26": {
+    "question": "When compared to a business analyst, the systems analyst will identify how the system will provide business value.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 1
+    }
   },
-  "The champion supports the project with resources and political support.": {
+  "LH.01.27": {
+    "question": "The champion supports the project with resources and political support.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "The type of skill that is common to systems analysts to understand how IT can be applied to business situations and to ensure that the IT delivers real business value is:": {
+  "LH.01.28": {
+    "question": "The type of skill that is common to systems analysts to understand how IT can be applied to business situations and to ensure that the IT delivers real business value is:",
     "choices": {
       "Interpersonal": false,
       "Ethical": false,
       "Business": true,
       "Analytical": false,
       "Technical": false
-    },
-    "module": 1
+    }
   },
-  "Because the cost can be immense, _________ is one of the most critical steps in implementation.": {
+  "LH.01.29": {
+    "question": "Because the cost can be immense, _________ is one of the most critical steps in implementation.",
     "choices": {
       "Coding": false,
       "Testing": true,
       "Documentation": false,
       "Developing a conversion strategy": false,
       "Training": false
-    },
-    "module": 1
+    }
   },
-  "Which of the following project roles would identify how technology can improve business processes?": {
+  "LH.01.30": {
+    "question": "Which of the following project roles would identify how technology can improve business processes?",
     "choices": {
       "Change management analyst": false,
       "Infrastructure analyst": false,
       "Business analyst": false,
       "Requirements analyst": false,
       "Systems analyst": true
-    },
-    "module": 1
+    }
   },
-  "Moderate changes to existing processes falls under the _________ analysis.": {
+  "LH.01.31": {
+    "question": "Moderate changes to existing processes falls under the _________ analysis.",
     "choices": {
       "Business process blue-skying (BPB)": false,
       "Business process improvement (BPI)": true,
       "Business process automation (BPA)": false,
       "Business process reengineering (BPR)": false,
       "Business process efficiency (BPE)": false
-    },
-    "module": 1
+    }
   },
-  "Which is an activity the users probably will NOT do on a project?": {
+  "LH.01.32": {
+    "question": "Which is an activity the users probably will NOT do on a project?",
     "choices": {
       "Have some official roles on the project team": false,
       "Perform hands-on activities for the project": false,
       "Be assigned specific tasks to perform (with clear deadlines)": false,
       "Budget funds for the project": true,
       "Make decisions that influence the project": false
-    },
-    "module": 1
+    }
   },
-  "Because of the need to be focused on providing information about the business value of a system, a systems analyst will probably have much training or experience in programming or application development.": {
+  "LH.01.33": {
+    "question": "Because of the need to be focused on providing information about the business value of a system, a systems analyst will probably have much training or experience in programming or application development.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 1
+    }
   },
-  "Which phase is generally the longest and most expensive part of the development process?": {
+  "LH.01.34": {
+    "question": "Which phase is generally the longest and most expensive part of the development process?",
     "choices": {
       "Implementation": true,
       "Design": false,
       "Analysis": false,
       "Planning": false,
       "Feasibility": false
-    },
-    "module": 1
+    }
   },
-  "TJ has prepared a spreadsheet where the total benefits are $182,000; the total cumulative costs are $120,000. The ROI would be:": {
+  "LH.01.35": {
+    "question": "TJ has prepared a spreadsheet where the total benefits are $182,000; the total cumulative costs are $120,000. The ROI would be:",
     "choices": {
       "About 34%": false,
       "Less than 20%": false,
       "About 51.7%": true,
       "About 65.3%": false,
       "62,000": false
-    },
-    "module": 1
+    }
   },
-  "Determining business requirements is generally done in the planning phase of the SDLC.": {
+  "LH.01.36": {
+    "question": "Determining business requirements is generally done in the planning phase of the SDLC.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 1
+    }
   },
-  "The outcome of the planning phase is the:": {
+  "LH.01.37": {
+    "question": "The outcome of the planning phase is the:",
     "choices": {
       "System proposal document": false,
       "System specification document": false,
       "Test plan": false,
       "Business process document": false,
       "System request document": true
-    },
-    "module": 1
+    }
   },
-  "The primary output of the analysis phase is the system proposal.": {
+  "LH.01.38": {
+    "question": "The primary output of the analysis phase is the system proposal.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "The question 'Can we build it' is asked in the design phase.": {
+  "LH.01.39": {
+    "question": "The question 'Can we build it' is asked in the design phase.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 1
+    }
   },
-  "Systems that are cancelled or abandoned are frequently due to a lack of clarity about how the system should support an organization's goals and improve processes..": {
+  "LH.01.40": {
+    "question": "Systems that are cancelled or abandoned are frequently due to a lack of clarity about how the system should support an organization's goals and improve processes..",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "Which of the following project roles would analyze the key business aspects of the system?": {
+  "LH.01.41": {
+    "question": "Which of the following project roles would analyze the key business aspects of the system?",
     "choices": {
       "Change management analyst": false,
       "Infrastructure analyst": false,
       "Business analyst": true,
       "Systems analyst": false,
       "Project manager": false
-    },
-    "module": 1
+    }
   },
-  "Wayne is a senior director of finance. His company only recently came under Sarbanes-Oxley regulations and is the project sponsor to become compliant. He realizes that examining the as-is system may not be much help as the regulations are so radical that a major analysis and design project must be completed to make the company compliant. He is leaning towards: ______________": {
+  "LH.01.42": {
+    "question": "Wayne is a senior director of finance. His company only recently came under Sarbanes-Oxley regulations and is the project sponsor to become compliant. He realizes that examining the as-is system may not be much help as the regulations are so radical that a major analysis and design project must be completed to make the company compliant. He is leaning towards: ______________",
     "choices": {
       "Business process reengineering": true,
       "Business process improvement": false,
       "Business process automation": false,
       "Business process renovation": false,
       "Business process internalization": false
-    },
-    "module": 1
+    }
   },
-  "Which of the following project roles would serve as a primary point of contact for a project?": {
+  "LH.01.43": {
+    "question": "Which of the following project roles would serve as a primary point of contact for a project?",
     "choices": {
       "Project sponsor": true,
       "Infrastructure analyst": false,
       "Business analyst": false,
       "Systems analyst": false,
       "Change management analyst": false
-    },
-    "module": 1
+    }
   },
-  "Ramona is preparing an economic feasibility study. She is calculating the payback period. She is calculating:": {
+  "LH.01.44": {
+    "question": "Ramona is preparing an economic feasibility study. She is calculating the payback period. She is calculating:",
     "choices": {
       "Return on investment": false,
       "Cash flow": false,
       "Internal rate of return": false,
       "Net present value": false,
       "Break-even point": true
-    },
-    "module": 1
+    }
   },
-  "Rocky is dealing one-on-one with users and business managers (including some that have little experience with technology). He is demonstrating what system analyst skill?": {
+  "LH.01.45": {
+    "question": "Rocky is dealing one-on-one with users and business managers (including some that have little experience with technology). He is demonstrating what system analyst skill?",
     "choices": {
       "Analytical": false,
       "Ethical": false,
       "Interpersonal": true,
       "Technical": false,
       "Business": false
-    },
-    "module": 1
+    }
   },
-  "Ramya is preparing an economic feasibility study. She has a calculation where she takes total benefits minus total costs and divides that answer by the total costs. She is calculating:": {
+  "LH.01.46": {
+    "question": "Ramya is preparing an economic feasibility study. She has a calculation where she takes total benefits minus total costs and divides that answer by the total costs. She is calculating:",
     "choices": {
       "Net present value": false,
       "Break-even point": false,
       "Internal rate of return": false,
       "Return on investment": true,
       "Cash flow": false
-    },
-    "module": 1
+    }
   },
-  "Which of the following project roles would probably make a presentation about the objectives of a proposed project and its benefits to executives who will benefit directly from the project?": {
+  "LH.01.47": {
+    "question": "Which of the following project roles would probably make a presentation about the objectives of a proposed project and its benefits to executives who will benefit directly from the project?",
     "choices": {
       "Chief Information Officer (CIO)": false,
       "Champion": true,
       "Requirements analyst": false,
       "Project manager": false,
       "Systems analyst": false
-    },
-    "module": 1
+    }
   },
-  "Which would normally NOT be a reason for a project?": {
+  "LH.01.48": {
+    "question": "Which would normally NOT be a reason for a project?",
     "choices": {
       "An open source platform has just come on the market": true,
       "When a business need has been identified": false,
       "An existing system just isn't working properly and the workaround is tedious": false,
       "A consultant has suggested a new customer relationship management system": false,
       "To support a new business initiative": false
-    },
-    "module": 1
+    }
   },
-  "Which is NOT an attribute of a systems analyst?": {
+  "LH.01.49": {
+    "question": "Which is NOT an attribute of a systems analyst?",
     "choices": {
       "Understanding what to change": false,
       "Selecting which projects to approve": true,
       "Serving as a change agent": false,
       "Convincing others of the need to change": false,
       "Knowing how to change it": false
-    },
-    "module": 1
+    }
   },
-  "The primary goal of a system is to create value for the organization.": {
+  "LH.01.50": {
+    "question": "The primary goal of a system is to create value for the organization.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "When compared to a systems analyst, the business analyst will probably have more responsibility for determining business value.": {
+  "LH.01.51": {
+    "question": "When compared to a systems analyst, the business analyst will probably have more responsibility for determining business value.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "The key person in the SDLC is the systems analyst who analyzed the business situation, identifies opportunities for improvements and design an information system to implement the improvements.": {
+  "LH.01.52": {
+    "question": "The key person in the SDLC is the systems analyst who analyzed the business situation, identifies opportunities for improvements and design an information system to implement the improvements.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "Chang is working on \"How will this system work.\" What SDLC phase is he in?": {
+  "LH.01.53": {
+    "question": "Chang is working on \"How will this system work.\" What SDLC phase is he in?",
     "choices": {
       "Analysis": false,
       "Implementation": false,
       "Transition": false,
       "Design": true,
       "Planning": false
-    },
-    "module": 1
+    }
   },
-  "The document that describes the business reasons for building a system and the value that the system is expected to provide is called the \"System Proposal.\"": {
+  "LH.01.54": {
+    "question": "The document that describes the business reasons for building a system and the value that the system is expected to provide is called the \"System Proposal.\"",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 1
+    }
   },
-  "Becky is a systems analyst for Laswell Consulting. She is attending a three-day intensive workshop on developing applications in php. What systems analyst skill is she working on?": {
+  "LH.01.55": {
+    "question": "Becky is a systems analyst for Laswell Consulting. She is attending a three-day intensive workshop on developing applications in php. What systems analyst skill is she working on?",
     "choices": {
       "Business": false,
       "Technical": true,
       "Interpersonal": false,
       "Ethical": false,
       "Analytical": false
-    },
-    "module": 1
+    }
   },
-  "Systems analysis and design projects are highly effective, with less than 3% of all projects cancelled or abandoned.": {
+  "LH.01.56": {
+    "question": "Systems analysis and design projects are highly effective, with less than 3% of all projects cancelled or abandoned.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 1
+    }
   },
-  "The outcome of the design phase is the:": {
+  "LH.01.57": {
+    "question": "The outcome of the design phase is the:",
     "choices": {
       "System specification document": true,
       "System request document": false,
       "System proposal document": false,
       "Feasibility analysis document": false,
       "Business process document": false
-    },
-    "module": 1
+    }
   },
-  "The project sponsor should have an idea of the business value to be gained from the system.": {
+  "LH.01.58": {
+    "question": "The project sponsor should have an idea of the business value to be gained from the system.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "The SDLC generally can be broken into four phases: planning, analysis, design and implementation.": {
+  "LH.01.59": {
+    "question": "The SDLC generally can be broken into four phases: planning, analysis, design and implementation.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "Juan is creating use cases. He is working in the design phase of the SDLC.": {
+  "LH.01.60": {
+    "question": "Juan is creating use cases. He is working in the design phase of the SDLC.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 1
+    }
   },
-  "The business analyst role focuses on the business issues surrounding the system.": {
+  "LH.01.61": {
+    "question": "The business analyst role focuses on the business issues surrounding the system.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "The primary output of the planning phase is the system request.": {
+  "LH.01.62": {
+    "question": "The primary output of the planning phase is the system request.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "Michaela is a systems analyst who is determining business requirements. What would most likely be the SDLC phase for her?": {
+  "LH.01.63": {
+    "question": "Michaela is a systems analyst who is determining business requirements. What would most likely be the SDLC phase for her?",
     "choices": {
       "Design": false,
       "Planning": false,
       "Analysis": true,
       "Business requirements are not developed by systems analysts, but by business analysts": false,
       "Implementation": false
-    },
-    "module": 1
+    }
   },
-  "The planning phase of the SDLC will have two steps: project initiation and requirements determination.": {
+  "LH.01.64": {
+    "question": "The planning phase of the SDLC will have two steps: project initiation and requirements determination.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 1
+    }
   },
-  "Alice is calculating whether a system will lower costs or increase revenues. What SDLC phase is she in?": {
+  "LH.01.65": {
+    "question": "Alice is calculating whether a system will lower costs or increase revenues. What SDLC phase is she in?",
     "choices": {
       "Planning": true,
       "Analysis": false,
       "Design": false,
       "Evaluation": false,
       "Implementation": false
-    },
-    "module": 1
+    }
   },
-  "The outcome of the analysis phase is the:": {
+  "LH.01.66": {
+    "question": "The outcome of the analysis phase is the:",
     "choices": {
       "Feasibility analysis document": false,
       "System request document": false,
       "Business process document": false,
       "System specification document": false,
       "System proposal document": true
-    },
-    "module": 1
+    }
   },
-  "The type of skill that is common to systems analysts to deal fairly and honestly with other project team members is:": {
+  "LH.01.67": {
+    "question": "The type of skill that is common to systems analysts to deal fairly and honestly with other project team members is:",
     "choices": {
       "Interpersonal": false,
       "Technical": false,
       "Business": false,
       "Ethical": true,
       "Analytical": false
-    },
-    "module": 1
+    }
   },
-  "Numerous studies report that projects involving information technology experience failure rates from 30% - 70%.": {
+  "LH.01.68": {
+    "question": "Numerous studies report that projects involving information technology experience failure rates from 30% - 70%.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "A support plan for the system is established in the implementation phase of the SDLC.": {
+  "LH.01.69": {
+    "question": "A support plan for the system is established in the implementation phase of the SDLC.",
     "choices": {
       "True": true,
       "False": false
-    },
-    "module": 1
+    }
   },
-  "Systems analysts are generally experts in business, finance, and application development.": {
+  "LH.01.70": {
+    "question": "Systems analysts are generally experts in business, finance, and application development.",
     "choices": {
       "True": false,
       "False": true
-    },
-    "module": 1
+    }
   }
 }

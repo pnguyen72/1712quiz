@@ -21,7 +21,7 @@ function generateModuleSelection() {
 
     const input = document.createElement("input");
     input.type = "checkbox";
-    input.id = `${index + indexOffset}`;
+    input.id = `${String(index + indexOffset).padStart(2, "0")}`;
     input.addEventListener(
       "click",
       () => (document.getElementById("moduleALLSelect").checked = false)
@@ -75,19 +75,17 @@ function generateQuiz(data) {
 }
 
 function generateQuestion(questionData, questionIndex) {
+  const questionId = questionData.id;
   const questionText = questionData.question;
-  const img = questionData.img;
+  const hasImage = questionData.hasImage;
   const choicesData = Object.entries(questionData.choices);
-  const isMultiSelect = questionData.multi_select;
-  const bank = questionData.AI ? "AI" : "LH";
-  const module = questionData.module;
+  const isMultiSelect = questionData.multiSelect;
+  const isAI = questionId.slice(0, 2) == "AI";
   arrange(choicesData);
 
   const question = document.createElement("div");
-  question.id = "Q" + (questionIndex + 1);
+  question.id = questionId;
   question.className = "question";
-  question.setAttribute("bank", bank);
-  question.setAttribute("module", module);
 
   // header
   const questionHeader = document.createElement("div");
@@ -113,7 +111,7 @@ function generateQuestion(questionData, questionIndex) {
   unsureLabel.appendChild(unsureCheck);
   unsureLabel.appendChild(unsureText);
   questionTitleContainter.appendChild(questionTitle);
-  if (bank == "AI") questionTitleContainter.appendChild(AILabel);
+  if (isAI) questionTitleContainter.appendChild(AILabel);
   questionHeader.appendChild(questionTitleContainter);
   questionHeader.appendChild(unsureLabel);
   question.appendChild(questionHeader);
@@ -125,10 +123,10 @@ function generateQuestion(questionData, questionIndex) {
   question.appendChild(questionBody);
 
   // figure
-  if (img) {
+  if (hasImage) {
     const figure = document.createElement("figure");
     const image = document.createElement("img");
-    image.setAttribute("src", `./data/images/${img}`);
+    image.setAttribute("src", `./data/images/${questionId}.png`);
     figure.appendChild(image);
     question.appendChild(figure);
   }
@@ -179,7 +177,7 @@ function generateQuestion(questionData, questionIndex) {
 }
 
 function setupQuiz(quiz) {
-  for (let question of quiz.getElementsByClassName("question")) {
+  for (const question of quiz.getElementsByClassName("question")) {
     question.addEventListener(
       "animationend",
       () => (question.style.animation = "")
@@ -193,9 +191,7 @@ function setupQuiz(quiz) {
       return question;
     };
     question.blink = () => (question.style.animation = "blink 1s");
-
-    const questionBody = question.querySelector(".question-body");
-    question.explain = () => getExplanation(questionBody.innerHTML);
+    question.explain = () => explain(question);
 
     const unsureCheck = question.querySelector(".unsure-check");
     unsureCheck.addEventListener("input", () => toggleUnsure(question));

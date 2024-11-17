@@ -18,28 +18,30 @@ function loadData() {
 
     const midtermOffset = 1;
     for (let i = 0; i < data.midterm.length; ++i) {
+      const moduleNum = String(i + midtermOffset).padStart(2, "0");
       promises.push(
         _getQuestions(i + midtermOffset, "LH").then(
-          (questions) => (modulesData.LH[i + midtermOffset] = _data(questions))
+          (questions) => (modulesData.LH[moduleNum] = _data(questions))
         )
       );
       promises.push(
         _getQuestions(i + midtermOffset, "AI").then(
-          (questions) => (modulesData.AI[i + midtermOffset] = _data(questions))
+          (questions) => (modulesData.AI[moduleNum] = _data(questions))
         )
       );
     }
 
     const finalOffset = 1 + data.midterm.length;
     for (let i = 0; i < data.final.length; ++i) {
+      const moduleNum = String(i + finalOffset).padStart(2, "0");
       promises.push(
         _getQuestions(i + finalOffset, "LH").then(
-          (questions) => (modulesData.LH[i + finalOffset] = _data(questions))
+          (questions) => (modulesData.LH[moduleNum] = _data(questions))
         )
       );
       promises.push(
         _getQuestions(i + finalOffset, "AI").then(
-          (questions) => (modulesData.AI[i + finalOffset] = _data(questions))
+          (questions) => (modulesData.AI[moduleNum] = _data(questions))
         )
       );
     }
@@ -78,61 +80,49 @@ function getQuestions(banks, modules, count) {
 }
 
 function resolveQuestions(questions) {
-  for (question of questions) {
-    const bank = question.getAttribute("bank");
-    const module = question.getAttribute("module");
-    const questionText = question.querySelector(".question-body").innerHTML;
-    modulesData[bank][module].resolve(questionText);
+  for (const question of questions) {
+    const id = question.id;
+    const [bank, module, _] = id.split(".");
+    modulesData[bank][module].resolve(id);
   }
 }
 
-function getExplanation(questionText) {
-  db.collection("explanations")
-    .doc(questionText.replaceAll("/", "#"))
-    .onSnapshot((doc) => {
-      const explanationText = doc.data()?.explanation ?? "";
-      const editing = doc.data()?.editing;
+function explain(question) {
+  const questionId = question.id;
+  const doc = db.collection("explain").doc(questionId);
+  doc.onSnapshot((snapshot) => {
+    const explanation = question.querySelector(".explanation");
+    if (explanation.tagName.toLowerCase() == "textarea") return;
 
-      for (question of quizPage.getElementsByClassName("question")) {
-        const questionBody = question.querySelector(".question-body");
-        if (questionBody.innerHTML == questionText) {
-          const explanation = question.querySelector(".explanation");
-          if (explanation.tagName.toLowerCase() == "textarea") {
-            break;
-          }
-          if (editing == null) explanation.classList.remove("editing");
-          else {
-            const expiring = editing + 90000; // 90 seconds timeout
-            const now = Date.now();
-            if (expiring <= now) editSignal(questionText, false);
-            else {
-              explanation.classList.add("editing");
-              setTimeout(() => editSignal(questionText, false), expiring - now);
-            }
-          }
-          explanation.write(explanationText);
-          giveExplanationDisclaimer(explanationText);
-          break;
-        }
+    const explanationText = snapshot.data()?.explanation ?? "";
+    const editing = snapshot.data()?.editing;
+
+    if (editing == null) explanation.classList.remove("editing");
+    else {
+      const expiring = editing + 90000; // 90 seconds timeout
+      const now = Date.now();
+      if (expiring <= now) editSignal(questionId, false);
+      else {
+        explanation.classList.add("editing");
+        setTimeout(() => editSignal(questionId, false), expiring - now);
       }
-    });
+    }
+    explanation.write(explanationText);
+    giveExplanationDisclaimer(explanationText);
+  });
 }
 
-function submitExplanation(questionText, explanationText) {
-  const doc = db
-    .collection("explanations")
-    .doc(questionText.replaceAll("/", "#"));
+function submitExplanation(questionId, questionText, explanationText) {
+  const doc = db.collection("explain").doc(questionId);
   if (explanationText) {
-    return doc.set({ explanation: explanationText });
+    return doc.set({ question: questionText, explanation: explanationText });
   } else {
     return doc.delete();
   }
 }
 
-function editSignal(questionText, isEditing) {
-  const doc = db
-    .collection("explanations")
-    .doc(questionText.replaceAll("/", "#"));
+function editSignal(questionId, isEditing) {
+  const doc = db.collection("explain").doc(questionId);
   if (isEditing) {
     doc.set({ editing: Date.now() }, { merge: true });
   } else {
@@ -153,14 +143,13 @@ function _getQuestions(moduleNum, bank) {
 
 function _data(questions) {
   return {
-    _origin: questions,
-    _data: {},
+    _origin: Object.entries(questions),
+    _data: questions,
     _pull: function (count) {
-      const origin = Object.entries(this._origin);
-      shuffle(origin);
+      shuffle(this._origin);
       this._data = {
         ...this._data,
-        ...Object.fromEntries(origin.slice(0, count)),
+        ...Object.fromEntries(this._origin.slice(0, count)),
       };
     },
     get: function (count, position) {
@@ -175,8 +164,8 @@ function _data(questions) {
       let result = [];
       let entries = Object.entries(this._data);
       if (position == "end") entries.reverse();
-      for (const [question, questionData] of entries) {
-        result.push({ question: question, ...questionData });
+      for (const [id, questionData] of entries) {
+        result.push({ id: id, ...questionData });
         if (result.length >= count) break;
       }
       return result;

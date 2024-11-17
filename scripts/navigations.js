@@ -147,7 +147,9 @@ function submit() {
   pastAttempts.push({
     quiz: setupQuiz(quiz.cloneNode(true)),
     banks: getSelectedBanks().join(", "),
-    modules: getSelectedModules().join(", "),
+    modules: getSelectedModules()
+      .map((x) => parseInt(x))
+      .join(", "),
     score: correctAnswers,
     outOf: questions.length,
   });
@@ -207,25 +209,21 @@ function toggleUnsure(question) {
 
 function editExplanation(explanation) {
   const container = explanation.parentElement;
-  const form = document.createElement("form");
-  form.className = "explanation-container";
+  const question = container.parentElement;
+  editSignal(question.id, true);
 
+  const form = document.createElement("form");
   const textarea = document.createElement("textarea");
+  form.className = "explanation-container";
   textarea.className = "explanation";
   textarea.value = explanation.innerHTML.replaceAll(/\s*<br>\s*/g, "\n");
-  if (textarea.value == placeholderExplanation) {
-    textarea.value = "";
-  }
+  if (textarea.value == placeholderExplanation) textarea.value = "";
   const originalTextareaValue = textarea.value;
 
-  const questionText =
-    container.parentElement.querySelector(".question-body").innerHTML;
-  editSignal(questionText, true);
-
   const submitBtn = document.createElement("button");
+  const cancelBtn = document.createElement("button");
   submitBtn.type = "submit";
   submitBtn.innerText = "Submit";
-  const cancelBtn = document.createElement("button");
   cancelBtn.type = "reset";
   cancelBtn.innerText = "Cancel";
 
@@ -255,8 +253,9 @@ function editExplanation(explanation) {
   function submit() {
     form.replaceWith(container);
 
+    const questionText = question.querySelector(".question-body").innerHTML;
     const explanationText = textarea.value.trim().replaceAll("\n", "<br>");
-    submitExplanation(questionText, explanationText).then(() => {
+    submitExplanation(question.id, questionText, explanationText).then(() => {
       if (
         !localStorage.getItem("licenseException") &&
         textarea.value != originalTextareaValue
