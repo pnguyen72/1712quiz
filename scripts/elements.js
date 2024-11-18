@@ -21,4 +21,4 @@ const moduleSelection = document.getElementById("module-selection");
 const questionBankSelection = document.getElementById("question-bank-selection");
 const AIChoice = document.getElementById("AI");
 const LHChoice = document.getElementById("LH");
-const questionNumChoice = document.getElementById("questions-num-choice");
+const questionsCountChoice = document.getElementById("questions-count-choice");

@@ -20,6 +20,21 @@ form.addEventListener("click", () => {
 });
 
 examSelection.addEventListener("input", generateModuleSelection);
+moduleSelection.addEventListener("input", () => {
+  const modules = getSelectedModules();
+  if (modules.length > 0) {
+    localStorage.setItem("modules", modules.join(" "));
+  }
+});
+questionBankSelection.addEventListener("input", () => {
+  const banks = getSelectedBanks();
+  if (banks.length > 0) {
+    localStorage.setItem("banks", banks.join(" "));
+  }
+});
+questionsCountChoice.addEventListener("input", () => {
+  localStorage.setItem("questions", questionsCountChoice.value);
+});
 
 licenceAgreeBtn.addEventListener("click", licenseUnlock);
 licenseDisagreeBtn.addEventListener("click", () => {

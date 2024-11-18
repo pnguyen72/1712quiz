@@ -40,6 +40,39 @@ function licenseGrantException() {
   localStorage.setItem("licenseException", "true");
 }
 
+function initalizeSelections() {
+  const modules = localStorage.getItem("modules");
+  if (modules) {
+    const modulesList = modules.split(" ");
+    if (modulesList[0] <= modulesName.midterm.length) {
+      midtermChoice.checked = true;
+    } else {
+      finalChoice.checked = true;
+    }
+    generateModuleSelection();
+    modulesList.forEach((id) => (document.getElementById(id).checked = true));
+    if (moduleSelectBoxes.every((box) => box.checked)) {
+      document.getElementById("moduleALLSelect").checked = true;
+    }
+  } else {
+    finalChoice.checked = true;
+    generateModuleSelection();
+  }
+
+  const banks = localStorage.getItem("banks");
+  if (banks) {
+    const banksList = banks.split(" ");
+    banksList.forEach((id) => (document.getElementById(id).checked = true));
+  } else {
+    LHChoice.checked = true;
+  }
+
+  const questionsCount = localStorage.getItem("questions");
+  if (questionsCount) {
+    questionsCountChoice.value = questionsCount;
+  }
+}
+
 function tohomePage() {
   if (
     document.querySelector(".unsubmitted .choice-input:checked") &&
@@ -67,10 +100,7 @@ function toQuizPage() {
 }
 
 function nextQuiz() {
-  let questionsNum = questionNumChoice.value;
-  if (questionsNum == "ALL") {
-    questionsNum = Number.MAX_VALUE;
-  }
+  const questionsCount = questionsCountChoice.value;
   const modules = getSelectedModules();
   if (modules.length == 0) {
     moduleSelection.style.animation = "blink 1s";
@@ -81,7 +111,7 @@ function nextQuiz() {
     questionBankSelection.style.animation = "blink 1s";
     return;
   }
-  const data = getQuestions(banks, modules, questionsNum);
+  const data = getQuestions(banks, modules, questionsCount);
   navText.innerText = `Attempt ${pastAttempts.length + 1}`;
   toQuizPage();
   document.getElementById("quiz").replaceWith(generateQuiz(data));
