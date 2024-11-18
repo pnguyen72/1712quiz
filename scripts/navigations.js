@@ -236,6 +236,7 @@ function editExplanation(explanation) {
   form.appendChild(cancelBtn);
   form.appendChild(submitBtn);
   container.replaceWith(form);
+  textarea.focus();
   _initializeHeight(textarea);
 
   textarea.addEventListener("input", () => {
