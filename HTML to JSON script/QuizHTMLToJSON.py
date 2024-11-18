@@ -117,6 +117,7 @@ def main():
     save_data(quiz_data)
 
 
+# edit before running the script, but DO NOT COMMIT the change
 MODULE: int = MODULE_NUMBER_GOES_HERE
 IN_PATH = _script_dir
 OUT_PATH = os.path.join(_script_dir, "../data/LH", f"module{MODULE}.json")

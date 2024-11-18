@@ -1,23 +1,23 @@
-## Warnings
-**AS OF OCT 29, 2024 THIS SCRIPT DOES NOT DEAL WITH MULTI-SELECT OPTIONS**
+# HTML to JSON script
 
-## Preamble
-`QuizHTMLToJSON.py` is a python script that attempts to take all `.html` files in this directory, and rip all questions, along with their answers, to format them in felistacios wonderful `JSON` format
-
-this script also deals with all duplicate entries.
-
-
-i whipped this up really quickly this morning so I'm sorry its so bad
-100% inefficiency guarantee
+`QuizHTMLToJSON.py` is a python script that takes all `.html` files in this directory, combine and convert them to the app's JSON format.
 
 ## How to use
-Navigate to the feedback of any 1712 quiz
-	*note: for the script to work, you must have gotten 0% on the quiz*
-Open inspect element, and use `ctrl + f` to find `method` (there should only be one `method` attribute, inside a `<form>` element)
-Right-click the `<form>` element, hit copy > copy element
-Next, create a new `.html` file in the `Input HTML` directory (the name does not matter, as long as its a `.html` file)
-Paste what you copied, save, and run the program
 
-Once you've looked over the `.json` file and are happy with it, name it `module[MODULE NUMER]` and put it in the correct folder
+1. Get 0% on a quiz, then navigate to its feedback page.
 
-:)
+2. Open inspect element and find a `<form>` element with a `method` attribute.
+
+3. Right-click the `<form>` element, hit copy > copy element.
+
+4. Paste what you copied to an `.html` file in this directory. The name does not matter.
+
+5. (Optional) You can take multiple attempts of the quiz and have multiple `.html` files, one for each attempt.
+
+6. Edit the python script to update the module number. **Do not commit this change.**
+
+7. Run the script. The data will be written to `/data/LH/module{module number}.json`. If the file already exists, the old and new data will be combined.
+
+## Credit
+
+Thanks [Szymon](https://github.com/SzymZem) for the wonderful script.
