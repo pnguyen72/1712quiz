@@ -27,6 +27,10 @@
 
     .unsure-label {
       color: gray;
+
+      .show-explanation {
+        display: none;
+      }
     }
   }
 
@@ -168,7 +172,7 @@
   }
 }
 
-.submitted {
+#quiz[submitted="true"] {
   li.correct label {
     background-color: hsl(120, 80%, 80%);
   }
@@ -178,11 +182,28 @@
       background-color: hsla(0, 80%, 75%, 75%);
     }
 
+    &:not(.wrong-answer) .unsure-label {
+      display: none;
+    }
+  }
+
+  &[explain="true"] .question {
     &.unsure,
     &.wrong-answer {
       .explanation-container {
         display: flex;
       }
+    }
+
+    .unsure-label {
+      display: initial;
+    }
+
+    .im-not-sure {
+      display: none;
+    }
+    .show-explanation {
+      display: initial;
     }
   }
 }
@@ -196,7 +217,7 @@
     display: none !important;
   }
 
-  #quiz.submitted {
+  #quiz[submitted="true"][explain="true"] {
     .explanation-container {
       display: flex !important;
     }

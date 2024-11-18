@@ -22,3 +22,6 @@ const questionBankSelection = document.getElementById("question-bank-selection")
 const AIChoice = document.getElementById("AI");
 const LHChoice = document.getElementById("LH");
 const questionsCountChoice = document.getElementById("questions-count-choice");
+//prettier-ignore
+const explainSelection = document.getElementById("explain-selection");
+const explainChoice = document.getElementById("explain");

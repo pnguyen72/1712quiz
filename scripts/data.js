@@ -12,7 +12,7 @@ let modulesName;
 let modulesData = { LH: {}, AI: {} };
 
 function loadData() {
-  return _getModules().then((data) => {
+  return _loadModules().then((data) => {
     modulesName = data;
     const promises = [];
 
@@ -20,12 +20,12 @@ function loadData() {
     for (let i = 0; i < data.midterm.length; ++i) {
       const moduleNum = String(i + midtermOffset).padStart(2, "0");
       promises.push(
-        _getQuestions(i + midtermOffset, "LH").then(
+        _loadQuestions(i + midtermOffset, "LH").then(
           (questions) => (modulesData.LH[moduleNum] = _data(questions))
         )
       );
       promises.push(
-        _getQuestions(i + midtermOffset, "AI").then(
+        _loadQuestions(i + midtermOffset, "AI").then(
           (questions) => (modulesData.AI[moduleNum] = _data(questions))
         )
       );
@@ -35,12 +35,12 @@ function loadData() {
     for (let i = 0; i < data.final.length; ++i) {
       const moduleNum = String(i + finalOffset).padStart(2, "0");
       promises.push(
-        _getQuestions(i + finalOffset, "LH").then(
+        _loadQuestions(i + finalOffset, "LH").then(
           (questions) => (modulesData.LH[moduleNum] = _data(questions))
         )
       );
       promises.push(
-        _getQuestions(i + finalOffset, "AI").then(
+        _loadQuestions(i + finalOffset, "AI").then(
           (questions) => (modulesData.AI[moduleNum] = _data(questions))
         )
       );
@@ -88,6 +88,8 @@ function resolveQuestions(questions) {
 }
 
 function explain(question) {
+  if (!explainChoice.checked) return;
+
   const questionId = question.id;
   const doc = db.collection("explain").doc(questionId);
   doc.onSnapshot((snapshot) => {
@@ -130,11 +132,11 @@ function editSignal(questionId, isEditing) {
   }
 }
 
-function _getModules() {
+function _loadModules() {
   return fetch("./data/modules.json").then((response) => response.json());
 }
 
-function _getQuestions(moduleNum, bank) {
+function _loadQuestions(moduleNum, bank) {
   return fetch(`./data/${bank}/module${moduleNum}.json`).then((response) => {
     if (!response.ok) return {};
     return response.json();

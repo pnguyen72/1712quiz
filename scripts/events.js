@@ -35,6 +35,9 @@ questionBankSelection.addEventListener("input", () => {
 questionsCountChoice.addEventListener("input", () => {
   localStorage.setItem("questions", questionsCountChoice.value);
 });
+explainChoice.addEventListener("input", () => {
+  localStorage.setItem("explain", explainChoice.checked);
+});
 
 licenceAgreeBtn.addEventListener("click", licenseUnlock);
 licenseDisagreeBtn.addEventListener("click", () => {
@@ -46,17 +49,10 @@ licenseDisagreeBtn.addEventListener("click", () => {
 });
 
 homeButon.addEventListener("click", tohomePage);
-
 nextButton.addEventListener("click", () => {
-  if (quizPage.style.display == "none") {
-    return nextQuiz();
-  }
-  const quiz = document.getElementById("quiz");
-  if (quiz.className == "submitted") {
-    return nextQuiz();
-  }
-
-  submit();
+  if (document.querySelector("#quiz-page[visible] #quiz[submitted=false]")) {
+    submit();
+  } else nextQuiz();
 });
 
 prevQuest.addEventListener("click", () =>
@@ -81,15 +77,15 @@ nextQuest.addEventListener("click", () =>
 );
 
 window.addEventListener("beforeprint", () => {
-  const quiz = document.getElementById("quiz");
-  if (!quiz && !quiz.classList.contains("submitted")) {
-    return;
-  }
+  const quiz = document.querySelector(
+    "#quiz-page[visible] #quiz[submitted=true][explain=true]"
+  );
+  if (!quiz) return;
   // Normally, to save firebase reads,
   // only questions that were answered incorrectly or marked unsure are explained.
   // This forces explaining all questions.
   for (question of quiz.getElementsByClassName("question")) {
     explain(question);
-    // No need to hide the explanation after printing; css already takes care of it.
+    // No need to hide the explanation after printing; it's already hidden by css.
   }
 });

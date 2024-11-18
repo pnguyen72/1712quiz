@@ -67,7 +67,7 @@ function generateModuleSelection() {
 function generateQuiz(data) {
   const quiz = document.createElement("div");
   quiz.id = "quiz";
-  quiz.className = "unsubmitted";
+  quiz.setAttribute("submitted", false);
   data.forEach((questionData, questionIndex) =>
     quiz.appendChild(generateQuestion(questionData, questionIndex))
   );
@@ -94,7 +94,8 @@ function generateQuestion(questionData, questionIndex) {
   const AILabel = document.createElement("span");
   const unsureLabel = document.createElement("label");
   const unsureCheck = document.createElement("input");
-  const unsureText = document.createElement("span");
+  const imNotSure = document.createElement("span");
+  const showExplanation = document.createElement("span");
 
   questionHeader.className = "question-header";
   questionTitle.className = "question-title";
@@ -102,14 +103,16 @@ function generateQuestion(questionData, questionIndex) {
   AILabel.className = "AI-label";
   AILabel.innerText = " (AI-generated)";
   unsureLabel.className = "unsure-label";
-  unsureLabel.title = "Mark question as unsure to review later";
   unsureCheck.className = "unsure-check";
-  unsureText.className = "unsure-text";
-  unsureText.innerText = "I'm not sure";
+  imNotSure.className = "im-not-sure";
+  imNotSure.innerText = "I'm not sure";
+  showExplanation.className = "show-explanation";
+  showExplanation.innerText = "Show explanation";
   unsureCheck.type = "checkbox";
 
   unsureLabel.appendChild(unsureCheck);
-  unsureLabel.appendChild(unsureText);
+  unsureLabel.appendChild(imNotSure);
+  unsureLabel.appendChild(showExplanation);
   questionTitleContainter.appendChild(questionTitle);
   if (isAI) questionTitleContainter.appendChild(AILabel);
   questionHeader.appendChild(questionTitleContainter);
@@ -177,6 +180,7 @@ function generateQuestion(questionData, questionIndex) {
 }
 
 function setupQuiz(quiz) {
+  quiz.setAttribute("explain", explainChoice.checked);
   for (const question of quiz.getElementsByClassName("question")) {
     question.addEventListener(
       "animationend",
@@ -260,7 +264,9 @@ function generateAttemptsTable() {
     attemptNum.innerText = index + 1;
     attemptNum.addEventListener("click", () => {
       toQuizPage();
-      document.getElementById("quiz").replaceWith(attempt.quiz);
+      document
+        .getElementById("quiz")
+        .replaceWith(setupQuiz(attempt.quiz.cloneNode(true)));
       showResult(score, outOf);
       navText.innerText = `Attempt ${index + 1}`;
       for (question of quizPage.querySelectorAll(".wrong-answer,.unsure")) {

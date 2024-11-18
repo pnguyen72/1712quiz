@@ -71,11 +71,21 @@ function initalizeSelections() {
   if (questionsCount) {
     questionsCountChoice.value = questionsCount;
   }
+
+  if (localStorage.getItem("explanationWarned")) {
+    unhide(explainSelection);
+    const explain = localStorage.getItem("explain");
+    if (explain) {
+      explainChoice.checked = explain == "true";
+    }
+  }
 }
 
 function tohomePage() {
   if (
-    document.querySelector(".unsubmitted .choice-input:checked") &&
+    document.querySelector(
+      "#quiz-page[visible] #quiz[submitted=false] .choice-input:checked"
+    ) &&
     !confirm("You will lose progress on the current attempt. Continue anyway?")
   ) {
     return;
@@ -157,8 +167,6 @@ function submit() {
 
     if (isCorrect) {
       ++correctAnswers;
-      question.querySelector(".unsure-label").removeAttribute("title");
-      question.querySelector(".unsure-text").innerText = "Show explanation";
     } else {
       question.classList.remove("unsure");
       question.classList.add("wrong-answer");
@@ -171,7 +179,7 @@ function submit() {
   for (let input of quiz.getElementsByClassName("choice-input")) {
     input.disabled = true;
   }
-  quiz.className = "submitted";
+  quiz.setAttribute("submitted", true);
   scrollTo(0, 0);
   showResult(correctAnswers, questions.length);
   resolveQuestions(
@@ -180,7 +188,7 @@ function submit() {
 
   // update past attemps
   pastAttempts.push({
-    quiz: setupQuiz(quiz.cloneNode(true)),
+    quiz: quiz.cloneNode(true),
     banks: getSelectedBanks().join(", "),
     modules: getSelectedModules()
       .map((x) => parseInt(x))
@@ -215,16 +223,18 @@ function showResult(score, outOf) {
 function giveExplanationDisclaimer(explanationText) {
   if (
     explanationText &&
-    document.getElementById("quiz").classList.contains("submitted") &&
+    document.querySelector("#quiz-page[visible] #quiz[submitted=true]") &&
     !localStorage.getItem("explanationWarned")
   ) {
     alert(
-      "Disclaimer:\n\n" +
+      "Warning:\n\n" +
         "Unlike questions and answers which are from Learning Hub, " +
         "the explanations (in blue) are written by your classmates, " +
-        "thus could be inaccurate."
+        "thus could be inaccurate.\n\n" +
+        "You can choose to disable them in the home page menu."
     );
     localStorage.setItem("explanationWarned", "true");
+    unhide(explainSelection);
   }
 }
 
