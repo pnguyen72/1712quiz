@@ -768,5 +768,73 @@
       "Yell <span style=\"font-size: 2rem\">BINGO!</span> in the middle of the class": false
     },
     "multiSelect": true
+  },
+  "LH.10.85": {
+    "question": "Scroll arrows moves directionally through numeric range.",
+    "choices": {
+      "Up-down numeric control": true,
+      "Radio button selection list": false,
+      "On-screen selection list": false,
+      "Drop-down selection list": false,
+      "Combo box selection list": false
+    }
+  },
+  "LH.10.86": {
+    "question": "Used when several items can be selected from a list of items.",
+    "choices": {
+      "Check box selection list": true,
+      "Radio button selection list": false,
+      "On-screen selection list": false,
+      "Drop-down selection list": false,
+      "Combo box selection list": false
+    }
+  },
+  "LH.10.87": {
+    "question": "Typically, the fifth step in the user interface design process is what?",
+    "choices": {
+      "Design interface standards": false,
+      "Creating an interface design prototype": false,
+      "Do an interface evaluation": true,
+      "Examine DFDs and use cases to develop use scenarios": false,
+      "Develop the interface structure diagram (ISD)": false
+    }
+  },
+  "LH.10.88": {
+    "question": "Novice or infrequent users of an interface (both paper and screen) prefer interfaces with low density like under 25%.",
+    "choices": {
+      "True": false,
+      "False": true
+    }
+  },
+  "LH.10.89": {
+    "question": "Mike is the analyst creating a report. It is easy for him to unintentionally create a biased report.",
+    "choices": {
+      "True": true,
+      "False": false
+    }
+  },
+  "LH.10.90": {
+    "question": "This is used when fields are numeric or contain coded data.",
+    "choices": {
+      "Completeness check": false,
+      "Format check": true,
+      "Range check": false,
+      "Check digit check": false,
+      "Consistency check": false
+    }
+  },
+  "LH.10.91": {
+    "question": "Interface Structure Design defines the application coding structure used (such as developing prototypes in Visual Basic).",
+    "choices": {
+      "True": false,
+      "False": true
+    }
+  },
+  "LH.10.92": {
+    "question": "The first principle of designing navigational controls is to prevent users from making mistakes.",
+    "choices": {
+      "True": true,
+      "False": false
+    }
   }
 }
