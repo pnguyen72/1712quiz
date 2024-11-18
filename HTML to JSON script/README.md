@@ -2,9 +2,7 @@
 **AS OF OCT 29, 2024 THIS SCRIPT DOES NOT DEAL WITH MULTI-SELECT OPTIONS**
 
 ## Preamble
-`QuizHTMLToJSON.py` is a python script that attempts to take all `.html` files in the `Input HTML` directory, and rip all questions, along with their answers, to format them in felistacios wonderful `JSON` format
-
-the `JSON` is outputted to `Output JSON` directory, named `quiz.json` by default
+`QuizHTMLToJSON.py` is a python script that attempts to take all `.html` files in this directory, and rip all questions, along with their answers, to format them in felistacios wonderful `JSON` format
 
 this script also deals with all duplicate entries.
 

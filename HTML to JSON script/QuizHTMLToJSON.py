@@ -1,74 +1,125 @@
+from typing import Any
 from bs4 import BeautifulSoup
 import json
 import os
 
-# Get the directory of the current script
-script_dir = os.path.dirname(os.path.abspath(__file__))
-
-# Update paths to be relative to the script's location
-htmlDir = os.path.join(script_dir, "Input HTML")
-outputPath = os.path.join(script_dir, "Output JSON", "quiz.json")
+_script_dir = os.path.dirname(os.path.abspath(__file__))
 
 
-def extract_between(text, start, end):
-    start_index = text.find(start)
-    if start_index == -1:
-        return "Start string not found"
-    
-    end_index = text.find(end, start_index + len(start))
-    if end_index == -1:
-        return "End string not found"
-    
-    return text[start_index + len(start):end_index]
+def import_existing_data():
+    try:
+        with open(OUT_PATH, "r") as f:
+            quiz_data: dict[str, dict[str, Any]] = json.load(f)
+    except FileNotFoundError:
+        return {}
 
-# Dictionary to hold quiz data in the desired JSON structure
-quiz_data = {}
+    formatted_data = {}
+    for question_data in quiz_data.values():
+        question = question_data.pop("question")
+        formatted_data[question] = question_data
+    return formatted_data
 
-# Get all HTML files in the directory
-html_files = [f for f in os.listdir(htmlDir) if f.endswith('.html')]
 
-for html_file in html_files:
-    htmlPath = os.path.join(htmlDir, html_file)
-    
-    # Load and parse the HTML file
-    with open(htmlPath, "r", encoding="utf-8") as file:
-        soup = BeautifulSoup(file, "html.parser")
+def get_new_data(quiz_data: dict[str, dict[str, Any]]):
+    def extract_between(text: str, start: str, end: str):
+        start_index = text.find(start)
+        if start_index == -1:
+            return "Start string not found"
 
-    questionBlocks = soup.find_all("div", style="text-align:left;margin:0em 0em 0.9em 0.9em;")
+        end_index = text.find(end, start_index + len(start))
+        if end_index == -1:
+            return "End string not found"
 
-    if len(questionBlocks) == 0:
-        print(f"No questionBlocks found in {html_file}")
-        continue
-    else:
-        print(f"{len(questionBlocks)} questionBlocks found in {html_file}")
+        return text[start_index + len(start) : end_index]
 
-    for i in range(len(questionBlocks)):
-        questionParent = questionBlocks[i].find("div", style="text-align:left;width:100%;margin-top:0.5em;margin-bottom:0.5em;")
-        question = questionParent.find("d2l-html-block")
-        questionTitle = question['html']
+    # Get all HTML files in the directory
+    html_files = [f for f in os.listdir(IN_PATH) if f.endswith(".html")]
 
-        # check if the question is already in the dictionary
-        if questionTitle in quiz_data:
-            print("Question already in dictionary! Skipping... " + questionTitle)
+    new_questions_count = 0
+
+    for html_file in html_files:
+        htmlPath = os.path.join(IN_PATH, html_file)
+
+        # Load and parse the HTML file
+        with open(htmlPath, "r", encoding="utf-8") as file:
+            soup = BeautifulSoup(file, "html.parser")
+
+        questionBlocks = soup.find_all(
+            "div", style="text-align:left;margin:0em 0em 0.9em 0.9em;"
+        )
+
+        if len(questionBlocks) == 0:
+            print(f"No questions found in {html_file}")
             continue
+        else:
+            print(f"{len(questionBlocks)} questions found in {html_file}")
 
-        answerOptions = questionBlocks[i].find_all("tr")
-        choices = {}
+        skipped = 0
+        for i in range(len(questionBlocks)):
+            questionParent = questionBlocks[i].find(
+                "div",
+                style="text-align:left;width:100%;margin-top:0.5em;margin-bottom:0.5em;",
+            )
+            question = questionParent.find("d2l-html-block")
+            questionTitle = question["html"]
 
-        for j in range(len(answerOptions)):
-            answerParent = answerOptions[j].find("div", class_="d2l-htmlblock-untrusted d2l-htmlblock-inline")
-            answer = extract_between(str(answerParent), 'td style="width: 100%;"&gt;', '&lt;/td&gt;&lt;/tr&gt;&lt;')
+            # check if the question is already in the dictionary
+            if questionTitle in quiz_data:
+                skipped += 1
+                continue
 
-            if "Start string not found" in answer:
-                answer = extract_between(str(answerParent), '<d2l-html-block html="', '" inline=')
-                answer = answer[3:]
+            answerOptions = questionBlocks[i].find_all("tr")
+            choices = {}
 
-            is_correct = answerOptions[j].find("img", alt="Correct Answer") is not None
-            # append this: answer: is_correct
-            choices[answer] = is_correct    
+            for j in range(len(answerOptions)):
+                answerParent = answerOptions[j].find(
+                    "div", class_="d2l-htmlblock-untrusted d2l-htmlblock-inline"
+                )
+                answer = extract_between(
+                    str(answerParent),
+                    'td style="width: 100%;"&gt;',
+                    "&lt;/td&gt;&lt;/tr&gt;&lt;",
+                )
 
-        quiz_data[questionTitle] = {"choices": choices}
+                if "Start string not found" in answer:
+                    answer = extract_between(
+                        str(answerParent), '<d2l-html-block html="', '" inline='
+                    )
+                    answer = answer[3:]
 
-# Save the parsed data to a JSON file
-with open(outputPath, "w", encoding="utf-8") as outfile:
-    json.dump(quiz_data, outfile, indent=2)
+                is_correct = (
+                    answerOptions[j].find("img", alt="Correct Answer") is not None
+                )
+                # append this: answer: is_correct
+                choices[answer] = is_correct
+
+            quiz_data[questionTitle] = {"choices": choices}
+
+        new_questions_count += len(questionBlocks) - skipped
+
+    print(f"{new_questions_count} questions added to data.")
+
+
+def save_data(quiz_data: dict[str, dict[str, Any]]):
+    formatted_data = {}
+    for i, (question, question_data) in enumerate(quiz_data.items()):
+        question_id = f"LH.{str(MODULE).zfill(2)}.{str(i+1).zfill(2)}"
+        formatted_data[question_id] = {"question": question} | question_data
+
+    # Save the parsed data to a JSON file
+    with open(OUT_PATH, "w") as f:
+        json.dump(formatted_data, f, indent=2)
+
+
+def main():
+    quiz_data = import_existing_data()
+    get_new_data(quiz_data)
+    save_data(quiz_data)
+
+
+MODULE: int = MODULE_NUMBER_GOES_HERE
+IN_PATH = _script_dir
+OUT_PATH = os.path.join(_script_dir, "../data/LH", f"module{MODULE}.json")
+
+if __name__ == "__main__":
+    main()
