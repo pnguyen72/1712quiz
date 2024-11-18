@@ -196,15 +196,15 @@
     display: none !important;
   }
 
-  .explanation-container {
-    display: flex !important;
-  }
-
-  .explanation-container:has(.explanation.empty) {
-    display: none !important;
-  }
-
-  .explanation ~ .bx {
-    display: none !important;
+  #quiz.submitted {
+    .explanation-container {
+      display: flex !important;
+    }
+    .explanation-container:has(.explanation.empty) {
+      display: none !important;
+    }
+    .explanation ~ .bx {
+      display: none !important;
+    }
   }
 }
