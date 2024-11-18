@@ -1,0 +1,362 @@
+{
+  "AI.10.01": {
+    "question": "Why is it essential to minimize cognitive load in interface workflows?",
+    "choices": {
+      "To allow users to complete tasks without overthinking or losing focus": true,
+      "To eliminate the need for detailed documentation": false,
+      "To reduce the processing power required for system operations": false,
+      "To ensure the interface focuses solely on advanced users": false
+    }
+  },
+  "AI.10.02": {
+    "question": "What is the primary purpose of usability heuristics in evaluation?",
+    "choices": {
+      "To identify potential usability flaws without requiring user testing": true,
+      "To enhance the visual elements of the interface": false,
+      "To define technical specifications for the back-end system": false,
+      "To ensure system performance meets hardware standards": false
+    }
+  },
+  "AI.10.03": {
+    "question": "How does iterative prototyping benefit interface design?",
+    "choices": {
+      "By allowing continuous improvement based on user feedback": true,
+      "By eliminating the need for formal usability testing": false,
+      "By focusing only on the aesthetic design elements": false,
+      "By ensuring the interface is finalized after the first iteration": false
+    }
+  },
+  "AI.10.04": {
+    "question": "What challenge is unique to designing interfaces for exploratory visitors?",
+    "choices": {
+      "Creating intuitive paths for users who lack predefined goals": true,
+      "Providing minimal functionality to avoid overwhelming users": false,
+      "Ensuring all interface features are hidden until needed": false,
+      "Simplifying workflows for users with high expertise": false
+    }
+  },
+  "AI.10.05": {
+    "question": "Why is visual consistency crucial in multi-page interfaces?",
+    "choices": {
+      "To reduce confusion when users navigate between screens": true,
+      "To ensure all content is displayed on a single page": false,
+      "To prioritize the aesthetic elements of the design": false,
+      "To improve back-end processing speed": false
+    }
+  },
+  "AI.10.06": {
+    "question": "How do storyboards complement wireframe diagrams?",
+    "choices": {
+      "By illustrating the sequence of user interactions with the system": true,
+      "By focusing solely on the final visual appearance of the interface": false,
+      "By replacing the need for functional prototypes": false,
+      "By prioritizing database architecture over navigation flow": false
+    }
+  },
+  "AI.10.07": {
+    "question": "What is a major limitation of heuristic evaluation?",
+    "choices": {
+      "It relies on the evaluator's expertise and may overlook real user issues": true,
+      "It requires extensive user involvement for accurate results": false,
+      "It focuses solely on system functionality and not user experience": false,
+      "It eliminates the need for real-world testing scenarios": false
+    }
+  },
+  "AI.10.08": {
+    "question": "How does prototyping aid in reducing design errors?",
+    "choices": {
+      "By identifying usability flaws early in the development process": true,
+      "By replacing the need for final interface testing": false,
+      "By focusing exclusively on technical requirements": false,
+      "By avoiding user feedback during early stages": false
+    }
+  },
+  "AI.10.09": {
+    "question": "Why are reversible actions significant in high-stakes interfaces?",
+    "choices": {
+      "They allow users to recover from errors without severe consequences": true,
+      "They ensure all workflows are locked after user input": false,
+      "They simplify the system architecture for developers": false,
+      "They prioritize visual feedback over system functionality": false
+    }
+  },
+  "AI.10.10": {
+    "question": "How do input constraints help prevent user errors?",
+    "choices": {
+      "By restricting invalid actions, such as disallowing letters in numeric fields": true,
+      "By simplifying workflows to only two or three options": false,
+      "By removing all guidance and letting users explore freely": false,
+      "By eliminating optional fields entirely": false
+    }
+  },
+  "AI.10.11": {
+    "question": "Why is flexibility important in interfaces for expert users?",
+    "choices": {
+      "Experts prefer shortcuts and advanced options to improve efficiency": true,
+      "Experts require visual cues for every action they perform": false,
+      "Experts do not interact with the system frequently": false,
+      "Experts rely on rigid workflows to avoid errors": false
+    }
+  },
+  "AI.10.12": {
+    "question": "What is the primary purpose of walkthrough evaluations?",
+    "choices": {
+      "To gather feedback by presenting prototypes to the project team": true,
+      "To replace formal usability testing with heuristic principles": false,
+      "To ensure technical requirements meet user expectations": false,
+      "To finalize the interface design before user involvement": false
+    }
+  },
+  "AI.10.13": {
+    "question": "Why is real-world context crucial in user-centered design?",
+    "choices": {
+      "It ensures the interface is suitable for practical, everyday tasks": true,
+      "It simplifies workflows to minimize testing requirements": false,
+      "It eliminates the need for observation during development": false,
+      "It focuses entirely on advanced scenarios for experts": false
+    }
+  },
+  "AI.10.14": {
+    "question": "What is the role of feedback in task closure?",
+    "choices": {
+      "To signal the successful completion of a sequence of actions": true,
+      "To highlight the remaining tasks the user must complete": false,
+      "To prioritize aesthetic elements over task confirmation": false,
+      "To ensure the system performs consistently under load": false
+    }
+  },
+  "AI.10.15": {
+    "question": "How can interface designs reduce user anxiety?",
+    "choices": {
+      "By providing clear navigation paths and reversible actions": true,
+      "By limiting user feedback to essential scenarios only": false,
+      "By increasing the complexity of workflows for precision": false,
+      "By avoiding the use of error messages altogether": false
+    }
+  },
+  "AI.10.16": {
+    "question": "Why are exploratory prototypes valuable in innovative designs?",
+    "choices": {
+      "They test unconventional ideas and gather early user reactions": true,
+      "They finalize workflows for production systems": false,
+      "They replace high-fidelity prototypes during evaluations": false,
+      "They focus on aesthetic improvements only": false
+    }
+  },
+  "AI.10.17": {
+    "question": "What principle underpins Shneiderman’s 'reduce short-term memory load' rule?",
+    "choices": {
+      "People can hold only 7 ± 2 chunks of information at a time": true,
+      "Reducing memory load eliminates the need for navigation aids": false,
+      "Short-term memory is unaffected by interface workflows": false,
+      "Users should recall previous interactions for efficiency": false
+    }
+  },
+  "AI.10.18": {
+    "question": "How does user control affect interface satisfaction?",
+    "choices": {
+      "Users feel empowered and less frustrated when they control the interaction flow": true,
+      "Users rely less on feedback when given control": false,
+      "Users prefer rigid workflows that limit their choices": false,
+      "Users require no navigation aids when control is prioritized": false
+    }
+  },
+  "AI.10.19": {
+    "question": "How does heuristic evaluation complement formal usability testing?",
+    "choices": {
+      "By providing quick insights based on best practices without requiring user involvement": true,
+      "By replacing the need for interactive evaluation": false,
+      "By focusing exclusively on the technical aspects of the interface": false,
+      "By ensuring all usability issues are fixed automatically": false
+    }
+  },
+  "AI.10.20": {
+    "question": "What is a critical limitation of low-fidelity prototypes?",
+    "choices": {
+      "They may not accurately represent system behavior in real use": true,
+      "They are too complex for iterative development": false,
+      "They require extensive resources to create": false,
+      "They eliminate the need for high-fidelity prototypes": false
+    }
+  },
+  "AI.10.21": {
+    "question": "What is the primary purpose of Shneiderman’s 'offer informative feedback' rule?",
+    "choices": {
+      "To ensure users understand the consequences of their actions": true,
+      "To make the interface visually appealing": false,
+      "To reduce the number of features in the interface": false,
+      "To guide users toward making fewer errors": false
+    }
+  },
+  "AI.10.22": {
+    "question": "How does human-centered design differ from user-centered design?",
+    "choices": {
+      "Human-centered design considers broader human needs and emotions, beyond system usability": true,
+      "User-centered design eliminates the need for prototypes": false,
+      "Human-centered design focuses exclusively on aesthetic appeal": false,
+      "User-centered design avoids feedback from real users": false
+    }
+  },
+  "AI.10.23": {
+    "question": "What is the primary advantage of using personas over general user categories?",
+    "choices": {
+      "Personas provide specific, contextual details about user motivations and challenges": true,
+      "Personas eliminate the need for detailed use scenarios": false,
+      "General user categories are less flexible than personas": false,
+      "General user categories focus more on aesthetic considerations": false
+    }
+  },
+  "AI.10.24": {
+    "question": "What distinguishes interactive evaluation from walkthrough evaluation?",
+    "choices": {
+      "Interactive evaluation involves real users, while walkthrough evaluation involves the project team presenting prototypes": true,
+      "Walkthrough evaluation is more focused on technical system details": false,
+      "Interactive evaluation focuses only on system aesthetics": false,
+      "Walkthrough evaluation eliminates the need for formal testing": false
+    }
+  },
+  "AI.10.25": {
+    "question": "Why is sequencing particularly important in multi-step tasks?",
+    "choices": {
+      "It ensures users can logically progress from one step to the next without confusion": true,
+      "It reduces the need for interface feedback": false,
+      "It simplifies navigation across unrelated tasks": false,
+      "It eliminates errors in data input entirely": false
+    }
+  },
+  "AI.10.26": {
+    "question": "What is the primary purpose of wireframes in interface design?",
+    "choices": {
+      "To visualize layout and structural elements without focusing on visual design": true,
+      "To finalize the overall interface aesthetics": false,
+      "To eliminate the need for prototypes": false,
+      "To test system functionality during early stages": false
+    }
+  },
+  "AI.10.27": {
+    "question": "Why is usability testing critical for interfaces designed for diverse user groups?",
+    "choices": {
+      "It ensures the interface meets the varying needs of different users effectively": true,
+      "It focuses primarily on identifying visual inconsistencies": false,
+      "It eliminates the need for formal design principles": false,
+      "It guarantees compatibility with all hardware systems": false
+    }
+  },
+  "AI.10.28": {
+    "question": "How does the 'closure' principle reduce cognitive load during complex workflows?",
+    "choices": {
+      "By grouping related actions into sequences with a clear beginning, middle, and end": true,
+      "By eliminating feedback for minor actions": false,
+      "By standardizing all user workflows into a single path": false,
+      "By allowing users to skip intermediary steps when needed": false
+    }
+  },
+  "AI.10.29": {
+    "question": "Why are 'use scenarios' necessary for contextual interface design?",
+    "choices": {
+      "They define real-world situations in which users will interact with the system": true,
+      "They simplify navigation across unrelated system modules": false,
+      "They ensure all workflows align with technical specifications": false,
+      "They eliminate the need for iterative prototypes": false
+    }
+  },
+  "AI.10.30": {
+    "question": "What is the difference between high-fidelity and low-fidelity prototypes?",
+    "choices": {
+      "High-fidelity prototypes are more detailed and interactive, while low-fidelity prototypes focus on basic concepts and layouts": true,
+      "Low-fidelity prototypes are used only during final evaluations": false,
+      "High-fidelity prototypes eliminate the need for interface feedback": false,
+      "Low-fidelity prototypes are exclusively visual, ignoring functionality": false
+    }
+  },
+  "AI.10.31": {
+    "question": "How does universal usability accommodate international users?",
+    "choices": {
+      "By considering language, cultural norms, and technological diversity in design": true,
+      "By standardizing all interfaces to use English as the default language": false,
+      "By focusing exclusively on accessibility for expert users": false,
+      "By reducing the number of customizable options": false
+    }
+  },
+  "AI.10.32": {
+    "question": "Why is prototype fidelity important in the early stages of design?",
+    "choices": {
+      "It determines the level of detail and functionality for testing and feedback": true,
+      "It ensures that the final design is visually appealing": false,
+      "It reduces the need for multiple iterations in the design process": false,
+      "It focuses exclusively on technical implementation": false
+    }
+  },
+  "AI.10.33": {
+    "question": "What is the main advantage of interactive evaluation over heuristic evaluation?",
+    "choices": {
+      "Interactive evaluation allows users to directly test and provide feedback on prototypes": true,
+      "Interactive evaluation requires less planning than heuristic evaluation": false,
+      "Heuristic evaluation focuses only on advanced users, while interactive evaluation does not": false,
+      "Heuristic evaluation is unsuitable for low-fidelity prototypes": false
+    }
+  },
+  "AI.10.34": {
+    "question": "Why is it essential to group related actions in an interface dialog?",
+    "choices": {
+      "It minimizes user confusion and simplifies task completion": true,
+      "It ensures all actions are visible on one screen": false,
+      "It allows the system to track user behavior more effectively": false,
+      "It reduces the overall development time for the interface": false
+    }
+  },
+  "AI.10.35": {
+    "question": "What role does a persona's 'pain points' play in interface design?",
+    "choices": {
+      "They highlight specific user frustrations to address during the design process": true,
+      "They define the technical limitations of the system": false,
+      "They help identify aesthetic preferences for the user interface": false,
+      "They eliminate the need for usability testing": false
+    }
+  },
+  "AI.10.36": {
+    "question": "What distinguishes a walkthrough evaluation from formal usability testing?",
+    "choices": {
+      "Walkthrough evaluation is conducted by the project team, while usability testing involves real users": true,
+      "Walkthrough evaluation focuses only on interface aesthetics": false,
+      "Formal usability testing eliminates the need for walkthrough evaluations": false,
+      "Walkthrough evaluation requires specialized equipment and labs": false
+    }
+  },
+  "AI.10.37": {
+    "question": "How does the 'reduce short-term memory load' principle apply to multi-step forms?",
+    "choices": {
+      "By displaying previously entered information to reduce user recall effort": true,
+      "By limiting the number of fields to a single step": false,
+      "By focusing on minimizing visual distractions in each step": false,
+      "By removing optional steps from the process entirely": false
+    }
+  },
+  "AI.10.38": {
+    "question": "What is the purpose of greying out inactive options in an interface?",
+    "choices": {
+      "To prevent users from attempting invalid actions and provide visual clarity": true,
+      "To emphasize the most frequently used options": false,
+      "To reduce the number of interactive elements on the screen": false,
+      "To minimize the system's memory usage": false
+    }
+  },
+  "AI.10.39": {
+    "question": "Why are wireframe diagrams often used before creating high-fidelity prototypes?",
+    "choices": {
+      "To outline the basic layout and functionality without committing to detailed design elements": true,
+      "To reduce the time spent on visual design": false,
+      "To provide a finished version of the interface for user feedback": false,
+      "To ensure all aesthetic elements are finalized before development": false
+    }
+  },
+  "AI.10.40": {
+    "question": "What is the most significant risk of ignoring diverse user needs in universal usability?",
+    "choices": {
+      "It can result in an interface that excludes or frustrates specific user groups": true,
+      "It forces designers to include unnecessary features": false,
+      "It limits the system's ability to function across platforms": false,
+      "It reduces the visual appeal of the interface": false
+    }
+  }
+}
