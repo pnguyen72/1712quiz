@@ -74,7 +74,7 @@ window.addEventListener("beforeprint", () => {
   // only questions that were answered incorrectly or marked unsure are explained.
   // This forces explaining all questions.
   for (question of quiz.getElementsByClassName("question")) {
-    question.explain();
+    explain(question);
     // No need to hide the explanation after printing; css already takes care of it.
   }
 });

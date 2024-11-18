@@ -1,3 +1,13 @@
+function hide(element) {
+  element.style.display = "none";
+  element.removeAttribute("visible");
+}
+
+function unhide(element) {
+  element.style.display = "";
+  element.setAttribute("visible", true);
+}
+
 function licenseLock() {
   if (
     sessionStorage.getItem("licenseAgreed") == "true" ||
@@ -9,7 +19,7 @@ function licenseLock() {
   for (input of form.querySelectorAll("input,select")) {
     input.disabled = true;
   }
-  navbar.hide();
+  hide(navbar);
 }
 
 function licenseUnlock() {
@@ -18,7 +28,7 @@ function licenseUnlock() {
   for (input of form.querySelectorAll("input,select")) {
     input.disabled = false;
   }
-  navbar.unhide();
+  unhide(navbar);
 }
 
 function licenseGrantException() {
@@ -43,16 +53,16 @@ function tohomePage() {
       .replaceWith(generateAttemptsTable());
   }
   navText.style.visibility = "hidden";
-  quizPage.style.display = "none";
-  homePage.style.display = "";
-  resultPanel.hide();
+  hide(resultPanel);
+  hide(quizPage);
+  unhide(homePage);
 }
 
 function toQuizPage() {
   navText.style.visibility = "visible";
-  homePage.style.display = "none";
-  quizPage.style.display = "";
-  resultPanel.hide();
+  hide(resultPanel);
+  hide(homePage);
+  unhide(quizPage);
   scrollTo(0, 0);
 }
 
@@ -122,19 +132,14 @@ function submit() {
     } else {
       question.classList.remove("unsure");
       question.classList.add("wrong-answer");
-      question.querySelector(".unsure-label").style.display = "none";
-      question.explain();
+      hide(question.querySelector(".unsure-label"));
+      explain(question);
     }
   }
 
   // post-grading errands
   for (let input of quiz.getElementsByClassName("choice-input")) {
     input.disabled = true;
-  }
-  if (questionNumChoice.value != "ALL") {
-    quizData.splice(0, questionNumChoice.value);
-  } else {
-    quizData = [];
   }
   quiz.className = "submitted";
   scrollTo(0, 0);
@@ -169,7 +174,7 @@ function showResult(score, outOf) {
   quizResultText.innerText = `${score}/${outOf} (${roundedAccuracy}%)`;
   const [H, S, L] = getColor(accuracy);
   resultPanel.style.backgroundColor = `hsl(${H}, ${S}%, ${L}%)`;
-  resultPanel.unhide();
+  unhide(resultPanel);
 
   const unsureQuestions = quizPage.querySelectorAll(".wrong-answer,.unsure");
   prevQuest.parentElement.style.visibility =
@@ -198,7 +203,7 @@ function toggleUnsure(question) {
     question.classList.remove("unsure");
   } else {
     question.classList.add("unsure");
-    question.explain();
+    explain(question);
   }
 
   const unsureQuestions = quizPage.querySelectorAll(".wrong-answer,.unsure");

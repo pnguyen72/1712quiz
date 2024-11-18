@@ -1,4 +1,3 @@
-let quizData = [];
 let pastAttempts = [];
 let disagreeNum = 0;
 let moduleSelectBoxes = [];

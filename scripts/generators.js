@@ -191,7 +191,6 @@ function setupQuiz(quiz) {
       return question;
     };
     question.blink = () => (question.style.animation = "blink 1s");
-    question.explain = () => explain(question);
 
     const unsureCheck = question.querySelector(".unsure-check");
     unsureCheck.addEventListener("input", () => toggleUnsure(question));
@@ -206,7 +205,6 @@ function setupQuiz(quiz) {
         explanation.innerHTML = placeholderExplanation;
       }
     };
-
     const editBtn = question.querySelector(".bx-edit");
     if (matchMedia("not all and (hover: none)").matches) {
       editBtn.classList.add("bx-tada-hover");
@@ -266,7 +264,7 @@ function generateAttemptsTable() {
       showResult(score, outOf);
       navText.innerText = `Attempt ${index + 1}`;
       for (question of quizPage.querySelectorAll(".wrong-answer,.unsure")) {
-        question.explain();
+        explain(question);
       }
     });
 

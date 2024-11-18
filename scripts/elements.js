@@ -22,21 +22,3 @@ const questionBankSelection = document.getElementById("question-bank-selection")
 const AIChoice = document.getElementById("AI");
 const LHChoice = document.getElementById("LH");
 const questionNumChoice = document.getElementById("questions-num-choice");
-
-resultPanel.hide = () => {
-  resultPanel.style.display = "none";
-  resultPanel.removeAttribute("visible");
-};
-resultPanel.unhide = () => {
-  resultPanel.style.display = "";
-  resultPanel.setAttribute("visible", true);
-};
-
-navbar.hide = () => {
-  navbar.style.display = "none";
-  navbar.removeAttribute("visible");
-};
-navbar.unhide = () => {
-  navbar.style.display = "";
-  navbar.setAttribute("visible", true);
-};
