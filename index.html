@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <link rel="stylesheet" href="./styles/panels.css" />
     <link rel="stylesheet" href="./styles/lists.css" />
+    <link rel="stylesheet" href="./styles/coverage.css" />
     <link rel="stylesheet" href="./styles/inputs.css" />
     <link rel="stylesheet" href="./styles/tables.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
@@ -56,7 +57,7 @@
         <form id="form">
           <h1>1712 Practice Quiz</h1>
           <div id="exam-selection">
-            <p>Studying for:</p>
+            <div>Studying for:</div>
             <ul>
               <li>
                 <label>
@@ -73,11 +74,14 @@
             </ul>
           </div>
           <div id="module-selection">
-            <p>Modules:</p>
+            <div id="modules-header">
+              <span>Modules:</span>
+              <span id="coverage">coverage</span>
+            </div>
             <div id="modules-list"></div>
           </div>
           <div id="question-bank-selection">
-            <p>Question banks:</p>
+            <div>Question banks:</div>
             <ul>
               <li>
                 <label>
@@ -104,16 +108,12 @@
                 <option value="9007199254740991">All of them!</option>
               </select>
             </label>
-            <br />
-            <br />
           </div>
           <div id="explain-selection" style="display: none">
             <label>
               <span>Show explanations:</span>
               <input id="explain" type="checkbox" checked="true" />
             </label>
-            <br />
-            <br />
           </div>
         </form>
         <figure id="license-notice" style="display: none">

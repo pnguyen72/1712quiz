@@ -31,7 +31,7 @@ function getColor(accuracy) {
   accuracy *= 100;
   const H = (5 / 4) * Math.max(accuracy - 20, 0);
   const S = 80;
-  const L = 50 + (1 / 4) * (Math.min(accuracy + 20, 100) - 20);
+  const L = 50 + (1 / 3) * (Math.min(accuracy + 40, 100) - 40);
   return [H, S, L];
 }
 

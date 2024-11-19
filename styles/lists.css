@@ -1,6 +1,7 @@
 ul {
   list-style-type: none;
   padding-inline-start: 1.5rem;
+  margin: 0.75rem 0;
 
   @media (width < 450px) {
     padding-inline-start: 0.75rem;
@@ -8,31 +9,5 @@ ul {
 
   li {
     margin: 0.5rem;
-  }
-}
-
-#main {
-  &:has(#license-notice[visible]) {
-    .coverage {
-      display: none;
-    }
-  }
-}
-
-#modules-list li {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  max-width: 475px;
-
-  .coverage {
-    margin-left: 0.5rem;
-  }
-
-  @media (width < 550px) {
-    .coverage-text {
-      display: none;
-    }
   }
 }

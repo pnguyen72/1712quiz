@@ -21,16 +21,11 @@ function generateModuleSelection() {
     const moduleSelectBox = document.createElement("input");
     const moduleTitle = document.createElement("span");
     const moduleCoverage = document.createElement("span");
-    const moduleCoverageValue = document.createElement("span");
-    const moduleCoverageText = document.createElement("span");
     modulesSelectBoxes.push(moduleSelectBox);
 
     moduleTitle.innerHTML = `Module ${index + indexOffset}: ${name}`;
     moduleCoverage.className = "coverage";
     moduleCoverage.style.display = "none";
-    moduleCoverageValue.className = "coverage-value";
-    moduleCoverageText.className = "coverage-text";
-    moduleCoverageText.innerHTML = ` coverage <span class="tada">🎉</span>`;
 
     moduleSelectBox.id = `${String(index + indexOffset).padStart(2, "0")}`;
     moduleSelectBox.type = "checkbox";
@@ -41,8 +36,6 @@ function generateModuleSelection() {
 
     moduleLabel.appendChild(moduleSelectBox);
     moduleLabel.appendChild(moduleTitle);
-    moduleCoverage.appendChild(moduleCoverageValue);
-    moduleCoverage.appendChild(moduleCoverageText);
     module.appendChild(moduleLabel);
     module.appendChild(moduleCoverage);
     modulesList.appendChild(module);
@@ -56,16 +49,11 @@ function generateModuleSelection() {
     const moduleSelectBox = document.createElement("input");
     const moduleTitle = document.createElement("span");
     const moduleCoverage = document.createElement("span");
-    const moduleCoverageValue = document.createElement("span");
-    const moduleCoverageText = document.createElement("span");
 
     moduleTitle.innerText = "All of them!";
     moduleTitle.style.fontWeight = "bold";
     moduleCoverage.className = "coverage";
     moduleCoverage.style.display = "none";
-    moduleCoverageValue.className = "coverage-value";
-    moduleCoverageText.className = "coverage-text";
-    moduleCoverageText.innerHTML = ` coverage <span class="tada">🎉</span>`;
     moduleSelectBox.type = "checkbox";
     moduleSelectBox.id = "module-all";
     moduleSelectBox.addEventListener("click", () =>
@@ -76,8 +64,6 @@ function generateModuleSelection() {
 
     moduleLabel.appendChild(moduleSelectBox);
     moduleLabel.appendChild(moduleTitle);
-    moduleCoverage.appendChild(moduleCoverageValue);
-    moduleCoverage.appendChild(moduleCoverageText);
     module.appendChild(moduleLabel);
     module.appendChild(moduleCoverage);
     modulesList.appendChild(module);
@@ -334,8 +320,6 @@ function generateCoverage() {
   for (const module of modules.querySelectorAll("li:not(:last-child)")) {
     const moduleNum = module.querySelector("input").id;
     const moduleCoverage = module.querySelector(".coverage");
-    const moduleCoverageValue = moduleCoverage.querySelector(".coverage-value");
-    const moduleCoverageTada = moduleCoverage.querySelector(".tada");
 
     let covered = 0;
     let size = 0;
@@ -362,35 +346,27 @@ function generateCoverage() {
     const coverage = covered / (size + Number.EPSILON);
     const roundedCoverage = Math.round((coverage + Number.EPSILON) * 100);
     const [H, S, L] = getColor(coverage);
-    moduleCoverage.style.backgroundColor = `hsla(${H}, ${S}%, ${L}%, ${0.75})`;
-    moduleCoverageValue.innerText = `${roundedCoverage}%`;
-    if (roundedCoverage < 100) {
-      console.log(roundedCoverage);
-      hide(moduleCoverageTada);
-    } else {
-      unhide(moduleCoverageTada);
-    }
-    unhide(moduleCoverage);
-  }
 
-  if (modules.querySelector("li:not(:last-child) .coverage:not([visible])")) {
-    return;
+    moduleCoverage.style.backgroundColor = `hsla(${H}, ${S}%, ${L}%, ${0.75})`;
+    moduleCoverage.innerText = `${roundedCoverage}%`;
+    unhide(moduleCoverage);
   }
 
   const module = modules.querySelector("li:last-child");
   const moduleCoverage = module.querySelector(".coverage");
-  const moduleCoverageValue = moduleCoverage.querySelector(".coverage-value");
-  const moduleCoverageTada = moduleCoverage.querySelector(".tada");
+
+  if (sizeTotal == 0) {
+    hide(moduleCoverage);
+  }
+  if (modules.querySelector("li:not(:last-child) .coverage:not([visible])")) {
+    return;
+  }
 
   const coverage = coveredTotal / (sizeTotal + Number.EPSILON);
   const roundedCoverage = Math.round((coverage + Number.EPSILON) * 100);
   const [H, S, L] = getColor(coverage);
+
   moduleCoverage.style.backgroundColor = `hsla(${H}, ${S}%, ${L}%, ${0.75})`;
-  moduleCoverageValue.innerText = `${roundedCoverage}%`;
-  if (roundedCoverage < 100) {
-    hide(moduleCoverageTada);
-  } else {
-    unhide(moduleCoverageTada);
-  }
+  moduleCoverage.innerText = `${roundedCoverage}%`;
   unhide(moduleCoverage);
 }
