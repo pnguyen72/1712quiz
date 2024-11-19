@@ -32,6 +32,7 @@ moduleSelection.addEventListener("input", () => {
     choice.disabled = size == 0;
     choice.checked = size > 0 && localStorage.getItem("banks")?.includes(bank);
   }
+  generateCoverage();
 });
 questionBankSelection.addEventListener("input", () => {
   const banks = getSelectedBanks();

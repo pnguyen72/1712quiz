@@ -352,6 +352,10 @@ function generateCoverage() {
     coveredTotal += covered;
     sizeTotal += size;
 
+    if (size == 0) {
+      hide(moduleCoverage);
+      continue;
+    }
     if (covered == 0 && moduleCoverage.style.display == "none") {
       continue;
     }
