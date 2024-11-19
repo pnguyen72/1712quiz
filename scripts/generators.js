@@ -64,24 +64,31 @@ function generateModuleSelection() {
   }
 }
 
-function generateQuiz(data) {
+function generateQuiz(quizData) {
   const quiz = document.createElement("div");
   quiz.id = "quiz";
   quiz.setAttribute("submitted", false);
-  data.forEach((questionData, questionIndex) =>
-    quiz.appendChild(generateQuestion(questionData, questionIndex))
+  quizData.forEach(([id, data], index) =>
+    quiz.appendChild(generateQuestion(id, data, index))
   );
   return setupQuiz(quiz);
 }
 
-function generateQuestion(questionData, questionIndex) {
-  const questionId = questionData.id;
+function generateQuestion(questionId, questionData, questionIndex) {
   const questionText = questionData.question;
   const hasImage = questionData.hasImage;
-  const choicesData = Object.entries(questionData.choices);
   const isMultiSelect = questionData.multiSelect;
-  const isAI = questionId.slice(0, 2) == "AI";
+  const choicesData = Object.entries(questionData.choices);
   arrange(choicesData);
+
+  const tags = [];
+  const [bank, module, _] = questionId.split(".");
+  if (modulesData[bank][module].isKnown(questionId)) {
+    tags.push(`<span class="known-tag">already learned</span>`);
+  }
+  if (bank == "AI") {
+    tags.push(`<span class="AI-tag">AI-generated</span>`);
+  }
 
   const question = document.createElement("div");
   question.id = questionId;
@@ -91,7 +98,7 @@ function generateQuestion(questionData, questionIndex) {
   const questionHeader = document.createElement("div");
   const questionTitleContainter = document.createElement("span");
   const questionTitle = document.createElement("b");
-  const AILabel = document.createElement("span");
+  const questionTags = document.createElement("span");
   const unsureLabel = document.createElement("label");
   const unsureCheck = document.createElement("input");
   const imNotSure = document.createElement("span");
@@ -100,8 +107,8 @@ function generateQuestion(questionData, questionIndex) {
   questionHeader.className = "question-header";
   questionTitle.className = "question-title";
   questionTitle.innerText = `Question ${questionIndex + 1}.`;
-  AILabel.className = "AI-label";
-  AILabel.innerText = " (AI-generated)";
+  questionTags.className = "question-tags";
+  questionTags.innerHTML = tags.join(`<span class="tags-delimiter"> | </span>`);
   unsureLabel.className = "unsure-label";
   unsureCheck.className = "unsure-check";
   imNotSure.className = "im-not-sure";
@@ -114,7 +121,7 @@ function generateQuestion(questionData, questionIndex) {
   unsureLabel.appendChild(imNotSure);
   unsureLabel.appendChild(showExplanation);
   questionTitleContainter.appendChild(questionTitle);
-  if (isAI) questionTitleContainter.appendChild(AILabel);
+  questionTitleContainter.appendChild(questionTags);
   questionHeader.appendChild(questionTitleContainter);
   questionHeader.appendChild(unsureLabel);
   question.appendChild(questionHeader);

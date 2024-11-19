@@ -17,11 +17,26 @@
     display: flex;
     justify-content: space-between;
 
-    .AI-label {
+    .question-tags {
       color: grey;
 
-      @media (width >= 450px) {
-        margin-left: 0.5rem;
+      margin-left: 0.5rem;
+      @media (width >= 600px) {
+        margin-left: 0.7rem;
+      }
+
+      @media (width <= 500px) {
+        .AI-tag,
+        .tags-delimiter {
+          display: none;
+        }
+      }
+
+      .AI-tag {
+        color: hsl(240, 75%, 65%);
+      }
+      .known-tag {
+        color: hsl(120, 55%, 35%);
       }
     }
 

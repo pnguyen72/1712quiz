@@ -121,11 +121,10 @@ function nextQuiz() {
     questionBankSelection.style.animation = "blink 1s";
     return;
   }
-  const data = getQuestions(banks, modules, questionsCount);
   navText.innerText = `Attempt ${pastAttempts.length + 1}`;
+  const quizData = getQuizData(banks, modules, questionsCount);
+  document.getElementById("quiz").replaceWith(generateQuiz(quizData));
   toQuizPage();
-  document.getElementById("quiz").replaceWith(generateQuiz(data));
-  scrollTo(0, 0);
 }
 
 function submit() {

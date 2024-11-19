@@ -50,8 +50,8 @@ function loadData() {
   });
 }
 
-function getQuestions(banks, modules, count) {
-  let result = [];
+function getQuizData(banks, modules, count) {
+  let quizData = [];
   const selectionSize = {};
   for (const bank of banks) {
     for (const module of modules) {
@@ -65,18 +65,18 @@ function getQuestions(banks, modules, count) {
     const [bank, module] = selection.split(".");
     const getAmount = Math.floor((effectiveSize * size) / totalSize);
     const data = modulesData[bank][module].get(getAmount, "beginning");
-    result = result.concat(data);
+    quizData = quizData.concat(data);
   }
-  if (result.length < effectiveSize) {
+  if (quizData.length < effectiveSize) {
     shuffle(selections);
     for (const selection of selections) {
       const [bank, module] = selection.split(".");
-      result.push(...modulesData[bank][module].get(1, "end"));
-      if (result.length >= effectiveSize) break;
+      quizData.push(...modulesData[bank][module].get(1, "end"));
+      if (quizData.length >= effectiveSize) break;
     }
   }
-  shuffle(result);
-  return result;
+  shuffle(quizData);
+  return quizData;
 }
 
 function resolveQuestions(questions) {
@@ -147,6 +147,7 @@ function _data(questions) {
   return {
     _origin: Object.entries(questions),
     _data: questions,
+    _knownQuestions: new Set(),
     _pull: function (count) {
       shuffle(this._origin);
       this._data = {
@@ -163,17 +164,22 @@ function _data(questions) {
         this._pull(count - length);
       }
       // slice data to specified amount, either from beginning or end of the pool
-      let result = [];
       let entries = Object.entries(this._data);
-      if (position == "end") entries.reverse();
-      for (const [id, questionData] of entries) {
-        result.push({ id: id, ...questionData });
-        if (result.length >= count) break;
+      if (position == "end") {
+        return entries.slice(-count);
+      } else {
+        return entries.slice(0, count);
       }
-      return result;
     },
-    resolve: function (question) {
-      delete this._data[question];
+    resolve: function (questionId) {
+      delete this._data[questionId];
+      this._knownQuestions.add(questionId);
+    },
+    coverage: function () {
+      return this._knownQuestions.size / this.size;
+    },
+    isKnown: function (questionId) {
+      return this._knownQuestions.has(questionId);
     },
     size: Object.keys(questions).length,
   };
