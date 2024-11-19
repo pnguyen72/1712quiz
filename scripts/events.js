@@ -25,6 +25,13 @@ moduleSelection.addEventListener("input", () => {
   if (modules.length > 0) {
     localStorage.setItem("modules", modules.join(" "));
   }
+
+  for (const bank of ["LH", "AI"]) {
+    const choice = document.getElementById(bank);
+    const size = sum(modules.map((module) => modulesData[bank][module].size));
+    choice.disabled = size == 0;
+    choice.checked = size > 0 && localStorage.getItem("banks")?.includes(bank);
+  }
 });
 questionBankSelection.addEventListener("input", () => {
   const banks = getSelectedBanks();

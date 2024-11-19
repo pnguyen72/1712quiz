@@ -75,3 +75,7 @@ function search(collection, item, map = (i) => i) {
   };
   return out;
 }
+
+function sum(array) {
+  return array.reduce((a, b) => a + b, 0);
+}

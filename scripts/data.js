@@ -59,7 +59,7 @@ function getQuestions(banks, modules, count) {
     }
   }
   const selections = Object.keys(selectionSize);
-  const totalSize = Object.values(selectionSize).reduce((a, b) => a + b, 0);
+  const totalSize = sum(Object.values(selectionSize));
   const effectiveSize = Math.min(totalSize, count);
   for (const [selection, size] of Object.entries(selectionSize)) {
     const [bank, module] = selection.split(".");
