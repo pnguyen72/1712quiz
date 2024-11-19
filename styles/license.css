@@ -6,10 +6,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 1rem;
+
+  form {
+    width: 100%;
+  }
 
   #license-notice {
     margin: 0;
-    display: none;
     position: relative;
     height: 80vh;
 
@@ -70,7 +74,7 @@
   }
 }
 
-@media (aspect-ratio < 1) {
+@media (aspect-ratio < 1.2) {
   #home-page > h1 {
     display: block;
   }

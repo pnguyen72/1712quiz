@@ -1,67 +1,89 @@
 function generateModuleSelection() {
-  moduleSelectBoxes = [];
+  modulesSelectBoxes = [];
 
   let indexOffset;
-  let modulesList;
+  let modulesData;
   if (midtermChoice.checked) {
     indexOffset = 1;
-    modulesList = modulesName.midterm;
+    modulesData = modulesName.midterm;
   } else {
     indexOffset = 1 + modulesName.midterm.length;
-    modulesList = modulesName.final;
+    modulesData = modulesName.final;
   }
 
-  const ul = document.createElement("ul");
-  ul.id = "modules-list";
-  document.getElementById("modules-list").replaceWith(ul);
+  const modulesList = document.createElement("ul");
+  modulesList.id = "modules-list";
+  document.getElementById("modules-list").replaceWith(modulesList);
 
-  modulesList.forEach((name, index) => {
-    const li = document.createElement("li");
-    const label = document.createElement("label");
+  modulesData.forEach((name, index) => {
+    const module = document.createElement("li");
+    const moduleLabel = document.createElement("label");
+    const moduleSelectBox = document.createElement("input");
+    const moduleTitle = document.createElement("span");
+    const moduleCoverage = document.createElement("span");
+    const moduleCoverageValue = document.createElement("span");
+    const moduleCoverageText = document.createElement("span");
+    modulesSelectBoxes.push(moduleSelectBox);
 
-    const input = document.createElement("input");
-    input.type = "checkbox";
-    input.id = `${String(index + indexOffset).padStart(2, "0")}`;
-    input.addEventListener(
-      "click",
-      () => (document.getElementById("moduleALLSelect").checked = false)
+    moduleTitle.innerHTML = `Module ${index + indexOffset}: ${name}`;
+    moduleCoverage.className = "coverage";
+    moduleCoverage.style.display = "none";
+    moduleCoverageValue.className = "coverage-value";
+    moduleCoverageText.className = "coverage-text";
+    moduleCoverageText.innerHTML = ` coverage <span class="tada">🎉</span>`;
+
+    moduleSelectBox.id = `${String(index + indexOffset).padStart(2, "0")}`;
+    moduleSelectBox.type = "checkbox";
+    moduleSelectBox.addEventListener(
+      "input",
+      () => (document.getElementById("module-all").checked = false)
     );
-    moduleSelectBoxes.push(input);
 
-    const span = document.createElement("span");
-    const title = `Module ${index + indexOffset}: ${name}`;
-    span.appendChild(document.createTextNode(title));
-
-    label.appendChild(input);
-    label.appendChild(span);
-
-    li.append(label);
-    ul.appendChild(li);
+    moduleLabel.appendChild(moduleSelectBox);
+    moduleLabel.appendChild(moduleTitle);
+    moduleCoverage.appendChild(moduleCoverageValue);
+    moduleCoverage.appendChild(moduleCoverageText);
+    module.appendChild(moduleLabel);
+    module.appendChild(moduleCoverage);
+    modulesList.appendChild(module);
   });
 
-  if (modulesList.length < 2) {
-    moduleSelectBoxes[0].checked = true;
+  if (modulesData.length < 2) {
+    modulesSelectBoxes[0].checked = true;
   } else {
-    const li = document.createElement("li");
-    const label = document.createElement("label");
+    const module = document.createElement("li");
+    const moduleLabel = document.createElement("label");
+    const moduleSelectBox = document.createElement("input");
+    const moduleTitle = document.createElement("span");
+    const moduleCoverage = document.createElement("span");
+    const moduleCoverageValue = document.createElement("span");
+    const moduleCoverageText = document.createElement("span");
 
-    const input = document.createElement("input");
-    input.type = "checkbox";
-    input.id = "moduleALLSelect";
-    input.addEventListener("click", () =>
-      moduleSelectBoxes.forEach((element) => (element.checked = input.checked))
+    moduleTitle.innerText = "All of them!";
+    moduleTitle.style.fontWeight = "bold";
+    moduleCoverage.className = "coverage";
+    moduleCoverage.style.display = "none";
+    moduleCoverageValue.className = "coverage-value";
+    moduleCoverageText.className = "coverage-text";
+    moduleCoverageText.innerHTML = ` coverage <span class="tada">🎉</span>`;
+    moduleSelectBox.type = "checkbox";
+    moduleSelectBox.id = "module-all";
+    moduleSelectBox.addEventListener("click", () =>
+      modulesSelectBoxes.forEach(
+        (box) => (box.checked = moduleSelectBox.checked)
+      )
     );
 
-    const span = document.createElement("span");
-    span.style.fontWeight = "bold";
-    span.appendChild(document.createTextNode("All of them!"));
-
-    label.appendChild(input);
-    label.appendChild(span);
-
-    li.append(label);
-    ul.appendChild(li);
+    moduleLabel.appendChild(moduleSelectBox);
+    moduleLabel.appendChild(moduleTitle);
+    moduleCoverage.appendChild(moduleCoverageValue);
+    moduleCoverage.appendChild(moduleCoverageText);
+    module.appendChild(moduleLabel);
+    module.appendChild(moduleCoverage);
+    modulesList.appendChild(module);
   }
+
+  generateCoverage();
 }
 
 function generateQuiz(quizData) {
@@ -300,4 +322,71 @@ function generateAttemptsTable() {
   });
 
   return table;
+}
+
+function generateCoverage() {
+  const modules = homePage.querySelector("#modules-list");
+  if (!modules.querySelector("li")) return; // if module list hasn't been generated
+
+  let coveredTotal = 0;
+  let sizeTotal = 0;
+
+  for (const module of modules.querySelectorAll("li:not(:last-child)")) {
+    const moduleNum = module.querySelector("input").id;
+    const moduleCoverage = module.querySelector(".coverage");
+    const moduleCoverageValue = moduleCoverage.querySelector(".coverage-value");
+    const moduleCoverageTada = moduleCoverage.querySelector(".tada");
+
+    let covered = 0;
+    let size = 0;
+    if (LHChoice.checked) {
+      const questions = modulesData.LH[moduleNum];
+      covered += questions.covered.size;
+      size += questions.size;
+    }
+    if (AIChoice.checked) {
+      const questions = modulesData.AI[moduleNum];
+      covered += questions.covered.size;
+      size += questions.size;
+    }
+    coveredTotal += covered;
+    sizeTotal += size;
+
+    if (covered == 0 && moduleCoverage.style.display == "none") {
+      continue;
+    }
+    const coverage = covered / (size + Number.EPSILON);
+    const roundedCoverage = Math.round((coverage + Number.EPSILON) * 100);
+    const [H, S, L] = getColor(coverage);
+    moduleCoverage.style.backgroundColor = `hsla(${H}, ${S}%, ${L}%, ${0.75})`;
+    moduleCoverageValue.innerText = `${roundedCoverage}%`;
+    if (roundedCoverage < 100) {
+      console.log(roundedCoverage);
+      hide(moduleCoverageTada);
+    } else {
+      unhide(moduleCoverageTada);
+    }
+    unhide(moduleCoverage);
+  }
+
+  if (modules.querySelector("li:not(:last-child) .coverage:not([visible])")) {
+    return;
+  }
+
+  const module = modules.querySelector("li:last-child");
+  const moduleCoverage = module.querySelector(".coverage");
+  const moduleCoverageValue = moduleCoverage.querySelector(".coverage-value");
+  const moduleCoverageTada = moduleCoverage.querySelector(".tada");
+
+  const coverage = coveredTotal / (sizeTotal + Number.EPSILON);
+  const roundedCoverage = Math.round((coverage + Number.EPSILON) * 100);
+  const [H, S, L] = getColor(coverage);
+  moduleCoverage.style.backgroundColor = `hsla(${H}, ${S}%, ${L}%, ${0.75})`;
+  moduleCoverageValue.innerText = `${roundedCoverage}%`;
+  if (roundedCoverage < 100) {
+    hide(moduleCoverageTada);
+  } else {
+    unhide(moduleCoverageTada);
+  }
+  unhide(moduleCoverage);
 }

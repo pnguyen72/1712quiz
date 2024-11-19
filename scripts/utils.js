@@ -3,6 +3,7 @@ function shuffle(array) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
+  return array;
 }
 
 function isNumber(object) {
@@ -28,9 +29,9 @@ function arrange(choices) {
 
 function getColor(accuracy) {
   accuracy *= 100;
-  const H = (8 / 5) * Math.max(accuracy - 25, 0);
+  const H = (5 / 4) * Math.max(accuracy - 20, 0);
   const S = 80;
-  const L = 45 + (((25 / 100) * 4) / 3) * (Math.min(accuracy + 25, 100) - 25);
+  const L = 50 + (1 / 4) * (Math.min(accuracy + 20, 100) - 20);
   return [H, S, L];
 }
 

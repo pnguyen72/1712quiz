@@ -50,7 +50,7 @@ function loadData() {
   });
 }
 
-function getQuizData(banks, modules, count) {
+function getQuiz(banks, modules, count) {
   let quizData = [];
   const selectionSize = {};
   for (const bank of banks) {
@@ -79,11 +79,18 @@ function getQuizData(banks, modules, count) {
   return quizData;
 }
 
-function resolveQuestions(questions) {
-  for (const question of questions) {
+function resolveQuiz(quiz) {
+  const learned = quiz.querySelectorAll(".question:not(.wrong-answer,.unsure)");
+  for (const question of learned) {
     const id = question.id;
     const [bank, module, _] = id.split(".");
     modulesData[bank][module].resolve(id);
+  }
+  const mistakes = quiz.querySelectorAll(".question.wrong-answer");
+  for (const question of mistakes) {
+    const id = question.id;
+    const [bank, module, _] = id.split(".");
+    modulesData[bank][module].unresolve(id);
   }
 }
 
@@ -146,8 +153,7 @@ function _loadQuestions(moduleNum, bank) {
 function _data(questions) {
   return {
     _origin: Object.entries(questions),
-    _data: questions,
-    _knownQuestions: new Set(),
+    _data: Object.fromEntries(shuffle(Object.entries(questions))),
     _pull: function (count) {
       shuffle(this._origin);
       this._data = {
@@ -173,14 +179,15 @@ function _data(questions) {
     },
     resolve: function (questionId) {
       delete this._data[questionId];
-      this._knownQuestions.add(questionId);
+      this.covered.add(questionId);
     },
-    coverage: function () {
-      return this._knownQuestions.size / this.size;
+    unresolve: function (quesitonId) {
+      this.covered.delete(quesitonId);
     },
     isKnown: function (questionId) {
-      return this._knownQuestions.has(questionId);
+      return this.covered.has(questionId);
     },
     size: Object.keys(questions).length,
+    covered: new Set(),
   };
 }

@@ -15,7 +15,7 @@ function licenseLock() {
   ) {
     return;
   }
-  licenseNotice.style.display = "block";
+  unhide(licenseNotice);
   for (input of form.querySelectorAll("input,select")) {
     input.disabled = true;
   }
@@ -24,10 +24,11 @@ function licenseLock() {
 
 function licenseUnlock() {
   sessionStorage.setItem("licenseAgreed", "true");
-  licenseNotice.style.display = "";
+  hide(licenseNotice);
   for (input of form.querySelectorAll("input,select")) {
     input.disabled = false;
   }
+  document.getElementById("main").style.display = "block";
   unhide(navbar);
 }
 
@@ -51,8 +52,8 @@ function initalizeSelections() {
     }
     generateModuleSelection();
     modulesList.forEach((id) => (document.getElementById(id).checked = true));
-    if (moduleSelectBoxes.every((box) => box.checked)) {
-      document.getElementById("moduleALLSelect").checked = true;
+    if (modulesSelectBoxes.every((box) => box.checked)) {
+      document.getElementById("module-all").checked = true;
     }
   } else {
     finalChoice.checked = true;
@@ -95,6 +96,7 @@ function tohomePage() {
       .getElementById("attempts-table")
       .replaceWith(generateAttemptsTable());
   }
+  generateCoverage();
   navText.style.visibility = "hidden";
   hide(resultPanel);
   hide(quizPage);
@@ -122,7 +124,7 @@ function nextQuiz() {
     return;
   }
   navText.innerText = `Attempt ${pastAttempts.length + 1}`;
-  const quizData = getQuizData(banks, modules, questionsCount);
+  const quizData = getQuiz(banks, modules, questionsCount);
   document.getElementById("quiz").replaceWith(generateQuiz(quizData));
   toQuizPage();
 }
@@ -181,9 +183,7 @@ function submit() {
   quiz.setAttribute("submitted", true);
   scrollTo(0, 0);
   showResult(correctAnswers, questions.length);
-  resolveQuestions(
-    quiz.querySelectorAll(".question:not(.wrong-answer,.unsure")
-  );
+  resolveQuiz(quiz);
 
   // update past attemps
   pastAttempts.push({
@@ -198,7 +198,7 @@ function submit() {
 }
 
 function getSelectedModules() {
-  return moduleSelectBoxes.filter((box) => box.checked).map((box) => box.id);
+  return modulesSelectBoxes.filter((box) => box.checked).map((box) => box.id);
 }
 
 function getSelectedBanks() {

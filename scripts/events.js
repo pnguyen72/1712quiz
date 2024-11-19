@@ -38,6 +38,7 @@ questionBankSelection.addEventListener("input", () => {
   if (banks.length > 0) {
     localStorage.setItem("banks", banks.join(" "));
   }
+  generateCoverage();
 });
 questionsCountChoice.addEventListener("input", () => {
   localStorage.setItem("questions", questionsCountChoice.value);
