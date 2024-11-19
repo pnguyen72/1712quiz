@@ -9,6 +9,10 @@ input {
     }
   }
 
+  &:disabled ~ span {
+    color: grey;
+  }
+
   ~ span {
     margin-left: 0.25rem;
   }
