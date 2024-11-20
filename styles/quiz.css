@@ -2,11 +2,7 @@
   margin-bottom: 2.5rem;
 
   &:last-child {
-    margin-bottom: 0rem;
-
-    .explanation-container {
-      margin-bottom: 0.5rem;
-    }
+    margin-bottom: 0.5rem;
   }
 
   &.unsure .question-title {
@@ -63,6 +59,7 @@
   .explanation-container {
     display: none;
     margin-left: 2rem;
+    margin-top: 1rem;
     width: calc(100% - 2rem);
 
     div.explanation {
