@@ -21,9 +21,8 @@
         margin-left: 0.7rem;
       }
 
-      @media (width <= 500px) {
-        .AI-tag,
-        .tags-delimiter {
+      @media (width < 500px) {
+        .known-tag ~ span {
           display: none;
         }
       }
