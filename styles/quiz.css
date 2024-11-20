@@ -29,10 +29,10 @@
       }
 
       .AI-tag {
-        color: hsl(240, 75%, 65%);
+        color: hsl(0, 50%, 50%);
       }
       .known-tag {
-        color: hsl(120, 55%, 35%);
+        color: hsl(120, 50%, 30%);
       }
     }
 
