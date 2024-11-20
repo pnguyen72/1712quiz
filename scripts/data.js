@@ -51,30 +51,33 @@ function loadData() {
 }
 
 function getQuiz(banks, modules, count) {
-  let quizData = [];
   const selectionSize = {};
   for (const bank of banks) {
     for (const module of modules) {
       selectionSize[`${bank}.${module}`] = modulesData[bank][module].size;
     }
   }
-  const selections = Object.keys(selectionSize);
   const totalSize = sum(Object.values(selectionSize));
-  const effectiveSize = Math.min(totalSize, count);
+  count = Math.min(totalSize, count);
+
+  let quizData = [];
   for (const [selection, size] of Object.entries(selectionSize)) {
     const [bank, module] = selection.split(".");
-    const getAmount = Math.floor((effectiveSize * size) / totalSize);
+    const getAmount = Math.floor((count * size) / totalSize);
     const data = modulesData[bank][module].get(getAmount, "beginning");
     quizData = quizData.concat(data);
   }
-  if (quizData.length < effectiveSize) {
+
+  const selections = Object.keys(selectionSize);
+  if (quizData.length < count) {
     shuffle(selections);
     for (const selection of selections) {
       const [bank, module] = selection.split(".");
       quizData.push(...modulesData[bank][module].get(1, "end"));
-      if (quizData.length >= effectiveSize) break;
+      if (quizData.length >= count) break;
     }
   }
+
   shuffle(quizData);
   return quizData;
 }
@@ -153,21 +156,28 @@ function _loadQuestions(moduleNum, bank) {
 function _data(questions) {
   return {
     _origin: Object.entries(questions),
-    _data: Object.fromEntries(shuffle(Object.entries(questions))),
+    _data: {},
     _pull: function (count) {
       shuffle(this._origin);
-      this._data = {
-        ...this._data,
-        ...Object.fromEntries(this._origin.slice(0, count)),
-      };
+      if (count == undefined) {
+        this._data = Object.fromEntries(this._origin);
+        return;
+      }
+      let pulled = 0;
+      for (const [key, value] of this._origin) {
+        if (!Object.hasOwn(this._data, key)) {
+          this._data[key] = value;
+          if (++pulled == count) break;
+        }
+      }
     },
     get: function (count, position) {
-      // pull data from origin if necessary
-      const length = Object.keys(this._data).length;
-      if (length == 0) {
+      // pull data from origin if there's not enough
+      const currentSize = Object.keys(this._data).length;
+      if (currentSize == 0) {
         this._pull();
-      } else if (length < count) {
-        this._pull(count - length);
+      } else if (currentSize < count) {
+        this._pull(count - currentSize);
       }
       // slice data to specified amount, either from beginning or end of the pool
       let entries = Object.entries(this._data);
