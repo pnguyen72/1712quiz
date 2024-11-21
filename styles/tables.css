@@ -10,43 +10,79 @@ table {
   }
 }
 
-#attempts-table {
-  &:has(tr:first-child:last-child) {
-    display: none;
+#attempts-table-container {
+  position: relative;
+
+  box-icon {
+    position: absolute;
+    background-color: hsl(120, 28%, 95%);
+    border-radius: 50%;
+
+    height: 1.9rem;
+    width: 1.9rem;
+    top: -0.75rem;
+    right: -0.75rem;
+
+    @media (width < 600px) {
+      height: 1.75rem;
+      width: 1.75rem;
+      top: -0.68rem;
+      right: -0.68rem;
+    }
+
+    @media (width < 450px) {
+      height: 1.59rem;
+      width: 1.59rem;
+      top: -0.62rem;
+      right: -0.62rem;
+    }
   }
 
-  td.attempt {
-    cursor: pointer;
-    color: blue;
-    font-weight: bold;
+  /* if hover is available */
+  @media not all and (hover: none) {
+    &:not(:hover) box-icon {
+      display: none;
+    }
+  }
 
-    /* if hover is available */
-    @media not all and (hover: none) {
-      font-weight: normal;
+  #attempts-table {
+    &:has(tr:first-child:last-child) {
+      display: none;
+    }
 
-      &:hover {
-        font-weight: bold;
+    td.attempt {
+      cursor: pointer;
+      color: blue;
+      font-weight: bold;
+
+      /* if hover is available */
+      @media not all and (hover: none) {
+        font-weight: normal;
+
+        &:hover {
+          font-weight: bold;
+        }
       }
     }
-  }
 
-  @media (width >= 450px) {
-    .attempt {
-      width: 110px;
+    @media (width >= 450px) {
+      .attempt {
+        width: 110px;
+      }
+      .banks {
+        width: 170px;
+      }
     }
-    .banks {
-      width: 170px;
+    @media (width < 700px) {
+      .banks {
+        display: none;
+      }
     }
-  }
-  @media (width < 700px) {
-    .banks {
-      display: none;
-    }
-  }
 
-  @media (width < 450px) {
-    .modules {
-      display: none;
+    @media (width < 450px) {
+      .modules {
+        display: none;
+      }
     }
   }
 }

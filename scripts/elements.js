@@ -11,6 +11,8 @@ const licenseNotice = document.getElementById("license-notice");
 const licenseText = document.getElementById("license-text");
 const licenceAgreeBtn = document.getElementById("license-agree-btn");
 const licenseDisagreeBtn = document.getElementById("license-disagree-btn");
+//prettier-ignore
+const attemptsTableContainer = document.getElementById("attempts-table-container");
 const attemptsTable = document.getElementById("attempts-table");
 const form = document.getElementById("form");
 const examSelection = document.getElementById("exam-selection");

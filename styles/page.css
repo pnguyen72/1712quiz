@@ -15,7 +15,7 @@ body {
       & > h1,
       #main,
       #quiz,
-      #past-attempts,
+      #attempts-table-container,
       footer {
         margin-left: auto;
         margin-right: auto;

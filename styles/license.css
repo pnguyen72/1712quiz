@@ -1,7 +1,7 @@
 #home-page {
   &:has(#license-notice[visible]) {
     .coverage,
-    #past-attempts {
+    #attempts-table-container {
       display: none;
     }
   }

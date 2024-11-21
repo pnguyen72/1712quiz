@@ -239,54 +239,66 @@ function setupQuiz(quiz) {
 }
 
 function updateAttemptsTable() {
-  const currentRows = attemptsTable.querySelectorAll(".row").length;
-  const totalRows = pastAttempts.length;
+  const tableRows = attemptsTable.querySelectorAll(".row");
 
-  if (currentRows >= totalRows) return;
+  if (tableRows.length >= pastAttempts.length) {
+    if (tableRows.length > pastAttempts.length) {
+      console.log(Array.from(tableRows));
+      Array.from(tableRows)
+        .slice(pastAttempts.length - tableRows.length)
+        .forEach((row) => {
+          console.log(row);
+          row.remove();
+        });
+    }
+    return;
+  }
 
-  pastAttempts.slice(currentRows - totalRows).forEach((attempt, index) => {
-    const score = attempt.score;
-    const outOf = attempt.outOf;
-    const accuracy = score / (outOf + Number.EPSILON);
-    const roundedAccuracy = Math.round((accuracy + Number.EPSILON) * 100);
-    const [H, S, L] = getColor(accuracy);
+  pastAttempts
+    .slice(tableRows.length - pastAttempts.length)
+    .forEach((attempt, index) => {
+      const score = attempt.score;
+      const outOf = attempt.outOf;
+      const accuracy = score / (outOf + Number.EPSILON);
+      const roundedAccuracy = Math.round((accuracy + Number.EPSILON) * 100);
+      const [H, S, L] = getColor(accuracy);
 
-    const row = document.createElement("tr");
-    const attemptNum = document.createElement("td");
-    const banks = document.createElement("td");
-    const modules = document.createElement("td");
-    const result = document.createElement("td");
+      const row = document.createElement("tr");
+      const attemptNum = document.createElement("td");
+      const banks = document.createElement("td");
+      const modules = document.createElement("td");
+      const result = document.createElement("td");
 
-    attemptNum.className = "attempt";
-    attemptNum.innerText = index + currentRows + 1;
-    attemptNum.addEventListener("click", () => {
-      toQuizPage();
-      document.getElementById("quiz").outerHTML = attempt.quiz;
-      setupQuiz(document.getElementById("quiz"));
-      showResult(score, outOf);
-      navText.innerText = `Attempt ${attemptNum.innerText}`;
-      for (question of quizPage.querySelectorAll(".wrong-answer,.unsure")) {
-        explain(question);
-      }
+      attemptNum.className = "attempt";
+      attemptNum.innerText = tableRows.length + index + 1;
+      attemptNum.addEventListener("click", () => {
+        toQuizPage();
+        document.getElementById("quiz").outerHTML = attempt.quiz;
+        setupQuiz(document.getElementById("quiz"));
+        showResult(score, outOf);
+        navText.innerText = `Attempt ${attemptNum.innerText}`;
+        for (question of quizPage.querySelectorAll(".wrong-answer,.unsure")) {
+          explain(question);
+        }
+      });
+
+      banks.className = "banks";
+      banks.innerText = attempt.banks;
+
+      modules.className = "modules";
+      modules.innerText = attempt.modules;
+
+      result.className = "result";
+      result.innerText = `${score}/${outOf} (${roundedAccuracy}%)`;
+      result.style.backgroundColor = `hsla(${H}, ${S}%, ${L}%, ${0.75})`;
+
+      row.className = "row";
+      row.appendChild(attemptNum);
+      row.appendChild(banks);
+      row.appendChild(modules);
+      row.appendChild(result);
+      attemptsTable.querySelector("tbody").appendChild(row);
     });
-
-    banks.className = "banks";
-    banks.innerText = attempt.banks;
-
-    modules.className = "modules";
-    modules.innerText = attempt.modules;
-
-    result.className = "result";
-    result.innerText = `${score}/${outOf} (${roundedAccuracy}%)`;
-    result.style.backgroundColor = `hsla(${H}, ${S}%, ${L}%, ${0.75})`;
-
-    row.className = "row";
-    row.appendChild(attemptNum);
-    row.appendChild(banks);
-    row.appendChild(modules);
-    row.appendChild(result);
-    attemptsTable.querySelector("tbody").appendChild(row);
-  });
 }
 
 function updateCoverage() {

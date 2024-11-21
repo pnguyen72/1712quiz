@@ -98,3 +98,13 @@ window.addEventListener("beforeprint", () => {
     // No need to hide the explanation after printing; it's already hidden by css.
   }
 });
+
+attemptsTableContainer
+  .querySelector("box-icon")
+  .addEventListener("click", () => {
+    if (confirm("Clear past attempts? This action is irreversible.")) {
+      localStorage.removeItem("pastAttempts");
+      pastAttempts = [];
+      updateAttemptsTable();
+    }
+  });
