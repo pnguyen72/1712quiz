@@ -66,7 +66,7 @@ function generateModuleSelection() {
     modulesList.appendChild(module);
   }
 
-  generateCoverage();
+  updateCoverage();
 }
 
 function generateQuiz(quizData) {
@@ -238,36 +238,11 @@ function setupQuiz(quiz) {
   return quiz;
 }
 
-function generateAttemptsTable() {
-  const table = document.createElement("table");
-  const header = document.createElement("tr");
-  const attemptNum = document.createElement("th");
-  const banks = document.createElement("th");
-  const modules = document.createElement("th");
-  const result = document.createElement("th");
+function updateAttemptsTable() {
+  const currentRows = attemptsTable.querySelectorAll(".row").length;
+  const totalRows = pastAttempts.length;
 
-  attemptNum.className = "attempt";
-  attemptNum.innerText = "Attempt";
-
-  banks.className = "banks";
-  banks.innerText = "Question banks";
-
-  modules.className = "modules";
-  modules.innerText = "Modules";
-
-  result.className = "result";
-  result.innerText = "Result";
-
-  header.className = "header";
-  header.appendChild(attemptNum);
-  header.appendChild(banks);
-  header.appendChild(modules);
-  header.appendChild(result);
-
-  table.id = "attempts-table";
-  table.appendChild(header);
-
-  pastAttempts.forEach((attempt, index) => {
+  pastAttempts.slice(currentRows - totalRows).forEach((attempt, index) => {
     const score = attempt.score;
     const outOf = attempt.outOf;
     const accuracy = score / (outOf + Number.EPSILON);
@@ -281,14 +256,14 @@ function generateAttemptsTable() {
     const result = document.createElement("td");
 
     attemptNum.className = "attempt";
-    attemptNum.innerText = index + 1;
+    attemptNum.innerText = index + currentRows + 1;
     attemptNum.addEventListener("click", () => {
       toQuizPage();
       document
         .getElementById("quiz")
         .replaceWith(setupQuiz(attempt.quiz.cloneNode(true)));
       showResult(score, outOf);
-      navText.innerText = `Attempt ${index + 1}`;
+      navText.innerText = `Attempt ${attemptNum.innerText}`;
       for (question of quizPage.querySelectorAll(".wrong-answer,.unsure")) {
         explain(question);
       }
@@ -309,13 +284,11 @@ function generateAttemptsTable() {
     row.appendChild(banks);
     row.appendChild(modules);
     row.appendChild(result);
-    table.appendChild(row);
+    attemptsTable.querySelector("tbody").appendChild(row);
   });
-
-  return table;
 }
 
-function generateCoverage() {
+function updateCoverage() {
   const modules = homePage.querySelector("#modules-list");
   if (!modules.querySelector("li")) return; // if module list hasn't been generated
 

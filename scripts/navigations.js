@@ -92,12 +92,8 @@ function tohomePage() {
   ) {
     return;
   }
-  if (pastAttempts.length > 0) {
-    document
-      .getElementById("attempts-table")
-      .replaceWith(generateAttemptsTable());
-  }
-  generateCoverage();
+  updateAttemptsTable();
+  updateCoverage();
   navText.style.visibility = "hidden";
   hide(resultPanel);
   hide(quizPage);

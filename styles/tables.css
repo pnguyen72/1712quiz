@@ -7,27 +7,12 @@ table {
   td,
   th {
     border: 1.2pt solid black;
+  }
+}
 
-    @media (width >= 450px) {
-      &.attempt {
-        width: 110px;
-      }
-      &.banks {
-        width: 170px;
-      }
-    }
-
-    @media (width < 700px) {
-      &.banks {
-        display: none;
-      }
-    }
-
-    @media (width < 450px) {
-      &.modules {
-        display: none;
-      }
-    }
+#attempts-table {
+  &:has(tr:first-child:last-child) {
+    display: none;
   }
 
   td.attempt {
@@ -42,6 +27,26 @@ table {
       &:hover {
         font-weight: bold;
       }
+    }
+  }
+
+  @media (width >= 450px) {
+    .attempt {
+      width: 110px;
+    }
+    .banks {
+      width: 170px;
+    }
+  }
+  @media (width < 700px) {
+    .banks {
+      display: none;
+    }
+  }
+
+  @media (width < 450px) {
+    .modules {
+      display: none;
     }
   }
 }

@@ -32,14 +32,14 @@ moduleSelection.addEventListener("input", () => {
     choice.disabled = size == 0;
     choice.checked = size > 0 && localStorage.getItem("banks")?.includes(bank);
   }
-  generateCoverage();
+  updateCoverage();
 });
 questionBankSelection.addEventListener("input", () => {
   const banks = getSelectedBanks();
   if (banks.length > 0) {
     localStorage.setItem("banks", banks.join(" "));
   }
-  generateCoverage();
+  updateCoverage();
 });
 questionsCountChoice.addEventListener("input", () => {
   localStorage.setItem("questions", questionsCountChoice.value);
