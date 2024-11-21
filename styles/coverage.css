@@ -1,42 +1,34 @@
-#main {
-  &:has(#license-notice[visible]) {
-    .coverage {
-      display: none;
-    }
+form {
+  max-width: 450px;
+
+  > div {
+    margin-bottom: 1.25rem;
   }
 
-  form {
-    max-width: 450px;
-
-    > div {
-      margin-bottom: 1.25rem;
+  #module-selection {
+    #coverage {
+      color: gray;
     }
 
-    #module-selection {
+    &:not(:has(.coverage[visible])) {
       #coverage {
-        color: gray;
+        display: none;
       }
+    }
 
-      &:not(:has(.coverage[visible])) {
-        #coverage {
-          display: none;
-        }
-      }
+    #modules-header {
+      display: flex;
+      justify-content: space-between;
+    }
 
-      #modules-header {
-        display: flex;
-        justify-content: space-between;
-      }
+    li {
+      display: flex;
+      justify-content: space-between;
 
-      li {
-        display: flex;
-        justify-content: space-between;
-
-        .coverage {
-          margin-left: 0.5rem;
-          border-radius: 20%;
-          padding: 0 0.2rem;
-        }
+      .coverage {
+        margin-left: 0.5rem;
+        border-radius: 20%;
+        padding: 0 0.2rem;
       }
     }
   }

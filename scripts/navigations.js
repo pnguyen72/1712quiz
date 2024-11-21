@@ -184,7 +184,7 @@ function submit() {
 
   // update past attemps
   pastAttempts.push({
-    quiz: quiz.cloneNode(true),
+    quiz: quiz.outerHTML,
     banks: getSelectedBanks().join(", "),
     modules: getSelectedModules()
       .map((x) => parseInt(x))
@@ -192,6 +192,7 @@ function submit() {
     score: correctAnswers,
     outOf: questions.length,
   });
+  localStorage.setItem("pastAttempts", JSON.stringify(pastAttempts));
 }
 
 function getSelectedModules() {

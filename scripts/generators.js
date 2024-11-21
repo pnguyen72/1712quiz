@@ -261,9 +261,8 @@ function updateAttemptsTable() {
     attemptNum.innerText = index + currentRows + 1;
     attemptNum.addEventListener("click", () => {
       toQuizPage();
-      document
-        .getElementById("quiz")
-        .replaceWith(setupQuiz(attempt.quiz.cloneNode(true)));
+      document.getElementById("quiz").outerHTML = attempt.quiz;
+      setupQuiz(document.getElementById("quiz"));
       showResult(score, outOf);
       navText.innerText = `Attempt ${attemptNum.innerText}`;
       for (question of quizPage.querySelectorAll(".wrong-answer,.unsure")) {

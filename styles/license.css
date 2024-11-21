@@ -1,5 +1,14 @@
-#home-page > h1 {
-  display: none;
+#home-page {
+  &:has(#license-notice[visible]) {
+    .coverage,
+    #past-attempts {
+      display: none;
+    }
+  }
+
+  & > h1 {
+    display: none;
+  }
 }
 
 #main {
