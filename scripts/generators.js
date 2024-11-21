@@ -338,7 +338,7 @@ function updateCoverage() {
   // stat for "All of them!"
   const moduleAllCoverage = modules.querySelector("li:last-child .coverage");
 
-  if (coveredTotal == 0 || sizeTotal == 0) {
+  if (modules.querySelector("li:not(:last-child) .coverage:not([visible])")) {
     hide(moduleAllCoverage);
     return;
   }
