@@ -242,6 +242,8 @@ function updateAttemptsTable() {
   const currentRows = attemptsTable.querySelectorAll(".row").length;
   const totalRows = pastAttempts.length;
 
+  if (currentRows >= totalRows) return;
+
   pastAttempts.slice(currentRows - totalRows).forEach((attempt, index) => {
     const score = attempt.score;
     const outOf = attempt.outOf;
