@@ -25,8 +25,6 @@ function generateModuleSelection() {
 
     moduleTitle.innerHTML = `Module ${index + indexOffset}: ${name}`;
     moduleCoverage.className = "coverage";
-    moduleCoverage.style.display = "none";
-
     moduleSelectBox.id = `${String(index + indexOffset).padStart(2, "0")}`;
     moduleSelectBox.type = "checkbox";
     moduleSelectBox.addEventListener(
@@ -53,7 +51,6 @@ function generateModuleSelection() {
     moduleTitle.innerText = "All of them!";
     moduleTitle.style.fontWeight = "bold";
     moduleCoverage.className = "coverage";
-    moduleCoverage.style.display = "none";
     moduleSelectBox.type = "checkbox";
     moduleSelectBox.id = "module-all";
     moduleSelectBox.addEventListener("click", () =>
@@ -317,18 +314,23 @@ function generateCoverage() {
   let coveredTotal = 0;
   let sizeTotal = 0;
 
+  const banks = localStorage.getItem("banks");
+  const LH = banks.includes("LH");
+  const AI = banks.includes("AI");
+
+  // stat for each module
   for (const module of modules.querySelectorAll("li:not(:last-child)")) {
     const moduleNum = module.querySelector("input").id;
     const moduleCoverage = module.querySelector(".coverage");
 
     let covered = 0;
     let size = 0;
-    if (LHChoice.checked) {
+    if (LH) {
       const questions = modulesData.LH[moduleNum];
       covered += questions.covered.size;
       size += questions.size;
     }
-    if (AIChoice.checked) {
+    if (AI) {
       const questions = modulesData.AI[moduleNum];
       covered += questions.covered.size;
       size += questions.size;
@@ -336,13 +338,11 @@ function generateCoverage() {
     coveredTotal += covered;
     sizeTotal += size;
 
-    if (size == 0) {
+    if (covered == 0 || size == 0) {
       hide(moduleCoverage);
       continue;
     }
-    if (covered == 0 && moduleCoverage.style.display == "none") {
-      continue;
-    }
+
     const coverage = covered / (size + Number.EPSILON);
     const roundedCoverage = Math.round((coverage + Number.EPSILON) * 100);
     const [H, S, L] = getColor(coverage);
@@ -352,13 +352,11 @@ function generateCoverage() {
     unhide(moduleCoverage);
   }
 
-  const module = modules.querySelector("li:last-child");
-  const moduleCoverage = module.querySelector(".coverage");
+  // stat for "All of them!"
+  const moduleAllCoverage = modules.querySelector("li:last-child .coverage");
 
-  if (sizeTotal == 0) {
-    hide(moduleCoverage);
-  }
-  if (modules.querySelector("li:not(:last-child) .coverage:not([visible])")) {
+  if (coveredTotal == 0 || sizeTotal == 0) {
+    hide(moduleAllCoverage);
     return;
   }
 
@@ -366,7 +364,7 @@ function generateCoverage() {
   const roundedCoverage = Math.round((coverage + Number.EPSILON) * 100);
   const [H, S, L] = getColor(coverage);
 
-  moduleCoverage.style.backgroundColor = `hsla(${H}, ${S}%, ${L}%, ${0.75})`;
-  moduleCoverage.innerText = `${roundedCoverage}%`;
-  unhide(moduleCoverage);
+  moduleAllCoverage.style.backgroundColor = `hsla(${H}, ${S}%, ${L}%, ${0.75})`;
+  moduleAllCoverage.innerText = `${roundedCoverage}%`;
+  unhide(moduleAllCoverage);
 }

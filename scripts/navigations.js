@@ -65,6 +65,7 @@ function initalizeSelections() {
     const banksList = banks.split(" ");
     banksList.forEach((id) => (document.getElementById(id).checked = true));
   } else {
+    localStorage.setItem("banks", "LH");
     LHChoice.checked = true;
   }
 
