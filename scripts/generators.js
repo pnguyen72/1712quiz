@@ -89,10 +89,18 @@ function generateQuestion(questionId, questionData, questionIndex) {
   const tags = [];
   const [bank, module, _] = questionId.split(".");
   if (modulesData[bank][module].isKnown(questionId)) {
-    tags.push(`<span class="known-tag">already learned</span>`);
+    tags.push(`
+      <span class="known-tag">
+        <span class="txt">already learned</span>
+        <i class='bx bxs-graduation'></i>
+      </span>`);
   }
   if (bank == "AI") {
-    tags.push(`<span class="AI-tag">AI-generated</span>`);
+    tags.push(`
+      <span class="AI-tag">
+        <span class="txt">AI-generated</span>
+        <i class='bx bxs-bot AI-tag'></i>
+      </span>`);
   }
 
   const question = document.createElement("div");
@@ -113,7 +121,7 @@ function generateQuestion(questionId, questionData, questionIndex) {
   questionTitle.className = "question-title";
   questionTitle.innerText = `Question ${questionIndex + 1}.`;
   questionTags.className = "question-tags";
-  questionTags.innerHTML = tags.join(`<span class="tags-delimiter"> | </span>`);
+  questionTags.innerHTML = tags.join(`<span class="txt"> | </span>`);
   unsureLabel.className = "unsure-label";
   unsureCheck.className = "unsure-check";
   imNotSure.className = "im-not-sure";

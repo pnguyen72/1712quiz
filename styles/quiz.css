@@ -16,13 +16,24 @@
     .question-tags {
       color: grey;
 
-      margin-left: 0.5rem;
+      margin-left: 0.3rem;
       @media (width >= 600px) {
-        margin-left: 0.7rem;
+        margin-left: 0.6rem;
       }
 
-      @media (width < 500px) {
-        .known-tag ~ span {
+      .bx {
+        margin-right: 0.125rem;
+        display: none;
+      }
+      .txt {
+        font-size: 0.9em;
+      }
+
+      @media (width < 450px) {
+        .bx {
+          display: initial;
+        }
+        .txt {
           display: none;
         }
       }
@@ -37,6 +48,12 @@
 
     .unsure-label {
       color: gray;
+      font-size: 0.9em;
+
+      input {
+        height: 0.9rem;
+        width: 0.9rem;
+      }
 
       .show-explanation {
         display: none;
