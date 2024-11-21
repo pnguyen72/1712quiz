@@ -13,6 +13,10 @@ table {
 #attempts-table-container {
   position: relative;
 
+  &:has(tr:first-child:last-child) {
+    display: none;
+  }
+
   box-icon {
     position: absolute;
     background-color: hsl(120, 28%, 95%);
@@ -46,10 +50,6 @@ table {
   }
 
   #attempts-table {
-    &:has(tr:first-child:last-child) {
-      display: none;
-    }
-
     td.attempt {
       cursor: pointer;
       color: blue;
