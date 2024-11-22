@@ -308,7 +308,7 @@ function updateCoverage() {
   let coveredTotal = 0;
   let sizeTotal = 0;
 
-  const banks = localStorage.getItem("banks");
+  const banks = localStorage.getItem("banks") ?? "LH";
   const LH = banks.includes("LH");
   const AI = banks.includes("AI");
 
