@@ -18,6 +18,7 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link id="dark-mode-css" rel="stylesheet" href="./styles/darkmode.css">
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
@@ -134,22 +135,8 @@
           </div>
         </figure>
       </div>
-      <div id="attempts-table-container">
-        <table id="attempts-table">
-          <tbody>
-            <tr class="header">
-              <th class="attempt">Attempt</th>
-              <th class="banks">Question banks</th>
-              <th class="modules">Modules</th>
-              <th class="result">Result</th>
-            </tr>
-          </tbody>
-        </table>
-        <box-icon
-          type="solid"
-          name="x-circle"
-          color="hsl(0, 80%, 45%)"
-        ></box-icon>
+      <div id="past-attempts">
+        <div id="attempts-table"></div>
       </div>
       <footer>
         <hr />
@@ -170,6 +157,16 @@
               New Testament (final guide)
             </a>
           </div>
+
+          <!-- Dark Mode Toggle Switch -->
+          <div id="dark-mode-toggle-container">
+            <p>Dark Mode:</p>
+            <label class="switch">
+              <input type="checkbox" id="dark-mode-toggle" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+
           <div id="social">
             <a
               href="https://github.com/pnguyen72/pnguyen72.github.io"
@@ -194,5 +191,6 @@
     <script src="./scripts/events.js"></script>
     <script src="./scripts/index.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="./scripts/darkMode.js"></script>
   </body>
 </html>
