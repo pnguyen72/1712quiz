@@ -270,12 +270,13 @@
   "LH.09.33": {
     "question": "What is/are the disadvantage(s) associated with n-tiered architecture?",
     "choices": {
-      "Great load on the network": false,
-      "When the clients capture keystrokes and the very first architecture system": false,
+      "They put great load on the network": true,
+      "It is more difficult to program and test software": true,
+      "The clients capture keystrokes": false,
       "They are always slower": false,
-      "When the clients capture keystrokes and the very first architecture system and they are always slower": false,
-      "Great load on the network and it is more difficult to program and test software": true
-    }
+      "They are the very first architecture system": false
+    },
+    "multiSelect": true
   },
   "LH.09.34": {
     "question": "The objective of architecture design is to determine what?",
