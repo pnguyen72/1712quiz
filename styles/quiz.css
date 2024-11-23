@@ -206,8 +206,10 @@
   }
 
   .question {
-    &.wrong-answer .question-title {
-      background-color: hsla(0, 80%, 75%, 75%);
+    @media not print {
+      &.wrong-answer .question-title {
+        background-color: hsla(0, 80%, 75%, 75%);
+      }
     }
 
     &:not(.wrong-answer) .unsure-label {
@@ -237,23 +239,26 @@
 }
 
 @media print {
-  .question-title {
-    background-color: transparent !important;
+  .question {
+    margin: 1.5rem;
+    &:last-child {
+      margin-bottom: 1rem;
+    }
   }
 
   .unsure-label {
-    display: none !important;
+    display: none;
   }
 
   #quiz[submitted="true"][explain="true"] {
     .explanation-container {
-      display: flex !important;
+      display: flex;
     }
     .explanation-container:has(.explanation.empty) {
-      display: none !important;
+      display: none;
     }
     .explanation ~ .bx {
-      display: none !important;
+      display: none;
     }
   }
 }

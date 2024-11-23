@@ -1,125 +1,116 @@
-body
-{
-    background-color: #262626;
-    color: #eeeeee;
-    .page {
-        footer {
-          #footer {
-            #links {
-              a {
-                padding: 2px 10px 2px 10px;
-                border-radius: 6px;
-                background-color: rebeccapurple;
-                color: #fff;
-                }
-              }
-            #social {    
-                box-icon {
-                    background-color: rgb(235, 235, 235);
-                    border-radius: 20px;
-                }
-            }
+body {
+  background-color: #262626;
+  color: #eeeeee;
+  .page {
+    footer {
+      #footer {
+        #links {
+          a {
+            padding: 2px 6px 2px 6px;
+            border-radius: 6px;
+            background-color: rebeccapurple;
+            color: #fff;
+          }
+        }
+        #social {
+          box-icon {
+            background-color: rgb(235, 235, 235);
+            border-radius: 50%;
           }
         }
       }
-}
-
-/* Styles all checkboxes */
-input[type="checkbox"] 
-{
-    accent-color: rebeccapurple;
-}
-/* Styles all radio inputs */
-input[type="radio"] 
-{
-    accent-color: rebeccapurple;
-}
-
-#coverage
-{
-    color: #fff !important;
-}
-
-table, th, td {
-    outline: solid 1px #0f0116;
-  }
-
-#license-text 
-{
-    background-color: #262626 !important;
-    color: #f0f0f0;
-}
-
-/* Make the license image a little nicer on the eyes. */
-#license-notice > img
-{
-    opacity: 75%;
-}
-
-/* Results panel styling */
-#result-panel
-{
-    opacity: 90%;
-    color: #262626;
-    padding: 2px 0px;
-    box-shadow: 0px 2px 8px #00000065;
-}
-
-
-.im-not-sure
-{
-    color: #dfdf0c;
-}
-
-.show-explanation
-{
-    color: #dfdf0c;
-}
-
-/* The Explanation container (lighter blue) */
-.explanation-container {
-    color: 0px 0px 2px#fff;
-    padding: 4px;
-
-    div.explanation {
-      color: #dfdf0c !important;
-      font-size: smaller;
-      background-color: #262626;
-      padding: 8px;
-      color: #f0f0f0;
-      border-radius: 3px;
-
-      & ~ .bx {
-        color: #dfdf0c !important;
-      }
     }
   }
-.explanation
-{
-    background-color: #262626;
-    color: #fafad1;
 }
 
-/* Correct / incorrect markers */
+input {
+  accent-color: rebeccapurple;
+}
+select {
+  background-color: #262626;
+  color: #fff;
+}
+
+#coverage {
+  color: #fff !important;
+}
+
+table,
+th,
+td {
+  outline: solid 1px #0f0116;
+}
+
+#main #license-notice {
+  img {
+    /* Make the license image a little nicer on the eyes. */
+    opacity: 75%;
+  }
+  #license-text {
+    background-color: #262626;
+    color: #f0f0f0;
+  }
+  #license-agree-text {
+    color: #0f0116;
+  }
+}
+
+#result-panel {
+  opacity: 90%;
+  color: #262626;
+  box-shadow: 0px 2px 8px #00000065;
+}
+
+.show-explanation {
+  color: #dfdf0c;
+}
+
+.explanation-container {
+  padding-left: 4px;
+
+  div.explanation:not(.empty) {
+    color: #dfdf0c !important;
+
+    & ~ .bx {
+      color: #dfdf0c !important;
+    }
+  }
+
+  textarea.explanation {
+    background-color: #262626;
+    color: #fff;
+  }
+}
+
 #quiz[submitted="true"] {
+  .question-choices {
+    label {
+      padding: 4px;
+    }
     li.correct label {
       background-color: #1ed96f24;
-      padding: 4px;
       border-radius: 6px;
       color: #11ce73;
     }
-  
-    .question {
-      &.wrong-answer .question-title {
-        background-color: #f133331f;
-        padding: 4px;
-        border-radius: 6px;
-        color: #df0c33;
-      }
-    }
   }
 
+  .question {
+    &.wrong-answer .question-title {
+      background-color: #f133331f;
+      padding: 4px;
+      border-radius: 6px;
+      color: #df0c33;
+    }
+  }
+}
+
 .question {
+  .question-title {
+    background-color: hsl(0, 0%, 20%);
+    padding: 4px;
+    border-radius: 6px;
+  }
+
   &.unsure .question-title {
     background-color: #d0c31222;
     padding: 4px;
@@ -128,34 +119,23 @@ table, th, td {
   }
 }
 
-/* Bottom navbar padding adjustments, shadow, and background colour */
-#navbar
-{
-    opacity: 90%;
-    box-shadow: 0px -2px 8px #00000065;
-    background-color: #363636;
+#navbar {
+  opacity: 90%;
+  box-shadow: 0px -2px 8px #00000065;
+  background-color: #363636;
 }
 
-
-/* Darkmode animations */
+#attempts-table {
+  td.attempt {
+    color: cyan !important;
+  }
+}
 
 @keyframes blink {
-    0% {
-      background-color: hsl(0, 28%, 41%);
-    }
-    100% {
-      background-color: #262626;
-    }
+  0% {
+    background-color: hsl(0, 40%, 40%);
   }
-  
-  @keyframes flash {
-    0% {
-      background-color: red;
-    }
-    50% {
-      background-color: cyan;
-    }
-    100% {
-      background-color: red;
-    }
+  100% {
+    background-color: #262626;
   }
+}

@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/license.css" />
     <link rel="stylesheet" href="./styles/page.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
     <link rel="stylesheet" href="./styles/quiz.css" />
+    <link id="dark-mode-css" rel="stylesheet" href="./styles/darkmode.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link id="dark-mode-css" rel="stylesheet" href="./styles/darkmode.css">
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
@@ -135,8 +136,22 @@
           </div>
         </figure>
       </div>
-      <div id="past-attempts">
-        <div id="attempts-table"></div>
+      <div id="attempts-table-container">
+        <table id="attempts-table">
+          <tbody>
+            <tr class="header">
+              <th class="attempt">Attempt</th>
+              <th class="banks">Question banks</th>
+              <th class="modules">Modules</th>
+              <th class="result">Result</th>
+            </tr>
+          </tbody>
+        </table>
+        <box-icon
+          type="solid"
+          name="x-circle"
+          color="hsl(0, 80%, 45%)"
+        ></box-icon>
       </div>
       <footer>
         <hr />
@@ -158,12 +173,11 @@
             </a>
           </div>
 
-          <!-- Dark Mode Toggle Switch -->
           <div id="dark-mode-toggle-container">
-            <p>Dark Mode:</p>
-            <label class="switch">
+            <span>Dark Mode </span>
+            <label>
               <input type="checkbox" id="dark-mode-toggle" />
-              <span class="slider round"></span>
+              <span id="slider"></span>
             </label>
           </div>
 

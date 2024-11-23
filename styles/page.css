@@ -1,12 +1,6 @@
 body {
-  /* I personally find this font easier on the eyes*/
-  font-family: Calibri, 'Trebuchet MS', sans-serif;
-  font-size: medium;
-  /* Feel free to disable :) */
+  font-size: 1.2rem;
 
-  /* Previous font size */
-  /* font-size: 1.2rem; */
-  
   margin: 0;
   background-color: hsl(120, 28%, 95%);
 
@@ -22,7 +16,7 @@ body {
       & > h1,
       #main,
       #quiz,
-      #past-attempts,
+      #attempts-table-container,
       footer {
         margin-left: auto;
         margin-right: auto;
@@ -40,53 +34,6 @@ body {
 
     footer {
       margin-top: 2rem;
-
-      #footer {
-        display: flex;
-        justify-content: space-between;
-
-        #links {
-          display: flex;
-          flex-direction: row;
-
-          a {
-            text-decoration: none;
-            color: #04442c;
-
-            &:first-child {
-              margin-right: 2rem;
-            }
-          }
-
-          /* 
-         * Do not disable hover on mobile in this particular case.
-         * The 2 links are a bit close, it's possible to misclick,
-         * the hover effect indicates which one the user just clicked.
-         */
-          a:hover {
-            text-decoration: underline;
-          }
-
-          @media (width < 650px) {
-            flex-direction: column;
-
-            a:first-child {
-              margin-right: 0.5rem;
-              margin-bottom: 0.5rem;
-            }
-          }
-        }
-
-        #social {
-          display: flex;
-          align-items: center;
-
-          box-icon {
-            height: 1.75rem;
-            width: 1.75rem;
-          }
-        }
-      }
     }
   }
 }
@@ -122,87 +69,11 @@ body {
 
 @media print {
   body {
-    font-size: 1rem !important;
-    background-color: white !important;
+    font-size: 1rem;
+    background-color: white;
 
-    .page {
+    #quiz-page {
       margin: 1rem !important;
     }
   }
-}
-
-#links
-{
-  align-items: center;
-}
-
-/* Dark Mode Toggle Switch -------- */
-
-#dark-mode-toggle-container {
-  margin: 0px 10px;
-  display: flex;
-  align-items: center;
-}
-
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 45px;
-  height: 24px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: rebeccapurple;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px rebeccapurple;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(16px);
-  -ms-transform: translateX(16px);
-  transform: translateX(16px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
 }
