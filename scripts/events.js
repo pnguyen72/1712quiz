@@ -14,7 +14,7 @@ questionBankSelection.addEventListener(
 );
 
 form.addEventListener("click", () => {
-  if (licenseNotice.style.display) {
+  if (homePage.querySelector("#license-notice[visible]")) {
     licenseText.style.animation = "blink 1s";
   }
 });
@@ -85,6 +85,16 @@ nextQuest.addEventListener("click", () =>
     .blink()
 );
 
+attemptsTableContainer
+  .querySelector("box-icon")
+  .addEventListener("click", () => {
+    if (confirm("Clear past attempts? This action is irreversible.")) {
+      localStorage.removeItem("pastAttempts");
+      pastAttempts = [];
+      updateAttemptsTable();
+    }
+  });
+
 window.addEventListener("beforeprint", () => {
   const quiz = document.querySelector(
     "#quiz-page[visible] #quiz[submitted=true][explain=true]"
@@ -98,13 +108,3 @@ window.addEventListener("beforeprint", () => {
     // No need to hide the explanation after printing; it's already hidden by css.
   }
 });
-
-attemptsTableContainer
-  .querySelector("box-icon")
-  .addEventListener("click", () => {
-    if (confirm("Clear past attempts? This action is irreversible.")) {
-      localStorage.removeItem("pastAttempts");
-      pastAttempts = [];
-      updateAttemptsTable();
-    }
-  });
