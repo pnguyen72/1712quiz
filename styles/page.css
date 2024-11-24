@@ -1,5 +1,6 @@
 body {
-  font-size: 1.2rem;
+  font-family: sans-serif;
+  font-size: 1.1rem;
 
   margin: 0;
   background-color: hsl(120, 28%, 95%);
@@ -40,7 +41,7 @@ body {
 
 @media (width < 600px) {
   body {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 
     .page {
       margin-left: 2rem;

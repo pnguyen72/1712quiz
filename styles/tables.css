@@ -65,21 +65,13 @@ table {
       }
     }
 
-    @media (width >= 450px) {
-      .attempt {
-        width: 110px;
-      }
-      .banks {
-        width: 170px;
-      }
-    }
-    @media (width < 700px) {
+    @media (width < 600px) {
       .banks {
         display: none;
       }
     }
 
-    @media (width < 450px) {
+    @media (width < 400px) {
       .modules {
         display: none;
       }

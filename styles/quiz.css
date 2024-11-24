@@ -138,7 +138,7 @@
       }
     }
 
-    @media (width < 525px) {
+    @media (width < 475px) {
       #placeholder-expansion {
         display: none;
       }
