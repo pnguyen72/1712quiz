@@ -80,20 +80,25 @@ function generateQuiz(quizData) {
 }
 
 function generateQuestion(questionId, questionData, questionIndex) {
+  const [bank, module, _] = questionId.split(".");
   const questionText = questionData.question;
   const hasImage = questionData.hasImage;
   const isMultiSelect = questionData.multiSelect;
   const choicesData = Object.entries(questionData.choices);
   arrange(choicesData);
 
+  const question = document.createElement("div");
+  question.id = questionId;
+  question.className = "question";
+
   const tags = [];
-  const [bank, module, _] = questionId.split(".");
   if (modulesData[bank][module].isKnown(questionId)) {
     tags.push(`
       <span class="known-tag">
         <span class="txt">already learned</span>
         <i class='bx bxs-graduation'></i>
       </span>`);
+    question.setAttribute("known", true);
   }
   if (bank == "AI") {
     tags.push(`
@@ -101,11 +106,8 @@ function generateQuestion(questionId, questionData, questionIndex) {
         <span class="txt">AI-generated</span>
         <i class='bx bxs-bot AI-tag'></i>
       </span>`);
+    question.setAttribute("AI", true);
   }
-
-  const question = document.createElement("div");
-  question.id = questionId;
-  question.className = "question";
 
   // header
   const questionHeader = document.createElement("div");
@@ -121,7 +123,7 @@ function generateQuestion(questionId, questionData, questionIndex) {
   questionTitle.className = "question-title";
   questionTitle.innerText = `Question ${questionIndex + 1}.`;
   questionTags.className = "question-tags";
-  questionTags.innerHTML = tags.join(`<span class="txt"> | </span>`);
+  questionTags.innerHTML = tags.join(`<span class="txt delimiter"> | </span>`);
   unsureLabel.className = "unsure-label";
   unsureCheck.className = "unsure-check";
   imNotSure.className = "im-not-sure";

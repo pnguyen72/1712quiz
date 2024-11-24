@@ -29,15 +29,6 @@
         font-size: 0.9em;
       }
 
-      @media (width < 450px) {
-        .bx {
-          display: initial;
-        }
-        .txt {
-          display: none;
-        }
-      }
-
       .AI-tag {
         color: hsl(0, 50%, 50%);
       }
@@ -234,6 +225,17 @@
     }
     .show-explanation {
       display: initial;
+    }
+  }
+}
+
+@media (width < 500px) {
+  #quiz:has(.question[known][AI]) .question-tags {
+    .bx {
+      display: initial;
+    }
+    .txt {
+      display: none;
     }
   }
 }
