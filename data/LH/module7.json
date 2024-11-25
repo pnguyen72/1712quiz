@@ -104,11 +104,8 @@
   "LH.07.13": {
     "question": "In a functional dependence, the determinant is always a single attribute.",
     "choices": {
-      "False": {
-        "reason": "Multiple attributes may be required to determine another attribute, e.g. Royalty is determined by a combination of ISBN and Author_Num (lab 7.1)",
-        "isCorrect": true
-      },
-      "True": false
+      "True": false,
+      "False": true
     }
   },
   "LH.07.14": {
