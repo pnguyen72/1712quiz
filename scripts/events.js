@@ -50,7 +50,7 @@ explainChoice.addEventListener("input", () => {
 
 licenceAgreeBtn.addEventListener("click", licenseUnlock);
 licenseDisagreeBtn.addEventListener("click", () => {
-  if (++disagreeNum < 4) {
+  if (++disagreeNum < 32768) {
     alert("You can't disagree, dummy!");
   } else {
     licenseGrantException();
