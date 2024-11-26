@@ -15,5 +15,5 @@ input {
 }
 
 #home-page label:has(input:disabled, select:disabled) span {
-  color: grey;
+  color: gray;
 }

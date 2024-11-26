@@ -48,9 +48,8 @@ nav {
   background-color: #04442c;
   color: hsl(120, 28%, 95%);
 
-  box-icon {
-    width: 2rem;
-    height: 2rem;
+  .bx {
+    font-size: 2rem;
   }
 
   &[visible] ~ .page {

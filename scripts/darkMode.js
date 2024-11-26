@@ -17,4 +17,17 @@ function initializeDarkMode() {
 darkModeToggle.addEventListener("input", () => {
   darkModeLink.disabled = !darkModeToggle.checked;
   localStorage.setItem("dark-mode", !darkModeLink.disabled);
+
+  // recolor
+  updateCoverage();
+  for (const result of attemptsTable.querySelectorAll("td.result")) {
+    const backgroundColor = getComputedStyle(result).backgroundColor;
+    const [R, G, B] = backgroundColor.replace(/[^\d,]/g, "").split(",");
+    const L = (Math.max(R, G, B) + Math.min(R, G, B)) / 255 / 2;
+    if (darkModeToggle.checked) {
+      result.style.color = L < 0.61 ? "#eee" : "#000";
+    } else {
+      result.style.color = "";
+    }
+  }
 });

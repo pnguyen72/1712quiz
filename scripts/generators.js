@@ -293,6 +293,9 @@ function updateAttemptsTable() {
       result.className = "result";
       result.innerText = `${score}/${outOf} (${roundedAccuracy}%)`;
       result.style.backgroundColor = `hsla(${H}, ${S}%, ${L}%, ${0.75})`;
+      if (darkModeToggle.checked) {
+        result.style.color = L < 61 ? "#eee" : "#000";
+      }
 
       row.className = "row";
       row.appendChild(attemptNum);
@@ -343,8 +346,13 @@ function updateCoverage() {
     const roundedCoverage = Math.round((coverage + Number.EPSILON) * 100);
     const [H, S, L] = getColor(coverage);
 
-    moduleCoverage.style.backgroundColor = `hsla(${H}, ${S}%, ${L}%, ${0.75})`;
     moduleCoverage.innerText = `${roundedCoverage}%`;
+    moduleCoverage.style.backgroundColor = `hsla(${H}, ${S}%, ${L}%, ${0.75})`;
+    if (darkModeToggle.checked) {
+      moduleCoverage.style.color = L < 61 ? "#eee" : "#000";
+    } else {
+      moduleCoverage.style.color = "";
+    }
     unhide(moduleCoverage);
   }
 
@@ -360,7 +368,12 @@ function updateCoverage() {
   const roundedCoverage = Math.round((coverage + Number.EPSILON) * 100);
   const [H, S, L] = getColor(coverage);
 
-  moduleAllCoverage.style.backgroundColor = `hsla(${H}, ${S}%, ${L}%, ${0.75})`;
   moduleAllCoverage.innerText = `${roundedCoverage}%`;
+  moduleAllCoverage.style.backgroundColor = `hsla(${H}, ${S}%, ${L}%, ${0.75})`;
+  if (darkModeToggle.checked) {
+    moduleAllCoverage.style.color = L < 61 ? "#eee" : "#000";
+  } else {
+    moduleAllCoverage.style.color = "";
+  }
   unhide(moduleAllCoverage);
 }

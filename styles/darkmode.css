@@ -28,11 +28,13 @@ input {
 }
 select {
   background-color: #262626;
-  color: #fff;
+  color: #f0f0f0;
 }
 
-#coverage {
-  color: #fff !important;
+#coverage,
+.question-tags,
+.unsure-label {
+  color: hsl(0, 0%, 70%) !important;
 }
 
 table,
@@ -106,7 +108,6 @@ td {
 
 .question {
   .question-title {
-    background-color: hsl(0, 0%, 20%);
     padding: 4px;
     border-radius: 6px;
   }
@@ -120,6 +121,7 @@ td {
 }
 
 #navbar {
+  color: #eee;
   opacity: 90%;
   box-shadow: 0px -2px 8px #00000065;
   background-color: #363636;
