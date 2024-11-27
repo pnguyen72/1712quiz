@@ -246,6 +246,11 @@
     &:last-child {
       margin-bottom: 1rem;
     }
+
+    .known-tag,
+    .delimiter {
+      display: none;
+    }
   }
 
   .unsure-label {
