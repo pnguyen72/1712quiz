@@ -108,14 +108,14 @@ td {
 
 .question {
   .question-title {
-    padding: 4px;
-    border-radius: 6px;
+    @media not print {
+      padding: 4px;
+      border-radius: 6px;
+    }
   }
 
   &.unsure .question-title {
     background-color: #d0c31222;
-    padding: 4px;
-    border-radius: 6px;
     color: #dfdf0c;
   }
 }
