@@ -217,24 +217,6 @@ function showResult(score, outOf) {
       unsureQuestions.length > 0 ? "visible" : "hidden";
 }
 
-function giveExplanationDisclaimer(explanationText) {
-  if (
-    explanationText &&
-    document.querySelector("#quiz-page[visible] #quiz[submitted=true]") &&
-    !localStorage.getItem("explanationWarned")
-  ) {
-    alert(
-      "Warning:\n\n" +
-        "Unlike questions and answers which are from Learning Hub, " +
-        "the explanations (in blue) are written by your classmates, " +
-        "thus could be inaccurate.\n\n" +
-        "You can choose to disable them in the home page menu."
-    );
-    localStorage.setItem("explanationWarned", "true");
-    unhide(explainSelection);
-  }
-}
-
 function toggleUnsure(question) {
   if (question.classList.contains("unsure")) {
     question.classList.remove("unsure");

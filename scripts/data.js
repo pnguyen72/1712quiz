@@ -120,7 +120,20 @@ function explain(question) {
       }
     }
     explanation.write(explanationText);
-    giveExplanationDisclaimer(explanationText);
+    if (
+      !localStorage.getItem("explanationWarned") &&
+      document.querySelector("#quiz-page[visible] #quiz[submitted=true]")
+    ) {
+      alert(
+        "Warning:\n\n" +
+          "Unlike questions and answers which are from Learning Hub, " +
+          "explanations are written by your classmates, " +
+          "thus could be inaccurate.\n\n" +
+          "You can choose to disable them in the home page menu."
+      );
+      localStorage.setItem("explanationWarned", "true");
+      unhide(explainSelection);
+    }
   });
 }
 
