@@ -97,11 +97,11 @@ td {
   }
 
   .question {
-    &.wrong-answer .question-title {
-      background-color: #f133331f;
-      padding: 4px;
-      border-radius: 6px;
-      color: #df0c33;
+    @media not print {
+      &.wrong-answer .question-title {
+        background-color: #f133331f;
+        color: #df0c33;
+      }
     }
   }
 }
