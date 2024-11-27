@@ -1,0 +1,20 @@
+@keyframes blink {
+  0% {
+    background-color: hsl(0, 80%, 70%);
+  }
+  100% {
+    background-color: hsla(120, 24%, 96%);
+  }
+}
+
+@keyframes flash {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: cyan;
+  }
+  100% {
+    background-color: red;
+  }
+}

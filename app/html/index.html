@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1712 Practice Quiz</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    <link rel="stylesheet" href="/css/panels.css" />
+    <link rel="stylesheet" href="/css/lists.css" />
+    <link rel="stylesheet" href="/css/coverage.css" />
+    <link rel="stylesheet" href="/css/inputs.css" />
+    <link rel="stylesheet" href="/css/tables.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <link rel="stylesheet" href="/css/license.css" />
+    <link rel="stylesheet" href="/css/page.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/quiz.css" />
+    <link id="dark-mode-css" rel="stylesheet" href="/css/darkmode.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+  </head>
+  <body>
+    <div id="result-panel" class="panel">
+      <div>
+        <box-icon type="solid" name="left-arrow"></box-icon>
+        Prev. question
+      </div>
+      <p>
+        <span id="quiz-result"></span>
+      </p>
+      <div>
+        <box-icon type="solid" name="right-arrow"></box-icon>
+        Next question
+      </div>
+    </div>
+    <nav id="navbar" class="panel" visible>
+      <i class="bx bxs-home"></i>
+      <span id="attempt">Attempt 00</span>
+      <i class="bx bxs-right-arrow-circle"></i>
+    </nav>
+    <div id="home-page" class="page">
+      <h1>1712 Practice Quiz</h1>
+      <div id="main">
+        <form id="form">
+          <h1>1712 Practice Quiz</h1>
+          <div id="exam-selection">
+            <div>Studying for:</div>
+            <ul>
+              <li>
+                <label>
+                  <input id="midterm" type="radio" name="module-group" />
+                  <span>Midterm</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input id="final" type="radio" name="module-group" />
+                  <span>Final</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div id="module-selection">
+            <div id="modules-header">
+              <span>Modules:</span>
+              <span id="coverage" class="coverage">coverage</span>
+            </div>
+            <div id="modules-list"></div>
+          </div>
+          <div id="question-bank-selection">
+            <div>Question banks:</div>
+            <ul>
+              <li>
+                <label>
+                  <input id="LH" type="checkbox" />
+                  <span>Learning Hub practice quizzes</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input id="AI" type="checkbox" />
+                  <span>AI-generated questions</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <label>
+              <span>Questions per attempt:</span>
+              <select id="questions-count-choice" style="font-size: 1rem">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="40">40</option>
+                <option value="80">80</option>
+                <option value="9007199254740991">All of them!</option>
+              </select>
+            </label>
+          </div>
+          <div id="explain-selection" style="display: none">
+            <label>
+              <span>Show explanations:</span>
+              <input id="explain" type="checkbox" checked="true" />
+            </label>
+          </div>
+        </form>
+        <figure id="license-notice" style="display: none">
+          <img
+            src="/img/hawaiian.jpg"
+            alt="man wearing a Hawaiian shirt"
+            id="hawaiian"
+          />
+          <p id="license-text">
+            By using this website you agree to wear a Hawaiian shirt to the
+            exam.
+          </p>
+          <div id="license-agree-btn">
+            <p id="license-agree-text">Agree</p>
+          </div>
+          <div id="license-disagree-btn">
+            <p id="license-disagree-text">no</p>
+          </div>
+        </figure>
+      </div>
+      <div id="attempts-table-container">
+        <table id="attempts-table">
+          <tbody>
+            <tr class="header">
+              <th class="attempt">Attempt</th>
+              <th class="banks">Question banks</th>
+              <th class="modules">Modules</th>
+              <th class="result">Result</th>
+            </tr>
+          </tbody>
+        </table>
+        <box-icon
+          type="solid"
+          name="x-circle"
+          color="hsl(0, 80%, 45%)"
+        ></box-icon>
+      </div>
+      <footer>
+        <hr />
+        <div id="footer">
+          <div id="links">
+            <a
+              href="https://docs.google.com/document/d/1MOVpEVdHEbigwvpJk2h_6VJ49L0uOAlseSyCwteGMNc/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Old Testament (midterm guide)
+            </a>
+            <a
+              href="https://docs.google.com/document/d/1te3-P5Rm_u4fdDsJFVOWigXhoSgLdk8tMQN2CvaR7pk/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              New Testament (final guide)
+            </a>
+          </div>
+
+          <div id="dark-mode-toggle-container">
+            <span>Dark Mode </span>
+            <label>
+              <input type="checkbox" id="dark-mode-toggle" />
+              <span id="slider"></span>
+            </label>
+          </div>
+
+          <div id="social">
+            <a
+              href="https://github.com/pnguyen72/pnguyen72.github.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <box-icon type="logo" color="#04442c" name="github"></box-icon>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div id="quiz-page" class="page">
+      <div id="quiz"></div>
+    </div>
+    <script src="/js/data.js"></script>
+    <script src="/js/elements.js"></script>
+    <script src="/js/globalVar.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/generators.js"></script>
+    <script src="/js/navigations.js"></script>
+    <script src="/js/events.js"></script>
+    <script src="/js/darkMode.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+table {
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+
+  td,
+  th {
+    border: 1.2pt solid black;
+  }
+}
+
+#attempts-table-container {
+  position: relative;
+
+  &:has(tr:first-child:last-child) {
+    display: none;
+  }
+
+  box-icon {
+    position: absolute;
+    background-color: hsl(120, 28%, 95%);
+    border-radius: 50%;
+
+    height: 1.9rem;
+    width: 1.9rem;
+    top: -0.75rem;
+    right: -0.75rem;
+
+    @media (width < 600px) {
+      height: 1.75rem;
+      width: 1.75rem;
+      top: -0.68rem;
+      right: -0.68rem;
+    }
+
+    @media (width < 450px) {
+      height: 1.59rem;
+      width: 1.59rem;
+      top: -0.62rem;
+      right: -0.62rem;
+    }
+  }
+
+  /* if hover is available */
+  @media not all and (hover: none) {
+    &:not(:hover) box-icon {
+      display: none;
+    }
+  }
+
+  #attempts-table {
+    td.attempt {
+      cursor: pointer;
+      color: blue;
+      font-weight: bold;
+
+      /* if hover is available */
+      @media not all and (hover: none) {
+        font-weight: normal;
+
+        &:hover {
+          font-weight: bold;
+        }
+      }
+    }
+
+    @media (width < 600px) {
+      .banks {
+        display: none;
+      }
+    }
+
+    @media (width < 400px) {
+      .modules {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+#footer {
+  font-size: 0.9em;
+  display: flex;
+  justify-content: space-between;
+
+  #links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: #04442c;
+
+      &:first-child {
+        margin-right: 2rem;
+      }
+    }
+
+    /*
+     * Do not disable hover on mobile in this particular case.
+     * The 2 links are a bit close, it's possible to misclick,
+     * the hover effect indicates which one the user just clicked.
+     */
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (width < 750px) {
+      flex-direction: column;
+      align-items: start;
+
+      a:first-child {
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  #dark-mode-toggle-container {
+    display: flex;
+    align-items: center;
+
+    label {
+      position: relative;
+      display: inline-block;
+      width: 45px;
+      height: 1.5rem;
+
+      #dark-mode-toggle {
+        display: none;
+
+        &:checked + #slider {
+          background-color: rebeccapurple;
+
+          &::before {
+            -webkit-transform: translateX(16px);
+            -ms-transform: translateX(16px);
+            transform: translateX(16px);
+          }
+        }
+
+        &:focus + #slider {
+          box-shadow: 0 0 1px rebeccapurple;
+        }
+      }
+
+      #slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 34px;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+
+        &::before {
+          position: absolute;
+          content: "";
+          height: 16px;
+          width: 16px;
+          left: 4px;
+          bottom: 4px;
+          border-radius: 50%;
+          background-color: white;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+        }
+      }
+    }
+  }
+
+  #social {
+    display: flex;
+    align-items: center;
+
+    box-icon {
+      height: 1.6rem;
+      width: 1.6rem;
+    }
+
+    @media (width < 450px) {
+      display: none;
+    }
+  }
+}
+
+@media print {
+  footer {
+    display: none;
+  }
+}

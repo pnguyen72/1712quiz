@@ -1,0 +1,144 @@
+body {
+  background-color: #262626;
+  color: #eeeeee;
+  .page {
+    footer {
+      #footer {
+        #links {
+          a {
+            padding: 2px 6px 2px 6px;
+            border-radius: 6px;
+            background-color: rebeccapurple;
+            color: #fff;
+          }
+        }
+        #social {
+          box-icon {
+            background-color: #eee;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+input {
+  accent-color: rebeccapurple;
+}
+select {
+  background-color: #262626;
+  color: #eee;
+}
+
+#coverage,
+.question-tags,
+.unsure-label {
+  color: hsl(0, 0%, 70%) !important;
+}
+
+table,
+th,
+td {
+  outline: solid 1px #0f0116;
+}
+
+#main #license-notice {
+  img {
+    /* Make the license image a little nicer on the eyes. */
+    opacity: 75%;
+  }
+  #license-text {
+    background-color: #262626;
+    color: #f0f0f0;
+  }
+  #license-agree-text {
+    color: #0f0116;
+  }
+}
+
+#result-panel {
+  opacity: 90%;
+  color: #262626;
+  box-shadow: 0px 2px 8px #00000065;
+}
+
+.show-explanation {
+  color: #dfdf0c;
+}
+
+.explanation-container {
+  padding-left: 4px;
+
+  div.explanation:not(.empty) {
+    color: #dfdf0c !important;
+
+    & ~ .bx {
+      color: #dfdf0c !important;
+    }
+  }
+
+  textarea.explanation {
+    background-color: #262626;
+    color: #eee;
+  }
+}
+
+#quiz[submitted="true"] {
+  .question-choices {
+    label {
+      padding: 4px;
+
+      &:has(input[correct]) {
+        background-color: #1ed96f24;
+        border-radius: 6px;
+        color: #11ce73;
+      }
+    }
+  }
+
+  .question {
+    @media not print {
+      &[correct="false"] .question-title {
+        background-color: #f133331f;
+        color: #df0c33;
+      }
+    }
+  }
+}
+
+.question {
+  .question-title {
+    @media not print {
+      padding: 4px;
+      border-radius: 6px;
+    }
+  }
+
+  &[unsure] .question-title {
+    background-color: #d0c31222;
+    color: #dfdf0c;
+  }
+}
+
+#navbar {
+  color: #eee;
+  opacity: 90%;
+  box-shadow: 0px -2px 8px #00000065;
+  background-color: #363636;
+}
+
+#attempts-table {
+  td.attempt {
+    color: cyan !important;
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: hsl(0, 40%, 40%);
+  }
+  100% {
+    background-color: #262626;
+  }
+}

@@ -1,0 +1,271 @@
+.question {
+  margin-bottom: 2.5rem;
+
+  &:last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  &[unsure] .question-title {
+    background-color: yellow;
+  }
+
+  .question-header {
+    display: flex;
+    justify-content: space-between;
+
+    .question-tags {
+      color: gray;
+
+      margin-left: 0.3rem;
+      @media (width >= 600px) {
+        margin-left: 0.6rem;
+      }
+
+      .bx {
+        margin-right: 0.125rem;
+        display: none;
+      }
+      .txt {
+        font-size: 0.9em;
+      }
+
+      .AI-tag {
+        color: hsl(0, 50%, 50%);
+      }
+      .known-tag {
+        color: hsl(120, 50%, 30%);
+      }
+    }
+
+    .unsure-label {
+      color: gray;
+      font-size: 0.9em;
+
+      input {
+        height: 0.9rem;
+        width: 0.9rem;
+      }
+
+      .show-explanation {
+        display: none;
+      }
+    }
+  }
+
+  .question-body {
+    margin: 0.5rem 0;
+  }
+
+  figure {
+    margin: auto;
+    img {
+      width: 100%;
+    }
+  }
+
+  .explanation-container {
+    display: none;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    width: calc(100% - 2rem);
+
+    div.explanation {
+      color: blue;
+      width: calc(100% - 3rem);
+
+      & ~ .bx {
+        display: block;
+        margin: auto;
+        margin-right: 0;
+        font-size: 1.6rem;
+        color: blue;
+      }
+
+      & ~ .bx-loader {
+        display: none;
+      }
+
+      &.empty {
+        color: gray;
+
+        & ~ .bx {
+          color: gray;
+        }
+      }
+
+      &.editing {
+        &.empty {
+          visibility: hidden;
+        }
+        &:not(.empty) {
+          color: rgb(127, 127, 255);
+        }
+
+        & ~ .bx-edit {
+          display: none;
+        }
+        & ~ .bx-loader {
+          display: block;
+        }
+      }
+    }
+
+    @media (width < 700px) {
+      margin-left: 0;
+      width: 100%;
+
+      div.explanation {
+        width: calc(100% - 2.5rem);
+      }
+    }
+
+    @media (width < 600px) {
+      div.explanation {
+        width: calc(100% - 2rem);
+
+        & ~ .bx {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    @media (width < 475px) {
+      #placeholder-expansion {
+        display: none;
+      }
+    }
+
+    @media (width < 450px) {
+      div.explanation {
+        width: calc(100% - 1.5rem);
+
+        & ~ .bx {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  form {
+    position: relative;
+
+    .explanation {
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    button {
+      bottom: 0;
+      position: absolute;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    button[type="reset"] {
+      right: 5rem;
+      background-color: hsla(0, 80%, 80%);
+    }
+    button[type="submit"] {
+      right: 0;
+      background-color: hsla(120, 80%, 75%);
+    }
+
+    @media (width < 600px) {
+      .explanation,
+      button {
+        font-size: 0.92rem;
+      }
+      button[type="reset"] {
+        right: 4.6rem;
+      }
+    }
+
+    @media (width < 450px) {
+      .explanation,
+      button {
+        font-size: 0.83rem;
+      }
+      button[type="reset"] {
+        right: 4.2rem;
+      }
+    }
+  }
+}
+
+#quiz[submitted="true"] {
+  label:has(input[correct]) {
+    background-color: hsl(120, 80%, 80%);
+  }
+
+  .question {
+    @media not print {
+      &[correct="false"] .question-title {
+        background-color: hsla(0, 80%, 75%, 75%);
+      }
+    }
+
+    &[correct] .unsure-label {
+      display: none;
+    }
+  }
+
+  &[explain="true"] .question {
+    &[unsure],
+    &[correct="false"] {
+      .explanation-container {
+        display: flex;
+      }
+    }
+
+    .unsure-label {
+      display: initial;
+    }
+
+    .im-not-sure {
+      display: none;
+    }
+    .show-explanation {
+      display: initial;
+    }
+  }
+}
+
+@media (width < 500px) {
+  #quiz:has(.question[known][AI]) .question-tags {
+    .bx {
+      display: initial;
+    }
+    .txt {
+      display: none;
+    }
+  }
+}
+
+@media print {
+  .question {
+    margin: 1.5rem;
+    &:last-child {
+      margin-bottom: 1rem;
+    }
+
+    .known-tag,
+    .delimiter {
+      display: none;
+    }
+  }
+
+  .unsure-label {
+    display: none;
+  }
+
+  #quiz[submitted="true"][explain="true"] {
+    .explanation-container {
+      display: flex;
+    }
+    .explanation-container:has(.explanation.empty) {
+      display: none;
+    }
+    .explanation ~ .bx {
+      display: none;
+    }
+  }
+}

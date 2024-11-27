@@ -1,0 +1,13 @@
+ul {
+  list-style-type: none;
+  padding-inline-start: 1.5rem;
+  margin: 0.75rem 0;
+
+  @media (width < 450px) {
+    padding-inline-start: 0.75rem;
+  }
+
+  li {
+    margin: 0.5rem;
+  }
+}

@@ -1,0 +1,35 @@
+#home-page form {
+  max-width: 450px;
+
+  > div {
+    margin-bottom: 1.25rem;
+  }
+
+  #module-selection {
+    #coverage {
+      color: gray;
+    }
+
+    &:not(:has(.coverage[visible])) {
+      #coverage {
+        display: none;
+      }
+    }
+
+    #modules-header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+
+      .coverage {
+        margin-left: 0.5rem;
+        border-radius: 20%;
+        padding: 0 0.2rem;
+      }
+    }
+  }
+}
