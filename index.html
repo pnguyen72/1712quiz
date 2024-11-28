@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <link rel="stylesheet" href="./styles/panels.css" />
     <link rel="stylesheet" href="./styles/lists.css" />
-    <link rel="stylesheet" href="./styles/coverage.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
     <link rel="stylesheet" href="./styles/inputs.css" />
     <link rel="stylesheet" href="./styles/tables.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
@@ -48,32 +48,31 @@
       <div id="main">
         <form id="form">
           <h1>1712 Practice Quiz</h1>
-          <div id="exam-selection">
-            <div>Studying for:</div>
-            <ul>
-              <li>
-                <label>
-                  <input id="midterm" type="radio" name="module-group" />
-                  <span>Midterm</span>
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input id="final" type="radio" name="module-group" />
-                  <span>Final</span>
-                </label>
-              </li>
-            </ul>
-          </div>
-          <div id="module-selection">
+          <div id="module-selection-container">
+            <span>Modules:</span>
             <div id="modules-header">
-              <span>Modules:</span>
-              <span id="coverage">coverage</span>
+              <ul id="exam-selection">
+                <li>
+                  <label>
+                    <input id="midterm" type="radio" name="module-group" />
+                    <span>Midterm</span>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input id="final" type="radio" name="module-group" />
+                    <span>Final</span>
+                  </label>
+                </li>
+              </ul>
+              <span id="coverage" class="coverage">coverage</span>
             </div>
-            <div id="modules-list"></div>
+            <div id="module-selection">
+              <ul id="modules-list"></ul>
+            </div>
           </div>
           <div id="question-bank-selection">
-            <div>Question banks:</div>
+            <span>Question banks:</span>
             <ul>
               <li>
                 <label>
@@ -101,11 +100,16 @@
               </select>
             </label>
           </div>
-          <div id="explain-selection" style="display: none">
-            <label>
-              <span>Show explanations:</span>
-              <input id="explain" type="checkbox" checked="true" />
-            </label>
+          <div id="options">
+            <span>Other options:</span>
+            <ul>
+              <li id="explain-selection" style="display: none">
+                <label>
+                  <input id="explain" type="checkbox" checked="true" />
+                  <span>Enable crowdsourced explanations</span>
+                </label>
+              </li>
+            </ul>
           </div>
         </form>
         <figure id="license-notice" style="display: none">

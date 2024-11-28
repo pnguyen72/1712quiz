@@ -19,18 +19,21 @@ form.addEventListener("click", () => {
   }
 });
 
-examSelection.addEventListener("input", generateModuleSelection);
+examSelection.addEventListener("input", () => {
+  localStorage.setItem("exam", midtermChoice.checked ? "midterm" : "final");
+  generateModuleSelection();
+});
 moduleSelection.addEventListener("input", () => {
   const modules = getSelectedModules();
   if (modules.length > 0) {
     localStorage.setItem("modules", modules.join(" "));
-  }
-
-  for (const bank of ["LH", "AI"]) {
-    const choice = document.getElementById(bank);
-    const size = sum(modules.map((module) => modulesData[bank][module].size));
-    choice.disabled = size == 0;
-    choice.checked = size > 0 && localStorage.getItem("banks")?.includes(bank);
+    for (const bank of ["LH", "AI"]) {
+      const choice = document.getElementById(bank);
+      const size = sum(modules.map((module) => modulesData[bank][module].size));
+      choice.disabled = size == 0;
+      choice.checked =
+        size > 0 && localStorage.getItem("banks")?.includes(bank);
+    }
   }
   updateCoverage();
 });

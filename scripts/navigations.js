@@ -42,31 +42,19 @@ function licenseGrantException() {
 }
 
 function initalizeSelections() {
+  const exam = localStorage.getItem("exam") ?? "final";
+  document.getElementById(exam).click();
+
   const modules = localStorage.getItem("modules");
   if (modules) {
-    const modulesList = modules.split(" ");
-    if (modulesList[0] <= modulesName.midterm.length) {
-      midtermChoice.checked = true;
-    } else {
-      finalChoice.checked = true;
-    }
-    generateModuleSelection();
-    modulesList.forEach((id) => (document.getElementById(id).checked = true));
+    modules.split(" ").forEach((id) => document.getElementById(id)?.click());
     if (modulesSelectBoxes.every((box) => box.checked)) {
       document.getElementById("module-all").checked = true;
     }
-  } else {
-    finalChoice.checked = true;
-    generateModuleSelection();
   }
 
-  const banks = localStorage.getItem("banks");
-  if (banks) {
-    const banksList = banks.split(" ");
-    banksList.forEach((id) => (document.getElementById(id).checked = true));
-  } else {
+  if (!localStorage.getItem("banks")) {
     localStorage.setItem("banks", "LH");
-    LHChoice.checked = true;
   }
 
   const questionsCount = localStorage.getItem("questions");

@@ -14,6 +14,6 @@ input {
   }
 }
 
-#home-page label:has(input:disabled, select:disabled) span {
-  color: gray;
+select {
+  margin-left: 0.25rem;
 }

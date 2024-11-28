@@ -5,7 +5,11 @@
     margin-bottom: 1.25rem;
   }
 
-  #module-selection {
+  label:has(input:disabled, select:disabled) span {
+    color: gray;
+  }
+
+  #module-selection-container {
     #coverage {
       color: gray;
     }
@@ -19,6 +23,7 @@
     #modules-header {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
 
     li {
@@ -31,5 +36,15 @@
         padding: 0 0.2rem;
       }
     }
+  }
+
+  #exam-selection {
+    display: flex;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+  }
+
+  #options:not(:has([visible])) {
+    display: none;
   }
 }
