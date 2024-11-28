@@ -23,7 +23,7 @@ function licenseLock() {
 }
 
 function licenseUnlock() {
-  sessionStorage.setItem("licenseAgreed", "true");
+  sessionStorage.setItem("licenseAgreed", true);
   hide(licenseNotice);
   for (input of form.querySelectorAll("input,select")) {
     input.disabled = false;
@@ -38,7 +38,7 @@ function licenseGrantException() {
       "You don't have to wear a Hawaiian shirt to the exam."
   );
   licenseUnlock();
-  localStorage.setItem("licenseException", "true");
+  localStorage.setItem("licenseException", true);
 }
 
 function initalizeSelections() {
@@ -130,12 +130,29 @@ function explainKnownQuestions() {
   ) {
     alert(
       "Warning:\n\n" +
-        "You have exhausted the question bank. " +
-        "Some questions in this quiz are those you already learned.\n\n" +
-        "You can choose to exclude already-learned questions in the home page menu."
+        "You have exhausted the question bank. Therefore, " +
+        "some questions in this quiz are those you've already learned.\n\n" +
+        "There's an option to exclude already-learned questions in the home menu."
     );
     localStorage.setItem("knownQuestionsExplained", true);
     unhide(knownQuestionsSelection);
+  }
+}
+
+function giveExplanationsWarning() {
+  if (
+    !localStorage.getItem("explanationWarned") &&
+    document.querySelector("#quiz-page[visible] #quiz[submitted=true]")
+  ) {
+    alert(
+      "Warning:\n\n" +
+        "Unlike questions and answers which are from Learning Hub, " +
+        "explanations are written by your classmates, " +
+        "thus *could* be inaccurate.\n\n" +
+        "There's an option to disable explanations in the home menu."
+    );
+    localStorage.setItem("explanationWarned", true);
+    unhide(explainSelection);
   }
 }
 
@@ -302,7 +319,7 @@ function editExplanation(explanation) {
           "Thank you for your contribution.\n" +
             "You are exempt from the Hawaiian shirt rule."
         );
-        localStorage.setItem("licenseException", "true");
+        localStorage.setItem("licenseException", true);
       }
     });
   }
