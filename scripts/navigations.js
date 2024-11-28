@@ -62,6 +62,14 @@ function initalizeSelections() {
     questionsCountChoice.value = questionsCount;
   }
 
+  if (localStorage.getItem("knownQuestionsExplained")) {
+    unhide(knownQuestionsSelection);
+    const knownQuestions = localStorage.getItem("knownQuestions");
+    if (knownQuestions) {
+      knownQuestionsChoice.checked = knownQuestions == "true";
+    }
+  }
+
   if (localStorage.getItem("explanationWarned")) {
     unhide(explainSelection);
     const explain = localStorage.getItem("explain");
@@ -112,6 +120,23 @@ function nextQuiz() {
   const quizData = getQuiz(banks, modules, questionsCount);
   document.getElementById("quiz").replaceWith(generateQuiz(quizData));
   toQuizPage();
+  setTimeout(explainKnownQuestions, 400); // after the page loads, 400ms should be enough
+}
+
+function explainKnownQuestions() {
+  if (
+    !localStorage.getItem("knownQuestionsExplained") &&
+    document.querySelector("#quiz-page[visible] .question[known]")
+  ) {
+    alert(
+      "Warning:\n\n" +
+        "You have exhausted the question bank. " +
+        "Some questions in this quiz are those you already learned.\n\n" +
+        "You can choose to exclude already-learned questions in the home page menu."
+    );
+    localStorage.setItem("knownQuestionsExplained", true);
+    unhide(knownQuestionsSelection);
+  }
 }
 
 function submit() {

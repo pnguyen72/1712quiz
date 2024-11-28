@@ -47,6 +47,9 @@ questionBankSelection.addEventListener("input", () => {
 questionsCountChoice.addEventListener("input", () => {
   localStorage.setItem("questions", questionsCountChoice.value);
 });
+knownQuestionsChoice.addEventListener("input", () => {
+  localStorage.setItem("knownQuestions", knownQuestionsChoice.checked);
+});
 explainChoice.addEventListener("input", () => {
   localStorage.setItem("explain", explainChoice.checked);
 });

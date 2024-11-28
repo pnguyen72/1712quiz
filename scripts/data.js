@@ -54,7 +54,11 @@ function getQuiz(banks, modules, count) {
   const selectionSize = {};
   for (const bank of banks) {
     for (const module of modules) {
-      selectionSize[`${bank}.${module}`] = modulesData[bank][module].size;
+      let size = modulesData[bank][module].size;
+      if (!knownQuestionsChoice.checked) {
+        size -= modulesData[bank][module].covered.size;
+      }
+      selectionSize[`${bank}.${module}`] = size;
     }
   }
   const totalSize = sum(Object.values(selectionSize));
@@ -187,13 +191,19 @@ function _data(questions) {
     get: function (count, position) {
       // pull data from origin if there's not enough
       const currentSize = Object.keys(this._data).length;
-      if (currentSize == 0) {
+      if (currentSize == 0 || !knownQuestionsChoice.checked) {
         this._pull();
       } else if (currentSize < count) {
         this._pull(count - currentSize);
       }
-      // slice data to specified amount, either from beginning or end of the pool
+
+      // filter known questions
       let entries = Object.entries(this._data);
+      if (!knownQuestionsChoice.checked) {
+        entries = entries.filter(([questionId]) => !this.isKnown(questionId));
+      }
+
+      // slice
       if (position == "end") {
         return entries.slice(-count);
       } else {
