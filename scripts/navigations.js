@@ -9,12 +9,12 @@ function unhide(element) {
 }
 
 function licenseLock() {
-  if (
-    sessionStorage.getItem("licenseAgreed") == "true" ||
-    localStorage.getItem("licenseException") == "true"
-  ) {
-    return;
-  }
+  // if (
+  //   sessionStorage.getItem("licenseAgreed") == "true" ||
+  //   localStorage.getItem("licenseException") == "true"
+  // ) {
+  //   return;
+  // }
   unhide(licenseNotice);
   for (input of form.querySelectorAll("input,select")) {
     input.disabled = true;
