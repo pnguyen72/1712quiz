@@ -27,9 +27,8 @@
     height: 80vh;
 
     #hawaiian {
-      aspect-ratio: 2/3;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
     #license-text {
       font-size: 4vh;
