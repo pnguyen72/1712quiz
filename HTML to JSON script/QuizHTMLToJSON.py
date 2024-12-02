@@ -49,10 +49,10 @@ def get_new_data(quiz_data: dict[str, dict[str, Any]]):
         )
 
         if len(questionBlocks) == 0:
-            print(f"No questions found in {html_file}")
+            print(f"{html_file}: no questions.")
             continue
         else:
-            print(f"{len(questionBlocks)} questions found in {html_file}")
+            print(f"{html_file}: {len(questionBlocks)} questions", end="")
 
         skipped = 0
         for i in range(len(questionBlocks)):
@@ -95,9 +95,11 @@ def get_new_data(quiz_data: dict[str, dict[str, Any]]):
 
             quiz_data[questionTitle] = {"choices": choices}
 
-        new_questions_count += len(questionBlocks) - skipped
+        block_questions = len(questionBlocks) - skipped
+        print(f", {block_questions} of them new.")
+        new_questions_count += block_questions
 
-    print(f"{new_questions_count} questions added to data.")
+    print(f"TOTAL: {new_questions_count} questions added to data.")
 
 
 def save_data(quiz_data: dict[str, dict[str, Any]]):
