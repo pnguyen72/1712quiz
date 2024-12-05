@@ -94,10 +94,10 @@ nextQuest.addEventListener("click", () =>
 attemptsTableContainer
   .querySelector("box-icon")
   .addEventListener("click", () => {
-    if (confirm("Clear past attempts? This action is irreversible.")) {
+    if (confirm("Clear past attempts data")) {
       localStorage.removeItem("pastAttempts");
-      pastAttempts = [];
-      updateAttemptsTable();
+      localStorage.removeItem("coverage");
+      location.reload();
     }
   });
 

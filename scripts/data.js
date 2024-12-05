@@ -10,6 +10,10 @@ const db = firebase.firestore();
 
 let modulesName;
 let modulesData = { LH: {}, AI: {} };
+let storedCoverage = { LH: {}, AI: {} };
+if (localStorage.getItem("coverage")) {
+  storedCoverage = JSON.parse(localStorage.getItem("coverage"));
+}
 
 function loadData() {
   return _loadModules().then((data) => {
@@ -20,13 +24,15 @@ function loadData() {
     for (let i = 0; i < data.midterm.length; ++i) {
       const moduleNum = String(i + midtermOffset).padStart(2, "0");
       promises.push(
-        _loadQuestions(i + midtermOffset, "LH").then(
-          (questions) => (modulesData.LH[moduleNum] = _data(questions))
+        _loadQuestions("LH", i + midtermOffset).then(
+          (questions) =>
+            (modulesData.LH[moduleNum] = _data("LH", moduleNum, questions))
         )
       );
       promises.push(
-        _loadQuestions(i + midtermOffset, "AI").then(
-          (questions) => (modulesData.AI[moduleNum] = _data(questions))
+        _loadQuestions("AI", i + midtermOffset).then(
+          (questions) =>
+            (modulesData.AI[moduleNum] = _data("AI", moduleNum, questions))
         )
       );
     }
@@ -35,13 +41,15 @@ function loadData() {
     for (let i = 0; i < data.final.length; ++i) {
       const moduleNum = String(i + finalOffset).padStart(2, "0");
       promises.push(
-        _loadQuestions(i + finalOffset, "LH").then(
-          (questions) => (modulesData.LH[moduleNum] = _data(questions))
+        _loadQuestions("LH", i + finalOffset).then(
+          (questions) =>
+            (modulesData.LH[moduleNum] = _data("LH", moduleNum, questions))
         )
       );
       promises.push(
-        _loadQuestions(i + finalOffset, "AI").then(
-          (questions) => (modulesData.AI[moduleNum] = _data(questions))
+        _loadQuestions("AI", i + finalOffset).then(
+          (questions) =>
+            (modulesData.AI[moduleNum] = _data("AI", moduleNum, questions))
         )
       );
     }
@@ -99,6 +107,7 @@ function resolveQuiz(quiz) {
     const [bank, module, _] = id.split(".");
     modulesData[bank][module].unresolve(id);
   }
+  localStorage.setItem("coverage", JSON.stringify(storedCoverage));
 }
 
 function explain(question) {
@@ -150,25 +159,30 @@ function _loadModules() {
   return fetch("./data/modules.json").then((response) => response.json());
 }
 
-function _loadQuestions(moduleNum, bank) {
+function _loadQuestions(bank, moduleNum) {
   return fetch(`./data/${bank}/module${moduleNum}.json`).then((response) => {
     if (!response.ok) return {};
     return response.json();
   });
 }
 
-function _data(questions) {
+function _data(bank, moduleNum, questions) {
   return {
     _origin: Object.entries(questions),
     _data: {},
     _pull: function (count) {
-      shuffle(this._origin);
+      let origin = [...this._origin];
+      if (!knownQuestionsChoice.checked) {
+        origin = origin.filter(([id]) => !this.isKnown(id));
+      }
+      shuffle(origin);
+
       if (count == undefined) {
-        this._data = Object.fromEntries(this._origin);
+        this._data = Object.fromEntries(origin);
         return;
       }
       let pulled = 0;
-      for (const [key, value] of this._origin) {
+      for (const [key, value] of origin) {
         if (!Object.hasOwn(this._data, key)) {
           this._data[key] = value;
           if (++pulled == count) break;
@@ -178,16 +192,19 @@ function _data(questions) {
     get: function (count, position) {
       // pull data from origin if there's not enough
       const currentSize = Object.keys(this._data).length;
-      if (currentSize == 0 || !knownQuestionsChoice.checked) {
+      if (currentSize == 0) {
         this._pull();
       } else if (currentSize < count) {
         this._pull(count - currentSize);
       }
 
-      // filter known questions
+      // sort entries to show unknown questions first
       let entries = Object.entries(this._data);
-      if (!knownQuestionsChoice.checked) {
-        entries = entries.filter(([questionId]) => !this.isKnown(questionId));
+      if (knownQuestionsChoice.checked) {
+        entries.sort((entry1, entry2) => {
+          const [id1, id2] = [entry1[0], entry2[0]];
+          return this.isKnown(id1) - this.isKnown(id2);
+        });
       }
 
       // slice
@@ -200,14 +217,16 @@ function _data(questions) {
     resolve: function (questionId) {
       delete this._data[questionId];
       this.covered.add(questionId);
+      storedCoverage[bank][moduleNum] = Array.from(this.covered);
     },
     unresolve: function (quesitonId) {
       this.covered.delete(quesitonId);
+      storedCoverage[bank][moduleNum] = Array.from(this.covered);
     },
     isKnown: function (questionId) {
       return this.covered.has(questionId);
     },
     size: Object.keys(questions).length,
-    covered: new Set(),
+    covered: new Set(storedCoverage[bank][moduleNum] ?? []),
   };
 }
