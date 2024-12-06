@@ -103,7 +103,7 @@ nextQuest.addEventListener("click", () =>
 attemptsTableContainer
   .querySelector("box-icon")
   .addEventListener("click", () => {
-    if (confirm("Clear past attempts data")) {
+    if (confirm("Delete attempts history?")) {
       localStorage.removeItem("pastAttempts");
       localStorage.removeItem("coverage");
       location.reload();
