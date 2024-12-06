@@ -22,6 +22,15 @@ form.addEventListener("click", () => {
 examSelection.addEventListener("input", () => {
   localStorage.setItem("exam", midtermChoice.checked ? "midterm" : "final");
   generateModuleSelection();
+  if (localStorage.getItem("modules")) {
+    localStorage
+      .getItem("modules")
+      .split(" ")
+      .forEach((module) => document.getElementById(module)?.click());
+    if (modulesSelectBoxes.every((box) => box.checked)) {
+      document.getElementById("module-all").checked = true;
+    }
+  }
 });
 moduleSelection.addEventListener("input", () => {
   const modules = getSelectedModules();

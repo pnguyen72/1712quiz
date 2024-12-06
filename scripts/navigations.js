@@ -45,14 +45,6 @@ function initalizeSelections() {
   const exam = localStorage.getItem("exam") ?? "final";
   document.getElementById(exam).click();
 
-  const modules = localStorage.getItem("modules");
-  if (modules) {
-    modules.split(" ").forEach((id) => document.getElementById(id)?.click());
-    if (modulesSelectBoxes.every((box) => box.checked)) {
-      document.getElementById("module-all").checked = true;
-    }
-  }
-
   if (!localStorage.getItem("banks")) {
     localStorage.setItem("banks", "LH");
   }
