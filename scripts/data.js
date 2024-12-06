@@ -95,7 +95,7 @@ function getQuiz(banks, modules, count) {
 }
 
 function resolveQuiz(quiz) {
-  const learned = quiz.querySelectorAll(".question:not(.wrong-answer,.unsure)");
+  const learned = quiz.querySelectorAll(".question:not(.wrong-answer)");
   for (const question of learned) {
     const id = question.id;
     const [bank, module, _] = id.split(".");
