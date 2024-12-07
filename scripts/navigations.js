@@ -71,6 +71,33 @@ function initalizeSelections() {
   }
 }
 
+function filterAttemptsTable() {
+  const banks = getSelectedBanks().join(", ");
+  const modules = getSelectedModules()
+    .map((x) => parseInt(x))
+    .join(", ");
+
+  const rows = attemptsTable.querySelectorAll(".row");
+  const banksColumns = attemptsTable.querySelectorAll(".banks");
+  const modulesColumns = attemptsTable.querySelectorAll(".modules");
+
+  rows.forEach(unhide);
+
+  if (banks.length > 0) {
+    rows.forEach((row) => row.getAttribute("banks") != banks && hide(row));
+    banksColumns.forEach(hide);
+  } else {
+    banksColumns.forEach(unhide);
+  }
+
+  if (modules.length > 0) {
+    rows.forEach((row) => row.getAttribute("modules") != modules && hide(row));
+    modulesColumns.forEach(hide);
+  } else {
+    modulesColumns.forEach(unhide);
+  }
+}
+
 function tohomePage() {
   if (
     document.querySelector(

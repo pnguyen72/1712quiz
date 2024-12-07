@@ -298,12 +298,15 @@ function updateAttemptsTable() {
       }
 
       row.className = "row";
+      row.setAttribute("banks", attempt.banks);
+      row.setAttribute("modules", attempt.modules);
       row.appendChild(attemptNum);
       row.appendChild(banks);
       row.appendChild(modules);
       row.appendChild(result);
       attemptsTable.querySelector("tbody").appendChild(row);
     });
+  filterAttemptsTable();
 }
 
 function updateCoverage() {

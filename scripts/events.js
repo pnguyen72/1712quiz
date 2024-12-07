@@ -18,6 +18,7 @@ form.addEventListener("click", () => {
     licenseText.style.animation = "blink 1s";
   }
 });
+form.addEventListener("input", filterAttemptsTable);
 
 examSelection.addEventListener("input", () => {
   localStorage.setItem("exam", midtermChoice.checked ? "midterm" : "final");

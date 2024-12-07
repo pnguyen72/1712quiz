@@ -13,7 +13,7 @@ table {
 #attempts-table-container {
   position: relative;
 
-  &:has(tr:first-child:last-child) {
+  &:not(:has(.row[visible])) {
     display: none;
   }
 
