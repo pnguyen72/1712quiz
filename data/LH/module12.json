@@ -581,5 +581,14 @@
       "True": true,
       "False": false
     }
+  },
+  "LH.12.68": {
+    "question": "Which of the following is NOT a valid logical operator?",
+    "choices": {
+      "NOR": false,
+      "XNOR" false,
+      "NAND": false,
+      "XAND": true
+    }
   }
 }
