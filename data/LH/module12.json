@@ -586,7 +586,7 @@
     "question": "Which of the following is NOT a valid logical operator?",
     "choices": {
       "NOR": false,
-      "XNOR" false,
+      "XNOR": false,
       "NAND": false,
       "XAND": true
     }
