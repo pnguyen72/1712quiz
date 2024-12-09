@@ -314,12 +314,13 @@
   "LH.12.37": {
     "question": "New databases collectively referred to as NoSQL databases have appeared in recent years. Which of the following are categorized as a NoSQL database?",
     "choices": {
-      "Document-oriented database": false,
-      "Wide column stores": false,
-      "Graph databases": false,
-      "Extensible record stores": false,
-      "Relational Database system": true
-    }
+      "Document-oriented database": true,
+      "Wide column stores": true,
+      "Graph databases": true,
+      "Extensible record stores": true,
+      "Relational Database system": false
+    },
+    "multiSelect": true
   },
   "LH.12.38": {
     "question": "Barb is working on a database design. For the most efficient storage she should remove: ______ and ______.",
