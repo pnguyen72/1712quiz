@@ -68,8 +68,10 @@ licenceAgreeBtn.addEventListener("click", licenseUnlock);
 licenseDisagreeBtn.addEventListener("click", () => {
   if (++disagreeNum < 32768) {
     alert("You can't disagree, dummy!");
+    localStorage.setItem("disagree", disagreeNum);
   } else {
     licenseGrantException("Fine. 🙄");
+    localStorage.removeItem("disagree");
   }
 });
 
