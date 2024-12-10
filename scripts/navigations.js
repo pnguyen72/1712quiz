@@ -117,6 +117,7 @@ function tohomePage() {
 
 function toQuizPage() {
   navText.style.visibility = "visible";
+  clearInterval(quizTimer);
   hide(resultPanel);
   hide(homePage);
   unhide(quizPage);
@@ -145,8 +146,6 @@ function nextQuiz() {
 
 function startTimer() {
   navText.innerText = "00:00";
-  clearInterval(quizTimer); // reset previous timer
-
   let time = 0;
   return setInterval(function () {
     ++time;
@@ -249,6 +248,7 @@ function submit() {
   scrollTo(0, 0);
   showResult(correctAnswers, questions.length);
   resolveQuiz(quiz);
+  clearInterval(quizTimer);
 
   // update past attemps
   pastAttempts.push({
