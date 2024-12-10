@@ -139,7 +139,26 @@ function nextQuiz() {
   const quizData = getQuiz(banks, modules, questionsCount);
   document.getElementById("quiz").replaceWith(generateQuiz(quizData));
   toQuizPage();
+  quizTimer = startTimer();
   setTimeout(explainKnownQuestions, 400); // after the page loads, 400ms should be enough
+}
+
+function startTimer() {
+  navText.innerText = "00:00";
+  clearInterval(quizTimer); // reset previous timer
+
+  let time = 0;
+  return setInterval(function () {
+    ++time;
+    seconds = String(time % 60).padStart(2, "0");
+    minutes = String(Math.floor(time / 60) % 60).padStart(2, "0");
+    hours = Math.floor(time / 3600);
+    if (hours > 0) {
+      navText.innerText = `${hours}:${minutes}:${seconds}`;
+    } else {
+      navText.innerText = `${minutes}:${seconds}`;
+    }
+  }, 1000);
 }
 
 function explainKnownQuestions() {
