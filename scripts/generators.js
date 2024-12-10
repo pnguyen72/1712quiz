@@ -380,11 +380,7 @@ function updateCoverage() {
   }
   unhide(moduleAllCoverage);
 
-  if (roundedCoverage == 100 && !localStorage.getItem("licenseException")) {
-    alert(
-      "You've reached 100% coverage. Great job! 🥳\n" +
-        "You don't have to wear a Hawaiian shirt to the exam."
-    );
-    localStorage.setItem("licenseException", true);
+  if (roundedCoverage == 100) {
+    licenseGrantException("You've reached 100% coverage. Great job! 🥳");
   }
 }

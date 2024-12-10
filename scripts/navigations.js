@@ -32,11 +32,12 @@ function licenseUnlock() {
   unhide(navbar);
 }
 
-function licenseGrantException() {
-  alert(
-    "Alright, for you alone I'll make an exception:\n\n" +
-      "You don't have to wear a Hawaiian shirt to the exam."
-  );
+function licenseGrantException(text) {
+  if (localStorage.getItem("licenseException")) return;
+
+  text =
+    (text ?? "") + "\nYou don't have to wear a Hawaiian shirt to the exam.";
+  alert(text);
   licenseUnlock();
   localStorage.setItem("licenseException", true);
 }
@@ -349,15 +350,8 @@ function editExplanation(explanation) {
     const questionText = question.querySelector(".question-body").innerHTML;
     const explanationText = textarea.value.trim().replaceAll("\n", "<br>");
     submitExplanation(question.id, questionText, explanationText).then(() => {
-      if (
-        !localStorage.getItem("licenseException") &&
-        textarea.value != originalTextareaValue
-      ) {
-        alert(
-          "Thank you for your contribution.\n" +
-            "You are exempt from the Hawaiian shirt rule."
-        );
-        localStorage.setItem("licenseException", true);
+      if (textarea.value != originalTextareaValue) {
+        licenseGrantException("Thank you for your contribution.");
       }
     });
   }

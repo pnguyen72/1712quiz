@@ -69,7 +69,7 @@ licenseDisagreeBtn.addEventListener("click", () => {
   if (++disagreeNum < 32768) {
     alert("You can't disagree, dummy!");
   } else {
-    licenseGrantException();
+    licenseGrantException("Fine. 🙄");
   }
 });
 
