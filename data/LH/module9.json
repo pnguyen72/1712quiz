@@ -448,13 +448,12 @@
     }
   },
   "LH.09.53": {
-    "question": "Server-based architecture is:",
+    "question": "Server-based architecture is _________",
     "choices": {
-      "When the clients capture keystrokes": false,
-      "The very first architecture system": false,
-      "Outdated and never used": false,
-      "When the clients capture keystrokes and the very first architecture system": true,
-      "When the clients capture keystrokes, the very first architecture system and outdated and never used": false
-    }
+      "When the clients capture keystrokes": true,
+      "The very first architecture system": true,
+      "Outdated and never used": false
+    },
+    "multiSelect": true
   }
 }
