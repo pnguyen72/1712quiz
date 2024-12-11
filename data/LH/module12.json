@@ -285,14 +285,13 @@
     }
   },
   "LH.12.34": {
-    "question": "Which of the following is not a characteristic of Big Data?",
+    "question": "Which of the following are NOT characteristics of Big Data?",
     "choices": {
       "Huge volume": false,
       "Rapid velocity": false,
-      "Great variety": false,
-      "All are characteristics": true,
-      "None are characteristics": false
-    }
+      "Great variety": false
+    },
+    "multiSelect": true
   },
   "LH.12.35": {
     "question": "Primary keys are which of the following?",
@@ -333,14 +332,14 @@
     }
   },
   "LH.12.39": {
-    "question": "Which of the following is not a RDBMS?",
+    "question": "Which of the following are not a RDBMS?",
     "choices": {
       "Oracle": false,
       "NoSQL": true,
       "SQL": false,
-      "MySQL": false,
-      "None of these": false
-    }
+      "MySQL": false
+    },
+    "multiSelect": true
   },
   "LH.12.40": {
     "question": "The project team is very knowledgeable about relational database management systems. In terms of feasibility, this might be best known as what?",
