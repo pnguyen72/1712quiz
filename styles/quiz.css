@@ -254,7 +254,7 @@
   }
 
   .unsure-label {
-    display: none;
+    display: none !important;
   }
 
   #quiz[submitted="true"][explain="true"] {
