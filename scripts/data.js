@@ -16,30 +16,17 @@ if (localStorage.getItem("coverage")) {
 }
 
 function loadData() {
-  return _loadModules().then((data) => {
-    modulesName = data;
+  return _loadModulesName().then((modules) => {
+    modulesName = modules;
     const promises = [];
-
     const midtermOffset = 1;
-    for (let i = 0; i < data.midterm.length; ++i) {
-      const module = String(i + midtermOffset).padStart(2, "0");
-      promises.push(
-        _loadQuestions(i + midtermOffset).then(
-          (questions) => (modulesData[module] = _data(module, questions))
-        )
-      );
+    for (let i = 0; i < modules.midterm.length; ++i) {
+      promises.push(_loadModule(String(i + midtermOffset).padStart(2, "0")));
     }
-
-    const finalOffset = 1 + data.midterm.length;
-    for (let i = 0; i < data.final.length; ++i) {
-      const module = String(i + finalOffset).padStart(2, "0");
-      promises.push(
-        _loadQuestions(i + finalOffset).then(
-          (questions) => (modulesData[module] = _data(module, questions))
-        )
-      );
+    const finalOffset = 1 + modules.midterm.length;
+    for (let i = 0; i < modules.final.length; ++i) {
+      promises.push(_loadModule(String(i + finalOffset).padStart(2, "0")));
     }
-
     return Promise.all(promises);
   });
 }
@@ -137,15 +124,17 @@ function editSignal(questionId, isEditing) {
   }
 }
 
-function _loadModules() {
+function _loadModulesName() {
   return fetch("./data/modules.json").then((response) => response.json());
 }
 
-function _loadQuestions(module) {
-  return fetch(`./data/modules/module${module}.json`).then((response) => {
-    if (!response.ok) return {};
-    return response.json();
-  });
+function _loadModule(module) {
+  return fetch(`./data/modules/module${module}.json`)
+    .then((response) => {
+      if (!response.ok) return {};
+      return response.json();
+    })
+    .then((questions) => (modulesData[module] = _data(module, questions)));
 }
 
 function _data(module, questions) {
