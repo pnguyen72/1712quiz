@@ -13,27 +13,13 @@
     display: flex;
     justify-content: space-between;
 
-    .question-tags {
-      color: gray;
+    .learned-tag {
+      font-size: 0.9em;
+      color: hsl(120, 50%, 30%);
 
       margin-left: 0.3rem;
       @media (width >= 600px) {
         margin-left: 0.6rem;
-      }
-
-      .bx {
-        margin-right: 0.125rem;
-        display: none;
-      }
-      .txt {
-        font-size: 0.9em;
-      }
-
-      .AI-tag {
-        color: hsl(0, 50%, 50%);
-      }
-      .known-tag {
-        color: hsl(120, 50%, 30%);
       }
     }
 
@@ -229,17 +215,6 @@
   }
 }
 
-@media (width < 500px) {
-  #quiz:has(.question[known][AI]) .question-tags {
-    .bx {
-      display: initial;
-    }
-    .txt {
-      display: none;
-    }
-  }
-}
-
 @media print {
   .question {
     margin: 1.5rem;
@@ -247,8 +222,7 @@
       margin-bottom: 1rem;
     }
 
-    .known-tag,
-    .delimiter {
+    .learned-tag {
       display: none;
     }
   }

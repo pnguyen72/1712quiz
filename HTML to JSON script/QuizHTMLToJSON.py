@@ -122,7 +122,7 @@ def main():
 # edit before running the script, but DO NOT COMMIT the change
 MODULE: int = MODULE_NUMBER_GOES_HERE
 IN_PATH = _script_dir
-OUT_PATH = os.path.join(_script_dir, "../data/LH", f"module{MODULE}.json")
+OUT_PATH = os.path.join(_script_dir, "../data/modules", f"module{MODULE}.json")
 
 if __name__ == "__main__":
     main()

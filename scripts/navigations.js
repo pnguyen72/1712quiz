@@ -46,20 +46,16 @@ function initalizeSelections() {
   const exam = localStorage.getItem("exam") ?? "final";
   document.getElementById(exam).click();
 
-  if (!localStorage.getItem("banks")) {
-    localStorage.setItem("banks", "LH");
-  }
-
   const questionsCount = localStorage.getItem("questions");
   if (questionsCount) {
     questionsCountChoice.value = questionsCount;
   }
 
-  if (localStorage.getItem("knownQuestionsExplained")) {
-    unhide(knownQuestionsSelection);
-    const knownQuestions = localStorage.getItem("knownQuestions");
-    if (knownQuestions) {
-      knownQuestionsChoice.checked = knownQuestions == "true";
+  if (localStorage.getItem("learnedQuestionsExplained")) {
+    unhide(learnedQuestionsSelection);
+    const learnedQuestions = localStorage.getItem("learnedQuestions");
+    if (learnedQuestions) {
+      learnedQuestionsChoice.checked = learnedQuestions == "true";
     }
   }
 
@@ -73,23 +69,14 @@ function initalizeSelections() {
 }
 
 function filterAttemptsTable() {
-  const banks = getSelectedBanks().join(", ");
   const modules = getSelectedModules()
     .map((x) => parseInt(x))
     .join(", ");
 
   const rows = attemptsTable.querySelectorAll(".row");
-  const banksColumns = attemptsTable.querySelectorAll(".banks");
   const modulesColumns = attemptsTable.querySelectorAll(".modules");
 
   rows.forEach(unhide);
-
-  if (banks.length > 0) {
-    rows.forEach((row) => row.getAttribute("banks") != banks && hide(row));
-    banksColumns.forEach(hide);
-  } else {
-    banksColumns.forEach(unhide);
-  }
 
   if (modules.length > 0) {
     rows.forEach((row) => row.getAttribute("modules") != modules && hide(row));
@@ -132,17 +119,12 @@ function nextQuiz() {
     moduleSelection.style.animation = "blink 1s";
     return;
   }
-  const banks = getSelectedBanks();
-  if (banks.length == 0) {
-    questionBankSelection.style.animation = "blink 1s";
-    return;
-  }
   navText.innerText = `Attempt ${pastAttempts.length + 1}`;
-  const quizData = getQuiz(banks, modules, questionsCount);
+  const quizData = getQuiz(modules, questionsCount);
   document.getElementById("quiz").replaceWith(generateQuiz(quizData));
   toQuizPage();
   quizTimer = startTimer();
-  setTimeout(explainKnownQuestions, 400); // after the page loads, 400ms should be enough
+  setTimeout(explainLearnedQuestions, 400); // after the page loads, 400ms should be enough
 }
 
 function startTimer() {
@@ -161,19 +143,18 @@ function startTimer() {
   }, 1000);
 }
 
-function explainKnownQuestions() {
+function explainLearnedQuestions() {
   if (
-    !localStorage.getItem("knownQuestionsExplained") &&
-    document.querySelector("#quiz-page[visible] .question[known]")
+    !localStorage.getItem("learnedQuestionsExplained") &&
+    document.querySelector("#quiz-page[visible] .learned-tag")
   ) {
     alert(
-      "Warning:\n\n" +
-        "You have exhausted the question bank. Therefore, " +
+      "You have exhausted the question bank. Therefore, " +
         "some questions in this quiz are those you've already learned.\n\n" +
         "There's an option to exclude already-learned questions in the home menu."
     );
-    localStorage.setItem("knownQuestionsExplained", true);
-    unhide(knownQuestionsSelection);
+    localStorage.setItem("learnedQuestionsExplained", true);
+    unhide(learnedQuestionsSelection);
   }
 }
 
@@ -248,13 +229,12 @@ function submit() {
   quiz.setAttribute("submitted", true);
   scrollTo(0, 0);
   showResult(correctAnswers, questions.length);
-  resolveQuiz(quiz);
+  learnQuiz(quiz);
   clearInterval(quizTimer);
 
   // update past attemps
   pastAttempts.push({
     quiz: quiz.outerHTML,
-    banks: getSelectedBanks().join(", "),
     modules: getSelectedModules()
       .map((x) => parseInt(x))
       .join(", "),
@@ -266,10 +246,6 @@ function submit() {
 
 function getSelectedModules() {
   return modulesSelectBoxes.filter((box) => box.checked).map((box) => box.id);
-}
-
-function getSelectedBanks() {
-  return [LHChoice, AIChoice].filter((box) => box.checked).map((box) => box.id);
 }
 
 function showResult(score, outOf) {

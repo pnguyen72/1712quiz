@@ -71,23 +71,6 @@
               <ul id="modules-list"></ul>
             </div>
           </div>
-          <div id="question-bank-selection">
-            <span>Question banks:</span>
-            <ul>
-              <li>
-                <label>
-                  <input id="LH" type="checkbox" />
-                  <span>Learning Hub practice quizzes</span>
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input id="AI" type="checkbox" />
-                  <span>AI-generated questions</span>
-                </label>
-              </li>
-            </ul>
-          </div>
           <div>
             <label>
               <span>Questions per attempt:</span>
@@ -103,9 +86,13 @@
           <div id="options">
             <span>Other options:</span>
             <ul>
-              <li id="known-questions-selection" style="display: none">
+              <li id="learned-questions-selection" style="display: none">
                 <label>
-                  <input id="known-questions" type="checkbox" checked="true" />
+                  <input
+                    id="learned-questions"
+                    type="checkbox"
+                    checked="true"
+                  />
                   <span>Include already-learned questions</span>
                 </label>
               </li>
@@ -141,7 +128,6 @@
           <tbody>
             <tr class="header">
               <th class="attempt">Attempt</th>
-              <th class="banks">Question banks</th>
               <th class="modules">Modules</th>
               <th class="result">Result</th>
             </tr>

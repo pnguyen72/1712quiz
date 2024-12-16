@@ -80,7 +80,7 @@ function generateQuiz(quizData) {
 }
 
 function generateQuestion(questionId, questionData, questionIndex) {
-  const [bank, module, _] = questionId.split(".");
+  const module = questionId.split(".")[1];
   const questionText = questionData.question;
   const hasImage = questionData.hasImage;
   const isMultiSelect = questionData.multiSelect;
@@ -91,29 +91,11 @@ function generateQuestion(questionId, questionData, questionIndex) {
   question.id = questionId;
   question.className = "question";
 
-  const tags = [];
-  if (modulesData[bank][module].isKnown(questionId)) {
-    tags.push(`
-      <span class="known-tag">
-        <span class="txt">already learned</span>
-        <i class='bx bxs-graduation'></i>
-      </span>`);
-    question.setAttribute("known", true);
-  }
-  if (bank == "AI") {
-    tags.push(`
-      <span class="AI-tag">
-        <span class="txt">AI-generated</span>
-        <i class='bx bxs-bot AI-tag'></i>
-      </span>`);
-    question.setAttribute("AI", true);
-  }
-
   // header
   const questionHeader = document.createElement("div");
   const questionTitleContainter = document.createElement("span");
   const questionTitle = document.createElement("b");
-  const questionTags = document.createElement("span");
+  const learnedTag = document.createElement("span");
   const unsureLabel = document.createElement("label");
   const unsureCheck = document.createElement("input");
   const imNotSure = document.createElement("span");
@@ -122,8 +104,8 @@ function generateQuestion(questionId, questionData, questionIndex) {
   questionHeader.className = "question-header";
   questionTitle.className = "question-title";
   questionTitle.innerText = `Question ${questionIndex + 1}.`;
-  questionTags.className = "question-tags";
-  questionTags.innerHTML = tags.join(`<span class="txt delimiter"> | </span>`);
+  learnedTag.className = "learned-tag";
+  learnedTag.innerText = "already learned";
   unsureLabel.className = "unsure-label";
   unsureCheck.className = "unsure-check";
   imNotSure.className = "im-not-sure";
@@ -136,7 +118,8 @@ function generateQuestion(questionId, questionData, questionIndex) {
   unsureLabel.appendChild(imNotSure);
   unsureLabel.appendChild(showExplanation);
   questionTitleContainter.appendChild(questionTitle);
-  questionTitleContainter.appendChild(questionTags);
+  if (modulesData[module].isLearned(questionId))
+    questionTitleContainter.appendChild(learnedTag);
   questionHeader.appendChild(questionTitleContainter);
   questionHeader.appendChild(unsureLabel);
   question.appendChild(questionHeader);
@@ -267,7 +250,6 @@ function updateAttemptsTable() {
 
       const row = document.createElement("tr");
       const attemptNum = document.createElement("td");
-      const banks = document.createElement("td");
       const modules = document.createElement("td");
       const result = document.createElement("td");
 
@@ -284,9 +266,6 @@ function updateAttemptsTable() {
         }
       });
 
-      banks.className = "banks";
-      banks.innerText = attempt.banks;
-
       modules.className = "modules";
       modules.innerText = attempt.modules;
 
@@ -298,10 +277,8 @@ function updateAttemptsTable() {
       }
 
       row.className = "row";
-      row.setAttribute("banks", attempt.banks);
       row.setAttribute("modules", attempt.modules);
       row.appendChild(attemptNum);
-      row.appendChild(banks);
       row.appendChild(modules);
       row.appendChild(result);
       attemptsTable.querySelector("tbody").appendChild(row);
@@ -316,27 +293,14 @@ function updateCoverage() {
   let coveredTotal = 0;
   let sizeTotal = 0;
 
-  const banks = localStorage.getItem("banks") ?? "LH";
-  const LH = banks.includes("LH");
-  const AI = banks.includes("AI");
-
   // stat for each module
   for (const module of modules.querySelectorAll("li:not(:last-child)")) {
     const moduleNum = module.querySelector("input").id;
     const moduleCoverage = module.querySelector(".coverage");
 
-    let covered = 0;
-    let size = 0;
-    if (LH) {
-      const questions = modulesData.LH[moduleNum];
-      covered += questions.covered.size;
-      size += questions.size;
-    }
-    if (AI) {
-      const questions = modulesData.AI[moduleNum];
-      covered += questions.covered.size;
-      size += questions.size;
-    }
+    const questions = modulesData[moduleNum];
+    const covered = questions.covered.size;
+    const size = questions.size;
     coveredTotal += covered;
     sizeTotal += size;
 

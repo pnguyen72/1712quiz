@@ -65,12 +65,6 @@ table {
       }
     }
 
-    @media (width < 600px) {
-      .banks {
-        display: none;
-      }
-    }
-
     @media (width < 400px) {
       .modules {
         display: none;

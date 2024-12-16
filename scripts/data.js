@@ -9,10 +9,10 @@ const app = firebase.initializeApp({
 const db = firebase.firestore();
 
 let modulesName;
-let modulesData = { LH: {}, AI: {} };
-let storedCoverage = { LH: {}, AI: {} };
+let modulesData = {};
+let modulesCoverage = {};
 if (localStorage.getItem("coverage")) {
-  storedCoverage = JSON.parse(localStorage.getItem("coverage"));
+  modulesCoverage = JSON.parse(localStorage.getItem("coverage"));
 }
 
 function loadData() {
@@ -22,34 +22,20 @@ function loadData() {
 
     const midtermOffset = 1;
     for (let i = 0; i < data.midterm.length; ++i) {
-      const moduleNum = String(i + midtermOffset).padStart(2, "0");
+      const module = String(i + midtermOffset).padStart(2, "0");
       promises.push(
-        _loadQuestions("LH", i + midtermOffset).then(
-          (questions) =>
-            (modulesData.LH[moduleNum] = _data("LH", moduleNum, questions))
-        )
-      );
-      promises.push(
-        _loadQuestions("AI", i + midtermOffset).then(
-          (questions) =>
-            (modulesData.AI[moduleNum] = _data("AI", moduleNum, questions))
+        _loadQuestions(i + midtermOffset).then(
+          (questions) => (modulesData[module] = _data(module, questions))
         )
       );
     }
 
     const finalOffset = 1 + data.midterm.length;
     for (let i = 0; i < data.final.length; ++i) {
-      const moduleNum = String(i + finalOffset).padStart(2, "0");
+      const module = String(i + finalOffset).padStart(2, "0");
       promises.push(
-        _loadQuestions("LH", i + finalOffset).then(
-          (questions) =>
-            (modulesData.LH[moduleNum] = _data("LH", moduleNum, questions))
-        )
-      );
-      promises.push(
-        _loadQuestions("AI", i + finalOffset).then(
-          (questions) =>
-            (modulesData.AI[moduleNum] = _data("AI", moduleNum, questions))
+        _loadQuestions(i + finalOffset).then(
+          (questions) => (modulesData[module] = _data(module, questions))
         )
       );
     }
@@ -58,34 +44,30 @@ function loadData() {
   });
 }
 
-function getQuiz(banks, modules, count) {
-  const selectionSize = {};
-  for (const bank of banks) {
-    for (const module of modules) {
-      let size = modulesData[bank][module].size;
-      if (!knownQuestionsChoice.checked) {
-        size -= modulesData[bank][module].covered.size;
-      }
-      selectionSize[`${bank}.${module}`] = size;
+function getQuiz(modules, count) {
+  const modulesSize = {};
+  for (const module of modules) {
+    let size = modulesData[module].size;
+    if (!learnedQuestionsChoice.checked) {
+      size -= modulesData[module].covered.size;
     }
+    modulesSize[module] = size;
   }
-  const totalSize = sum(Object.values(selectionSize));
+  const totalSize = sum(Object.values(modulesSize));
   count = Math.min(totalSize, count);
 
   let quizData = [];
-  for (const [selection, size] of Object.entries(selectionSize)) {
-    const [bank, module] = selection.split(".");
+  for (const [module, size] of Object.entries(modulesSize)) {
     const getAmount = Math.floor((count * size) / totalSize);
-    const data = modulesData[bank][module].get(getAmount, "beginning");
+    const data = modulesData[module].get(getAmount, "beginning");
     quizData = quizData.concat(data);
   }
 
-  const selections = Object.keys(selectionSize);
+  const selectedModules = Object.keys(modulesSize);
   if (quizData.length < count) {
-    shuffle(selections);
-    for (const selection of selections) {
-      const [bank, module] = selection.split(".");
-      quizData.push(...modulesData[bank][module].get(1, "end"));
+    shuffle(selectedModules);
+    for (const module of selectedModules) {
+      quizData.push(...modulesData[module].get(1, "end"));
       if (quizData.length >= count) break;
     }
   }
@@ -94,20 +76,20 @@ function getQuiz(banks, modules, count) {
   return quizData;
 }
 
-function resolveQuiz(quiz) {
+function learnQuiz(quiz) {
   const learned = quiz.querySelectorAll(".question:not(.wrong-answer)");
   for (const question of learned) {
     const id = question.id;
-    const [bank, module, _] = id.split(".");
-    modulesData[bank][module].resolve(id);
+    const module = id.split(".")[1];
+    modulesData[module].learn(id);
   }
   const mistakes = quiz.querySelectorAll(".question.wrong-answer");
   for (const question of mistakes) {
     const id = question.id;
-    const [bank, module, _] = id.split(".");
-    modulesData[bank][module].unresolve(id);
+    const module = id.split(".")[1];
+    modulesData[module].unlearn(id);
   }
-  localStorage.setItem("coverage", JSON.stringify(storedCoverage));
+  localStorage.setItem("coverage", JSON.stringify(modulesCoverage));
 }
 
 function explain(question) {
@@ -159,21 +141,21 @@ function _loadModules() {
   return fetch("./data/modules.json").then((response) => response.json());
 }
 
-function _loadQuestions(bank, moduleNum) {
-  return fetch(`./data/${bank}/module${moduleNum}.json`).then((response) => {
+function _loadQuestions(module) {
+  return fetch(`./data/modules/module${module}.json`).then((response) => {
     if (!response.ok) return {};
     return response.json();
   });
 }
 
-function _data(bank, moduleNum, questions) {
+function _data(module, questions) {
   return {
     _origin: Object.entries(questions),
     _data: {},
     _pull: function (count) {
       let origin = [...this._origin];
-      if (!knownQuestionsChoice.checked) {
-        origin = origin.filter(([id]) => !this.isKnown(id));
+      if (!learnedQuestionsChoice.checked) {
+        origin = origin.filter(([id]) => !this.isLearned(id));
       }
       shuffle(origin);
 
@@ -198,14 +180,12 @@ function _data(bank, moduleNum, questions) {
         this._pull(count - currentSize);
       }
 
-      // sort entries to show unknown questions first
+      // prioritize unlearned questions
       let entries = Object.entries(this._data);
-      if (knownQuestionsChoice.checked) {
-        entries.sort((entry1, entry2) => {
-          const [id1, id2] = [entry1[0], entry2[0]];
-          return this.isKnown(id1) - this.isKnown(id2);
-        });
-      }
+      entries.sort((entry1, entry2) => {
+        const [id1, id2] = [entry1[0], entry2[0]];
+        return this.isLearned(id1) - this.isLearned(id2);
+      });
 
       // slice
       if (position == "end") {
@@ -214,19 +194,19 @@ function _data(bank, moduleNum, questions) {
         return entries.slice(0, count);
       }
     },
-    resolve: function (questionId) {
+    learn: function (questionId) {
       delete this._data[questionId];
       this.covered.add(questionId);
-      storedCoverage[bank][moduleNum] = Array.from(this.covered);
+      modulesCoverage[module] = Array.from(this.covered);
     },
-    unresolve: function (quesitonId) {
+    unlearn: function (quesitonId) {
       this.covered.delete(quesitonId);
-      storedCoverage[bank][moduleNum] = Array.from(this.covered);
+      modulesCoverage[module] = Array.from(this.covered);
     },
-    isKnown: function (questionId) {
+    isLearned: function (questionId) {
       return this.covered.has(questionId);
     },
     size: Object.keys(questions).length,
-    covered: new Set(storedCoverage[bank][moduleNum] ?? []),
+    covered: new Set(modulesCoverage[module] ?? []),
   };
 }

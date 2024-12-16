@@ -8,17 +8,11 @@ moduleSelection.addEventListener(
   () => (moduleSelection.style.animation = "")
 );
 
-questionBankSelection.addEventListener(
-  "animationend",
-  () => (questionBankSelection.style.animation = "")
-);
-
 form.addEventListener("click", () => {
   if (homePage.querySelector("#license-notice[visible]")) {
     licenseText.style.animation = "blink 1s";
   }
 });
-form.addEventListener("input", filterAttemptsTable);
 
 examSelection.addEventListener("input", () => {
   localStorage.setItem("exam", midtermChoice.checked ? "midterm" : "final");
@@ -35,30 +29,15 @@ examSelection.addEventListener("input", () => {
 });
 moduleSelection.addEventListener("input", () => {
   const modules = getSelectedModules();
-  if (modules.length > 0) {
-    localStorage.setItem("modules", modules.join(" "));
-    for (const bank of ["LH", "AI"]) {
-      const choice = document.getElementById(bank);
-      const size = sum(modules.map((module) => modulesData[bank][module].size));
-      choice.disabled = size == 0;
-      choice.checked =
-        size > 0 && localStorage.getItem("banks")?.includes(bank);
-    }
-  }
+  if (modules.length > 0) localStorage.setItem("modules", modules.join(" "));
   updateCoverage();
-});
-questionBankSelection.addEventListener("input", () => {
-  const banks = getSelectedBanks();
-  if (banks.length > 0) {
-    localStorage.setItem("banks", banks.join(" "));
-  }
-  updateCoverage();
+  filterAttemptsTable();
 });
 questionsCountChoice.addEventListener("input", () => {
   localStorage.setItem("questions", questionsCountChoice.value);
 });
-knownQuestionsChoice.addEventListener("input", () => {
-  localStorage.setItem("knownQuestions", knownQuestionsChoice.checked);
+learnedQuestionsChoice.addEventListener("input", () => {
+  localStorage.setItem("learnedQuestions", learnedQuestionsChoice.checked);
 });
 explainChoice.addEventListener("input", () => {
   localStorage.setItem("explain", explainChoice.checked);

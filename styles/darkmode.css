@@ -32,7 +32,6 @@ select {
 }
 
 #coverage,
-.question-tags,
 .unsure-label {
   color: hsl(0, 0%, 70%) !important;
 }
