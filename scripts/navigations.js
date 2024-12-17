@@ -32,12 +32,13 @@ function licenseUnlock() {
   unhide(navbar);
 }
 
-function licenseGrantException(text) {
+function licenseGrantException(prompt) {
   if (localStorage.getItem("licenseException")) return;
 
-  text =
-    (text ?? "") + "\nYou don't have to wear a Hawaiian shirt to the exam.";
-  alert(text);
+  let alertText = "You don't have to wear a Hawaiian shirt to the exam.";
+  if (prompt) alertText = `${prompt}\n${alertText}`;
+
+  alert(alertText);
   licenseUnlock();
   localStorage.setItem("licenseException", true);
 }
