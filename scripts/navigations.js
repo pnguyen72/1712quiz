@@ -44,7 +44,7 @@ function licenseGrantException(prompt) {
 }
 
 function initalizeSelections() {
-  const exam = localStorage.getItem("exam") ?? "final";
+  const exam = localStorage.getItem("exam") ?? "midterm";
   document.getElementById(exam).click();
 
   const questionsCount = localStorage.getItem("questions");
