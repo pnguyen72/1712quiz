@@ -5,11 +5,16 @@
     margin-bottom: 1.25rem;
   }
 
-  label:has(input:disabled, select:disabled) span {
+  label:has(input:disabled) span {
     color: gray;
   }
 
-  #module-selection-container {
+  ul {
+    margin: 0.5rem 0;
+    padding-inline-start: 1.25rem;
+  }
+
+  #module-selection {
     #coverage {
       color: gray;
     }
@@ -23,7 +28,6 @@
     #modules-header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
     }
 
     li {
@@ -38,13 +42,7 @@
     }
   }
 
-  #exam-selection {
-    display: flex;
-    margin-top: 0.75rem;
-    margin-bottom: 0;
-  }
-
-  #options:not(:has([visible])) {
+  #other-options:not(:has([visible])) {
     display: none;
   }
 }

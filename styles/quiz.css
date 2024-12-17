@@ -49,6 +49,11 @@
     }
   }
 
+  ul {
+    margin: 0.75rem 0;
+    padding-inline-start: 1.5rem;
+  }
+
   .explanation-container {
     display: none;
     margin-left: 2rem;

@@ -48,28 +48,29 @@
       <div id="main">
         <form id="form">
           <h1>1712 Practice Quiz</h1>
-          <div id="module-selection-container">
-            <span>Modules:</span>
+          <div id="exam-selection">
+            <div>Exam:</div>
+            <ul>
+              <li>
+                <label>
+                  <input id="midterm" type="radio" name="module-group" />
+                  <span>Midterm</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input id="final" type="radio" name="module-group" />
+                  <span>Final</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div id="module-selection">
             <div id="modules-header">
-              <ul id="exam-selection">
-                <li>
-                  <label>
-                    <input id="midterm" type="radio" name="module-group" />
-                    <span>Midterm</span>
-                  </label>
-                </li>
-                <li>
-                  <label>
-                    <input id="final" type="radio" name="module-group" />
-                    <span>Final</span>
-                  </label>
-                </li>
-              </ul>
+              <span>Modules:</span>
               <span id="coverage" class="coverage">coverage</span>
             </div>
-            <div id="module-selection">
-              <ul id="modules-list"></ul>
-            </div>
+            <ul id="modules-list"></ul>
           </div>
           <div>
             <label>
@@ -83,7 +84,7 @@
               </select>
             </label>
           </div>
-          <div id="options">
+          <div id="other-options">
             <span>Other options:</span>
             <ul>
               <li id="learned-questions-selection" style="display: none">
