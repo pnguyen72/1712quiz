@@ -39,32 +39,26 @@ function generateModuleSelection() {
     modulesList.appendChild(module);
   });
 
-  if (modulesData.length < 2) {
-    modulesSelectBoxes[0].checked = true;
-  } else {
-    const module = document.createElement("li");
-    const moduleLabel = document.createElement("label");
-    const moduleSelectBox = document.createElement("input");
-    const moduleTitle = document.createElement("span");
-    const moduleCoverage = document.createElement("span");
+  const module = document.createElement("li");
+  const moduleLabel = document.createElement("label");
+  const moduleSelectBox = document.createElement("input");
+  const moduleTitle = document.createElement("span");
+  const moduleCoverage = document.createElement("span");
 
-    moduleTitle.innerText = "All of them!";
-    moduleTitle.style.fontWeight = "bold";
-    moduleCoverage.className = "coverage";
-    moduleSelectBox.type = "checkbox";
-    moduleSelectBox.id = "module-all";
-    moduleSelectBox.addEventListener("click", () =>
-      modulesSelectBoxes.forEach(
-        (box) => (box.checked = moduleSelectBox.checked)
-      )
-    );
+  moduleTitle.innerText = "All of them!";
+  moduleTitle.style.fontWeight = "bold";
+  moduleCoverage.className = "coverage";
+  moduleSelectBox.type = "checkbox";
+  moduleSelectBox.id = "module-all";
+  moduleSelectBox.addEventListener("click", () =>
+    modulesSelectBoxes.forEach((box) => (box.checked = moduleSelectBox.checked))
+  );
 
-    moduleLabel.appendChild(moduleSelectBox);
-    moduleLabel.appendChild(moduleTitle);
-    module.appendChild(moduleLabel);
-    module.appendChild(moduleCoverage);
-    modulesList.appendChild(module);
-  }
+  moduleLabel.appendChild(moduleSelectBox);
+  moduleLabel.appendChild(moduleTitle);
+  module.appendChild(moduleLabel);
+  module.appendChild(moduleCoverage);
+  modulesList.appendChild(module);
 
   updateCoverage();
 }
