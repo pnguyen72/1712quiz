@@ -4,6 +4,10 @@
     #attempts-table-container {
       display: none;
     }
+
+    form > h1 > br {
+      display: initial;
+    }
   }
 
   & > h1 {

@@ -1,48 +1,63 @@
-#home-page form {
-  max-width: 450px;
-
-  > div {
-    margin-bottom: 1.25rem;
+#home-page {
+  h1 {
+    font-size: 2rem;
+    @media (width < 600px) {
+      font-size: 1.75rem;
+    }
+    margin-top: 1rem;
+    margin-bottom: 2rem;
   }
 
-  label:has(input:disabled) span {
-    color: gray;
-  }
+  form {
+    max-width: 450px;
 
-  ul {
-    margin: 0.5rem 0;
-    padding-inline-start: 1.25rem;
-  }
+    h1 > br {
+      display: none;
+    }
 
-  #module-selection {
-    #coverage {
+    > div {
+      margin-bottom: 1.25rem;
+    }
+
+    label:has(input:disabled) span {
       color: gray;
     }
 
-    &:not(:has(.coverage[visible])) {
+    ul {
+      margin: 0.5rem 0;
+      padding-inline-start: 1.25rem;
+    }
+
+    #module-selection {
       #coverage {
-        display: none;
+        color: gray;
+      }
+
+      &:not(:has(.coverage[visible])) {
+        #coverage {
+          display: none;
+        }
+      }
+
+      #modules-header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      li {
+        display: flex;
+        justify-content: space-between;
+
+        .coverage {
+          margin-left: 0.5rem;
+          border-radius: 20%;
+          padding: 0 0.2rem;
+        }
       }
     }
 
-    #modules-header {
-      display: flex;
-      justify-content: space-between;
+    #other-options:not(:has([visible])) {
+      display: none;
     }
-
-    li {
-      display: flex;
-      justify-content: space-between;
-
-      .coverage {
-        margin-left: 0.5rem;
-        border-radius: 20%;
-        padding: 0 0.2rem;
-      }
-    }
-  }
-
-  #other-options:not(:has([visible])) {
-    display: none;
   }
 }
