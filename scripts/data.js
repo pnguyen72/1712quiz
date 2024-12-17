@@ -19,13 +19,8 @@ function loadData() {
   return _loadModulesName().then((modules) => {
     modulesName = modules;
     const promises = [];
-    const midtermOffset = 1;
-    for (let i = 0; i < modules.midterm.length; ++i) {
-      promises.push(_loadModule(String(i + midtermOffset).padStart(2, "0")));
-    }
-    const finalOffset = 1 + modules.midterm.length;
-    for (let i = 0; i < modules.final.length; ++i) {
-      promises.push(_loadModule(String(i + finalOffset).padStart(2, "0")));
+    for (let i = 1; i <= modules.midterm.length + modules.final.length; ++i) {
+      promises.push(_loadModule(String(i).padStart(2, "0")));
     }
     return Promise.all(promises);
   });
