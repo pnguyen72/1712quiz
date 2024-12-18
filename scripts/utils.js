@@ -10,18 +10,11 @@ function isNumber(object) {
   return !isNaN(object);
 }
 
-function arrange(choices) {
-  const firstChoice = choices[0];
-  const firstChoiceText = firstChoice[0];
-
-  if (firstChoiceText == "True") {
+function shuffleChoices(choices) {
+  if (choices[0][1].choice == "True") {
     return;
   }
-  if (firstChoiceText == "False") {
-    [choices[0], choices[1]] = [choices[1], choices[0]];
-    return;
-  }
-  if (choices.every((choice) => isNumber(choice[0]))) {
+  if (choices.every((choiceData) => isNumber(choiceData[1].choice))) {
     return;
   }
   shuffle(choices);

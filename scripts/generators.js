@@ -78,8 +78,8 @@ function generateQuestion(questionId, questionData, questionIndex) {
   const questionText = questionData.question;
   const hasImage = questionData.hasImage;
   const isMultiSelect = questionData.multiSelect;
-  const choicesData = Object.entries(questionData.choices);
-  arrange(choicesData);
+  const choices = Object.entries(questionData.choices);
+  shuffleChoices(choices);
 
   const question = document.createElement("div");
   question.id = questionId;
@@ -136,19 +136,18 @@ function generateQuestion(questionId, questionData, questionIndex) {
   // choices
   const questionChoices = document.createElement("ul");
   questionChoices.className = "question-choices";
-  choicesData.forEach((choiceData) => {
-    const [text, isCorrect] = choiceData;
-
+  choices.forEach(([choiceId, choiceData]) => {
     const choice = document.createElement("li");
     const choiceLabel = document.createElement("label");
     const choiceInput = document.createElement("input");
     const choiceText = document.createElement("span");
 
-    choice.className = isCorrect ? "correct" : "incorrect";
+    choice.className = choiceData.isCorrect ? "correct" : "incorrect";
+    choiceInput.id = choiceId;
     choiceInput.className = "choice-input";
     choiceInput.type = isMultiSelect ? "checkbox" : "radio";
-    choiceInput.name = `Q${questionIndex + 1}`;
-    choiceText.innerHTML = text;
+    choiceInput.name = questionId;
+    choiceText.innerHTML = choiceData.choice;
 
     choiceLabel.appendChild(choiceInput);
     choiceLabel.appendChild(choiceText);
