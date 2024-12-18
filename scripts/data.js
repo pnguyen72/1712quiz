@@ -26,6 +26,11 @@ function loadData() {
   });
 }
 
+function getQuestion(id) {
+  const module = id.split(".")[0];
+  return modulesData[module].questions[id];
+}
+
 function getQuiz(modules, count) {
   const modulesSize = {};
   for (const module of modules) {

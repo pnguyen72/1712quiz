@@ -146,5 +146,5 @@ function submit() {
   showResult(correctAnswers, questions.length);
   learnQuiz(quiz);
   clearInterval(quizTimer);
-  updatePastAttempts(correctAnswers, questions.length);
+  updatePastAttempts(correctAnswers, questions);
 }

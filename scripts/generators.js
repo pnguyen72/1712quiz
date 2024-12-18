@@ -73,6 +73,30 @@ function generateQuiz(quizData) {
   return setupQuiz(quiz);
 }
 
+function generateAttempt(attemptData) {
+  const quiz = document.createElement("div");
+  quiz.id = "quiz";
+  quiz.setAttribute("submitted", true);
+  Object.entries(attemptData).forEach(([questionId, choices], index) => {
+    const questionData = getQuestion(questionId);
+    const question = generateQuestion(questionId, questionData, index);
+    quiz.appendChild(question);
+    Object.entries(choices).forEach(([choiceId, isChecked]) => {
+      const input = question.querySelector(`#${choiceId}`);
+      input.checked = isChecked;
+      input.disabled = true;
+    });
+  });
+  setupQuiz(quiz);
+  for (const learnedTag of quiz.querySelectorAll(".learned-tag")) {
+    learnedTag.remove();
+  }
+  for (const input of quiz.querySelectorAll(".choice-input"))
+    input.disabled = true;
+  grade(quiz.querySelectorAll(".question"));
+  return quiz;
+}
+
 function generateQuestion(questionId, questionData, questionIndex) {
   const module = questionId.split(".")[0];
   const questionText = questionData.question;
@@ -143,7 +167,7 @@ function generateQuestion(questionId, questionData, questionIndex) {
     const choiceText = document.createElement("span");
 
     choice.className = choiceData.isCorrect ? "correct" : "incorrect";
-    choiceInput.id = choiceId;
+    choiceInput.id = `C${choiceId.replaceAll(".", "_")}`;
     choiceInput.className = "choice-input";
     choiceInput.type = isMultiSelect ? "checkbox" : "radio";
     choiceInput.name = questionId;
@@ -250,13 +274,11 @@ function updateAttemptsTable() {
       attemptNum.innerText = tableRows.length + index + 1;
       attemptNum.addEventListener("click", () => {
         toQuizPage();
-        document.getElementById("quiz").outerHTML = attempt.quiz;
-        setupQuiz(document.getElementById("quiz"));
+        document
+          .getElementById("quiz")
+          .replaceWith(generateAttempt(attempt.data));
         showResult(score, outOf);
         navText.innerText = `Attempt ${attemptNum.innerText}`;
-        for (question of quizPage.querySelectorAll(".wrong-answer,.unsure")) {
-          explain(question);
-        }
       });
 
       modules.className = "modules";

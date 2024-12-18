@@ -91,15 +91,22 @@ function grade(questions) {
   return correctAnswers;
 }
 
-function updatePastAttempts(correctAnswers, outOf) {
-  const quiz = document.getElementById("quiz");
+function updatePastAttempts(correctAnswers, questions) {
+  const attemptData = {};
+  for (const question of questions) {
+    const questionData = {};
+    for (const choice of question.querySelectorAll(".choice-input")) {
+      questionData[choice.id] = choice.checked;
+    }
+    attemptData[question.id] = questionData;
+  }
   pastAttempts.push({
-    quiz: quiz.outerHTML,
+    data: attemptData,
     modules: getSelectedModules()
       .map((x) => parseInt(x))
       .join(", "),
     score: correctAnswers,
-    outOf: outOf,
+    outOf: questions.length,
   });
   localStorage.setItem("pastAttempts", JSON.stringify(pastAttempts));
 }
