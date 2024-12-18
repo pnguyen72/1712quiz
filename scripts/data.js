@@ -20,7 +20,7 @@ function loadData() {
     modulesName = modules;
     const promises = [];
     for (let i = 1; i <= modules.midterm.length + modules.final.length; ++i) {
-      promises.push(_loadModule(String(i).padStart(2, "0")))
+      promises.push(_loadModule(String(i).padStart(2, "0")));
     }
     return Promise.all(promises);
   });
@@ -40,22 +40,13 @@ function getQuiz(modules, count) {
 
   let quizData = [];
   for (const [module, size] of Object.entries(modulesSize)) {
-    const getAmount = Math.floor((count * size) / totalSize);
+    const getAmount = Math.ceil((count * size) / totalSize);
     const data = modulesData[module].get(getAmount, "beginning");
     quizData = quizData.concat(data);
   }
 
-  const selectedModules = Object.keys(modulesSize);
-  if (quizData.length < count) {
-    shuffle(selectedModules);
-    for (const module of selectedModules) {
-      quizData.push(...modulesData[module].get(1, "end"));
-      if (quizData.length >= count) break;
-    }
-  }
-
   shuffle(quizData);
-  return quizData;
+  return quizData.slice(-count);
 }
 
 function learnQuiz(quiz) {
@@ -134,10 +125,10 @@ function _loadModule(module) {
 
 function _data(module, questions) {
   return {
-    _origin: Object.entries(questions),
+    questions: questions,
     _data: {},
     _pull: function (count) {
-      let origin = [...this._origin];
+      let origin = Object.entries(questions);
       if (!learnedQuestionsChoice.checked) {
         origin = origin.filter(([id]) => !this.isLearned(id));
       }
@@ -155,7 +146,7 @@ function _data(module, questions) {
         }
       }
     },
-    get: function (count, position) {
+    get: function (count) {
       // pull data from origin if there's not enough
       const currentSize = Object.keys(this._data).length;
       if (currentSize == 0) {
@@ -168,15 +159,11 @@ function _data(module, questions) {
       let entries = Object.entries(this._data);
       entries.sort((entry1, entry2) => {
         const [id1, id2] = [entry1[0], entry2[0]];
-        return this.isLearned(id1) - this.isLearned(id2);
+        return this.isLearned(id2) - this.isLearned(id1);
       });
 
       // slice
-      if (position == "end") {
-        return entries.slice(-count);
-      } else {
-        return entries.slice(0, count);
-      }
+      return entries.slice(-count);
     },
     learn: function (questionId) {
       delete this._data[questionId];
