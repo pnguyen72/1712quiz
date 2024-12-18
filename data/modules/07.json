@@ -1,360 +1,360 @@
 {
-  "07.01": {
+  "07_01": {
     "question": "What is true about creating an entity relationship diagram?",
     "choices": {
-      "07.01.A": {
+      "A_07_01": {
         "choice": "There will be at most seven entities",
         "isCorrect": false
       },
-      "07.01.B": {
+      "B_07_01": {
         "choice": "It is an iterative process",
         "isCorrect": true
       },
-      "07.01.C": {
+      "C_07_01": {
         "choice": "If you identify more than seven entities, analyze and combine until you have seven or less",
         "isCorrect": false
       },
-      "07.01.D": {
+      "D_07_01": {
         "choice": "There will be at most seven relationships",
         "isCorrect": false
       },
-      "07.01.E": {
+      "E_07_01": {
         "choice": "Entities will have at most seven attributes",
         "isCorrect": false
       }
     }
   },
-  "07.02": {
+  "07_02": {
     "question": "Select all that applies to various normal forms:",
     "choices": {
-      "07.02.A": {
+      "A_07_02": {
         "choice": "A table in 3NF is also in 2NF",
         "isCorrect": true
       },
-      "07.02.B": {
+      "B_07_02": {
         "choice": "A table in 3NF is also in 1NF.",
         "isCorrect": true
       },
-      "07.02.C": {
+      "C_07_02": {
         "choice": "A table in 2NF is also in 1NF.",
         "isCorrect": true
       }
     },
     "multiSelect": true
   },
-  "07.03": {
+  "07_03": {
     "question": "Relational tables that have a single-attribute PK, are immediately in 2NF.",
     "choices": {
-      "07.03.A": {
+      "A_07_03": {
         "choice": "True",
         "isCorrect": true
       },
-      "07.03.B": {
+      "B_07_03": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "07.04": {
+  "07_04": {
     "question": "Some redundancies in a relational DB are necessary.",
     "choices": {
-      "07.04.A": {
+      "A_07_04": {
         "choice": "True",
         "isCorrect": true
       },
-      "07.04.B": {
+      "B_07_04": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "07.05": {
+  "07_05": {
     "question": "Once we have an ERD, we can be sure we have a good database structure.",
     "choices": {
-      "07.05.A": {
+      "A_07_05": {
         "choice": "True",
         "isCorrect": false
       },
-      "07.05.B": {
+      "B_07_05": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "07.06": {
+  "07_06": {
     "question": "The following table is _____",
     "hasImage": true,
     "choices": {
-      "07.06.A": {
+      "A_07_06": {
         "choice": "not a relational table",
         "isCorrect": true
       },
-      "07.06.B": {
+      "B_07_06": {
         "choice": "a relational table in 3NF",
         "isCorrect": false
       },
-      "07.06.C": {
+      "C_07_06": {
         "choice": "a relational table that is only 1NF",
         "isCorrect": false
       },
-      "07.06.D": {
+      "D_07_06": {
         "choice": "a relational table in 2NF",
         "isCorrect": false
       }
     }
   },
-  "07.07": {
+  "07_07": {
     "question": "Foreign keys in a relational DB are an example of _____",
     "choices": {
-      "07.07.A": {
+      "A_07_07": {
         "choice": "unwanted/unnecessary redundancy",
         "isCorrect": false
       },
-      "07.07.B": {
+      "B_07_07": {
         "choice": "FKs are not redundancy at all",
         "isCorrect": false
       },
-      "07.07.C": {
+      "C_07_07": {
         "choice": "necessary redundancy",
         "isCorrect": true
       }
     }
   },
-  "07.08": {
+  "07_08": {
     "question": "Partial dependency is a form of functional dependency.",
     "choices": {
-      "07.08.A": {
+      "A_07_08": {
         "choice": "True",
         "isCorrect": true
       },
-      "07.08.B": {
+      "B_07_08": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "07.09": {
+  "07_09": {
     "question": "Our goal with normalization is to completely eliminate redundancy.",
     "choices": {
-      "07.09.A": {
+      "A_07_09": {
         "choice": "True",
         "isCorrect": false
       },
-      "07.09.B": {
+      "B_07_09": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "07.10": {
+  "07_10": {
     "question": "Balance occurs between DFDs and ERDs when the data stores _____",
     "choices": {
-      "07.10.A": {
+      "A_07_10": {
         "choice": "Can be equated to entities on the ERD and when entities are referred to by data stores on the DFD",
         "isCorrect": true
       },
-      "07.10.B": {
+      "B_07_10": {
         "choice": "Are uniquely named",
         "isCorrect": false
       },
-      "07.10.C": {
+      "C_07_10": {
         "choice": "Have only one input and one output flow",
         "isCorrect": false
       },
-      "07.10.D": {
+      "D_07_10": {
         "choice": "Are named the same as the relationships on the ERD",
         "isCorrect": false
       },
-      "07.10.E": {
+      "E_07_10": {
         "choice": "Can be compared to ERD data flows and attributes on the ERD are included in data stores on the DFD",
         "isCorrect": false
       }
     }
   },
-  "07.11": {
+  "07_11": {
     "question": "The following table is in 1NF. If we normalize this table to 2NF, how many tables in total would exist in our relational DB after normalizing to 2NF?",
     "hasImage": true,
     "choices": {
-      "07.11.A": {
+      "A_07_11": {
         "choice": "1",
         "isCorrect": false
       },
-      "07.11.B": {
+      "B_07_11": {
         "choice": "2",
         "isCorrect": false
       },
-      "07.11.C": {
+      "C_07_11": {
         "choice": "3",
         "isCorrect": true
       },
-      "07.11.D": {
+      "D_07_11": {
         "choice": "4",
         "isCorrect": false
       }
     }
   },
-  "07.12": {
+  "07_12": {
     "question": "Omar has a model with 85 entities. He can do which of the following?",
     "choices": {
-      "07.12.A": {
+      "A_07_12": {
         "choice": "Stop – he has all entities defined",
         "isCorrect": false
       },
-      "07.12.B": {
+      "B_07_12": {
         "choice": "Co-validate the entities with the level 2 DFD diagrams",
         "isCorrect": false
       },
-      "07.12.C": {
+      "C_07_12": {
         "choice": "Compress these into at most seven entity grouping units",
         "isCorrect": false
       },
-      "07.12.D": {
+      "D_07_12": {
         "choice": "Sort the entities alphabetically",
         "isCorrect": false
       },
-      "07.12.E": {
+      "E_07_12": {
         "choice": "Group these into related subject areas",
         "isCorrect": true
       }
     }
   },
-  "07.13": {
+  "07_13": {
     "question": "In a functional dependence, the determinant is always a single attribute.",
     "choices": {
-      "07.13.A": {
+      "A_07_13": {
         "choice": "True",
         "isCorrect": false
       },
-      "07.13.B": {
+      "B_07_13": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "07.14": {
+  "07_14": {
     "question": "In a functional dependence, the dependent is always a single attribute.",
     "choices": {
-      "07.14.A": {
+      "A_07_14": {
         "choice": "True",
         "isCorrect": false
       },
-      "07.14.B": {
+      "B_07_14": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "07.15": {
+  "07_15": {
     "question": "CRUD stands for create, read, update and delete and can be used to verify DFDs and ERDs.",
     "choices": {
-      "07.15.A": {
+      "A_07_15": {
         "choice": "True",
         "isCorrect": true
       },
-      "07.15.B": {
+      "B_07_15": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "07.16": {
+  "07_16": {
     "question": "A transitive dependency is a form of partial dependency.",
     "choices": {
-      "07.16.A": {
+      "A_07_16": {
         "choice": "True",
         "isCorrect": false
       },
-      "07.16.B": {
+      "B_07_16": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "07.17": {
+  "07_17": {
     "question": "The following table is in 1NF. If we normalize this table to 2NF, how many tables in total would exist in the resulting DB?",
     "hasImage": true,
     "choices": {
-      "07.17.A": {
+      "A_07_17": {
         "choice": "1",
         "isCorrect": false
       },
-      "07.17.B": {
+      "B_07_17": {
         "choice": "2",
         "isCorrect": false
       },
-      "07.17.C": {
+      "C_07_17": {
         "choice": "3",
         "isCorrect": true
       },
-      "07.17.D": {
+      "D_07_17": {
         "choice": "4",
         "isCorrect": false
       }
     }
   },
-  "07.18": {
+  "07_18": {
     "question": "How many non-prime attributes do you see in the following dependency diagram?",
     "hasImage": true,
     "choices": {
-      "07.18.A": {
+      "A_07_18": {
         "choice": "2",
         "isCorrect": false
       },
-      "07.18.B": {
+      "B_07_18": {
         "choice": "3",
         "isCorrect": false
       },
-      "07.18.C": {
+      "C_07_18": {
         "choice": "4",
         "isCorrect": false
       },
-      "07.18.D": {
+      "D_07_18": {
         "choice": "5",
         "isCorrect": true
       }
     }
   },
-  "07.19": {
+  "07_19": {
     "question": "Andrew, an analyst for PaxMedia Inc., has just learned that the business rules for a system he has been working on have changed. This means what?",
     "choices": {
-      "07.19.A": {
+      "A_07_19": {
         "choice": "Andrew will be reassigned to a different project that is in its beginning stages",
         "isCorrect": false
       },
-      "07.19.B": {
+      "B_07_19": {
         "choice": "The project will have to be scrapped and restarted",
         "isCorrect": false
       },
-      "07.19.C": {
+      "C_07_19": {
         "choice": "The ERD data model will have to be put on hold while new DFD diagrams are created",
         "isCorrect": false
       },
-      "07.19.D": {
+      "D_07_19": {
         "choice": "The ERD components will have to be changed",
         "isCorrect": true
       },
-      "07.19.E": {
+      "E_07_19": {
         "choice": "Nothing – once the ERD data models have been drawn, they are 'frozen' for the system",
         "isCorrect": false
       }
     }
   },
-  "07.20": {
+  "07_20": {
     "question": "In a relational table, when we say attribute A functionally defines attribute B (A --> B) , it means that:",
     "choices": {
-      "07.20.A": {
+      "A_07_20": {
         "choice": "A and B must both be part of the PK.",
         "isCorrect": false
       },
-      "07.20.B": {
+      "B_07_20": {
         "choice": "there is only one value of B for any given value of A.",
         "isCorrect": true
       },
-      "07.20.C": {
+      "C_07_20": {
         "choice": "A and B must not be part of the PK.",
         "isCorrect": false
       },
-      "07.20.D": {
+      "D_07_20": {
         "choice": "there is only one value of A for any given value of B.",
         "isCorrect": false
       }

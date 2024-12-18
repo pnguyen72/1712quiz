@@ -1,1274 +1,1274 @@
 {
-  "02.01": {
+  "02_01": {
     "question": "The V-model pays more explicit attention to ___________:",
     "choices": {
-      "02.01.A": {
+      "A_02_01": {
         "choice": "Testing",
         "isCorrect": true
       },
-      "02.01.B": {
+      "B_02_01": {
         "choice": "Iteration",
         "isCorrect": false
       },
-      "02.01.C": {
+      "C_02_01": {
         "choice": "Prototyping",
         "isCorrect": false
       },
-      "02.01.D": {
+      "D_02_01": {
         "choice": "Business Value (the \"V\")",
         "isCorrect": false
       },
-      "02.01.E": {
+      "E_02_01": {
         "choice": "Return on investment (ROI)",
         "isCorrect": false
       }
     }
   },
-  "02.02": {
+  "02_02": {
     "question": "Bob is selecting a systems analysis and design methodology. What might be the first step?",
     "choices": {
-      "02.02.A": {
+      "A_02_02": {
         "choice": "Selecting the shortest methodology",
         "isCorrect": false
       },
-      "02.02.B": {
+      "B_02_02": {
         "choice": "Researching the organizations standards and policies for 'approved' methodologies",
         "isCorrect": true
       },
-      "02.02.C": {
+      "C_02_02": {
         "choice": "Do a quick 'cost/benefit' analysis on which methodology will provide the most benefits at the lowest cost",
         "isCorrect": false
       },
-      "02.02.D": {
+      "D_02_02": {
         "choice": "Do an analysis on which methodology might lessen or eliminate scope creep",
         "isCorrect": false
       },
-      "02.02.E": {
+      "E_02_02": {
         "choice": "Interviewing senior management as to their suggestions on methodologies",
         "isCorrect": false
       }
     }
   },
-  "02.03": {
+  "02_03": {
     "question": "Most IT departments face a demand for IT projects that far exceed the ability to do them.",
     "choices": {
-      "02.03.A": {
+      "A_02_03": {
         "choice": "True",
         "isCorrect": true
       },
-      "02.03.B": {
+      "B_02_03": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "02.04": {
+  "02_04": {
     "question": "The project methodology that takes the longest to complete is Extreme Programming Methodology.",
     "choices": {
-      "02.04.A": {
+      "A_02_04": {
         "choice": "True",
         "isCorrect": false
       },
-      "02.04.B": {
+      "B_02_04": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "02.05": {
+  "02_05": {
     "question": "The most common reason for schedule and cost overruns is what?",
     "choices": {
-      "02.05.A": {
+      "A_02_05": {
         "choice": "Adding people to a late project",
         "isCorrect": false
       },
-      "02.05.B": {
+      "B_02_05": {
         "choice": "Team conflict",
         "isCorrect": false
       },
-      "02.05.C": {
+      "C_02_05": {
         "choice": "Lack of communication from project manager to project team",
         "isCorrect": false
       },
-      "02.05.D": {
+      "D_02_05": {
         "choice": "Lack of support by sponsor and champion",
         "isCorrect": false
       },
-      "02.05.E": {
+      "E_02_05": {
         "choice": "Scope creep",
         "isCorrect": true
       }
     }
   },
-  "02.06": {
+  "02_06": {
     "question": "System prototyping is BEST characterized as:",
     "choices": {
-      "02.06.A": {
+      "A_02_06": {
         "choice": "More explicit testing",
         "isCorrect": false
       },
-      "02.06.B": {
+      "B_02_06": {
         "choice": "A method for exploring design alternatives",
         "isCorrect": false
       },
-      "02.06.C": {
+      "C_02_06": {
         "choice": "A 'Quick and Dirty' system",
         "isCorrect": true
       },
-      "02.06.D": {
+      "D_02_06": {
         "choice": "A method for stressing customer satisfaction",
         "isCorrect": false
       },
-      "02.06.E": {
+      "E_02_06": {
         "choice": "A series of versions",
         "isCorrect": false
       }
     }
   },
-  "02.07": {
+  "02_07": {
     "question": "Scrum, XP and Dynamic systems development method (DSDM) are all classified as 'agile development' concepts.",
     "choices": {
-      "02.07.A": {
+      "A_02_07": {
         "choice": "True",
         "isCorrect": true
       },
-      "02.07.B": {
+      "B_02_07": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "02.08": {
+  "02_08": {
     "question": "Project teams of 12 to 15 are generally considered optimum",
     "choices": {
-      "02.08.A": {
+      "A_02_08": {
         "choice": "True",
         "isCorrect": false
       },
-      "02.08.B": {
+      "B_02_08": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "02.09": {
+  "02_09": {
     "question": "Which of the following methodologies might be most appropriate if you have a system project with: clear requirements; very familiar technologies; not all that complex; must be reliable; a somewhat longer schedule and the schedule visibility is not important?",
     "choices": {
-      "02.09.A": {
+      "A_02_09": {
         "choice": "Iterative",
         "isCorrect": false
       },
-      "02.09.B": {
+      "B_02_09": {
         "choice": "V-model",
         "isCorrect": true
       },
-      "02.09.C": {
+      "C_02_09": {
         "choice": "Waterfall",
         "isCorrect": false
       },
-      "02.09.D": {
+      "D_02_09": {
         "choice": "Parallel",
         "isCorrect": false
       },
-      "02.09.E": {
+      "E_02_09": {
         "choice": "System prototyping",
         "isCorrect": false
       }
     }
   },
-  "02.10": {
+  "02_10": {
     "question": "If the skills required by a project cannot be met by the available project team, which would probably NOT be a reasonable solution?",
     "choices": {
-      "02.10.A": {
+      "A_02_10": {
         "choice": "Mentor a team member (like sending a person to work on a similar project to acquire the necessary skills)",
         "isCorrect": false
       },
-      "02.10.B": {
+      "B_02_10": {
         "choice": "Use a contract employee",
         "isCorrect": false
       },
-      "02.10.C": {
+      "C_02_10": {
         "choice": "Use a consultant",
         "isCorrect": false
       },
-      "02.10.D": {
+      "D_02_10": {
         "choice": "Modify the project to use skills inherent on the project team",
         "isCorrect": true
       },
-      "02.10.E": {
+      "E_02_10": {
         "choice": "Train the project team (or some of the team) on the skills needed",
         "isCorrect": false
       }
     }
   },
-  "02.11": {
+  "02_11": {
     "question": "A critical success factor in project management is to do which of the following?",
     "choices": {
-      "02.11.A": {
+      "A_02_11": {
         "choice": "Use a CASE tool to delineate requirements from work tasks",
         "isCorrect": false
       },
-      "02.11.B": {
+      "B_02_11": {
         "choice": "Say \"no\" to all requests as they add to 'scope creep'",
         "isCorrect": false
       },
-      "02.11.C": {
+      "C_02_11": {
         "choice": "Hire an outside project management consulting group",
         "isCorrect": false
       },
-      "02.11.D": {
+      "D_02_11": {
         "choice": "Use throwaway prototyping",
         "isCorrect": false
       },
-      "02.11.E": {
+      "E_02_11": {
         "choice": "Start with a realistic assessment of the work that needs to be done",
         "isCorrect": true
       }
     }
   },
-  "02.12": {
+  "02_12": {
     "question": "Throwaway prototyping is BEST characterized as:",
     "choices": {
-      "02.12.A": {
+      "A_02_12": {
         "choice": "A method for exploring design alternatives",
         "isCorrect": true
       },
-      "02.12.B": {
+      "B_02_12": {
         "choice": "More explicit testing",
         "isCorrect": false
       },
-      "02.12.C": {
+      "C_02_12": {
         "choice": "A 'quick and dirty' system",
         "isCorrect": false
       },
-      "02.12.D": {
+      "D_02_12": {
         "choice": "A series of versions",
         "isCorrect": false
       },
-      "02.12.E": {
+      "E_02_12": {
         "choice": "A method for stressing customer satisfaction",
         "isCorrect": false
       }
     }
   },
-  "02.13": {
+  "02_13": {
     "question": "Agile development is a group of programming-centric methodologies that focus on which of the following?",
     "choices": {
-      "02.13.A": {
+      "A_02_13": {
         "choice": "Working with a highly controversial project that may have political implications",
         "isCorrect": false
       },
-      "02.13.B": {
+      "B_02_13": {
         "choice": "Making assignments for a project",
         "isCorrect": false
       },
-      "02.13.C": {
+      "C_02_13": {
         "choice": "Creating the system proposal",
         "isCorrect": false
       },
-      "02.13.D": {
+      "D_02_13": {
         "choice": "Creating a cost/benefit spreadsheet",
         "isCorrect": false
       },
-      "02.13.E": {
+      "E_02_13": {
         "choice": "Streamlining the SDLC",
         "isCorrect": true
       }
     }
   },
-  "02.14": {
+  "02_14": {
     "question": "Scope creep happens when new requirements are added to the project after the original project scope was defined.",
     "choices": {
-      "02.14.A": {
+      "A_02_14": {
         "choice": "True",
         "isCorrect": true
       },
-      "02.14.B": {
+      "B_02_14": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "02.15": {
+  "02_15": {
     "question": "Which of the following might result in version 1; version 2 (etc.) of a system?",
     "choices": {
-      "02.15.A": {
+      "A_02_15": {
         "choice": "System Prototyping",
         "isCorrect": false
       },
-      "02.15.B": {
+      "B_02_15": {
         "choice": "Waterfall Development",
         "isCorrect": false
       },
-      "02.15.C": {
+      "C_02_15": {
         "choice": "Parallel Development",
         "isCorrect": false
       },
-      "02.15.D": {
+      "D_02_15": {
         "choice": "Iterative Development",
         "isCorrect": true
       }
     }
   },
-  "02.16": {
+  "02_16": {
     "question": "A classic planning mistake mentioned in the textbook is having an 'overly optimistic schedule'.",
     "choices": {
-      "02.16.A": {
+      "A_02_16": {
         "choice": "True",
         "isCorrect": true
       },
-      "02.16.B": {
+      "B_02_16": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "02.17": {
+  "02_17": {
     "question": "PMP is People – Management – Project – the three components of successful project management.",
     "choices": {
-      "02.17.A": {
+      "A_02_17": {
         "choice": "True",
         "isCorrect": false
       },
-      "02.17.B": {
+      "B_02_17": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "02.18": {
+  "02_18": {
     "question": "The margin of error in cost and time estimates can be as much as 20% in the planning phase for the system proposal deliverable.",
     "choices": {
-      "02.18.A": {
+      "A_02_18": {
         "choice": "True",
         "isCorrect": false
       },
-      "02.18.B": {
+      "B_02_18": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "02.19": {
+  "02_19": {
     "question": "If you had a project with very clear requirements; familiar technologies; not super complex; reliable; a very long time schedule and where the need for schedule visibility is low – the best methodology might be Extreme programming.",
     "choices": {
-      "02.19.A": {
+      "A_02_19": {
         "choice": "True",
         "isCorrect": false
       },
-      "02.19.B": {
+      "B_02_19": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "02.20": {
+  "02_20": {
     "question": "Nate is managing a project that is behind by one month with five months to go. He should add four to six staff persons to the project to get it back up to speed.",
     "choices": {
-      "02.20.A": {
+      "A_02_20": {
         "choice": "True",
         "isCorrect": false
       },
-      "02.20.B": {
+      "B_02_20": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "02.21": {
+  "02_21": {
     "question": "TJ is coordinating a project. Which would he probably NOT use to avoid conflicts?",
     "choices": {
-      "02.21.A": {
+      "A_02_21": {
         "choice": "Develop a project charter",
         "isCorrect": false
       },
-      "02.21.B": {
+      "B_02_21": {
         "choice": "Communicate the business value to the team",
         "isCorrect": false
       },
-      "02.21.C": {
+      "C_02_21": {
         "choice": "Clearly defining plans for the project",
         "isCorrect": false
       },
-      "02.21.D": {
+      "D_02_21": {
         "choice": "Encourage a competitive edge between team members",
         "isCorrect": true
       },
-      "02.21.E": {
+      "E_02_21": {
         "choice": "Look at other projects and priorities and see how that might impact the project",
         "isCorrect": false
       }
     }
   },
-  "02.22": {
+  "02_22": {
     "question": "Interpersonal skills for a project manager might be important when:",
     "choices": {
-      "02.22.A": {
+      "A_02_22": {
         "choice": "Creating the system proposal",
         "isCorrect": false
       },
-      "02.22.B": {
+      "B_02_22": {
         "choice": "Using the V-model variation of the Waterfall Methodology.",
         "isCorrect": false
       },
-      "02.22.C": {
+      "C_02_22": {
         "choice": "Working with a highly controversial project that may have political implications",
         "isCorrect": true
       },
-      "02.22.D": {
+      "D_02_22": {
         "choice": "Creating a cost/benefit spreadsheet",
         "isCorrect": false
       },
-      "02.22.E": {
+      "E_02_22": {
         "choice": "Making assignments for a project",
         "isCorrect": false
       }
     }
   },
-  "02.23": {
+  "02_23": {
     "question": "Which of the following would BEST describe \"system reliability\"?",
     "choices": {
-      "02.23.A": {
+      "A_02_23": {
         "choice": "The aspect of how quickly the system can be developed and implemented",
         "isCorrect": false
       },
-      "02.23.B": {
+      "B_02_23": {
         "choice": "The aspect of how complex the system must be",
         "isCorrect": false
       },
-      "02.23.C": {
+      "C_02_23": {
         "choice": "The aspect of using technologies that analysts and developers are familiar with",
         "isCorrect": false
       },
-      "02.23.D": {
+      "D_02_23": {
         "choice": "The aspect of what the business side really wants the system to do",
         "isCorrect": false
       },
-      "02.23.E": {
+      "E_02_23": {
         "choice": "The aspect of how accurate the system must be (such as medical equipment or for games)",
         "isCorrect": true
       }
     }
   },
-  "02.24": {
+  "02_24": {
     "question": "Rapid Application Development is a collection of methodologies that include all of the following except:",
     "choices": {
-      "02.24.A": {
+      "A_02_24": {
         "choice": "Iterative Development",
         "isCorrect": false
       },
-      "02.24.B": {
+      "B_02_24": {
         "choice": "V-model Methodology",
         "isCorrect": true
       },
-      "02.24.C": {
+      "C_02_24": {
         "choice": "System Prototyping",
         "isCorrect": false
       },
-      "02.24.D": {
+      "D_02_24": {
         "choice": "Throwaway Prototyping",
         "isCorrect": false
       }
     }
   },
-  "02.25": {
+  "02_25": {
     "question": "Throwaway Prototyping balances the benefits of well-thought-out analysis and design phases with the advantages of using prototypes to refine key issues before a system is built.",
     "choices": {
-      "02.25.A": {
+      "A_02_25": {
         "choice": "True",
         "isCorrect": true
       },
-      "02.25.B": {
+      "B_02_25": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "02.26": {
+  "02_26": {
     "question": "Agile Development stresses analysis, modeling and documentation over programming.",
     "choices": {
-      "02.26.A": {
+      "A_02_26": {
         "choice": "True",
         "isCorrect": false
       },
-      "02.26.B": {
+      "B_02_26": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "02.27": {
+  "02_27": {
     "question": "A classic planning mistake mentioned in the textbook is motivating employees with financial rewards instead of recognition and genuine thanks.",
     "choices": {
-      "02.27.A": {
+      "A_02_27": {
         "choice": "True",
         "isCorrect": false
       },
-      "02.27.B": {
+      "B_02_27": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "02.28": {
+  "02_28": {
     "question": "Extreme programming requires a great deal of discipline and it is recommended for:",
     "choices": {
-      "02.28.A": {
+      "A_02_28": {
         "choice": "Large systems",
         "isCorrect": false
       },
-      "02.28.B": {
+      "B_02_28": {
         "choice": "Mission critical applications",
         "isCorrect": false
       },
-      "02.28.C": {
+      "C_02_28": {
         "choice": "Considerable onsite user involvement",
         "isCorrect": true
       },
-      "02.28.D": {
+      "D_02_28": {
         "choice": "Large development teams",
         "isCorrect": false
       }
     },
     "multiSelect": true
   },
-  "02.29": {
+  "02_29": {
     "question": "Extreme Programming (XP) stresses customer satisfaction and teamwork.",
     "choices": {
-      "02.29.A": {
+      "A_02_29": {
         "choice": "True",
         "isCorrect": true
       },
-      "02.29.B": {
+      "B_02_29": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "02.30": {
+  "02_30": {
     "question": "Which of the following methodologies might be most appropriate if you have a system project with: somewhat unclear requirements; somewhat unfamiliar technologies; that is complex; reasonably reliable; a short time schedule and high schedule visibility?",
     "choices": {
-      "02.30.A": {
+      "A_02_30": {
         "choice": "System prototyping",
         "isCorrect": false
       },
-      "02.30.B": {
+      "B_02_30": {
         "choice": "Waterfall",
         "isCorrect": false
       },
-      "02.30.C": {
+      "C_02_30": {
         "choice": "Parallel",
         "isCorrect": false
       },
-      "02.30.D": {
+      "D_02_30": {
         "choice": "Iterative",
         "isCorrect": true
       },
-      "02.30.E": {
+      "E_02_30": {
         "choice": "Throwaway prototyping",
         "isCorrect": false
       }
     }
   },
-  "02.31": {
+  "02_31": {
     "question": "The corporate IT department carefully needs to prioritize, select and manage a portfolio of projects.",
     "choices": {
-      "02.31.A": {
+      "A_02_31": {
         "choice": "True",
         "isCorrect": true
       },
-      "02.31.B": {
+      "B_02_31": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "02.32": {
+  "02_32": {
     "question": "A critical success factor for project management is to start with a realistic assessment of the work that needs to be accomplished.",
     "choices": {
-      "02.32.A": {
+      "A_02_32": {
         "choice": "True",
         "isCorrect": true
       },
-      "02.32.B": {
+      "B_02_32": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "02.33": {
+  "02_33": {
     "question": "Suggestions for motivation might include all of these EXCEPT:",
     "choices": {
-      "02.33.A": {
+      "A_02_33": {
         "choice": "Recognize and reward good efforts",
         "isCorrect": false
       },
-      "02.33.B": {
+      "B_02_33": {
         "choice": "Setting realistic deadlines",
         "isCorrect": false
       },
-      "02.33.C": {
+      "C_02_33": {
         "choice": "Giving all team members the same bonus on a project",
         "isCorrect": true
       },
-      "02.33.D": {
+      "D_02_33": {
         "choice": "Reward those with outstanding quality and effort",
         "isCorrect": false
       },
-      "02.33.E": {
+      "E_02_33": {
         "choice": "Having a good working environment",
         "isCorrect": false
       }
     }
   },
-  "02.34": {
+  "02_34": {
     "question": "Which of the following methodologies might be most appropriate if you have a system project with: unclear requirements; very familiar technologies; not all that complex; reasonably reliable; a short time schedule and the schedule visibility is somewhat important?",
     "choices": {
-      "02.34.A": {
+      "A_02_34": {
         "choice": "Iterative",
         "isCorrect": false
       },
-      "02.34.B": {
+      "B_02_34": {
         "choice": "Waterfall",
         "isCorrect": false
       },
-      "02.34.C": {
+      "C_02_34": {
         "choice": "Parallel",
         "isCorrect": false
       },
-      "02.34.D": {
+      "D_02_34": {
         "choice": "System prototyping",
         "isCorrect": false
       },
-      "02.34.E": {
+      "E_02_34": {
         "choice": "Agile development",
         "isCorrect": true
       }
     }
   },
-  "02.35": {
+  "02_35": {
     "question": "CIO is an acronym for \"Chief Information Officer\".",
     "choices": {
-      "02.35.A": {
+      "A_02_35": {
         "choice": "True",
         "isCorrect": true
       },
-      "02.35.B": {
+      "B_02_35": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "02.36": {
+  "02_36": {
     "question": "Project Managers must be certified as PMP (Project Management Professionals)",
     "choices": {
-      "02.36.A": {
+      "A_02_36": {
         "choice": "True",
         "isCorrect": false
       },
-      "02.36.B": {
+      "B_02_36": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "02.37": {
+  "02_37": {
     "question": "Which of the following is not a project characteristic that will affect the methodology selection decision?",
     "choices": {
-      "02.37.A": {
+      "A_02_37": {
         "choice": "Schedule visibility",
         "isCorrect": false
       },
-      "02.37.B": {
+      "B_02_37": {
         "choice": "Complexity of the system",
         "isCorrect": false
       },
-      "02.37.C": {
+      "C_02_37": {
         "choice": "Creating a cost/benefit spreadsheet",
         "isCorrect": true
       },
-      "02.37.D": {
+      "D_02_37": {
         "choice": "System reliability",
         "isCorrect": false
       },
-      "02.37.E": {
+      "E_02_37": {
         "choice": "User requirements clarity",
         "isCorrect": false
       }
     }
   },
-  "02.38": {
+  "02_38": {
     "question": "Which of the following methodologies might be most appropriate if you have a system project with: unclear user requirements; unfamiliar technologies; very complex; must be reliable; a short to medium time schedule and the schedule visibility is somewhat important?",
     "choices": {
-      "02.38.A": {
+      "A_02_38": {
         "choice": "Iterative",
         "isCorrect": false
       },
-      "02.38.B": {
+      "B_02_38": {
         "choice": "System prototyping",
         "isCorrect": false
       },
-      "02.38.C": {
+      "C_02_38": {
         "choice": "Throwaway prototyping",
         "isCorrect": true
       },
-      "02.38.D": {
+      "D_02_38": {
         "choice": "Waterfall",
         "isCorrect": false
       },
-      "02.38.E": {
+      "E_02_38": {
         "choice": "Parallel",
         "isCorrect": false
       }
     }
   },
-  "02.39": {
+  "02_39": {
     "question": "The main difference between the Parallel Development Methodology and the Iterative Development Methodology is that:",
     "choices": {
-      "02.39.A": {
+      "A_02_39": {
         "choice": "The Parallel Development Methodology will have various releases (like version 1.0; 2.0, etc.) and the Iterative will not",
         "isCorrect": false
       },
-      "02.39.B": {
+      "B_02_39": {
         "choice": "The Iterative Methodology will create various models or prototypes with user involvement before setting on design concepts and the Parallel Methodology will not",
         "isCorrect": false
       },
-      "02.39.C": {
+      "C_02_39": {
         "choice": "The Parallel Methodology will have subprojects and the Iterative Methodology will have various releases",
         "isCorrect": true
       },
-      "02.39.D": {
+      "D_02_39": {
         "choice": "The Iterative Methodology will break the system project into sub-projects for analysis, design and implementation and then merge them into a final system and the Parallel will not",
         "isCorrect": false
       },
-      "02.39.E": {
+      "E_02_39": {
         "choice": "The Parallel Methodology will create various models or prototypes with user involvement before setting on design concepts and the Iterative will not",
         "isCorrect": false
       }
     }
   },
-  "02.40": {
+  "02_40": {
     "question": "Which is a true statement about IT projects?",
     "choices": {
-      "02.40.A": {
+      "A_02_40": {
         "choice": "Project Managers must be certified as PMP (Project Management Professionals)",
         "isCorrect": false
       },
-      "02.40.B": {
+      "B_02_40": {
         "choice": "Project teams of 12 to 15 are generally considered optimum",
         "isCorrect": false
       },
-      "02.40.C": {
+      "C_02_40": {
         "choice": "Most IT departments face a demand for IT projects that far exceed the ability to do them.",
         "isCorrect": true
       },
-      "02.40.D": {
+      "D_02_40": {
         "choice": "Project estimates tend to have a built-in buffer of time",
         "isCorrect": false
       },
-      "02.40.E": {
+      "E_02_40": {
         "choice": "The majority of projects taken on by IT departments are not strategic to the business",
         "isCorrect": false
       }
     }
   },
-  "02.41": {
+  "02_41": {
     "question": "Extreme programming emphasizes:",
     "multiSelect": true,
     "choices": {
-      "02.41.A": {
+      "A_02_41": {
         "choice": "Simplicity as a core value",
         "isCorrect": true
       },
-      "02.41.B": {
+      "B_02_41": {
         "choice": "Customer satisfaction",
         "isCorrect": true
       },
-      "02.41.C": {
+      "C_02_41": {
         "choice": "Teamwork",
         "isCorrect": true
       },
-      "02.41.D": {
+      "D_02_41": {
         "choice": "Communication as a core value",
         "isCorrect": true
       }
     }
   },
-  "02.42": {
+  "02_42": {
     "question": "Garrett has been told by management that his project MUST be completed on time. His best estimates are more than two weeks after the absolute deadline. Which technique could he use to get a functional system on time?",
     "choices": {
-      "02.42.A": {
+      "A_02_42": {
         "choice": "Benchmarking",
         "isCorrect": false
       },
-      "02.42.B": {
+      "B_02_42": {
         "choice": "System prototyping",
         "isCorrect": false
       },
-      "02.42.C": {
+      "C_02_42": {
         "choice": "Activity elimination",
         "isCorrect": false
       },
-      "02.42.D": {
+      "D_02_42": {
         "choice": "Timeboxing",
         "isCorrect": true
       },
-      "02.42.E": {
+      "E_02_42": {
         "choice": "Risk management",
         "isCorrect": false
       }
     }
   },
-  "02.43": {
+  "02_43": {
     "question": "The Iterative approach of the RAD methodology breaks the overall project into a series of release versions.",
     "choices": {
-      "02.43.A": {
+      "A_02_43": {
         "choice": "True",
         "isCorrect": true
       },
-      "02.43.B": {
+      "B_02_43": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "02.44": {
+  "02_44": {
     "question": "The majority of projects taken on by IT departments are not strategic to the business",
     "choices": {
-      "02.44.A": {
+      "A_02_44": {
         "choice": "True",
         "isCorrect": false
       },
-      "02.44.B": {
+      "B_02_44": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "02.45": {
+  "02_45": {
     "question": "Which of the following methodologies takes the longest to complete all the SDLC steps?",
     "choices": {
-      "02.45.A": {
+      "A_02_45": {
         "choice": "Iterative",
         "isCorrect": false
       },
-      "02.45.B": {
+      "B_02_45": {
         "choice": "Parallel",
         "isCorrect": false
       },
-      "02.45.C": {
+      "C_02_45": {
         "choice": "System prototyping",
         "isCorrect": false
       },
-      "02.45.D": {
+      "D_02_45": {
         "choice": "Throwaway prototyping",
         "isCorrect": false
       },
-      "02.45.E": {
+      "E_02_45": {
         "choice": "Waterfall",
         "isCorrect": true
       }
     }
   },
-  "02.46": {
+  "02_46": {
     "question": "The Waterfall Methodology breaks the overall project into a series of release versions.",
     "choices": {
-      "02.46.A": {
+      "A_02_46": {
         "choice": "True",
         "isCorrect": false
       },
-      "02.46.B": {
+      "B_02_46": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "02.47": {
+  "02_47": {
     "question": "Which is NOT suggested for IT development projects?",
     "choices": {
-      "02.47.A": {
+      "A_02_47": {
         "choice": "Projects need to give a positive return on investment within four years",
         "isCorrect": true
       },
-      "02.47.B": {
+      "B_02_47": {
         "choice": "Projects need to give value to the business",
         "isCorrect": false
       },
-      "02.47.C": {
+      "C_02_47": {
         "choice": "Projects need to be prioritized",
         "isCorrect": false
       },
-      "02.47.D": {
+      "D_02_47": {
         "choice": "Projects need to be carefully managed",
         "isCorrect": false
       },
-      "02.47.E": {
+      "E_02_47": {
         "choice": "Projects need to be carefully selected",
         "isCorrect": false
       }
     }
   },
-  "02.48": {
+  "02_48": {
     "question": "The Throwaway Prototyping methodology is especially good for exploring design alternatives.",
     "choices": {
-      "02.48.A": {
+      "A_02_48": {
         "choice": "True",
         "isCorrect": true
       },
-      "02.48.B": {
+      "B_02_48": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "02.49": {
+  "02_49": {
     "question": "Either systems prototyping or throwaway prototyping are generally a good methodology choice when the project has unclear user requirements.",
     "choices": {
-      "02.49.A": {
+      "A_02_49": {
         "choice": "True",
         "isCorrect": true
       },
-      "02.49.B": {
+      "B_02_49": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "02.50": {
+  "02_50": {
     "question": "Which of the following methodologies might be most appropriate if you have a system project with: clear requirements; very familiar technologies; not all that complex; reasonably reliable; a very long time schedule, and the schedule visibility is not important?",
     "choices": {
-      "02.50.A": {
+      "A_02_50": {
         "choice": "System prototyping",
         "isCorrect": false
       },
-      "02.50.B": {
+      "B_02_50": {
         "choice": "Waterfall",
         "isCorrect": true
       },
-      "02.50.C": {
+      "C_02_50": {
         "choice": "Parallel",
         "isCorrect": false
       },
-      "02.50.D": {
+      "D_02_50": {
         "choice": "Throwaway prototyping",
         "isCorrect": false
       },
-      "02.50.E": {
+      "E_02_50": {
         "choice": "Iterative",
         "isCorrect": false
       }
     }
   },
-  "02.51": {
+  "02_51": {
     "question": "Which of the following would BEST describe \"system complexity\"?",
     "choices": {
-      "02.51.A": {
+      "A_02_51": {
         "choice": "The aspect of using technologies that analysts and developers are familiar with",
         "isCorrect": false
       },
-      "02.51.B": {
+      "B_02_51": {
         "choice": "The aspect of what the business side really wants the system to do",
         "isCorrect": false
       },
-      "02.51.C": {
+      "C_02_51": {
         "choice": "The aspect of how accurate the system must be (such as medical equipment or for games)",
         "isCorrect": false
       },
-      "02.51.D": {
+      "D_02_51": {
         "choice": "The aspect of how intricate and difficult the system must be",
         "isCorrect": true
       },
-      "02.51.E": {
+      "E_02_51": {
         "choice": "The aspect of how quickly the system can be developed and implemented",
         "isCorrect": false
       }
     }
   },
-  "02.52": {
+  "02_52": {
     "question": "Which would generally NOT be taken into consideration for project portfolio management in an organization?",
     "choices": {
-      "02.52.A": {
+      "A_02_52": {
         "choice": "The number of tactical projects",
         "isCorrect": false
       },
-      "02.52.B": {
+      "B_02_52": {
         "choice": "The number of high risk projects",
         "isCorrect": false
       },
-      "02.52.C": {
+      "C_02_52": {
         "choice": "The number of large projects",
         "isCorrect": false
       },
-      "02.52.D": {
+      "D_02_52": {
         "choice": "The number of strategic projects",
         "isCorrect": false
       },
-      "02.52.E": {
+      "E_02_52": {
         "choice": "The number of financially feasible projects",
         "isCorrect": true
       }
     }
   },
-  "02.53": {
+  "02_53": {
     "question": "In most IT departments, the demand for IT projects is generally about the same as the department's ability to supply them.",
     "choices": {
-      "02.53.A": {
+      "A_02_53": {
         "choice": "True",
         "isCorrect": false
       },
-      "02.53.B": {
+      "B_02_53": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "02.54": {
+  "02_54": {
     "question": "The project methodology that takes the longest to complete is the Waterfall Development Methodology.",
     "choices": {
-      "02.54.A": {
+      "A_02_54": {
         "choice": "True",
         "isCorrect": true
       },
-      "02.54.B": {
+      "B_02_54": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "02.55": {
+  "02_55": {
     "question": "Which of the following methodologies might be most appropriate if you have a system project with: unclear user requirements; unfamiliar technologies; somewhat complex; needs to be reliable; time is not an issue and the schedule visibility is somewhat important?",
     "choices": {
-      "02.55.A": {
+      "A_02_55": {
         "choice": "Parallel",
         "isCorrect": false
       },
-      "02.55.B": {
+      "B_02_55": {
         "choice": "Iterative",
         "isCorrect": false
       },
-      "02.55.C": {
+      "C_02_55": {
         "choice": "Waterfall",
         "isCorrect": false
       },
-      "02.55.D": {
+      "D_02_55": {
         "choice": "Throwaway prototyping",
         "isCorrect": true
       },
-      "02.55.E": {
+      "E_02_55": {
         "choice": "System prototyping",
         "isCorrect": false
       }
     }
   },
-  "02.56": {
+  "02_56": {
     "question": "A team of developers and customers are in close communication, with frequent communications, simplicity, feedback and courage. This would best describe:",
     "choices": {
-      "02.56.A": {
+      "A_02_56": {
         "choice": "The extreme programming methodology",
         "isCorrect": true
       },
-      "02.56.B": {
+      "B_02_56": {
         "choice": "The parallel development methodology",
         "isCorrect": false
       },
-      "02.56.C": {
+      "C_02_56": {
         "choice": "The throwaway prototyping methodology",
         "isCorrect": false
       },
-      "02.56.D": {
+      "D_02_56": {
         "choice": "The iterative development methodology",
         "isCorrect": false
       },
-      "02.56.E": {
+      "E_02_56": {
         "choice": "The waterfall development methodology",
         "isCorrect": false
       }
     }
   },
-  "02.57": {
+  "02_57": {
     "question": "RAD is an acronym for:",
     "choices": {
-      "02.57.A": {
+      "A_02_57": {
         "choice": "Rapid Authentic Development",
         "isCorrect": false
       },
-      "02.57.B": {
+      "B_02_57": {
         "choice": "Real Autonomous Development",
         "isCorrect": false
       },
-      "02.57.C": {
+      "C_02_57": {
         "choice": "Rapid Application Design",
         "isCorrect": false
       },
-      "02.57.D": {
+      "D_02_57": {
         "choice": "Real Application Development",
         "isCorrect": false
       },
-      "02.57.E": {
+      "E_02_57": {
         "choice": "Rapid Application Development",
         "isCorrect": true
       }
     }
   },
-  "02.58": {
+  "02_58": {
     "question": "Micah is a fairly new project manager. He estimated for a project plan (on the planning phase) that the project would cost $50,000 and take 20 weeks. According to the margin of error guidelines for well-done estimates, that could range from:",
     "choices": {
-      "02.58.A": {
+      "A_02_58": {
         "choice": "0 and $100,000 – and between 15 and 25 weeks",
         "isCorrect": true
       },
-      "02.58.B": {
+      "B_02_58": {
         "choice": "25,000 and $75,000 – and between 10 and 30 weeks",
         "isCorrect": false
       },
-      "02.58.C": {
+      "C_02_58": {
         "choice": "10,000 and $60,000 – and between 12 and 28 weeks",
         "isCorrect": false
       },
-      "02.58.D": {
+      "D_02_58": {
         "choice": "5,000 and $100,000 – and between 10 and 30 weeks",
         "isCorrect": false
       },
-      "02.58.E": {
+      "E_02_58": {
         "choice": "0 and $100,000 – and between 0 and 40 weeks",
         "isCorrect": false
       }
     }
   },
-  "02.59": {
+  "02_59": {
     "question": "Extreme Programming (XP) is BEST characterized as:",
     "choices": {
-      "02.59.A": {
+      "A_02_59": {
         "choice": "A method for exploring design alternatives",
         "isCorrect": false
       },
-      "02.59.B": {
+      "B_02_59": {
         "choice": "A method for emphasizing customer satisfaction",
         "isCorrect": true
       },
-      "02.59.C": {
+      "C_02_59": {
         "choice": "A 'Quick and Dirty' system",
         "isCorrect": false
       },
-      "02.59.D": {
+      "D_02_59": {
         "choice": "A series of versions",
         "isCorrect": false
       },
-      "02.59.E": {
+      "E_02_59": {
         "choice": "More explicit testing",
         "isCorrect": false
       }
     }
   },
-  "02.60": {
+  "02_60": {
     "question": "Which of the following is NOT a classic planning mistake?",
     "choices": {
-      "02.60.A": {
+      "A_02_60": {
         "choice": "Adding people to a late project",
         "isCorrect": false
       },
-      "02.60.B": {
+      "B_02_60": {
         "choice": "Omitting key requirements",
         "isCorrect": true
       },
-      "02.60.C": {
+      "C_02_60": {
         "choice": "Failing to update the schedule",
         "isCorrect": false
       },
-      "02.60.D": {
+      "D_02_60": {
         "choice": "Failing to monitor the schedule",
         "isCorrect": false
       },
-      "02.60.E": {
+      "E_02_60": {
         "choice": "Overly optimistic schedule",
         "isCorrect": false
       }
     }
   },
-  "02.61": {
+  "02_61": {
     "question": "The science (or art) of project management is setting a schedule and sticking to it no matter what – even if that includes working weekends and adding staff to reach the deadline on time.",
     "choices": {
-      "02.61.A": {
+      "A_02_61": {
         "choice": "True",
         "isCorrect": false
       },
-      "02.61.B": {
+      "B_02_61": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "02.62": {
+  "02_62": {
     "question": "The Throwaway Prototyping methodology is good at creating release version 1.0 for users; and then the methodology shifts to system prototyping to finish the system.",
     "choices": {
-      "02.62.A": {
+      "A_02_62": {
         "choice": "True",
         "isCorrect": false
       },
-      "02.62.B": {
+      "B_02_62": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "02.63": {
+  "02_63": {
     "question": "What the MAIN difference between systems prototyping and throwaway prototyping?",
     "choices": {
-      "02.63.A": {
+      "A_02_63": {
         "choice": "Throwaway prototyping develops systems that will be use as 'stop-gap' systems – and generally for less than six months; while systems prototyping results in systems that will be used extensively for several years.",
         "isCorrect": false
       },
-      "02.63.B": {
+      "B_02_63": {
         "choice": "Throwaway prototyping involves users while systems prototyping does not",
         "isCorrect": false
       },
-      "02.63.C": {
+      "C_02_63": {
         "choice": "Systems prototyping works with users to quickly develop a simplified working version of the proposed system; while throwaway prototyping focuses more on exploring design alternatives",
         "isCorrect": true
       },
-      "02.63.D": {
+      "D_02_63": {
         "choice": "Systems prototyping is a rapid application development methodology; while throwaway prototyping is not",
         "isCorrect": false
       },
-      "02.63.E": {
+      "E_02_63": {
         "choice": "Systems prototyping involves users while throwaway prototyping does not",
         "isCorrect": false
       }
     }
   },
-  "02.64": {
+  "02_64": {
     "question": "Project estimates tend to have a built-in buffer of time",
     "choices": {
-      "02.64.A": {
+      "A_02_64": {
         "choice": "True",
         "isCorrect": false
       },
-      "02.64.B": {
+      "B_02_64": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "02.65": {
+  "02_65": {
     "question": "Which of the following methodologies might be most appropriate if you have a system project with: clear requirements; very familiar technologies; not all that complex; reasonably reliable; a short time schedule and the schedule visibility is not important?",
     "choices": {
-      "02.65.A": {
+      "A_02_65": {
         "choice": "System prototyping",
         "isCorrect": false
       },
-      "02.65.B": {
+      "B_02_65": {
         "choice": "Waterfall",
         "isCorrect": false
       },
-      "02.65.C": {
+      "C_02_65": {
         "choice": "Throwaway prototyping",
         "isCorrect": false
       },
-      "02.65.D": {
+      "D_02_65": {
         "choice": "Iterative",
         "isCorrect": false
       },
-      "02.65.E": {
+      "E_02_65": {
         "choice": "Parallel",
         "isCorrect": true
       }

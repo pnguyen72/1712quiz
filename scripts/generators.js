@@ -98,7 +98,7 @@ function generateAttempt(attemptData) {
 }
 
 function generateQuestion(questionId, questionData, questionIndex) {
-  const module = questionId.split(".")[0];
+  const module = questionId.split("_")[0];
   const questionText = questionData.question;
   const hasImage = questionData.hasImage;
   const isMultiSelect = questionData.multiSelect;
@@ -167,7 +167,7 @@ function generateQuestion(questionId, questionData, questionIndex) {
     const choiceText = document.createElement("span");
 
     choice.className = choiceData.isCorrect ? "correct" : "incorrect";
-    choiceInput.id = `C${choiceId.replaceAll(".", "_")}`;
+    choiceInput.id = choiceId;
     choiceInput.className = "choice-input";
     choiceInput.type = isMultiSelect ? "checkbox" : "radio";
     choiceInput.name = questionId;

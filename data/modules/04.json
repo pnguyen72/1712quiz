@@ -1,1052 +1,1052 @@
 {
-  "04.01": {
+  "04_01": {
     "question": "Use cases can vary from one organization to another in terms of the degree of formality employed.",
     "choices": {
-      "04.01.A": {
+      "A_04_01": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.01.B": {
+      "B_04_01": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.02": {
+  "04_02": {
     "question": "It is common practice to create smaller, more focused use cases breaking the whole process down into parts.",
     "choices": {
-      "04.02.A": {
+      "A_04_02": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.02.B": {
+      "B_04_02": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.03": {
+  "04_03": {
     "question": "Use cases will have inputs and outputs.",
     "choices": {
-      "04.03.A": {
+      "A_04_03": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.03.B": {
+      "B_04_03": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.04": {
+  "04_04": {
     "question": "The actor in a use case is generally:",
     "choices": {
-      "04.04.A": {
+      "A_04_04": {
         "choice": "The Champion",
         "isCorrect": false
       },
-      "04.04.B": {
+      "B_04_04": {
         "choice": "The Systems Analyst",
         "isCorrect": false
       },
-      "04.04.C": {
+      "C_04_04": {
         "choice": "The Project Sponsor",
         "isCorrect": false
       },
-      "04.04.D": {
+      "D_04_04": {
         "choice": "An external user of the system",
         "isCorrect": true
       },
-      "04.04.E": {
+      "E_04_04": {
         "choice": "The Project manager",
         "isCorrect": false
       }
     }
   },
-  "04.05": {
+  "04_05": {
     "question": "Use cases are especially valuable for business system applications and websites.",
     "choices": {
-      "04.05.A": {
+      "A_04_05": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.05.B": {
+      "B_04_05": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.06": {
+  "04_06": {
     "question": "Which is probably NOT true about building use cases?",
     "choices": {
-      "04.06.A": {
+      "A_04_06": {
         "choice": "External or internal triggers are analyzed",
         "isCorrect": false
       },
-      "04.06.B": {
+      "B_04_06": {
         "choice": "Users are involved",
         "isCorrect": false
       },
-      "04.06.C": {
+      "C_04_06": {
         "choice": "Major processes are analyzed",
         "isCorrect": false
       },
-      "04.06.D": {
+      "D_04_06": {
         "choice": "Analysts are involved",
         "isCorrect": false
       },
-      "04.06.E": {
+      "E_04_06": {
         "choice": "Major costs are analyzed",
         "isCorrect": true
       }
     }
   },
-  "04.07": {
+  "04_07": {
     "question": "Use cases are especially valuable for batch processes, computationally intensive applications, and data warehousing.",
     "choices": {
-      "04.07.A": {
+      "A_04_07": {
         "choice": "True",
         "isCorrect": false
       },
-      "04.07.B": {
+      "B_04_07": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "04.08": {
+  "04_08": {
     "question": "Omar is an analyst building a use case. Which of the following project roles might be the most important in terms of getting information about building the use case?",
     "choices": {
-      "04.08.A": {
+      "A_04_08": {
         "choice": "Other analysts",
         "isCorrect": false
       },
-      "04.08.B": {
+      "B_04_08": {
         "choice": "Programmers",
         "isCorrect": false
       },
-      "04.08.C": {
+      "C_04_08": {
         "choice": "Project Sponsor",
         "isCorrect": false
       },
-      "04.08.D": {
+      "D_04_08": {
         "choice": "Users",
         "isCorrect": true
       },
-      "04.08.E": {
+      "E_04_08": {
         "choice": "Equipment vendors",
         "isCorrect": false
       }
     }
   },
-  "04.09": {
+  "04_09": {
     "question": "Liang has identified the payroll authorization office as the actor in a use case. This would be incorrect as primary actors need to be singular like a customer or a patient or a student.",
     "choices": {
-      "04.09.A": {
+      "A_04_09": {
         "choice": "True",
         "isCorrect": false
       },
-      "04.09.B": {
+      "B_04_09": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "04.10": {
+  "04_10": {
     "question": "Role-playing the use case with actual users is a good way to do what?",
     "choices": {
-      "04.10.A": {
+      "A_04_10": {
         "choice": "Identify elements within steps",
         "isCorrect": false
       },
-      "04.10.B": {
+      "B_04_10": {
         "choice": "Identify the use case",
         "isCorrect": false
       },
-      "04.10.C": {
+      "C_04_10": {
         "choice": "Identify the major steps within each use case",
         "isCorrect": false
       },
-      "04.10.D": {
+      "D_04_10": {
         "choice": "Confirm the use case",
         "isCorrect": true
       },
-      "04.10.E": {
+      "E_04_10": {
         "choice": "Identify the primary actor",
         "isCorrect": false
       }
     }
   },
-  "04.11": {
+  "04_11": {
     "question": "The most common ways to elicit information for use cases is with questionnaires of the affected users.",
     "choices": {
-      "04.11.A": {
+      "A_04_11": {
         "choice": "True",
         "isCorrect": false
       },
-      "04.11.B": {
+      "B_04_11": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "04.12": {
+  "04_12": {
     "question": "Use cases are a type of 'data-driven modeling'.",
     "choices": {
-      "04.12.A": {
+      "A_04_12": {
         "choice": "True",
         "isCorrect": false
       },
-      "04.12.B": {
+      "B_04_12": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "04.13": {
+  "04_13": {
     "question": "What is probably NOT a part of a use case?",
     "choices": {
-      "04.13.A": {
+      "A_04_13": {
         "choice": "Name",
         "isCorrect": false
       },
-      "04.13.B": {
+      "B_04_13": {
         "choice": "Number",
         "isCorrect": false
       },
-      "04.13.C": {
+      "C_04_13": {
         "choice": "Statement of business value",
         "isCorrect": true
       },
-      "04.13.D": {
+      "D_04_13": {
         "choice": "Major inputs",
         "isCorrect": false
       },
-      "04.13.E": {
+      "E_04_13": {
         "choice": "Trigger",
         "isCorrect": false
       }
     }
   },
-  "04.14": {
+  "04_14": {
     "question": "A temporal trigger might be related to time, such as 30 days have passed and a late fee needs to be assessed.",
     "choices": {
-      "04.14.A": {
+      "A_04_14": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.14.B": {
+      "B_04_14": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.15": {
+  "04_15": {
     "question": "Use cases give more detail about requirements.",
     "choices": {
-      "04.15.A": {
+      "A_04_15": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.15.B": {
+      "B_04_15": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.16": {
+  "04_16": {
     "question": "Use cases sometimes are called 'business scenarios'.",
     "choices": {
-      "04.16.A": {
+      "A_04_16": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.16.B": {
+      "B_04_16": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.17": {
+  "04_17": {
     "question": "Use cases normally contain ten to twelve major steps.",
     "choices": {
-      "04.17.A": {
+      "A_04_17": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.17.B": {
+      "B_04_17": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.18": {
+  "04_18": {
     "question": "Ralph wants to illustrate how a system interacts with the environment. The best solution for him would be to use a what?",
     "choices": {
-      "04.18.A": {
+      "A_04_18": {
         "choice": "Use case",
         "isCorrect": true
       },
-      "04.18.B": {
+      "B_04_18": {
         "choice": "Requirements flow chart",
         "isCorrect": false
       },
-      "04.18.C": {
+      "C_04_18": {
         "choice": "Storyboard",
         "isCorrect": false
       },
-      "04.18.D": {
+      "D_04_18": {
         "choice": "HIPO chart (hierarchy, input, process, output)",
         "isCorrect": false
       },
-      "04.18.E": {
+      "E_04_18": {
         "choice": "Gantt chart",
         "isCorrect": false
       }
     }
   },
-  "04.19": {
+  "04_19": {
     "question": "Use cases are always internal and rarely shared or discussed with business users.",
     "choices": {
-      "04.19.A": {
+      "A_04_19": {
         "choice": "True",
         "isCorrect": false
       },
-      "04.19.B": {
+      "B_04_19": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "04.20": {
+  "04_20": {
     "question": "Destination would be described on a use case in which of the following areas?",
     "choices": {
-      "04.20.A": {
+      "A_04_20": {
         "choice": "Importance level",
         "isCorrect": false
       },
-      "04.20.B": {
+      "B_04_20": {
         "choice": "Major inputs",
         "isCorrect": false
       },
-      "04.20.C": {
+      "C_04_20": {
         "choice": "Destination",
         "isCorrect": true
       },
-      "04.20.D": {
+      "D_04_20": {
         "choice": "Trigger",
         "isCorrect": false
       },
-      "04.20.E": {
+      "E_04_20": {
         "choice": "Primary actor",
         "isCorrect": false
       }
     }
   },
-  "04.21": {
+  "04_21": {
     "question": "Dr. O'Brien's dental office calls a patient three days before an appointment. This could be an example of a temporal trigger.",
     "choices": {
-      "04.21.A": {
+      "A_04_21": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.21.B": {
+      "B_04_21": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.22": {
+  "04_22": {
     "question": "Tina is a systems analyst and is describing how a system should react to an event. She is creating a use case.",
     "choices": {
-      "04.22.A": {
+      "A_04_22": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.22.B": {
+      "B_04_22": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.23": {
+  "04_23": {
     "question": "Each use case has a name and a number.",
     "choices": {
-      "04.23.A": {
+      "A_04_23": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.23.B": {
+      "B_04_23": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.24": {
+  "04_24": {
     "question": "Austin is a systems analyst. Which of the following people might be the most valuable to him in developing a use case for an accounts payable system upgrade?",
     "choices": {
-      "04.24.A": {
+      "A_04_24": {
         "choice": "Beth, a software vendor for Peachtree Accounting Software",
         "isCorrect": false
       },
-      "04.24.B": {
+      "B_04_24": {
         "choice": "Casey, a fellow analyst who is more experienced in making use cases",
         "isCorrect": false
       },
-      "04.24.C": {
+      "C_04_24": {
         "choice": "Amy, a team manager in the accounts payable department",
         "isCorrect": true
       },
-      "04.24.D": {
+      "D_04_24": {
         "choice": "Bill, a Java programmer in the applications development area.",
         "isCorrect": false
       },
-      "04.24.E": {
+      "E_04_24": {
         "choice": "Lisa, the project manager for the project",
         "isCorrect": false
       }
     }
   },
-  "04.25": {
+  "04_25": {
     "question": "Marta has asked the users of a system to picture themselves performing the processes and to write down those processes in a sequential order. She should get a good idea of what?",
     "choices": {
-      "04.25.A": {
+      "A_04_25": {
         "choice": "The use case",
         "isCorrect": false
       },
-      "04.25.B": {
+      "B_04_25": {
         "choice": "The temporal triggers",
         "isCorrect": false
       },
-      "04.25.C": {
+      "C_04_25": {
         "choice": "The external actors",
         "isCorrect": false
       },
-      "04.25.D": {
+      "D_04_25": {
         "choice": "The elements within steps",
         "isCorrect": false
       },
-      "04.25.E": {
+      "E_04_25": {
         "choice": "The major steps for each use case",
         "isCorrect": true
       }
     }
   },
-  "04.26": {
+  "04_26": {
     "question": "Use cases are diagrams with three components: selection, process, iteration.",
     "choices": {
-      "04.26.A": {
+      "A_04_26": {
         "choice": "True",
         "isCorrect": false
       },
-      "04.26.B": {
+      "B_04_26": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "04.27": {
+  "04_27": {
     "question": "A trigger is based on cost/benefit analysis, like an employee labor report, a sale of an item, or the purchase of new hardware.",
     "choices": {
-      "04.27.A": {
+      "A_04_27": {
         "choice": "True",
         "isCorrect": false
       },
-      "04.27.B": {
+      "B_04_27": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "04.28": {
+  "04_28": {
     "question": "The event that causes the use case to begin is referred to as the name.",
     "choices": {
-      "04.28.A": {
+      "A_04_28": {
         "choice": "True",
         "isCorrect": false
       },
-      "04.28.B": {
+      "B_04_28": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "04.29": {
+  "04_29": {
     "question": "The 'actor' is the external user that triggers the event to which the system responds.",
     "choices": {
-      "04.29.A": {
+      "A_04_29": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.29.B": {
+      "B_04_29": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.30": {
+  "04_30": {
     "question": "Which of the following is probably NOT a step for writing a use case?",
     "choices": {
-      "04.30.A": {
+      "A_04_30": {
         "choice": "Identify the use case",
         "isCorrect": false
       },
-      "04.30.B": {
+      "B_04_30": {
         "choice": "Identify elements within steps",
         "isCorrect": false
       },
-      "04.30.C": {
+      "C_04_30": {
         "choice": "Identify the major steps within each use case",
         "isCorrect": false
       },
-      "04.30.D": {
+      "D_04_30": {
         "choice": "Identify the analyst",
         "isCorrect": true
       },
-      "04.30.E": {
+      "E_04_30": {
         "choice": "Confirm the use case",
         "isCorrect": false
       }
     }
   },
-  "04.31": {
+  "04_31": {
     "question": "External triggers might be something like a customer calling a doctor for an appointment or a student registering for a class.",
     "choices": {
-      "04.31.A": {
+      "A_04_31": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.31.B": {
+      "B_04_31": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.32": {
+  "04_32": {
     "question": "Each use case contains a fairly complete description of all the activities that occur in response to a trigger event.",
     "choices": {
-      "04.32.A": {
+      "A_04_32": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.32.B": {
+      "B_04_32": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.33": {
+  "04_33": {
     "question": "The actor of a use case refers to only a person that interacts with the system.",
     "choices": {
-      "04.33.A": {
+      "A_04_33": {
         "choice": "True",
         "isCorrect": false
       },
-      "04.33.B": {
+      "B_04_33": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "04.34": {
+  "04_34": {
     "question": "Barton is an analyst developing a use case. Which of the following will probably NOT be on his use case?",
     "choices": {
-      "04.34.A": {
+      "A_04_34": {
         "choice": "Description of data flows",
         "isCorrect": true
       },
-      "04.34.B": {
+      "B_04_34": {
         "choice": "Use case name",
         "isCorrect": false
       },
-      "04.34.C": {
+      "C_04_34": {
         "choice": "A use case number",
         "isCorrect": false
       },
-      "04.34.D": {
+      "D_04_34": {
         "choice": "Source for the major inputs",
         "isCorrect": false
       },
-      "04.34.E": {
+      "E_04_34": {
         "choice": "Type of trigger",
         "isCorrect": false
       }
     }
   },
-  "04.35": {
+  "04_35": {
     "question": "A 'temporal' trigger might be which of the following:",
     "choices": {
-      "04.35.A": {
+      "A_04_35": {
         "choice": "The date changes to the first day of the month",
         "isCorrect": true
       },
-      "04.35.B": {
+      "B_04_35": {
         "choice": "A new shipping of goods arrives and needs to be added to the inventory",
         "isCorrect": false
       },
-      "04.35.C": {
+      "C_04_35": {
         "choice": "A patient calls to make an appointment with a doctor",
         "isCorrect": false
       },
-      "04.35.D": {
+      "D_04_35": {
         "choice": "The accounting department needs information for a report",
         "isCorrect": false
       },
-      "04.35.E": {
+      "E_04_35": {
         "choice": "The human resources department needs a tax withholding form to be filled out by a new employee",
         "isCorrect": false
       }
     }
   },
-  "04.36": {
+  "04_36": {
     "question": "The final step in building use cases is to use a CASE analysis tool to verify that the inputs and outputs are discrete items triggered by external events.",
     "choices": {
-      "04.36.A": {
+      "A_04_36": {
         "choice": "True",
         "isCorrect": false
       },
-      "04.36.B": {
+      "B_04_36": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "04.37": {
+  "04_37": {
     "question": "Which of the following is probably NOT a part of most use cases?",
     "choices": {
-      "04.37.A": {
+      "A_04_37": {
         "choice": "Actor",
         "isCorrect": false
       },
-      "04.37.B": {
+      "B_04_37": {
         "choice": "Identification of the trigger",
         "isCorrect": false
       },
-      "04.37.C": {
+      "C_04_37": {
         "choice": "Major inputs descriptions",
         "isCorrect": false
       },
-      "04.37.D": {
+      "D_04_37": {
         "choice": "Major steps performed",
         "isCorrect": false
       },
-      "04.37.E": {
+      "E_04_37": {
         "choice": "Secondary Actor",
         "isCorrect": true
       }
     }
   },
-  "04.38": {
+  "04_38": {
     "question": "Use cases generally have up to 20 major steps spelled out in great detail.",
     "choices": {
-      "04.38.A": {
+      "A_04_38": {
         "choice": "True",
         "isCorrect": false
       },
-      "04.38.B": {
+      "B_04_38": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "04.39": {
+  "04_39": {
     "question": "A use case is a formal way of representing how a business system interacts with its environment.",
     "choices": {
-      "04.39.A": {
+      "A_04_39": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.39.B": {
+      "B_04_39": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.40": {
+  "04_40": {
     "question": "Project managers, business analysts and systems analysts create all use cases without user input.",
     "choices": {
-      "04.40.A": {
+      "A_04_40": {
         "choice": "True",
         "isCorrect": false
       },
-      "04.40.B": {
+      "B_04_40": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "04.41": {
+  "04_41": {
     "question": "Use cases can be identified by reviewing the functional requirements.",
     "choices": {
-      "04.41.A": {
+      "A_04_41": {
         "choice": "True",
         "isCorrect": false
       },
-      "04.41.B": {
+      "B_04_41": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "04.42": {
+  "04_42": {
     "question": "Use cases are a type of 'event-driven modeling'.",
     "choices": {
-      "04.42.A": {
+      "A_04_42": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.42.B": {
+      "B_04_42": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.43": {
+  "04_43": {
     "question": "Each use case has a name, a number, importance level, brief description, primary actor, trigger, major inputs and outputs, and a list of major steps.",
     "choices": {
-      "04.43.A": {
+      "A_04_43": {
         "choice": "True",
         "isCorrect": false
       },
-      "04.43.B": {
+      "B_04_43": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "04.44": {
+  "04_44": {
     "question": "Which is NOT true of use cases?",
     "choices": {
-      "04.44.A": {
+      "A_04_44": {
         "choice": "They illustrates the activities that are performed by the users of the system",
         "isCorrect": false
       },
-      "04.44.B": {
+      "B_04_44": {
         "choice": "They illustrate what starts (or triggers) an event, all the people that are involved, and how the system provides value",
         "isCorrect": true
       },
-      "04.44.C": {
+      "C_04_44": {
         "choice": "They sometimes are called 'business scenarios' (although 'use case' is generally preferred)",
         "isCorrect": false
       },
-      "04.44.D": {
+      "D_04_44": {
         "choice": "They can be thought of as an external or functional view of a business process",
         "isCorrect": false
       },
-      "04.44.E": {
+      "E_04_44": {
         "choice": "They are formal ways of representing how a business system interacts with its environment",
         "isCorrect": false
       }
     }
   },
-  "04.45": {
+  "04_45": {
     "question": "When developing the major inputs and major outputs for a use case, the analyst and users should consider which of the following?",
     "choices": {
-      "04.45.A": {
+      "A_04_45": {
         "choice": "What triggers these inputs and outputs",
         "isCorrect": false
       },
-      "04.45.B": {
+      "B_04_45": {
         "choice": "Using activity elimination to see if these inputs and outputs are really needed",
         "isCorrect": false
       },
-      "04.45.C": {
+      "C_04_45": {
         "choice": "Only the common inputs and outputs",
         "isCorrect": false
       },
-      "04.45.D": {
+      "D_04_45": {
         "choice": "All possible inputs and outputs (even with rare occurrences)",
         "isCorrect": true
       },
-      "04.45.E": {
+      "E_04_45": {
         "choice": "Developing separate use cases for every possible input and every possible output",
         "isCorrect": false
       }
     }
   },
-  "04.46": {
+  "04_46": {
     "question": "Use cases are used to more fully delineate what?",
     "choices": {
-      "04.46.A": {
+      "A_04_46": {
         "choice": "System proposals",
         "isCorrect": false
       },
-      "04.46.B": {
+      "B_04_46": {
         "choice": "Requirements definition",
         "isCorrect": true
       },
-      "04.46.C": {
+      "C_04_46": {
         "choice": "Data flows",
         "isCorrect": false
       },
-      "04.46.D": {
+      "D_04_46": {
         "choice": "System boundaries",
         "isCorrect": false
       },
-      "04.46.E": {
+      "E_04_46": {
         "choice": "Resources used in the system",
         "isCorrect": false
       }
     }
   },
-  "04.47": {
+  "04_47": {
     "question": "Use cases are always numbered sequentially from start to finish.",
     "choices": {
-      "04.47.A": {
+      "A_04_47": {
         "choice": "True",
         "isCorrect": false
       },
-      "04.47.B": {
+      "B_04_47": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "04.48": {
+  "04_48": {
     "question": "Special cases (like customer cancels an appointment or returns an item) are what?",
     "choices": {
-      "04.48.A": {
+      "A_04_48": {
         "choice": "Not of importance at this stage",
         "isCorrect": false
       },
-      "04.48.B": {
+      "B_04_48": {
         "choice": "Described on special 'exception' use cases",
         "isCorrect": false
       },
-      "04.48.C": {
+      "C_04_48": {
         "choice": "Given use case ID's of \"SC\" (for special case) and a number",
         "isCorrect": false
       },
-      "04.48.D": {
+      "D_04_48": {
         "choice": "Frequently overlooked by users",
         "isCorrect": true
       },
-      "04.48.E": {
+      "E_04_48": {
         "choice": "Written as exceptions at the bottom of the relevant use case",
         "isCorrect": false
       }
     }
   },
-  "04.49": {
+  "04_49": {
     "question": "Use cases can vary from one organization to another in terms of the content included.",
     "choices": {
-      "04.49.A": {
+      "A_04_49": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.49.B": {
+      "B_04_49": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.50": {
+  "04_50": {
     "question": "Each use case has the same name (like \"Customer Relationship Management System\") followed by an identifying letter (\"A\", \"B\", etc.).",
     "choices": {
-      "04.50.A": {
+      "A_04_50": {
         "choice": "True",
         "isCorrect": false
       },
-      "04.50.B": {
+      "B_04_50": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "04.51": {
+  "04_51": {
     "question": "The 'actor' is the internal action that occurs based on a SQL query (like: sort, select).",
     "choices": {
-      "04.51.A": {
+      "A_04_51": {
         "choice": "True",
         "isCorrect": false
       },
-      "04.51.B": {
+      "B_04_51": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "04.52": {
+  "04_52": {
     "question": "Barb is an analyst developing a use case. Which of the following will probably NOT be on her use case?",
     "choices": {
-      "04.52.A": {
+      "A_04_52": {
         "choice": "Importance level",
         "isCorrect": false
       },
-      "04.52.B": {
+      "B_04_52": {
         "choice": "Short Description",
         "isCorrect": false
       },
-      "04.52.C": {
+      "C_04_52": {
         "choice": "Information for steps",
         "isCorrect": false
       },
-      "04.52.D": {
+      "D_04_52": {
         "choice": "Destination for the major inputs",
         "isCorrect": true
       },
-      "04.52.E": {
+      "E_04_52": {
         "choice": "Type of trigger",
         "isCorrect": false
       }
     }
   },
-  "04.53": {
+  "04_53": {
     "question": "A use case depicts a set of activities performed to produce some output result.",
     "choices": {
-      "04.53.A": {
+      "A_04_53": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.53.B": {
+      "B_04_53": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.54": {
+  "04_54": {
     "question": "Triggers are referred to as external or internal.",
     "choices": {
-      "04.54.A": {
+      "A_04_54": {
         "choice": "True",
         "isCorrect": false
       },
-      "04.54.B": {
+      "B_04_54": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "04.55": {
+  "04_55": {
     "question": "After working with Chris (who is a staff member in the registrar's office) on major steps in the registration process, Maureen (a systems analyst) will next do what?",
     "choices": {
-      "04.55.A": {
+      "A_04_55": {
         "choice": "Create use cases",
         "isCorrect": true
       },
-      "04.55.B": {
+      "B_04_55": {
         "choice": "Create narrative storyboards",
         "isCorrect": false
       },
-      "04.55.C": {
+      "C_04_55": {
         "choice": "Create data-entity maps",
         "isCorrect": false
       },
-      "04.55.D": {
+      "D_04_55": {
         "choice": "Create user interface screens",
         "isCorrect": false
       },
-      "04.55.E": {
+      "E_04_55": {
         "choice": "Discuss these steps with Thomas, the project manager",
         "isCorrect": false
       }
     }
   },
-  "04.56": {
+  "04_56": {
     "question": "Use cases illustrate the activities that are performed by the users of the system.",
     "choices": {
-      "04.56.A": {
+      "A_04_56": {
         "choice": "True",
         "isCorrect": true
       },
-      "04.56.B": {
+      "B_04_56": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "04.57": {
+  "04_57": {
     "question": "As a last step in building a use case for the study-abroad registration system, Brianna will do what?",
     "choices": {
-      "04.57.A": {
+      "A_04_57": {
         "choice": "Ask Drew in the students affairs office to confirm the use case",
         "isCorrect": false
       },
-      "04.57.B": {
+      "B_04_57": {
         "choice": "Ask Patrick in the study abroad office to confirm the use case",
         "isCorrect": false
       },
-      "04.57.C": {
+      "C_04_57": {
         "choice": "Ask Wendy in the registrar's office to confirm the use case",
         "isCorrect": true
       },
-      "04.57.D": {
+      "D_04_57": {
         "choice": "Ask Jonathan, a student who just completed a study-abroad experience, to confirm the use case",
         "isCorrect": false
       },
-      "04.57.E": {
+      "E_04_57": {
         "choice": "Ask Taylor, another systems analyst to confirm the use case",
         "isCorrect": false
       }
     }
   },
-  "04.58": {
+  "04_58": {
     "question": "You might have to go back and adjust the steps in a use case, if what happens?",
     "choices": {
-      "04.58.A": {
+      "A_04_58": {
         "choice": "There are more than three major inputs to a step",
         "isCorrect": false
       },
-      "04.58.B": {
+      "B_04_58": {
         "choice": "The importance level is 'high'",
         "isCorrect": false
       },
-      "04.58.C": {
+      "C_04_58": {
         "choice": "The primary actor is an external customer",
         "isCorrect": false
       },
-      "04.58.D": {
+      "D_04_58": {
         "choice": "The trigger is an external one",
         "isCorrect": false
       },
-      "04.58.E": {
+      "E_04_58": {
         "choice": "The steps are of varying size",
         "isCorrect": true
       }
     }
   },
-  "04.59": {
+  "04_59": {
     "question": "A use case helps do which of the following?",
     "choices": {
-      "04.59.A": {
+      "A_04_59": {
         "choice": "Understand system activities and requirements",
         "isCorrect": true
       },
-      "04.59.B": {
+      "B_04_59": {
         "choice": "Clarify ongoing costs for a system",
         "isCorrect": false
       },
-      "04.59.C": {
+      "C_04_59": {
         "choice": "Identify risks with the project",
         "isCorrect": false
       },
-      "04.59.D": {
+      "D_04_59": {
         "choice": "Refine project management milestones",
         "isCorrect": false
       },
-      "04.59.E": {
+      "E_04_59": {
         "choice": "Define interview questions",
         "isCorrect": false
       }
     }
   },
-  "04.60": {
+  "04_60": {
     "question": "Some organizations may choose to include additional sections on their use case forms, these may include which of the following?",
     "multiSelect": true,
     "choices": {
-      "04.60.A": {
+      "A_04_60": {
         "choice": "Frequency of use",
         "isCorrect": true
       },
-      "04.60.B": {
+      "B_04_60": {
         "choice": "Notes and issues",
         "isCorrect": true
       },
-      "04.60.C": {
+      "C_04_60": {
         "choice": "Alternative paths",
         "isCorrect": true
       },
-      "04.60.D": {
+      "D_04_60": {
         "choice": "Business rules",
         "isCorrect": true
       }

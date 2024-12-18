@@ -27,7 +27,7 @@ function loadData() {
 }
 
 function getQuestion(id) {
-  const module = id.split(".")[0];
+  const module = id.split("_")[0];
   return modulesData[module].questions[id];
 }
 
@@ -58,13 +58,13 @@ function learnQuiz(quiz) {
   const learned = quiz.querySelectorAll(".question:not(.wrong-answer)");
   for (const question of learned) {
     const id = question.id;
-    const module = id.split(".")[0];
+    const module = id.split("_")[0];
     modulesData[module].learn(id);
   }
   const mistakes = quiz.querySelectorAll(".question.wrong-answer");
   for (const question of mistakes) {
     const id = question.id;
-    const module = id.split(".")[0];
+    const module = id.split("_")[0];
     modulesData[module].unlearn(id);
   }
   localStorage.setItem("coverage", JSON.stringify(modulesCoverage));

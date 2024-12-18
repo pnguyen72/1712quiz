@@ -1,1196 +1,1196 @@
 {
-  "11.01": {
+  "11_01": {
     "question": "A transaction structure in a structure chart contains a control module that calls subordinate modules and frequently occur with menus.",
     "choices": {
-      "11.01.A": {
+      "A_11_01": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.01.B": {
+      "B_11_01": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.02": {
+  "11_02": {
     "question": "_____ refers to how well the lines of code within each module in a structure chart relate to each other.",
     "choices": {
-      "11.02.A": {
+      "A_11_02": {
         "choice": "Calculation",
         "isCorrect": false
       },
-      "11.02.B": {
+      "B_11_02": {
         "choice": "Cohesion",
         "isCorrect": true
       },
-      "11.02.C": {
+      "C_11_02": {
         "choice": "Control",
         "isCorrect": false
       },
-      "11.02.D": {
+      "D_11_02": {
         "choice": "Coupling",
         "isCorrect": false
       },
-      "11.02.E": {
+      "E_11_02": {
         "choice": "Fan-in",
         "isCorrect": false
       }
     }
   },
-  "11.03": {
+  "11_03": {
     "question": "When designing programs, structure charts help analysts create programs that are easy to understand and maintain.",
     "choices": {
-      "11.03.A": {
+      "A_11_03": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.03.B": {
+      "B_11_03": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.04": {
+  "11_04": {
     "question": "Many of the data stores in the logical DFD will be changed into encrypted word processing documents when a physical DFD is developed.",
     "choices": {
-      "11.04.A": {
+      "A_11_04": {
         "choice": "True",
         "isCorrect": false
       },
-      "11.04.B": {
+      "B_11_04": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "11.05": {
+  "11_05": {
     "question": "The fifth step in creating a Physical Data Flow Diagram is what?",
     "choices": {
-      "11.05.A": {
+      "A_11_05": {
         "choice": "Update the metadata in the CASE repository",
         "isCorrect": true
       },
-      "11.05.B": {
+      "B_11_05": {
         "choice": "Draw a human-machine boundary",
         "isCorrect": false
       },
-      "11.05.C": {
+      "C_11_05": {
         "choice": "Add implementation references",
         "isCorrect": false
       },
-      "11.05.D": {
+      "D_11_05": {
         "choice": "Add system-related data stores, data flows and processes",
         "isCorrect": false
       },
-      "11.05.E": {
+      "E_11_05": {
         "choice": "Update the data elements in the data flows",
         "isCorrect": false
       }
     }
   },
-  "11.06": {
+  "11_06": {
     "question": "In a structure chart, a <i>transaction structure</i> _____.",
     "choices": {
-      "11.06.A": {
+      "A_11_06": {
         "choice": "contains a control module that calls several subordinate modules in sequence, after which something \"happens\"",
         "isCorrect": false
       },
-      "11.06.B": {
+      "B_11_06": {
         "choice": "contains a control module that calls subordinate modules, each handling a particular transaction",
         "isCorrect": true
       },
-      "11.06.C": {
+      "C_11_06": {
         "choice": "contains a transactional loop",
         "isCorrect": false
       },
-      "11.06.D": {
+      "D_11_06": {
         "choice": "is a subordinate module that handles a particular transaction",
         "isCorrect": false
       },
-      "11.06.E": {
+      "E_11_06": {
         "choice": "is subordinate to subordinal modules",
         "isCorrect": false
       }
     }
   },
-  "11.07": {
+  "11_07": {
     "question": "When changing a logical DFD into a physical DFD, it might be necessary to do what?",
     "choices": {
-      "11.07.A": {
+      "A_11_07": {
         "choice": "Add system-related data stores, data flows and processes",
         "isCorrect": true
       },
-      "11.07.B": {
+      "B_11_07": {
         "choice": "Normalize the logical DFD into 3NF",
         "isCorrect": false
       },
-      "11.07.C": {
+      "C_11_07": {
         "choice": "Create the user-interface with smaller fonts",
         "isCorrect": false
       },
-      "11.07.D": {
+      "D_11_07": {
         "choice": "Change the system architecture to three-tiered architecture",
         "isCorrect": false
       },
-      "11.07.E": {
+      "E_11_07": {
         "choice": "Delete extraneous data stores and delete extraneous data flows",
         "isCorrect": false
       }
     }
   },
-  "11.08": {
+  "11_08": {
     "question": "When designing programs, structure charts show all the components of code that must be included in a program at a high level.",
     "choices": {
-      "11.08.A": {
+      "A_11_08": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.08.B": {
+      "B_11_08": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.09": {
+  "11_09": {
     "question": "Generally, transaction structures on a structure chart will have what?",
     "choices": {
-      "11.09.A": {
+      "A_11_09": {
         "choice": "Many afferent processes",
         "isCorrect": false
       },
-      "11.09.B": {
+      "B_11_09": {
         "choice": "Many efferent processes",
         "isCorrect": true
       },
-      "11.09.C": {
+      "C_11_09": {
         "choice": "Many data couples",
         "isCorrect": false
       },
-      "11.09.D": {
+      "D_11_09": {
         "choice": "Many control couples",
         "isCorrect": false
       },
-      "11.09.E": {
+      "E_11_09": {
         "choice": "Many conditional couples",
         "isCorrect": false
       }
     }
   },
-  "11.10": {
+  "11_10": {
     "question": "An audit control / audit logfile might be a system related process, data flow and data store that would be added when creating physical DFDs.",
     "choices": {
-      "11.10.A": {
+      "A_11_10": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.10.B": {
+      "B_11_10": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.11": {
+  "11_11": {
     "question": "The fourth step in creating a Physical Data Flow Diagram is what?",
     "choices": {
-      "11.11.A": {
+      "A_11_11": {
         "choice": "Update the metadata in the CASE repository",
         "isCorrect": false
       },
-      "11.11.B": {
+      "B_11_11": {
         "choice": "Draw a human-machine boundary",
         "isCorrect": false
       },
-      "11.11.C": {
+      "C_11_11": {
         "choice": "Add implementation references",
         "isCorrect": false
       },
-      "11.11.D": {
+      "D_11_11": {
         "choice": "Add system-related data stores, data flows and processes",
         "isCorrect": false
       },
-      "11.11.E": {
+      "E_11_11": {
         "choice": "Update the data elements in the data flows",
         "isCorrect": true
       }
     }
   },
-  "11.12": {
+  "11_12": {
     "question": "Jim is working from a leveled DFD and creating structure charts. He is finding that the lower levels of the DFD generally correspond to transform structures.",
     "choices": {
-      "11.12.A": {
+      "A_11_12": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.12.B": {
+      "B_11_12": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.13": {
+  "11_13": {
     "question": "What is pseudocode?",
     "choices": {
-      "11.13.A": {
+      "A_11_13": {
         "choice": "A language popularized by Feinstein and Longenecker in the 1990&#39;s",
         "isCorrect": false
       },
-      "11.13.B": {
+      "B_11_13": {
         "choice": "A detailed outline of the lines of code that need to be written",
         "isCorrect": true
       },
-      "11.13.C": {
+      "C_11_13": {
         "choice": "A &#39;pretend&#39; syntax inherent in all CASE tools",
         "isCorrect": false
       },
-      "11.13.D": {
+      "D_11_13": {
         "choice": "The translation of code into ASCII",
         "isCorrect": false
       },
-      "11.13.E": {
+      "E_11_13": {
         "choice": "A dialect of Visual Basic only used in program design",
         "isCorrect": false
       }
     }
   },
-  "11.14": {
+  "11_14": {
     "question": "The Human-Machine Boundary is what?",
     "choices": {
-      "11.14.A": {
+      "A_11_14": {
         "choice": "Is the keyboard and screen",
         "isCorrect": false
       },
-      "11.14.B": {
+      "B_11_14": {
         "choice": "Builds on research in ergonometric",
         "isCorrect": false
       },
-      "11.14.C": {
+      "C_11_14": {
         "choice": "Is a line drawn on the physical DFD to separate human action from automated processes",
         "isCorrect": true
       },
-      "11.14.D": {
+      "D_11_14": {
         "choice": "Is a part of developing the HCI interface",
         "isCorrect": false
       },
-      "11.14.E": {
+      "E_11_14": {
         "choice": "Separates where manual processes are separated by human completed processes",
         "isCorrect": false
       }
     }
   },
-  "11.15": {
+  "11_15": {
     "question": "In a structure chart, the element that is drawn as an empty circle with an attached arrow is known as a(n) _____.",
     "choices": {
-      "11.15.A": {
+      "A_11_15": {
         "choice": "conditional line",
         "isCorrect": false
       },
-      "11.15.B": {
+      "B_11_15": {
         "choice": "connector",
         "isCorrect": false
       },
-      "11.15.C": {
+      "C_11_15": {
         "choice": "control couple",
         "isCorrect": false
       },
-      "11.15.D": {
+      "D_11_15": {
         "choice": "data couple",
         "isCorrect": true
       },
-      "11.15.E": {
+      "E_11_15": {
         "choice": "module",
         "isCorrect": false
       }
     }
   },
-  "11.16": {
+  "11_16": {
     "question": "Generally, transform structures on a structure chart will have what?",
     "choices": {
-      "11.16.A": {
+      "A_11_16": {
         "choice": "Many afferent processes",
         "isCorrect": true
       },
-      "11.16.B": {
+      "B_11_16": {
         "choice": "Many efferent processes",
         "isCorrect": false
       },
-      "11.16.C": {
+      "C_11_16": {
         "choice": "Many data couples",
         "isCorrect": false
       },
-      "11.16.D": {
+      "D_11_16": {
         "choice": "Many control couples",
         "isCorrect": false
       },
-      "11.16.E": {
+      "E_11_16": {
         "choice": "Many conditional couples",
         "isCorrect": false
       }
     }
   },
-  "11.17": {
+  "11_17": {
     "question": "Structure charts show the user interface.",
     "choices": {
-      "11.17.A": {
+      "A_11_17": {
         "choice": "True",
         "isCorrect": false
       },
-      "11.17.B": {
+      "B_11_17": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "11.18": {
+  "11_18": {
     "question": "Functional, coincidental, and temporal are all types of cohesion.",
     "choices": {
-      "11.18.A": {
+      "A_11_18": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.18.B": {
+      "B_11_18": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.19": {
+  "11_19": {
     "question": "Micah is adding implementation resources to change a logical DFD into a physical DFD. He should describe databases, files, tables, and processes as they will be implemented on the computer.",
     "choices": {
-      "11.19.A": {
+      "A_11_19": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.19.B": {
+      "B_11_19": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.20": {
+  "11_20": {
     "question": "When designing programs, structure charts are arranged in a hierarchical format that implies sequence.",
     "choices": {
-      "11.20.A": {
+      "A_11_20": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.20.B": {
+      "B_11_20": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.21": {
+  "11_21": {
     "question": "Because project teams rely more on packaged software, program design is no longer needed.",
     "choices": {
-      "11.21.A": {
+      "A_11_21": {
         "choice": "True",
         "isCorrect": false
       },
-      "11.21.B": {
+      "B_11_21": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "11.22": {
+  "11_22": {
     "question": "A structure chart is often completed in one attempt.",
     "choices": {
-      "11.22.A": {
+      "A_11_22": {
         "choice": "True",
         "isCorrect": false
       },
-      "11.22.B": {
+      "B_11_22": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "11.23": {
+  "11_23": {
     "question": "When designing programs, structure charts are generally implemented with control flags that pass from the control modules to the subordinate modules.",
     "choices": {
-      "11.23.A": {
+      "A_11_23": {
         "choice": "True",
         "isCorrect": false
       },
-      "11.23.B": {
+      "B_11_23": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "11.24": {
+  "11_24": {
     "question": "Couples in structure charts always show two modules that are executed together and are drawn with horizontal lines at the top and bottom.",
     "choices": {
-      "11.24.A": {
+      "A_11_24": {
         "choice": "True",
         "isCorrect": false
       },
-      "11.24.B": {
+      "B_11_24": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "11.25": {
+  "11_25": {
     "question": "The first step in creating a Physical Data Flow Diagram is what?",
     "choices": {
-      "11.25.A": {
+      "A_11_25": {
         "choice": "Update the metadata in the CASE repository",
         "isCorrect": false
       },
-      "11.25.B": {
+      "B_11_25": {
         "choice": "Draw a human-machine boundary",
         "isCorrect": false
       },
-      "11.25.C": {
+      "C_11_25": {
         "choice": "Add implementation references",
         "isCorrect": true
       },
-      "11.25.D": {
+      "D_11_25": {
         "choice": "Add system-related data stores, data flows and processes",
         "isCorrect": false
       },
-      "11.25.E": {
+      "E_11_25": {
         "choice": "Update the data elements in the data flows",
         "isCorrect": false
       }
     }
   },
-  "11.26": {
+  "11_26": {
     "question": "A general suggestion about using couples in drawing structure charts is what?",
     "choices": {
-      "11.26.A": {
+      "A_11_26": {
         "choice": "The use of many couples clarify the processing",
         "isCorrect": false
       },
-      "11.26.B": {
+      "B_11_26": {
         "choice": "It is best to be conservative when applying couples to your diagram",
         "isCorrect": true
       },
-      "11.26.C": {
+      "C_11_26": {
         "choice": "To use &#39;combination&#39; couples when both data couples and control couples are needed",
         "isCorrect": false
       },
-      "11.26.D": {
+      "D_11_26": {
         "choice": "You should have at least twice as many afferent couples as efferent couples",
         "isCorrect": false
       },
-      "11.26.E": {
+      "E_11_26": {
         "choice": "Use only data couples and no control couples",
         "isCorrect": false
       }
     }
   },
-  "11.27": {
+  "11_27": {
     "question": "The third step in creating a Physical Data Flow Diagram is what?",
     "choices": {
-      "11.27.A": {
+      "A_11_27": {
         "choice": "Update the metadata in the CASE repository",
         "isCorrect": false
       },
-      "11.27.B": {
+      "B_11_27": {
         "choice": "Draw a human-machine boundary",
         "isCorrect": false
       },
-      "11.27.C": {
+      "C_11_27": {
         "choice": "Add implementation references",
         "isCorrect": false
       },
-      "11.27.D": {
+      "D_11_27": {
         "choice": "Add system-related data stores, data flows, and processes",
         "isCorrect": true
       },
-      "11.27.E": {
+      "E_11_27": {
         "choice": "Update the data elements in the data flows",
         "isCorrect": false
       }
     }
   },
-  "11.28": {
+  "11_28": {
     "question": "As a structure chart is constructed, it is generally best to build modules with which of the following?",
     "choices": {
-      "11.28.A": {
+      "A_11_28": {
         "choice": "High cohesion",
         "isCorrect": true
       },
-      "11.28.B": {
+      "B_11_28": {
         "choice": "Highly coupled",
         "isCorrect": false
       },
-      "11.28.C": {
+      "C_11_28": {
         "choice": "High fan-out",
         "isCorrect": false
       },
-      "11.28.D": {
+      "D_11_28": {
         "choice": "Have the word \"and\" in the module title",
         "isCorrect": false
       },
-      "11.28.E": {
+      "E_11_28": {
         "choice": "A high level of coincidental cohesion",
         "isCorrect": false
       }
     }
   },
-  "11.29": {
+  "11_29": {
     "question": "In determining if a process is to be automated, the project team will do all of the following EXCEPT:",
     "choices": {
-      "11.29.A": {
+      "A_11_29": {
         "choice": "Weigh the costs",
         "isCorrect": false
       },
-      "11.29.B": {
+      "B_11_29": {
         "choice": "Redraw the logical DFD as a combined logical/physical DFD",
         "isCorrect": true
       },
-      "11.29.C": {
+      "C_11_29": {
         "choice": "Determine benefits",
         "isCorrect": false
       },
-      "11.29.D": {
+      "D_11_29": {
         "choice": "Evaluate the efficiency",
         "isCorrect": false
       },
-      "11.29.E": {
+      "E_11_29": {
         "choice": "Consider the integrity of the process to the system",
         "isCorrect": false
       }
     }
   },
-  "11.30": {
+  "11_30": {
     "question": "Because (a) preexisting code needs to be understood, organized, and pieced together; and (b) it is still common for the project team to have to write some code and adapt packages to the business environment, it is therefore good for analysts to fully understand program design.",
     "choices": {
-      "11.30.A": {
+      "A_11_30": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.30.B": {
+      "B_11_30": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.31": {
+  "11_31": {
     "question": "Analysts can build in the three structures of sequence, selection and iteration into structure charts.",
     "choices": {
-      "11.31.A": {
+      "A_11_31": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.31.B": {
+      "B_11_31": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.32": {
+  "11_32": {
     "question": "Every part of a system that is not automated will what?",
     "choices": {
-      "11.32.A": {
+      "A_11_32": {
         "choice": "Be ignored in the implementation of the system",
         "isCorrect": false
       },
-      "11.32.B": {
+      "B_11_32": {
         "choice": "Be drawn as only logical DFDs not physical DFDs",
         "isCorrect": false
       },
-      "11.32.C": {
+      "C_11_32": {
         "choice": "Be outside the human-machine boundary",
         "isCorrect": true
       },
-      "11.32.D": {
+      "D_11_32": {
         "choice": "Go back through the analysis phase to become automated",
         "isCorrect": false
       },
-      "11.32.E": {
+      "E_11_32": {
         "choice": "Will be drawn as diamond shapes on the structure charts",
         "isCorrect": false
       }
     }
   },
-  "11.33": {
+  "11_33": {
     "question": "Analysts can use structure charts to design programming logic.",
     "choices": {
-      "11.33.A": {
+      "A_11_33": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.33.B": {
+      "B_11_33": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.34": {
+  "11_34": {
     "question": "There are some &#39;system-related&#39; data stores, data flows and processes that must be added when creating the physical DFD.",
     "choices": {
-      "11.34.A": {
+      "A_11_34": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.34.B": {
+      "B_11_34": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.35": {
+  "11_35": {
     "question": "Beth is considering a simple process for immediate orders. When processing an immediate order, a phone clerk writes the order on a paper form. Which of the following might be a reason NOT to automate this process?",
     "choices": {
-      "11.35.A": {
+      "A_11_35": {
         "choice": "The clerk could make errors when writing the information wrong on the paper form",
         "isCorrect": false
       },
-      "11.35.B": {
+      "B_11_35": {
         "choice": "The paper form could be lost when sent to the order filling /shipping area",
         "isCorrect": false
       },
-      "11.35.C": {
+      "C_11_35": {
         "choice": "The writing on the paper form could be hard to decipher",
         "isCorrect": false
       },
-      "11.35.D": {
+      "D_11_35": {
         "choice": "The costs to automate might be significantly higher than doing it manually",
         "isCorrect": true
       },
-      "11.35.E": {
+      "E_11_35": {
         "choice": "The time to get the paper form from the clerk&#39;s desk to the order filling / shipping area is one day or longer",
         "isCorrect": false
       }
     }
   },
-  "11.36": {
+  "11_36": {
     "question": "A diamond on a structure chart shows sequence – like a baseball player would go to first base, then second, third and home.",
     "choices": {
-      "11.36.A": {
+      "A_11_36": {
         "choice": "True",
         "isCorrect": false
       },
-      "11.36.B": {
+      "B_11_36": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "11.37": {
+  "11_37": {
     "question": "Generally, transaction structures occur at lower levels of a structure chart.",
     "choices": {
-      "11.37.A": {
+      "A_11_37": {
         "choice": "True",
         "isCorrect": false
       },
-      "11.37.B": {
+      "B_11_37": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "11.38": {
+  "11_38": {
     "question": "The second step in creating a Physical Data Flow Diagram is what?",
     "choices": {
-      "11.38.A": {
+      "A_11_38": {
         "choice": "Update the metadata in the CASE repository",
         "isCorrect": false
       },
-      "11.38.B": {
+      "B_11_38": {
         "choice": "Draw a human-machine boundary",
         "isCorrect": true
       },
-      "11.38.C": {
+      "C_11_38": {
         "choice": "Add implementation references",
         "isCorrect": false
       },
-      "11.38.D": {
+      "D_11_38": {
         "choice": "Add system-related data stores, data flows and processes",
         "isCorrect": false
       },
-      "11.38.E": {
+      "E_11_38": {
         "choice": "Update the data elements in the data flows",
         "isCorrect": false
       }
     }
   },
-  "11.39": {
+  "11_39": {
     "question": "When drawing the human-machine boundary, all processes in the physical DFD will be automated, so only external entities will be excluded.",
     "choices": {
-      "11.39.A": {
+      "A_11_39": {
         "choice": "True",
         "isCorrect": false
       },
-      "11.39.B": {
+      "B_11_39": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "11.40": {
+  "11_40": {
     "question": "A good indication of needing a transaction structure on a structure chart occurs when a DFD shows a single data flow entering a process that produces multiple data flows as outputs.",
     "choices": {
-      "11.40.A": {
+      "A_11_40": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.40.B": {
+      "B_11_40": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.41": {
+  "11_41": {
     "question": "Control couples show the passing of parameters or system related messages between modules (like &#39;end-of-file&#39;).",
     "choices": {
-      "11.41.A": {
+      "A_11_41": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.41.B": {
+      "B_11_41": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.42": {
+  "11_42": {
     "question": "Analysts design programs in the design phase of the SDLC, programmers code programs in the Implementation phase.",
     "choices": {
-      "11.42.A": {
+      "A_11_42": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.42.B": {
+      "B_11_42": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.43": {
+  "11_43": {
     "question": "A control module can also be called a library module and is a set of reusable code.",
     "choices": {
-      "11.43.A": {
+      "A_11_43": {
         "choice": "True",
         "isCorrect": false
       },
-      "11.43.B": {
+      "B_11_43": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "11.44": {
+  "11_44": {
     "question": "An afferent process is an input process on a structure chart.",
     "choices": {
-      "11.44.A": {
+      "A_11_44": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.44.B": {
+      "B_11_44": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.45": {
+  "11_45": {
     "question": "The three basic kinds of processes on a process module are afferent, central, and efferent.",
     "choices": {
-      "11.45.A": {
+      "A_11_45": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.45.B": {
+      "B_11_45": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.46": {
+  "11_46": {
     "question": "A signal of poor cohesion could be the presence of control flags that are passed down to subordinate modules.",
     "choices": {
-      "11.46.A": {
+      "A_11_46": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.46.B": {
+      "B_11_46": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.47": {
+  "11_47": {
     "question": "Physical DFDs show additional details, such as what tables in the database replace data stores on the logical DFD",
     "choices": {
-      "11.47.A": {
+      "A_11_47": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.47.B": {
+      "B_11_47": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.48": {
+  "11_48": {
     "question": "Structure charts show sequence.",
     "choices": {
-      "11.48.A": {
+      "A_11_48": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.48.B": {
+      "B_11_48": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.49": {
+  "11_49": {
     "question": "A temptation when moving from analysis to design of a system is to jump right into coding.",
     "choices": {
-      "11.49.A": {
+      "A_11_49": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.49.B": {
+      "B_11_49": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.50": {
+  "11_50": {
     "question": "Fan-In describes the number of subordinates that communicate with the control module.",
     "choices": {
-      "11.50.A": {
+      "A_11_50": {
         "choice": "True",
         "isCorrect": false
       },
-      "11.50.B": {
+      "B_11_50": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "11.51": {
+  "11_51": {
     "question": "When designing programs, structure charts may have on-page and off-page connectors.",
     "choices": {
-      "11.51.A": {
+      "A_11_51": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.51.B": {
+      "B_11_51": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.52": {
+  "11_52": {
     "question": "The three types of basic processes on a process model are which of the following?",
     "choices": {
-      "11.52.A": {
+      "A_11_52": {
         "choice": "Sequence, selection and iteration processes",
         "isCorrect": false
       },
-      "11.52.B": {
+      "B_11_52": {
         "choice": "Navigation, status and work processes",
         "isCorrect": false
       },
-      "11.52.C": {
+      "C_11_52": {
         "choice": "Afferent, central and efferent processes",
         "isCorrect": true
       },
-      "11.52.D": {
+      "D_11_52": {
         "choice": "Batch, online and real time processes",
         "isCorrect": false
       },
-      "11.52.E": {
+      "E_11_52": {
         "choice": "Singular, bilateral and library processes",
         "isCorrect": false
       }
     }
   },
-  "11.53": {
+  "11_53": {
     "question": "A structure chart shows sequence, selection and data flows.",
     "choices": {
-      "11.53.A": {
+      "A_11_53": {
         "choice": "True",
         "isCorrect": false
       },
-      "11.53.B": {
+      "B_11_53": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "11.54": {
+  "11_54": {
     "question": "Reusable modules, which are represented in the structure chart as rectangles with vertical lines on both sides, may often appear several times in a structure chart. These are called _____ modules.",
     "choices": {
-      "11.54.A": {
+      "A_11_54": {
         "choice": "conditional",
         "isCorrect": false
       },
-      "11.54.B": {
+      "B_11_54": {
         "choice": "control",
         "isCorrect": false
       },
-      "11.54.C": {
+      "C_11_54": {
         "choice": "library",
         "isCorrect": true
       },
-      "11.54.D": {
+      "D_11_54": {
         "choice": "loop",
         "isCorrect": false
       },
-      "11.54.E": {
+      "E_11_54": {
         "choice": "off-page connector",
         "isCorrect": false
       }
     }
   },
-  "11.55": {
+  "11_55": {
     "question": "In a structure chart, the purpose of a control couple is to do what?",
     "choices": {
-      "11.55.A": {
+      "A_11_55": {
         "choice": "Pass parameters from a subordinate module to the control module",
         "isCorrect": true
       },
-      "11.55.B": {
+      "B_11_55": {
         "choice": "Pass parameters from the control modules to a subordinate module",
         "isCorrect": false
       },
-      "11.55.C": {
+      "C_11_55": {
         "choice": "Pass data from a subordinate module to the control module",
         "isCorrect": false
       },
-      "11.55.D": {
+      "D_11_55": {
         "choice": "Pass data from the control module to a subordinate module",
         "isCorrect": false
       },
-      "11.55.E": {
+      "E_11_55": {
         "choice": "Chaperone the dance for programmers on the project",
         "isCorrect": false
       }
     }
   },
-  "11.56": {
+  "11_56": {
     "question": "Structure charts show couples.",
     "choices": {
-      "11.56.A": {
+      "A_11_56": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.56.B": {
+      "B_11_56": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.57": {
+  "11_57": {
     "question": "A structure chart is composed of modules that work together to form a program.",
     "choices": {
-      "11.57.A": {
+      "A_11_57": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.57.B": {
+      "B_11_57": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.58": {
+  "11_58": {
     "question": "Structure charts emphasize structure and reusability.",
     "choices": {
-      "11.58.A": {
+      "A_11_58": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.58.B": {
+      "B_11_58": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.59": {
+  "11_59": {
     "question": "An effective process is an output process on a structure chart.",
     "choices": {
-      "11.59.A": {
+      "A_11_59": {
         "choice": "True",
         "isCorrect": false
       },
-      "11.59.B": {
+      "B_11_59": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "11.60": {
+  "11_60": {
     "question": "Data couples are shown by arrows with empty circles and show how data flows between modules.",
     "choices": {
-      "11.60.A": {
+      "A_11_60": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.60.B": {
+      "B_11_60": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.61": {
+  "11_61": {
     "question": "By definition, external entities on the DFD are what?",
     "choices": {
-      "11.61.A": {
+      "A_11_61": {
         "choice": "Are used as the starting point for the physical data flow diagram",
         "isCorrect": false
       },
-      "11.61.B": {
+      "B_11_61": {
         "choice": "Are outside the scope of the system",
         "isCorrect": true
       },
-      "11.61.C": {
+      "C_11_61": {
         "choice": "Will be the top of the structure chart",
         "isCorrect": false
       },
-      "11.61.D": {
+      "D_11_61": {
         "choice": "Will become database table entries",
         "isCorrect": false
       },
-      "11.61.E": {
+      "E_11_61": {
         "choice": "Are updated with metadata to become part of the physical DFD",
         "isCorrect": false
       }
     }
   },
-  "11.62": {
+  "11_62": {
     "question": "When creating the physical DFD, you may want to capture system information like date and time of update and user-id of the person who did the update.",
     "choices": {
-      "11.62.A": {
+      "A_11_62": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.62.B": {
+      "B_11_62": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.63": {
+  "11_63": {
     "question": "In most automated cases, data stores from logical DFDs will be converted to what?",
     "choices": {
-      "11.63.A": {
+      "A_11_63": {
         "choice": "Binary tables",
         "isCorrect": false
       },
-      "11.63.B": {
+      "B_11_63": {
         "choice": "DVD disks",
         "isCorrect": false
       },
-      "11.63.C": {
+      "C_11_63": {
         "choice": "A thumb drive",
         "isCorrect": false
       },
-      "11.63.D": {
+      "D_11_63": {
         "choice": "Into database files / tables",
         "isCorrect": true
       },
-      "11.63.E": {
+      "E_11_63": {
         "choice": "Encrypted hexadecimal values",
         "isCorrect": false
       }
     }
   },
-  "11.64": {
+  "11_64": {
     "question": "There are two symbols that describe special types of control in a structure chart. They are a curved arrow and a diamond. These symbols represent _____ and _____.",
     "choices": {
-      "11.64.A": {
+      "A_11_64": {
         "choice": "connector, conditional line",
         "isCorrect": false
       },
-      "11.64.B": {
+      "B_11_64": {
         "choice": "control, subordinate",
         "isCorrect": false
       },
-      "11.64.C": {
+      "C_11_64": {
         "choice": "library module, conditional line",
         "isCorrect": false
       },
-      "11.64.D": {
+      "D_11_64": {
         "choice": "loop, conditional line",
         "isCorrect": true
       },
-      "11.64.E": {
+      "E_11_64": {
         "choice": "loop, connector",
         "isCorrect": false
       }
     }
   },
-  "11.65": {
+  "11_65": {
     "question": "The Human-Machine boundary is part of the Human-Computer Interface into usability systems.",
     "choices": {
-      "11.65.A": {
+      "A_11_65": {
         "choice": "True",
         "isCorrect": false
       },
-      "11.65.B": {
+      "B_11_65": {
         "choice": "False",
         "isCorrect": true
       }
     }
   },
-  "11.66": {
+  "11_66": {
     "question": "Factoring is the process of separating out a function from a module in order to create a module of its own.",
     "choices": {
-      "11.66.A": {
+      "A_11_66": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.66.B": {
+      "B_11_66": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.67": {
+  "11_67": {
     "question": "In a structure chart, the element that communicates that a message or a system flag is being passed from one module to another is known as a(n) _____.",
     "choices": {
-      "11.67.A": {
+      "A_11_67": {
         "choice": "conditional line",
         "isCorrect": false
       },
-      "11.67.B": {
+      "B_11_67": {
         "choice": "connector",
         "isCorrect": false
       },
-      "11.67.C": {
+      "C_11_67": {
         "choice": "control couple",
         "isCorrect": true
       },
-      "11.67.D": {
+      "D_11_67": {
         "choice": "data couple",
         "isCorrect": false
       },
-      "11.67.E": {
+      "E_11_67": {
         "choice": "loop",
         "isCorrect": false
       }
     }
   },
-  "11.68": {
+  "11_68": {
     "question": "Structure charts show selection.",
     "choices": {
-      "11.68.A": {
+      "A_11_68": {
         "choice": "True",
         "isCorrect": true
       },
-      "11.68.B": {
+      "B_11_68": {
         "choice": "False",
         "isCorrect": false
       }
     }
   },
-  "11.69": {
+  "11_69": {
     "question": "Programmers can take the logical DFDs and directly implement into code by compiling the metadata in the CASE tools.",
     "choices": {
-      "11.69.A": {
+      "A_11_69": {
         "choice": "True",
         "isCorrect": false
       },
-      "11.69.B": {
+      "B_11_69": {
         "choice": "False",
         "isCorrect": true
       }
