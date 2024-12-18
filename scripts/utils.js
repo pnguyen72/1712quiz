@@ -80,3 +80,25 @@ function search(collection, item, map = (i) => i) {
 function sum(array) {
   return array.reduce((a, b) => a + b, 0);
 }
+
+function initializeHeight(textarea) {
+  const tempDiv = document.createElement("div");
+  tempDiv.style.fontSize = getComputedStyle(textarea).fontSize;
+  tempDiv.style.fontFamily = getComputedStyle(textarea).fontFamily;
+  tempDiv.style.display = "inline-block";
+  tempDiv.style.width = getComputedStyle(textarea).width;
+  tempDiv.style.position = "absolute";
+  tempDiv.style.top = 0;
+  tempDiv.style.left = 0;
+  tempDiv.innerText = textarea.value;
+  document.body.appendChild(tempDiv);
+
+  const targetHeight = getComputedStyle(tempDiv).height;
+  textarea.style.height = `max(4rem, calc(${targetHeight} + 4.4px))`; // no idea what 4.4px is, but it works
+  tempDiv.remove();
+
+  const form = textarea.parentElement;
+  const textHeight = textarea.offsetHeight;
+  const btnHeight = form.querySelector("button").offsetHeight;
+  form.style.height = `calc(4px + ${btnHeight}px + ${textHeight}px)`;
+}
