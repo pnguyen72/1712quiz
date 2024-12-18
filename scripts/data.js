@@ -20,7 +20,7 @@ function loadData() {
     modulesName = modules;
     const promises = [];
     for (let i = 1; i <= modules.midterm.length + modules.final.length; ++i) {
-      promises.push(_loadModule(String(i).padStart(2, "0")));
+      promises.push(_loadModule(String(i).padStart(2, "0")))
     }
     return Promise.all(promises);
   });
@@ -62,13 +62,13 @@ function learnQuiz(quiz) {
   const learned = quiz.querySelectorAll(".question:not(.wrong-answer)");
   for (const question of learned) {
     const id = question.id;
-    const module = id.split(".")[1];
+    const module = id.split(".")[0];
     modulesData[module].learn(id);
   }
   const mistakes = quiz.querySelectorAll(".question.wrong-answer");
   for (const question of mistakes) {
     const id = question.id;
-    const module = id.split(".")[1];
+    const module = id.split(".")[0];
     modulesData[module].unlearn(id);
   }
   localStorage.setItem("coverage", JSON.stringify(modulesCoverage));
@@ -78,7 +78,7 @@ function explain(question) {
   if (!explainChoice.checked) return;
 
   const questionId = question.id;
-  const doc = db.collection("explain").doc(questionId);
+  const doc = db.collection("explanations").doc(questionId);
   doc.onSnapshot((snapshot) => {
     const explanation = question.querySelector(".explanation");
     if (explanation.tagName.toLowerCase() == "textarea") return;
@@ -102,7 +102,7 @@ function explain(question) {
 }
 
 function submitExplanation(questionId, questionText, explanationText) {
-  const doc = db.collection("explain").doc(questionId);
+  const doc = db.collection("explanations").doc(questionId);
   if (explanationText) {
     return doc.set({ question: questionText, explanation: explanationText });
   } else {
@@ -111,7 +111,7 @@ function submitExplanation(questionId, questionText, explanationText) {
 }
 
 function editSignal(questionId, isEditing) {
-  const doc = db.collection("explain").doc(questionId);
+  const doc = db.collection("explanations").doc(questionId);
   if (isEditing) {
     doc.set({ editing: Date.now() }, { merge: true });
   } else {
@@ -124,7 +124,7 @@ function _loadModulesName() {
 }
 
 function _loadModule(module) {
-  return fetch(`./data/modules/module${module}.json`)
+  return fetch(`./data/modules/${module}.json`)
     .then((response) => {
       if (!response.ok) return {};
       return response.json();

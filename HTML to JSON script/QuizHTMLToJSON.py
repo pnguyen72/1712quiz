@@ -105,7 +105,7 @@ def get_new_data(quiz_data: dict[str, dict[str, Any]]):
 def save_data(quiz_data: dict[str, dict[str, Any]]):
     formatted_data = {}
     for i, (question, question_data) in enumerate(quiz_data.items()):
-        question_id = f"LH.{str(MODULE).zfill(2)}.{str(i+1).zfill(2)}"
+        question_id = f"{str(MODULE).zfill(2)}.{str(i+1).zfill(2)}"
         formatted_data[question_id] = {"question": question} | question_data
 
     # Save the parsed data to a JSON file
@@ -122,7 +122,7 @@ def main():
 # edit before running the script, but DO NOT COMMIT the change
 MODULE: int = MODULE_NUMBER_GOES_HERE
 IN_PATH = _script_dir
-OUT_PATH = os.path.join(_script_dir, "../data/modules", f"module{MODULE}.json")
+OUT_PATH = os.path.join(_script_dir, "../data/modules", f"{str(MODULE).zfill(2)}.json")
 
 if __name__ == "__main__":
     main()

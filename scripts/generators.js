@@ -74,7 +74,7 @@ function generateQuiz(quizData) {
 }
 
 function generateQuestion(questionId, questionData, questionIndex) {
-  const module = questionId.split(".")[1];
+  const module = questionId.split(".")[0];
   const questionText = questionData.question;
   const hasImage = questionData.hasImage;
   const isMultiSelect = questionData.multiSelect;

@@ -1,33 +1,33 @@
 {
-  "LH.06.01": {
+  "06.01": {
     "question": "Entities are a person, place, or thing.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.02": {
+  "06.02": {
     "question": "Entities are further designed with attributes.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.03": {
+  "06.03": {
     "question": "An entity is the basic building block for a data model.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.04": {
+  "06.04": {
     "question": "Relationships are drawn with lines showing cardinality and plurality.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.06.05": {
+  "06.05": {
     "question": "An entity relationship diagram (ERD):",
     "choices": {
       "Is a use-case diagram enhanced graphically to show data and process modeling": false,
@@ -37,21 +37,21 @@
       "Is an illustration of external data flows to and from a business systems": false
     }
   },
-  "LH.06.06": {
+  "06.06": {
     "question": "With an ERD, the diagrams are drawn in a sequential order – from top to bottom.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.06.07": {
+  "06.07": {
     "question": "On an ERD, data elements are described as singular (1:1); plurals (1:N); or didactic (M:N).",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.06.08": {
+  "06.08": {
     "question": "Which would likely be an entity on a car insurance ERD?",
     "choices": {
       "fire district": false,
@@ -61,14 +61,14 @@
       "date": false
     }
   },
-  "LH.06.09": {
+  "06.09": {
     "question": "In an entity called STUDENT, you might find attributes of Student-ID, Last-Name, First-Name and cell-phone.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.10": {
+  "06.10": {
     "question": "Entity Relationship Diagrams show relationships between entities that are what?",
     "choices": {
       "Defined by the project sponsor": false,
@@ -78,14 +78,14 @@
       "In line with the business rules and processing": true
     }
   },
-  "LH.06.11": {
+  "06.11": {
     "question": "An ERD is a picture that shows how data and information is processed and transformed by a business system.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.06.12": {
+  "06.12": {
     "question": "Which would NOT likely be an attribute of an entity called \"Student\"?",
     "choices": {
       "Home phone": false,
@@ -95,7 +95,7 @@
       "Student identification number": false
     }
   },
-  "LH.06.13": {
+  "06.13": {
     "question": "A(n) _____ entity cannot exist without the presence of another entity or has an identifier that is based on another entity's attribute.",
     "choices": {
       "incomplete": false,
@@ -105,35 +105,35 @@
       "dependent": true
     }
   },
-  "LH.06.14": {
+  "06.14": {
     "question": "ERDs and DFDs are two techniques for process modeling.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.06.15": {
+  "06.15": {
     "question": "On an ERD, data elements are listed alphabetically with a cross listing to the processes that manipulate them.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.06.16": {
+  "06.16": {
     "question": "On an ERD, processes are listed alphabetically with relationship connections drawn between processes.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.06.17": {
+  "06.17": {
     "question": "On an ERD, data elements are listed together and place inside boxes called entities.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.18": {
+  "06.18": {
     "question": "Independent entities are what?",
     "choices": {
       "When an entity comes from an external source (aka 'external entity')": false,
@@ -143,7 +143,7 @@
       "When a child requires attributes from the parent": false
     }
   },
-  "LH.06.19": {
+  "06.19": {
     "question": "A data model can do what?",
     "choices": {
       "Illustrate return-on-investment, break-even point, and economic feasibility": false,
@@ -153,49 +153,49 @@
       "Represent actions or processes that occur in the to-be system": false
     }
   },
-  "LH.06.20": {
+  "06.20": {
     "question": "Relationships are some type of information that is captured about entities.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.06.21": {
+  "06.21": {
     "question": "During the analysis phase logical data models are created.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.22": {
+  "06.22": {
     "question": "Data modeling is an iterative process.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.23": {
+  "06.23": {
     "question": "With an ERD, special symbols are added to show high-level business rules.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.24": {
+  "06.24": {
     "question": "ERDs and DFDs are two techniques for data modeling.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.06.25": {
+  "06.25": {
     "question": "An illustration of the transformation of data into business value is an ERD.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.06.26": {
+  "06.26": {
     "question": "In adding attributes to an ERD, which of the following might NOT be a good resource for attributes?",
     "choices": {
       "Requirements documents": false,
@@ -205,7 +205,7 @@
       "From the CASE tool": false
     }
   },
-  "LH.06.27": {
+  "06.27": {
     "question": "Anthony is working on the cardinality of doctors and patients in a large urban hospital. With the large number of doctors with varying specialties and patients that may have more than one aliment, he thinks the relationship might be noted as what?",
     "choices": {
       "1 to many": false,
@@ -215,14 +215,14 @@
       "1 to 1": false
     }
   },
-  "LH.06.28": {
+  "06.28": {
     "question": "On an ERD, data elements are grouped in a hierarchical structure that is uniquely identified by number.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.06.29": {
+  "06.29": {
     "question": "In creating ERD's, which would most likely NOT be a source for entities?",
     "choices": {
       "Cost / benefit reports": true,
@@ -232,14 +232,14 @@
       "Use cases": false
     }
   },
-  "LH.06.30": {
+  "06.30": {
     "question": "The three steps in creating an ERD are: (1) identify the entities; (2) identify the attributes; (3) identify the relationships",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.31": {
+  "06.31": {
     "question": "The first step to building an Entity Relationship Diagram is to do what?",
     "choices": {
       "Identify data flows from the level 0 DFD diagram": false,
@@ -249,14 +249,14 @@
       "draw the relationships between the entities": false
     }
   },
-  "LH.06.32": {
+  "06.32": {
     "question": "Data models can be either logical or physical.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.33": {
+  "06.33": {
     "question": "The last step in creating basic ERD's is to:",
     "choices": {
       "Compile them with Java": false,
@@ -266,7 +266,7 @@
       "Define attributes and assign identifiers": false
     }
   },
-  "LH.06.34": {
+  "06.34": {
     "question": "An entity is which of the following?",
     "choices": {
       "Has cardinality (1:1, 1:N, or M:N)": false,
@@ -276,7 +276,7 @@
       "Is the association between two related processes": false
     }
   },
-  "LH.06.35": {
+  "06.35": {
     "question": "A data model is a what?",
     "choices": {
       "The abstract creating of an ideal system transformation": false,
@@ -286,21 +286,21 @@
       "The model that is produced by extreme programming": false
     }
   },
-  "LH.06.36": {
+  "06.36": {
     "question": "In an entity called STUDENT, you might find attributes of PROFESSOR-ID, Last-Name, First-Name and CLASSROOM.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.06.37": {
+  "06.37": {
     "question": "ERD's are data modeling techniques.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.38": {
+  "06.38": {
     "question": "What type of process is creating an ERD?",
     "choices": {
       "Process defined by five steps": false,
@@ -310,7 +310,7 @@
       "Sequential process": false
     }
   },
-  "LH.06.39": {
+  "06.39": {
     "question": "The three major parts of an ERD diagram are what?",
     "choices": {
       "Relationship, attribute, entity": true,
@@ -320,35 +320,35 @@
       "Attribute, modularity, cardinality": false
     }
   },
-  "LH.06.40": {
+  "06.40": {
     "question": "A data model is a formal way of representing the data that are used and created by a business system.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.41": {
+  "06.41": {
     "question": "One of the most commonly used techniques for data modeling is ERDs.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.42": {
+  "06.42": {
     "question": "One of the first places to start developing Entity Relationship Diagrams is by looking at the level 0 process models (DFD) and the use cases for data flows and data stores.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.43": {
+  "06.43": {
     "question": "With an ERD, lines are drawn to show relationships among the data.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.44": {
+  "06.44": {
     "question": "Lines on an ERD diagram indicate what?",
     "choices": {
       "Uniqueness of data items": false,
@@ -358,21 +358,21 @@
       "Hierarchies between processes": false
     }
   },
-  "LH.06.45": {
+  "06.45": {
     "question": "A graphical illustration that shows the information that is created, stored, and used by a business system would be an ERD.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.46": {
+  "06.46": {
     "question": "The three steps in creating an ERD are: (1) identify the entities; (2) identify the processes; (3) identify the relationships",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.06.47": {
+  "06.47": {
     "question": "Jack is developing an ERD for a small dental practice office patient record system. The dental practice has three dentists, six hygienists, and many patients. A patient is always assigned to the same dentist for all appointments. In particular, he is working on the relationship between dentists and patients. Should it be which of the following?",
     "choices": {
       "1 to 1, with a modality of null": false,
@@ -382,7 +382,7 @@
       "1 to many with a modality of not null": true
     }
   },
-  "LH.06.48": {
+  "06.48": {
     "question": "The lines that connect the entities are referred to as",
     "choices": {
       "connectors": false,
@@ -392,42 +392,42 @@
       "Data flows": false
     }
   },
-  "LH.06.49": {
+  "06.49": {
     "question": "With an ERD, similar kinds of information are listed together in entities.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.50": {
+  "06.50": {
     "question": "Metadata is data about data.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.51": {
+  "06.51": {
     "question": "An analyst can read an ERD to discover the individual pieces of information in a system and how they are organized and related to each other.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.52": {
+  "06.52": {
     "question": "ERDs are drawn in several levels: Context ERD diagrams; Level 0 ERD diagrams; Level 1 ERD diagrams.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.06.53": {
+  "06.53": {
     "question": "An entity is described by an action verb.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.06.54": {
+  "06.54": {
     "question": "You have entities of ITEM, SOLD-ITEM, SALE and PAYMENT. Which most likely is NOT a relationship?",
     "choices": {
       "PAYMENT pays for ITEM": true,
@@ -437,7 +437,7 @@
       "PAYMENT pays for SALE": false
     }
   },
-  "LH.06.55": {
+  "06.55": {
     "question": "Modality refers to which of the following?",
     "choices": {
       "Relationships of one-to-one; one-to-many; or many-to-many": false,
@@ -447,14 +447,14 @@
       "Whether and entity can exist with or without a related instance in the related entity": true
     }
   },
-  "LH.06.56": {
+  "06.56": {
     "question": "During the analysis phase, analysts create programming models to represent how the business system will operate.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.06.57": {
+  "06.57": {
     "question": "Which would NOT likely be an entity on a car insurance ERD?",
     "choices": {
       "Customer": false,
@@ -464,7 +464,7 @@
       "Car": false
     }
   },
-  "LH.06.58": {
+  "06.58": {
     "question": "A(n) _____ entity is an entity with an identifier that describes only the entity.",
     "choices": {
       "dependent": false,
@@ -474,14 +474,14 @@
       "intersection": false
     }
   },
-  "LH.06.59": {
+  "06.59": {
     "question": "ERDs can be quite complex and might have hundreds or thousands of entities.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.60": {
+  "06.60": {
     "question": "Information in the data dictionary is called what?",
     "choices": {
       "Compiled data": false,
@@ -491,7 +491,7 @@
       "File silo": false
     }
   },
-  "LH.06.61": {
+  "06.61": {
     "question": "An ERD is a picture which shows the information that is ________ by a business system.",
     "choices": {
       "created": true,
@@ -500,21 +500,21 @@
     },
     "multiSelect": true
   },
-  "LH.06.62": {
+  "06.62": {
     "question": "Relationships are associations between entities.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.06.63": {
+  "06.63": {
     "question": "On an ERD, similar kinds of information are listed together and placed inside boxes called data containers.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.06.64": {
+  "06.64": {
     "question": "In defining the data characteristics of Universal Product Codes, we might describe them as twelve characters made up of digits – numeric only.",
     "choices": {
       "True": true,

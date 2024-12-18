@@ -1,5 +1,5 @@
 {
-  "LH.10.01": {
+  "10.01": {
     "question": "Typically, the third step in the user interface design process is what?",
     "choices": {
       "Design interface standards": true,
@@ -9,28 +9,28 @@
       "Develop the interface structure diagram (ISD)": false
     }
   },
-  "LH.10.02": {
+  "10.02": {
     "question": "Generally, headings on a paper form should be with Arial size 24 bold; the main text should be Times New Roman size 12. Subheadings should be Tahoma size 14, bold and italic and underlined. This makes a form easier to read and to delineate sections.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.10.03": {
+  "10.03": {
     "question": "At least one study suggests that some variation be appropriate in user interface design as the study suggests that when all forms tend to look the same, it can be confusing to some users.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.10.04": {
+  "10.04": {
     "question": "Omar has designed a paper form using 'sans serif' fonts and for his screen (or web) forms he has used 'serif' fonts. He is exercising good user interface design practices.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.10.05": {
+  "10.05": {
     "question": "Typically, the first step in the user interface design process is what?",
     "choices": {
       "Design interface standards": false,
@@ -40,7 +40,7 @@
       "Develop the interface structure diagram (ISD)": false
     }
   },
-  "LH.10.06": {
+  "10.06": {
     "question": "Which of the following is NOT a common Interface Evaluation technique?",
     "choices": {
       "Interactive evaluation": false,
@@ -50,7 +50,7 @@
       "Formal usability testing": false
     }
   },
-  "LH.10.07": {
+  "10.07": {
     "question": "Interface evaluations almost always do what?",
     "choices": {
       "Identify improvements": true,
@@ -60,7 +60,7 @@
       "Cause additional scope creep in the project": false
     }
   },
-  "LH.10.08": {
+  "10.08": {
     "question": "Compare data against a data base (or file) to ensure that they are correct.",
     "choices": {
       "Completeness check": false,
@@ -70,7 +70,7 @@
       "Database checks": true
     }
   },
-  "LH.10.09": {
+  "10.09": {
     "question": "Seldom or never used.",
     "choices": {
       "Error message": false,
@@ -80,7 +80,7 @@
       "Help message": false
     }
   },
-  "LH.10.10": {
+  "10.10": {
     "question": "Which of the following is NOT a suggestion for preventing mistakes?",
     "choices": {
       "Label commands and actions appropriately": false,
@@ -90,7 +90,7 @@
       "Create secondary menus when there are many similar choices on a menu": false
     }
   },
-  "LH.10.11": {
+  "10.11": {
     "question": "This defines the basic components of the interface and how they work together to provide functionality to users.",
     "choices": {
       "Use Scenario Design": false,
@@ -100,7 +100,7 @@
       "Interface Template Design": false
     }
   },
-  "LH.10.12": {
+  "10.12": {
     "question": "Displays selected item in one-line box that opens to reveal list of choices.",
     "choices": {
       "Check box selection list": false,
@@ -110,7 +110,7 @@
       "Combo box selection list": false
     }
   },
-  "LH.10.13": {
+  "10.13": {
     "question": "In Use Scenario Development, the goal is:",
     "choices": {
       "To describe all possible use scenarios within a use case": false,
@@ -120,7 +120,7 @@
       "To effectively model all data flows and data models": false
     }
   },
-  "LH.10.14": {
+  "10.14": {
     "question": "This output is poor at helping users recognize precise numeric values and should be replaced by tables when precision is important.",
     "choices": {
       "Detail report": false,
@@ -130,7 +130,7 @@
       "None are poor": false
     }
   },
-  "LH.10.15": {
+  "10.15": {
     "question": "When implementing the 'minimize user effort' factor, most interface designers follow what rule?",
     "choices": {
       "Two-clicks rule": false,
@@ -140,7 +140,7 @@
       "The menu option rule": false
     }
   },
-  "LH.10.16": {
+  "10.16": {
     "question": "Approximately what percent of men are color blind (and thus improper use of color can impair their ability to read information)",
     "choices": {
       "5%": false,
@@ -150,7 +150,7 @@
       "More than 20%": false
     }
   },
-  "LH.10.17": {
+  "10.17": {
     "question": "This is used when an extra digit is added to a coded field to make sure it the entered data is correct (like Social Security numbers).",
     "choices": {
       "Completeness check": false,
@@ -160,14 +160,14 @@
       "Consistency check": false
     }
   },
-  "LH.10.18": {
+  "10.18": {
     "question": "Forms should have version numbers so that users, analysts and programmers can identify outdated materials.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.10.19": {
+  "10.19": {
     "question": "This is an outline of the steps that the users perform to accomplish some part of their work.",
     "choices": {
       "Step walkthrough": false,
@@ -177,7 +177,7 @@
       "Layout verification": false
     }
   },
-  "LH.10.20": {
+  "10.20": {
     "question": "Informs the user that the computer system is working properly to perform a task that may take several seconds.",
     "choices": {
       "Error message": false,
@@ -187,7 +187,7 @@
       "Help message": false
     }
   },
-  "LH.10.21": {
+  "10.21": {
     "question": "Informs the user that he or she has attempted to do something to which the system cannot respond.",
     "choices": {
       "Error message": true,
@@ -197,21 +197,21 @@
       "Help message": false
     }
   },
-  "LH.10.22": {
+  "10.22": {
     "question": "Bob is designing input screens for a re-designed system for the shipping and inventory department. For order forms, he puts Zip code first (as the database will take the zip code and look up the city and state); for receiving forms, he puts them in the order of city, then state, then zip code. His design choices will help experienced users be more productive.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.10.23": {
+  "10.23": {
     "question": "Bias can be introduced into a report by the way in which lists of data are sorted.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.10.24": {
+  "10.24": {
     "question": "Asks the user to verify that he or she really wants to perform the action selected.",
     "choices": {
       "Error message": false,
@@ -221,7 +221,7 @@
       "Help message": false
     }
   },
-  "LH.10.25": {
+  "10.25": {
     "question": "The objective of an interface evaluation is what?",
     "choices": {
       "To measure the processing speed of an interface design": false,
@@ -231,7 +231,7 @@
       "To determine if all use cases and ERDs have been built into the interface": false
     }
   },
-  "LH.10.26": {
+  "10.26": {
     "question": "Used as a shortcut for experienced Users.",
     "choices": {
       "Up-down numeric control": false,
@@ -241,14 +241,14 @@
       "Combo box selection list": true
     }
   },
-  "LH.10.27": {
+  "10.27": {
     "question": "User experience refers to minimizing the number of clicks or commands to go from one field to another.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.10.28": {
+  "10.28": {
     "question": "Which is NOT true about the content awareness design principle?",
     "choices": {
       "A date of 8/6/09 will be understood internationally": true,
@@ -258,7 +258,7 @@
       "All printed forms should have version numbers for better control": false
     }
   },
-  "LH.10.29": {
+  "10.29": {
     "question": "The following is used as a second-level menu, often from a menu bar.",
     "choices": {
       "Menu bar": false,
@@ -268,7 +268,7 @@
       "Tab menu": false
     }
   },
-  "LH.10.30": {
+  "10.30": {
     "question": "When designing navigational controls, which is NOT commonly assumed?",
     "choices": {
       "That users have not read the manual": false,
@@ -278,14 +278,14 @@
       "That users have not read the documentation": false
     }
   },
-  "LH.10.31": {
+  "10.31": {
     "question": "Space is generally at a premium on forms and reports, thus squeezing information onto forms is considered a wise business decision.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.10.32": {
+  "10.32": {
     "question": "Presents a list of choices in a box.",
     "choices": {
       "Check box selection list": false,
@@ -295,14 +295,14 @@
       "Combo box selection list": false
     }
   },
-  "LH.10.33": {
+  "10.33": {
     "question": "Jamal is creating a user interface. He wants what he calls an 'oops' button on every screen and form (or an 'undo' button). This is a good design consideration.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.10.34": {
+  "10.34": {
     "question": "Used when user does something that is not permitted or not possible.",
     "choices": {
       "Error message": true,
@@ -312,7 +312,7 @@
       "Help message": false
     }
   },
-  "LH.10.35": {
+  "10.35": {
     "question": "Used when user selects a potentially dangerous choice, such as deleting a file.",
     "choices": {
       "Error message": false,
@@ -322,7 +322,7 @@
       "Help message": false
     }
   },
-  "LH.10.36": {
+  "10.36": {
     "question": "The following is used as a main menu for a Web-based system.",
     "choices": {
       "Menu bar": false,
@@ -332,7 +332,7 @@
       "Tab menu": false
     }
   },
-  "LH.10.37": {
+  "10.37": {
     "question": "Ensure that combinations of data are valid.",
     "choices": {
       "Completeness check": false,
@@ -342,7 +342,7 @@
       "Database checks": false
     }
   },
-  "LH.10.38": {
+  "10.38": {
     "question": "Used seldom or never - only if there is insufficient room for check boxes or radio buttons",
     "choices": {
       "Up-down numeric control": false,
@@ -352,7 +352,7 @@
       "Combo box selection list": false
     }
   },
-  "LH.10.39": {
+  "10.39": {
     "question": "The first principle of designing navigation controls is what?",
     "choices": {
       "It was tough to build, it should be tough to use": false,
@@ -362,7 +362,7 @@
       "Build appropriate icons (like a blank page for new document or form)": false
     }
   },
-  "LH.10.40": {
+  "10.40": {
     "question": "Used when only one item can be selected from a set of mutually exclusive items.",
     "choices": {
       "Check box selection list": false,
@@ -372,7 +372,7 @@
       "Combo box selection list": false
     }
   },
-  "LH.10.41": {
+  "10.41": {
     "question": "The following is used as a shortcut to commands for experienced users.",
     "choices": {
       "Menu bar": false,
@@ -382,7 +382,7 @@
       "Tab menu": false
     }
   },
-  "LH.10.42": {
+  "10.42": {
     "question": "Ensures that data are of the right type (e.g., numeric) and in the right format (e.g., month, day, year).",
     "choices": {
       "Completeness check": false,
@@ -392,7 +392,7 @@
       "Database checks": false
     }
   },
-  "LH.10.43": {
+  "10.43": {
     "question": "The following is used when the user needs to change several settings or perform several related commands.",
     "choices": {
       "Menu bar": false,
@@ -402,14 +402,14 @@
       "Tab menu": true
     }
   },
-  "LH.10.44": {
+  "10.44": {
     "question": "When creating navigational controls, you should either not display a command that cannot be used or 'gray' it out (where it shows, but cannot be used).",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.10.45": {
+  "10.45": {
     "question": "Informs the user that the system has accomplished what it was asked to do.",
     "choices": {
       "Error message": false,
@@ -419,21 +419,21 @@
       "Help message": false
     }
   },
-  "LH.10.46": {
+  "10.46": {
     "question": "If a particular form or screen is used by a cadre of experienced users very frequently (like an accounting entry system), 'ease of use' should be a high priority on these system interfaces.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.10.47": {
+  "10.47": {
     "question": "When creating user interfaces, analysts should examine DFDs and use cases to see how users commonly perform various processes.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.10.48": {
+  "10.48": {
     "question": "Which is generally NOT true for interface evaluations?",
     "choices": {
       "It is iterative": false,
@@ -443,7 +443,7 @@
       "It is built on ERDs": true
     }
   },
-  "LH.10.49": {
+  "10.49": {
     "question": "This is used when you want to verify that data fits within correct minimum and maximum values.",
     "choices": {
       "Completeness check": false,
@@ -453,7 +453,7 @@
       "Consistency check": false
     }
   },
-  "LH.10.50": {
+  "10.50": {
     "question": "Which of the following might be a good choice of an icon for saving on a user interface?",
     "choices": {
       "A piggy bank": false,
@@ -463,21 +463,21 @@
       "A green \"S\"": false
     }
   },
-  "LH.10.51": {
+  "10.51": {
     "question": "Infrequent users prefer user interfaces with 'ease of learning' features (like more explicit menu choices, clear directions).",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.10.52": {
+  "10.52": {
     "question": "Michelle is designing a series of user interfaces for a CRM system. She goes back and forth between various steps of use cases, DFDs, ERDs and JAD session notes.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.10.53": {
+  "10.53": {
     "question": "A special type of drop-down list box that permits user to type as well as scroll the list.",
     "choices": {
       "Up-down numeric control": false,
@@ -487,7 +487,7 @@
       "Combo box selection list": true
     }
   },
-  "LH.10.54": {
+  "10.54": {
     "question": "Used when an activity takes more than seven seconds.",
     "choices": {
       "Error message": false,
@@ -497,7 +497,7 @@
       "Help message": false
     }
   },
-  "LH.10.55": {
+  "10.55": {
     "question": "Presents a complete list of mutually exclusive choices, each with a circle in front.",
     "choices": {
       "Check box selection list": false,
@@ -507,7 +507,7 @@
       "Combo box selection list": false
     }
   },
-  "LH.10.56": {
+  "10.56": {
     "question": "Ensures that all required data have been entered.",
     "choices": {
       "Completeness check": true,
@@ -517,21 +517,21 @@
       "Database checks": false
     }
   },
-  "LH.10.57": {
+  "10.57": {
     "question": "Interface Structures cannot directly interface with other interface structures on other menus and submenus, only the interface structures on the same menu or submenu.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.10.58": {
+  "10.58": {
     "question": "Experienced users prefer user interfaces with 'ease of learning' features.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.10.59": {
+  "10.59": {
     "question": "Use scenarios builds upon what?",
     "choices": {
       "Entity relationship diagrams": false,
@@ -541,7 +541,7 @@
       "HIPO charts": false
     }
   },
-  "LH.10.60": {
+  "10.60": {
     "question": "Some systems that are used infrequently should probably emphasize:",
     "choices": {
       "Ease of learning": true,
@@ -551,7 +551,7 @@
       "Organizational feasibility": false
     }
   },
-  "LH.10.61": {
+  "10.61": {
     "question": "Used when there is insufficient room to display all choices.",
     "choices": {
       "Check box selection list": false,
@@ -561,7 +561,7 @@
       "Combo box selection list": false
     }
   },
-  "LH.10.62": {
+  "10.62": {
     "question": "Typically, the second step in the user interface design process is what?",
     "choices": {
       "Design interface standards": false,
@@ -571,7 +571,7 @@
       "Develop the interface structure diagram (ISD)": true
     }
   },
-  "LH.10.63": {
+  "10.63": {
     "question": "Ensures that numeric data are within correct minimum and maximum values.",
     "choices": {
       "Completeness check": false,
@@ -581,7 +581,7 @@
       "Database checks": false
     }
   },
-  "LH.10.64": {
+  "10.64": {
     "question": "Used when entering a numeric value.",
     "choices": {
       "Up-down numeric control": true,
@@ -591,7 +591,7 @@
       "Combo box selection list": false
     }
   },
-  "LH.10.65": {
+  "10.65": {
     "question": "Typically, the fourth step in the user interface design process is what?",
     "choices": {
       "Design interface standards": false,
@@ -601,7 +601,7 @@
       "Develop the interface structure diagram (ISD)": false
     }
   },
-  "LH.10.66": {
+  "10.66": {
     "question": "This report is used when a user needs brief information on many items.",
     "choices": {
       "Detail Report": false,
@@ -611,7 +611,7 @@
       "Consistency check": false
     }
   },
-  "LH.10.67": {
+  "10.67": {
     "question": "Presents a complete list of choices, each with a square box in front.",
     "choices": {
       "Check box selection list": true,
@@ -621,7 +621,7 @@
       "Combo box selection list": false
     }
   },
-  "LH.10.68": {
+  "10.68": {
     "question": "This is used when all combinations of data are valid (like birth year is prior to marriage year).",
     "choices": {
       "Completeness check": false,
@@ -631,14 +631,14 @@
       "Consistency check": true
     }
   },
-  "LH.10.69": {
+  "10.69": {
     "question": "Research shows that in an ideal world a menu should contain no more than four items and submenus should contain no fewer than six items.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.10.70": {
+  "10.70": {
     "question": "It is better to make menus how?",
     "choices": {
       "Broad and shallow": true,
@@ -648,7 +648,7 @@
       "Wide and tall": false
     }
   },
-  "LH.10.71": {
+  "10.71": {
     "question": "Used in all systems.",
     "choices": {
       "Error message": false,
@@ -658,7 +658,7 @@
       "Help message": true
     }
   },
-  "LH.10.72": {
+  "10.72": {
     "question": "There are many types of reports, they include which of the following?",
     "choices": {
       "Summary reports": true,
@@ -668,14 +668,14 @@
     },
     "multiSelect": true
   },
-  "LH.10.73": {
+  "10.73": {
     "question": "If the density on a single page form is too high, it might not be as effective for some users as creating a two-page form.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.10.74": {
+  "10.74": {
     "question": "One strong suggestion for navigation design is what?",
     "choices": {
       "Limit menu items to at most ten items": false,
@@ -685,14 +685,14 @@
       "Log all mistakes, and log the user's computer when 1000 mistakes have been made": false
     }
   },
-  "LH.10.75": {
+  "10.75": {
     "question": "Range checks will validate if the data is numeric with two decimal places.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.10.76": {
+  "10.76": {
     "question": "The following is used as a main menu for a system.",
     "choices": {
       "Menu bar": true,
@@ -702,7 +702,7 @@
       "Tab menu": false
     }
   },
-  "LH.10.77": {
+  "10.77": {
     "question": "Provides additional information about the system and its components.",
     "choices": {
       "Error message": false,
@@ -712,7 +712,7 @@
       "Help message": true
     }
   },
-  "LH.10.78": {
+  "10.78": {
     "question": "This is used when several fields must be entered before the form can be processed.",
     "choices": {
       "Completeness check": true,
@@ -722,28 +722,28 @@
       "Consistency check": false
     }
   },
-  "LH.10.79": {
+  "10.79": {
     "question": "Colors and patterns add pizzazz to a screen form and aid in its readability.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.10.80": {
+  "10.80": {
     "question": "Aesthetics refers to designing information that can be navigated in three-clicks or less.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.10.81": {
+  "10.81": {
     "question": "For screen forms and reports, you should use a font of at least size 12.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.10.82": {
+  "10.82": {
     "question": "A use scenario is one commonly used what?",
     "choices": {
       "Path through a use case": true,
@@ -753,14 +753,14 @@
       "Throwaway prototyping tool": false
     }
   },
-  "LH.10.83": {
+  "10.83": {
     "question": "User interface design is a three-step process: (1) analyze the DFDs and use cases; (2) develop the interface diagrams; and (3) create the interface design prototype.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.10.84": {
+  "10.84": {
     "question": "Which of these are good strategies to succeed in this course?",
     "choices": {
       "Contribute to the Bible": true,
@@ -769,7 +769,7 @@
     },
     "multiSelect": true
   },
-  "LH.10.85": {
+  "10.85": {
     "question": "Scroll arrows moves directionally through numeric range.",
     "choices": {
       "Up-down numeric control": true,
@@ -779,7 +779,7 @@
       "Combo box selection list": false
     }
   },
-  "LH.10.86": {
+  "10.86": {
     "question": "Used when several items can be selected from a list of items.",
     "choices": {
       "Check box selection list": true,
@@ -789,7 +789,7 @@
       "Combo box selection list": false
     }
   },
-  "LH.10.87": {
+  "10.87": {
     "question": "Typically, the fifth step in the user interface design process is what?",
     "choices": {
       "Design interface standards": false,
@@ -799,21 +799,21 @@
       "Develop the interface structure diagram (ISD)": false
     }
   },
-  "LH.10.88": {
+  "10.88": {
     "question": "Novice or infrequent users of an interface (both paper and screen) prefer interfaces with low density like under 25%.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.10.89": {
+  "10.89": {
     "question": "Mike is the analyst creating a report. It is easy for him to unintentionally create a biased report.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.10.90": {
+  "10.90": {
     "question": "This is used when fields are numeric or contain coded data.",
     "choices": {
       "Completeness check": false,
@@ -823,14 +823,14 @@
       "Consistency check": false
     }
   },
-  "LH.10.91": {
+  "10.91": {
     "question": "Interface Structure Design defines the application coding structure used (such as developing prototypes in Visual Basic).",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.10.92": {
+  "10.92": {
     "question": "The first principle of designing navigational controls is to prevent users from making mistakes.",
     "choices": {
       "True": true,

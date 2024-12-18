@@ -1,5 +1,5 @@
 {
-  "LH.05.01": {
+  "05.01": {
     "question": "These display decision logic (IF statements) as a set of nodes (questions) and branches (answers).",
     "choices": {
       "Logic diagrams": false,
@@ -9,14 +9,14 @@
       "Decision diagrams": false
     }
   },
-  "LH.05.02": {
+  "05.02": {
     "question": "A bundle is an activity or a function that is performed for some specific business reason.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.05.03": {
+  "05.03": {
     "question": "A single fact, such as Order ID (sometimes called a data element), or a logical collection of several facts (e.g., new shop work order).",
     "choices": {
       "Database": false,
@@ -26,49 +26,49 @@
     },
     "multiSelect": true
   },
-  "LH.05.04": {
+  "05.04": {
     "question": "An external entity is a person, organization, organization unit, or system that is external to the system and never interacts with it.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.05.05": {
+  "05.05": {
     "question": "All data stores must have at least one input data flow.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.05.06": {
+  "05.06": {
     "question": "Use cases contain all the information needed to build one part of a process model.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.05.07": {
+  "05.07": {
     "question": "Processes must be computerized.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.05.08": {
+  "05.08": {
     "question": "Process models have just recently become a part of structured systems analysis and design techniques.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.05.09": {
+  "05.09": {
     "question": "Experienced analysts usually draw a DFD perfectly the first time.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.05.10": {
+  "05.10": {
     "question": "Models which provide information that is needed to ultimately build the system.",
     "choices": {
       "Physical models": true,
@@ -78,7 +78,7 @@
     },
     "multiSelect": true
   },
-  "LH.05.11": {
+  "05.11": {
     "question": "These represent complex policy decisions as rules that link various conditions with actions.",
     "choices": {
       "Decision tables": true,
@@ -88,35 +88,35 @@
       "Decision diagrams": false
     }
   },
-  "LH.05.12": {
+  "05.12": {
     "question": "Data flows coming out of a data store indicate that information is retrieved from the data store.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.05.13": {
+  "05.13": {
     "question": "There are two fundamentally different types of problems that can occur in DFDs: syntax errors and English errors.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.05.14": {
+  "05.14": {
     "question": "Data flows going into a data store indicate that there is a logical error.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.05.15": {
+  "05.15": {
     "question": "Semantics errors cause the fewest problems in system development.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.05.16": {
+  "05.16": {
     "question": "Below the top-level DFD in the DFD hierarchy is the diagram called the what?",
     "choices": {
       "Level-1 DFD": false,
@@ -126,7 +126,7 @@
       "Level-0 DFD": true
     }
   },
-  "LH.05.17": {
+  "05.17": {
     "question": "A collection of data that is stored in some way (which is determined later when creating the physical model).",
     "choices": {
       "Database": false,
@@ -136,14 +136,14 @@
     },
     "multiSelect": true
   },
-  "LH.05.18": {
+  "05.18": {
     "question": "Synchronizing means ensuring that all information presented in a DFD at one level is accurately represented in the next-level",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.05.19": {
+  "05.19": {
     "question": "This type of English uses short sentences to describe the work that a process performs.",
     "choices": {
       "Simplified": false,
@@ -153,49 +153,49 @@
       "Structured": true
     }
   },
-  "LH.05.20": {
+  "05.20": {
     "question": "The next level under level 1 would be labeled as level 2.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.05.21": {
+  "05.21": {
     "question": "It is important to ensure that the level 0 and level 1 DFDs are balanced.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.05.22": {
+  "05.22": {
     "question": "Use cases are the same as process diagrams.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.05.23": {
+  "05.23": {
     "question": "The context diagram shows the entire system in context with its environment.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.05.24": {
+  "05.24": {
     "question": "In general, syntax errors are easier to find and fix than are semantics errors.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.05.25": {
+  "05.25": {
     "question": "We use data flow diagrams (DFDs) to describe the to-be system's interactions with its environment, processes, flows of data, and data stores.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.05.26": {
+  "05.26": {
     "question": "The top-level DFD in every business process model, whether a manual system or a computerized system, is the what?",
     "choices": {
       "Driver": false,
@@ -205,35 +205,35 @@
       "Major DFD": false
     }
   },
-  "LH.05.27": {
+  "05.27": {
     "question": "Iteration is the cornerstone of good DFD design.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.05.28": {
+  "05.28": {
     "question": "Most business processes can be explained in one DFD.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.05.29": {
+  "05.29": {
     "question": "The context diagram defines how the business process or computer system interacts with its Environment.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.05.30": {
+  "05.30": {
     "question": "Process models rarely have level 1 diagrams.",
     "choices": {
       "True": false,
       "False": true
     }
   },
-  "LH.05.31": {
+  "05.31": {
     "question": "The processes in the level 1 diagram are the _____ of the _____ process in the level 0 diagram.",
     "choices": {
       "Leaders, Followers": false,
@@ -243,35 +243,35 @@
       "Parent, Children": false
     }
   },
-  "LH.05.32": {
+  "05.32": {
     "question": "There are no formal rules covering the layout of processes, data flows, data stores, and external entities within a DFD.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.05.33": {
+  "05.33": {
     "question": "Every external entity has a name and a description.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.05.34": {
+  "05.34": {
     "question": "Process descriptions provide additional information that the DFD does not provide.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.05.35": {
+  "05.35": {
     "question": "The set of children and the parent are identical; they are simply different ways of looking at the same thing.",
     "choices": {
       "True": true,
       "False": false
     }
   },
-  "LH.05.36": {
+  "05.36": {
     "question": "Models that describe processes, without suggesting how they are conducted.",
     "choices": {
       "Logical process models": true,
@@ -281,7 +281,7 @@
     },
     "multiSelect": true
   },
-  "LH.05.37": {
+  "05.37": {
     "question": "Project teams usually draw process models by hand.",
     "choices": {
       "True": false,
