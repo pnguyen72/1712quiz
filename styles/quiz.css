@@ -52,6 +52,10 @@
   ul {
     margin: 0.75rem 0;
     padding-inline-start: 1.5rem;
+
+    li {
+      display: grid;
+    }
   }
 
   .explanation-container {
