@@ -245,13 +245,9 @@ function updateAttemptsTable() {
 
   if (tableRows.length >= pastAttempts.length) {
     if (tableRows.length > pastAttempts.length) {
-      console.log(Array.from(tableRows));
       Array.from(tableRows)
         .slice(pastAttempts.length - tableRows.length)
-        .forEach((row) => {
-          console.log(row);
-          row.remove();
-        });
+        .forEach((row) => row.remove());
     }
     return;
   }
