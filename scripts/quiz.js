@@ -91,7 +91,7 @@ function grade(questions) {
   return correctAnswers;
 }
 
-function updatePastAttempts(correctAnswers, questions) {
+function getAttemptData(questions) {
   const attemptData = {};
   for (const question of questions) {
     const questionData = {};
@@ -100,8 +100,12 @@ function updatePastAttempts(correctAnswers, questions) {
     }
     attemptData[question.id] = questionData;
   }
+  return Object.entries(attemptData);
+}
+
+function updatePastAttempts(correctAnswers, questions) {
   pastAttempts.push({
-    data: attemptData,
+    data: getAttemptData(questions),
     modules: getSelectedModules()
       .map((x) => parseInt(x))
       .join(", "),

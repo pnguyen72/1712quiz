@@ -95,10 +95,9 @@ function tohomePage() {
   if (
     document.querySelector(
       "#quiz-page[visible] #quiz[submitted=false] .choice-input:checked"
-    ) &&
-    !confirm("You will lose progress on the current attempt. Continue anyway?")
+    )
   ) {
-    return;
+    unfinishedAttempts.set(getAttemptData(quiz.querySelectorAll(".question")));
   }
   updateAttemptsTable();
   updateCoverage();

@@ -67,33 +67,32 @@ function generateQuiz(quizData) {
   const quiz = document.createElement("div");
   quiz.id = "quiz";
   quiz.setAttribute("submitted", false);
-  quizData.forEach(([id, data], index) =>
-    quiz.appendChild(generateQuestion(id, data, index))
-  );
+  quizData.forEach(([id, data], index) => {
+    let question;
+    if (Object.hasOwn(data, "question")) {
+      question = generateQuestion(id, data, index);
+    } else {
+      question = generateQuestion(id, getQuestion(id), index);
+      Object.entries(data).forEach(([choiceId, isChecked]) => {
+        const input = question.querySelector(`#${choiceId}`);
+        input.checked = isChecked;
+      });
+    }
+    quiz.appendChild(question);
+  });
   return setupQuiz(quiz);
 }
 
 function generateAttempt(attemptData) {
-  const quiz = document.createElement("div");
-  quiz.id = "quiz";
-  quiz.setAttribute("submitted", true);
-  Object.entries(attemptData).forEach(([questionId, choices], index) => {
-    const questionData = getQuestion(questionId);
-    const question = generateQuestion(questionId, questionData, index);
-    quiz.appendChild(question);
-    Object.entries(choices).forEach(([choiceId, isChecked]) => {
-      const input = question.querySelector(`#${choiceId}`);
-      input.checked = isChecked;
-      input.disabled = true;
-    });
-  });
-  setupQuiz(quiz);
+  const quiz = generateQuiz(attemptData);
+  for (const input of quiz.querySelectorAll(".choice-input")) {
+    input.disabled = true;
+  }
   for (const learnedTag of quiz.querySelectorAll(".learned-tag")) {
     learnedTag.remove();
   }
-  for (const input of quiz.querySelectorAll(".choice-input"))
-    input.disabled = true;
   grade(quiz.querySelectorAll(".question"));
+  quiz.setAttribute("submitted", true);
   return quiz;
 }
 

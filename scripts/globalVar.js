@@ -4,9 +4,9 @@ let modulesSelectBoxes = [];
 var quizTimer;
 const placeholderExplanation = `No explanation available. <span id="placeholder-expansion">Why don't you add one?</span>`;
 
-const storedAttempts = localStorage.getItem("pastAttempts");
-if (storedAttempts) {
-  pastAttempts = JSON.parse(storedAttempts);
+const storedPastAttempts = localStorage.getItem("pastAttempts");
+if (storedPastAttempts) {
+  pastAttempts = JSON.parse(storedPastAttempts);
 }
 
 const storedDisagreeNum = localStorage.getItem("disagree");

@@ -11,8 +11,13 @@ const db = firebase.firestore();
 let modulesName;
 let modulesData = {};
 let modulesCoverage = {};
+let unfinishedAttempts = {};
 if (localStorage.getItem("coverage")) {
   modulesCoverage = JSON.parse(localStorage.getItem("coverage"));
+}
+const storedUnfinishedAttempts = localStorage.getItem("unfinished");
+if (storedUnfinishedAttempts) {
+  unfinishedAttempts = JSON.parse(storedUnfinishedAttempts);
 }
 
 function loadData() {
@@ -32,6 +37,10 @@ function getQuestion(id) {
 }
 
 function getQuiz(modules, count) {
+  let quizData = unfinishedAttempts.get(modules, count);
+  count -= quizData.length;
+  if (count == 0) return quizData;
+
   const modulesSize = {};
   for (const module of modules) {
     let size = modulesData[module].size;
@@ -43,10 +52,9 @@ function getQuiz(modules, count) {
   const totalSize = sum(Object.values(modulesSize));
   count = Math.min(totalSize, count);
 
-  let quizData = [];
   for (const [module, size] of Object.entries(modulesSize)) {
     const getAmount = Math.ceil((count * size) / totalSize);
-    const data = modulesData[module].get(getAmount, "beginning");
+    const data = modulesData[module].get(getAmount);
     quizData = quizData.concat(data);
   }
 
@@ -114,6 +122,49 @@ function editSignal(questionId, isEditing) {
     doc.update({ editing: firebase.firestore.FieldValue.delete() });
   }
 }
+
+unfinishedAttempts.get = function (modules, count) {
+  if (typeof modules == "string") {
+    let entries = Object.entries(this[modules] ?? {});
+    const out = entries.splice(-count);
+    this[modules] = Object.fromEntries(entries);
+    return out;
+  }
+
+  const modulesSize = {};
+  for (const module of modules) {
+    modulesSize[module] = Object.keys(this[module] ?? {}).length;
+  }
+  const totalSize = sum(Object.values(modulesSize));
+  count = Math.min(totalSize, count);
+
+  let attemptData = [];
+  for (const [module, size] of Object.entries(modulesSize)) {
+    const getAmount = Math.ceil((count * size) / totalSize);
+    attemptData = attemptData.concat(this.get(module, getAmount));
+  }
+  const out = attemptData.splice(-count);
+  this.set(attemptData);
+  return out;
+};
+
+unfinishedAttempts.set = function (attemptData) {
+  attemptData.forEach(([questionId, choices]) => {
+    const module = questionId.split("_")[0];
+    if (!Object.hasOwn(this, module)) this[module] = {};
+    this[module][questionId] = choices;
+  });
+  localStorage.setItem("unfinished", JSON.stringify(this));
+};
+
+unfinishedAttempts.delete = function (questions) {
+  for (const question of questions) {
+    const questionId = question.id;
+    const module = questionId.split("_")[0];
+    delete this[module]?.[questionId];
+  }
+  localStorage.setItem("unfinished", JSON.stringify(this));
+};
 
 function _loadModulesName() {
   return fetch("./data/modules.json").then((response) => response.json());
