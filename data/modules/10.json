@@ -1795,24 +1795,6 @@
       }
     }
   },
-  "10_84": {
-    "question": "Which of these are good strategies to succeed in this course?",
-    "choices": {
-      "A_10_84": {
-        "choice": "Contribute to the Bible",
-        "isCorrect": true
-      },
-      "B_10_84": {
-        "choice": "Contribute explanations to this website",
-        "isCorrect": true
-      },
-      "C_10_84": {
-        "choice": "Yell <span style=\"font-size: 2rem\">BINGO!</span> in the middle of the class",
-        "isCorrect": false
-      }
-    },
-    "multiSelect": true
-  },
   "10_85": {
     "question": "Scroll arrows moves directionally through numeric range.",
     "choices": {
