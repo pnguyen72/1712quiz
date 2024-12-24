@@ -68,23 +68,13 @@ function generateQuiz(quizData) {
   quiz.id = "quiz";
   quiz.setAttribute("submitted", false);
   quizData.forEach(([id, data], index) => {
-    let question;
-    if (Object.hasOwn(data, "question")) {
-      question = generateQuestion(id, data, index);
-    } else {
-      question = generateQuestion(id, getQuestion(id), index);
-      Object.entries(data).forEach(([choiceId, isChecked]) => {
-        const input = question.querySelector(`#${choiceId}`);
-        input.checked = isChecked;
-      });
-    }
-    quiz.appendChild(question);
+    quiz.appendChild(generateQuestion(id, data, index));
   });
   return setupQuiz(quiz);
 }
 
-function generateAttempt(attemptData) {
-  const quiz = generateQuiz(attemptData);
+function generatePastAttempt(attemptData) {
+  const quiz = generateQuiz(reconstructQuizData(attemptData));
   for (const input of quiz.querySelectorAll(".choice-input")) {
     input.disabled = true;
   }
@@ -170,6 +160,7 @@ function generateQuestion(questionId, questionData, questionIndex) {
     choiceInput.className = "choice-input";
     choiceInput.type = isMultiSelect ? "checkbox" : "radio";
     choiceInput.name = questionId;
+    choiceInput.checked = choiceData.isChecked;
     choiceText.innerHTML = choiceData.choice;
 
     choiceLabel.appendChild(choiceInput);
@@ -268,10 +259,10 @@ function updateAttemptsTable() {
       attemptNum.className = "attempt";
       attemptNum.innerText = tableRows.length + index + 1;
       attemptNum.addEventListener("click", () => {
-        toQuizPage();
         document
           .getElementById("quiz")
-          .replaceWith(generateAttempt(attempt.data));
+          .replaceWith(generatePastAttempt(attempt.data));
+        toQuizPage();
         showResult(score, outOf);
         navText.innerText = `Attempt ${attemptNum.innerText}`;
       });

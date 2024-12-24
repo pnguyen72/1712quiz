@@ -97,7 +97,11 @@ function tohomePage() {
       "#quiz-page[visible] #quiz[submitted=false] .choice-input:checked"
     )
   ) {
-    unfinishedAttempts.set(getAttemptData(quiz.querySelectorAll(".question")));
+    unfinishedAttempts.set(
+      getAttemptData(
+        quiz.querySelectorAll(".question:has(.choice-input:checked)")
+      )
+    );
   }
   updateAttemptsTable();
   updateCoverage();

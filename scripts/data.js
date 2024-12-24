@@ -31,15 +31,15 @@ function loadData() {
   });
 }
 
-function getQuestion(id) {
+function getQuestionData(id) {
   const module = id.split("_")[0];
   return modulesData[module].questions[id];
 }
 
 function getQuiz(modules, count) {
-  let quizData = unfinishedAttempts.get(modules, count);
-  count -= quizData.length;
-  if (count == 0) return quizData;
+  const attemptData = unfinishedAttempts.get(modules, count);
+  count -= attemptData.length;
+  if (count == 0) return reconstructQuizData(attemptData);
 
   const modulesSize = {};
   for (const module of modules) {
@@ -52,14 +52,18 @@ function getQuiz(modules, count) {
   const totalSize = sum(Object.values(modulesSize));
   count = Math.min(totalSize, count);
 
+  let quizData = [];
   for (const [module, size] of Object.entries(modulesSize)) {
     const getAmount = Math.ceil((count * size) / totalSize);
     const data = modulesData[module].get(getAmount);
     quizData = quizData.concat(data);
   }
-
   shuffle(quizData);
-  return quizData.slice(-count);
+  quizData = Object.entries({
+    ...Object.fromEntries(reconstructQuizData(attemptData)),
+    ...Object.fromEntries(quizData),
+  });
+  return quizData.slice(0, count);
 }
 
 function learnQuiz(quiz) {
@@ -165,6 +169,18 @@ unfinishedAttempts.delete = function (questions) {
   }
   localStorage.setItem("unfinished", JSON.stringify(this));
 };
+
+function reconstructQuizData(attemptData) {
+  const quizData = {};
+  attemptData.forEach(([questionId, choicesData]) => {
+    const questionData = getQuestionData(questionId);
+    Object.entries(choicesData).forEach(([choiceId, isChecked]) => {
+      questionData.choices[choiceId].isChecked = isChecked;
+    });
+    quizData[questionId] = questionData;
+  });
+  return Object.entries(quizData);
+}
 
 function _loadModulesName() {
   return fetch("./data/modules.json").then((response) => response.json());
