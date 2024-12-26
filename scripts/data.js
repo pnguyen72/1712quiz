@@ -161,9 +161,8 @@ unfinishedAttempts.set = function (attemptData) {
   localStorage.setItem("unfinished", JSON.stringify(this));
 };
 
-unfinishedAttempts.delete = function (questions) {
-  for (const question of questions) {
-    const questionId = question.id;
+unfinishedAttempts.delete = function (questionIds) {
+  for (const questionId of questionIds) {
     const module = questionId.split("_")[0];
     delete this[module]?.[questionId];
   }

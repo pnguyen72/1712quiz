@@ -137,7 +137,7 @@ function nextQuiz() {
 
 function submit() {
   const quiz = document.getElementById("quiz");
-  const questions = quiz.querySelectorAll(".question");
+  const questions = Array.from(quiz.querySelectorAll(".question"));
 
   if (!checkCompletion(questions)) return;
 
@@ -150,4 +150,5 @@ function submit() {
   learnQuiz(quiz);
   clearInterval(quizTimer);
   updatePastAttempts(correctAnswers, questions);
+  unfinishedAttempts.delete(questions.map((question) => question.id));
 }
