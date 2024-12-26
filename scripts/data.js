@@ -37,7 +37,17 @@ function getQuestionData(id) {
 }
 
 function getQuiz(modules, count) {
-  const attemptData = unfinishedAttempts.get(modules, count);
+  let attemptData = unfinishedAttempts.get(modules, count);
+  if (attemptData.length > 0) {
+    if (
+      !confirm(
+        "You have unsubmitted questions from previous attempts. Do you want to recover them?"
+      )
+    ) {
+      unfinishedAttempts.delete(Object.keys(Object.fromEntries(attemptData)));
+      attemptData = [];
+    }
+  }
   count -= attemptData.length;
   if (count == 0) return reconstructQuizData(attemptData);
 
@@ -59,10 +69,12 @@ function getQuiz(modules, count) {
     quizData = quizData.concat(data);
   }
   shuffle(quizData);
-  quizData = Object.entries({
-    ...Object.fromEntries(reconstructQuizData(attemptData)),
-    ...Object.fromEntries(quizData),
-  });
+  if (attemptData.length > 0) {
+    quizData = Object.entries({
+      ...Object.fromEntries(reconstructQuizData(attemptData)),
+      ...Object.fromEntries(quizData),
+    });
+  }
   return quizData.slice(0, count);
 }
 
@@ -165,6 +177,10 @@ unfinishedAttempts.delete = function (questionIds) {
   for (const questionId of questionIds) {
     const module = questionId.split("_")[0];
     delete this[module]?.[questionId];
+    const choicesData = getQuestionData(questionId).choices;
+    for (const id in choicesData) {
+      choicesData[id].isChecked = false;
+    }
   }
   localStorage.setItem("unfinished", JSON.stringify(this));
 };
