@@ -106,6 +106,7 @@ function getAttemptData(questions) {
 function updatePastAttempts(correctAnswers, questions) {
   pastAttempts.push({
     data: getAttemptData(questions),
+    exam: examSelection.querySelector("input:checked").id,
     modules: getSelectedModules()
       .map((x) => parseInt(x))
       .join(", "),

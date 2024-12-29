@@ -278,6 +278,7 @@ function updateAttemptsTable() {
       }
 
       row.className = "row";
+      row.setAttribute("exam", attempt.exam);
       row.setAttribute("modules", attempt.modules);
       row.appendChild(attemptNum);
       row.appendChild(modules);

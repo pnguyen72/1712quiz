@@ -13,7 +13,7 @@ form.addEventListener("click", () => {
     licenseText.style.animation = "blink 1s";
   }
 });
-
+form.addEventListener("input", filterAttemptsTable);
 examSelection.addEventListener("input", () => {
   localStorage.setItem("exam", midtermChoice.checked ? "midterm" : "final");
   generateModuleSelection();
@@ -31,7 +31,6 @@ moduleSelection.addEventListener("input", () => {
   const modules = getSelectedModules();
   if (modules.length > 0) localStorage.setItem("modules", modules.join(" "));
   updateCoverage();
-  filterAttemptsTable();
 });
 questionsCountChoice.addEventListener("input", () => {
   localStorage.setItem("questions", questionsCountChoice.value);

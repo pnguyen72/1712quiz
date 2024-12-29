@@ -74,17 +74,28 @@ function getSelectedModules() {
 }
 
 function filterAttemptsTable() {
-  const modules = getSelectedModules()
+  const selectedExam = examSelection.querySelector("input:checked")?.id;
+  const selectedModules = getSelectedModules()
     .map((x) => parseInt(x))
     .join(", ");
 
   const rows = attemptsTable.querySelectorAll(".row");
   const modulesColumns = attemptsTable.querySelectorAll(".modules");
 
-  rows.forEach(unhide);
+  rows.forEach((row) => {
+    if (row.getAttribute("exam") != selectedExam) {
+      hide(row);
+    } else {
+      unhide(row);
+    }
+  });
 
-  if (modules.length > 0) {
-    rows.forEach((row) => row.getAttribute("modules") != modules && hide(row));
+  if (selectedModules.length > 0) {
+    rows.forEach((row) => {
+      if (row.getAttribute("modules") != selectedModules) {
+        hide(row);
+      }
+    });
     modulesColumns.forEach(hide);
   } else {
     modulesColumns.forEach(unhide);
