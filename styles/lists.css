@@ -1,6 +1,10 @@
 ul {
   list-style-type: none;
 
+  padding-inline-start: 1.25rem;
+  @media (width < 600px) {
+    padding-inline-start: 1rem;
+  }
   @media (width < 450px) {
     padding-inline-start: 0.75rem;
   }
