@@ -134,7 +134,7 @@ td {
 }
 
 #attempts-table {
-  td.attempt {
+  td.timestamp {
     color: cyan !important;
   }
 }

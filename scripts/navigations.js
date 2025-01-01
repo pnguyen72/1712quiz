@@ -138,12 +138,11 @@ function nextQuiz() {
     moduleSelection.style.animation = "blink 1s";
     return;
   }
-  navText.innerText = `Attempt ${pastAttempts.length + 1}`;
   const quizData = getQuiz(modules, questionsCount);
   document.getElementById("quiz").replaceWith(generateQuiz(quizData));
   toQuizPage();
   quizTimer = startTimer();
-  setTimeout(explainLearnedQuestions, 400); // after the page loads, 400ms should be enough
+  setTimeout(explainLearnedQuestions, 400); // so that it runs after the page has loaded, 400ms should be enough
 }
 
 function submit() {

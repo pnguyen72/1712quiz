@@ -50,7 +50,7 @@ table {
   }
 
   #attempts-table {
-    td.attempt {
+    td.timestamp {
       cursor: pointer;
       color: blue;
       font-weight: bold;

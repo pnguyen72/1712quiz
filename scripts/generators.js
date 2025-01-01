@@ -244,7 +244,7 @@ function updateAttemptsTable() {
 
   pastAttempts
     .slice(tableRows.length - pastAttempts.length)
-    .forEach((attempt, index) => {
+    .forEach((attempt) => {
       const score = attempt.score;
       const outOf = attempt.outOf;
       const accuracy = score / (outOf + Number.EPSILON);
@@ -252,23 +252,27 @@ function updateAttemptsTable() {
       const [H, S, L] = getColor(accuracy);
 
       const row = document.createElement("tr");
-      const attemptNum = document.createElement("td");
+      const timestamp = document.createElement("td");
       const modules = document.createElement("td");
+      const duration = document.createElement("td");
       const result = document.createElement("td");
 
-      attemptNum.className = "attempt";
-      attemptNum.innerText = tableRows.length + index + 1;
-      attemptNum.addEventListener("click", () => {
+      timestamp.className = "timestamp";
+      timestamp.innerText = attempt.timestamp;
+      timestamp.addEventListener("click", () => {
         document
           .getElementById("quiz")
           .replaceWith(generatePastAttempt(attempt.data));
         toQuizPage();
         showResult(score, outOf);
-        navText.innerText = `Attempt ${attemptNum.innerText}`;
+        navText.innerText = attempt.duration;
       });
 
       modules.className = "modules";
       modules.innerText = attempt.modules;
+
+      duration.className = "duration";
+      duration.innerText = attempt.duration;
 
       result.className = "result";
       result.innerText = `${score}/${outOf} (${roundedAccuracy}%)`;
@@ -280,8 +284,9 @@ function updateAttemptsTable() {
       row.className = "row";
       row.setAttribute("exam", attempt.exam);
       row.setAttribute("modules", attempt.modules);
-      row.appendChild(attemptNum);
+      row.appendChild(timestamp);
       row.appendChild(modules);
+      row.appendChild(duration);
       row.appendChild(result);
       attemptsTable.querySelector("tbody").appendChild(row);
     });

@@ -105,13 +105,15 @@ function getAttemptData(questions) {
 
 function updatePastAttempts(correctAnswers, questions) {
   pastAttempts.push({
-    data: getAttemptData(questions),
+    timestamp: Date.now(),
     exam: examSelection.querySelector("input:checked").id,
     modules: getSelectedModules()
       .map((x) => parseInt(x))
       .join(", "),
+    duration: navText.innerText,
     score: correctAnswers,
     outOf: questions.length,
+    data: getAttemptData(questions),
   });
   localStorage.setItem("pastAttempts", JSON.stringify(pastAttempts));
 }
