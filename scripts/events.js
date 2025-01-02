@@ -43,7 +43,7 @@ explainChoice.addEventListener("input", () => {
 
 licenceAgreeBtn.addEventListener("click", licenseUnlock);
 licenseDisagreeBtn.addEventListener("click", () => {
-  if (++disagreeNum < 32768) {
+  if (++disagreeNum < disagreeTarget) {
     alert("You can't disagree, dummy!");
     localStorage.setItem("disagree", disagreeNum);
   } else {
