@@ -15,7 +15,7 @@ form.addEventListener("click", () => {
 });
 form.addEventListener("input", refreshAttemptsTable);
 examSelection.addEventListener("input", () => {
-  localStorage.setItem("exam", midtermChoice.checked ? "midterm" : "final");
+  localStorage.setItem("exam", examSelection.querySelector("input:checked").id);
   generateModuleSelection();
   if (localStorage.getItem("modules")) {
     localStorage
@@ -28,8 +28,7 @@ examSelection.addEventListener("input", () => {
   }
 });
 moduleSelection.addEventListener("input", () => {
-  const modules = getSelectedModules();
-  if (modules.length > 0) localStorage.setItem("modules", modules.join(" "));
+  localStorage.setItem("modules", getSelectedModules().join(" "));
   updateCoverage();
 });
 questionsCountChoice.addEventListener("input", () => {
