@@ -188,7 +188,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "The most common elicitation technique is interview."
   },
   "04_12": {
     "question": "Use cases are a type of 'data-driven modeling'.",
@@ -201,7 +202,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's event-driven modeling."
   },
   "04_13": {
     "question": "What is probably NOT a part of a use case?",
@@ -469,7 +471,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's the trigger."
   },
   "04_29": {
     "question": "The 'actor' is the external user that triggers the event to which the system responds.",
@@ -609,7 +612,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "The last step is to confirm it with the user."
   },
   "04_37": {
     "question": "Which of the following is probably NOT a part of most use cases?",
@@ -647,7 +651,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Use cases normally contain ten to twelve major steps."
   },
   "04_39": {
     "question": "A use case is a formal way of representing how a business system interacts with its environment.",
@@ -686,7 +691,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's the other way around. You build use cases first, which then tell you the functional requirements."
   },
   "04_42": {
     "question": "Use cases are a type of 'event-driven modeling'.",
@@ -712,7 +718,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Use cases can vary from one organization to another in terms of the content included. Not all use cases have all of these sections."
   },
   "04_44": {
     "question": "Which is NOT true of use cases?",
@@ -737,7 +744,8 @@
         "choice": "They are formal ways of representing how a business system interacts with its environment",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Use case does not illustrate how the system provides value."
   },
   "04_45": {
     "question": "When developing the major inputs and major outputs for a use case, the analyst and users should consider which of the following?",
@@ -915,7 +923,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's external or temporal. \"Internal trigger\" is not a thing."
   },
   "04_55": {
     "question": "After working with Chris (who is a staff member in the registrar's office) on major steps in the registration process, Maureen (a systems analyst) will next do what?",

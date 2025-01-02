@@ -22,7 +22,8 @@
         "choice": "Develop the interface structure diagram (ISD)",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "The steps are<br>1. understanding the users (creating personas and use scenarios)<br>2. organizing the interface<br>3. defining standards<br>4. developing prototypes (e.g. wireframes, storyboards)<br>5. evaluation/testing."
   },
   "10_02": {
     "question": "Generally, headings on a paper form should be with Arial size 24 bold; the main text should be Times New Roman size 12. Subheadings should be Tahoma size 14, bold and italic and underlined. This makes a form easier to read and to delineate sections.",
@@ -35,7 +36,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Thorsten is shivering"
   },
   "10_03": {
     "question": "At least one study suggests that some variation be appropriate in user interface design as the study suggests that when all forms tend to look the same, it can be confusing to some users.",
@@ -48,7 +50,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "It's true that consistency is good. But the textbook mentions <u>one</u> study that somewhat disagrees, because it found that having <u>some</u> variations is actually good.<br><br><i>\"When reports and forms are similar except for minor changes in titles, users sometimes have difficulty perceiving the differences. Designers should make the reports and forms similar, but give them some distinctive elements (e.g., color, size of titles) that help users distinguish them.\"</i> <b>(p. 258)</b>"
   },
   "10_04": {
     "question": "Omar has designed a paper form using 'sans serif' fonts and for his screen (or web) forms he has used 'serif' fonts. He is exercising good user interface design practices.",
@@ -86,7 +89,8 @@
         "choice": "Develop the interface structure diagram (ISD)",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "The first step is to understand the users. This is done by examining the DFDs and use cases developed in the analysis phase to clarify the user audience. Then identified user groups can be represented with personals and so forth. <b>(p. 259)</b>"
   },
   "10_06": {
     "question": "Which of the following is NOT a common Interface Evaluation technique?",
@@ -111,7 +115,8 @@
         "choice": "Formal usability testing",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "\"Use scenario normalization\" is made up"
   },
   "10_07": {
     "question": "Interface evaluations almost always do what?",
@@ -186,7 +191,8 @@
         "choice": "Help message",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Acknowledgement messages exist solely to confirm that a user has done something correctly. They're almost never used, because after getting used to the system, the user should already know that they did that thing right."
   },
   "10_10": {
     "question": "Which of the following is NOT a suggestion for preventing mistakes?",
@@ -211,7 +217,8 @@
         "choice": "Create secondary menus when there are many similar choices on a menu",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "<i>\"When there are many similar choices on a menu, consider creating a second level of menu\"</i> <b>(p. 272)</b>"
   },
   "10_11": {
     "question": "This defines the basic components of the interface and how they work together to provide functionality to users.",
@@ -336,7 +343,8 @@
         "choice": "The menu option rule",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Users should be able to go from the start or main menu of a system to the info/action they want in no more than 3 mouse clicks or 3 keystrokes. <b>(p. 258)</b>"
   },
   "10_16": {
     "question": "Approximately what percent of men are color blind (and thus improper use of color can impair their ability to read information)",
@@ -424,7 +432,8 @@
         "choice": "Layout verification",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "\"Step walkthrough\" is not a thing. There is \"walkthrough evaluation\", which is a UI evaluation/testing technique, but it's unrelated."
   },
   "10_20": {
     "question": "Informs the user that the computer system is working properly to perform a task that may take several seconds.",
@@ -575,7 +584,8 @@
         "choice": "Combo box selection list",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Combo boxes are like drop-down menus, but also allow users to manually type in their selection. As typing in the selection saves on having to scroll, it's considered a shortcut for experienced users."
   },
   "10_27": {
     "question": "User experience refers to minimizing the number of clicks or commands to go from one field to another.",
@@ -588,7 +598,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "While the textbook only offhandedly mentions user experience, it mentions UX is <i>\"where users’ feelings, motivations and values are considered as well as efficiency, effectiveness and satisfaction.\"</i> (<b>p.  269</b>)<br><br>Minimizing clicks is part of an efficient UI design, but it's only <i>part</i> of the UX, not the whole thing."
   },
   "10_28": {
     "question": "Which is NOT true about the content awareness design principle?",
@@ -701,7 +712,8 @@
         "choice": "Combo box selection list",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "<a href=\"https://imgur.com/a/x6yZ1Lu\" target=\"_blank\">what's an on-screen selection list?</a>"
   },
   "10_33": {
     "question": "Jamal is creating a user interface. He wants what he calls an 'oops' button on every screen and form (or an 'undo' button). This is a good design consideration.",
@@ -764,7 +776,8 @@
         "choice": "Help message",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Deleting a file isn't necessarily an error. A help message doesn't apply to this context. A delay message also doesn't apply to this context. An acknowledgement message doesn't give a user a choice and just informs them that something occur. This leaves the confirmation message which asks the user for a choice/confirmation. That's why Confirmation Message is the right answer for this question."
   },
   "10_36": {
     "question": "The following is used as a main menu for a Web-based system.",
@@ -814,7 +827,8 @@
         "choice": "Database checks",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Consistency checks ensure that entries are valid and aligned with defined rules.<br>For example, someone’s birth year should precede the year in which they were married."
   },
   "10_38": {
     "question": "Used seldom or never - only if there is insufficient room for check boxes or radio buttons",
@@ -839,7 +853,8 @@
         "choice": "Combo box selection list",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "On-screen selection lists presents a list of choices in a box. This should rarely be used - only if there is insufficient room for check boxes or radio buttons bc it can only permit one answer and therefore is an uglier version of the former options.<br><b>(figure 8-19, p. 281)</b>"
   },
   "10_39": {
     "question": "The first principle of designing navigation controls is what?",
@@ -964,7 +979,8 @@
         "choice": "Tab menu",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Tab menus are a multipage menu with one table for each page that pops up and floats over the screen. Remains on screen until closed. Should be used when user to needs to change several settings of perform several related commands.<br><b>(figure 8-16, p. 276)</b>"
   },
   "10_44": {
     "question": "When creating navigational controls, you should either not display a command that cannot be used or 'gray' it out (where it shows, but cannot be used).",
@@ -1002,7 +1018,8 @@
         "choice": "Help message",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Confirmation message = \"Are you sure you want to do this?\"<br>Acknowledgement message = \"This is what you did.\""
   },
   "10_46": {
     "question": "If a particular form or screen is used by a cadre of experienced users very frequently (like an accounting entry system), 'ease of use' should be a high priority on these system interfaces.",
@@ -1103,7 +1120,8 @@
         "choice": "A green \"S\"",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Your common \"save\" option in applications. 💾"
   },
   "10_51": {
     "question": "Infrequent users prefer user interfaces with 'ease of learning' features (like more explicit menu choices, clear directions).",
@@ -1255,7 +1273,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Experienced users want 'ease of use'. Novice or infrequent users want 'ease of learning'."
   },
   "10_59": {
     "question": "Use scenarios builds upon what?",
@@ -1355,7 +1374,8 @@
         "choice": "Develop the interface structure diagram (ISD)",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "The steps are<br>1. understanding the users (creating personas and use scenarios)<br>2. organizing the interface (using tools such as ISD)<br>3. defining standards<br>4. developing prototypes (e.g. wireframes, storyboards)<br>5. evaluation/testing."
   },
   "10_63": {
     "question": "Ensures that numeric data are within correct minimum and maximum values.",
@@ -1430,7 +1450,8 @@
         "choice": "Develop the interface structure diagram (ISD)",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "The steps are<br>1. understanding the users (creating personas and use scenarios)<br>2. organizing the interface<br>3. defining standards<br>4. developing prototypes (e.g. wireframes, storyboards)<br>5. evaluation/testing."
   },
   "10_66": {
     "question": "This report is used when a user needs brief information on many items.",
@@ -1543,7 +1564,8 @@
         "choice": "Wide and tall",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "It is better to make menus broad and shallow (i.e., with each menu containing many items and each item containing only one or two layers of menus)rather than narrow and deep (i.e., with each menu containing only a few items, but each item leading to three or more layers of menus). A broad and shallow menu presents the user with the most information initially, so that he or she can see many options, and requires only a few mouse clicks or keystrokes to perform an action"
   },
   "10_71": {
     "question": "Used in all systems.",
@@ -1568,7 +1590,8 @@
         "choice": "Help message",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "A help message provides additional information about the system and its components. Used in all systems to ensure users can navigate the system regardless of their experience level."
   },
   "10_72": {
     "question": "There are many types of reports, they include which of the following?",
@@ -1641,7 +1664,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Range check is checking the data is within valid range (e.g. 0 <= x < 10). What the question refers to is format check."
   },
   "10_76": {
     "question": "The following is used as a main menu for a system.",
@@ -1729,7 +1753,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "🍕🍕🍕"
   },
   "10_80": {
     "question": "Aesthetics refers to designing information that can be navigated in three-clicks or less.",
@@ -1793,7 +1818,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's a five-step process:<br>1. Understanding the users (creating personas and use scenarios)<br>2. Organizing the interface<br>3. Defining standards<br>4. Developing prototypes (e.g. wireframes, storyboards)<br>5. Evaluation/testing"
   },
   "10_85": {
     "question": "Scroll arrows moves directionally through numeric range.",
@@ -1868,7 +1894,8 @@
         "choice": "Develop the interface structure diagram (ISD)",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "The steps are<br>1. understanding the users (creating personas and use scenarios)<br>2. organizing the interface<br>3. defining standards<br>4. developing prototypes (e.g. wireframes, storyboards)<br>5. evaluation/testing."
   },
   "10_88": {
     "question": "Novice or infrequent users of an interface (both paper and screen) prefer interfaces with low density like under 25%.",
@@ -1881,7 +1908,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Novice or infrequent users prefer interfaces with a density of less than <b>50%</b>."
   },
   "10_89": {
     "question": "Mike is the analyst creating a report. It is easy for him to unintentionally create a biased report.",
@@ -1932,7 +1960,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Interface Structure Design defines how the user interface is organized and structured (focusing on the layout). It does not deal with anything related to coding structure."
   },
   "10_92": {
     "question": "The first principle of designing navigational controls is to prevent users from making mistakes.",

@@ -10,7 +10,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Because transaction structures are high-level, they deal with processes closer to human interaction than transform structure, which are low-level thus deal with system details. That's why transaction structures frequently occur with menus.<br><br>See <b>p. 313</b>"
   },
   "11_02": {
     "question": "_____ refers to how well the lines of code within each module in a structure chart relate to each other.",
@@ -61,7 +62,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "However, it's not common for data stores in a logical DFD to be transformed into \"encrypted word processing documents\" in a physical DFD. Instead, data stores might be represented as actual databases or files in a physical DFD"
   },
   "11_05": {
     "question": "The fifth step in creating a Physical Data Flow Diagram is what?",
@@ -86,7 +88,8 @@
         "choice": "Update the data elements in the data flows",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "She said in lecture we don't need to know about this."
   },
   "11_06": {
     "question": "In a structure chart, a <i>transaction structure</i> _____.",
@@ -174,7 +177,8 @@
         "choice": "Many conditional couples",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Transform structures (low level modules) &lt;--&gt; afferent processes (system inputs)<br>Transactional structures (high level modules) &lt;--&gt; efferent processes (system outputs)"
   },
   "11_10": {
     "question": "An audit control / audit logfile might be a system related process, data flow and data store that would be added when creating physical DFDs.",
@@ -325,7 +329,8 @@
         "choice": "Many conditional couples",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Transform structures (low level modules) &lt;--&gt; afferent processes (system inputs)<br>Transactional structures (high level modules) &lt;--&gt; efferent processes (system outputs)"
   },
   "11_17": {
     "question": "Structure charts show the user interface.",
@@ -416,7 +421,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Control flags are variables that indicate how the program should run, e.g., when module 1.1 passes the end-of-file flag to module 1.0, module 1.0 determines it should no longer call module 1.1<br><br>They are generally passed from submodule to control module, not the other way around."
   },
   "11_24": {
     "question": "Couples in structure charts always show two modules that are executed together and are drawn with horizontal lines at the top and bottom.",
@@ -429,7 +435,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Couples show data is passed from one module to another. They are drawn with arrows."
   },
   "11_25": {
     "question": "The first step in creating a Physical Data Flow Diagram is what?",
@@ -479,7 +486,8 @@
         "choice": "Use only data couples and no control couples",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "In this context, being conservative means minimizing the number of couples (connections between modules) to keep the diagram clear and manageable. The goal is to avoid overly complex or tangled relationships that could make the system harder to understand and maintain.<br><br>So, while using combination couples is useful in some cases, the general guideline is to limit the number of couples to maintain a clean and understandable structure chart."
   },
   "11_27": {
     "question": "The third step in creating a Physical Data Flow Diagram is what?",
@@ -656,7 +664,8 @@
         "choice": "The time to get the paper form from the clerk&#39;s desk to the order filling / shipping area is one day or longer",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "The other reasons are all upsides of automation, this one is the only downside."
   },
   "11_36": {
     "question": "A diamond on a structure chart shows sequence – like a baseball player would go to first base, then second, third and home.",
@@ -707,7 +716,8 @@
         "choice": "Update the data elements in the data flows",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Maryam said we don't need to learn this."
   },
   "11_39": {
     "question": "When drawing the human-machine boundary, all processes in the physical DFD will be automated, so only external entities will be excluded.",
@@ -720,7 +730,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "A system may contain both manual and automated processes. A human-machine boundary shows which ones are manual."
   },
   "11_40": {
     "question": "A good indication of needing a transaction structure on a structure chart occurs when a DFD shows a single data flow entering a process that produces multiple data flows as outputs.",
@@ -733,7 +744,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Transactional structures mostly handle outputs, while transform structures mostly handle inputs. So having many data flow out and few data flow in indicates a transactional structure."
   },
   "11_41": {
     "question": "Control couples show the passing of parameters or system related messages between modules (like &#39;end-of-file&#39;).",
@@ -746,7 +758,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Control flags are variables that indicate how the program should run, e.g., when module 1.1 passes the end-of-file flag to module 1.0, module 1.0 determines it should no longer call module 1.1"
   },
   "11_42": {
     "question": "Analysts design programs in the design phase of the SDLC, programmers code programs in the Implementation phase.",
@@ -772,7 +785,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Control module cannot be library module"
   },
   "11_44": {
     "question": "An afferent process is an input process on a structure chart.",
@@ -785,7 +799,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "\"Afferent processes are processes that provide inputs into the system, central processes perform critical functions in the operation of the system, and efferent processes deal with system outputs.\" - <b>textbook, p. 330</b> (not covered in module 11 slides)"
   },
   "11_45": {
     "question": "The three basic kinds of processes on a process module are afferent, central, and efferent.",
@@ -863,7 +878,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Fan-In refers to the number of modules that send data to a particular module, not the number of subordinates communicating with the control module. In the context of structure charts or module design, Fan-In indicates how many other modules are dependent on or send data to a given module.<br><br>The statement you mentioned seems to describe Fan-Out, which refers to the number of subordinates or modules that a control module communicates with."
   },
   "11_51": {
     "question": "When designing programs, structure charts may have on-page and off-page connectors.",
@@ -914,7 +930,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Shows sequence, selection, and ITERATION"
   },
   "11_54": {
     "question": "Reusable modules, which are represented in the structure chart as rectangles with vertical lines on both sides, may often appear several times in a structure chart. These are called _____ modules.",
@@ -1016,7 +1033,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's called <b>efferent</b> process"
   },
   "11_60": {
     "question": "Data couples are shown by arrows with empty circles and show how data flows between modules.",
@@ -1029,7 +1047,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Empty circle = data couple<br>Filled circle = control couple"
   },
   "11_61": {
     "question": "By definition, external entities on the DFD are what?",
@@ -1130,7 +1149,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "As far as I can tell, \"Human-Computer Interface\" isn't a term. The textbook does, however, mention Human-Computer Inter<i>action</i> in <b>p. 320</b>:<br><br>\"Physical DFDs differentiate human and computer interaction by a human–machine boundary, a line drawn on the model to separate human action from automated processes.\""
   },
   "11_66": {
     "question": "Factoring is the process of separating out a function from a module in order to create a module of its own.",
@@ -1168,7 +1188,8 @@
         "choice": "loop",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Control couples<br>–> Depicted by arrow with filled-in circle<br>–> Represent the passing of control flags <br>(control flags are variables that indicate how the program should run, e.g., when module 1.1 passes the end-of-file flag to module 1.0, module 1.0 determines it should no longer call module 1.1)"
   },
   "11_68": {
     "question": "Structure charts show selection.",
@@ -1181,7 +1202,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Selection = whether the execution of a module is conditional"
   },
   "11_69": {
     "question": "Programmers can take the logical DFDs and directly implement into code by compiling the metadata in the CASE tools.",

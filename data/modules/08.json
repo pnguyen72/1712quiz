@@ -10,7 +10,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Remember those questions related to the parts of the SDLC in Module 1?<br><br>Planning - <b>Why?</b><br>Analysis - <b>What?</b> (and where and who and when)<br>Design - <b>How?</b>"
   },
   "08_02": {
     "question": "The system inputs and outputs will be designed along with a plan or__________ of the way the system&#39;s features will be navigated.",
@@ -82,7 +83,8 @@
         "choice": "Adding the original hard drives to a newer system",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "<i>\"[System integration is the process of] building new systems by combining packaged software, [the] existing legacy system, and new software to integrate these.\"</i> - <b>module 8, slide 17</b>"
   },
   "08_05": {
     "question": "System design is the determination of the overall system architecture-consisting of a set of physical processing components, _______________, and the communication among them-that will satisfy the system&#39;s essential requirements.",
@@ -129,7 +131,8 @@
         "choice": "The design phase",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Analysis = business requirements<br>Design = system requirements"
   },
   "08_07": {
     "question": "The following document is utilized with possible vendors on projects with smaller budgets, instead of sending a lengthy document to <u>all</u> possible vendors:",
@@ -154,7 +157,8 @@
         "choice": "Request for Information (RFI)",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "RFPs = formal proposals containing full details of the project.<br>RFIs = shorter and less detailed version of an RFP<br>RFQs = even shorter, basically \"just give me the price\".<br>MODs and REIDs aren't a thing."
   },
   "08_08": {
     "question": "Application service providers might be best associated with:",
@@ -179,7 +183,8 @@
         "choice": "Internet Service Providers",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Application service providers provide applications and software related services over corporate networks/the internet. These services are usually hosted on the vendors' servers, meaning they're <b>outsourced</b>.<br>(That, and also ASPs were covered in <b>module 8, slide 18</b>, the same slide as outsourcing.)"
   },
   "08_09": {
     "question": "A workaround is a custom-built add-on program that interfaces with packaged applications to handle specific needs.",
@@ -192,7 +197,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "<i>\"A workaround [is a] custom-built add-on program that interfaces with the packaged application to handle special needs.\"</i> - <b>module 8, slide 15</b>"
   },
   "08_10": {
     "question": "The key challenge in systems integration is avoiding a system wide crash upon installation of legacy software.",
@@ -205,7 +211,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "The key challenge is integrating data, that is, to bring data from the legacy system to the new system. <b>(module 8, slide 17)</b>"
   },
   "08_11": {
     "question": "In regards to packaged software, the project needs a highly skills project manager who has been with the company for many years and has an excellent relationship with both business users and the IT development staff.",
@@ -218,7 +225,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "For packaged software, the project needs a manager who can coordinate vendor efforts."
   },
   "08_12": {
     "question": "Outsourcing firms called _____________ supply software applications and/or software related services through the Internet.",
@@ -328,7 +336,8 @@
         "choice": "User interactions are planned out (inputs, outputs, user interfaces)",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Costs/benefits are calculated in the planning phase."
   },
   "08_17": {
     "question": "Packaged systems are used when:",
@@ -353,7 +362,8 @@
         "choice": "The project has a project manager who can coordinate vendor efforts",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Packaged systems are used when the project has a project manager capable of overseeing and coordinating the vendor's efforts to ensure successful implementation. This allows the project manager to manage both the internal team and the external vendor, ensuring smooth integration and timely delivery."
   },
   "08_18": {
     "question": "The Design phase of the SDLC uses the requirements that were gathered during analysis to actually build (and code if necessary) the final system.",
@@ -366,7 +376,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "The Design phase uses the requirements and figures out <u>how</u> to fulfill them.<br>Actually doing it is the Implementation phase."
   },
   "08_19": {
     "question": "In regards to packaged software, the time frame to implement is flexible to long.",
@@ -379,7 +390,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "The time frame for packaged software is short. <b><figure 6.5<=\"\" b=\"\"></figure></b>"
   },
   "08_20": {
     "question": "For efficiency purposes, it is wise to do what when there is a basic software need to be satisfied?",
@@ -455,7 +467,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Trick question. It's revision of <b>ERDs</b>, not ERPs.<br><br><i>\"prototyping in the interface design step often uncovers additional information that is needed in the system, leading to a revision of the physical DFDs or ERDs\"</i> <b>(p. 205)</b>"
   },
   "08_24": {
     "question": "If the expertise needed to build a system are not readily available that is a good reason to buy a packaged software solution.",
@@ -468,7 +481,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Outsourcing is a better option if you don't have the expertise, because with a packaged software you also have to integrate it, which is challenging."
   },
   "08_25": {
     "question": "CASE repository entries are updated to reflect specific technology decisions as they are made.",
@@ -503,7 +517,8 @@
         "isCorrect": false
       }
     },
-    "multiSelect": true
+    "multiSelect": true,
+    "explanation": "See <b>figure 6-5, p. 213</b>"
   },
   "08_27": {
     "question": "Application Software Providers (ASPs) should be utilized when considering non-core programming and/custom needs.",
@@ -566,7 +581,8 @@
         "choice": "Useless when considering a systems design",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "A time and arrangements deal changes as the project's costs change. It's flexible!<br><br>(-&gt; How did you know I chose that option?)"
   },
   "08_30": {
     "question": "In the initial stage of design, what are business requirements converted into?",
@@ -630,7 +646,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "<i>\"a variety of skills—­technical, interpersonal, functional, project management, modeling—­all must be in place for the project to move ahead smoothly\"</i> <b>(p. 208)</b><br><br><i>\"The skills that are applied during projects are either technical (e.g., Java, SQL) or functional (e.g., electronic commerce)\"</i> <b>(p. 215)</b><br><br>Functional skills is definitely not the only type. But these sentences seem to contradict (are interpersonal skills applied or not?). I don't know.<br><br>Also I don't know what \"functional skills\" even is. I don't think it's ever explained in the textbook. <span style=\"color:red\">Please edit this if you know.</span>"
   },
   "08_34": {
     "question": "Fixed-price contracts are considered which of the following?",
@@ -655,7 +672,8 @@
         "choice": "Useless when considering a systems design",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "In fixed-price contracts, the person paying the provider only pays a certain amount. If the project ends up costing more than agreed upon, the provider has to absorb the costs. This makes the contract very rigid."
   },
   "08_35": {
     "question": "What makes systems integration so difficult?",
@@ -716,7 +734,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "A word processor is a common business need. It's better to buy it."
   },
   "08_39": {
     "question": "An advantage of custom development might be:",
@@ -741,7 +760,8 @@
         "choice": "The rapid development of custom systems",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Custom development is good for solving unique business needs, and getting <i>exactly</i> what you want in a system. <b>(module 8, slides 22 & 24)"
   },
   "08_40": {
     "question": "Where are the decisions stored that are made regarding the hardware and software that will be purchased to support the new system?",
@@ -791,7 +811,8 @@
         "choice": "Buy an ERP system",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "- A unique business need means a solution likely isn't already out there<br>- Custom development is the best option for building in-house skills<br>- A flexible time frame allows for enough time to develop a custom solution"
   },
   "08_42": {
     "question": "Time and arrangements deals are potentially more expensive if the service provider requires unforeseen resources to complete the project on time.",
@@ -804,7 +825,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Time and arrangement deals mean you pay as much as needed to finish the project."
   },
   "08_43": {
     "question": "Outsourcing requires the least in-house resources.",
@@ -817,7 +839,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Custom development requires you create the software in-house.<br>Packaged software usually requires some modification to the package.<br>Outsourcing completely takes the development off your hands.<br><b>(module 8, slides 22 and 24)"
   },
   "08_44": {
     "question": "A reason to use a packaged software solution is when there is no need to &quot;reinvent the wheel&quot;",
@@ -856,7 +879,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Logical data models are conceptual, and are just made to figure out the system's data requirements. <br>Physical data models take those concepts and figure out how to actually <i>meet</i> those requirements efficiently."
   },
   "08_47": {
     "question": "In regards to packaged software, in most cases, the software is a perfect fit for the companies need.",
@@ -869,7 +893,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Packaged software is a general solution; each system that uses that solution will have slightly different requirements for that part of their system. Don't expect it to perfectly fit all of your requirements."
   },
   "08_48": {
     "question": "One problem with using packages software systems is:",
@@ -907,7 +932,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "In-house experience is extremely valuable; the skills your system developers have are <i>yours</i>. Keeping those skills in-house may give you a competitive edge."
   },
   "08_50": {
     "question": "In the analysis phase, architecture decisions are made and written up in the &#39;hardware and software specifications&#39;.",
@@ -920,7 +946,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Hardware and Software Specifications are done in the design phase."
   },
   "08_51": {
     "question": "Workarounds are what?",
@@ -942,7 +969,8 @@
         "choice": "Created to interface two software packages that are compatible with each other",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Workarounds are custom code designed to - heh - <i>work around</i> the limitations of a packaged software solution. Because they aren't supplied by that package's vendor, they are not supported by them. Workarounds can also break as the software updates, and the vendor will <i>not</i> help you if your system breaks."
   },
   "08_52": {
     "question": "Which of the following lists indicates the correct ordering of deliverables in a system specification document?",
@@ -967,7 +995,8 @@
         "choice": "Data Storage Design, Interface Design, Architecture Design, Updated Crud Matrix",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "See <b>figure 6-1</b>.<br>Note that the question asks for the \"correct ordering\", not just any list of deliverables."
   },
   "08_53": {
     "question": "During the initial part of design, the project team converts the business requirements for the system into system requirements.",
@@ -993,7 +1022,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Unique needs should use Custom Development.<br>See <a target=\"_blank\" href=\"https://docs.google.com/document/d/1te3-P5Rm_u4fdDsJFVOWigXhoSgLdk8tMQN2CvaR7pk/edit?tab=t.0#heading=h.rfnjeudh6hzh\">the table under \"Criteria\"</a>"
   },
   "08_55": {
     "question": "Custom development that can be achieved by the in-house team and core business practices are both examples of times when outsourcing is <u>not</u> an option.",
@@ -1006,7 +1036,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Anything <b>core</b> to the business should not be outsourced.<br>See <a href=\"https://docs.google.com/document/d/1te3-P5Rm_u4fdDsJFVOWigXhoSgLdk8tMQN2CvaR7pk/edit?tab=t.0#heading=h.rfnjeudh6hzh\">table under <u>Criteria</u></a>"
   },
   "08_56": {
     "question": "The only skills that are applied during systems projects are technical.",
@@ -1019,7 +1050,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "<i>\"a variety of skills—­technical, interpersonal, functional, project management, modeling—­all must be in place for the project to move ahead smoothly\"</i> <b>(p. 208)</b><br><br><i>\"The skills that are applied during projects are either technical (e.g., Java, SQL) or functional (e.g., electronic commerce)\"</i> <b>(p. 215)</b><br><br>Technical skills is definitely not the only type. But these sentences seem to contradict (are interpersonal skills applied or not?). <span style=\"color:red\">Please edit this if you know what's going on.<span></span></span>"
   },
   "08_57": {
     "question": "During the design phase, the project team carefully considers the nonfunctional business requirements (such as performance, cultural and political aspects).",
@@ -1032,7 +1064,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "<i>\"The project team carefully considers the nonfunctional business requirements that were identified during analysis.\"</i> <b>(p. 205)</b><br><br>For example, you must consider how fast the system should operate and what its availability should be. These are non-functional requirements, and they influence how you would design the system."
   },
   "08_58": {
     "question": "Requests for Proposals (RFPs) serve what purpose?",
@@ -1082,7 +1115,8 @@
         "choice": "Outsourcing Model",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "<i>\"If time pressure is intense, use rapid application development (RAD) techniques and timeboxing</i>\" <b>(practical tip 6-1, p. 207)</b><br><br>Outsourcing is false because it's not necessarily fast. It's only fast if there's a service provider that already has what you need, otherwise it could take as long as custom development. <b>(p. 215)</b>"
   },
   "08_60": {
     "question": "A common need to the business should be satisfied by contracting with an Application Service Provider (ASP).",

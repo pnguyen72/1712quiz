@@ -339,7 +339,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Either your answer was wrong, or you didn't answer honestly."
   },
   "01_19": {
     "question": "The three feasibility analyses in the text were: organizational feasibility, technical feasibility, and economic feasibility.",
@@ -680,7 +681,8 @@
         "choice": "62,000",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "ROI <br>= (benefit - cost)/cost <br>= (182k - 120k)/120k <br>= 0.517"
   },
   "01_36": {
     "question": "Determining business requirements is generally done in the planning phase of the SDLC.",
@@ -693,7 +695,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's the analysis phase."
   },
   "01_37": {
     "question": "The outcome of the planning phase is the:",
@@ -744,7 +747,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's the planning phase, specifically, the feasibility analysis."
   },
   "01_40": {
     "question": "Systems that are cancelled or abandoned are frequently due to a lack of clarity about how the system should support an organization's goals and improve processes..",
@@ -1059,7 +1063,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's the system request."
   },
   "01_55": {
     "question": "Becky is a systems analyst for Laswell Consulting. She is attending a three-day intensive workshop on developing applications in php. What systems analyst skill is she working on?",

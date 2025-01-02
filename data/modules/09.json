@@ -19,7 +19,8 @@
         "isCorrect": false
       }
     },
-    "multiSelect": true
+    "multiSelect": true,
+    "explanation": "<i>\"Access control requirements [are] limitations on who can access what data.\"</i> - <b>module 9, slide 41</b>"
   },
   "09_02": {
     "question": "Server virtualization involves what?",
@@ -37,7 +38,8 @@
         "isCorrect": false
       }
     },
-    "multiSelect": true
+    "multiSelect": true,
+    "explanation": "<i>\"[Server virtualization is] partitioning a physical server into smaller virtual servers that are independent of each other, run their own OS and can be rebooted independently.\"</i> - <b>module 9, slide 28</b>"
   },
   "09_03": {
     "question": "Thick clients contain what?",
@@ -59,7 +61,8 @@
         "isCorrect": false
       }
     },
-    "multiSelect": true
+    "multiSelect": true,
+    "explanation": "Thick clients are defined as clients that contain most, or all, of the application logic (as opposed to thin clients, which contain only a small part of the application logic)."
   },
   "09_04": {
     "question": "The scalability associated with Client-Server systems is:",
@@ -84,7 +87,8 @@
         "choice": "Very High",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "We know that client-server architecture has high scalability, but it's not clear why it's \"high\" rather than \"very high\"."
   },
   "09_05": {
     "question": "It is not uncommon for the cost of a power disruption to be hundreds or thousands of times the cost of failed components.",
@@ -97,7 +101,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "<i>\"The cost of disruptions to a company’s primary website or to the LANs and backbones that support telephone sales operations often measures in millions of dollars. Amazon.com, for example, had average in 2017 revenues of more than $6.9 million per hour, so if its website was unavailable for an hour or two, it would cost them millions of dollars in lost revenue if customers took their business elsewhere. Companies that do less e-business or telephone sales have lower costs, but recent surveys suggest that losses of $100,000 to $200,000 per hour are not uncommon for major customer-facing information systems.\"</i><br><b>(p. 254)</b>"
   },
   "09_06": {
     "question": "Expected business changes to which the system should be able to adapt.",
@@ -122,7 +127,8 @@
         "choice": "Maintainability Requirements",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "figure 7-5, p. 232; also module 9, slide 33"
   },
   "09_07": {
     "question": "There are three advantages associated with client-server architecture.",
@@ -135,7 +141,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Actually, there are four!<br>- Scalable (also meaning it's flexible)<br>- Supportive of many different client and server types (using middleware)<br>- Presentation, application, and data storage/access logic can be designed independently<br>- Easily replaceable (if a server fails, it can be swapped easily and won't affect the whole system)"
   },
   "09_08": {
     "question": "Project teams often _________ the ________ associated with creating secure, efficient client-server applications.",
@@ -208,7 +215,8 @@
         "choice": "Maintainability Requirements",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "It's different from Portability Requirement in that TER is what environments the system <i>currently</i> needs to operate in; while PR is what environments the system <i>may</i> need to operate in in the future.<br><br><b>(p. 231)</b>"
   },
   "09_12": {
     "question": "The major architectural components of any system are the what?",
@@ -258,7 +266,8 @@
         "choice": "Alternative Systems Security Algorithms",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "DES stands for Data Encryption Standard.<br><br>We only learned 2 types of encryption algorithm, symmetric and asymmetric. The only asymmetric encryption algorithm we learned is <b>public key encryption</b>. So everything else is symmetric.<br><br>See <b>p. 237</b>."
   },
   "09_14": {
     "question": "Server-based architecture is <u>not</u> more secure than client-based architecture.",
@@ -271,7 +280,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Client-based = fat client"
   },
   "09_15": {
     "question": "An example of a cultural requirement would be offering the system in English and Spanish.",
@@ -284,7 +294,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Language requirements are part of cultural requirements - more specifically, they're called multilingual requirements.<br><br>See <b>figure 7-8, p. 239</b>"
   },
   "09_16": {
     "question": "Technical Environment Requirements can be defined as special hardware, software, and network requirements imposed by business requirements",
@@ -392,7 +403,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Making a fields modifiable is <u>customizable requirement</u>.<br><br>Making unstated norms explicit is, for example, explicitly stating your date format and measurement unit."
   },
   "09_22": {
     "question": "The architectural components of any system are the network and the hardware.",
@@ -405,7 +417,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Software too :)"
   },
   "09_23": {
     "question": "Maintainability Requirements can be defined as expected business changes to which the system should be able to adapt.",
@@ -444,7 +457,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Client-based = fat client"
   },
   "09_26": {
     "question": "Portability Requirements can be defined as the extent to which the system will need to operate in other environments.",
@@ -457,7 +471,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "It's different from Technical Environment Requirements in that PR is what environments the system <i>may</i> need to operate in in the future; while TER is what environments the system <i>currently</i> needs to operate in.<br><br><b>(p. 231)</b>"
   },
   "09_27": {
     "question": "The design phase is the time to select the specific software that will operate the hardware.",
@@ -495,7 +510,8 @@
         "choice": "Maintainability Requirements",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "<i>\"System integration requirements [are] the extent to which the system will operate with other systems.\"</i> <b>(module 9, slide 33)</b>"
   },
   "09_29": {
     "question": "The cost of development associated with Client-Based systems is:",
@@ -533,7 +549,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Maintainability Requirements refer to how easily the system can be updated, fixed, or enhanced, not how it operates in different environments."
   },
   "09_31": {
     "question": "The objective of architecture design is to determine how the software components of the information system will be assigned to the hardware devices of the system.",
@@ -594,7 +611,8 @@
         "isCorrect": false
       }
     },
-    "multiSelect": true
+    "multiSelect": true,
+    "explanation": "More tiers in the architecture means more network communications overall, meaning it needs a higher-capacity network.<br><br>Because there's a lot more tiers, the code also becomes a lot harder to test. <b>(module 9, slide 18)</b>"
   },
   "09_34": {
     "question": "The objective of architecture design is to determine what?",
@@ -676,7 +694,8 @@
         "isCorrect": false
       }
     },
-    "multiSelect": true
+    "multiSelect": true,
+    "explanation": "Response time and being updated in realtime are speed requirement. Uptime is availability requirement."
   },
   "09_38": {
     "question": "Client-server scalability is greater than server-based scalability.",
@@ -702,7 +721,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "I think ATM in this context refers to ATM circuits, a form of network connection, unrelated to the money machines. <b>(p. 224)</b>"
   },
   "09_40": {
     "question": "System Integration Requirements can be defined as the extent to which the system will need to operate in other environments.",
@@ -715,7 +735,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "System Integration Requirements is the extent to which the system will need to operate <b>with other systems</b> (e.g. the system will work with existing database).<br><br>The extent to which the system will need to operate in other environments is <b>Portability Requirements</b> (e.g. system may need to operate on mobile)"
   },
   "09_41": {
     "question": "Operational requirements of a system include all of the following, except:",
@@ -762,7 +783,8 @@
         "isCorrect": true
       }
     },
-    "multiSelect": true
+    "multiSelect": true,
+    "explanation": "Benefits of client-server architecture:<br>- Scalable<br>- Can support many different types of clients and servers<br>- Can design each logic function independently<br>- If a server fails, only the applications requiring that server will fail<br><b>(module 9, slide 11)</b>"
   },
   "09_43": {
     "question": "The primary hardware components of a system consist of:",
@@ -812,7 +834,8 @@
         "choice": "T2 and DSL",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "<i>\"The network that connects the computers can vary [...] such as cable modem, DSL, or T1 circuits, to high-­speed always-­on Ethernet, T3, or ATM circuits.\"</i> <b>(p. 224)</b>"
   },
   "09_45": {
     "question": "An example of making an unstated norm explicit would be to make an input field explicitly defined, such as a date will use month-day-year format.",
@@ -850,7 +873,8 @@
         "choice": "5",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "1. Data storage<br>2. Data access logic<br>3. Application logic<br>4. Presentation logic<br><b>(p. 223-224)</b>"
   },
   "09_47": {
     "question": "Server-based architecture is more secure than client-based architecture.",
@@ -863,7 +887,8 @@
         "choice": "False",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Server-based architecture has the server do all four application functions. Client-based architecture has the client do the presentation logic. As the client in server-based architecture has less control over the logic of the system, server-based architecture is more secure."
   },
   "09_48": {
     "question": "The extent to which the system will need to operate in other environments.",
@@ -913,7 +938,8 @@
         "choice": "7",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "1. Scalable: easy to increase/decrease storage or processing power as necessary.<br>2. Can support many different types of clients and servers (e.g. a Windows client can access a server running on Linux)<br>3. Easy to separate different logic fuctions (presentation logic, application logic, data access logic).<br>4. Reliable: if a server fails, the failed server can be replaced.<br><b>(p. 224-225)</b>"
   },
   "09_50": {
     "question": "There are _____ primary hardware components of a system.",
@@ -938,7 +964,8 @@
         "choice": "5",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Client computers, servers, and the network. <b>(p. 224)</b>"
   },
   "09_51": {
     "question": "Client-server architecture holds the client responsible for_____ and server is only responsible for _____.",
@@ -994,6 +1021,7 @@
         "isCorrect": false
       }
     },
-    "multiSelect": true
+    "multiSelect": true,
+    "explanation": "Server-based architecture:<br>- User sits in front of a “dumb terminal\", all it does is get user input, send to server to process, and send back the output. (This is what the question means by \"capture keystroke\".)<br>- It's the first computing architecture because back then companies can't afford to give every employee a computer. So each gets a \"dumb terminal\", all connected to just one computer.<br>- While less common today, they’re still important, especially where systems process a huge amount of transactions or require a huge amount of security."
   }
 }

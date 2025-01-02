@@ -86,7 +86,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "\"sticky\" is made up"
   },
   "12_06": {
     "question": "Many ________ tools like ERwin can help you with database size information and the calculation of volumetrics.",
@@ -162,7 +163,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's primary and foreign keys. \"International key\" is not a thing."
   },
   "12_10": {
     "question": "The most popular type of database today is what?",
@@ -325,7 +327,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's the other way around. You have logical models in the nalysis phase, and they become physical models in the design phase."
   },
   "12_17": {
     "question": "The acronym for the standard language used to access data in relational databases is:",
@@ -400,7 +403,8 @@
         "choice": "image files",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "files with uniform structure are more aligned with relational databases, where data is organized into tables with a fixed schema. Document-oriented databases allow for a more flexible and dynamic schema."
   },
   "12_20": {
     "question": "Maria is working for the Minneapolis Dance Troop (MDT) and wants a database that can support text, numbers, video, and audio. She will probably select the multidimensional database format.",
@@ -413,7 +417,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "A multidimensional database is typically used for organizing and analyzing data in a structure suited for OLAP (Online Analytical Processing), such as sales data or financial data. However, for a database that needs to support a variety of data types like text, numbers, video, and audio, Maria would likely select a multimedia database or a NoSQL database (such as a document-based or object-oriented database) rather than a multidimensional one. These types of databases are designed to handle diverse data formats effectively."
   },
   "12_21": {
     "question": "This type of file records &quot;before&quot; and &quot;after&quot; images of data as the data gets altered.",
@@ -451,7 +456,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "The two primary ways to optimize a relational database are (a) for query performance (i.e., how quickly and efficiently the database can retrieve and process data) and (b) for storage efficiency (i.e., minimizing the amount of disk space used)."
   },
   "12_23": {
     "question": "The concept for planning good performance of databases is known as what?",
@@ -578,7 +584,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Data marts are typically smaller, specialized subsets of data warehouses, designed to serve the needs of a specific business unit or function. They often contain aggregated data but are not larger legacy databases. Legacy databases refer to older, outdated systems, while data marts are part of modern data architecture used for specific analytical purposes."
   },
   "12_30": {
     "question": "When changing logical data models to physical data models, you will want to change entities to tables or files.",
@@ -642,7 +649,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's Structured Query Language"
   },
   "12_34": {
     "question": "Which of the following are NOT characteristics of Big Data?",
@@ -698,7 +706,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "A DSS (Decision Support System) is a system designed to help with decision-making by providing data analysis and modeling tools. It is not responsible for performing ETL (Extract, Transform, Load) operations."
   },
   "12_37": {
     "question": "New databases collectively referred to as NoSQL databases have appeared in recent years. Which of the following are categorized as a NoSQL database?",
@@ -859,7 +868,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It is primarily a relational database management system (RDBMS),"
   },
   "12_44": {
     "question": "When working on a major project, project teams will always select and stay with only one database format for consistency of development and use.",
@@ -998,7 +1008,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "To make data access faster, you <b>index</b> it. The indexing will take storage space.<br><b>(module 12, slide 34-36)</b>"
   },
   "12_51": {
     "question": "Brian wants an e-commerce system to be able to do a lot of rapid processing – like search for particular keywords in documents; return the price of an item; update quantities in the shopping cart. He is probably building an Expert System.",
@@ -1176,7 +1187,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's called foreign key"
   },
   "12_61": {
     "question": "One goal is data storage design is to spread the data over all storage devices so that the redundancy will make for more efficient storage.",
@@ -1252,7 +1264,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Oracle is primarily a relational database management system (RDBMS)"
   },
   "12_65": {
     "question": "The type of processing system that creates reports for supervisors (and other functional users) probably would be which of the following?",

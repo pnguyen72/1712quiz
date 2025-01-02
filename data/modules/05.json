@@ -35,7 +35,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's a process. \"Bundle\" is not a thing."
   },
   "05_03": {
     "question": "A single fact, such as Order ID (sometimes called a data element), or a logical collection of several facts (e.g., new shop work order).",
@@ -70,7 +71,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's not true that an external entity never interacts with the system."
   },
   "05_05": {
     "question": "All data stores must have at least one input data flow.",
@@ -96,7 +98,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Use case only shows what the process looks like from the outside. It doesn't tell you how things work inside."
   },
   "05_07": {
     "question": "Processes must be computerized.",
@@ -109,7 +112,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Processes can either be conputerized or manual."
   },
   "05_08": {
     "question": "Process models have just recently become a part of structured systems analysis and design techniques.",
@@ -135,7 +139,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Creating DFDs is an iterative process."
   },
   "05_10": {
     "question": "Models which provide information that is needed to ultimately build the system.",
@@ -208,7 +213,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's syntax errors and semantic errors."
   },
   "05_14": {
     "question": "Data flows going into a data store indicate that there is a logical error.",
@@ -259,7 +265,8 @@
         "choice": "Level-0 DFD",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "The top-level DFD is the context diagram, below it is level-0."
   },
   "05_17": {
     "question": "A collection of data that is stored in some way (which is determined later when creating the physical model).",
@@ -294,7 +301,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's called balancing. \"Synchronizing\" is not a thing."
   },
   "05_19": {
     "question": "This type of English uses short sentences to describe the work that a process performs.",

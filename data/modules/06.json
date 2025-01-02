@@ -49,7 +49,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Relationships show cardinality and <i>modality</i>. Plurality is not a thing."
   },
   "06_05": {
     "question": "An entity relationship diagram (ERD):",
@@ -100,7 +101,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's one-to-one (1:1), one-to-many (1:N), or many-to-many (M:N)."
   },
   "06_08": {
     "question": "Which would likely be an entity on a car insurance ERD?",
@@ -201,7 +203,8 @@
         "choice": "Student identification number",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "A student is likely to have multiple classrooms, so there cannot be a single \"Class room number\" attribute."
   },
   "06_13": {
     "question": "A(n) _____ entity cannot exist without the presence of another entity or has an identifier that is based on another entity's attribute.",
@@ -239,7 +242,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "ERD = data modeling<br>DFD = process modeling<br>Not the same thing."
   },
   "06_15": {
     "question": "On an ERD, data elements are listed alphabetically with a cross listing to the processes that manipulate them.",
@@ -341,7 +345,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Information about entities are attributes. Relationships are more like information about the system (i.e. how entities are related)."
   },
   "06_21": {
     "question": "During the analysis phase logical data models are created.",
@@ -393,7 +398,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "ERD = data modeling<br>DFD = process modeling<br>Not the same thing."
   },
   "06_25": {
     "question": "An illustration of the transformation of data into business value is an ERD.",
@@ -633,7 +639,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "A student is likely to have multiple professors and classrooms, so there cannot be a single \"Professsor-ID\" or \"Classroom\" attribute."
   },
   "06_37": {
     "question": "ERD's are data modeling techniques.",
@@ -914,7 +921,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Entity is described by a noun. Described by an action verb is a process."
   },
   "06_54": {
     "question": "You have entities of ITEM, SOLD-ITEM, SALE and PAYMENT. Which most likely is NOT a relationship?",
@@ -939,7 +947,8 @@
         "choice": "PAYMENT pays for SALE",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "PAYMENT <i>pays for</i> SOLD-ITEM <i>includes</i> ITEM"
   },
   "06_55": {
     "question": "Modality refers to which of the following?",
@@ -1109,7 +1118,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "They're called <i>entities</i>."
   },
   "06_64": {
     "question": "In defining the data characteristics of Universal Product Codes, we might describe them as twelve characters made up of digits – numeric only.",

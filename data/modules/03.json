@@ -31,7 +31,8 @@
         "choice": "Observation",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "You may observe the interviewee during the intervew, but \"observation\" is not a type of question."
   },
   "03_03": {
     "question": "Paul is interviewing Ming. He first explains why he is there and what he wants to accomplish in the interview. This would be done in which step of the interview process?",
@@ -326,7 +327,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Not <i>all</i> discussions, only relevant ones."
   },
   "03_20": {
     "question": "Which is generally NOT true of non-functional requirements?",
@@ -402,7 +404,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "It's the other way around."
   },
   "03_24": {
     "question": "Michael, a systems analyst, is preparing a closed wiki site for Northstate Bank. He has written permission from eight other companies to view their internal wiki sites, and also has approval from his manager and the project team to use these other sites for ideas and structure. This would be a form of:",
@@ -931,7 +934,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Interview report should be written within 24 hours of the interview."
   },
   "03_49": {
     "question": "What does it mean for a process to be fragmented?",

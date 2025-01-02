@@ -149,7 +149,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "There's no fixed optimal number. Project teams should be as large as necessary, as small as possible."
   },
   "02_09": {
     "question": "Which of the following methodologies might be most appropriate if you have a system project with: clear requirements; very familiar technologies; not all that complex; must be reliable; a somewhat longer schedule and the schedule visibility is not important?",
@@ -334,7 +335,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "PMP stands for Project Management Professional."
   },
   "02_18": {
     "question": "The margin of error in cost and time estimates can be as much as 20% in the planning phase for the system proposal deliverable.",
@@ -347,7 +349,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "Cost margin of error: 100%<br>Time margin of error: 25%"
   },
   "02_19": {
     "question": "If you had a project with very clear requirements; familiar technologies; not super complex; reliable; a very long time schedule and where the need for schedule visibility is low – the best methodology might be Extreme programming.",
@@ -817,7 +820,8 @@
         "choice": "Risk management",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Timeboxing = cutting features to finish the project on time.<br>Activity elimination = improving the system process by eliminating unnecessary activities.<br>These are unrelated."
   },
   "02_43": {
     "question": "The Iterative approach of the RAD methodology breaks the overall project into a series of release versions.",
@@ -881,7 +885,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "That's the Iterative method."
   },
   "02_47": {
     "question": "Which is NOT suggested for IT development projects?",
@@ -1133,7 +1138,8 @@
         "choice": "0 and $100,000 – and between 0 and 40 weeks",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Cost margin of error = 100%<br>Time margin of error = 25%"
   },
   "02_59": {
     "question": "Extreme Programming (XP) is BEST characterized as:",
@@ -1183,7 +1189,8 @@
         "choice": "Overly optimistic schedule",
         "isCorrect": false
       }
-    }
+    },
+    "explanation": "Requirements are gathered in the analysis phase, not planning phase."
   },
   "02_61": {
     "question": "The science (or art) of project management is setting a schedule and sticking to it no matter what – even if that includes working weekends and adding staff to reach the deadline on time.",
@@ -1209,7 +1216,8 @@
         "choice": "False",
         "isCorrect": true
       }
-    }
+    },
+    "explanation": "The throwaway prototype is only for the dev to learn more about user requirements and the technology. After it's finished, it's \"thrown away\", not released."
   },
   "02_63": {
     "question": "What the MAIN difference between systems prototyping and throwaway prototyping?",

@@ -93,6 +93,7 @@ function generateQuestion(questionId, questionData, questionIndex) {
   const hasImage = questionData.hasImage;
   const isMultiSelect = questionData.multiSelect;
   const choices = Object.entries(questionData.choices);
+  const cachedExplanation = questionData.explanation;
   shuffleChoices(choices);
 
   // header
@@ -173,7 +174,7 @@ function generateQuestion(questionId, questionData, questionIndex) {
   const editingIndicator = document.createElement("i");
 
   explanationContainer.className = "explanation-container";
-  explanation.className = "explanation empty";
+  explanation.className = "explanation";
   explanation.write = (value) => {
     if (value) {
       explanation.classList.remove("empty");
@@ -183,6 +184,7 @@ function generateQuestion(questionId, questionData, questionIndex) {
       explanation.innerHTML = placeholderExplanation;
     }
   };
+  explanation.write(cachedExplanation);
   editBtn.className = "bx bx-edit";
   editBtn.title = "edit";
   if (matchMedia("not all and (hover: none)").matches) {
