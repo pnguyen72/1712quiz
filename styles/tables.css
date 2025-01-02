@@ -53,21 +53,42 @@ table {
     td.timestamp {
       cursor: pointer;
       color: blue;
-      font-weight: bold;
 
       /* if hover is available */
       @media not all and (hover: none) {
-        font-weight: normal;
-
         &:hover {
-          font-weight: bold;
+          text-decoration: underline;
         }
       }
     }
 
-    @media (width < 400px) {
-      .modules {
+    @media (width < 700px) {
+      :has(.modules[visible="true"]) {
+        .result .percentage {
+          display: none;
+        }
+      }
+    }
+    @media (width < 600px) {
+      :has(.modules[visible="true"]) {
+        .duration {
+          display: none;
+        }
+      }
+    }
+    @media (width < 500px) {
+      .result .percentage {
         display: none;
+      }
+    }
+    @media (width < 400px) {
+      .modules,
+      .duration {
+        display: none;
+      }
+
+      .result .percentage {
+        display: initial;
       }
     }
   }
