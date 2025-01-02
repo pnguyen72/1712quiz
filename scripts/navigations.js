@@ -102,7 +102,7 @@ function refreshAttemptsTable() {
   }
 
   attemptsTable
-    .querySelectorAll(".row .timestamp")
+    .querySelectorAll(".row[visible=true] .timestamp")
     .forEach((td) => (td.innerText = humanize(td.getAttribute("value"))));
 }
 
