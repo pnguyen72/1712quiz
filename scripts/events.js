@@ -13,7 +13,7 @@ form.addEventListener("click", () => {
     licenseText.style.animation = "blink 1s";
   }
 });
-form.addEventListener("input", filterAttemptsTable);
+form.addEventListener("input", refreshAttemptsTable);
 examSelection.addEventListener("input", () => {
   localStorage.setItem("exam", midtermChoice.checked ? "midterm" : "final");
   generateModuleSelection();

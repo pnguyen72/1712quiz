@@ -95,3 +95,44 @@ function initializeHeight(textarea) {
   const btnHeight = form.querySelector("button").offsetHeight;
   form.style.height = `calc(4px + ${btnHeight}px + ${textHeight}px)`;
 }
+
+function humanize(timestamp) {
+  const thatDate = new Date(timestamp);
+  const thisDate = new Date();
+  const diff = Math.floor((thisDate.getTime() - timestamp) / 1000);
+
+  if (diff < 7200) {
+    const minutes = Math.floor(diff / 60);
+    return `${minutes} minute${minutes != 1 ? "s" : ""} ago`;
+  }
+  if (diff < 86400) {
+    const hours = Math.floor(diff / 3660);
+    return `${hours} hour${hours != 1 ? "s" : ""} ago`;
+  }
+
+  const year = thatDate.getFullYear();
+  const month = MONTHS[thatDate.getMonth()];
+  const date = thatDate.getDate();
+  const hours = String(thatDate.getHours()).padStart(2, "0");
+  const minutes = String(thatDate.getMinutes()).padStart(2, "0");
+
+  if (year == thisDate.getFullYear()) {
+    return `${month} ${date}, ${hours}:${minutes}`;
+  }
+  return `${year} ${month} ${date}, ${hours}:${minutes}`;
+}
+
+const MONTHS = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];

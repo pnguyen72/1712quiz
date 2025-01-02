@@ -258,7 +258,7 @@ function updateAttemptsTable() {
       const result = document.createElement("td");
 
       timestamp.className = "timestamp";
-      timestamp.innerText = attempt.timestamp;
+      timestamp.setAttribute("value", attempt.timestamp);
       timestamp.addEventListener("click", () => {
         document
           .getElementById("quiz")
@@ -290,7 +290,7 @@ function updateAttemptsTable() {
       row.appendChild(result);
       attemptsTable.querySelector("tbody").appendChild(row);
     });
-  filterAttemptsTable();
+  refreshAttemptsTable();
 }
 
 function updateCoverage() {

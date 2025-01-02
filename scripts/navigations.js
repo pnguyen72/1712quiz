@@ -73,7 +73,7 @@ function getSelectedModules() {
   return modulesSelectBoxes.filter((box) => box.checked).map((box) => box.id);
 }
 
-function filterAttemptsTable() {
+function refreshAttemptsTable() {
   const selectedExam = examSelection.querySelector("input:checked")?.id;
   const selectedModules = getSelectedModules()
     .map((x) => parseInt(x))
@@ -100,6 +100,10 @@ function filterAttemptsTable() {
   } else {
     modulesColumns.forEach(unhide);
   }
+
+  attemptsTable
+    .querySelectorAll(".row .timestamp")
+    .forEach((td) => (td.innerText = humanize(td.getAttribute("value"))));
 }
 
 function tohomePage() {
