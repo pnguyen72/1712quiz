@@ -66,11 +66,12 @@ function generateModuleSelection() {
 function generateQuiz(quizData) {
   const quiz = document.createElement("div");
   quiz.id = "quiz";
+  quiz.setAttribute("explain", explainChoice.checked);
   quiz.setAttribute("submitted", false);
   quizData.forEach(([id, data], index) => {
     quiz.appendChild(generateQuestion(id, data, index));
   });
-  return setupQuiz(quiz);
+  return quiz;
 }
 
 function generatePastAttempt(attemptData) {
@@ -94,10 +95,6 @@ function generateQuestion(questionId, questionData, questionIndex) {
   const choices = Object.entries(questionData.choices);
   shuffleChoices(choices);
 
-  const question = document.createElement("div");
-  question.id = questionId;
-  question.className = "question";
-
   // header
   const questionHeader = document.createElement("div");
   const questionTitleContainter = document.createElement("span");
@@ -115,6 +112,7 @@ function generateQuestion(questionId, questionData, questionIndex) {
   learnedTag.innerText = "already learned";
   unsureLabel.className = "unsure-label";
   unsureCheck.className = "unsure-check";
+  unsureCheck.addEventListener("input", () => toggleUnsure(question));
   imNotSure.className = "im-not-sure";
   imNotSure.innerText = "I'm not sure";
   showExplanation.className = "show-explanation";
@@ -129,22 +127,21 @@ function generateQuestion(questionId, questionData, questionIndex) {
     questionTitleContainter.appendChild(learnedTag);
   questionHeader.appendChild(questionTitleContainter);
   questionHeader.appendChild(unsureLabel);
-  question.appendChild(questionHeader);
 
   // body
   const questionBody = document.createElement("p");
   questionBody.className = "question-body";
   questionBody.innerHTML = questionText;
-  question.appendChild(questionBody);
 
-  // figure
+  // image (if exists)
+  let image;
   if (hasImage) {
-    const figure = document.createElement("figure");
-    const image = document.createElement("img");
-    image.setAttribute("src", `./data/images/${questionId}.png`);
-    figure.appendChild(image);
-    question.appendChild(figure);
+    image = document.createElement("figure");
+    const img = document.createElement("img");
+    img.setAttribute("src", `./data/images/${questionId}.png`);
+    image.appendChild(img);
   }
+  const questionImage = image;
 
   // choices
   const questionChoices = document.createElement("ul");
@@ -168,7 +165,6 @@ function generateQuestion(questionId, questionData, questionIndex) {
     choice.appendChild(choiceLabel);
     questionChoices.appendChild(choice);
   });
-  question.appendChild(questionChoices);
 
   // explanation
   const explanationContainer = document.createElement("div");
@@ -178,56 +174,54 @@ function generateQuestion(questionId, questionData, questionIndex) {
 
   explanationContainer.className = "explanation-container";
   explanation.className = "explanation empty";
+  explanation.write = (value) => {
+    if (value) {
+      explanation.classList.remove("empty");
+      explanation.innerHTML = value;
+    } else {
+      explanation.classList.add("empty");
+      explanation.innerHTML = placeholderExplanation;
+    }
+  };
   editBtn.className = "bx bx-edit";
   editBtn.title = "edit";
+  if (matchMedia("not all and (hover: none)").matches) {
+    editBtn.classList.add("bx-tada-hover");
+  }
+  editBtn.addEventListener("click", () => editExplanation(explanation));
   editingIndicator.className = "bx bx-loader bx-spin";
   editingIndicator.title = "someone is typing";
 
   explanationContainer.appendChild(explanation);
   explanationContainer.appendChild(editBtn);
   explanationContainer.appendChild(editingIndicator);
-  question.appendChild(explanationContainer);
 
-  return question;
-}
-
-function setupQuiz(quiz) {
-  quiz.setAttribute("explain", explainChoice.checked);
-  for (const question of quiz.getElementsByClassName("question")) {
-    question.addEventListener(
-      "animationend",
-      () => (question.style.animation = "")
-    );
-    question.scrollTo = () => {
-      question.scrollIntoView(true);
-      scrollBy(0, -0.55 * navbar.offsetHeight);
-      if (resultPanel.style.display != "none") {
-        scrollBy(0, -navbar.offsetHeight);
-      }
-      return question;
-    };
-    question.blink = () => (question.style.animation = "blink 1s");
-
-    const unsureCheck = question.querySelector(".unsure-check");
-    unsureCheck.addEventListener("input", () => toggleUnsure(question));
-
-    const explanation = question.querySelector(".explanation");
-    explanation.write = (value) => {
-      if (value) {
-        explanation.classList.remove("empty");
-        explanation.innerHTML = value;
-      } else {
-        explanation.classList.add("empty");
-        explanation.innerHTML = placeholderExplanation;
-      }
-    };
-    const editBtn = question.querySelector(".bx-edit");
-    if (matchMedia("not all and (hover: none)").matches) {
-      editBtn.classList.add("bx-tada-hover");
+  // question
+  const question = document.createElement("div");
+  question.id = questionId;
+  question.className = "question";
+  question.addEventListener(
+    "animationend",
+    () => (question.style.animation = "")
+  );
+  question.scrollTo = () => {
+    question.scrollIntoView(true);
+    scrollBy(0, -0.55 * navbar.offsetHeight);
+    if (resultPanel.style.display != "none") {
+      scrollBy(0, -navbar.offsetHeight);
     }
-    editBtn.addEventListener("click", () => editExplanation(explanation));
+    return question;
+  };
+  question.blink = () => (question.style.animation = "blink 1s");
+
+  question.appendChild(questionHeader);
+  question.appendChild(questionBody);
+  if (hasImage) {
+    question.appendChild(questionImage);
   }
-  return quiz;
+  question.appendChild(questionChoices);
+  question.appendChild(explanationContainer);
+  return question;
 }
 
 function updateAttemptsTable() {
