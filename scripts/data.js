@@ -1,4 +1,4 @@
-const app = firebase.initializeApp({
+firebase.initializeApp({
   apiKey: "AIzaSyDV3TrfynzF0c_L-GYsG1Wd9NrIOjNvKJI",
   authDomain: "project-2830218475636260000.firebaseapp.com",
   projectId: "project-2830218475636260000",
@@ -7,18 +7,6 @@ const app = firebase.initializeApp({
   appId: "1:85405487202:web:208def2286c1f22c03c13b",
 });
 const db = firebase.firestore();
-
-let modulesName;
-let modulesData = {};
-let modulesCoverage = {};
-let unfinishedAttempts = {};
-if (localStorage.getItem("coverage")) {
-  modulesCoverage = JSON.parse(localStorage.getItem("coverage"));
-}
-const storedUnfinishedAttempts = localStorage.getItem("unfinished");
-if (storedUnfinishedAttempts) {
-  unfinishedAttempts = JSON.parse(storedUnfinishedAttempts);
-}
 
 function loadData() {
   return _loadModulesName().then((modules) => {
@@ -78,20 +66,37 @@ function getQuiz(modules, count) {
   return quizData.slice(0, count);
 }
 
+knowledge.learn = function (questionId) {
+  const module = questionId.split("_")[0];
+  if (!Object.hasOwn(this, module)) {
+    this[module] = {};
+  }
+  this[module][questionId] = true;
+};
+
+knowledge.unlearn = function (questionId) {
+  const module = questionId.split("_")[0];
+  delete this[module]?.[questionId];
+};
+
+knowledge.hasLearned = function (questionId) {
+  const module = questionId.split("_")[0];
+  return Boolean(this[module]?.[questionId]);
+};
+
+knowledge.sizeOf = function (module) {
+  if (!Object.hasOwn(this, module)) {
+    return 0;
+  }
+  return Object.keys(this[module]).length;
+};
+
 function learnQuiz(quiz) {
-  const learned = quiz.querySelectorAll(".question:not(.wrong-answer)");
-  for (const question of learned) {
-    const id = question.id;
-    const module = id.split("_")[0];
-    modulesData[module].learn(id);
-  }
-  const mistakes = quiz.querySelectorAll(".question.wrong-answer");
-  for (const question of mistakes) {
-    const id = question.id;
-    const module = id.split("_")[0];
-    modulesData[module].unlearn(id);
-  }
-  localStorage.setItem("coverage", JSON.stringify(modulesCoverage));
+  const corrects = quiz.querySelectorAll(".question:not(.wrong-answer)");
+  const errors = quiz.querySelectorAll(".question.wrong-answer");
+  corrects.forEach((question) => knowledge.learn(question.id));
+  errors.forEach((question) => knowledge.unlearn(question.id));
+  localStorage.setItem("knowledge", JSON.stringify(knowledge));
 }
 
 function explain(question) {
@@ -207,17 +212,17 @@ function _loadModule(module) {
       if (!response.ok) return {};
       return response.json();
     })
-    .then((questions) => (modulesData[module] = _data(module, questions)));
+    .then((questions) => (modulesData[module] = _data(questions)));
 }
 
-function _data(module, questions) {
+function _data(questions) {
   return {
     questions: questions,
     _data: {},
     _pull: function (count) {
       let origin = Object.entries(questions);
       if (!learnedQuestionsChoice.checked) {
-        origin = origin.filter(([id]) => !this.isLearned(id));
+        origin = origin.filter(([id]) => !knowledge.hasLearned(id));
       }
       shuffle(origin);
 
@@ -246,25 +251,12 @@ function _data(module, questions) {
       let entries = Object.entries(this._data);
       entries.sort((entry1, entry2) => {
         const [id1, id2] = [entry1[0], entry2[0]];
-        return this.isLearned(id2) - this.isLearned(id1);
+        return knowledge.hasLearned(id2) - knowledge.hasLearned(id1);
       });
 
       // slice
       return entries.slice(-count);
     },
-    learn: function (questionId) {
-      delete this._data[questionId];
-      this.covered.add(questionId);
-      modulesCoverage[module] = Array.from(this.covered);
-    },
-    unlearn: function (quesitonId) {
-      this.covered.delete(quesitonId);
-      modulesCoverage[module] = Array.from(this.covered);
-    },
-    isLearned: function (questionId) {
-      return this.covered.has(questionId);
-    },
     size: Object.keys(questions).length,
-    covered: new Set(modulesCoverage[module] ?? []),
   };
 }

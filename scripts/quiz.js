@@ -115,7 +115,7 @@ function updatePastAttempts(correctAnswers, questions) {
     outOf: questions.length,
     data: getAttemptData(questions),
   });
-  localStorage.setItem("pastAttempts", JSON.stringify(pastAttempts));
+  localStorage.setItem("attempts", JSON.stringify(pastAttempts));
 }
 
 function showResult(score, outOf) {

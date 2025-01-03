@@ -124,7 +124,7 @@ function generateQuestion(questionId, questionData, questionIndex) {
   unsureLabel.appendChild(imNotSure);
   unsureLabel.appendChild(showExplanation);
   questionTitleContainter.appendChild(questionTitle);
-  if (modulesData[module].isLearned(questionId))
+  if (knowledge.hasLearned(questionId))
     questionTitleContainter.appendChild(learnedTag);
   questionHeader.appendChild(questionTitleContainter);
   questionHeader.appendChild(unsureLabel);
@@ -310,9 +310,8 @@ function updateCoverage() {
     const moduleNum = module.querySelector("input").id;
     const moduleCoverage = module.querySelector(".coverage");
 
-    const questions = modulesData[moduleNum];
-    const covered = questions.covered.size;
-    const size = questions.size;
+    const covered = knowledge.sizeOf(moduleNum);
+    const size = modulesData[moduleNum].size;
     coveredTotal += covered;
     sizeTotal += size;
 
@@ -357,6 +356,8 @@ function updateCoverage() {
   unhide(moduleAllCoverage);
 
   if (roundedCoverage == 100) {
-    licenseGrantException("You've reached 100% coverage. Great job! 🥳");
+    licenseGrantException(
+      "Congrats, you've learned 100% of the question bank! 🥳"
+    );
   }
 }

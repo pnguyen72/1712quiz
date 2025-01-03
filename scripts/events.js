@@ -84,8 +84,8 @@ attemptsTableContainer
   .querySelector("box-icon")
   .addEventListener("click", () => {
     if (confirm("Delete attempts history?")) {
-      localStorage.removeItem("pastAttempts");
-      localStorage.removeItem("coverage");
+      localStorage.removeItem("attempts");
+      localStorage.removeItem("knowledge");
       location.reload();
     }
   });
