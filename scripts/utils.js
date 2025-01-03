@@ -97,7 +97,7 @@ function initializeHeight(textarea) {
 }
 
 function humanize(timestamp) {
-  const thatDate = new Date(timestamp);
+  const thatDate = new Date(parseInt(timestamp));
   const thisDate = new Date();
   const diff = Math.floor((thisDate.getTime() - timestamp) / 1000);
 
