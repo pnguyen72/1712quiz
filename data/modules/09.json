@@ -790,33 +790,26 @@
     "question": "The primary hardware components of a system consist of:",
     "choices": {
       "A_09_43": {
-        "choice": "Client Computers",
-        "isCorrect": false
+        "choice": "Client computers",
+        "isCorrect": true
       },
       "B_09_43": {
         "choice": "Servers",
-        "isCorrect": false
+        "isCorrect": true
       },
       "C_09_43": {
         "choice": "Network",
-        "isCorrect": false
-      },
-      "D_09_43": {
-        "choice": "Client Computers and Servers",
-        "isCorrect": false
-      },
-      "E_09_43": {
-        "choice": "Client Computers, Servers, and Network",
         "isCorrect": true
       }
-    }
+    },
+    "multiSelect": true
   },
   "09_44": {
     "question": "Form(s) of network connection(s) in a system include:",
     "choices": {
       "A_09_44": {
         "choice": "ATM",
-        "isCorrect": false
+        "isCorrect": true
       },
       "B_09_44": {
         "choice": "T2",
@@ -824,17 +817,10 @@
       },
       "C_09_44": {
         "choice": "DSL",
-        "isCorrect": false
-      },
-      "D_09_44": {
-        "choice": "ATM and DSL",
         "isCorrect": true
-      },
-      "E_09_44": {
-        "choice": "T2 and DSL",
-        "isCorrect": false
       }
     },
+    "multiSelect": true,
     "explanation": "<i>\"The network that connects the computers can vary [...] such as cable modem, DSL, or T1 circuits, to high-­speed always-­on Ethernet, T3, or ATM circuits.\"</i> <b>(p. 224)</b>"
   },
   "09_45": {
