@@ -9,8 +9,8 @@ firebase.initializeApp({
 const db = firebase.firestore();
 
 function loadData() {
-  return _loadModulesName().then((modules) => {
-    modulesName = modules;
+  return _loadmodulesNamess().then((modules) => {
+    modulesNames = modules;
     const promises = [];
     for (let i = 1; i <= modules.midterm.length + modules.final.length; ++i) {
       promises.push(_loadModule(String(i).padStart(2, "0")));
@@ -19,51 +19,44 @@ function loadData() {
   });
 }
 
-function getQuestionData(id) {
+questionsData.get = function (id) {
   const module = id.split("_")[0];
-  return modulesData[module].questions[id];
-}
+  return questionsData[module][id];
+};
 
 function getQuiz(modules, count) {
-  let attemptData = unfinishedAttempts.get(modules, count);
-  if (attemptData.length > 0) {
-    if (
-      !confirm(
-        "You have unsubmitted questions from previous attempts. Do you want to recover them?"
-      )
-    ) {
-      unfinishedAttempts.delete(Object.keys(Object.fromEntries(attemptData)));
-      attemptData = [];
-    }
+  let recoveredQuestions = unfinishedAttempts.get(modules, count);
+  if (
+    recoveredQuestions.length > 0 &&
+    !confirm(
+      "You have unsubmitted questions from previous attempts. Do you want to recover them?"
+    )
+  ) {
+    unfinishedAttempts.delete(recoveredQuestions);
+    recoveredQuestions = [];
   }
-  count -= attemptData.length;
-  if (count == 0) return reconstructQuizData(attemptData);
+  if (recoveredQuestions.length >= count) {
+    return recoveredQuestions;
+  }
 
-  const modulesSize = {};
+  let newQuestions = [];
   for (const module of modules) {
-    let size = modulesData[module].size;
-    if (!learnedQuestionsChoice.checked) {
-      size -= modulesData[module].covered.size;
-    }
-    modulesSize[module] = size;
+    newQuestions = newQuestions.concat(Object.keys(questionsData[module]));
   }
-  const totalSize = sum(Object.values(modulesSize));
-  count = Math.min(totalSize, count);
-
-  let quizData = [];
-  for (const [module, size] of Object.entries(modulesSize)) {
-    const getAmount = Math.ceil((count * size) / totalSize);
-    const data = modulesData[module].get(getAmount);
-    quizData = quizData.concat(data);
+  if (!learnedQuestionsChoice.checked) {
+    newQuestions = newQuestions.filter((id) => !knowledge.hasLearned(id));
+    shuffle(newQuestions);
+  } else {
+    newQuestions = newQuestions.sort(
+      (q1, q2) =>
+        // prettier-ignore
+        // unlearned questions first
+        (knowledge.hasLearned(q1) - knowledge.hasLearned(q2)) +
+        // then, sort by random
+        (Math.random() - 0.5)
+    );
   }
-  shuffle(quizData);
-  if (attemptData.length > 0) {
-    quizData = Object.entries({
-      ...Object.fromEntries(reconstructQuizData(attemptData)),
-      ...Object.fromEntries(quizData),
-    });
-  }
-  return quizData.slice(0, count);
+  return [...new Set([...recoveredQuestions, ...newQuestions])].slice(0, count);
 }
 
 knowledge.learn = function (questionId) {
@@ -91,13 +84,13 @@ knowledge.sizeOf = function (module) {
   return Object.keys(this[module]).length;
 };
 
-function learnQuiz(quiz) {
+knowledge.update = function (quiz) {
   const corrects = quiz.querySelectorAll(".question:not(.wrong-answer)");
   const errors = quiz.querySelectorAll(".question.wrong-answer");
-  corrects.forEach((question) => knowledge.learn(question.id));
-  errors.forEach((question) => knowledge.unlearn(question.id));
-  localStorage.setItem("knowledge", JSON.stringify(knowledge));
-}
+  corrects.forEach((question) => this.learn(question.id));
+  errors.forEach((question) => this.unlearn(question.id));
+  localStorage.setItem("knowledge", JSON.stringify(this));
+};
 
 function explain(question) {
   if (!explainChoice.checked) return;
@@ -144,65 +137,47 @@ function editSignal(questionId, isEditing) {
   }
 }
 
-unfinishedAttempts.get = function (modules, count) {
-  if (typeof modules == "string") {
-    let entries = Object.entries(this[modules] ?? {});
-    const out = entries.splice(-count);
-    this[modules] = Object.fromEntries(entries);
-    return out;
+unfinishedAttempts.get = function () {
+  if (arguments.length < 2) {
+    const questionId = arguments[0];
+    const module = questionId.split("_")[0];
+    return this[module]?.[questionId];
   }
 
-  const modulesSize = {};
+  const modules = arguments[0];
+  const count = arguments[1];
+
+  let candidates = [];
   for (const module of modules) {
-    modulesSize[module] = Object.keys(this[module] ?? {}).length;
+    candidates = candidates.concat(Object.keys(this[module] ?? {}));
   }
-  const totalSize = sum(Object.values(modulesSize));
-  count = Math.min(totalSize, count);
-
-  let attemptData = [];
-  for (const [module, size] of Object.entries(modulesSize)) {
-    const getAmount = Math.ceil((count * size) / totalSize);
-    attemptData = attemptData.concat(this.get(module, getAmount));
-  }
-  const out = attemptData.splice(-count);
-  this.set(attemptData);
-  return out;
+  return candidates.slice(0, count);
 };
 
 unfinishedAttempts.set = function (attemptData) {
-  attemptData.forEach(([questionId, choices]) => {
+  Object.entries(attemptData).forEach(([questionId, choicesData]) => {
     const module = questionId.split("_")[0];
-    if (!Object.hasOwn(this, module)) this[module] = {};
-    this[module][questionId] = choices;
+    if (!Object.hasOwn(this, module)) {
+      this[module] = {};
+    }
+    this[module][questionId] = choicesData;
   });
-  localStorage.setItem("unfinished", JSON.stringify(this));
+  this.save();
 };
 
 unfinishedAttempts.delete = function (questionIds) {
   for (const questionId of questionIds) {
     const module = questionId.split("_")[0];
     delete this[module]?.[questionId];
-    const choicesData = getQuestionData(questionId).choices;
-    for (const id in choicesData) {
-      choicesData[id].isChecked = false;
-    }
   }
+  this.save();
+};
+
+unfinishedAttempts.save = function () {
   localStorage.setItem("unfinished", JSON.stringify(this));
 };
 
-function reconstructQuizData(attemptData) {
-  const quizData = {};
-  attemptData.forEach(([questionId, choicesData]) => {
-    const questionData = getQuestionData(questionId);
-    Object.entries(choicesData).forEach(([choiceId, isChecked]) => {
-      questionData.choices[choiceId].isChecked = isChecked;
-    });
-    quizData[questionId] = questionData;
-  });
-  return Object.entries(quizData);
-}
-
-function _loadModulesName() {
+function _loadmodulesNamess() {
   return fetch("./data/modules.json").then((response) => response.json());
 }
 
@@ -212,51 +187,5 @@ function _loadModule(module) {
       if (!response.ok) return {};
       return response.json();
     })
-    .then((questions) => (modulesData[module] = _data(questions)));
-}
-
-function _data(questions) {
-  return {
-    questions: questions,
-    _data: {},
-    _pull: function (count) {
-      let origin = Object.entries(questions);
-      if (!learnedQuestionsChoice.checked) {
-        origin = origin.filter(([id]) => !knowledge.hasLearned(id));
-      }
-      shuffle(origin);
-
-      if (count == undefined) {
-        this._data = Object.fromEntries(origin);
-        return;
-      }
-      let pulled = 0;
-      for (const [key, value] of origin) {
-        if (!Object.hasOwn(this._data, key)) {
-          this._data[key] = value;
-          if (++pulled == count) break;
-        }
-      }
-    },
-    get: function (count) {
-      // pull data from origin if there's not enough
-      const currentSize = Object.keys(this._data).length;
-      if (currentSize == 0) {
-        this._pull();
-      } else if (currentSize < count) {
-        this._pull(count - currentSize);
-      }
-
-      // prioritize unlearned questions
-      let entries = Object.entries(this._data);
-      entries.sort((entry1, entry2) => {
-        const [id1, id2] = [entry1[0], entry2[0]];
-        return knowledge.hasLearned(id2) - knowledge.hasLearned(id1);
-      });
-
-      // slice
-      return entries.slice(-count);
-    },
-    size: Object.keys(questions).length,
-  };
+    .then((questions) => (questionsData[module] = questions));
 }

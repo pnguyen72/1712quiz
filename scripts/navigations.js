@@ -142,8 +142,8 @@ function nextQuiz() {
     moduleSelection.style.animation = "blink 1s";
     return;
   }
-  const quizData = getQuiz(modules, questionsCount);
-  document.getElementById("quiz").replaceWith(generateQuiz(quizData));
+  const questionsIds = getQuiz(modules, questionsCount);
+  document.getElementById("quiz").replaceWith(generateQuiz(questionsIds));
   toQuizPage();
   quizTimer = startTimer();
   setTimeout(explainLearnedQuestions, 400); // so that it runs after the page has loaded, 400ms should be enough
@@ -161,7 +161,7 @@ function submit() {
   quiz.setAttribute("submitted", true);
   scrollTo(0, 0);
   showResult(correctAnswers, questions.length);
-  learnQuiz(quiz);
+  knowledge.update(quiz);
   clearInterval(quizTimer);
   updatePastAttempts(correctAnswers, questions);
   unfinishedAttempts.delete(questions.map((question) => question.id));

@@ -100,7 +100,7 @@ function getAttemptData(questions) {
     }
     attemptData[question.id] = questionData;
   }
-  return Object.entries(attemptData);
+  return attemptData;
 }
 
 function updatePastAttempts(correctAnswers, questions) {

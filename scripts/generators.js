@@ -2,20 +2,20 @@ function generateModuleSelection() {
   modulesSelectBoxes = [];
 
   let indexOffset;
-  let modulesData;
-  if (midtermChoice.checked) {
+  let selectedModulesNames;
+  if (examSelection.querySelector("input:checked").id == "midterm") {
     indexOffset = 1;
-    modulesData = modulesName.midterm;
+    selectedModulesNames = modulesNames.midterm;
   } else {
-    indexOffset = 1 + modulesName.midterm.length;
-    modulesData = modulesName.final;
+    indexOffset = 1 + modulesNames.midterm.length;
+    selectedModulesNames = modulesNames.final;
   }
 
   const modulesList = document.createElement("ul");
   modulesList.id = "modules-list";
   document.getElementById("modules-list").replaceWith(modulesList);
 
-  modulesData.forEach((name, index) => {
+  selectedModulesNames.forEach((name, index) => {
     const module = document.createElement("li");
     const moduleLabel = document.createElement("label");
     const moduleSelectBox = document.createElement("input");
@@ -63,19 +63,21 @@ function generateModuleSelection() {
   updateCoverage();
 }
 
-function generateQuiz(quizData) {
+function generateQuiz(questionsIds) {
   const quiz = document.createElement("div");
   quiz.id = "quiz";
   quiz.setAttribute("explain", explainChoice.checked);
   quiz.setAttribute("submitted", false);
-  quizData.forEach(([id, data], index) => {
-    quiz.appendChild(generateQuestion(id, data, index));
+  questionsIds.forEach((id, index) => {
+    quiz.appendChild(generateQuestion(id, index));
   });
   return quiz;
 }
 
 function generatePastAttempt(attemptData) {
-  const quiz = generateQuiz(reconstructQuizData(attemptData));
+  unfinishedAttempts.set(attemptData);
+  const questionsIds = Object.keys(attemptData);
+  const quiz = generateQuiz(questionsIds);
   for (const input of quiz.querySelectorAll(".choice-input")) {
     input.disabled = true;
   }
@@ -84,16 +86,14 @@ function generatePastAttempt(attemptData) {
   }
   grade(quiz.querySelectorAll(".question"));
   quiz.setAttribute("submitted", true);
+  unfinishedAttempts.delete(questionsIds);
   return quiz;
 }
 
-function generateQuestion(questionId, questionData, questionIndex) {
-  const module = questionId.split("_")[0];
-  const questionText = questionData.question;
-  const hasImage = questionData.hasImage;
-  const isMultiSelect = questionData.multiSelect;
+function generateQuestion(questionId, questionIndex) {
+  const questionData = questionsData.get(questionId);
   const choices = Object.entries(questionData.choices);
-  const cachedExplanation = questionData.explanation;
+  const attemptData = unfinishedAttempts.get(questionId);
   shuffleChoices(choices);
 
   // header
@@ -132,11 +132,11 @@ function generateQuestion(questionId, questionData, questionIndex) {
   // body
   const questionBody = document.createElement("p");
   questionBody.className = "question-body";
-  questionBody.innerHTML = questionText;
+  questionBody.innerHTML = questionData.question;
 
   // image (if exists)
   let image;
-  if (hasImage) {
+  if (questionData.hasImage) {
     image = document.createElement("figure");
     const img = document.createElement("img");
     img.setAttribute("src", `./data/images/${questionId}.png`);
@@ -156,9 +156,9 @@ function generateQuestion(questionId, questionData, questionIndex) {
     choice.className = choiceData.isCorrect ? "correct" : "incorrect";
     choiceInput.id = choiceId;
     choiceInput.className = "choice-input";
-    choiceInput.type = isMultiSelect ? "checkbox" : "radio";
+    choiceInput.type = questionData.multiSelect ? "checkbox" : "radio";
     choiceInput.name = questionId;
-    choiceInput.checked = choiceData.isChecked;
+    choiceInput.checked = attemptData?.[choiceId];
     choiceText.innerHTML = choiceData.choice;
 
     choiceLabel.appendChild(choiceInput);
@@ -184,7 +184,7 @@ function generateQuestion(questionId, questionData, questionIndex) {
       explanation.innerHTML = placeholderExplanation;
     }
   };
-  explanation.write(cachedExplanation);
+  explanation.write(questionData.explanation);
   editBtn.className = "bx bx-edit";
   editBtn.title = "edit";
   if (matchMedia("not all and (hover: none)").matches) {
@@ -218,7 +218,7 @@ function generateQuestion(questionId, questionData, questionIndex) {
 
   question.appendChild(questionHeader);
   question.appendChild(questionBody);
-  if (hasImage) {
+  if (questionData.hasImage) {
     question.appendChild(questionImage);
   }
   question.appendChild(questionChoices);
@@ -311,7 +311,7 @@ function updateCoverage() {
     const moduleCoverage = module.querySelector(".coverage");
 
     const covered = knowledge.sizeOf(moduleNum);
-    const size = modulesData[moduleNum].size;
+    const size = Object.keys(questionsData[moduleNum]).length;
     coveredTotal += covered;
     sizeTotal += size;
 
