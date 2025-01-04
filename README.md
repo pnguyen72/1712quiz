@@ -4,7 +4,7 @@
 
 ## Features
 
-All questions and answers are taken from Learning Hub practice quizzes (732 in total), but the front-end is completely redesigned, with better UI/UX and more advanced features:
+All questions and answers are taken from Learning Hub practice quizzes (732 in total), but the front-end is homemade from scratch, with better UI/UX and more advanced features:
 
 - Support both dark and light mode
 - Much faster to submit a quiz and get graded (1-2 sec on Learning Hub, versus instantaneous)
