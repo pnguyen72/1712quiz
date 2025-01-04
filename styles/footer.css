@@ -3,6 +3,13 @@
   display: flex;
   justify-content: space-between;
 
+  @media (width < 600px) {
+    font-size: 0.85em;
+  }
+  @media (width < 450px) {
+    font-size: 0.8em;
+  }
+
   #links {
     display: flex;
     flex-direction: row;
@@ -13,7 +20,13 @@
       color: #04442c;
 
       &:first-child {
-        margin-right: 2rem;
+        margin-right: 1.75rem;
+        @media (width < 900px) {
+          margin-right: 1.25rem;
+        }
+        @media (width < 800px) {
+          margin-right: 0.75rem;
+        }
       }
     }
 
@@ -31,7 +44,7 @@
       align-items: start;
 
       a:first-child {
-        margin-right: 0.5rem;
+        margin-right: 0;
         margin-bottom: 0.5rem;
       }
     }
@@ -93,16 +106,25 @@
     }
   }
 
-  #social {
+  #github {
     display: flex;
     align-items: center;
 
     box-icon {
       height: 1.6rem;
       width: 1.6rem;
+
+      @media (width < 600px) {
+        height: 1.55rem;
+        width: 1.55rem;
+      }
+      @media (width < 450px) {
+        height: 1.5rem;
+        width: 1.5rem;
+      }
     }
 
-    @media (width < 450px) {
+    @media (width < 400px) {
       display: none;
     }
   }
