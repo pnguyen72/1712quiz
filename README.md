@@ -19,12 +19,18 @@ All questions and answers are taken from Learning Hub practice quizzes (732 in t
 
 ### Home page
 
-![home page in dark mode](/images/home-dark.png) ![home page in light mode](/images/home-light.png)
+Dark mode | Light mode
+:--------:|:----------:
+![home page in dark mode](/images/home-dark.png) | ![home page in light mode](/images/home-light.png)
 
 ### Quiz page (before submitting)
 
-![quiz page in dark mode](/images/quiz-dark.png) ![quiz page in light mode](/images/quiz-light.png)
+Dark mode | Light mode
+:--------:|:----------:
+![quiz page in dark mode](/images/quiz-dark.png) | ![quiz page in light mode](/images/quiz-light.png)
 
 ### Quiz page (after submitting)
 
-![submitted quiz page in dark mode](/images/quiz-submitted-dark.png) ![submitted quiz page in light mode](/images/quiz-submitted-light.png)
+Dark mode | Light mode
+:--------:|:----------:
+![submitted quiz page in dark mode](/images/quiz-submitted-dark.png) | ![submitted quiz page in light mode](/images/quiz-submitted-light.png)
