@@ -33,4 +33,10 @@ Dark mode | Light mode
 
 Dark mode | Light mode
 :--------:|:----------:
-![submitted quiz page in dark mode](/images/quiz-submitted-dark.png) | ![submitted quiz page in light mode](/images/quiz-submitted-light.png)
+![printed quiz page in dark mode](/images/quiz-submitted-dark.png) | ![submitted quiz page in light mode](/images/quiz-submitted-light.png)
+
+### Quiz page (printing)
+
+Dark mode  | ![printed quiz page in dark mode](/images/quiz-printed-dark.png)
+---------- | ----------
+Light mode | ![submitted quiz page in light mode](/images/quiz-printed-light.png)
