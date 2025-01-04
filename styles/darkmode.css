@@ -95,13 +95,25 @@ td {
 
 #quiz[submitted="true"] {
   .question-choices {
-    label {
-      padding: 4px;
+    li:has(+ li.correct) {
+      margin-bottom: 4px;
     }
-    li.correct label {
-      background-color: #1ed96f24;
-      border-radius: 6px;
-      color: #11ce73;
+
+    li.correct {
+      margin-left: 4px;
+      margin-top: 4px;
+      margin-bottom: 4px;
+
+      label {
+        padding: 4px;
+        border-radius: 6px;
+        background-color: #1ed96f24;
+        color: #11ce73;
+      }
+    }
+
+    li.correct + li {
+      margin-top: 4px;
     }
   }
 
