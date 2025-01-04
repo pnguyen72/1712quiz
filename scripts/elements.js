@@ -1,6 +1,6 @@
 const resultPanel = document.getElementById("result-panel");
 const quizResultText = document.getElementById("quiz-result");
-const [prevQuest, nextQuest] = resultPanel.getElementsByTagName("box-icon");
+const [prevQuest, nextQuest] = resultPanel.querySelectorAll('.bx');
 const navbar = document.getElementById("navbar");
 const navText = navbar.querySelector("span");
 navText.style.width = getComputedStyle(navText).width;

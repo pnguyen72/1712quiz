@@ -124,6 +124,7 @@ function showResult(score, outOf) {
   quizResultText.innerText = `${score}/${outOf} (${roundedAccuracy}%)`;
   const [H, S, L] = getColor(accuracy);
   resultPanel.style.backgroundColor = `hsl(${H}, ${S}%, ${L}%)`;
+  resultPanel.style.color = L < 61 ? "#eee" : "#000";
   unhide(resultPanel);
 
   const unsureQuestions = quizPage.querySelectorAll(".wrong-answer,.unsure");
