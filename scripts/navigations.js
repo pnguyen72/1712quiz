@@ -35,7 +35,7 @@ function licenseUnlock() {
 function licenseGrantException(prompt) {
   if (localStorage.getItem("licenseException")) return;
 
-  let alertText = "You don't have to wear a Hawaiian shirt to the exam.";
+  let alertText = "You don't have to switch set with JD.";
   if (prompt) alertText = `${prompt}\n${alertText}`;
 
   alert(alertText);
