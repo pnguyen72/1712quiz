@@ -1,5 +1,5 @@
-# 1712 Practice Quiz
+# COMP 1712 Practice Quiz
 
-<https://quiz.comp1712.ca>
+Like the Learning Hub practice quiz, but with better UI/UX and more advanced features.
 
-By using this website you agree to wear a Hawaiian shirt to the exam.
+URL: <https://quiz.comp1712.ca>
