@@ -6,7 +6,9 @@
   }
 
   &.unsure .question-title {
-    background-color: yellow;
+    @media not print {
+      background-color: yellow;
+    }
   }
 
   .question-header {

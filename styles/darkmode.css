@@ -128,16 +128,16 @@ td {
 }
 
 .question {
-  .question-title {
-    @media not print {
+  @media not print {
+    .question-title {
       padding: 4px;
       border-radius: 6px;
     }
-  }
 
-  &.unsure .question-title {
-    background-color: #d0c31222;
-    color: #dfdf0c;
+    &.unsure .question-title {
+      background-color: #d0c31222;
+      color: #dfdf0c;
+    }
   }
 }
 
