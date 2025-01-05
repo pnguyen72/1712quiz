@@ -155,12 +155,12 @@ unfinishedAttempts.get = function () {
 };
 
 unfinishedAttempts.set = function (attemptData) {
-  Object.entries(attemptData).forEach(([questionId, choicesData]) => {
+  Object.entries(attemptData).forEach(([questionId, questionData]) => {
     const module = questionId.split("_")[0];
     if (!Object.hasOwn(this, module)) {
       this[module] = {};
     }
-    this[module][questionId] = choicesData;
+    this[module][questionId] = questionData;
   });
   this.save();
 };

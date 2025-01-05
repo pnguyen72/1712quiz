@@ -94,7 +94,9 @@ function grade(questions) {
 function getAttemptData(questions) {
   const attemptData = {};
   for (const question of questions) {
-    const questionData = {};
+    const questionData = {
+      unsure: question.querySelector(".unsure-check").checked,
+    };
     for (const choice of question.querySelectorAll(".choice-input")) {
       questionData[choice.id] = choice.checked;
     }
@@ -107,7 +109,7 @@ function saveProgress() {
   unfinishedAttempts.set(
     getAttemptData(
       quizPage.querySelectorAll(
-        "#quiz[submitted=false] .question:has(.choice-input:checked)"
+        "#quiz[submitted=false] .question:has(:is(.choice-input,.unsure-check):checked)"
       )
     )
   );

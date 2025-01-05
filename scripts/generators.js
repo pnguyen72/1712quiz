@@ -223,6 +223,10 @@ function generateQuestion(questionId, questionIndex) {
   }
   question.appendChild(questionChoices);
   question.appendChild(explanationContainer);
+  if (attemptData?.unsure) {
+    unsureCheck.checked = true;
+    toggleUnsure(question);
+  }
   return question;
 }
 
