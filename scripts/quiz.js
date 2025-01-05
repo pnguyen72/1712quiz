@@ -1,8 +1,7 @@
-function startTimer() {
-  navText.innerText = "00:00";
-  let time = 0;
-  return setInterval(function () {
-    ++time;
+var quizTimer;
+
+function startTimer(initial = 0) {
+  function display(time) {
     seconds = String(time % 60).padStart(2, "0");
     minutes = String(Math.floor(time / 60) % 60).padStart(2, "0");
     hours = Math.floor(time / 3600);
@@ -11,7 +10,18 @@ function startTimer() {
     } else {
       navText.innerText = `${minutes}:${seconds}`;
     }
-  }, 1000);
+  }
+
+  let time = Math.round(initial);
+  display(time);
+  quizTimer = {
+    id: setInterval(() => display(++time), 1000),
+    getTime: () => time,
+  };
+}
+
+function stopTimer() {
+  clearInterval(quizTimer?.id);
 }
 
 function explainLearnedQuestions() {
@@ -92,9 +102,13 @@ function grade(questions) {
 }
 
 function getAttemptData(questions) {
+  if (questions.length == 0) return {};
+
+  const time = quizTimer.getTime();
   const attemptData = {};
   for (const question of questions) {
     const questionData = {
+      time: time / questions.length,
       unsure: question.querySelector(".unsure-check").checked,
     };
     for (const choice of question.querySelectorAll(".choice-input")) {
@@ -108,8 +122,10 @@ function getAttemptData(questions) {
 function saveProgress() {
   unfinishedAttempts.set(
     getAttemptData(
-      quizPage.querySelectorAll(
-        "#quiz[submitted=false] .question:has(:is(.choice-input,.unsure-check):checked)"
+      document.querySelectorAll(
+        "#quiz-page[visible] " +
+          "#quiz[submitted=false] " +
+          ".question:has(:is(.choice-input,.unsure-check):checked)"
       )
     )
   );

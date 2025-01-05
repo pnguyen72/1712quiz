@@ -68,9 +68,13 @@ function generateQuiz(questionsIds) {
   quiz.id = "quiz";
   quiz.setAttribute("explain", explainChoice.checked);
   quiz.setAttribute("submitted", false);
+  let time = 0;
   questionsIds.forEach((id, index) => {
-    quiz.appendChild(generateQuestion(id, index));
+    const question = generateQuestion(id, index);
+    quiz.appendChild(question);
+    time += parseFloat(question.getAttribute("initialTime"));
   });
+  quiz.setAttribute("initialTime", time);
   return quiz;
 }
 
@@ -202,6 +206,7 @@ function generateQuestion(questionId, questionIndex) {
   const question = document.createElement("div");
   question.id = questionId;
   question.className = "question";
+  question.setAttribute("initialTime", attemptData?.time ?? 0);
   question.addEventListener(
     "animationend",
     () => (question.style.animation = "")

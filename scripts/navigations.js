@@ -110,6 +110,7 @@ function tohomePage() {
   updateAttemptsTable();
   updateCoverage();
   navText.style.visibility = "hidden";
+  saveProgress();
   hide(resultPanel);
   hide(quizPage);
   unhide(homePage);
@@ -117,7 +118,7 @@ function tohomePage() {
 
 function toQuizPage() {
   navText.style.visibility = "visible";
-  clearInterval(quizTimer);
+  stopTimer();
   hide(resultPanel);
   hide(homePage);
   unhide(quizPage);
@@ -136,7 +137,7 @@ function nextQuiz() {
   document.getElementById("quiz").replaceWith(quiz);
   quiz.addEventListener("input", saveProgress);
   toQuizPage();
-  quizTimer = startTimer();
+  startTimer(quiz.getAttribute("initialTime"));
   setTimeout(explainLearnedQuestions, 400); // so that it runs after the page has loaded, 400ms should be enough
 }
 
@@ -153,7 +154,7 @@ function submit() {
   scrollTo(0, 0);
   showResult(correctAnswers, questions.length);
   knowledge.update(quiz);
-  clearInterval(quizTimer);
+  stopTimer();
   updatePastAttempts(correctAnswers, questions);
   unfinishedAttempts.delete(questions.map((question) => question.id));
 }
