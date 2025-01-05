@@ -107,17 +107,6 @@ function refreshAttemptsTable() {
 }
 
 function tohomePage() {
-  if (
-    document.querySelector(
-      "#quiz-page[visible] #quiz[submitted=false] .choice-input:checked"
-    )
-  ) {
-    unfinishedAttempts.set(
-      getAttemptData(
-        quiz.querySelectorAll(".question:has(.choice-input:checked)")
-      )
-    );
-  }
   updateAttemptsTable();
   updateCoverage();
   navText.style.visibility = "hidden";
@@ -143,7 +132,9 @@ function nextQuiz() {
     return;
   }
   const questionsIds = getQuiz(modules, questionsCount);
-  document.getElementById("quiz").replaceWith(generateQuiz(questionsIds));
+  const quiz = generateQuiz(questionsIds);
+  document.getElementById("quiz").replaceWith(quiz);
+  quiz.addEventListener("input", saveProgress);
   toQuizPage();
   quizTimer = startTimer();
   setTimeout(explainLearnedQuestions, 400); // so that it runs after the page has loaded, 400ms should be enough

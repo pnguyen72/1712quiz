@@ -103,6 +103,16 @@ function getAttemptData(questions) {
   return attemptData;
 }
 
+function saveProgress() {
+  unfinishedAttempts.set(
+    getAttemptData(
+      quizPage.querySelectorAll(
+        "#quiz[submitted=false] .question:has(.choice-input:checked)"
+      )
+    )
+  );
+}
+
 function updatePastAttempts(correctAnswers, questions) {
   pastAttempts.push({
     timestamp: Date.now(),
