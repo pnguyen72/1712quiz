@@ -42,3 +42,7 @@ Dark mode  | ![printed quiz page in dark mode](/images/quiz-printed-dark.png)
 
 Light mode | ![submitted quiz page in light mode](/images/quiz-printed-light.png)
 :---------:|:---------:
+
+## Legal
+
+Any license notice you may see on the webpage itself is just for jokes. The only official, legal license is [LICENSE](LICENSE).
