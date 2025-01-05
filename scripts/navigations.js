@@ -166,3 +166,56 @@ function submit() {
   updatePastAttempts(correctAnswers, questions);
   unfinishedAttempts.delete(questions.map((question) => question.id));
 }
+
+questionsSkipper = {
+  _selector: ".question:is(.wrong-answer,.unsure)",
+  _current: null,
+  _scrollTo: function (target) {
+    if (!target) {
+      target = this._current;
+    }
+    target.scrollTo().blink();
+    // target.scrollTo() will trigger the scroll event, which sets this._current = null
+    // so we wait 500ms for the scroll to finish, avoiding the race condition
+    setTimeout(() => (this._current = target), 500);
+  },
+  next: function () {
+    let target;
+    if (this._current == null) {
+      // search where the target is based on current scroll position
+      target = search(
+        quizPage.querySelectorAll(this._selector),
+        0,
+        // no idea what 1.6 is, but it seems to work
+        (e) => e.getBoundingClientRect().top - 1.6 * navbar.offsetHeight
+      ).next();
+    } else {
+      const currentId = this._current.id;
+      // the selector is cursed because the question ID starts with a number
+      // it's too inconvenient to change that now
+      const currentSelector = `#\\3${currentId[0]} ${currentId.slice(1)}`;
+      target = quiz.querySelector(`${currentSelector} ~ ${this._selector}`);
+    }
+    this._scrollTo(target);
+  },
+  prev: function () {
+    let target;
+    if (this._current == null) {
+      target = search(
+        quizPage.querySelectorAll(this._selector),
+        0,
+        (e) => e.getBoundingClientRect().top - 1.5 * navbar.offsetHeight
+      ).prev();
+    } else {
+      const currentId = this._current.id;
+      const currentSelector = `#\\3${currentId[0]} ${currentId.slice(1)}`;
+      const candidates = quiz.querySelectorAll(
+        `${this._selector}:has(~ ${currentSelector})`
+      );
+      target = candidates[candidates.length - 1];
+    }
+    this._scrollTo(target);
+  },
+};
+
+document.addEventListener("scroll", () => (questionsSkipper._current = null));

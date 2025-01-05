@@ -59,26 +59,8 @@ nextButton.addEventListener("click", () => {
   } else nextQuiz();
 });
 
-prevQuest.addEventListener("click", () =>
-  search(
-    quizPage.querySelectorAll(".wrong-answer,.unsure"),
-    0,
-    (element) => element.getBoundingClientRect().top - 1.5 * navbar.offsetHeight
-  )
-    .prev()
-    .scrollTo()
-    .blink()
-);
-nextQuest.addEventListener("click", () =>
-  search(
-    quizPage.querySelectorAll(".wrong-answer,.unsure"),
-    0,
-    (element) => element.getBoundingClientRect().top - 1.6 * navbar.offsetHeight
-  )
-    .next()
-    .scrollTo()
-    .blink()
-);
+prevQuest.addEventListener("click", () => questionsSkipper.prev());
+nextQuest.addEventListener("click", () => questionsSkipper.next());
 
 attemptsTableContainer
   .querySelector("box-icon")
