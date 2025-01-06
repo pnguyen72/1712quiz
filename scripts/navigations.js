@@ -140,9 +140,13 @@ function nextQuiz() {
   document.getElementById("quiz").replaceWith(quiz);
   toQuizPage();
   startTimer();
+  nextButton.disabled = true;
   // timeout so that these run after the page has loaded
   // 300ms should be enough
-  setTimeout(() => recoverAttempt(quiz), 300);
+  setTimeout(() => {
+    recoverAttempt(quiz);
+    nextButton.disabled = false;
+  }, 300);
   setTimeout(explainLearnedQuestions, 400);
 }
 

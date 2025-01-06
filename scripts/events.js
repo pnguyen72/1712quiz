@@ -57,9 +57,12 @@ licenseDisagreeBtn.addEventListener("click", () => {
 
 homeButon.addEventListener("click", tohomePage);
 nextButton.addEventListener("click", () => {
+  if (nextButton.disabled) return;
   if (document.querySelector("#quiz-page[visible] #quiz[submitted=false]")) {
     submit();
-  } else nextQuiz();
+  } else {
+    nextQuiz();
+  }
 });
 
 prevQuest.addEventListener("click", () => questionsScroller.previous());
