@@ -7,6 +7,8 @@
   align-items: center;
   position: fixed;
   z-index: 1;
+  background-color: #04442c;
+  color: hsl(120, 28%, 95%);
 
   span {
     font-size: 1.5rem;
@@ -15,9 +17,8 @@
   }
 }
 
-#result-panel {
+#review-panel {
   top: 0;
-  background-color: #04442c;
 
   i.bx {
     font-size: 1.65rem;
@@ -41,8 +42,6 @@
 
 nav {
   bottom: 0;
-  background-color: #04442c;
-  color: hsl(120, 28%, 95%);
 
   .bx {
     font-size: 2rem;

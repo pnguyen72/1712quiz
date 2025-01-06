@@ -66,12 +66,6 @@ td {
   }
 }
 
-#result-panel {
-  opacity: 90%;
-  color: #262626;
-  box-shadow: 0px 2px 8px #00000065;
-}
-
 .show-explanation {
   color: #dfdf0c;
 }
@@ -141,11 +135,18 @@ td {
   }
 }
 
-#navbar {
+.panel {
   color: #eee;
   opacity: 90%;
-  box-shadow: 0px -2px 8px #00000065;
   background-color: #363636;
+}
+
+#review-panel {
+  box-shadow: 0px 2px 8px #00000065;
+}
+
+#navbar {
+  box-shadow: 0px -2px 8px #00000065;
 }
 
 #attempts-table {

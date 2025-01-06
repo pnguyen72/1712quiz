@@ -250,7 +250,7 @@ function generateQuestion(questionId, questionIndex) {
   question.scrollTo = () => {
     question.scrollIntoView(true);
     scrollBy(0, -0.55 * navbar.offsetHeight);
-    if (resultPanel.style.display != "none") {
+    if (reviewPanel.style.display != "none") {
       scrollBy(0, -navbar.offsetHeight);
     }
     return question;

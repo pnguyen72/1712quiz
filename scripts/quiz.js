@@ -149,11 +149,11 @@ function updatePastAttempts(correctAnswers, questions) {
 function showResult(score, outOf) {
   const accuracy = score / (outOf + Number.EPSILON);
   const roundedAccuracy = Math.round((accuracy + Number.EPSILON) * 100);
-  quizResultText.innerText = `${score}/${outOf} (${roundedAccuracy}%)`;
+  resultText.innerText = `${score}/${outOf} (${roundedAccuracy}%)`;
   const [H, S, L] = getColor(accuracy);
-  resultPanel.style.backgroundColor = `hsl(${H}, ${S}%, ${L}%)`;
-  resultPanel.style.color = L < 61 ? "#eee" : "#000";
-  unhide(resultPanel);
+  reviewPanel.style.backgroundColor = `hsl(${H}, ${S}%, ${L}%)`;
+  reviewPanel.style.color = L < 61 ? "#eee" : "#000";
+  unhide(reviewPanel);
 
   const unsureQuestions = quizPage.querySelectorAll(".wrong-answer,.unsure");
   prevQuest.parentElement.style.visibility =
@@ -170,9 +170,17 @@ function toggleUnsure(question) {
   }
 
   const unsureQuestions = quizPage.querySelectorAll(".wrong-answer,.unsure");
-  prevQuest.parentElement.style.visibility =
-    nextQuest.parentElement.style.visibility =
-      unsureQuestions.length > 0 ? "visible" : "hidden";
+  if (unsureQuestions.length > 0) {
+    unhide(reviewPanel);
+    prevQuest.parentElement.style.visibility =
+      nextQuest.parentElement.style.visibility = "visible";
+  } else {
+    if (quizPage.querySelector("#quiz[submitted=false]")) {
+      hide(reviewPanel);
+    }
+    prevQuest.parentElement.style.visibility =
+      nextQuest.parentElement.style.visibility = "hidden";
+  }
 }
 
 function editExplanation(explanation) {

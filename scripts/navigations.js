@@ -111,7 +111,7 @@ function tohomePage() {
   updateCoverage();
   navText.style.visibility = "hidden";
   saveProgress();
-  hide(resultPanel);
+  hide(reviewPanel);
   hide(quizPage);
   unhide(homePage);
 }
@@ -119,7 +119,10 @@ function tohomePage() {
 function toQuizPage() {
   navText.style.visibility = "visible";
   stopTimer();
-  hide(resultPanel);
+  hide(reviewPanel);
+  reviewPanel.style.backgroundColor = "";
+  reviewPanel.style.color = "";
+  resultText.innerText = "Review";
   hide(homePage);
   unhide(quizPage);
   scrollTo(0, 0);
