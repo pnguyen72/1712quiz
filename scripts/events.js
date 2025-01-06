@@ -1,3 +1,4 @@
+window.addEventListener("beforeunload", saveProgress);
 document.addEventListener("scroll", () => (questionsScroller.current = null));
 
 licenseText.addEventListener(

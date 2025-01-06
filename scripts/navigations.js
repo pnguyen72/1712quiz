@@ -138,7 +138,6 @@ function nextQuiz() {
   const questionsIds = getQuiz(modules, questionsCount);
   const quiz = generateQuiz(questionsIds);
   document.getElementById("quiz").replaceWith(quiz);
-  quiz.addEventListener("input", saveProgress);
   toQuizPage();
   startTimer();
   // timeout so that these run after the page has loaded
