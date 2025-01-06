@@ -149,9 +149,7 @@ function nextQuiz() {
 
 function submit() {
   const quiz = document.getElementById("quiz");
-  const questions = Array.from(quiz.querySelectorAll(".question"));
-
-  if (!checkCompletion(questions)) return;
+  if (!checkCompletion(quiz)) return;
 
   const score = grade(quiz);
   const answeredQuestions = quiz.querySelectorAll(".question[answered=true]");
@@ -174,7 +172,9 @@ function submit() {
   showResult(score, outOf);
   knowledge.update(quiz);
   stopTimer();
-  unfinishedAttempts.delete(questions.map((question) => question.id));
+  unfinishedAttempts.delete(
+    [...quiz.querySelectorAll(".question")].map((question) => question.id)
+  );
 }
 
 const questionsScroller = {

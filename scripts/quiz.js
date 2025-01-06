@@ -56,22 +56,33 @@ function giveExplanationsWarning() {
   }
 }
 
-function checkCompletion(questions) {
-  if (questions.length == 0) return false;
+function checkCompletion(quiz, interative = true) {
+  function isAnswered(question, strict = false) {
+    const definitelyYes =
+      !question || question.querySelector(".choice-input:is(:checked)");
+    if (definitelyYes) return true;
 
-  let forceSubmit = false;
+    if (!question.querySelector(".choice-input[type=checkbox]")) {
+      strict = true;
+    }
+    if (strict) return false;
+    const previous = question.previous();
+    const next = question.next();
+    return isAnswered(previous, true) && isAnswered(next, true);
+  }
+
+  const questions = quiz.querySelectorAll(".question");
+  if (questions.length == 0) return false;
   for (const question of questions) {
-    const answered = question.querySelector(
-      ".choice-input:is(:checked,[type=checkbox])"
-    );
-    if (!answered && !forceSubmit) {
-      if (!confirm("There are unanswered question(s). Submit anyway?")) {
+    const answered = isAnswered(question);
+    if (interative && !answered) {
+      if (!confirm("There are unanswered questions. Submit anyway?")) {
         question.scrollTo().blink();
         return false;
       }
-      forceSubmit = true;
+      interative = false;
     }
-    question.setAttribute("answered", answered != null);
+    question.setAttribute("answered", Boolean(answered));
   }
   return true;
 }
@@ -125,13 +136,14 @@ function getAttemptData(questions) {
 }
 
 function saveProgress() {
+  const quiz = document.querySelector(
+    "#quiz-page[visible] #quiz[submitted=false]"
+  );
+  if (!quiz) return;
+  checkCompletion(quiz, false);
   unfinishedAttempts.set(
     getAttemptData(
-      document.querySelectorAll(
-        "#quiz-page[visible] " +
-          "#quiz[submitted=false] " +
-          ".question:has(:is(.choice-input,.unsure-check):checked)"
-      )
+      quiz.querySelectorAll(".question:is(.unsure,[answered=true])")
     )
   );
 }

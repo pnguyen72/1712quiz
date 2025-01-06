@@ -122,8 +122,9 @@ function recoverAttempt(quiz, interative = true) {
   stopTimer();
   startTimer(time);
   if (interative) {
+    checkCompletion(quiz, false);
     quiz
-      .querySelector(".question:not(:has(.choice-input:checked))")
+      .querySelector(".question[answered=false]")
       ?.blink()
       ?.previous()
       ?.scrollTo();
