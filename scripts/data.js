@@ -162,18 +162,15 @@ unfinishedAttempts.set = function (attemptData) {
     }
     this[module][questionId] = questionData;
   });
-  this.save();
+  // no need to save,
+  // because every time set() is called, delete() is also called
 };
 
-unfinishedAttempts.delete = function (questionIds) {
-  for (const questionId of questionIds) {
-    const module = questionId.split("_")[0];
-    delete this[module]?.[questionId];
+unfinishedAttempts.delete = function (questions) {
+  for (const question of questions) {
+    const module = question.id.split("_")[0];
+    delete this[module]?.[question.id];
   }
-  this.save();
-};
-
-unfinishedAttempts.save = function () {
   localStorage.setItem("unfinished", JSON.stringify(this));
 };
 

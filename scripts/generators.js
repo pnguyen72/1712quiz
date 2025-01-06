@@ -90,7 +90,7 @@ function generatePastAttempt(attemptData) {
     .forEach((learnedTag) => learnedTag.remove());
   recoverAttempt(quiz, false);
   grade(quiz);
-  unfinishedAttempts.delete(questionsIds);
+  unfinishedAttempts.delete(quiz.querySelectorAll(".question"));
   return quiz;
 }
 
@@ -104,7 +104,7 @@ function recoverAttempt(quiz, interative = true) {
         "\n(Selecting NO will permanently delete it!)"
     )
   ) {
-    unfinishedAttempts.delete([...recoverable].map((question) => question.id));
+    unfinishedAttempts.delete(recoverable);
     return;
   }
 

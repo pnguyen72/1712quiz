@@ -141,10 +141,12 @@ function saveProgress() {
   );
   if (!quiz) return;
   checkCompletion(quiz, false);
+  const selector = ".unsure,[answered=true]";
   unfinishedAttempts.set(
-    getAttemptData(
-      quiz.querySelectorAll(".question:is(.unsure,[answered=true])")
-    )
+    getAttemptData(quiz.querySelectorAll(`.question:is(${selector})`))
+  );
+  unfinishedAttempts.delete(
+    quiz.querySelectorAll(`.question:not(${selector})`)
   );
 }
 

@@ -172,9 +172,7 @@ function submit() {
   showResult(score, outOf);
   knowledge.update(quiz);
   stopTimer();
-  unfinishedAttempts.delete(
-    [...quiz.querySelectorAll(".question")].map((question) => question.id)
-  );
+  unfinishedAttempts.delete(quiz.querySelectorAll(".question"));
 }
 
 const questionsScroller = {
