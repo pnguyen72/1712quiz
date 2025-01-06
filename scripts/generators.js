@@ -257,7 +257,7 @@ function generateQuestion(questionId, questionIndex) {
   };
   question.previous = function (selector = "") {
     if (!selector) {
-      return quizPage.querySelector(`.question:has(+${question.selector})`);
+      return quizPage.querySelector(`.question:has(+${questionSelector})`);
     }
     const candidates = quizPage.querySelectorAll(
       `.question${selector}:has(~${questionSelector})`
