@@ -123,9 +123,10 @@ function recoverAttempt(quiz) {
   stopTimer();
   startTimer(time);
   quiz
-    .querySelector(".question:has(+.question:not([recoverable]))")
+    .querySelector(".question:not(:has(.choice-input:checked))")
+    ?.blink()
+    ?.previous()
     ?.scrollTo();
-  quiz.querySelector(".question:not([recoverable]")?.blink();
 }
 
 function generateQuestion(questionId, questionIndex) {
@@ -247,15 +248,36 @@ function generateQuestion(questionId, questionIndex) {
     "animationend",
     () => (question.style.animation = "")
   );
+  // the selector is cursed because the question id starts with a number
+  // it's too inconvenient to change that now
+  const questionSelector = `#\\3${questionId[0]} ${questionId.slice(1)}`;
+  question.next = function (selector = "") {
+    return quizPage.querySelector(`${questionSelector} ~ .question${selector}`);
+  };
+  question.previous = function (selector = "") {
+    if (!selector) {
+      return quizPage.querySelector(`.question:has(+${question.selector})`);
+    }
+    const candidates = quizPage.querySelectorAll(
+      `.question${selector}:has(~${questionSelector})`
+    );
+    return candidates[candidates.length - 1];
+  };
   question.scrollTo = () => {
     question.scrollIntoView(true);
     scrollBy(0, -0.55 * navbar.offsetHeight);
     if (reviewPanel.style.display != "none") {
       scrollBy(0, -navbar.offsetHeight);
     }
+    // scrolling sets questionsScroller.current = null
+    // so we wait 400ms for the scroll to finish, avoiding the race condition
+    setTimeout(() => (questionsScroller.current = question), 400);
     return question;
   };
-  question.blink = () => (question.style.animation = "blink 1s");
+  question.blink = () => {
+    question.style.animation = "blink 1s";
+    return question;
+  };
 
   question.appendChild(questionHeader);
   question.appendChild(questionBody);

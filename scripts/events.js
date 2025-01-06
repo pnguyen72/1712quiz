@@ -1,3 +1,5 @@
+document.addEventListener("scroll", () => (questionsScroller.current = null));
+
 licenseText.addEventListener(
   "animationend",
   () => (licenseText.style.animation = "")
@@ -59,8 +61,8 @@ nextButton.addEventListener("click", () => {
   } else nextQuiz();
 });
 
-prevQuest.addEventListener("click", () => questionsSkipper.prev());
-nextQuest.addEventListener("click", () => questionsSkipper.next());
+prevQuest.addEventListener("click", () => questionsScroller.previous());
+nextQuest.addEventListener("click", () => questionsScroller.next());
 
 attemptsTableContainer
   .querySelector("box-icon")

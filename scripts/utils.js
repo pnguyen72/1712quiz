@@ -61,7 +61,7 @@ function search(collection, item, map = (i) => i) {
     index = Math.max(Math.min(index, collection.length - 1), 0);
     return collection[index];
   };
-  out.prev = () => {
+  out.previous = () => {
     const result = binarySearch();
     let index = result.index - 1;
     index = Math.max(Math.min(index, collection.length - 1), 0);
