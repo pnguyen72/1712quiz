@@ -137,8 +137,11 @@ function nextQuiz() {
   document.getElementById("quiz").replaceWith(quiz);
   quiz.addEventListener("input", saveProgress);
   toQuizPage();
-  startTimer(quiz.getAttribute("initialTime"));
-  setTimeout(explainLearnedQuestions, 400); // so that it runs after the page has loaded, 400ms should be enough
+  startTimer();
+  // timeout so that these run after the page has loaded
+  // 300ms should be enough
+  setTimeout(() => recoverAttempt(quiz), 300);
+  setTimeout(explainLearnedQuestions, 400);
 }
 
 function submit() {

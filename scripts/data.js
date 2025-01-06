@@ -26,15 +26,6 @@ questionsData.get = function (id) {
 
 function getQuiz(modules, count) {
   let recoveredQuestions = unfinishedAttempts.get(modules, count);
-  if (
-    recoveredQuestions.length > 0 &&
-    !confirm(
-      "You have unsubmitted questions from previous attempts. Do you want to recover them?"
-    )
-  ) {
-    unfinishedAttempts.delete(recoveredQuestions);
-    recoveredQuestions = [];
-  }
   if (recoveredQuestions.length >= count) {
     return recoveredQuestions;
   }
@@ -55,6 +46,11 @@ function getQuiz(modules, count) {
         // then, sort by random
         (Math.random() - 0.5)
     );
+  }
+  newQuestions = shuffle(newQuestions.slice(0, count));
+
+  if (recoveredQuestions.length == 0) {
+    return newQuestions;
   }
   return [...new Set([...recoveredQuestions, ...newQuestions])].slice(0, count);
 }

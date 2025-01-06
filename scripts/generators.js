@@ -72,9 +72,9 @@ function generateQuiz(questionsIds) {
   questionsIds.forEach((id, index) => {
     const question = generateQuestion(id, index);
     quiz.appendChild(question);
-    time += parseFloat(question.getAttribute("initialTime"));
+    time += question.initialTime;
   });
-  quiz.setAttribute("initialTime", time);
+  quiz.initialTime = time;
   return quiz;
 }
 
@@ -92,6 +92,40 @@ function generatePastAttempt(attemptData) {
   quiz.setAttribute("submitted", true);
   unfinishedAttempts.delete(questionsIds);
   return quiz;
+}
+
+function recoverAttempt(quiz) {
+  const recoverable = quiz.querySelectorAll(".question[recoverable");
+  if (recoverable.length == 0) {
+    return;
+  }
+  if (
+    !confirm(
+      "Do you want to recover your previous unsubmitted attempt?" +
+        "\n(Selecting no will permanently delete it!)"
+    )
+  ) {
+    unfinishedAttempts.delete([...recoverable].map((question) => question.id));
+    return;
+  }
+
+  let time = 0;
+  recoverable.forEach((question) => {
+    const attemptData = unfinishedAttempts.get(question.id);
+    question
+      .querySelectorAll(".choice-input")
+      .forEach((input) => (input.checked = attemptData[input.id]));
+    time += attemptData.time;
+    if (attemptData.unsure) {
+      question.querySelector(".unsure-check").click();
+    }
+  });
+  stopTimer();
+  startTimer(time);
+  quiz
+    .querySelector(".question:has(+.question:not([recoverable]))")
+    ?.scrollTo();
+  quiz.querySelector(".question:not([recoverable]")?.blink();
 }
 
 function generateQuestion(questionId, questionIndex) {
@@ -162,7 +196,7 @@ function generateQuestion(questionId, questionIndex) {
     choiceInput.className = "choice-input";
     choiceInput.type = questionData.multiSelect ? "checkbox" : "radio";
     choiceInput.name = questionId;
-    choiceInput.checked = attemptData?.[choiceId];
+
     choiceText.innerHTML = choiceData.choice;
 
     choiceLabel.appendChild(choiceInput);
@@ -206,7 +240,9 @@ function generateQuestion(questionId, questionIndex) {
   const question = document.createElement("div");
   question.id = questionId;
   question.className = "question";
-  question.setAttribute("initialTime", attemptData?.time ?? 0);
+  if (attemptData) {
+    question.setAttribute("recoverable", true);
+  }
   question.addEventListener(
     "animationend",
     () => (question.style.animation = "")
@@ -228,10 +264,6 @@ function generateQuestion(questionId, questionIndex) {
   }
   question.appendChild(questionChoices);
   question.appendChild(explanationContainer);
-  if (attemptData?.unsure) {
-    unsureCheck.checked = true;
-    toggleUnsure(question);
-  }
   return question;
 }
 
