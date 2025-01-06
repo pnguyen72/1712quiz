@@ -152,7 +152,7 @@ function showResult(score, outOf) {
   resultText.innerText = `${score}/${outOf} (${roundedAccuracy}%)`;
   const [H, S, L] = getColor(accuracy);
   reviewPanel.style.backgroundColor = `hsl(${H}, ${S}%, ${L}%)`;
-  reviewPanel.style.color = L < 61 ? "#eee" : "#000";
+  reviewPanel.style.color = L < 60 ? "#eee" : "#000";
   unhide(reviewPanel);
 
   const unsureQuestions = quizPage.querySelectorAll(".wrong-answer,.unsure");
