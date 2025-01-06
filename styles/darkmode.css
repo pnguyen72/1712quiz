@@ -52,7 +52,7 @@ td {
 #main #license-notice {
   #hawaiian {
     /* Make the license image a little nicer on the eyes. */
-    opacity: 80%;
+    opacity: 75%;
   }
   #license-text {
     background-color: #262626;
@@ -62,7 +62,7 @@ td {
     color: #0f0116;
   }
   #license-disagree-btn #license-disagree-text {
-    color: hsl(180, 0%, 40%);
+    color: #c0c0c0;
   }
 }
 
