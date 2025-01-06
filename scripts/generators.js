@@ -270,8 +270,9 @@ function generateQuestion(questionId, questionIndex) {
       scrollBy(0, -navbar.offsetHeight);
     }
     // scrolling sets questionsScroller.current = null
-    // so we wait 400ms for the scroll to finish, avoiding the race condition
-    setTimeout(() => (questionsScroller.current = question), 400);
+    // so we wait for the scroll to finish first, avoiding race condition
+    // 100ms should be enough?
+    setTimeout(() => (questionsScroller.current = question), 100);
     return question;
   };
   question.blink = () => {
