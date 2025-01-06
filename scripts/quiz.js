@@ -57,32 +57,34 @@ function giveExplanationsWarning() {
 }
 
 function checkCompletion(questions) {
+  if (questions.length == 0) return false;
+
   let forceSubmit = false;
-  for (let question of questions) {
-    let isAnswered = false;
-    for (let choice of question.querySelectorAll("li")) {
-      const input = choice.querySelector("input");
-      isAnswered = isAnswered || input.checked || input.type == "checkbox";
-      if (isAnswered) break;
-    }
-    if (!isAnswered && !forceSubmit) {
-      question.scrollTo();
-      if (confirm("There are unanswered question(s). Submit anyway?"))
-        forceSubmit = true;
-      else {
-        question.blink();
+  for (const question of questions) {
+    const answered = question.querySelector(
+      ".choice-input:is(:checked,[type=checkbox])"
+    );
+    if (!answered && !forceSubmit) {
+      if (!confirm("There are unanswered question(s). Submit anyway?")) {
+        question.scrollTo().blink();
         return false;
       }
+      forceSubmit = true;
     }
+    question.setAttribute("answered", answered != null);
   }
   return true;
 }
 
-function grade(questions) {
-  let correctAnswers = 0;
-  for (let question of questions) {
+function grade(quiz) {
+  let score = 0;
+  for (const question of quiz.querySelectorAll(".question")) {
+    if (question.getAttribute("answered") == "false") {
+      explain(question);
+      continue;
+    }
     let isCorrect = true;
-    for (let choice of question.querySelectorAll("li")) {
+    for (const choice of question.querySelectorAll("li")) {
       const input = choice.querySelector("input");
       if ((choice.className == "correct") != input.checked) {
         isCorrect = false;
@@ -90,7 +92,7 @@ function grade(questions) {
       }
     }
     if (isCorrect) {
-      ++correctAnswers;
+      ++score;
     } else {
       question.classList.remove("unsure");
       question.classList.add("wrong-answer");
@@ -98,7 +100,10 @@ function grade(questions) {
       explain(question);
     }
   }
-  return correctAnswers;
+  for (const input of quiz.querySelectorAll(".choice-input"))
+    input.disabled = true;
+  quiz.setAttribute("submitted", true);
+  return score;
 }
 
 function getAttemptData(questions) {
@@ -129,21 +134,6 @@ function saveProgress() {
       )
     )
   );
-}
-
-function updatePastAttempts(correctAnswers, questions) {
-  pastAttempts.push({
-    timestamp: Date.now(),
-    exam: examSelection.querySelector("input:checked").id,
-    modules: getSelectedModules()
-      .map((x) => parseInt(x))
-      .join(", "),
-    duration: navText.innerText,
-    score: correctAnswers,
-    outOf: questions.length,
-    data: getAttemptData(questions),
-  });
-  localStorage.setItem("attempts", JSON.stringify(pastAttempts));
 }
 
 function showResult(score, outOf) {

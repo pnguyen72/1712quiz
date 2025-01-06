@@ -82,27 +82,26 @@ function generatePastAttempt(attemptData) {
   unfinishedAttempts.set(attemptData);
   const questionsIds = Object.keys(attemptData);
   const quiz = generateQuiz(questionsIds);
-  for (const input of quiz.querySelectorAll(".choice-input")) {
-    input.disabled = true;
-  }
-  for (const learnedTag of quiz.querySelectorAll(".learned-tag")) {
-    learnedTag.remove();
-  }
-  grade(quiz.querySelectorAll(".question"));
-  quiz.setAttribute("submitted", true);
+  quiz
+    .querySelectorAll(".question")
+    .forEach((question) => question.setAttribute("answered", true));
+  quiz
+    .querySelectorAll(".learned-tag")
+    .forEach((learnedTag) => learnedTag.remove());
+  recoverAttempt(quiz, false);
+  grade(quiz);
   unfinishedAttempts.delete(questionsIds);
   return quiz;
 }
 
-function recoverAttempt(quiz) {
+function recoverAttempt(quiz, interative = true) {
   const recoverable = quiz.querySelectorAll(".question[recoverable");
-  if (recoverable.length == 0) {
-    return;
-  }
+  if (recoverable.length == 0) return;
   if (
+    interative &&
     !confirm(
       "Do you want to recover your previous unsubmitted attempt?" +
-        "\n(Selecting no will permanently delete it!)"
+        "\n(Selecting NO will permanently delete it!)"
     )
   ) {
     unfinishedAttempts.delete([...recoverable].map((question) => question.id));
@@ -122,11 +121,13 @@ function recoverAttempt(quiz) {
   });
   stopTimer();
   startTimer(time);
-  quiz
-    .querySelector(".question:not(:has(.choice-input:checked))")
-    ?.blink()
-    ?.previous()
-    ?.scrollTo();
+  if (interative) {
+    quiz
+      .querySelector(".question:not(:has(.choice-input:checked))")
+      ?.blink()
+      ?.previous()
+      ?.scrollTo();
+  }
 }
 
 function generateQuestion(questionId, questionIndex) {

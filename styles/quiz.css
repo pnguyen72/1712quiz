@@ -218,7 +218,8 @@
 
   &[explain="true"] .question {
     &.unsure,
-    &.wrong-answer {
+    &.wrong-answer,
+    &[answered="false"] {
       .explanation-container {
         display: flex;
       }

@@ -153,15 +153,27 @@ function submit() {
 
   if (!checkCompletion(questions)) return;
 
-  const correctAnswers = grade(questions);
-  for (const input of quiz.querySelectorAll(".choice-input"))
-    input.disabled = true;
-  quiz.setAttribute("submitted", true);
+  const score = grade(quiz);
+  const answeredQuestions = quiz.querySelectorAll(".question[answered=true]");
+  const outOf = answeredQuestions.length;
+  if (outOf) {
+    pastAttempts.push({
+      timestamp: Date.now(),
+      exam: examSelection.querySelector("input:checked").id,
+      modules: getSelectedModules()
+        .map((x) => parseInt(x))
+        .join(", "),
+      duration: navText.innerText,
+      score: score,
+      outOf: outOf,
+      data: getAttemptData(answeredQuestions),
+    });
+    localStorage.setItem("attempts", JSON.stringify(pastAttempts));
+  }
   scrollTo(0, 0);
-  showResult(correctAnswers, questions.length);
+  showResult(score, outOf);
   knowledge.update(quiz);
   stopTimer();
-  updatePastAttempts(correctAnswers, questions);
   unfinishedAttempts.delete(questions.map((question) => question.id));
 }
 
