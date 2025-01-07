@@ -116,7 +116,8 @@ function recoverAttempt(quiz, interative = true) {
       .forEach((input) => (input.checked = attemptData[input.id]));
     time += attemptData.time;
     if (attemptData.unsure) {
-      question.querySelector(".unsure-check").click();
+      question.querySelector(".unsure-check").checked = true;
+      toggleUnsure(question);
     }
   });
   stopTimer();
