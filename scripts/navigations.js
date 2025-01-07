@@ -171,9 +171,9 @@ function submit() {
       data: getAttemptData(answeredQuestions),
     });
     localStorage.setItem("attempts", JSON.stringify(pastAttempts));
+    showResult(score, outOf);
   }
   scrollTo(0, 0);
-  showResult(score, outOf);
   knowledge.update(quiz);
   stopTimer();
   unfinishedAttempts.delete(quiz.querySelectorAll(".question"));
