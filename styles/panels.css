@@ -20,8 +20,8 @@
 #review-panel {
   top: 0;
 
-  i.bx {
-    font-size: 1.65rem;
+  .bx {
+    font-size: 1.5rem;
   }
 
   > div {

@@ -160,9 +160,8 @@ function showResult(score, outOf) {
   unhide(reviewPanel);
 
   const unsureQuestions = quizPage.querySelectorAll(".wrong-answer,.unsure");
-  prevQuest.parentElement.style.visibility =
-    nextQuest.parentElement.style.visibility =
-      unsureQuestions.length > 0 ? "visible" : "hidden";
+  prevQuest.style.visibility = nextQuest.style.visibility =
+    unsureQuestions.length > 0 ? "visible" : "hidden";
 }
 
 function toggleUnsure(question) {
@@ -176,14 +175,12 @@ function toggleUnsure(question) {
   const unsureQuestions = quizPage.querySelectorAll(".wrong-answer,.unsure");
   if (unsureQuestions.length > 0) {
     unhide(reviewPanel);
-    prevQuest.parentElement.style.visibility =
-      nextQuest.parentElement.style.visibility = "visible";
+    prevQuest.style.visibility = nextQuest.style.visibility = "visible";
   } else {
     if (quizPage.querySelector("#quiz[submitted=false]")) {
       hide(reviewPanel);
     }
-    prevQuest.parentElement.style.visibility =
-      nextQuest.parentElement.style.visibility = "hidden";
+    prevQuest.style.visibility = nextQuest.style.visibility = "hidden";
   }
 }
 

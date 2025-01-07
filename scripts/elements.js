@@ -1,6 +1,6 @@
 const reviewPanel = document.getElementById("review-panel");
-const resultText = document.getElementById("quiz-result");
-const [prevQuest, nextQuest] = reviewPanel.querySelectorAll('.bx');
+const resultText = reviewPanel.querySelector("p span");
+const [prevQuest, nextQuest] = reviewPanel.querySelectorAll('& > div');
 const navbar = document.getElementById("navbar");
 const navText = navbar.querySelector("span");
 navText.style.width = getComputedStyle(navText).width;
