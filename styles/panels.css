@@ -2,16 +2,15 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  height: 3rem;
   width: 100%;
   align-items: center;
   position: fixed;
   z-index: 1;
   background-color: #04442c;
   color: hsl(120, 28%, 95%);
+  height: 2.5rem;
 
   span {
-    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
   }
@@ -20,22 +19,23 @@
 #review-panel {
   top: 0;
 
-  .bx {
-    font-size: 1.5rem;
+  &[visible] ~ .page {
+    margin-top: 4rem;
+  }
+
+  span {
+    font-size: 1.4rem;
   }
 
   > div {
     display: flex;
     flex-direction: column;
-    font-size: 1rem;
+    font-size: 0.85rem;
     align-items: center;
-  }
+    font-weight: bold;
 
-  &[visible] ~ .page {
-    margin-top: 5rem;
-
-    @media (width < 450px) {
-      margin-top: 4rem;
+    .bx {
+      font-size: 1.45rem;
     }
   }
 }
@@ -43,16 +43,16 @@
 nav {
   bottom: 0;
 
-  .bx {
-    font-size: 2rem;
+  &[visible] ~ .page {
+    margin-bottom: 3.5rem;
   }
 
-  &[visible] ~ .page {
-    margin-bottom: 4.5rem;
+  span {
+    font-size: 1.5rem;
+  }
 
-    @media (width < 450px) {
-      margin-bottom: 3.5rem;
-    }
+  .bx {
+    font-size: 2rem;
   }
 }
 
