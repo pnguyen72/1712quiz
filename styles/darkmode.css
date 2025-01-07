@@ -12,11 +12,10 @@ body {
             color: #fff;
           }
         }
-        #github {
-          box-icon {
-            background-color: rgb(235, 235, 235);
-            border-radius: 50%;
-          }
+        #github .bx {
+          color: rebeccapurple;
+          background-color: #e0e0e0;
+          border-radius: 50%;
         }
       }
     }

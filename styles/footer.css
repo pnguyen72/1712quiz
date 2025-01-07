@@ -110,17 +110,15 @@
     display: flex;
     align-items: center;
 
-    box-icon {
-      height: 1.6rem;
-      width: 1.6rem;
+    .bx {
+      color: #04442c;
+      font-size: 1.6rem;
 
       @media (width < 600px) {
-        height: 1.55rem;
-        width: 1.55rem;
+        font-size: 1.55rem;
       }
       @media (width < 450px) {
-        height: 1.5rem;
-        width: 1.5rem;
+        font-size: 1.5rem;
       }
     }
 
