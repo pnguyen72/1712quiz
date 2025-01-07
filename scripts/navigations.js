@@ -138,6 +138,7 @@ function nextQuiz() {
   const questionsIds = getQuiz(modules, questionsCount);
   const quiz = generateQuiz(questionsIds);
   document.getElementById("quiz").replaceWith(quiz);
+  quiz.addEventListener("input", saveProgress);
   toQuizPage();
   startTimer();
   nextButton.disabled = true;
