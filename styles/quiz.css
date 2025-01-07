@@ -211,7 +211,7 @@
       }
     }
 
-    &:not(.wrong-answer) .unsure-label {
+    &:is([answered="false"], .wrong-answer) .unsure-label {
       display: none;
     }
   }
@@ -224,17 +224,16 @@
         display: flex;
       }
     }
-
-    .unsure-label {
-      display: initial;
-    }
-
     .im-not-sure {
       display: none;
     }
     .show-explanation {
       display: initial;
     }
+  }
+
+  &[explain="false"] .unsure-label {
+    display: none;
   }
 }
 

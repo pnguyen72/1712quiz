@@ -105,9 +105,7 @@ function grade(quiz) {
     if (isCorrect) {
       ++score;
     } else {
-      question.classList.remove("unsure");
       question.classList.add("wrong-answer");
-      hide(question.querySelector(".unsure-label"));
       explain(question);
     }
   }
