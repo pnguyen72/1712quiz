@@ -147,10 +147,14 @@ td {
 #navbar {
   box-shadow: 0px -2px 8px #00000065;
 }
-
-#attempts-table {
-  td.timestamp {
-    color: cyan !important;
+#attempts-table-container {
+  #attempts-table {
+    td.timestamp {
+      color: cyan !important;
+    }
+  }
+  .bx {
+    background-color: #262626;
   }
 }
 

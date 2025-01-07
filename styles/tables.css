@@ -17,13 +17,13 @@ table {
     display: none;
   }
 
-  box-icon {
+  .bx {
     position: absolute;
+    color: hsl(0, 80%, 45%);
     background-color: hsl(120, 28%, 95%);
     border-radius: 50%;
 
-    height: 1.9rem;
-    width: 1.9rem;
+    font-size: 1.9rem;
     top: -0.75rem;
     right: -0.75rem;
 
@@ -44,7 +44,7 @@ table {
 
   /* if hover is available */
   @media not all and (hover: none) {
-    &:not(:hover) box-icon {
+    &:not(:hover) .bx {
       display: none;
     }
   }

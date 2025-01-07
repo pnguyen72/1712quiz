@@ -68,15 +68,13 @@ nextButton.addEventListener("click", () => {
 prevQuest.addEventListener("click", () => questionsScroller.previous());
 nextQuest.addEventListener("click", () => questionsScroller.next());
 
-attemptsTableContainer
-  .querySelector("box-icon")
-  .addEventListener("click", () => {
-    if (confirm("Delete attempts history?")) {
-      localStorage.removeItem("attempts");
-      localStorage.removeItem("knowledge");
-      location.reload();
-    }
-  });
+attemptsTableContainer.querySelector(".bx").addEventListener("click", () => {
+  if (confirm("Delete attempts history?")) {
+    localStorage.removeItem("attempts");
+    localStorage.removeItem("knowledge");
+    location.reload();
+  }
+});
 
 window.addEventListener("beforeprint", () => {
   const quiz = document.querySelector(
