@@ -23,7 +23,7 @@ function generateModuleSelection() {
     const moduleCoverage = document.createElement("span");
     modulesSelectBoxes.push(moduleSelectBox);
 
-    moduleTitle.innerHTML = `Module ${index + indexOffset}: ${name}`;
+    moduleTitle.innerHTML = `${index + indexOffset}. ${name}`;
     moduleCoverage.className = "coverage";
     moduleSelectBox.id = `${String(index + indexOffset).padStart(2, "0")}`;
     moduleSelectBox.type = "checkbox";
