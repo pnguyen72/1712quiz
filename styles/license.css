@@ -28,7 +28,7 @@
   #license-notice {
     margin: 0;
     position: relative;
-    height: 80vh;
+    height: 85vh;
 
     #hawaiian {
       height: 100%;
@@ -105,7 +105,7 @@
     #license-notice {
       height: auto;
       width: calc(100vw-6rem);
-      max-width: 408px;
+      max-width: 450px;
       margin: 0;
 
       #hawaiian {
