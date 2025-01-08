@@ -177,6 +177,7 @@ function submit() {
   knowledge.update(quiz);
   stopTimer();
   unfinishedAttempts.delete(quiz.querySelectorAll(".question"));
+  unfinishedAttempts.save();
 }
 
 const questionsScroller = {

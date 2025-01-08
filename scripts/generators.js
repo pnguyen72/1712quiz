@@ -82,7 +82,7 @@ function generatePastAttempt(attemptData) {
   quiz.querySelectorAll(".learned-tag").forEach((tag) => tag.remove());
   recoverAttempt(quiz, false);
   grade(quiz);
-  unfinishedAttempts.delete(quiz.querySelectorAll(".question"));
+  unfinishedAttempts.load();
   return quiz;
 }
 

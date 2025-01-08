@@ -172,6 +172,7 @@ function saveProgress() {
   unfinishedAttempts.delete(
     quiz.querySelectorAll(`.question:not(${selector})`)
   );
+  unfinishedAttempts.save();
 }
 
 function showResult(score, outOf) {

@@ -137,42 +137,56 @@ function editSignal(questionId, isEditing) {
   }
 }
 
-unfinishedAttempts.get = function () {
-  if (arguments.length < 2) {
-    const questionId = arguments[0];
-    const module = questionId.split("_")[0];
-    return this[module]?.[questionId];
-  }
-
-  const modules = arguments[0];
-  const count = arguments[1];
-
-  let candidates = [];
-  for (const module of modules) {
-    candidates = candidates.concat(Object.keys(this[module] ?? {}));
-  }
-  return candidates.slice(0, count);
-};
-
-unfinishedAttempts.set = function (attemptData) {
-  Object.entries(attemptData).forEach(([questionId, questionData]) => {
-    const module = questionId.split("_")[0];
-    if (!Object.hasOwn(this, module)) {
-      this[module] = {};
+const unfinishedAttempts = {
+  load: function () {
+    const storedData = localStorage.getItem("unfinished");
+    if (storedData) {
+      Object.assign(this, JSON.parse(storedData));
     }
-    this[module][questionId] = questionData;
-  });
-  // no need to save,
-  // because every time set() is called, delete() is also called
+  },
+
+  save: function () {
+    localStorage.setItem("unfinished", JSON.stringify(this));
+  },
+
+  get: function () {
+    if (arguments.length < 2) {
+      const questionId = arguments[0];
+      const module = questionId.split("_")[0];
+      return this[module]?.[questionId];
+    }
+
+    const modules = arguments[0];
+    const count = arguments[1];
+
+    let candidates = [];
+    for (const module of modules) {
+      candidates = candidates.concat(Object.keys(this[module] ?? {}));
+    }
+    return candidates.slice(0, count);
+  },
+
+  set: function (attemptData) {
+    Object.entries(attemptData).forEach(([questionId, questionData]) => {
+      const module = questionId.split("_")[0];
+      if (!Object.hasOwn(this, module)) {
+        this[module] = {};
+      }
+      this[module][questionId] = questionData;
+    });
+    // no need to save,
+    // because every time set() is called, delete() is also called
+  },
+
+  delete: function (questions) {
+    for (const question of questions) {
+      const module = question.id.split("_")[0];
+      delete this[module]?.[question.id];
+    }
+  },
 };
 
-unfinishedAttempts.delete = function (questions) {
-  for (const question of questions) {
-    const module = question.id.split("_")[0];
-    delete this[module]?.[question.id];
-  }
-  localStorage.setItem("unfinished", JSON.stringify(this));
-};
+unfinishedAttempts.load();
 
 function _loadmodulesNamess() {
   return fetch("./data/modules.json").then((response) => response.json());
