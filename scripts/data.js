@@ -9,6 +9,7 @@ firebase.initializeApp({
 const db = firebase.firestore();
 
 function loadData() {
+  unfinishedAttempts.load();
   return _loadmodulesNamess().then((modules) => {
     modulesNames = modules;
     const promises = [];
@@ -185,8 +186,6 @@ const unfinishedAttempts = {
     }
   },
 };
-
-unfinishedAttempts.load();
 
 function _loadmodulesNamess() {
   return fetch("./data/modules.json").then((response) => response.json());
