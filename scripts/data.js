@@ -175,8 +175,6 @@ const unfinishedAttempts = {
       }
       this[module][questionId] = questionData;
     });
-    // no need to save,
-    // because every time set() is called, delete() is also called
   },
 
   delete: function (questions) {
