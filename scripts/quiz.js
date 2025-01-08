@@ -89,30 +89,31 @@ function checkCompletion(quiz, interative = true) {
 
 function grade(quiz) {
   let score = 0;
-  for (const question of quiz.querySelectorAll(".question")) {
-    if (question.getAttribute("answered") == "false") {
-      explain(question);
-      continue;
-    }
-    let isCorrect = true;
-    for (const choice of question.querySelectorAll("li")) {
-      const input = choice.querySelector("input");
-      if ((choice.className == "correct") != input.checked) {
-        isCorrect = false;
-        break;
-      }
-    }
-    if (isCorrect) {
-      ++score;
-    } else {
-      question.classList.add("wrong-answer");
-      explain(question);
-    }
-  }
-  for (const input of quiz.querySelectorAll(".choice-input"))
-    input.disabled = true;
+  quiz
+    .querySelectorAll(".question")
+    .forEach((question) => (score += isCorrect(question)));
+  quiz
+    .querySelectorAll(".choice-input")
+    .forEach((input) => (input.disabled = true));
   quiz.setAttribute("submitted", true);
   return score;
+}
+
+function isCorrect(question) {
+  if (question.getAttribute("answered") == "false") {
+    explain(question);
+    return false;
+  }
+
+  for (const choice of question.querySelectorAll("li")) {
+    const input = choice.querySelector("input");
+    if ((choice.className == "correct") != input.checked) {
+      question.classList.add("wrong-answer");
+      explain(question);
+      return false;
+    }
+  }
+  return true;
 }
 
 function getAttemptData(questions) {
