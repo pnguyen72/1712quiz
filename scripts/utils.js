@@ -20,6 +20,10 @@ function shuffleChoices(choices) {
   shuffle(choices);
 }
 
+function sample(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
 function getColor(accuracy) {
   accuracy *= 100;
   const H = (5 / 4) * Math.max(accuracy - 20, 0);
