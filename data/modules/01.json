@@ -340,6 +340,7 @@
         "isCorrect": false
       }
     },
+    "joke": true,
     "explanation": "Either your answer was wrong, or you didn't answer honestly."
   },
   "01_19": {

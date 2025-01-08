@@ -105,6 +105,31 @@ function isCorrect(question) {
     return false;
   }
 
+  if (question.classList.contains("joke")) {
+    // there are 3 kinds of joke questions:
+    // 1, if all answers are incorrect
+    if (!question.querySelector("li.correct,.choice-input[type=checkbox]")) {
+      for (const choice of question.querySelectorAll("li")) {
+        const input = choice.querySelector("input");
+        choice.className = input.checked ? "incorrect" : "correct";
+      }
+      question.classList.add("wrong-answer");
+      explain(question);
+      return false;
+    }
+    // 2, if all answers are correct
+    if (!question.querySelector("li.incorrect,.choice-input[type=checkbox]")) {
+      for (const choice of question.querySelectorAll("li")) {
+        const input = choice.querySelector("input");
+        choice.className = input.checked ? "correct" : "incorrect";
+      }
+      question.classList.add("wrong-answer");
+      explain(question);
+      return false;
+    }
+    // 3, still a joke, but mark it like a normal question
+  }
+
   for (const choice of question.querySelectorAll("li")) {
     const input = choice.querySelector("input");
     if ((choice.className == "correct") != input.checked) {

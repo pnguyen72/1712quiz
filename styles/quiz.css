@@ -244,6 +244,10 @@
       margin-bottom: 1rem;
     }
 
+    &.joke {
+      display: none;
+    }
+
     .learned-tag {
       display: none;
     }
