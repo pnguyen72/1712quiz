@@ -68,13 +68,10 @@ function generateQuiz(questionsIds) {
   quiz.id = "quiz";
   quiz.setAttribute("explain", explainChoice.checked);
   quiz.setAttribute("submitted", false);
-  let time = 0;
   questionsIds.forEach((id, index) => {
     const question = generateQuestion(id, index);
     quiz.appendChild(question);
-    time += question.initialTime;
   });
-  quiz.initialTime = time;
   return quiz;
 }
 
@@ -82,12 +79,7 @@ function generatePastAttempt(attemptData) {
   unfinishedAttempts.set(attemptData);
   const questionsIds = Object.keys(attemptData);
   const quiz = generateQuiz(questionsIds);
-  quiz
-    .querySelectorAll(".question")
-    .forEach((question) => question.setAttribute("answered", true));
-  quiz
-    .querySelectorAll(".learned-tag")
-    .forEach((learnedTag) => learnedTag.remove());
+  quiz.querySelectorAll(".learned-tag").forEach((tag) => tag.remove());
   recoverAttempt(quiz, false);
   grade(quiz);
   unfinishedAttempts.delete(quiz.querySelectorAll(".question"));
@@ -95,7 +87,7 @@ function generatePastAttempt(attemptData) {
 }
 
 function recoverAttempt(quiz, interative = true) {
-  const recoverable = quiz.querySelectorAll(".question[recoverable");
+  const recoverable = quiz.querySelectorAll(".question[recoverable]");
   if (recoverable.length == 0) return;
   if (
     interative &&
@@ -244,6 +236,9 @@ function generateQuestion(questionId, questionIndex) {
   const question = document.createElement("div");
   question.id = questionId;
   question.className = "question";
+  if (questionData.joke) {
+    question.classList.add("joke");
+  }
   if (attemptData) {
     question.setAttribute("recoverable", true);
   }
