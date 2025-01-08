@@ -92,8 +92,7 @@ function recoverAttempt(quiz, interative = true) {
   if (
     interative &&
     !confirm(
-      "Do you want to recover your previous unsubmitted attempt?" +
-        "\n(Selecting NO will permanently delete it!)"
+      "You have an earlier unsubmitted attempt. Do you want to recover it?"
     )
   ) {
     unfinishedAttempts.delete(recoverable);
