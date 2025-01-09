@@ -2,1136 +2,533 @@
   "06_01": {
     "question": "Entities are a person, place, or thing.",
     "choices": {
-      "A_06_01": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_01": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_01": { "choice": "True", "isCorrect": true },
+      "B_06_01": { "choice": "False" }
     }
   },
   "06_02": {
     "question": "Entities are further designed with attributes.",
     "choices": {
-      "A_06_02": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_02": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_02": { "choice": "True", "isCorrect": true },
+      "B_06_02": { "choice": "False" }
     }
   },
   "06_03": {
     "question": "An entity is the basic building block for a data model.",
     "choices": {
-      "A_06_03": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_03": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_03": { "choice": "True", "isCorrect": true },
+      "B_06_03": { "choice": "False" }
     }
   },
   "06_04": {
     "question": "Relationships are drawn with lines showing cardinality and plurality.",
     "choices": {
-      "A_06_04": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_06_04": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_06_04": { "choice": "True" },
+      "B_06_04": { "choice": "False", "isCorrect": true }
     },
     "explanation": "Relationships show cardinality and <i>modality</i>. Plurality is not a thing."
   },
   "06_05": {
     "question": "An entity relationship diagram (ERD):",
     "choices": {
-      "A_06_05": {
-        "choice": "Is a use-case diagram enhanced graphically to show data and process modeling",
-        "isCorrect": false
-      },
-      "B_06_05": {
-        "choice": "Is a graphical display of the processes in a business system",
-        "isCorrect": false
-      },
-      "C_06_05": {
-        "choice": "Is a high-level CASE diagram of data modeling used in business systems",
-        "isCorrect": false
-      },
-      "D_06_05": {
-        "choice": "Is a picture that shows the information that is created, stored, and used by a business system",
-        "isCorrect": true
-      },
-      "E_06_05": {
-        "choice": "Is an illustration of external data flows to and from a business systems",
-        "isCorrect": false
-      }
+      "A_06_05": { "choice": "Is a use-case diagram enhanced graphically to show data and process modeling" },
+      "B_06_05": { "choice": "Is a graphical display of the processes in a business system" },
+      "C_06_05": { "choice": "Is a high-level CASE diagram of data modeling used in business systems" },
+      "D_06_05": { "choice": "Is a picture that shows the information that is created, stored, and used by a business system", "isCorrect": true },
+      "E_06_05": { "choice": "Is an illustration of external data flows to and from a business systems" }
     }
   },
   "06_06": {
     "question": "With an ERD, the diagrams are drawn in a sequential order – from top to bottom.",
     "choices": {
-      "A_06_06": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_06_06": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_06_06": { "choice": "True" },
+      "B_06_06": { "choice": "False", "isCorrect": true }
     }
   },
   "06_07": {
     "question": "On an ERD, data elements are described as singular (1:1); plurals (1:N); or didactic (M:N).",
     "choices": {
-      "A_06_07": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_06_07": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_06_07": { "choice": "True" },
+      "B_06_07": { "choice": "False", "isCorrect": true }
     },
     "explanation": "It's one-to-one (1:1), one-to-many (1:N), or many-to-many (M:N)."
   },
   "06_08": {
     "question": "Which would likely be an entity on a car insurance ERD?",
     "choices": {
-      "A_06_08": {
-        "choice": "fire district",
-        "isCorrect": false
-      },
-      "B_06_08": {
-        "choice": "Gender",
-        "isCorrect": false
-      },
-      "C_06_08": {
-        "choice": "company",
-        "isCorrect": false
-      },
-      "D_06_08": {
-        "choice": "Car",
-        "isCorrect": true
-      },
-      "E_06_08": {
-        "choice": "date",
-        "isCorrect": false
-      }
+      "A_06_08": { "choice": "fire district" },
+      "B_06_08": { "choice": "Gender" },
+      "C_06_08": { "choice": "company" },
+      "D_06_08": { "choice": "Car", "isCorrect": true },
+      "E_06_08": { "choice": "date" }
     }
   },
   "06_09": {
     "question": "In an entity called STUDENT, you might find attributes of Student-ID, Last-Name, First-Name and cell-phone.",
     "choices": {
-      "A_06_09": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_09": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_09": { "choice": "True", "isCorrect": true },
+      "B_06_09": { "choice": "False" }
     }
   },
   "06_10": {
     "question": "Entity Relationship Diagrams show relationships between entities that are what?",
     "choices": {
-      "A_06_10": {
-        "choice": "Defined by the project sponsor",
-        "isCorrect": false
-      },
-      "B_06_10": {
-        "choice": "Extensions of the process models",
-        "isCorrect": false
-      },
-      "C_06_10": {
-        "choice": "Consistent with the ACM guidelines",
-        "isCorrect": false
-      },
-      "D_06_10": {
-        "choice": "Outputs from JAD sessions",
-        "isCorrect": false
-      },
-      "E_06_10": {
-        "choice": "In line with the business rules and processing",
-        "isCorrect": true
-      }
+      "A_06_10": { "choice": "Defined by the project sponsor" },
+      "B_06_10": { "choice": "Extensions of the process models" },
+      "C_06_10": { "choice": "Consistent with the ACM guidelines" },
+      "D_06_10": { "choice": "Outputs from JAD sessions" },
+      "E_06_10": { "choice": "In line with the business rules and processing", "isCorrect": true }
     }
   },
   "06_11": {
     "question": "An ERD is a picture that shows how data and information is processed and transformed by a business system.",
     "choices": {
-      "A_06_11": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_06_11": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_06_11": { "choice": "True" },
+      "B_06_11": { "choice": "False", "isCorrect": true }
     }
   },
   "06_12": {
     "question": "Which would NOT likely be an attribute of an entity called \"Student\"?",
     "choices": {
-      "A_06_12": {
-        "choice": "Home phone",
-        "isCorrect": false
-      },
-      "B_06_12": {
-        "choice": "Age",
-        "isCorrect": false
-      },
-      "C_06_12": {
-        "choice": "Gender",
-        "isCorrect": false
-      },
-      "D_06_12": {
-        "choice": "Class room number",
-        "isCorrect": true
-      },
-      "E_06_12": {
-        "choice": "Student identification number",
-        "isCorrect": false
-      }
+      "A_06_12": { "choice": "Home phone" },
+      "B_06_12": { "choice": "Age" },
+      "C_06_12": { "choice": "Gender" },
+      "D_06_12": { "choice": "Class room number", "isCorrect": true },
+      "E_06_12": { "choice": "Student identification number" }
     },
     "explanation": "A student is likely to have multiple classrooms, so there cannot be a single \"Class room number\" attribute."
   },
   "06_13": {
     "question": "A(n) _____ entity cannot exist without the presence of another entity or has an identifier that is based on another entity's attribute.",
     "choices": {
-      "A_06_13": {
-        "choice": "incomplete",
-        "isCorrect": false
-      },
-      "B_06_13": {
-        "choice": "non-complying",
-        "isCorrect": false
-      },
-      "C_06_13": {
-        "choice": "variable",
-        "isCorrect": false
-      },
-      "D_06_13": {
-        "choice": "independent",
-        "isCorrect": false
-      },
-      "E_06_13": {
-        "choice": "dependent",
-        "isCorrect": true
-      }
+      "A_06_13": { "choice": "incomplete" },
+      "B_06_13": { "choice": "non-complying" },
+      "C_06_13": { "choice": "variable" },
+      "D_06_13": { "choice": "independent" },
+      "E_06_13": { "choice": "dependent", "isCorrect": true }
     }
   },
   "06_14": {
     "question": "ERDs and DFDs are two techniques for process modeling.",
     "choices": {
-      "A_06_14": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_06_14": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_06_14": { "choice": "True" },
+      "B_06_14": { "choice": "False", "isCorrect": true }
     },
     "explanation": "ERD = data modeling<br>DFD = process modeling<br>Not the same thing."
   },
   "06_15": {
     "question": "On an ERD, data elements are listed alphabetically with a cross listing to the processes that manipulate them.",
     "choices": {
-      "A_06_15": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_06_15": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_06_15": { "choice": "True" },
+      "B_06_15": { "choice": "False", "isCorrect": true }
     }
   },
   "06_16": {
     "question": "On an ERD, processes are listed alphabetically with relationship connections drawn between processes.",
     "choices": {
-      "A_06_16": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_06_16": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_06_16": { "choice": "True" },
+      "B_06_16": { "choice": "False", "isCorrect": true }
     }
   },
   "06_17": {
     "question": "On an ERD, data elements are listed together and place inside boxes called entities.",
     "choices": {
-      "A_06_17": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_17": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_17": { "choice": "True", "isCorrect": true },
+      "B_06_17": { "choice": "False" }
     }
   },
   "06_18": {
     "question": "Independent entities are what?",
     "choices": {
-      "A_06_18": {
-        "choice": "When an entity comes from an external source (aka 'external entity')",
-        "isCorrect": false
-      },
-      "B_06_18": {
-        "choice": "When there is only one entity for a data process model",
-        "isCorrect": false
-      },
-      "C_06_18": {
-        "choice": "When an entity can exist without the help of another entity",
-        "isCorrect": true
-      },
-      "D_06_18": {
-        "choice": "Where the entity identifier is also the primary key",
-        "isCorrect": false
-      },
-      "E_06_18": {
-        "choice": "When a child requires attributes from the parent",
-        "isCorrect": false
-      }
+      "A_06_18": { "choice": "When an entity comes from an external source (aka 'external entity')" },
+      "B_06_18": { "choice": "When there is only one entity for a data process model" },
+      "C_06_18": { "choice": "When an entity can exist without the help of another entity", "isCorrect": true },
+      "D_06_18": { "choice": "Where the entity identifier is also the primary key" },
+      "E_06_18": { "choice": "When a child requires attributes from the parent" }
     }
   },
   "06_19": {
     "question": "A data model can do what?",
     "choices": {
-      "A_06_19": {
-        "choice": "Illustrate return-on-investment, break-even point, and economic feasibility",
-        "isCorrect": false
-      },
-      "B_06_19": {
-        "choice": "Be used as a logical data model in analysis and as a physical data model in design",
-        "isCorrect": true
-      },
-      "C_06_19": {
-        "choice": "Only be used with JAD sessions",
-        "isCorrect": false
-      },
-      "D_06_19": {
-        "choice": "Only be used in BPR situations",
-        "isCorrect": false
-      },
-      "E_06_19": {
-        "choice": "Represent actions or processes that occur in the to-be system",
-        "isCorrect": false
-      }
+      "A_06_19": { "choice": "Illustrate return-on-investment, break-even point, and economic feasibility" },
+      "B_06_19": { "choice": "Be used as a logical data model in analysis and as a physical data model in design", "isCorrect": true },
+      "C_06_19": { "choice": "Only be used with JAD sessions" },
+      "D_06_19": { "choice": "Only be used in BPR situations" },
+      "E_06_19": { "choice": "Represent actions or processes that occur in the to-be system" }
     }
   },
   "06_20": {
     "question": "Relationships are some type of information that is captured about entities.",
     "choices": {
-      "A_06_20": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_06_20": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_06_20": { "choice": "True" },
+      "B_06_20": { "choice": "False", "isCorrect": true }
     },
     "explanation": "Information about entities are attributes. Relationships are more like information about the system (i.e. how entities are related)."
   },
   "06_21": {
     "question": "During the analysis phase logical data models are created.",
     "choices": {
-      "A_06_21": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_21": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_21": { "choice": "True", "isCorrect": true },
+      "B_06_21": { "choice": "False" }
     }
   },
   "06_22": {
     "question": "Data modeling is an iterative process.",
     "choices": {
-      "A_06_22": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_22": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_22": { "choice": "True", "isCorrect": true },
+      "B_06_22": { "choice": "False" }
     }
   },
   "06_23": {
     "question": "With an ERD, special symbols are added to show high-level business rules.",
     "choices": {
-      "A_06_23": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_23": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_23": { "choice": "True", "isCorrect": true },
+      "B_06_23": { "choice": "False" }
     }
   },
   "06_24": {
     "question": "ERDs and DFDs are two techniques for data modeling.",
     "choices": {
-      "A_06_24": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_06_24": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_06_24": { "choice": "True" },
+      "B_06_24": { "choice": "False", "isCorrect": true }
     },
     "explanation": "ERD = data modeling<br>DFD = process modeling<br>Not the same thing."
   },
   "06_25": {
     "question": "An illustration of the transformation of data into business value is an ERD.",
     "choices": {
-      "A_06_25": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_06_25": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_06_25": { "choice": "True" },
+      "B_06_25": { "choice": "False", "isCorrect": true }
     }
   },
   "06_26": {
     "question": "In adding attributes to an ERD, which of the following might NOT be a good resource for attributes?",
     "choices": {
-      "A_06_26": {
-        "choice": "Requirements documents",
-        "isCorrect": false
-      },
-      "B_06_26": {
-        "choice": "The system proposal document",
-        "isCorrect": true
-      },
-      "C_06_26": {
-        "choice": "Data flows from DFDs",
-        "isCorrect": false
-      },
-      "D_06_26": {
-        "choice": "Through interviews (what users need for reports and processing)",
-        "isCorrect": false
-      },
-      "E_06_26": {
-        "choice": "From the CASE tool",
-        "isCorrect": false
-      }
+      "A_06_26": { "choice": "Requirements documents" },
+      "B_06_26": { "choice": "The system proposal document", "isCorrect": true },
+      "C_06_26": { "choice": "Data flows from DFDs" },
+      "D_06_26": { "choice": "Through interviews (what users need for reports and processing)" },
+      "E_06_26": { "choice": "From the CASE tool" }
     }
   },
   "06_27": {
     "question": "Anthony is working on the cardinality of doctors and patients in a large urban hospital. With the large number of doctors with varying specialties and patients that may have more than one aliment, he thinks the relationship might be noted as what?",
     "choices": {
-      "A_06_27": {
-        "choice": "1 to many",
-        "isCorrect": false
-      },
-      "B_06_27": {
-        "choice": "Many to many",
-        "isCorrect": true
-      },
-      "C_06_27": {
-        "choice": "1 to 2",
-        "isCorrect": false
-      },
-      "D_06_27": {
-        "choice": "Many to 1",
-        "isCorrect": false
-      },
-      "E_06_27": {
-        "choice": "1 to 1",
-        "isCorrect": false
-      }
+      "A_06_27": { "choice": "1 to many" },
+      "B_06_27": { "choice": "Many to many", "isCorrect": true },
+      "C_06_27": { "choice": "1 to 2" },
+      "D_06_27": { "choice": "Many to 1" },
+      "E_06_27": { "choice": "1 to 1" }
     }
   },
   "06_28": {
     "question": "On an ERD, data elements are grouped in a hierarchical structure that is uniquely identified by number.",
     "choices": {
-      "A_06_28": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_06_28": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_06_28": { "choice": "True" },
+      "B_06_28": { "choice": "False", "isCorrect": true }
     }
   },
   "06_29": {
     "question": "In creating ERD's, which would most likely NOT be a source for entities?",
     "choices": {
-      "A_06_29": {
-        "choice": "Cost / benefit reports",
-        "isCorrect": true
-      },
-      "B_06_29": {
-        "choice": "Data flows",
-        "isCorrect": false
-      },
-      "C_06_29": {
-        "choice": "External entities",
-        "isCorrect": false
-      },
-      "D_06_29": {
-        "choice": "Level 0 DFD diagrams",
-        "isCorrect": false
-      },
-      "E_06_29": {
-        "choice": "Use cases",
-        "isCorrect": false
-      }
+      "A_06_29": { "choice": "Cost / benefit reports", "isCorrect": true },
+      "B_06_29": { "choice": "Data flows" },
+      "C_06_29": { "choice": "External entities" },
+      "D_06_29": { "choice": "Level 0 DFD diagrams" },
+      "E_06_29": { "choice": "Use cases" }
     }
   },
   "06_30": {
     "question": "The three steps in creating an ERD are: (1) identify the entities; (2) identify the attributes; (3) identify the relationships",
     "choices": {
-      "A_06_30": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_30": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_30": { "choice": "True", "isCorrect": true },
+      "B_06_30": { "choice": "False" }
     }
   },
   "06_31": {
     "question": "The first step to building an Entity Relationship Diagram is to do what?",
     "choices": {
-      "A_06_31": {
-        "choice": "Identify data flows from the level 0 DFD diagram",
-        "isCorrect": false
-      },
-      "B_06_31": {
-        "choice": "identify the attributes for each entity",
-        "isCorrect": false
-      },
-      "C_06_31": {
-        "choice": "identify the entities",
-        "isCorrect": true
-      },
-      "D_06_31": {
-        "choice": "identify the processes, data flows and data stores",
-        "isCorrect": false
-      },
-      "E_06_31": {
-        "choice": "draw the relationships between the entities",
-        "isCorrect": false
-      }
+      "A_06_31": { "choice": "Identify data flows from the level 0 DFD diagram" },
+      "B_06_31": { "choice": "identify the attributes for each entity" },
+      "C_06_31": { "choice": "identify the entities", "isCorrect": true },
+      "D_06_31": { "choice": "identify the processes, data flows and data stores" },
+      "E_06_31": { "choice": "draw the relationships between the entities" }
     }
   },
   "06_32": {
     "question": "Data models can be either logical or physical.",
     "choices": {
-      "A_06_32": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_32": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_32": { "choice": "True", "isCorrect": true },
+      "B_06_32": { "choice": "False" }
     }
   },
   "06_33": {
     "question": "The last step in creating basic ERD's is to:",
     "choices": {
-      "A_06_33": {
-        "choice": "Compile them with Java",
-        "isCorrect": false
-      },
-      "B_06_33": {
-        "choice": "Test them with users",
-        "isCorrect": false
-      },
-      "C_06_33": {
-        "choice": "Identify relationships",
-        "isCorrect": true
-      },
-      "D_06_33": {
-        "choice": "Recognize entities",
-        "isCorrect": false
-      },
-      "E_06_33": {
-        "choice": "Define attributes and assign identifiers",
-        "isCorrect": false
-      }
+      "A_06_33": { "choice": "Compile them with Java" },
+      "B_06_33": { "choice": "Test them with users" },
+      "C_06_33": { "choice": "Identify relationships", "isCorrect": true },
+      "D_06_33": { "choice": "Recognize entities" },
+      "E_06_33": { "choice": "Define attributes and assign identifiers" }
     }
   },
   "06_34": {
     "question": "An entity is which of the following?",
     "choices": {
-      "A_06_34": {
-        "choice": "Has cardinality (1:1, 1:N, or M:N)",
-        "isCorrect": false
-      },
-      "B_06_34": {
-        "choice": "Is a person, place or thing",
-        "isCorrect": true
-      },
-      "C_06_34": {
-        "choice": "Is described with a verb phrase",
-        "isCorrect": false
-      },
-      "D_06_34": {
-        "choice": "Shows if it can be null or no null",
-        "isCorrect": false
-      },
-      "E_06_34": {
-        "choice": "Is the association between two related processes",
-        "isCorrect": false
-      }
+      "A_06_34": { "choice": "Has cardinality (1:1, 1:N, or M:N)" },
+      "B_06_34": { "choice": "Is a person, place or thing", "isCorrect": true },
+      "C_06_34": { "choice": "Is described with a verb phrase" },
+      "D_06_34": { "choice": "Shows if it can be null or no null" },
+      "E_06_34": { "choice": "Is the association between two related processes" }
     }
   },
   "06_35": {
     "question": "A data model is a what?",
     "choices": {
-      "A_06_35": {
-        "choice": "The abstract creating of an ideal system transformation",
-        "isCorrect": false
-      },
-      "B_06_35": {
-        "choice": "A formal way of representing the data that are used and created by a business system",
-        "isCorrect": true
-      },
-      "C_06_35": {
-        "choice": "The expanded, thoroughly balanced and normalized use case for a system",
-        "isCorrect": false
-      },
-      "D_06_35": {
-        "choice": "The mathematical model of formulas and logic used in a system",
-        "isCorrect": false
-      },
-      "E_06_35": {
-        "choice": "The model that is produced by extreme programming",
-        "isCorrect": false
-      }
+      "A_06_35": { "choice": "The abstract creating of an ideal system transformation" },
+      "B_06_35": { "choice": "A formal way of representing the data that are used and created by a business system", "isCorrect": true },
+      "C_06_35": { "choice": "The expanded, thoroughly balanced and normalized use case for a system" },
+      "D_06_35": { "choice": "The mathematical model of formulas and logic used in a system" },
+      "E_06_35": { "choice": "The model that is produced by extreme programming" }
     }
   },
   "06_36": {
     "question": "In an entity called STUDENT, you might find attributes of PROFESSOR-ID, Last-Name, First-Name and CLASSROOM.",
     "choices": {
-      "A_06_36": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_06_36": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_06_36": { "choice": "True" },
+      "B_06_36": { "choice": "False", "isCorrect": true }
     },
     "explanation": "A student is likely to have multiple professors and classrooms, so there cannot be a single \"Professsor-ID\" or \"Classroom\" attribute."
   },
   "06_37": {
     "question": "ERD's are data modeling techniques.",
     "choices": {
-      "A_06_37": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_37": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_37": { "choice": "True", "isCorrect": true },
+      "B_06_37": { "choice": "False" }
     }
   },
   "06_38": {
     "question": "What type of process is creating an ERD?",
     "choices": {
-      "A_06_38": {
-        "choice": "Process defined by five steps",
-        "isCorrect": false
-      },
-      "B_06_38": {
-        "choice": "Iterative process",
-        "isCorrect": true
-      },
-      "C_06_38": {
-        "choice": "Well defined process",
-        "isCorrect": false
-      },
-      "D_06_38": {
-        "choice": "User defined process",
-        "isCorrect": false
-      },
-      "E_06_38": {
-        "choice": "Sequential process",
-        "isCorrect": false
-      }
+      "A_06_38": { "choice": "Process defined by five steps" },
+      "B_06_38": { "choice": "Iterative process", "isCorrect": true },
+      "C_06_38": { "choice": "Well defined process" },
+      "D_06_38": { "choice": "User defined process" },
+      "E_06_38": { "choice": "Sequential process" }
     }
   },
   "06_39": {
     "question": "The three major parts of an ERD diagram are what?",
     "choices": {
-      "A_06_39": {
-        "choice": "Relationship, attribute, entity",
-        "isCorrect": true
-      },
-      "B_06_39": {
-        "choice": "Relationship, data flow, entity",
-        "isCorrect": false
-      },
-      "C_06_39": {
-        "choice": "Process, data flow, data store",
-        "isCorrect": false
-      },
-      "D_06_39": {
-        "choice": "Process, entity and relationship",
-        "isCorrect": false
-      },
-      "E_06_39": {
-        "choice": "Attribute, modularity, cardinality",
-        "isCorrect": false
-      }
+      "A_06_39": { "choice": "Relationship, attribute, entity", "isCorrect": true },
+      "B_06_39": { "choice": "Relationship, data flow, entity" },
+      "C_06_39": { "choice": "Process, data flow, data store" },
+      "D_06_39": { "choice": "Process, entity and relationship" },
+      "E_06_39": { "choice": "Attribute, modularity, cardinality" }
     }
   },
   "06_40": {
     "question": "A data model is a formal way of representing the data that are used and created by a business system.",
     "choices": {
-      "A_06_40": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_40": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_40": { "choice": "True", "isCorrect": true },
+      "B_06_40": { "choice": "False" }
     }
   },
   "06_41": {
     "question": "One of the most commonly used techniques for data modeling is ERDs.",
     "choices": {
-      "A_06_41": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_41": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_41": { "choice": "True", "isCorrect": true },
+      "B_06_41": { "choice": "False" }
     }
   },
   "06_42": {
     "question": "One of the first places to start developing Entity Relationship Diagrams is by looking at the level 0 process models (DFD) and the use cases for data flows and data stores.",
     "choices": {
-      "A_06_42": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_42": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_42": { "choice": "True", "isCorrect": true },
+      "B_06_42": { "choice": "False" }
     }
   },
   "06_43": {
     "question": "With an ERD, lines are drawn to show relationships among the data.",
     "choices": {
-      "A_06_43": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_43": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_43": { "choice": "True", "isCorrect": true },
+      "B_06_43": { "choice": "False" }
     }
   },
   "06_44": {
     "question": "Lines on an ERD diagram indicate what?",
     "choices": {
-      "A_06_44": {
-        "choice": "Uniqueness of data items",
-        "isCorrect": false
-      },
-      "B_06_44": {
-        "choice": "Plurality of data items",
-        "isCorrect": false
-      },
-      "C_06_44": {
-        "choice": "Primary keys",
-        "isCorrect": false
-      },
-      "D_06_44": {
-        "choice": "Relationships among the data",
-        "isCorrect": true
-      },
-      "E_06_44": {
-        "choice": "Hierarchies between processes",
-        "isCorrect": false
-      }
+      "A_06_44": { "choice": "Uniqueness of data items" },
+      "B_06_44": { "choice": "Plurality of data items" },
+      "C_06_44": { "choice": "Primary keys" },
+      "D_06_44": { "choice": "Relationships among the data", "isCorrect": true },
+      "E_06_44": { "choice": "Hierarchies between processes" }
     }
   },
   "06_45": {
     "question": "A graphical illustration that shows the information that is created, stored, and used by a business system would be an ERD.",
     "choices": {
-      "A_06_45": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_45": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_45": { "choice": "True", "isCorrect": true },
+      "B_06_45": { "choice": "False" }
     }
   },
   "06_46": {
     "question": "The three steps in creating an ERD are: (1) identify the entities; (2) identify the processes; (3) identify the relationships",
     "choices": {
-      "A_06_46": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_06_46": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_06_46": { "choice": "True" },
+      "B_06_46": { "choice": "False", "isCorrect": true }
     }
   },
   "06_47": {
     "question": "Jack is developing an ERD for a small dental practice office patient record system. The dental practice has three dentists, six hygienists, and many patients. A patient is always assigned to the same dentist for all appointments. In particular, he is working on the relationship between dentists and patients. Should it be which of the following?",
     "choices": {
-      "A_06_47": {
-        "choice": "1 to 1, with a modality of null",
-        "isCorrect": false
-      },
-      "B_06_47": {
-        "choice": "1 to many with a modality of null",
-        "isCorrect": false
-      },
-      "C_06_47": {
-        "choice": "Many to many with a modality of null",
-        "isCorrect": false
-      },
-      "D_06_47": {
-        "choice": "Many to many with a modality of not null",
-        "isCorrect": false
-      },
-      "E_06_47": {
-        "choice": "1 to many with a modality of not null",
-        "isCorrect": true
-      }
+      "A_06_47": { "choice": "1 to 1, with a modality of null" },
+      "B_06_47": { "choice": "1 to many with a modality of null" },
+      "C_06_47": { "choice": "Many to many with a modality of null" },
+      "D_06_47": { "choice": "Many to many with a modality of not null" },
+      "E_06_47": { "choice": "1 to many with a modality of not null", "isCorrect": true }
     }
   },
   "06_48": {
     "question": "The lines that connect the entities are referred to as",
     "choices": {
-      "A_06_48": {
-        "choice": "connectors",
-        "isCorrect": false
-      },
-      "B_06_48": {
-        "choice": "crow's feet",
-        "isCorrect": false
-      },
-      "C_06_48": {
-        "choice": "relationships",
-        "isCorrect": true
-      },
-      "D_06_48": {
-        "choice": "foreign key",
-        "isCorrect": false
-      },
-      "E_06_48": {
-        "choice": "Data flows",
-        "isCorrect": false
-      }
+      "A_06_48": { "choice": "connectors" },
+      "B_06_48": { "choice": "crow's feet" },
+      "C_06_48": { "choice": "relationships", "isCorrect": true },
+      "D_06_48": { "choice": "foreign key" },
+      "E_06_48": { "choice": "Data flows" }
     }
   },
   "06_49": {
     "question": "With an ERD, similar kinds of information are listed together in entities.",
     "choices": {
-      "A_06_49": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_49": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_49": { "choice": "True", "isCorrect": true },
+      "B_06_49": { "choice": "False" }
     }
   },
   "06_50": {
     "question": "Metadata is data about data.",
     "choices": {
-      "A_06_50": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_50": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_50": { "choice": "True", "isCorrect": true },
+      "B_06_50": { "choice": "False" }
     }
   },
   "06_51": {
     "question": "An analyst can read an ERD to discover the individual pieces of information in a system and how they are organized and related to each other.",
     "choices": {
-      "A_06_51": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_51": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_51": { "choice": "True", "isCorrect": true },
+      "B_06_51": { "choice": "False" }
     }
   },
   "06_52": {
     "question": "ERDs are drawn in several levels: Context ERD diagrams; Level 0 ERD diagrams; Level 1 ERD diagrams.",
     "choices": {
-      "A_06_52": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_06_52": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_06_52": { "choice": "True" },
+      "B_06_52": { "choice": "False", "isCorrect": true }
     }
   },
   "06_53": {
     "question": "An entity is described by an action verb.",
     "choices": {
-      "A_06_53": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_06_53": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_06_53": { "choice": "True" },
+      "B_06_53": { "choice": "False", "isCorrect": true }
     },
     "explanation": "Entity is described by a noun. Described by an action verb is a process."
   },
   "06_54": {
     "question": "You have entities of ITEM, SOLD-ITEM, SALE and PAYMENT. Which most likely is NOT a relationship?",
     "choices": {
-      "A_06_54": {
-        "choice": "PAYMENT pays for ITEM",
-        "isCorrect": true
-      },
-      "B_06_54": {
-        "choice": "SALE involves SOLD-ITEM",
-        "isCorrect": false
-      },
-      "C_06_54": {
-        "choice": "SALE is paid by PAYMENT",
-        "isCorrect": false
-      },
-      "D_06_54": {
-        "choice": "ITEM is included in SOLD-ITEM",
-        "isCorrect": false
-      },
-      "E_06_54": {
-        "choice": "PAYMENT pays for SALE",
-        "isCorrect": false
-      }
+      "A_06_54": { "choice": "PAYMENT pays for ITEM", "isCorrect": true },
+      "B_06_54": { "choice": "SALE involves SOLD-ITEM" },
+      "C_06_54": { "choice": "SALE is paid by PAYMENT" },
+      "D_06_54": { "choice": "ITEM is included in SOLD-ITEM" },
+      "E_06_54": { "choice": "PAYMENT pays for SALE" }
     },
     "explanation": "PAYMENT <i>pays for</i> SOLD-ITEM <i>includes</i> ITEM"
   },
   "06_55": {
     "question": "Modality refers to which of the following?",
     "choices": {
-      "A_06_55": {
-        "choice": "Relationships of one-to-one; one-to-many; or many-to-many",
-        "isCorrect": false
-      },
-      "B_06_55": {
-        "choice": "The number of attributes generated by an entity",
-        "isCorrect": false
-      },
-      "C_06_55": {
-        "choice": "Whether the entity has a unique identifier (aka 'primary key') or a concatenated identifier (aka 'composite key')",
-        "isCorrect": false
-      },
-      "D_06_55": {
-        "choice": "The hierarchical structure that was developed in process models applied to data models",
-        "isCorrect": false
-      },
-      "E_06_55": {
-        "choice": "Whether and entity can exist with or without a related instance in the related entity",
-        "isCorrect": true
-      }
+      "A_06_55": { "choice": "Relationships of one-to-one; one-to-many; or many-to-many" },
+      "B_06_55": { "choice": "The number of attributes generated by an entity" },
+      "C_06_55": { "choice": "Whether the entity has a unique identifier (aka 'primary key') or a concatenated identifier (aka 'composite key')" },
+      "D_06_55": { "choice": "The hierarchical structure that was developed in process models applied to data models" },
+      "E_06_55": { "choice": "Whether and entity can exist with or without a related instance in the related entity", "isCorrect": true }
     }
   },
   "06_56": {
     "question": "During the analysis phase, analysts create programming models to represent how the business system will operate.",
     "choices": {
-      "A_06_56": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_06_56": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_06_56": { "choice": "True" },
+      "B_06_56": { "choice": "False", "isCorrect": true }
     }
   },
   "06_57": {
     "question": "Which would NOT likely be an entity on a car insurance ERD?",
     "choices": {
-      "A_06_57": {
-        "choice": "Customer",
-        "isCorrect": false
-      },
-      "B_06_57": {
-        "choice": "Zip code",
-        "isCorrect": true
-      },
-      "C_06_57": {
-        "choice": "Agent",
-        "isCorrect": false
-      },
-      "D_06_57": {
-        "choice": "Policy",
-        "isCorrect": false
-      },
-      "E_06_57": {
-        "choice": "Car",
-        "isCorrect": false
-      }
+      "A_06_57": { "choice": "Customer" },
+      "B_06_57": { "choice": "Zip code", "isCorrect": true },
+      "C_06_57": { "choice": "Agent" },
+      "D_06_57": { "choice": "Policy" },
+      "E_06_57": { "choice": "Car" }
     }
   },
   "06_58": {
     "question": "A(n) _____ entity is an entity with an identifier that describes only the entity.",
     "choices": {
-      "A_06_58": {
-        "choice": "dependent",
-        "isCorrect": false
-      },
-      "B_06_58": {
-        "choice": "non-identifying",
-        "isCorrect": false
-      },
-      "C_06_58": {
-        "choice": "incomplete",
-        "isCorrect": false
-      },
-      "D_06_58": {
-        "choice": "independent",
-        "isCorrect": true
-      },
-      "E_06_58": {
-        "choice": "intersection",
-        "isCorrect": false
-      }
+      "A_06_58": { "choice": "dependent" },
+      "B_06_58": { "choice": "non-identifying" },
+      "C_06_58": { "choice": "incomplete" },
+      "D_06_58": { "choice": "independent", "isCorrect": true },
+      "E_06_58": { "choice": "intersection" }
     }
   },
   "06_59": {
     "question": "ERDs can be quite complex and might have hundreds or thousands of entities.",
     "choices": {
-      "A_06_59": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_59": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_59": { "choice": "True", "isCorrect": true },
+      "B_06_59": { "choice": "False" }
     }
   },
   "06_60": {
     "question": "Information in the data dictionary is called what?",
     "choices": {
-      "A_06_60": {
-        "choice": "Compiled data",
-        "isCorrect": false
-      },
-      "B_06_60": {
-        "choice": "Metadata",
-        "isCorrect": true
-      },
-      "C_06_60": {
-        "choice": "Cached information",
-        "isCorrect": false
-      },
-      "D_06_60": {
-        "choice": "Data repository",
-        "isCorrect": false
-      },
-      "E_06_60": {
-        "choice": "File silo",
-        "isCorrect": false
-      }
+      "A_06_60": { "choice": "Compiled data" },
+      "B_06_60": { "choice": "Metadata", "isCorrect": true },
+      "C_06_60": { "choice": "Cached information" },
+      "D_06_60": { "choice": "Data repository" },
+      "E_06_60": { "choice": "File silo" }
     }
   },
   "06_61": {
     "question": "An ERD is a picture which shows the information that is ________ by a business system.",
     "choices": {
-      "A_06_61": {
-        "choice": "created",
-        "isCorrect": true
-      },
-      "B_06_61": {
-        "choice": "stored",
-        "isCorrect": true
-      },
-      "C_06_61": {
-        "choice": "used",
-        "isCorrect": true
-      }
+      "A_06_61": { "choice": "created", "isCorrect": true },
+      "B_06_61": { "choice": "stored", "isCorrect": true },
+      "C_06_61": { "choice": "used", "isCorrect": true }
     },
     "multiSelect": true
   },
   "06_62": {
     "question": "Relationships are associations between entities.",
     "choices": {
-      "A_06_62": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_62": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_62": { "choice": "True", "isCorrect": true },
+      "B_06_62": { "choice": "False" }
     }
   },
   "06_63": {
     "question": "On an ERD, similar kinds of information are listed together and placed inside boxes called data containers.",
     "choices": {
-      "A_06_63": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_06_63": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_06_63": { "choice": "True" },
+      "B_06_63": { "choice": "False", "isCorrect": true }
     },
     "explanation": "They're called <i>entities</i>."
   },
   "06_64": {
     "question": "In defining the data characteristics of Universal Product Codes, we might describe them as twelve characters made up of digits – numeric only.",
     "choices": {
-      "A_06_64": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_06_64": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_06_64": { "choice": "True", "isCorrect": true },
+      "B_06_64": { "choice": "False" }
     }
   }
 }

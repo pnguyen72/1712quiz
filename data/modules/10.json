@@ -2,1978 +2,859 @@
   "10_01": {
     "question": "Typically, the third step in the user interface design process is what?",
     "choices": {
-      "A_10_01": {
-        "choice": "Design interface standards",
-        "isCorrect": true
-      },
-      "B_10_01": {
-        "choice": "Creating an interface design prototype",
-        "isCorrect": false
-      },
-      "C_10_01": {
-        "choice": "Do an interface evaluation",
-        "isCorrect": false
-      },
-      "D_10_01": {
-        "choice": "Examine DFDs and use cases to develop use scenarios",
-        "isCorrect": false
-      },
-      "E_10_01": {
-        "choice": "Develop the interface structure diagram (ISD)",
-        "isCorrect": false
-      }
+      "A_10_01": { "choice": "Design interface standards", "isCorrect": true },
+      "B_10_01": { "choice": "Creating an interface design prototype" },
+      "C_10_01": { "choice": "Do an interface evaluation" },
+      "D_10_01": { "choice": "Examine DFDs and use cases to develop use scenarios" },
+      "E_10_01": { "choice": "Develop the interface structure diagram (ISD)" }
     },
     "explanation": "The steps are<br>1. understanding the users (creating personas and use scenarios)<br>2. organizing the interface<br>3. defining standards<br>4. developing prototypes (e.g. wireframes, storyboards)<br>5. evaluation/testing."
   },
   "10_02": {
     "question": "Generally, headings on a paper form should be with Arial size 24 bold; the main text should be Times New Roman size 12. Subheadings should be Tahoma size 14, bold and italic and underlined. This makes a form easier to read and to delineate sections.",
     "choices": {
-      "A_10_02": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_10_02": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_10_02": { "choice": "True" },
+      "B_10_02": { "choice": "False", "isCorrect": true }
     },
     "explanation": "Thorsten is shivering"
   },
   "10_03": {
     "question": "At least one study suggests that some variation be appropriate in user interface design as the study suggests that when all forms tend to look the same, it can be confusing to some users.",
     "choices": {
-      "A_10_03": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_10_03": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_10_03": { "choice": "True", "isCorrect": true },
+      "B_10_03": { "choice": "False" }
     },
     "explanation": "It's true that consistency is good. But the textbook mentions <u>one</u> study that somewhat disagrees, because it found that having <u>some</u> variations is actually good.<br><br><i>\"When reports and forms are similar except for minor changes in titles, users sometimes have difficulty perceiving the differences. Designers should make the reports and forms similar, but give them some distinctive elements (e.g., color, size of titles) that help users distinguish them.\"</i> <b>(p. 258)</b>"
   },
   "10_04": {
     "question": "Omar has designed a paper form using 'sans serif' fonts and for his screen (or web) forms he has used 'serif' fonts. He is exercising good user interface design practices.",
     "choices": {
-      "A_10_04": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_10_04": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_10_04": { "choice": "True" },
+      "B_10_04": { "choice": "False", "isCorrect": true }
     }
   },
   "10_05": {
     "question": "Typically, the first step in the user interface design process is what?",
     "choices": {
-      "A_10_05": {
-        "choice": "Design interface standards",
-        "isCorrect": false
-      },
-      "B_10_05": {
-        "choice": "Creating an interface design prototype",
-        "isCorrect": false
-      },
-      "C_10_05": {
-        "choice": "Do an interface evaluation",
-        "isCorrect": false
-      },
-      "D_10_05": {
-        "choice": "Examine DFDs and use cases to develop use scenarios",
-        "isCorrect": true
-      },
-      "E_10_05": {
-        "choice": "Develop the interface structure diagram (ISD)",
-        "isCorrect": false
-      }
+      "A_10_05": { "choice": "Design interface standards" },
+      "B_10_05": { "choice": "Creating an interface design prototype" },
+      "C_10_05": { "choice": "Do an interface evaluation" },
+      "D_10_05": { "choice": "Examine DFDs and use cases to develop use scenarios", "isCorrect": true },
+      "E_10_05": { "choice": "Develop the interface structure diagram (ISD)" }
     },
     "explanation": "The first step is to understand the users. This is done by examining the DFDs and use cases developed in the analysis phase to clarify the user audience. Then identified user groups can be represented with personals and so forth. <b>(p. 259)</b>"
   },
   "10_06": {
     "question": "Which of the following is NOT a common Interface Evaluation technique?",
     "choices": {
-      "A_10_06": {
-        "choice": "Interactive evaluation",
-        "isCorrect": false
-      },
-      "B_10_06": {
-        "choice": "Walk-through evaluation",
-        "isCorrect": false
-      },
-      "C_10_06": {
-        "choice": "Heuristic evaluation",
-        "isCorrect": false
-      },
-      "D_10_06": {
-        "choice": "Use scenario normalization",
-        "isCorrect": true
-      },
-      "E_10_06": {
-        "choice": "Formal usability testing",
-        "isCorrect": false
-      }
+      "A_10_06": { "choice": "Interactive evaluation" },
+      "B_10_06": { "choice": "Walk-through evaluation" },
+      "C_10_06": { "choice": "Heuristic evaluation" },
+      "D_10_06": { "choice": "Use scenario normalization", "isCorrect": true },
+      "E_10_06": { "choice": "Formal usability testing" }
     },
     "explanation": "\"Use scenario normalization\" is made up"
   },
   "10_07": {
     "question": "Interface evaluations almost always do what?",
     "choices": {
-      "A_10_07": {
-        "choice": "Identify improvements",
-        "isCorrect": true
-      },
-      "B_10_07": {
-        "choice": "Are conducted with other analysts in a structured walkthrough",
-        "isCorrect": false
-      },
-      "C_10_07": {
-        "choice": "Find coding errors",
-        "isCorrect": false
-      },
-      "D_10_07": {
-        "choice": "Are part of the training and implementation process",
-        "isCorrect": false
-      },
-      "E_10_07": {
-        "choice": "Cause additional scope creep in the project",
-        "isCorrect": false
-      }
+      "A_10_07": { "choice": "Identify improvements", "isCorrect": true },
+      "B_10_07": { "choice": "Are conducted with other analysts in a structured walkthrough" },
+      "C_10_07": { "choice": "Find coding errors" },
+      "D_10_07": { "choice": "Are part of the training and implementation process" },
+      "E_10_07": { "choice": "Cause additional scope creep in the project" }
     }
   },
   "10_08": {
     "question": "Compare data against a data base (or file) to ensure that they are correct.",
     "choices": {
-      "A_10_08": {
-        "choice": "Completeness check",
-        "isCorrect": false
-      },
-      "B_10_08": {
-        "choice": "Format check",
-        "isCorrect": false
-      },
-      "C_10_08": {
-        "choice": "Range check",
-        "isCorrect": false
-      },
-      "D_10_08": {
-        "choice": "Consistency checks",
-        "isCorrect": false
-      },
-      "E_10_08": {
-        "choice": "Database checks",
-        "isCorrect": true
-      }
+      "A_10_08": { "choice": "Completeness check" },
+      "B_10_08": { "choice": "Format check" },
+      "C_10_08": { "choice": "Range check" },
+      "D_10_08": { "choice": "Consistency checks" },
+      "E_10_08": { "choice": "Database checks", "isCorrect": true }
     }
   },
   "10_09": {
     "question": "Seldom or never used.",
     "choices": {
-      "A_10_09": {
-        "choice": "Error message",
-        "isCorrect": false
-      },
-      "B_10_09": {
-        "choice": "Confirmation message",
-        "isCorrect": false
-      },
-      "C_10_09": {
-        "choice": "Acknowledgment message",
-        "isCorrect": true
-      },
-      "D_10_09": {
-        "choice": "Delay message",
-        "isCorrect": false
-      },
-      "E_10_09": {
-        "choice": "Help message",
-        "isCorrect": false
-      }
+      "A_10_09": { "choice": "Error message" },
+      "B_10_09": { "choice": "Confirmation message" },
+      "C_10_09": { "choice": "Acknowledgment message", "isCorrect": true },
+      "D_10_09": { "choice": "Delay message" },
+      "E_10_09": { "choice": "Help message" }
     },
     "explanation": "Acknowledgement messages exist solely to confirm that a user has done something correctly. They're almost never used, because after getting used to the system, the user should already know that they did that thing right."
   },
   "10_10": {
     "question": "Which of the following is NOT a suggestion for preventing mistakes?",
     "choices": {
-      "A_10_10": {
-        "choice": "Label commands and actions appropriately",
-        "isCorrect": false
-      },
-      "B_10_10": {
-        "choice": "Place menu items in alphabetical order",
-        "isCorrect": true
-      },
-      "C_10_10": {
-        "choice": "Limiting choices",
-        "isCorrect": false
-      },
-      "D_10_10": {
-        "choice": "Gray-out commands that cannot be used",
-        "isCorrect": false
-      },
-      "E_10_10": {
-        "choice": "Create secondary menus when there are many similar choices on a menu",
-        "isCorrect": false
-      }
+      "A_10_10": { "choice": "Label commands and actions appropriately" },
+      "B_10_10": { "choice": "Place menu items in alphabetical order", "isCorrect": true },
+      "C_10_10": { "choice": "Limiting choices" },
+      "D_10_10": { "choice": "Gray-out commands that cannot be used" },
+      "E_10_10": { "choice": "Create secondary menus when there are many similar choices on a menu" }
     },
     "explanation": "<i>\"When there are many similar choices on a menu, consider creating a second level of menu\"</i> <b>(p. 272)</b>"
   },
   "10_11": {
     "question": "This defines the basic components of the interface and how they work together to provide functionality to users.",
     "choices": {
-      "A_10_11": {
-        "choice": "Use Scenario Design",
-        "isCorrect": false
-      },
-      "B_10_11": {
-        "choice": "Interface Standards Design",
-        "isCorrect": false
-      },
-      "C_10_11": {
-        "choice": "Interface Metaphor",
-        "isCorrect": false
-      },
-      "D_10_11": {
-        "choice": "Interface Structure Design",
-        "isCorrect": true
-      },
-      "E_10_11": {
-        "choice": "Interface Template Design",
-        "isCorrect": false
-      }
+      "A_10_11": { "choice": "Use Scenario Design" },
+      "B_10_11": { "choice": "Interface Standards Design" },
+      "C_10_11": { "choice": "Interface Metaphor" },
+      "D_10_11": { "choice": "Interface Structure Design", "isCorrect": true },
+      "E_10_11": { "choice": "Interface Template Design" }
     }
   },
   "10_12": {
     "question": "Displays selected item in one-line box that opens to reveal list of choices.",
     "choices": {
-      "A_10_12": {
-        "choice": "Check box selection list",
-        "isCorrect": false
-      },
-      "B_10_12": {
-        "choice": "Radio button selection list",
-        "isCorrect": false
-      },
-      "C_10_12": {
-        "choice": "On-screen selection list",
-        "isCorrect": false
-      },
-      "D_10_12": {
-        "choice": "Drop-down selection list",
-        "isCorrect": true
-      },
-      "E_10_12": {
-        "choice": "Combo box selection list",
-        "isCorrect": false
-      }
+      "A_10_12": { "choice": "Check box selection list" },
+      "B_10_12": { "choice": "Radio button selection list" },
+      "C_10_12": { "choice": "On-screen selection list" },
+      "D_10_12": { "choice": "Drop-down selection list", "isCorrect": true },
+      "E_10_12": { "choice": "Combo box selection list" }
     }
   },
   "10_13": {
     "question": "In Use Scenario Development, the goal is:",
     "choices": {
-      "A_10_13": {
-        "choice": "To describe all possible use scenarios within a use case",
-        "isCorrect": false
-      },
-      "B_10_13": {
-        "choice": "To describe the most commonly occurring use scenarios",
-        "isCorrect": true
-      },
-      "C_10_13": {
-        "choice": "To accurately model all possible DFDs",
-        "isCorrect": false
-      },
-      "D_10_13": {
-        "choice": "To give complex and complete narrative descriptions of all scenarios",
-        "isCorrect": false
-      },
-      "E_10_13": {
-        "choice": "To effectively model all data flows and data models",
-        "isCorrect": false
-      }
+      "A_10_13": { "choice": "To describe all possible use scenarios within a use case" },
+      "B_10_13": { "choice": "To describe the most commonly occurring use scenarios", "isCorrect": true },
+      "C_10_13": { "choice": "To accurately model all possible DFDs" },
+      "D_10_13": { "choice": "To give complex and complete narrative descriptions of all scenarios" },
+      "E_10_13": { "choice": "To effectively model all data flows and data models" }
     }
   },
   "10_14": {
     "question": "This output is poor at helping users recognize precise numeric values and should be replaced by tables when precision is important.",
     "choices": {
-      "A_10_14": {
-        "choice": "Detail report",
-        "isCorrect": false
-      },
-      "B_10_14": {
-        "choice": "Summary report",
-        "isCorrect": false
-      },
-      "C_10_14": {
-        "choice": "Graphs",
-        "isCorrect": true
-      },
-      "D_10_14": {
-        "choice": "Turnaround document",
-        "isCorrect": false
-      },
-      "E_10_14": {
-        "choice": "None are poor",
-        "isCorrect": false
-      }
+      "A_10_14": { "choice": "Detail report" },
+      "B_10_14": { "choice": "Summary report" },
+      "C_10_14": { "choice": "Graphs", "isCorrect": true },
+      "D_10_14": { "choice": "Turnaround document" },
+      "E_10_14": { "choice": "None are poor" }
     }
   },
   "10_15": {
     "question": "When implementing the 'minimize user effort' factor, most interface designers follow what rule?",
     "choices": {
-      "A_10_15": {
-        "choice": "Two-clicks rule",
-        "isCorrect": false
-      },
-      "B_10_15": {
-        "choice": "Three-clicks rule",
-        "isCorrect": true
-      },
-      "C_10_15": {
-        "choice": "Four-clicks rule",
-        "isCorrect": false
-      },
-      "D_10_15": {
-        "choice": "User Experience rule",
-        "isCorrect": false
-      },
-      "E_10_15": {
-        "choice": "The menu option rule",
-        "isCorrect": false
-      }
+      "A_10_15": { "choice": "Two-clicks rule" },
+      "B_10_15": { "choice": "Three-clicks rule", "isCorrect": true },
+      "C_10_15": { "choice": "Four-clicks rule" },
+      "D_10_15": { "choice": "User Experience rule" },
+      "E_10_15": { "choice": "The menu option rule" }
     },
     "explanation": "Users should be able to go from the start or main menu of a system to the info/action they want in no more than 3 mouse clicks or 3 keystrokes. <b>(p. 258)</b>"
   },
   "10_16": {
     "question": "Approximately what percent of men are color blind (and thus improper use of color can impair their ability to read information)",
     "choices": {
-      "A_10_16": {
-        "choice": "5%",
-        "isCorrect": false
-      },
-      "B_10_16": {
-        "choice": "10%",
-        "isCorrect": true
-      },
-      "C_10_16": {
-        "choice": "15%",
-        "isCorrect": false
-      },
-      "D_10_16": {
-        "choice": "20%",
-        "isCorrect": false
-      },
-      "E_10_16": {
-        "choice": "More than 20%",
-        "isCorrect": false
-      }
+      "A_10_16": { "choice": "5%" },
+      "B_10_16": { "choice": "10%", "isCorrect": true },
+      "C_10_16": { "choice": "15%" },
+      "D_10_16": { "choice": "20%" },
+      "E_10_16": { "choice": "More than 20%" }
     }
   },
   "10_17": {
     "question": "This is used when an extra digit is added to a coded field to make sure it the entered data is correct (like Social Security numbers).",
     "choices": {
-      "A_10_17": {
-        "choice": "Completeness check",
-        "isCorrect": false
-      },
-      "B_10_17": {
-        "choice": "Format check",
-        "isCorrect": false
-      },
-      "C_10_17": {
-        "choice": "Range check",
-        "isCorrect": false
-      },
-      "D_10_17": {
-        "choice": "Check digit check",
-        "isCorrect": true
-      },
-      "E_10_17": {
-        "choice": "Consistency check",
-        "isCorrect": false
-      }
+      "A_10_17": { "choice": "Completeness check" },
+      "B_10_17": { "choice": "Format check" },
+      "C_10_17": { "choice": "Range check" },
+      "D_10_17": { "choice": "Check digit check", "isCorrect": true },
+      "E_10_17": { "choice": "Consistency check" }
     }
   },
   "10_18": {
     "question": "Forms should have version numbers so that users, analysts and programmers can identify outdated materials.",
     "choices": {
-      "A_10_18": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_10_18": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_10_18": { "choice": "True", "isCorrect": true },
+      "B_10_18": { "choice": "False" }
     }
   },
   "10_19": {
     "question": "This is an outline of the steps that the users perform to accomplish some part of their work.",
     "choices": {
-      "A_10_19": {
-        "choice": "Step walkthrough",
-        "isCorrect": false
-      },
-      "B_10_19": {
-        "choice": "User design flow",
-        "isCorrect": false
-      },
-      "C_10_19": {
-        "choice": "Use scenario",
-        "isCorrect": true
-      },
-      "D_10_19": {
-        "choice": "Process model",
-        "isCorrect": false
-      },
-      "E_10_19": {
-        "choice": "Layout verification",
-        "isCorrect": false
-      }
+      "A_10_19": { "choice": "Step walkthrough" },
+      "B_10_19": { "choice": "User design flow" },
+      "C_10_19": { "choice": "Use scenario", "isCorrect": true },
+      "D_10_19": { "choice": "Process model" },
+      "E_10_19": { "choice": "Layout verification" }
     },
     "explanation": "\"Step walkthrough\" is not a thing. There is \"walkthrough evaluation\", which is a UI evaluation/testing technique, but it's unrelated."
   },
   "10_20": {
     "question": "Informs the user that the computer system is working properly to perform a task that may take several seconds.",
     "choices": {
-      "A_10_20": {
-        "choice": "Error message",
-        "isCorrect": false
-      },
-      "B_10_20": {
-        "choice": "Confirmation message",
-        "isCorrect": false
-      },
-      "C_10_20": {
-        "choice": "Acknowledgment message",
-        "isCorrect": false
-      },
-      "D_10_20": {
-        "choice": "Delay message",
-        "isCorrect": true
-      },
-      "E_10_20": {
-        "choice": "Help message",
-        "isCorrect": false
-      }
+      "A_10_20": { "choice": "Error message" },
+      "B_10_20": { "choice": "Confirmation message" },
+      "C_10_20": { "choice": "Acknowledgment message" },
+      "D_10_20": { "choice": "Delay message", "isCorrect": true },
+      "E_10_20": { "choice": "Help message" }
     }
   },
   "10_21": {
     "question": "Informs the user that he or she has attempted to do something to which the system cannot respond.",
     "choices": {
-      "A_10_21": {
-        "choice": "Error message",
-        "isCorrect": true
-      },
-      "B_10_21": {
-        "choice": "Confirmation message",
-        "isCorrect": false
-      },
-      "C_10_21": {
-        "choice": "Acknowledgment message",
-        "isCorrect": false
-      },
-      "D_10_21": {
-        "choice": "Delay message",
-        "isCorrect": false
-      },
-      "E_10_21": {
-        "choice": "Help message",
-        "isCorrect": false
-      }
+      "A_10_21": { "choice": "Error message", "isCorrect": true },
+      "B_10_21": { "choice": "Confirmation message" },
+      "C_10_21": { "choice": "Acknowledgment message" },
+      "D_10_21": { "choice": "Delay message" },
+      "E_10_21": { "choice": "Help message" }
     }
   },
   "10_22": {
     "question": "Bob is designing input screens for a re-designed system for the shipping and inventory department. For order forms, he puts Zip code first (as the database will take the zip code and look up the city and state); for receiving forms, he puts them in the order of city, then state, then zip code. His design choices will help experienced users be more productive.",
     "choices": {
-      "A_10_22": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_10_22": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_10_22": { "choice": "True" },
+      "B_10_22": { "choice": "False", "isCorrect": true }
     }
   },
   "10_23": {
     "question": "Bias can be introduced into a report by the way in which lists of data are sorted.",
     "choices": {
-      "A_10_23": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_10_23": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_10_23": { "choice": "True", "isCorrect": true },
+      "B_10_23": { "choice": "False" }
     }
   },
   "10_24": {
     "question": "Asks the user to verify that he or she really wants to perform the action selected.",
     "choices": {
-      "A_10_24": {
-        "choice": "Error message",
-        "isCorrect": false
-      },
-      "B_10_24": {
-        "choice": "Confirmation message",
-        "isCorrect": true
-      },
-      "C_10_24": {
-        "choice": "Acknowledgment message",
-        "isCorrect": false
-      },
-      "D_10_24": {
-        "choice": "Delay message",
-        "isCorrect": false
-      },
-      "E_10_24": {
-        "choice": "Help message",
-        "isCorrect": false
-      }
+      "A_10_24": { "choice": "Error message" },
+      "B_10_24": { "choice": "Confirmation message", "isCorrect": true },
+      "C_10_24": { "choice": "Acknowledgment message" },
+      "D_10_24": { "choice": "Delay message" },
+      "E_10_24": { "choice": "Help message" }
     }
   },
   "10_25": {
     "question": "The objective of an interface evaluation is what?",
     "choices": {
-      "A_10_25": {
-        "choice": "To measure the processing speed of an interface design",
-        "isCorrect": false
-      },
-      "B_10_25": {
-        "choice": "To determine the database processing requirements for an interface",
-        "isCorrect": false
-      },
-      "C_10_25": {
-        "choice": "To understand how to improve the interface design",
-        "isCorrect": true
-      },
-      "D_10_25": {
-        "choice": "To get users input on colors, menu names and flexibility",
-        "isCorrect": false
-      },
-      "E_10_25": {
-        "choice": "To determine if all use cases and ERDs have been built into the interface",
-        "isCorrect": false
-      }
+      "A_10_25": { "choice": "To measure the processing speed of an interface design" },
+      "B_10_25": { "choice": "To determine the database processing requirements for an interface" },
+      "C_10_25": { "choice": "To understand how to improve the interface design", "isCorrect": true },
+      "D_10_25": { "choice": "To get users input on colors, menu names and flexibility" },
+      "E_10_25": { "choice": "To determine if all use cases and ERDs have been built into the interface" }
     }
   },
   "10_26": {
     "question": "Used as a shortcut for experienced Users.",
     "choices": {
-      "A_10_26": {
-        "choice": "Up-down numeric control",
-        "isCorrect": false
-      },
-      "B_10_26": {
-        "choice": "Radio button selection list",
-        "isCorrect": false
-      },
-      "C_10_26": {
-        "choice": "On-screen selection list",
-        "isCorrect": false
-      },
-      "D_10_26": {
-        "choice": "Drop-down selection list",
-        "isCorrect": false
-      },
-      "E_10_26": {
-        "choice": "Combo box selection list",
-        "isCorrect": true
-      }
+      "A_10_26": { "choice": "Up-down numeric control" },
+      "B_10_26": { "choice": "Radio button selection list" },
+      "C_10_26": { "choice": "On-screen selection list" },
+      "D_10_26": { "choice": "Drop-down selection list" },
+      "E_10_26": { "choice": "Combo box selection list", "isCorrect": true }
     },
     "explanation": "Combo boxes are like drop-down menus, but also allow users to manually type in their selection. As typing in the selection saves on having to scroll, it's considered a shortcut for experienced users."
   },
   "10_27": {
     "question": "User experience refers to minimizing the number of clicks or commands to go from one field to another.",
     "choices": {
-      "A_10_27": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_10_27": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_10_27": { "choice": "True" },
+      "B_10_27": { "choice": "False", "isCorrect": true }
     },
     "explanation": "While the textbook only offhandedly mentions user experience, it mentions UX is <i>\"where users’ feelings, motivations and values are considered as well as efficiency, effectiveness and satisfaction.\"</i> (<b>p.  269</b>)<br><br>Minimizing clicks is part of an efficient UI design, but it's only <i>part</i> of the UX, not the whole thing."
   },
   "10_28": {
     "question": "Which is NOT true about the content awareness design principle?",
     "choices": {
-      "A_10_28": {
-        "choice": "A date of 8/6/09 will be understood internationally",
-        "isCorrect": true
-      },
-      "B_10_28": {
-        "choice": "Drawing boxes around related items (like name / address / city / state / zip) will help users",
-        "isCorrect": false
-      },
-      "C_10_28": {
-        "choice": "Field labels should be fairly short, yet with long enough so that users can not be confused",
-        "isCorrect": false
-      },
-      "D_10_28": {
-        "choice": "Input fields should follow a logical progression that is familiar to users",
-        "isCorrect": false
-      },
-      "E_10_28": {
-        "choice": "All printed forms should have version numbers for better control",
-        "isCorrect": false
-      }
+      "A_10_28": { "choice": "A date of 8/6/09 will be understood internationally", "isCorrect": true },
+      "B_10_28": { "choice": "Drawing boxes around related items (like name / address / city / state / zip) will help users" },
+      "C_10_28": { "choice": "Field labels should be fairly short, yet with long enough so that users can not be confused" },
+      "D_10_28": { "choice": "Input fields should follow a logical progression that is familiar to users" },
+      "E_10_28": { "choice": "All printed forms should have version numbers for better control" }
     }
   },
   "10_29": {
     "question": "The following is used as a second-level menu, often from a menu bar.",
     "choices": {
-      "A_10_29": {
-        "choice": "Menu bar",
-        "isCorrect": false
-      },
-      "B_10_29": {
-        "choice": "Drop-down menu",
-        "isCorrect": true
-      },
-      "C_10_29": {
-        "choice": "Hyperlink menu",
-        "isCorrect": false
-      },
-      "D_10_29": {
-        "choice": "Pop-up menu",
-        "isCorrect": false
-      },
-      "E_10_29": {
-        "choice": "Tab menu",
-        "isCorrect": false
-      }
+      "A_10_29": { "choice": "Menu bar" },
+      "B_10_29": { "choice": "Drop-down menu", "isCorrect": true },
+      "C_10_29": { "choice": "Hyperlink menu" },
+      "D_10_29": { "choice": "Pop-up menu" },
+      "E_10_29": { "choice": "Tab menu" }
     }
   },
   "10_30": {
     "question": "When designing navigational controls, which is NOT commonly assumed?",
     "choices": {
-      "A_10_30": {
-        "choice": "That users have not read the manual",
-        "isCorrect": false
-      },
-      "B_10_30": {
-        "choice": "That users have not attended training",
-        "isCorrect": false
-      },
-      "C_10_30": {
-        "choice": "That users do not have help readily at hand",
-        "isCorrect": false
-      },
-      "D_10_30": {
-        "choice": "That users have knowledge of the system and the interface",
-        "isCorrect": true
-      },
-      "E_10_30": {
-        "choice": "That users have not read the documentation",
-        "isCorrect": false
-      }
+      "A_10_30": { "choice": "That users have not read the manual" },
+      "B_10_30": { "choice": "That users have not attended training" },
+      "C_10_30": { "choice": "That users do not have help readily at hand" },
+      "D_10_30": { "choice": "That users have knowledge of the system and the interface", "isCorrect": true },
+      "E_10_30": { "choice": "That users have not read the documentation" }
     }
   },
   "10_31": {
     "question": "Space is generally at a premium on forms and reports, thus squeezing information onto forms is considered a wise business decision.",
     "choices": {
-      "A_10_31": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_10_31": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_10_31": { "choice": "True" },
+      "B_10_31": { "choice": "False", "isCorrect": true }
     }
   },
   "10_32": {
     "question": "Presents a list of choices in a box.",
     "choices": {
-      "A_10_32": {
-        "choice": "Check box selection list",
-        "isCorrect": false
-      },
-      "B_10_32": {
-        "choice": "Radio button selection list",
-        "isCorrect": false
-      },
-      "C_10_32": {
-        "choice": "On-screen selection list",
-        "isCorrect": true
-      },
-      "D_10_32": {
-        "choice": "Drop-down selection list",
-        "isCorrect": false
-      },
-      "E_10_32": {
-        "choice": "Combo box selection list",
-        "isCorrect": false
-      }
+      "A_10_32": { "choice": "Check box selection list" },
+      "B_10_32": { "choice": "Radio button selection list" },
+      "C_10_32": { "choice": "On-screen selection list", "isCorrect": true },
+      "D_10_32": { "choice": "Drop-down selection list" },
+      "E_10_32": { "choice": "Combo box selection list" }
     },
     "explanation": "<a href=\"https://imgur.com/a/x6yZ1Lu\" target=\"_blank\">what's an on-screen selection list?</a>"
   },
   "10_33": {
     "question": "Jamal is creating a user interface. He wants what he calls an 'oops' button on every screen and form (or an 'undo' button). This is a good design consideration.",
     "choices": {
-      "A_10_33": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_10_33": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_10_33": { "choice": "True", "isCorrect": true },
+      "B_10_33": { "choice": "False" }
     }
   },
   "10_34": {
     "question": "Used when user does something that is not permitted or not possible.",
     "choices": {
-      "A_10_34": {
-        "choice": "Error message",
-        "isCorrect": true
-      },
-      "B_10_34": {
-        "choice": "Confirmation message",
-        "isCorrect": false
-      },
-      "C_10_34": {
-        "choice": "Acknowledgment message",
-        "isCorrect": false
-      },
-      "D_10_34": {
-        "choice": "Delay message",
-        "isCorrect": false
-      },
-      "E_10_34": {
-        "choice": "Help message",
-        "isCorrect": false
-      }
+      "A_10_34": { "choice": "Error message", "isCorrect": true },
+      "B_10_34": { "choice": "Confirmation message" },
+      "C_10_34": { "choice": "Acknowledgment message" },
+      "D_10_34": { "choice": "Delay message" },
+      "E_10_34": { "choice": "Help message" }
     }
   },
   "10_35": {
     "question": "Used when user selects a potentially dangerous choice, such as deleting a file.",
     "choices": {
-      "A_10_35": {
-        "choice": "Error message",
-        "isCorrect": false
-      },
-      "B_10_35": {
-        "choice": "Confirmation message",
-        "isCorrect": true
-      },
-      "C_10_35": {
-        "choice": "Acknowledgment message",
-        "isCorrect": false
-      },
-      "D_10_35": {
-        "choice": "Delay message",
-        "isCorrect": false
-      },
-      "E_10_35": {
-        "choice": "Help message",
-        "isCorrect": false
-      }
+      "A_10_35": { "choice": "Error message" },
+      "B_10_35": { "choice": "Confirmation message", "isCorrect": true },
+      "C_10_35": { "choice": "Acknowledgment message" },
+      "D_10_35": { "choice": "Delay message" },
+      "E_10_35": { "choice": "Help message" }
     },
     "explanation": "Deleting a file isn't necessarily an error. A help message doesn't apply to this context. A delay message also doesn't apply to this context. An acknowledgement message doesn't give a user a choice and just informs them that something occur. This leaves the confirmation message which asks the user for a choice/confirmation. That's why Confirmation Message is the right answer for this question."
   },
   "10_36": {
     "question": "The following is used as a main menu for a Web-based system.",
     "choices": {
-      "A_10_36": {
-        "choice": "Menu bar",
-        "isCorrect": false
-      },
-      "B_10_36": {
-        "choice": "Drop-down menu",
-        "isCorrect": false
-      },
-      "C_10_36": {
-        "choice": "Hyperlink menu",
-        "isCorrect": true
-      },
-      "D_10_36": {
-        "choice": "Pop-up menu",
-        "isCorrect": false
-      },
-      "E_10_36": {
-        "choice": "Tab menu",
-        "isCorrect": false
-      }
+      "A_10_36": { "choice": "Menu bar" },
+      "B_10_36": { "choice": "Drop-down menu" },
+      "C_10_36": { "choice": "Hyperlink menu", "isCorrect": true },
+      "D_10_36": { "choice": "Pop-up menu" },
+      "E_10_36": { "choice": "Tab menu" }
     }
   },
   "10_37": {
     "question": "Ensure that combinations of data are valid.",
     "choices": {
-      "A_10_37": {
-        "choice": "Completeness check",
-        "isCorrect": false
-      },
-      "B_10_37": {
-        "choice": "Format check",
-        "isCorrect": false
-      },
-      "C_10_37": {
-        "choice": "Range check",
-        "isCorrect": false
-      },
-      "D_10_37": {
-        "choice": "Consistency checks",
-        "isCorrect": true
-      },
-      "E_10_37": {
-        "choice": "Database checks",
-        "isCorrect": false
-      }
+      "A_10_37": { "choice": "Completeness check" },
+      "B_10_37": { "choice": "Format check" },
+      "C_10_37": { "choice": "Range check" },
+      "D_10_37": { "choice": "Consistency checks", "isCorrect": true },
+      "E_10_37": { "choice": "Database checks" }
     },
     "explanation": "Consistency checks ensure that entries are valid and aligned with defined rules.<br>For example, someone’s birth year should precede the year in which they were married."
   },
   "10_38": {
     "question": "Used seldom or never - only if there is insufficient room for check boxes or radio buttons",
     "choices": {
-      "A_10_38": {
-        "choice": "Up-down numeric control",
-        "isCorrect": false
-      },
-      "B_10_38": {
-        "choice": "Half-sized radio button selection list",
-        "isCorrect": false
-      },
-      "C_10_38": {
-        "choice": "On-screen selection list",
-        "isCorrect": true
-      },
-      "D_10_38": {
-        "choice": "Drop-down selection list",
-        "isCorrect": false
-      },
-      "E_10_38": {
-        "choice": "Combo box selection list",
-        "isCorrect": false
-      }
+      "A_10_38": { "choice": "Up-down numeric control" },
+      "B_10_38": { "choice": "Half-sized radio button selection list" },
+      "C_10_38": { "choice": "On-screen selection list", "isCorrect": true },
+      "D_10_38": { "choice": "Drop-down selection list" },
+      "E_10_38": { "choice": "Combo box selection list" }
     },
     "explanation": "On-screen selection lists presents a list of choices in a box. This should rarely be used - only if there is insufficient room for check boxes or radio buttons bc it can only permit one answer and therefore is an uglier version of the former options.<br><b>(figure 8-19, p. 281)</b>"
   },
   "10_39": {
     "question": "The first principle of designing navigation controls is what?",
     "choices": {
-      "A_10_39": {
-        "choice": "It was tough to build, it should be tough to use",
-        "isCorrect": false
-      },
-      "B_10_39": {
-        "choice": "Users have attended training",
-        "isCorrect": false
-      },
-      "C_10_39": {
-        "choice": "To prevent users from making mistakes",
-        "isCorrect": true
-      },
-      "D_10_39": {
-        "choice": "See that all screens can be reached in the four-click rule",
-        "isCorrect": false
-      },
-      "E_10_39": {
-        "choice": "Build appropriate icons (like a blank page for new document or form)",
-        "isCorrect": false
-      }
+      "A_10_39": { "choice": "It was tough to build, it should be tough to use" },
+      "B_10_39": { "choice": "Users have attended training" },
+      "C_10_39": { "choice": "To prevent users from making mistakes", "isCorrect": true },
+      "D_10_39": { "choice": "See that all screens can be reached in the four-click rule" },
+      "E_10_39": { "choice": "Build appropriate icons (like a blank page for new document or form)" }
     }
   },
   "10_40": {
     "question": "Used when only one item can be selected from a set of mutually exclusive items.",
     "choices": {
-      "A_10_40": {
-        "choice": "Check box selection list",
-        "isCorrect": false
-      },
-      "B_10_40": {
-        "choice": "Radio button selection list",
-        "isCorrect": true
-      },
-      "C_10_40": {
-        "choice": "On-screen selection list",
-        "isCorrect": false
-      },
-      "D_10_40": {
-        "choice": "Drop-down selection list",
-        "isCorrect": false
-      },
-      "E_10_40": {
-        "choice": "Combo box selection list",
-        "isCorrect": false
-      }
+      "A_10_40": { "choice": "Check box selection list" },
+      "B_10_40": { "choice": "Radio button selection list", "isCorrect": true },
+      "C_10_40": { "choice": "On-screen selection list" },
+      "D_10_40": { "choice": "Drop-down selection list" },
+      "E_10_40": { "choice": "Combo box selection list" }
     }
   },
   "10_41": {
     "question": "The following is used as a shortcut to commands for experienced users.",
     "choices": {
-      "A_10_41": {
-        "choice": "Menu bar",
-        "isCorrect": false
-      },
-      "B_10_41": {
-        "choice": "Drop-down menu",
-        "isCorrect": false
-      },
-      "C_10_41": {
-        "choice": "Hyperlink menu",
-        "isCorrect": false
-      },
-      "D_10_41": {
-        "choice": "Pop-up menu",
-        "isCorrect": true
-      },
-      "E_10_41": {
-        "choice": "Tab menu",
-        "isCorrect": false
-      }
+      "A_10_41": { "choice": "Menu bar" },
+      "B_10_41": { "choice": "Drop-down menu" },
+      "C_10_41": { "choice": "Hyperlink menu" },
+      "D_10_41": { "choice": "Pop-up menu", "isCorrect": true },
+      "E_10_41": { "choice": "Tab menu" }
     }
   },
   "10_42": {
     "question": "Ensures that data are of the right type (e.g., numeric) and in the right format (e.g., month, day, year).",
     "choices": {
-      "A_10_42": {
-        "choice": "Completeness check",
-        "isCorrect": false
-      },
-      "B_10_42": {
-        "choice": "Format check",
-        "isCorrect": true
-      },
-      "C_10_42": {
-        "choice": "Range check",
-        "isCorrect": false
-      },
-      "D_10_42": {
-        "choice": "Consistency checks",
-        "isCorrect": false
-      },
-      "E_10_42": {
-        "choice": "Database checks",
-        "isCorrect": false
-      }
+      "A_10_42": { "choice": "Completeness check" },
+      "B_10_42": { "choice": "Format check", "isCorrect": true },
+      "C_10_42": { "choice": "Range check" },
+      "D_10_42": { "choice": "Consistency checks" },
+      "E_10_42": { "choice": "Database checks" }
     }
   },
   "10_43": {
     "question": "The following is used when the user needs to change several settings or perform several related commands.",
     "choices": {
-      "A_10_43": {
-        "choice": "Menu bar",
-        "isCorrect": false
-      },
-      "B_10_43": {
-        "choice": "Drop-down menu",
-        "isCorrect": false
-      },
-      "C_10_43": {
-        "choice": "Hyperlink menu",
-        "isCorrect": false
-      },
-      "D_10_43": {
-        "choice": "Pop-up menu",
-        "isCorrect": false
-      },
-      "E_10_43": {
-        "choice": "Tab menu",
-        "isCorrect": true
-      }
+      "A_10_43": { "choice": "Menu bar" },
+      "B_10_43": { "choice": "Drop-down menu" },
+      "C_10_43": { "choice": "Hyperlink menu" },
+      "D_10_43": { "choice": "Pop-up menu" },
+      "E_10_43": { "choice": "Tab menu", "isCorrect": true }
     },
     "explanation": "Tab menus are a multipage menu with one table for each page that pops up and floats over the screen. Remains on screen until closed. Should be used when user to needs to change several settings of perform several related commands.<br><b>(figure 8-16, p. 276)</b>"
   },
   "10_44": {
     "question": "When creating navigational controls, you should either not display a command that cannot be used or 'gray' it out (where it shows, but cannot be used).",
     "choices": {
-      "A_10_44": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_10_44": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_10_44": { "choice": "True", "isCorrect": true },
+      "B_10_44": { "choice": "False" }
     }
   },
   "10_45": {
     "question": "Informs the user that the system has accomplished what it was asked to do.",
     "choices": {
-      "A_10_45": {
-        "choice": "Error message",
-        "isCorrect": false
-      },
-      "B_10_45": {
-        "choice": "Confirmation message",
-        "isCorrect": false
-      },
-      "C_10_45": {
-        "choice": "Acknowledgment message",
-        "isCorrect": true
-      },
-      "D_10_45": {
-        "choice": "Delay message",
-        "isCorrect": false
-      },
-      "E_10_45": {
-        "choice": "Help message",
-        "isCorrect": false
-      }
+      "A_10_45": { "choice": "Error message" },
+      "B_10_45": { "choice": "Confirmation message" },
+      "C_10_45": { "choice": "Acknowledgment message", "isCorrect": true },
+      "D_10_45": { "choice": "Delay message" },
+      "E_10_45": { "choice": "Help message" }
     },
     "explanation": "Confirmation message = \"Are you sure you want to do this?\"<br>Acknowledgement message = \"This is what you did.\""
   },
   "10_46": {
     "question": "If a particular form or screen is used by a cadre of experienced users very frequently (like an accounting entry system), 'ease of use' should be a high priority on these system interfaces.",
     "choices": {
-      "A_10_46": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_10_46": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_10_46": { "choice": "True", "isCorrect": true },
+      "B_10_46": { "choice": "False" }
     }
   },
   "10_47": {
     "question": "When creating user interfaces, analysts should examine DFDs and use cases to see how users commonly perform various processes.",
     "choices": {
-      "A_10_47": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_10_47": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_10_47": { "choice": "True", "isCorrect": true },
+      "B_10_47": { "choice": "False" }
     }
   },
   "10_48": {
     "question": "Which is generally NOT true for interface evaluations?",
     "choices": {
-      "A_10_48": {
-        "choice": "It is iterative",
-        "isCorrect": false
-      },
-      "B_10_48": {
-        "choice": "It almost always identifies improvements",
-        "isCorrect": false
-      },
-      "C_10_48": {
-        "choice": "It generally involves users working with analysts",
-        "isCorrect": false
-      },
-      "D_10_48": {
-        "choice": "It is cyclic",
-        "isCorrect": false
-      },
-      "E_10_48": {
-        "choice": "It is built on ERDs",
-        "isCorrect": true
-      }
+      "A_10_48": { "choice": "It is iterative" },
+      "B_10_48": { "choice": "It almost always identifies improvements" },
+      "C_10_48": { "choice": "It generally involves users working with analysts" },
+      "D_10_48": { "choice": "It is cyclic" },
+      "E_10_48": { "choice": "It is built on ERDs", "isCorrect": true }
     }
   },
   "10_49": {
     "question": "This is used when you want to verify that data fits within correct minimum and maximum values.",
     "choices": {
-      "A_10_49": {
-        "choice": "Completeness check",
-        "isCorrect": false
-      },
-      "B_10_49": {
-        "choice": "Format check",
-        "isCorrect": false
-      },
-      "C_10_49": {
-        "choice": "Range check",
-        "isCorrect": true
-      },
-      "D_10_49": {
-        "choice": "Check digit check",
-        "isCorrect": false
-      },
-      "E_10_49": {
-        "choice": "Consistency check",
-        "isCorrect": false
-      }
+      "A_10_49": { "choice": "Completeness check" },
+      "B_10_49": { "choice": "Format check" },
+      "C_10_49": { "choice": "Range check", "isCorrect": true },
+      "D_10_49": { "choice": "Check digit check" },
+      "E_10_49": { "choice": "Consistency check" }
     }
   },
   "10_50": {
     "question": "Which of the following might be a good choice of an icon for saving on a user interface?",
     "choices": {
-      "A_10_50": {
-        "choice": "A piggy bank",
-        "isCorrect": false
-      },
-      "B_10_50": {
-        "choice": "A dollar sign",
-        "isCorrect": false
-      },
-      "C_10_50": {
-        "choice": "A computer diskette",
-        "isCorrect": true
-      },
-      "D_10_50": {
-        "choice": "A hard drive image",
-        "isCorrect": false
-      },
-      "E_10_50": {
-        "choice": "A green \"S\"",
-        "isCorrect": false
-      }
+      "A_10_50": { "choice": "A piggy bank" },
+      "B_10_50": { "choice": "A dollar sign" },
+      "C_10_50": { "choice": "A computer diskette", "isCorrect": true },
+      "D_10_50": { "choice": "A hard drive image" },
+      "E_10_50": { "choice": "A green \"S\"" }
     },
     "explanation": "Your common \"save\" option in applications. 💾"
   },
   "10_51": {
     "question": "Infrequent users prefer user interfaces with 'ease of learning' features (like more explicit menu choices, clear directions).",
     "choices": {
-      "A_10_51": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_10_51": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_10_51": { "choice": "True", "isCorrect": true },
+      "B_10_51": { "choice": "False" }
     }
   },
   "10_52": {
     "question": "Michelle is designing a series of user interfaces for a CRM system. She goes back and forth between various steps of use cases, DFDs, ERDs and JAD session notes.",
     "choices": {
-      "A_10_52": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_10_52": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_10_52": { "choice": "True" },
+      "B_10_52": { "choice": "False", "isCorrect": true }
     }
   },
   "10_53": {
     "question": "A special type of drop-down list box that permits user to type as well as scroll the list.",
     "choices": {
-      "A_10_53": {
-        "choice": "Up-down numeric control",
-        "isCorrect": false
-      },
-      "B_10_53": {
-        "choice": "Radio button selection list",
-        "isCorrect": false
-      },
-      "C_10_53": {
-        "choice": "On-screen selection list",
-        "isCorrect": false
-      },
-      "D_10_53": {
-        "choice": "Drop-down selection list",
-        "isCorrect": false
-      },
-      "E_10_53": {
-        "choice": "Combo box selection list",
-        "isCorrect": true
-      }
+      "A_10_53": { "choice": "Up-down numeric control" },
+      "B_10_53": { "choice": "Radio button selection list" },
+      "C_10_53": { "choice": "On-screen selection list" },
+      "D_10_53": { "choice": "Drop-down selection list" },
+      "E_10_53": { "choice": "Combo box selection list", "isCorrect": true }
     }
   },
   "10_54": {
     "question": "Used when an activity takes more than seven seconds.",
     "choices": {
-      "A_10_54": {
-        "choice": "Error message",
-        "isCorrect": false
-      },
-      "B_10_54": {
-        "choice": "Confirmation message",
-        "isCorrect": false
-      },
-      "C_10_54": {
-        "choice": "Acknowledgment message",
-        "isCorrect": false
-      },
-      "D_10_54": {
-        "choice": "Delay message",
-        "isCorrect": true
-      },
-      "E_10_54": {
-        "choice": "Help message",
-        "isCorrect": false
-      }
+      "A_10_54": { "choice": "Error message" },
+      "B_10_54": { "choice": "Confirmation message" },
+      "C_10_54": { "choice": "Acknowledgment message" },
+      "D_10_54": { "choice": "Delay message", "isCorrect": true },
+      "E_10_54": { "choice": "Help message" }
     }
   },
   "10_55": {
     "question": "Presents a complete list of mutually exclusive choices, each with a circle in front.",
     "choices": {
-      "A_10_55": {
-        "choice": "Check box selection list",
-        "isCorrect": false
-      },
-      "B_10_55": {
-        "choice": "Radio button selection list",
-        "isCorrect": true
-      },
-      "C_10_55": {
-        "choice": "On-screen selection list",
-        "isCorrect": false
-      },
-      "D_10_55": {
-        "choice": "Drop-down selection list",
-        "isCorrect": false
-      },
-      "E_10_55": {
-        "choice": "Combo box selection list",
-        "isCorrect": false
-      }
+      "A_10_55": { "choice": "Check box selection list" },
+      "B_10_55": { "choice": "Radio button selection list", "isCorrect": true },
+      "C_10_55": { "choice": "On-screen selection list" },
+      "D_10_55": { "choice": "Drop-down selection list" },
+      "E_10_55": { "choice": "Combo box selection list" }
     }
   },
   "10_56": {
     "question": "Ensures that all required data have been entered.",
     "choices": {
-      "A_10_56": {
-        "choice": "Completeness check",
-        "isCorrect": true
-      },
-      "B_10_56": {
-        "choice": "Format check",
-        "isCorrect": false
-      },
-      "C_10_56": {
-        "choice": "Range check",
-        "isCorrect": false
-      },
-      "D_10_56": {
-        "choice": "Consistency checks",
-        "isCorrect": false
-      },
-      "E_10_56": {
-        "choice": "Database checks",
-        "isCorrect": false
-      }
+      "A_10_56": { "choice": "Completeness check", "isCorrect": true },
+      "B_10_56": { "choice": "Format check" },
+      "C_10_56": { "choice": "Range check" },
+      "D_10_56": { "choice": "Consistency checks" },
+      "E_10_56": { "choice": "Database checks" }
     }
   },
   "10_57": {
     "question": "Interface Structures cannot directly interface with other interface structures on other menus and submenus, only the interface structures on the same menu or submenu.",
     "choices": {
-      "A_10_57": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_10_57": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_10_57": { "choice": "True" },
+      "B_10_57": { "choice": "False", "isCorrect": true }
     }
   },
   "10_58": {
     "question": "Experienced users prefer user interfaces with 'ease of learning' features.",
     "choices": {
-      "A_10_58": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_10_58": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_10_58": { "choice": "True" },
+      "B_10_58": { "choice": "False", "isCorrect": true }
     },
     "explanation": "Experienced users want 'ease of use'. Novice or infrequent users want 'ease of learning'."
   },
   "10_59": {
     "question": "Use scenarios builds upon what?",
     "choices": {
-      "A_10_59": {
-        "choice": "Entity relationship diagrams",
-        "isCorrect": false
-      },
-      "B_10_59": {
-        "choice": "JAD sessions",
-        "isCorrect": false
-      },
-      "C_10_59": {
-        "choice": "PERT charts",
-        "isCorrect": false
-      },
-      "D_10_59": {
-        "choice": "Use cases",
-        "isCorrect": true
-      },
-      "E_10_59": {
-        "choice": "HIPO charts",
-        "isCorrect": false
-      }
+      "A_10_59": { "choice": "Entity relationship diagrams" },
+      "B_10_59": { "choice": "JAD sessions" },
+      "C_10_59": { "choice": "PERT charts" },
+      "D_10_59": { "choice": "Use cases", "isCorrect": true },
+      "E_10_59": { "choice": "HIPO charts" }
     }
   },
   "10_60": {
     "question": "Some systems that are used infrequently should probably emphasize:",
     "choices": {
-      "A_10_60": {
-        "choice": "Ease of learning",
-        "isCorrect": true
-      },
-      "B_10_60": {
-        "choice": "Higher user flexibility",
-        "isCorrect": false
-      },
-      "C_10_60": {
-        "choice": "Ease of use",
-        "isCorrect": false
-      },
-      "D_10_60": {
-        "choice": "More short-cut keys and built in keyboard functions",
-        "isCorrect": false
-      },
-      "E_10_60": {
-        "choice": "Organizational feasibility",
-        "isCorrect": false
-      }
+      "A_10_60": { "choice": "Ease of learning", "isCorrect": true },
+      "B_10_60": { "choice": "Higher user flexibility" },
+      "C_10_60": { "choice": "Ease of use" },
+      "D_10_60": { "choice": "More short-cut keys and built in keyboard functions" },
+      "E_10_60": { "choice": "Organizational feasibility" }
     }
   },
   "10_61": {
     "question": "Used when there is insufficient room to display all choices.",
     "choices": {
-      "A_10_61": {
-        "choice": "Check box selection list",
-        "isCorrect": false
-      },
-      "B_10_61": {
-        "choice": "Radio button selection list",
-        "isCorrect": false
-      },
-      "C_10_61": {
-        "choice": "On-screen selection list",
-        "isCorrect": false
-      },
-      "D_10_61": {
-        "choice": "Drop-down selection list",
-        "isCorrect": true
-      },
-      "E_10_61": {
-        "choice": "Combo box selection list",
-        "isCorrect": false
-      }
+      "A_10_61": { "choice": "Check box selection list" },
+      "B_10_61": { "choice": "Radio button selection list" },
+      "C_10_61": { "choice": "On-screen selection list" },
+      "D_10_61": { "choice": "Drop-down selection list", "isCorrect": true },
+      "E_10_61": { "choice": "Combo box selection list" }
     }
   },
   "10_62": {
     "question": "Typically, the second step in the user interface design process is what?",
     "choices": {
-      "A_10_62": {
-        "choice": "Design interface standards",
-        "isCorrect": false
-      },
-      "B_10_62": {
-        "choice": "Creating an interface design prototype",
-        "isCorrect": false
-      },
-      "C_10_62": {
-        "choice": "Do an interface evaluation",
-        "isCorrect": false
-      },
-      "D_10_62": {
-        "choice": "Examine DFDs and use cases to develop use scenarios",
-        "isCorrect": false
-      },
-      "E_10_62": {
-        "choice": "Develop the interface structure diagram (ISD)",
-        "isCorrect": true
-      }
+      "A_10_62": { "choice": "Design interface standards" },
+      "B_10_62": { "choice": "Creating an interface design prototype" },
+      "C_10_62": { "choice": "Do an interface evaluation" },
+      "D_10_62": { "choice": "Examine DFDs and use cases to develop use scenarios" },
+      "E_10_62": { "choice": "Develop the interface structure diagram (ISD)", "isCorrect": true }
     },
     "explanation": "The steps are<br>1. understanding the users (creating personas and use scenarios)<br>2. organizing the interface (using tools such as ISD)<br>3. defining standards<br>4. developing prototypes (e.g. wireframes, storyboards)<br>5. evaluation/testing."
   },
   "10_63": {
     "question": "Ensures that numeric data are within correct minimum and maximum values.",
     "choices": {
-      "A_10_63": {
-        "choice": "Completeness check",
-        "isCorrect": false
-      },
-      "B_10_63": {
-        "choice": "Format check",
-        "isCorrect": false
-      },
-      "C_10_63": {
-        "choice": "Range check",
-        "isCorrect": true
-      },
-      "D_10_63": {
-        "choice": "Consistency checks",
-        "isCorrect": false
-      },
-      "E_10_63": {
-        "choice": "Database checks",
-        "isCorrect": false
-      }
+      "A_10_63": { "choice": "Completeness check" },
+      "B_10_63": { "choice": "Format check" },
+      "C_10_63": { "choice": "Range check", "isCorrect": true },
+      "D_10_63": { "choice": "Consistency checks" },
+      "E_10_63": { "choice": "Database checks" }
     }
   },
   "10_64": {
     "question": "Used when entering a numeric value.",
     "choices": {
-      "A_10_64": {
-        "choice": "Up-down numeric control",
-        "isCorrect": true
-      },
-      "B_10_64": {
-        "choice": "Radio button selection list",
-        "isCorrect": false
-      },
-      "C_10_64": {
-        "choice": "On-screen selection list",
-        "isCorrect": false
-      },
-      "D_10_64": {
-        "choice": "Drop-down selection list",
-        "isCorrect": false
-      },
-      "E_10_64": {
-        "choice": "Combo box selection list",
-        "isCorrect": false
-      }
+      "A_10_64": { "choice": "Up-down numeric control", "isCorrect": true },
+      "B_10_64": { "choice": "Radio button selection list" },
+      "C_10_64": { "choice": "On-screen selection list" },
+      "D_10_64": { "choice": "Drop-down selection list" },
+      "E_10_64": { "choice": "Combo box selection list" }
     }
   },
   "10_65": {
     "question": "Typically, the fourth step in the user interface design process is what?",
     "choices": {
-      "A_10_65": {
-        "choice": "Design interface standards",
-        "isCorrect": false
-      },
-      "B_10_65": {
-        "choice": "Creating an interface design prototype",
-        "isCorrect": true
-      },
-      "C_10_65": {
-        "choice": "Do an interface evaluation",
-        "isCorrect": false
-      },
-      "D_10_65": {
-        "choice": "Examine DFDs and use cases to develop use scenarios",
-        "isCorrect": false
-      },
-      "E_10_65": {
-        "choice": "Develop the interface structure diagram (ISD)",
-        "isCorrect": false
-      }
+      "A_10_65": { "choice": "Design interface standards" },
+      "B_10_65": { "choice": "Creating an interface design prototype", "isCorrect": true },
+      "C_10_65": { "choice": "Do an interface evaluation" },
+      "D_10_65": { "choice": "Examine DFDs and use cases to develop use scenarios" },
+      "E_10_65": { "choice": "Develop the interface structure diagram (ISD)" }
     },
     "explanation": "The steps are<br>1. understanding the users (creating personas and use scenarios)<br>2. organizing the interface<br>3. defining standards<br>4. developing prototypes (e.g. wireframes, storyboards)<br>5. evaluation/testing."
   },
   "10_66": {
     "question": "This report is used when a user needs brief information on many items.",
     "choices": {
-      "A_10_66": {
-        "choice": "Detail Report",
-        "isCorrect": false
-      },
-      "B_10_66": {
-        "choice": "Turnaround document",
-        "isCorrect": false
-      },
-      "C_10_66": {
-        "choice": "Exception report",
-        "isCorrect": false
-      },
-      "D_10_66": {
-        "choice": "Summary report",
-        "isCorrect": true
-      },
-      "E_10_66": {
-        "choice": "Consistency check",
-        "isCorrect": false
-      }
+      "A_10_66": { "choice": "Detail Report" },
+      "B_10_66": { "choice": "Turnaround document" },
+      "C_10_66": { "choice": "Exception report" },
+      "D_10_66": { "choice": "Summary report", "isCorrect": true },
+      "E_10_66": { "choice": "Consistency check" }
     }
   },
   "10_67": {
     "question": "Presents a complete list of choices, each with a square box in front.",
     "choices": {
-      "A_10_67": {
-        "choice": "Check box selection list",
-        "isCorrect": true
-      },
-      "B_10_67": {
-        "choice": "Radio button selection list",
-        "isCorrect": false
-      },
-      "C_10_67": {
-        "choice": "On-screen selection list",
-        "isCorrect": false
-      },
-      "D_10_67": {
-        "choice": "Drop-down selection list",
-        "isCorrect": false
-      },
-      "E_10_67": {
-        "choice": "Combo box selection list",
-        "isCorrect": false
-      }
+      "A_10_67": { "choice": "Check box selection list", "isCorrect": true },
+      "B_10_67": { "choice": "Radio button selection list" },
+      "C_10_67": { "choice": "On-screen selection list" },
+      "D_10_67": { "choice": "Drop-down selection list" },
+      "E_10_67": { "choice": "Combo box selection list" }
     }
   },
   "10_68": {
     "question": "This is used when all combinations of data are valid (like birth year is prior to marriage year).",
     "choices": {
-      "A_10_68": {
-        "choice": "Completeness check",
-        "isCorrect": false
-      },
-      "B_10_68": {
-        "choice": "Format check",
-        "isCorrect": false
-      },
-      "C_10_68": {
-        "choice": "Range check",
-        "isCorrect": false
-      },
-      "D_10_68": {
-        "choice": "Check digit check",
-        "isCorrect": false
-      },
-      "E_10_68": {
-        "choice": "Consistency check",
-        "isCorrect": true
-      }
+      "A_10_68": { "choice": "Completeness check" },
+      "B_10_68": { "choice": "Format check" },
+      "C_10_68": { "choice": "Range check" },
+      "D_10_68": { "choice": "Check digit check" },
+      "E_10_68": { "choice": "Consistency check", "isCorrect": true }
     }
   },
   "10_69": {
     "question": "Research shows that in an ideal world a menu should contain no more than four items and submenus should contain no fewer than six items.",
     "choices": {
-      "A_10_69": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_10_69": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_10_69": { "choice": "True" },
+      "B_10_69": { "choice": "False", "isCorrect": true }
     }
   },
   "10_70": {
     "question": "It is better to make menus how?",
     "choices": {
-      "A_10_70": {
-        "choice": "Broad and shallow",
-        "isCorrect": true
-      },
-      "B_10_70": {
-        "choice": "Narrow and deep",
-        "isCorrect": false
-      },
-      "C_10_70": {
-        "choice": "Broad and deep",
-        "isCorrect": false
-      },
-      "D_10_70": {
-        "choice": "Narrow and shallow",
-        "isCorrect": false
-      },
-      "E_10_70": {
-        "choice": "Wide and tall",
-        "isCorrect": false
-      }
+      "A_10_70": { "choice": "Broad and shallow", "isCorrect": true },
+      "B_10_70": { "choice": "Narrow and deep" },
+      "C_10_70": { "choice": "Broad and deep" },
+      "D_10_70": { "choice": "Narrow and shallow" },
+      "E_10_70": { "choice": "Wide and tall" }
     },
     "explanation": "It is better to make menus broad and shallow (i.e., with each menu containing many items and each item containing only one or two layers of menus)rather than narrow and deep (i.e., with each menu containing only a few items, but each item leading to three or more layers of menus). A broad and shallow menu presents the user with the most information initially, so that he or she can see many options, and requires only a few mouse clicks or keystrokes to perform an action"
   },
   "10_71": {
     "question": "Used in all systems.",
     "choices": {
-      "A_10_71": {
-        "choice": "Error message",
-        "isCorrect": false
-      },
-      "B_10_71": {
-        "choice": "Confirmation message",
-        "isCorrect": false
-      },
-      "C_10_71": {
-        "choice": "Acknowledgment message",
-        "isCorrect": false
-      },
-      "D_10_71": {
-        "choice": "Delay message",
-        "isCorrect": false
-      },
-      "E_10_71": {
-        "choice": "Help message",
-        "isCorrect": true
-      }
+      "A_10_71": { "choice": "Error message" },
+      "B_10_71": { "choice": "Confirmation message" },
+      "C_10_71": { "choice": "Acknowledgment message" },
+      "D_10_71": { "choice": "Delay message" },
+      "E_10_71": { "choice": "Help message", "isCorrect": true }
     },
     "explanation": "A help message provides additional information about the system and its components. Used in all systems to ensure users can navigate the system regardless of their experience level."
   },
   "10_72": {
     "question": "There are many types of reports, they include which of the following?",
     "choices": {
-      "A_10_72": {
-        "choice": "Summary reports",
-        "isCorrect": true
-      },
-      "B_10_72": {
-        "choice": "Exception reports",
-        "isCorrect": true
-      },
-      "C_10_72": {
-        "choice": "Turnaround documents",
-        "isCorrect": true
-      },
-      "D_10_72": {
-        "choice": "Graphs",
-        "isCorrect": true
-      }
+      "A_10_72": { "choice": "Summary reports", "isCorrect": true },
+      "B_10_72": { "choice": "Exception reports", "isCorrect": true },
+      "C_10_72": { "choice": "Turnaround documents", "isCorrect": true },
+      "D_10_72": { "choice": "Graphs", "isCorrect": true }
     },
     "multiSelect": true
   },
   "10_73": {
     "question": "If the density on a single page form is too high, it might not be as effective for some users as creating a two-page form.",
     "choices": {
-      "A_10_73": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_10_73": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_10_73": { "choice": "True", "isCorrect": true },
+      "B_10_73": { "choice": "False" }
     }
   },
   "10_74": {
     "question": "One strong suggestion for navigation design is what?",
     "choices": {
-      "A_10_74": {
-        "choice": "Limit menu items to at most ten items",
-        "isCorrect": false
-      },
-      "B_10_74": {
-        "choice": "Color code common menu items with green (go) and red (stop)",
-        "isCorrect": false
-      },
-      "C_10_74": {
-        "choice": "Simplify recovery from mistakes (like having an undo button)",
-        "isCorrect": true
-      },
-      "D_10_74": {
-        "choice": "Lock the user's computer when a mistake has been made",
-        "isCorrect": false
-      },
-      "E_10_74": {
-        "choice": "Log all mistakes, and log the user's computer when 1000 mistakes have been made",
-        "isCorrect": false
-      }
+      "A_10_74": { "choice": "Limit menu items to at most ten items" },
+      "B_10_74": { "choice": "Color code common menu items with green (go) and red (stop)" },
+      "C_10_74": { "choice": "Simplify recovery from mistakes (like having an undo button)", "isCorrect": true },
+      "D_10_74": { "choice": "Lock the user's computer when a mistake has been made" },
+      "E_10_74": { "choice": "Log all mistakes, and log the user's computer when 1000 mistakes have been made" }
     }
   },
   "10_75": {
     "question": "Range checks will validate if the data is numeric with two decimal places.",
     "choices": {
-      "A_10_75": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_10_75": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_10_75": { "choice": "True" },
+      "B_10_75": { "choice": "False", "isCorrect": true }
     },
     "explanation": "Range check is checking the data is within valid range (e.g. 0 <= x < 10). What the question refers to is format check."
   },
   "10_76": {
     "question": "The following is used as a main menu for a system.",
     "choices": {
-      "A_10_76": {
-        "choice": "Menu bar",
-        "isCorrect": true
-      },
-      "B_10_76": {
-        "choice": "Drop-down menu",
-        "isCorrect": false
-      },
-      "C_10_76": {
-        "choice": "Hyperlink menu",
-        "isCorrect": false
-      },
-      "D_10_76": {
-        "choice": "Pop-up menu",
-        "isCorrect": false
-      },
-      "E_10_76": {
-        "choice": "Tab menu",
-        "isCorrect": false
-      }
+      "A_10_76": { "choice": "Menu bar", "isCorrect": true },
+      "B_10_76": { "choice": "Drop-down menu" },
+      "C_10_76": { "choice": "Hyperlink menu" },
+      "D_10_76": { "choice": "Pop-up menu" },
+      "E_10_76": { "choice": "Tab menu" }
     }
   },
   "10_77": {
     "question": "Provides additional information about the system and its components.",
     "choices": {
-      "A_10_77": {
-        "choice": "Error message",
-        "isCorrect": false
-      },
-      "B_10_77": {
-        "choice": "Confirmation message",
-        "isCorrect": false
-      },
-      "C_10_77": {
-        "choice": "Acknowledgment message",
-        "isCorrect": false
-      },
-      "D_10_77": {
-        "choice": "Delay message",
-        "isCorrect": false
-      },
-      "E_10_77": {
-        "choice": "Help message",
-        "isCorrect": true
-      }
+      "A_10_77": { "choice": "Error message" },
+      "B_10_77": { "choice": "Confirmation message" },
+      "C_10_77": { "choice": "Acknowledgment message" },
+      "D_10_77": { "choice": "Delay message" },
+      "E_10_77": { "choice": "Help message", "isCorrect": true }
     }
   },
   "10_78": {
     "question": "This is used when several fields must be entered before the form can be processed.",
     "choices": {
-      "A_10_78": {
-        "choice": "Completeness check",
-        "isCorrect": true
-      },
-      "B_10_78": {
-        "choice": "Format check",
-        "isCorrect": false
-      },
-      "C_10_78": {
-        "choice": "Range check",
-        "isCorrect": false
-      },
-      "D_10_78": {
-        "choice": "Check digit check",
-        "isCorrect": false
-      },
-      "E_10_78": {
-        "choice": "Consistency check",
-        "isCorrect": false
-      }
+      "A_10_78": { "choice": "Completeness check", "isCorrect": true },
+      "B_10_78": { "choice": "Format check" },
+      "C_10_78": { "choice": "Range check" },
+      "D_10_78": { "choice": "Check digit check" },
+      "E_10_78": { "choice": "Consistency check" }
     }
   },
   "10_79": {
     "question": "Colors and patterns add pizzazz to a screen form and aid in its readability.",
     "choices": {
-      "A_10_79": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_10_79": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_10_79": { "choice": "True" },
+      "B_10_79": { "choice": "False", "isCorrect": true }
     },
     "explanation": "🍕🍕🍕"
   },
   "10_80": {
     "question": "Aesthetics refers to designing information that can be navigated in three-clicks or less.",
     "choices": {
-      "A_10_80": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_10_80": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_10_80": { "choice": "True" },
+      "B_10_80": { "choice": "False", "isCorrect": true }
     }
   },
   "10_81": {
     "question": "For screen forms and reports, you should use a font of at least size 12.",
     "choices": {
-      "A_10_81": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_10_81": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_10_81": { "choice": "True", "isCorrect": true },
+      "B_10_81": { "choice": "False" }
     }
   },
   "10_82": {
     "question": "A use scenario is one commonly used what?",
     "choices": {
-      "A_10_82": {
-        "choice": "Path through a use case",
-        "isCorrect": true
-      },
-      "B_10_82": {
-        "choice": "Normalized ERD structure",
-        "isCorrect": false
-      },
-      "C_10_82": {
-        "choice": "Context diagram",
-        "isCorrect": false
-      },
-      "D_10_82": {
-        "choice": "Buy-in flowchart",
-        "isCorrect": false
-      },
-      "E_10_82": {
-        "choice": "Throwaway prototyping tool",
-        "isCorrect": false
-      }
+      "A_10_82": { "choice": "Path through a use case", "isCorrect": true },
+      "B_10_82": { "choice": "Normalized ERD structure" },
+      "C_10_82": { "choice": "Context diagram" },
+      "D_10_82": { "choice": "Buy-in flowchart" },
+      "E_10_82": { "choice": "Throwaway prototyping tool" }
     }
   },
   "10_83": {
     "question": "User interface design is a three-step process: (1) analyze the DFDs and use cases; (2) develop the interface diagrams; and (3) create the interface design prototype.",
     "choices": {
-      "A_10_83": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_10_83": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_10_83": { "choice": "True" },
+      "B_10_83": { "choice": "False", "isCorrect": true }
     },
     "explanation": "It's a five-step process:<br>1. Understanding the users (creating personas and use scenarios)<br>2. Organizing the interface<br>3. Defining standards<br>4. Developing prototypes (e.g. wireframes, storyboards)<br>5. Evaluation/testing"
   },
   "10_85": {
     "question": "Scroll arrows moves directionally through numeric range.",
     "choices": {
-      "A_10_85": {
-        "choice": "Up-down numeric control",
-        "isCorrect": true
-      },
-      "B_10_85": {
-        "choice": "Radio button selection list",
-        "isCorrect": false
-      },
-      "C_10_85": {
-        "choice": "On-screen selection list",
-        "isCorrect": false
-      },
-      "D_10_85": {
-        "choice": "Drop-down selection list",
-        "isCorrect": false
-      },
-      "E_10_85": {
-        "choice": "Combo box selection list",
-        "isCorrect": false
-      }
+      "A_10_85": { "choice": "Up-down numeric control", "isCorrect": true },
+      "B_10_85": { "choice": "Radio button selection list" },
+      "C_10_85": { "choice": "On-screen selection list" },
+      "D_10_85": { "choice": "Drop-down selection list" },
+      "E_10_85": { "choice": "Combo box selection list" }
     }
   },
   "10_86": {
     "question": "Used when several items can be selected from a list of items.",
     "choices": {
-      "A_10_86": {
-        "choice": "Check box selection list",
-        "isCorrect": true
-      },
-      "B_10_86": {
-        "choice": "Radio button selection list",
-        "isCorrect": false
-      },
-      "C_10_86": {
-        "choice": "On-screen selection list",
-        "isCorrect": false
-      },
-      "D_10_86": {
-        "choice": "Drop-down selection list",
-        "isCorrect": false
-      },
-      "E_10_86": {
-        "choice": "Combo box selection list",
-        "isCorrect": false
-      }
+      "A_10_86": { "choice": "Check box selection list", "isCorrect": true },
+      "B_10_86": { "choice": "Radio button selection list" },
+      "C_10_86": { "choice": "On-screen selection list" },
+      "D_10_86": { "choice": "Drop-down selection list" },
+      "E_10_86": { "choice": "Combo box selection list" }
     }
   },
   "10_87": {
     "question": "Typically, the fifth step in the user interface design process is what?",
     "choices": {
-      "A_10_87": {
-        "choice": "Design interface standards",
-        "isCorrect": false
-      },
-      "B_10_87": {
-        "choice": "Creating an interface design prototype",
-        "isCorrect": false
-      },
-      "C_10_87": {
-        "choice": "Do an interface evaluation",
-        "isCorrect": true
-      },
-      "D_10_87": {
-        "choice": "Examine DFDs and use cases to develop use scenarios",
-        "isCorrect": false
-      },
-      "E_10_87": {
-        "choice": "Develop the interface structure diagram (ISD)",
-        "isCorrect": false
-      }
+      "A_10_87": { "choice": "Design interface standards" },
+      "B_10_87": { "choice": "Creating an interface design prototype" },
+      "C_10_87": { "choice": "Do an interface evaluation", "isCorrect": true },
+      "D_10_87": { "choice": "Examine DFDs and use cases to develop use scenarios" },
+      "E_10_87": { "choice": "Develop the interface structure diagram (ISD)" }
     },
     "explanation": "The steps are<br>1. understanding the users (creating personas and use scenarios)<br>2. organizing the interface<br>3. defining standards<br>4. developing prototypes (e.g. wireframes, storyboards)<br>5. evaluation/testing."
   },
   "10_88": {
     "question": "Novice or infrequent users of an interface (both paper and screen) prefer interfaces with low density like under 25%.",
     "choices": {
-      "A_10_88": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_10_88": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_10_88": { "choice": "True" },
+      "B_10_88": { "choice": "False", "isCorrect": true }
     },
     "explanation": "Novice or infrequent users prefer interfaces with a density of less than <b>50%</b>."
   },
   "10_89": {
     "question": "Mike is the analyst creating a report. It is easy for him to unintentionally create a biased report.",
     "choices": {
-      "A_10_89": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_10_89": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_10_89": { "choice": "True", "isCorrect": true },
+      "B_10_89": { "choice": "False" }
     }
   },
   "10_90": {
     "question": "This is used when fields are numeric or contain coded data.",
     "choices": {
-      "A_10_90": {
-        "choice": "Completeness check",
-        "isCorrect": false
-      },
-      "B_10_90": {
-        "choice": "Format check",
-        "isCorrect": true
-      },
-      "C_10_90": {
-        "choice": "Range check",
-        "isCorrect": false
-      },
-      "D_10_90": {
-        "choice": "Check digit check",
-        "isCorrect": false
-      },
-      "E_10_90": {
-        "choice": "Consistency check",
-        "isCorrect": false
-      }
+      "A_10_90": { "choice": "Completeness check" },
+      "B_10_90": { "choice": "Format check", "isCorrect": true },
+      "C_10_90": { "choice": "Range check" },
+      "D_10_90": { "choice": "Check digit check" },
+      "E_10_90": { "choice": "Consistency check" }
     }
   },
   "10_91": {
     "question": "Interface Structure Design defines the application coding structure used (such as developing prototypes in Visual Basic).",
     "choices": {
-      "A_10_91": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_10_91": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_10_91": { "choice": "True" },
+      "B_10_91": { "choice": "False", "isCorrect": true }
     },
     "explanation": "Interface Structure Design defines how the user interface is organized and structured (focusing on the layout). It does not deal with anything related to coding structure."
   },
   "10_92": {
     "question": "The first principle of designing navigational controls is to prevent users from making mistakes.",
     "choices": {
-      "A_10_92": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_10_92": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_10_92": { "choice": "True", "isCorrect": true },
+      "B_10_92": { "choice": "False" }
     }
   }
 }

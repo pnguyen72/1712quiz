@@ -2,87 +2,39 @@
   "08_01": {
     "question": "The design phase decides <i>how</i> the new system will operate.",
     "choices": {
-      "A_08_01": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_01": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_01": { "choice": "True", "isCorrect": true },
+      "B_08_01": { "choice": "False" }
     },
     "explanation": "Remember those questions related to the parts of the SDLC in Module 1?<br><br>Planning - <b>Why?</b><br>Analysis - <b>What?</b> (and where and who and when)<br>Design - <b>How?</b>"
   },
   "08_02": {
     "question": "The system inputs and outputs will be designed along with a plan or__________ of the way the system&#39;s features will be navigated.",
     "choices": {
-      "A_08_02": {
-        "choice": "FAQ",
-        "isCorrect": false
-      },
-      "B_08_02": {
-        "choice": "Roadmap",
-        "isCorrect": true
-      },
-      "C_08_02": {
-        "choice": "Instructional Guide",
-        "isCorrect": false
-      },
-      "D_08_02": {
-        "choice": "Blueprint",
-        "isCorrect": false
-      },
-      "E_08_02": {
-        "choice": "Compass",
-        "isCorrect": false
-      }
+      "A_08_02": { "choice": "FAQ" },
+      "B_08_02": { "choice": "Roadmap", "isCorrect": true },
+      "C_08_02": { "choice": "Instructional Guide" },
+      "D_08_02": { "choice": "Blueprint" },
+      "E_08_02": { "choice": "Compass" }
     }
   },
   "08_03": {
     "question": "This repository entries are updated to reflect specific technology decisions as they are made.",
     "multiSelect": true,
     "choices": {
-      "A_08_03": {
-        "choice": "CASE",
-        "isCorrect": true
-      },
-      "B_08_03": {
-        "choice": "Sequential",
-        "isCorrect": false
-      },
-      "C_08_03": {
-        "choice": "DFD",
-        "isCorrect": false
-      },
-      "D_08_03": {
-        "choice": "Hardware",
-        "isCorrect": false
-      }
+      "A_08_03": { "choice": "CASE", "isCorrect": true },
+      "B_08_03": { "choice": "Sequential" },
+      "C_08_03": { "choice": "DFD" },
+      "D_08_03": { "choice": "Hardware" }
     }
   },
   "08_04": {
     "question": "Systems Integration refers to what?",
     "choices": {
-      "A_08_04": {
-        "choice": "The process of synching all computers to the mainframe",
-        "isCorrect": false
-      },
-      "B_08_04": {
-        "choice": "Creating a new software to monitor power consumption",
-        "isCorrect": false
-      },
-      "C_08_04": {
-        "choice": "Combining packaged software, the existing legacy system, and new software",
-        "isCorrect": true
-      },
-      "D_08_04": {
-        "choice": "The delivery of systems to the final destination office",
-        "isCorrect": false
-      },
-      "E_08_04": {
-        "choice": "Adding the original hard drives to a newer system",
-        "isCorrect": false
-      }
+      "A_08_04": { "choice": "The process of synching all computers to the mainframe" },
+      "B_08_04": { "choice": "Creating a new software to monitor power consumption" },
+      "C_08_04": { "choice": "Combining packaged software, the existing legacy system, and new software", "isCorrect": true },
+      "D_08_04": { "choice": "The delivery of systems to the final destination office" },
+      "E_08_04": { "choice": "Adding the original hard drives to a newer system" }
     },
     "explanation": "<i>\"[System integration is the process of] building new systems by combining packaged software, [the] existing legacy system, and new software to integrate these.\"</i> - <b>module 8, slide 17</b>"
   },
@@ -90,141 +42,66 @@
     "question": "System design is the determination of the overall system architecture-consisting of a set of physical processing components, _______________, and the communication among them-that will satisfy the system&#39;s essential requirements.",
     "multiSelect": true,
     "choices": {
-      "A_08_05": {
-        "choice": "Engineering data plans, fiber optic specifications",
-        "isCorrect": false
-      },
-      "B_08_05": {
-        "choice": "Order entry methods, HR feedback",
-        "isCorrect": false
-      },
-      "C_08_05": {
-        "choice": "Workmanship",
-        "isCorrect": false
-      },
-      "D_08_05": {
-        "choice": "Hardware, Software, People",
-        "isCorrect": true
-      }
+      "A_08_05": { "choice": "Engineering data plans, fiber optic specifications" },
+      "B_08_05": { "choice": "Order entry methods, HR feedback" },
+      "C_08_05": { "choice": "Workmanship" },
+      "D_08_05": { "choice": "Hardware, Software, People", "isCorrect": true }
     }
   },
   "08_06": {
     "question": "In what SDLC stage do we determine the business needs for an information systems project?",
     "choices": {
-      "A_08_06": {
-        "choice": "The big bang stage",
-        "isCorrect": false
-      },
-      "B_08_06": {
-        "choice": "The installation stage",
-        "isCorrect": false
-      },
-      "C_08_06": {
-        "choice": "The analysis phase",
-        "isCorrect": true
-      },
-      "D_08_06": {
-        "choice": "The dissection stage",
-        "isCorrect": false
-      },
-      "E_08_06": {
-        "choice": "The design phase",
-        "isCorrect": false
-      }
+      "A_08_06": { "choice": "The big bang stage" },
+      "B_08_06": { "choice": "The installation stage" },
+      "C_08_06": { "choice": "The analysis phase", "isCorrect": true },
+      "D_08_06": { "choice": "The dissection stage" },
+      "E_08_06": { "choice": "The design phase" }
     },
     "explanation": "Analysis = business requirements<br>Design = system requirements"
   },
   "08_07": {
     "question": "The following document is utilized with possible vendors on projects with smaller budgets, instead of sending a lengthy document to <u>all</u> possible vendors:",
     "choices": {
-      "A_08_07": {
-        "choice": "Request for Proposal (RFP)",
-        "isCorrect": false
-      },
-      "B_08_07": {
-        "choice": "Request for Efficient Information Distribution (REID)",
-        "isCorrect": false
-      },
-      "C_08_07": {
-        "choice": "Request for Quote (RFQ)",
-        "isCorrect": false
-      },
-      "D_08_07": {
-        "choice": "More Optimal Desires (MOD)",
-        "isCorrect": false
-      },
-      "E_08_07": {
-        "choice": "Request for Information (RFI)",
-        "isCorrect": true
-      }
+      "A_08_07": { "choice": "Request for Proposal (RFP)" },
+      "B_08_07": { "choice": "Request for Efficient Information Distribution (REID)" },
+      "C_08_07": { "choice": "Request for Quote (RFQ)" },
+      "D_08_07": { "choice": "More Optimal Desires (MOD)" },
+      "E_08_07": { "choice": "Request for Information (RFI)", "isCorrect": true }
     },
     "explanation": "RFPs = formal proposals containing full details of the project.<br>RFIs = shorter and less detailed version of an RFP<br>RFQs = even shorter, basically \"just give me the price\".<br>MODs and REIDs aren't a thing."
   },
   "08_08": {
     "question": "Application service providers might be best associated with:",
     "choices": {
-      "A_08_08": {
-        "choice": "In-house development",
-        "isCorrect": false
-      },
-      "B_08_08": {
-        "choice": "Unique and strategic systems",
-        "isCorrect": false
-      },
-      "C_08_08": {
-        "choice": "Outsourcing",
-        "isCorrect": true
-      },
-      "D_08_08": {
-        "choice": "Packaged software",
-        "isCorrect": false
-      },
-      "E_08_08": {
-        "choice": "Internet Service Providers",
-        "isCorrect": false
-      }
+      "A_08_08": { "choice": "In-house development" },
+      "B_08_08": { "choice": "Unique and strategic systems" },
+      "C_08_08": { "choice": "Outsourcing", "isCorrect": true },
+      "D_08_08": { "choice": "Packaged software" },
+      "E_08_08": { "choice": "Internet Service Providers" }
     },
     "explanation": "Application service providers provide applications and software related services over corporate networks/the internet. These services are usually hosted on the vendors' servers, meaning they're <b>outsourced</b>.<br>(That, and also ASPs were covered in <b>module 8, slide 18</b>, the same slide as outsourcing.)"
   },
   "08_09": {
     "question": "A workaround is a custom-built add-on program that interfaces with packaged applications to handle specific needs.",
     "choices": {
-      "A_08_09": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_09": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_09": { "choice": "True", "isCorrect": true },
+      "B_08_09": { "choice": "False" }
     },
     "explanation": "<i>\"A workaround [is a] custom-built add-on program that interfaces with the packaged application to handle special needs.\"</i> - <b>module 8, slide 15</b>"
   },
   "08_10": {
     "question": "The key challenge in systems integration is avoiding a system wide crash upon installation of legacy software.",
     "choices": {
-      "A_08_10": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_08_10": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_08_10": { "choice": "True" },
+      "B_08_10": { "choice": "False", "isCorrect": true }
     },
     "explanation": "The key challenge is integrating data, that is, to bring data from the legacy system to the new system. <b>(module 8, slide 17)</b>"
   },
   "08_11": {
     "question": "In regards to packaged software, the project needs a highly skills project manager who has been with the company for many years and has an excellent relationship with both business users and the IT development staff.",
     "choices": {
-      "A_08_11": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_08_11": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_08_11": { "choice": "True" },
+      "B_08_11": { "choice": "False", "isCorrect": true }
     },
     "explanation": "For packaged software, the project needs a manager who can coordinate vendor efforts."
   },
@@ -232,290 +109,134 @@
     "question": "Outsourcing firms called _____________ supply software applications and/or software related services through the Internet.",
     "multiSelect": true,
     "choices": {
-      "A_08_12": {
-        "choice": "Application Service Providers (ASPs)",
-        "isCorrect": true
-      },
-      "B_08_12": {
-        "choice": "Enterprise Resource Providers (ERPs)",
-        "isCorrect": false
-      },
-      "C_08_12": {
-        "choice": "Information Technology Developers (ITDs)",
-        "isCorrect": false
-      },
-      "D_08_12": {
-        "choice": "System Development Life Cycle Companies (SDLCs)",
-        "isCorrect": false
-      }
+      "A_08_12": { "choice": "Application Service Providers (ASPs)", "isCorrect": true },
+      "B_08_12": { "choice": "Enterprise Resource Providers (ERPs)" },
+      "C_08_12": { "choice": "Information Technology Developers (ITDs)" },
+      "D_08_12": { "choice": "System Development Life Cycle Companies (SDLCs)" }
     }
   },
   "08_13": {
     "question": "If (a) the business need is common; (b) the skills needed are not strategic; (c) the time frame is short; it might be best to:",
     "choices": {
-      "A_08_13": {
-        "choice": "Use in-house / custom development",
-        "isCorrect": false
-      },
-      "B_08_13": {
-        "choice": "Outsource to India",
-        "isCorrect": false
-      },
-      "C_08_13": {
-        "choice": "Hire a vendor to write the code for you",
-        "isCorrect": false
-      },
-      "D_08_13": {
-        "choice": "Hire a consultant",
-        "isCorrect": false
-      },
-      "E_08_13": {
-        "choice": "Purchase a software package",
-        "isCorrect": true
-      }
+      "A_08_13": { "choice": "Use in-house / custom development" },
+      "B_08_13": { "choice": "Outsource to India" },
+      "C_08_13": { "choice": "Hire a vendor to write the code for you" },
+      "D_08_13": { "choice": "Hire a consultant" },
+      "E_08_13": { "choice": "Purchase a software package", "isCorrect": true }
     }
   },
   "08_14": {
     "question": "Backlogs and backlog creation are a CON when discussing custom development",
     "choices": {
-      "A_08_14": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_14": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_14": { "choice": "True", "isCorrect": true },
+      "B_08_14": { "choice": "False" }
     }
   },
   "08_15": {
     "question": "In terms of project management, which option might require excellent project management skills and a proven methodology?",
     "choices": {
-      "A_08_15": {
-        "choice": "Doing custom development",
-        "isCorrect": true
-      },
-      "B_08_15": {
-        "choice": "Buying a packaged solution",
-        "isCorrect": false
-      },
-      "C_08_15": {
-        "choice": "Buying an ERP system",
-        "isCorrect": false
-      },
-      "D_08_15": {
-        "choice": "Outsourcing to Nebraska",
-        "isCorrect": false
-      },
-      "E_08_15": {
-        "choice": "Outsourcing to India",
-        "isCorrect": false
-      }
+      "A_08_15": { "choice": "Doing custom development", "isCorrect": true },
+      "B_08_15": { "choice": "Buying a packaged solution" },
+      "C_08_15": { "choice": "Buying an ERP system" },
+      "D_08_15": { "choice": "Outsourcing to Nebraska" },
+      "E_08_15": { "choice": "Outsourcing to India" }
     }
   },
   "08_16": {
     "question": "Which of the following is normally NOT done in the design phase of the SDLC?",
     "choices": {
-      "A_08_16": {
-        "choice": "The physical data model is created",
-        "isCorrect": false
-      },
-      "B_08_16": {
-        "choice": "Decisions for hardware and software purchases are made",
-        "isCorrect": false
-      },
-      "C_08_16": {
-        "choice": "Cost / Benefits of the new system are carefully calculated",
-        "isCorrect": true
-      },
-      "D_08_16": {
-        "choice": "Logical DFDs and ERDs are converted into physical DFDs and ERDs",
-        "isCorrect": false
-      },
-      "E_08_16": {
-        "choice": "User interactions are planned out (inputs, outputs, user interfaces)",
-        "isCorrect": false
-      }
+      "A_08_16": { "choice": "The physical data model is created" },
+      "B_08_16": { "choice": "Decisions for hardware and software purchases are made" },
+      "C_08_16": { "choice": "Cost / Benefits of the new system are carefully calculated", "isCorrect": true },
+      "D_08_16": { "choice": "Logical DFDs and ERDs are converted into physical DFDs and ERDs" },
+      "E_08_16": { "choice": "User interactions are planned out (inputs, outputs, user interfaces)" }
     },
     "explanation": "Costs/benefits are calculated in the planning phase."
   },
   "08_17": {
     "question": "Packaged systems are used when:",
     "choices": {
-      "A_08_17": {
-        "choice": "The time frame is flexible",
-        "isCorrect": false
-      },
-      "B_08_17": {
-        "choice": "There is a desire to build in-house skills",
-        "isCorrect": false
-      },
-      "C_08_17": {
-        "choice": "The business need is not core to the business",
-        "isCorrect": false
-      },
-      "D_08_17": {
-        "choice": "The decision to outsource is strategic",
-        "isCorrect": false
-      },
-      "E_08_17": {
-        "choice": "The project has a project manager who can coordinate vendor efforts",
-        "isCorrect": true
-      }
+      "A_08_17": { "choice": "The time frame is flexible" },
+      "B_08_17": { "choice": "There is a desire to build in-house skills" },
+      "C_08_17": { "choice": "The business need is not core to the business" },
+      "D_08_17": { "choice": "The decision to outsource is strategic" },
+      "E_08_17": { "choice": "The project has a project manager who can coordinate vendor efforts", "isCorrect": true }
     },
     "explanation": "Packaged systems are used when the project has a project manager capable of overseeing and coordinating the vendor's efforts to ensure successful implementation. This allows the project manager to manage both the internal team and the external vendor, ensuring smooth integration and timely delivery."
   },
   "08_18": {
     "question": "The Design phase of the SDLC uses the requirements that were gathered during analysis to actually build (and code if necessary) the final system.",
     "choices": {
-      "A_08_18": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_08_18": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_08_18": { "choice": "True" },
+      "B_08_18": { "choice": "False", "isCorrect": true }
     },
     "explanation": "The Design phase uses the requirements and figures out <u>how</u> to fulfill them.<br>Actually doing it is the Implementation phase."
   },
   "08_19": {
     "question": "In regards to packaged software, the time frame to implement is flexible to long.",
     "choices": {
-      "A_08_19": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_08_19": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_08_19": { "choice": "True" },
+      "B_08_19": { "choice": "False", "isCorrect": true }
     },
     "explanation": "The time frame for packaged software is short. <b><figure 6.5<=\"\" b=\"\"></figure></b>"
   },
   "08_20": {
     "question": "For efficiency purposes, it is wise to do what when there is a basic software need to be satisfied?",
     "choices": {
-      "A_08_20": {
-        "choice": "Purchase a packaged system",
-        "isCorrect": true
-      },
-      "B_08_20": {
-        "choice": "Design a blueprint and contract an outside vendor to develop a program",
-        "isCorrect": false
-      },
-      "C_08_20": {
-        "choice": "Make do with the current software package",
-        "isCorrect": false
-      },
-      "D_08_20": {
-        "choice": "Utilize a professional consultant to develop a system of servers",
-        "isCorrect": false
-      },
-      "E_08_20": {
-        "choice": "Implement a company-wide project team to handle a custom software scripting",
-        "isCorrect": false
-      }
+      "A_08_20": { "choice": "Purchase a packaged system", "isCorrect": true },
+      "B_08_20": { "choice": "Design a blueprint and contract an outside vendor to develop a program" },
+      "C_08_20": { "choice": "Make do with the current software package" },
+      "D_08_20": { "choice": "Utilize a professional consultant to develop a system of servers" },
+      "E_08_20": { "choice": "Implement a company-wide project team to handle a custom software scripting" }
     }
   },
   "08_21": {
     "question": "The score column in the Alternative Matrix represents how easily specific criteria are met by the alternative.",
     "choices": {
-      "A_08_21": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_21": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_21": { "choice": "True", "isCorrect": true },
+      "B_08_21": { "choice": "False" }
     }
   },
   "08_22": {
     "question": "Custom development is used when:",
     "choices": {
-      "A_08_22": {
-        "choice": "The project has a project manager who can coordinate vendor efforts",
-        "isCorrect": false
-      },
-      "B_08_22": {
-        "choice": "The business need is not core to the business",
-        "isCorrect": false
-      },
-      "C_08_22": {
-        "choice": "The business need is unique",
-        "isCorrect": true
-      },
-      "D_08_22": {
-        "choice": "The time frame is short",
-        "isCorrect": false
-      },
-      "E_08_22": {
-        "choice": "The skills are not strategic",
-        "isCorrect": false
-      }
+      "A_08_22": { "choice": "The project has a project manager who can coordinate vendor efforts" },
+      "B_08_22": { "choice": "The business need is not core to the business" },
+      "C_08_22": { "choice": "The business need is unique", "isCorrect": true },
+      "D_08_22": { "choice": "The time frame is short" },
+      "E_08_22": { "choice": "The skills are not strategic" }
     }
   },
   "08_23": {
     "question": "Prototyping is the interface design step that often uncovers additional information that is needed in the system, leading to a revision of the physical DFDs or ERPs.",
     "choices": {
-      "A_08_23": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_08_23": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_08_23": { "choice": "True" },
+      "B_08_23": { "choice": "False", "isCorrect": true }
     },
     "explanation": "Trick question. It's revision of <b>ERDs</b>, not ERPs.<br><br><i>\"prototyping in the interface design step often uncovers additional information that is needed in the system, leading to a revision of the physical DFDs or ERDs\"</i> <b>(p. 205)</b>"
   },
   "08_24": {
     "question": "If the expertise needed to build a system are not readily available that is a good reason to buy a packaged software solution.",
     "choices": {
-      "A_08_24": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_08_24": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_08_24": { "choice": "True" },
+      "B_08_24": { "choice": "False", "isCorrect": true }
     },
     "explanation": "Outsourcing is a better option if you don't have the expertise, because with a packaged software you also have to integrate it, which is challenging."
   },
   "08_25": {
     "question": "CASE repository entries are updated to reflect specific technology decisions as they are made.",
     "choices": {
-      "A_08_25": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_25": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_25": { "choice": "True", "isCorrect": true },
+      "B_08_25": { "choice": "False" }
     }
   },
   "08_26": {
     "question": "Outsourcing is used when:",
     "choices": {
-      "A_08_26": {
-        "choice": "There is a desire to build in-house skills",
-        "isCorrect": false
-      },
-      "B_08_26": {
-        "choice": "In-house functional and technical skills exist",
-        "isCorrect": false
-      },
-      "C_08_26": {
-        "choice": "The business need is not core to the business",
-        "isCorrect": true
-      },
-      "D_08_26": {
-        "choice": "The project has a project manager who can coordinate vendor efforts",
-        "isCorrect": false
-      }
+      "A_08_26": { "choice": "There is a desire to build in-house skills" },
+      "B_08_26": { "choice": "In-house functional and technical skills exist" },
+      "C_08_26": { "choice": "The business need is not core to the business", "isCorrect": true },
+      "D_08_26": { "choice": "The project has a project manager who can coordinate vendor efforts" }
     },
     "multiSelect": true,
     "explanation": "See <b>figure 6-5, p. 213</b>"
@@ -523,155 +244,71 @@
   "08_27": {
     "question": "Application Software Providers (ASPs) should be utilized when considering non-core programming and/custom needs.",
     "choices": {
-      "A_08_27": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_27": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_27": { "choice": "True", "isCorrect": true },
+      "B_08_27": { "choice": "False" }
     }
   },
   "08_28": {
     "question": "Which is NOT a factor in choosing a development option?",
     "choices": {
-      "A_08_28": {
-        "choice": "Time frame",
-        "isCorrect": false
-      },
-      "B_08_28": {
-        "choice": "Data base normalization",
-        "isCorrect": true
-      },
-      "C_08_28": {
-        "choice": "Project skills",
-        "isCorrect": false
-      },
-      "D_08_28": {
-        "choice": "Project management",
-        "isCorrect": false
-      },
-      "E_08_28": {
-        "choice": "In-house experience",
-        "isCorrect": false
-      }
+      "A_08_28": { "choice": "Time frame" },
+      "B_08_28": { "choice": "Data base normalization", "isCorrect": true },
+      "C_08_28": { "choice": "Project skills" },
+      "D_08_28": { "choice": "Project management" },
+      "E_08_28": { "choice": "In-house experience" }
     }
   },
   "08_29": {
     "question": "A time and arrangements deal is considered what?",
     "choices": {
-      "A_08_29": {
-        "choice": "Very flexible",
-        "isCorrect": true
-      },
-      "B_08_29": {
-        "choice": "Cheaper than any other option",
-        "isCorrect": false
-      },
-      "C_08_29": {
-        "choice": "Always the best option for any project",
-        "isCorrect": false
-      },
-      "D_08_29": {
-        "choice": "Very rigid",
-        "isCorrect": false
-      },
-      "E_08_29": {
-        "choice": "Useless when considering a systems design",
-        "isCorrect": false
-      }
+      "A_08_29": { "choice": "Very flexible", "isCorrect": true },
+      "B_08_29": { "choice": "Cheaper than any other option" },
+      "C_08_29": { "choice": "Always the best option for any project" },
+      "D_08_29": { "choice": "Very rigid" },
+      "E_08_29": { "choice": "Useless when considering a systems design" }
     },
     "explanation": "A time and arrangements deal changes as the project's costs change. It's flexible!<br><br>(-&gt; How did you know I chose that option?)"
   },
   "08_30": {
     "question": "In the initial stage of design, what are business requirements converted into?",
     "choices": {
-      "A_08_30": {
-        "choice": "Computer Qualifications Checklist",
-        "isCorrect": false
-      },
-      "B_08_30": {
-        "choice": "Vanilla System",
-        "isCorrect": false
-      },
-      "C_08_30": {
-        "choice": "Work Order Summary",
-        "isCorrect": false
-      },
-      "D_08_30": {
-        "choice": "Hardware Blueprint",
-        "isCorrect": false
-      },
-      "E_08_30": {
-        "choice": "System Requirements",
-        "isCorrect": true
-      }
+      "A_08_30": { "choice": "Computer Qualifications Checklist" },
+      "B_08_30": { "choice": "Vanilla System" },
+      "C_08_30": { "choice": "Work Order Summary" },
+      "D_08_30": { "choice": "Hardware Blueprint" },
+      "E_08_30": { "choice": "System Requirements", "isCorrect": true }
     }
   },
   "08_31": {
     "question": "A reason to use custom development is to get exactly what you want?",
     "choices": {
-      "A_08_31": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_31": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_31": { "choice": "True", "isCorrect": true },
+      "B_08_31": { "choice": "False" }
     }
   },
   "08_32": {
     "question": "One systems development option is to let users build their own system using tools like Excel and Access, with support from the Microsoft help desk.",
     "choices": {
-      "A_08_32": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_08_32": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_08_32": { "choice": "True" },
+      "B_08_32": { "choice": "False", "isCorrect": true }
     }
   },
   "08_33": {
     "question": "The only skills that are applied during systems projects are functional.",
     "choices": {
-      "A_08_33": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_08_33": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_08_33": { "choice": "True" },
+      "B_08_33": { "choice": "False", "isCorrect": true }
     },
     "explanation": "<i>\"a variety of skills—­technical, interpersonal, functional, project management, modeling—­all must be in place for the project to move ahead smoothly\"</i> <b>(p. 208)</b><br><br><i>\"The skills that are applied during projects are either technical (e.g., Java, SQL) or functional (e.g., electronic commerce)\"</i> <b>(p. 215)</b><br><br>Functional skills is definitely not the only type. But these sentences seem to contradict (are interpersonal skills applied or not?). I don't know.<br><br>Also I don't know what \"functional skills\" even is. I don't think it's ever explained in the textbook. <span style=\"color:red\">Please edit this if you know.</span>"
   },
   "08_34": {
     "question": "Fixed-price contracts are considered which of the following?",
     "choices": {
-      "A_08_34": {
-        "choice": "Very rigid",
-        "isCorrect": true
-      },
-      "B_08_34": {
-        "choice": "Very flexible",
-        "isCorrect": false
-      },
-      "C_08_34": {
-        "choice": "Always the best option for any project",
-        "isCorrect": false
-      },
-      "D_08_34": {
-        "choice": "Always cheaper than any other option",
-        "isCorrect": false
-      },
-      "E_08_34": {
-        "choice": "Useless when considering a systems design",
-        "isCorrect": false
-      }
+      "A_08_34": { "choice": "Very rigid", "isCorrect": true },
+      "B_08_34": { "choice": "Very flexible" },
+      "C_08_34": { "choice": "Always the best option for any project" },
+      "D_08_34": { "choice": "Always cheaper than any other option" },
+      "E_08_34": { "choice": "Useless when considering a systems design" }
     },
     "explanation": "In fixed-price contracts, the person paying the provider only pays a certain amount. If the project ends up costing more than agreed upon, the provider has to absorb the costs. This makes the contract very rigid."
   },
@@ -679,273 +316,135 @@
     "question": "What makes systems integration so difficult?",
     "multiSelect": true,
     "choices": {
-      "A_08_35": {
-        "choice": "Creating a ghost drive to house the old information",
-        "isCorrect": false
-      },
-      "B_08_35": {
-        "choice": "Bringing legacy system data and new data together",
-        "isCorrect": true
-      },
-      "C_08_35": {
-        "choice": "Installing new software packages on older machines",
-        "isCorrect": false
-      },
-      "D_08_35": {
-        "choice": "Finding the original data to install on the new server",
-        "isCorrect": false
-      }
+      "A_08_35": { "choice": "Creating a ghost drive to house the old information" },
+      "B_08_35": { "choice": "Bringing legacy system data and new data together", "isCorrect": true },
+      "C_08_35": { "choice": "Installing new software packages on older machines" },
+      "D_08_35": { "choice": "Finding the original data to install on the new server" }
     }
   },
   "08_36": {
     "question": "In a custom software case, all parts of the system need to be completely customized and scripted to the company&#39;s specifications including ancillary software to the current system.",
     "choices": {
-      "A_08_36": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_08_36": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_08_36": { "choice": "True" },
+      "B_08_36": { "choice": "False", "isCorrect": true }
     }
   },
   "08_37": {
     "question": "A department head is apprehensive as to what implementation system he should employ. The best method of ensuring a successful and efficient installation of the new systems would be to utilize an alternative matrix.",
     "choices": {
-      "A_08_37": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_37": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_37": { "choice": "True", "isCorrect": true },
+      "B_08_37": { "choice": "False" }
     }
   },
   "08_38": {
     "question": "An IT department has just received its newest onslaught of system maintenance requests from the finance, marketing, and accounting divisions and has added them to the growing list of fixes needed. Tomorrow, there will be a request placed by the CTO that there is to be a new processing system put into place that will take the place of the current MS Word system. The best alternative is to utilize a custom program that will replace the original program.",
     "choices": {
-      "A_08_38": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_08_38": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_08_38": { "choice": "True" },
+      "B_08_38": { "choice": "False", "isCorrect": true }
     },
     "explanation": "A word processor is a common business need. It's better to buy it."
   },
   "08_39": {
     "question": "An advantage of custom development might be:",
     "choices": {
-      "A_08_39": {
-        "choice": "The low risk factor",
-        "isCorrect": false
-      },
-      "B_08_39": {
-        "choice": "You get a system that is tailored to the current business and meets specific needs",
-        "isCorrect": true
-      },
-      "C_08_39": {
-        "choice": "The ability for in-house developers to work on systems that are in new programming languages and in technologies that are unknown to them prior to the development",
-        "isCorrect": false
-      },
-      "D_08_39": {
-        "choice": "The low cost (as compared to buying a package)",
-        "isCorrect": false
-      },
-      "E_08_39": {
-        "choice": "The rapid development of custom systems",
-        "isCorrect": false
-      }
+      "A_08_39": { "choice": "The low risk factor" },
+      "B_08_39": { "choice": "You get a system that is tailored to the current business and meets specific needs", "isCorrect": true },
+      "C_08_39": { "choice": "The ability for in-house developers to work on systems that are in new programming languages and in technologies that are unknown to them prior to the development" },
+      "D_08_39": { "choice": "The low cost (as compared to buying a package)" },
+      "E_08_39": { "choice": "The rapid development of custom systems" }
     },
     "explanation": "Custom development is good for solving unique business needs, and getting <i>exactly</i> what you want in a system. <b>(module 8, slides 22 & 24)"
   },
   "08_40": {
     "question": "Where are the decisions stored that are made regarding the hardware and software that will be purchased to support the new system?",
     "choices": {
-      "A_08_40": {
-        "choice": "Order Manifest",
-        "isCorrect": false
-      },
-      "B_08_40": {
-        "choice": "Hardware and Software Specification",
-        "isCorrect": true
-      },
-      "C_08_40": {
-        "choice": "President's Office",
-        "isCorrect": false
-      },
-      "D_08_40": {
-        "choice": "Hardware Sales Receipt",
-        "isCorrect": false
-      },
-      "E_08_40": {
-        "choice": "Suppliers' Computer System",
-        "isCorrect": false
-      }
+      "A_08_40": { "choice": "Order Manifest" },
+      "B_08_40": { "choice": "Hardware and Software Specification", "isCorrect": true },
+      "C_08_40": { "choice": "President's Office" },
+      "D_08_40": { "choice": "Hardware Sales Receipt" },
+      "E_08_40": { "choice": "Suppliers' Computer System" }
     }
   },
   "08_41": {
     "question": "If (a) the business need is unique, (b) there is a desire to build in-house skills; (c) the time frame is flexible, it might be best to:",
     "choices": {
-      "A_08_41": {
-        "choice": "Purchase a software package",
-        "isCorrect": false
-      },
-      "B_08_41": {
-        "choice": "Hire a consultant",
-        "isCorrect": false
-      },
-      "C_08_41": {
-        "choice": "Outsource to India",
-        "isCorrect": false
-      },
-      "D_08_41": {
-        "choice": "Do in-house / custom development",
-        "isCorrect": true
-      },
-      "E_08_41": {
-        "choice": "Buy an ERP system",
-        "isCorrect": false
-      }
+      "A_08_41": { "choice": "Purchase a software package" },
+      "B_08_41": { "choice": "Hire a consultant" },
+      "C_08_41": { "choice": "Outsource to India" },
+      "D_08_41": { "choice": "Do in-house / custom development", "isCorrect": true },
+      "E_08_41": { "choice": "Buy an ERP system" }
     },
     "explanation": "- A unique business need means a solution likely isn't already out there<br>- Custom development is the best option for building in-house skills<br>- A flexible time frame allows for enough time to develop a custom solution"
   },
   "08_42": {
     "question": "Time and arrangements deals are potentially more expensive if the service provider requires unforeseen resources to complete the project on time.",
     "choices": {
-      "A_08_42": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_42": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_42": { "choice": "True", "isCorrect": true },
+      "B_08_42": { "choice": "False" }
     },
     "explanation": "Time and arrangement deals mean you pay as much as needed to finish the project."
   },
   "08_43": {
     "question": "Outsourcing requires the least in-house resources.",
     "choices": {
-      "A_08_43": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_43": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_43": { "choice": "True", "isCorrect": true },
+      "B_08_43": { "choice": "False" }
     },
     "explanation": "Custom development requires you create the software in-house.<br>Packaged software usually requires some modification to the package.<br>Outsourcing completely takes the development off your hands.<br><b>(module 8, slides 22 and 24)"
   },
   "08_44": {
     "question": "A reason to use a packaged software solution is when there is no need to &quot;reinvent the wheel&quot;",
     "choices": {
-      "A_08_44": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_44": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_44": { "choice": "True", "isCorrect": true },
+      "B_08_44": { "choice": "False" }
     }
   },
   "08_45": {
     "question": "In regards to packaged software, the business need is something that is common.",
     "choices": {
-      "A_08_45": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_45": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_45": { "choice": "True", "isCorrect": true },
+      "B_08_45": { "choice": "False" }
     }
   },
   "08_46": {
     "question": "The Design phase of the SDLC builds on the logical designs from the analysis phase (like logical ERDs and logical DFDs)",
     "choices": {
-      "A_08_46": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_46": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_46": { "choice": "True", "isCorrect": true },
+      "B_08_46": { "choice": "False" }
     },
     "explanation": "Logical data models are conceptual, and are just made to figure out the system's data requirements. <br>Physical data models take those concepts and figure out how to actually <i>meet</i> those requirements efficiently."
   },
   "08_47": {
     "question": "In regards to packaged software, in most cases, the software is a perfect fit for the companies need.",
     "choices": {
-      "A_08_47": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_08_47": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_08_47": { "choice": "True" },
+      "B_08_47": { "choice": "False", "isCorrect": true }
     },
     "explanation": "Packaged software is a general solution; each system that uses that solution will have slightly different requirements for that part of their system. Don't expect it to perfectly fit all of your requirements."
   },
   "08_48": {
     "question": "One problem with using packages software systems is:",
     "choices": {
-      "A_08_48": {
-        "choice": "The company has to accept the functionality that is provided with the system",
-        "isCorrect": true
-      },
-      "B_08_48": {
-        "choice": "Most software packages allow for some customization",
-        "isCorrect": false
-      },
-      "C_08_48": {
-        "choice": "There are many good software packages that are reasonable in price",
-        "isCorrect": false
-      },
-      "D_08_48": {
-        "choice": "It takes a very long time to get the system and get it installed",
-        "isCorrect": false
-      },
-      "E_08_48": {
-        "choice": "Many common software packages have been written and tested and are readily available",
-        "isCorrect": false
-      }
+      "A_08_48": { "choice": "The company has to accept the functionality that is provided with the system", "isCorrect": true },
+      "B_08_48": { "choice": "Most software packages allow for some customization" },
+      "C_08_48": { "choice": "There are many good software packages that are reasonable in price" },
+      "D_08_48": { "choice": "It takes a very long time to get the system and get it installed" },
+      "E_08_48": { "choice": "Many common software packages have been written and tested and are readily available" }
     }
   },
   "08_49": {
     "question": "Building a system in-house builds technical skills and functional knowledge that one may not want to allow to walk out of the door.",
     "choices": {
-      "A_08_49": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_49": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_49": { "choice": "True", "isCorrect": true },
+      "B_08_49": { "choice": "False" }
     },
     "explanation": "In-house experience is extremely valuable; the skills your system developers have are <i>yours</i>. Keeping those skills in-house may give you a competitive edge."
   },
   "08_50": {
     "question": "In the analysis phase, architecture decisions are made and written up in the &#39;hardware and software specifications&#39;.",
     "choices": {
-      "A_08_50": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_08_50": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_08_50": { "choice": "True" },
+      "B_08_50": { "choice": "False", "isCorrect": true }
     },
     "explanation": "Hardware and Software Specifications are done in the design phase."
   },
@@ -953,246 +452,120 @@
     "question": "Workarounds are what?",
     "multiSelect": true,
     "choices": {
-      "A_08_51": {
-        "choice": "Designed by the vendor",
-        "isCorrect": false
-      },
-      "B_08_51": {
-        "choice": "Enterprise Wide Software Packages that are designed for satellite use",
-        "isCorrect": false
-      },
-      "C_08_51": {
-        "choice": "Not supported by a vendor who supplied the packaged software",
-        "isCorrect": true
-      },
-      "D_08_51": {
-        "choice": "Created to interface two software packages that are compatible with each other",
-        "isCorrect": false
-      }
+      "A_08_51": { "choice": "Designed by the vendor" },
+      "B_08_51": { "choice": "Enterprise Wide Software Packages that are designed for satellite use" },
+      "C_08_51": { "choice": "Not supported by a vendor who supplied the packaged software", "isCorrect": true },
+      "D_08_51": { "choice": "Created to interface two software packages that are compatible with each other" }
     },
     "explanation": "Workarounds are custom code designed to - heh - <i>work around</i> the limitations of a packaged software solution. Because they aren't supplied by that package's vendor, they are not supported by them. Workarounds can also break as the software updates, and the vendor will <i>not</i> help you if your system breaks."
   },
   "08_52": {
     "question": "Which of the following lists indicates the correct ordering of deliverables in a system specification document?",
     "choices": {
-      "A_08_52": {
-        "choice": "Program Design Specifications, Physical Data Model, Data Storage Design, Architecture Design",
-        "isCorrect": false
-      },
-      "B_08_52": {
-        "choice": "Update CASE Repository Entries, Update CRUD Matrix, Interface Design, Architecture Design",
-        "isCorrect": false
-      },
-      "C_08_52": {
-        "choice": "System Acquisition Weighted Alternative Matrix, Interface Design, Physical Data Model Data Storage Design",
-        "isCorrect": true
-      },
-      "D_08_52": {
-        "choice": "Hardware and Software Specifications, Interface Design, Data Storage Design, Architecture Design",
-        "isCorrect": false
-      },
-      "E_08_52": {
-        "choice": "Data Storage Design, Interface Design, Architecture Design, Updated Crud Matrix",
-        "isCorrect": false
-      }
+      "A_08_52": { "choice": "Program Design Specifications, Physical Data Model, Data Storage Design, Architecture Design" },
+      "B_08_52": { "choice": "Update CASE Repository Entries, Update CRUD Matrix, Interface Design, Architecture Design" },
+      "C_08_52": { "choice": "System Acquisition Weighted Alternative Matrix, Interface Design, Physical Data Model Data Storage Design", "isCorrect": true },
+      "D_08_52": { "choice": "Hardware and Software Specifications, Interface Design, Data Storage Design, Architecture Design" },
+      "E_08_52": { "choice": "Data Storage Design, Interface Design, Architecture Design, Updated Crud Matrix" }
     },
     "explanation": "See <b>figure 6-1</b>.<br>Note that the question asks for the \"correct ordering\", not just any list of deliverables."
   },
   "08_53": {
     "question": "During the initial part of design, the project team converts the business requirements for the system into system requirements.",
     "choices": {
-      "A_08_53": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_53": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_53": { "choice": "True", "isCorrect": true },
+      "B_08_53": { "choice": "False" }
     }
   },
   "08_54": {
     "question": "In regards to packaged software, it works best where the company has a unique need.",
     "choices": {
-      "A_08_54": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_08_54": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_08_54": { "choice": "True" },
+      "B_08_54": { "choice": "False", "isCorrect": true }
     },
     "explanation": "Unique needs should use Custom Development.<br>See <a target=\"_blank\" href=\"https://docs.google.com/document/d/1te3-P5Rm_u4fdDsJFVOWigXhoSgLdk8tMQN2CvaR7pk/edit?tab=t.0#heading=h.rfnjeudh6hzh\">the table under \"Criteria\"</a>"
   },
   "08_55": {
     "question": "Custom development that can be achieved by the in-house team and core business practices are both examples of times when outsourcing is <u>not</u> an option.",
     "choices": {
-      "A_08_55": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_55": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_55": { "choice": "True", "isCorrect": true },
+      "B_08_55": { "choice": "False" }
     },
     "explanation": "Anything <b>core</b> to the business should not be outsourced.<br>See <a href=\"https://docs.google.com/document/d/1te3-P5Rm_u4fdDsJFVOWigXhoSgLdk8tMQN2CvaR7pk/edit?tab=t.0#heading=h.rfnjeudh6hzh\">table under <u>Criteria</u></a>"
   },
   "08_56": {
     "question": "The only skills that are applied during systems projects are technical.",
     "choices": {
-      "A_08_56": {
-        "choice": "True",
-        "isCorrect": false
-      },
-      "B_08_56": {
-        "choice": "False",
-        "isCorrect": true
-      }
+      "A_08_56": { "choice": "True" },
+      "B_08_56": { "choice": "False", "isCorrect": true }
     },
     "explanation": "<i>\"a variety of skills—­technical, interpersonal, functional, project management, modeling—­all must be in place for the project to move ahead smoothly\"</i> <b>(p. 208)</b><br><br><i>\"The skills that are applied during projects are either technical (e.g., Java, SQL) or functional (e.g., electronic commerce)\"</i> <b>(p. 215)</b><br><br>Technical skills is definitely not the only type. But these sentences seem to contradict (are interpersonal skills applied or not?). <span style=\"color:red\">Please edit this if you know what's going on.<span></span></span>"
   },
   "08_57": {
     "question": "During the design phase, the project team carefully considers the nonfunctional business requirements (such as performance, cultural and political aspects).",
     "choices": {
-      "A_08_57": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_57": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_57": { "choice": "True", "isCorrect": true },
+      "B_08_57": { "choice": "False" }
     },
     "explanation": "<i>\"The project team carefully considers the nonfunctional business requirements that were identified during analysis.\"</i> <b>(p. 205)</b><br><br>For example, you must consider how fast the system should operate and what its availability should be. These are non-functional requirements, and they influence how you would design the system."
   },
   "08_58": {
     "question": "Requests for Proposals (RFPs) serve what purpose?",
     "choices": {
-      "A_08_58": {
-        "choice": "Integrate systems with one another",
-        "isCorrect": false
-      },
-      "B_08_58": {
-        "choice": "Develop morale amongst managers",
-        "isCorrect": false
-      },
-      "C_08_58": {
-        "choice": "Solicit information from providers",
-        "isCorrect": true
-      },
-      "D_08_58": {
-        "choice": "Create synergy amongst staff members",
-        "isCorrect": false
-      },
-      "E_08_58": {
-        "choice": "Engage mobile computers with mainframe technology",
-        "isCorrect": false
-      }
+      "A_08_58": { "choice": "Integrate systems with one another" },
+      "B_08_58": { "choice": "Develop morale amongst managers" },
+      "C_08_58": { "choice": "Solicit information from providers", "isCorrect": true },
+      "D_08_58": { "choice": "Create synergy amongst staff members" },
+      "E_08_58": { "choice": "Engage mobile computers with mainframe technology" }
     }
   },
   "08_59": {
     "question": "If on a limited time budget, the best way to be sure you remain efficient and effective in designing a system is to utilize what?",
     "choices": {
-      "A_08_59": {
-        "choice": "Not Attempt the Project",
-        "isCorrect": false
-      },
-      "B_08_59": {
-        "choice": "Porters 5 Forces Model",
-        "isCorrect": false
-      },
-      "C_08_59": {
-        "choice": "RAD and Timeboxing Techniques",
-        "isCorrect": true
-      },
-      "D_08_59": {
-        "choice": "Hire/Fire Motivational Theory",
-        "isCorrect": false
-      },
-      "E_08_59": {
-        "choice": "Outsourcing Model",
-        "isCorrect": false
-      }
+      "A_08_59": { "choice": "Not Attempt the Project" },
+      "B_08_59": { "choice": "Porters 5 Forces Model" },
+      "C_08_59": { "choice": "RAD and Timeboxing Techniques", "isCorrect": true },
+      "D_08_59": { "choice": "Hire/Fire Motivational Theory" },
+      "E_08_59": { "choice": "Outsourcing Model" }
     },
     "explanation": "<i>\"If time pressure is intense, use rapid application development (RAD) techniques and timeboxing</i>\" <b>(practical tip 6-1, p. 207)</b><br><br>Outsourcing is false because it's not necessarily fast. It's only fast if there's a service provider that already has what you need, otherwise it could take as long as custom development. <b>(p. 215)</b>"
   },
   "08_60": {
     "question": "A common need to the business should be satisfied by contracting with an Application Service Provider (ASP).",
     "choices": {
-      "A_08_60": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_60": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_60": { "choice": "True", "isCorrect": true },
+      "B_08_60": { "choice": "False" }
     }
   },
   "08_61": {
     "question": "The decision to make, to buy, or to outsource influences the design tasks that are performed throughout the rest of the design phase.",
     "choices": {
-      "A_08_61": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_61": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_61": { "choice": "True", "isCorrect": true },
+      "B_08_61": { "choice": "False" }
     }
   },
   "08_62": {
     "question": "System requirements are communicated through a collection of design documents and physical processes and data models.",
     "choices": {
-      "A_08_62": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_62": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_62": { "choice": "True", "isCorrect": true },
+      "B_08_62": { "choice": "False" }
     }
   },
   "08_63": {
     "question": "Another name for custom development might be what?",
     "choices": {
-      "A_08_63": {
-        "choice": "CASE tools",
-        "isCorrect": false
-      },
-      "B_08_63": {
-        "choice": "Offshore outsourcing",
-        "isCorrect": false
-      },
-      "C_08_63": {
-        "choice": "Package software",
-        "isCorrect": false
-      },
-      "D_08_63": {
-        "choice": "In-house development",
-        "isCorrect": true
-      },
-      "E_08_63": {
-        "choice": "Vendor supplied in-house consulting",
-        "isCorrect": false
-      }
+      "A_08_63": { "choice": "CASE tools" },
+      "B_08_63": { "choice": "Offshore outsourcing" },
+      "C_08_63": { "choice": "Package software" },
+      "D_08_63": { "choice": "In-house development", "isCorrect": true },
+      "E_08_63": { "choice": "Vendor supplied in-house consulting" }
     }
   },
   "08_64": {
     "question": "One systems development option is to have a system developed by using an outsourcing strategy.",
     "choices": {
-      "A_08_64": {
-        "choice": "True",
-        "isCorrect": true
-      },
-      "B_08_64": {
-        "choice": "False",
-        "isCorrect": false
-      }
+      "A_08_64": { "choice": "True", "isCorrect": true },
+      "B_08_64": { "choice": "False" }
     }
   }
 }
