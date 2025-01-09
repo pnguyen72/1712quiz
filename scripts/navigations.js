@@ -44,8 +44,15 @@ function licenseGrantException(prompt) {
 }
 
 function initalizeSelections() {
-  const exam = localStorage.getItem("exam") ?? "midterm";
-  document.getElementById(exam).click();
+  generateExamSelection();
+
+  const defaultExam = Object.keys(modulesNames)[0];
+  const exam = localStorage.getItem("exam") ?? defaultExam;
+  if (document.getElementById(exam)) {
+    document.getElementById(exam).click();
+  } else {
+    document.getElementById(defaultExam).click();
+  }
 
   const questionsCount = localStorage.getItem("questions");
   if (questionsCount) {

@@ -1,15 +1,38 @@
+function generateExamSelection() {
+  const selections = document.createElement("ul");
+  if (Object.keys(modulesNames).length < 2) {
+    examSelection.style.display = "none";
+  }
+
+  let index = 1;
+  for (const exam in modulesNames) {
+    const choiceInput = document.createElement("input");
+    choiceInput.id = exam;
+    choiceInput.type = "radio";
+    choiceInput.name = "exam";
+    choiceInput.setAttribute("index", index);
+    index += modulesNames[exam].length;
+
+    const choiceText = document.createElement("span");
+    choiceText.innerText = exam;
+
+    const choiceLabel = document.createElement("label");
+    choiceLabel.appendChild(choiceInput);
+    choiceLabel.appendChild(choiceText);
+
+    const choice = document.createElement("li");
+    choice.appendChild(choiceLabel);
+    selections.appendChild(choice);
+  }
+  examSelection.appendChild(selections);
+}
+
 function generateModuleSelection() {
   modulesSelectBoxes = [];
 
-  let indexOffset;
-  let selectedModulesNames;
-  if (examSelection.querySelector("input:checked").id == "midterm") {
-    indexOffset = 1;
-    selectedModulesNames = modulesNames.midterm;
-  } else {
-    indexOffset = 1 + modulesNames.midterm.length;
-    selectedModulesNames = modulesNames.final;
-  }
+  const selectedExam = examSelection.querySelector("input:checked");
+  const selectedModulesNames = modulesNames[selectedExam.id];
+  const indexOffset = parseInt(selectedExam.getAttribute("index"));
 
   const modulesList = document.createElement("ul");
   modulesList.id = "modules-list";

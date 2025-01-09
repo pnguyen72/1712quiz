@@ -10,10 +10,13 @@ const db = firebase.firestore();
 
 function loadData() {
   unfinishedAttempts.load();
-  return _loadmodulesNamess().then((modules) => {
+  return _loadModulesNames().then((modules) => {
     modulesNames = modules;
     const promises = [];
-    for (let i = 1; i <= modules.midterm.length + modules.final.length; ++i) {
+    const numberOfModules = Object.values(modules)
+      .map((module) => module.length)
+      .reduce((a, b) => a + b, 0);
+    for (let i = 1; i <= numberOfModules; ++i) {
       promises.push(_loadModule(String(i).padStart(2, "0")));
     }
     return Promise.all(promises);
@@ -185,7 +188,7 @@ const unfinishedAttempts = {
   },
 };
 
-function _loadmodulesNamess() {
+function _loadModulesNames() {
   return fetch("./data/modules.json").then((response) => response.json());
 }
 

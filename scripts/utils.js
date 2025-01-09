@@ -74,10 +74,6 @@ function search(collection, item, map = (i) => i) {
   return out;
 }
 
-function sum(array) {
-  return array.reduce((a, b) => a + b, 0);
-}
-
 function initializeHeight(textarea) {
   const tempDiv = document.createElement("div");
   tempDiv.style.fontSize = getComputedStyle(textarea).fontSize;

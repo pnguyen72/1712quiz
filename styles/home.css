@@ -27,6 +27,10 @@
       margin: 0.5rem 0;
     }
 
+    #exam-selection input + span {
+      text-transform: capitalize;
+    }
+
     #module-selection {
       #coverage {
         color: gray;
