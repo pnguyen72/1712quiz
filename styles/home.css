@@ -33,15 +33,8 @@
         margin-top: 3rem;
       }
 
-      @media (width < 900px) {
-        margin-top: 2rem;
-        &:not([visible]) + #module-selection {
-          margin-top: 2.5rem;
-        }
-      }
-
       @media (width < 600px) {
-        margin-top: 1.5rem;
+        margin-top: 2rem;
         &:not([visible]) + #module-selection {
           margin-top: 2rem;
         }
