@@ -6,7 +6,7 @@ firebase.initializeApp({
   messagingSenderId: "85405487202",
   appId: "1:85405487202:web:208def2286c1f22c03c13b",
 });
-const db = firebase.firestore();
+const db = firebase.firestore().collection("1712");
 
 function loadData() {
   unfinishedAttempts.load();
@@ -100,7 +100,7 @@ function explain(question) {
   if (!explainChoice.checked) return;
 
   const questionId = question.id;
-  const doc = db.collection("explanations").doc(questionId);
+  const doc = db.doc(questionId);
   doc.onSnapshot((snapshot) => {
     const explanation = question.querySelector(".explanation");
     if (explanation.tagName.toLowerCase() == "textarea") return;
@@ -124,7 +124,7 @@ function explain(question) {
 }
 
 function submitExplanation(questionId, questionText, explanationText) {
-  const doc = db.collection("explanations").doc(questionId);
+  const doc = db.doc(questionId);
   if (explanationText) {
     return doc.set({ question: questionText, explanation: explanationText });
   } else {
@@ -133,7 +133,7 @@ function submitExplanation(questionId, questionText, explanationText) {
 }
 
 function editSignal(questionId, isEditing) {
-  const doc = db.collection("explanations").doc(questionId);
+  const doc = db.doc(questionId);
   if (isEditing) {
     doc.set({ editing: Date.now() }, { merge: true });
   } else {
