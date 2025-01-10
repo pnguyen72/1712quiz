@@ -257,7 +257,7 @@
       "A_10_27": { "choice": "True" },
       "B_10_27": { "choice": "False", "isCorrect": true }
     },
-    "explanation": "While the textbook only offhandedly mentions user experience, it mentions UX is <i>\"where users’ feelings, motivations and values are considered as well as efficiency, effectiveness and satisfaction.\"</i> (<b>p.  269</b>)<br><br>Minimizing clicks is part of an efficient UI design, but it's only <i>part</i> of the UX, not the whole thing."
+    "explanation": "Minimizing clicks is only one rule of efficient UI design, which is only part of the UX.<br><br>UX is <i>\"where users’ feelings, motivations and values are considered as well as efficiency, effectiveness and satisfaction.\"</i> (<b>p.  269</b>)"
   },
   "10_28": {
     "question": "Which is NOT true about the content awareness design principle?",

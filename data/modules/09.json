@@ -395,7 +395,7 @@
       "C_09_44": { "choice": "DSL", "isCorrect": true }
     },
     "multiSelect": true,
-    "explanation": "<i>\"The network that connects the computers can vary [...] such as cable modem, DSL, or T1 circuits, to high-­speed always-­on Ethernet, T3, or ATM circuits.\"</i> <b>(p. 224)</b>"
+    "explanation": "<i>\"The network that connects the computers can vary [...] such as cable modem, DSL, or T1 circuits, to high-­speed always-­on Ethernet, T3, or ATM circuits.\"</i> <b>(p. 224)</b><br><br>I don't think we ever learned what T2 is."
   },
   "09_45": {
     "question": "An example of making an unstated norm explicit would be to make an input field explicitly defined, such as a date will use month-day-year format.",
