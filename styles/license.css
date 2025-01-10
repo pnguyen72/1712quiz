@@ -88,47 +88,57 @@
 }
 
 @media (aspect-ratio < 1.2) {
-  #home-page > h1 {
-    display: block;
-  }
-
-  #main {
-    flex-direction: column-reverse;
-
-    & > h1 {
+  #home-page:has(#license-notice[visible]) {
+    > h1 {
       display: block;
     }
-    form > h1 {
-      display: none;
-    }
 
-    #license-notice {
-      height: auto;
-      width: calc(100vw-6rem);
-      max-width: 450px;
-      margin: 0;
+    #main {
+      flex-direction: column-reverse;
 
-      #hawaiian {
-        width: 100%;
+      & > h1 {
+        display: block;
       }
-      #license-text {
-        font-size: min(6vw, 36px);
-        bottom: min(10vw, 60px);
+      form > h1 {
+        display: none;
       }
-      #license-agree-btn {
-        bottom: min(3vw, 20px);
-        height: min(10vw, 60px);
 
-        #license-agree-text {
-          font-size: min(5vw, 36px);
+      #license-notice {
+        height: auto;
+        width: calc(100vw-6rem);
+        max-width: 450px;
+        margin: 0;
+
+        #hawaiian {
+          width: 100%;
+        }
+        #license-text {
+          font-size: min(6vw, 36px);
+          bottom: min(10vw, 60px);
+        }
+        #license-agree-btn {
+          bottom: min(3vw, 20px);
+          height: min(10vw, 60px);
+
+          #license-agree-text {
+            font-size: min(5vw, 36px);
+          }
+        }
+        #license-disagree-btn {
+          bottom: min(2vw, 0.75rem);
+          right: min(2vw, 0.75rem);
+
+          #license-disagree-text {
+            font-size: min(1.5vw, 0.5rem);
+          }
         }
       }
-      #license-disagree-btn {
-        bottom: min(2vw, 0.75rem);
-        right: min(2vw, 0.75rem);
 
-        #license-disagree-text {
-          font-size: min(1.5vw, 0.5rem);
+      #exam-selection {
+        margin-top: 1rem;
+
+        &:not([visible]) + #module-selection {
+          margin-top: 1rem;
         }
       }
     }

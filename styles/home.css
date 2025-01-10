@@ -5,7 +5,7 @@
       font-size: 1.75rem;
     }
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   form {
@@ -27,8 +27,29 @@
       margin: 0.5rem 0;
     }
 
-    #exam-selection input + span {
-      text-transform: capitalize;
+    #exam-selection {
+      margin-top: 2.5rem;
+      &:not([visible]) + #module-selection {
+        margin-top: 3rem;
+      }
+
+      @media (width < 900px) {
+        margin-top: 2rem;
+        &:not([visible]) + #module-selection {
+          margin-top: 2.5rem;
+        }
+      }
+
+      @media (width < 600px) {
+        margin-top: 1.5rem;
+        &:not([visible]) + #module-selection {
+          margin-top: 2rem;
+        }
+      }
+
+      input + span {
+        text-transform: capitalize;
+      }
     }
 
     #module-selection {

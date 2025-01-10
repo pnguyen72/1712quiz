@@ -1,7 +1,9 @@
 function generateExamSelection() {
   const selections = document.createElement("ul");
   if (Object.keys(modulesNames).length < 2) {
-    examSelection.style.display = "none";
+    hide(examSelection);
+  } else {
+    unhide(examSelection);
   }
 
   let index = 1;
