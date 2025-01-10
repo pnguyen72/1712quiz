@@ -60,10 +60,6 @@
     @media (width >= 900px) {
       padding-inline-start: 1.75rem;
     }
-
-    li {
-      display: grid;
-    }
   }
 
   .explanation-container {
@@ -196,6 +192,12 @@
         right: 4.2rem;
       }
     }
+  }
+}
+
+#quiz[submitted="false"] {
+  li {
+    display: grid;
   }
 }
 
