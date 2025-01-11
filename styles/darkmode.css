@@ -70,8 +70,6 @@ td {
 }
 
 .explanation-container {
-  padding-left: 4px;
-
   div.explanation:not(.empty) {
     color: hsl(60, 90%, 80%);
 
@@ -89,16 +87,14 @@ td {
 #quiz[submitted="true"] {
   .question-choices {
     li:has(+ li.correct) {
-      margin-bottom: 4px;
+      margin-bottom: calc(0.4rem - 3px);
     }
 
     li.correct {
-      margin-left: 4px;
-      margin-top: 4px;
-      margin-bottom: 4px;
+      margin: calc(0.4rem - 3px);
 
       label {
-        padding: 4px;
+        padding: 3px;
         border-radius: 6px;
         background-color: #1ed96f24;
         color: #11ce73;
@@ -106,7 +102,7 @@ td {
     }
 
     li.correct + li {
-      margin-top: 4px;
+      margin-top: calc(0.4rem - 3px);
     }
   }
 
@@ -123,7 +119,8 @@ td {
 .question {
   @media not print {
     .question-title {
-      padding: 4px;
+      margin-left: -3px;
+      padding: 3px;
       border-radius: 6px;
     }
 

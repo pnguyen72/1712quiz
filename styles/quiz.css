@@ -1,8 +1,8 @@
 .question {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.6rem;
 
   &:last-child {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
   }
 
   &.unsure .question-title {
@@ -41,7 +41,7 @@
   }
 
   .question-body {
-    margin: 0.5rem 0;
+    margin: 0.4rem 0;
   }
 
   figure {
@@ -52,7 +52,7 @@
   }
 
   ul {
-    margin: 0.75rem 0;
+    margin: 0.6rem 0;
 
     @media (width >= 750px) {
       padding-inline-start: 1.5rem;
@@ -64,8 +64,8 @@
 
   .explanation-container {
     display: none;
-    margin-left: 2.25rem;
-    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-top: 0.6rem;
     width: calc(100% - 2.25rem);
 
     div.explanation {
@@ -115,7 +115,7 @@
     }
 
     @media (width < 900px) {
-      margin-left: 2rem;
+      margin-left: 1.75rem;
       width: calc(100% - 2rem);
     }
 
