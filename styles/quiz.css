@@ -109,6 +109,11 @@
       }
     }
 
+    textarea.explanation {
+      font-family: sans-serif;
+      font-size: 1rem !important;
+    }
+
     @media (width < 900px) {
       margin-left: 2rem;
       width: calc(100% - 2rem);
