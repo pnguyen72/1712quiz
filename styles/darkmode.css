@@ -65,6 +65,10 @@ td {
   }
 }
 
+#quiz .learned-tag {
+  color: hsl(151, 70%, 40%);
+}
+
 .show-explanation {
   color: #dfdf0c;
 }

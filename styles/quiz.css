@@ -17,7 +17,7 @@
 
     .learned-tag {
       font-size: 0.9em;
-      color: hsl(120, 50%, 30%);
+      color: hsl(120, 85%, 25%);
 
       margin-left: 0.3rem;
       @media (width >= 600px) {
