@@ -1,4 +1,12 @@
 #home-page {
+  display: flex;
+  justify-content: space-between;
+  min-height: 90vh;
+
+  > h1 {
+    display: none;
+  }
+
   h1 {
     font-size: 2rem;
     @media (width < 600px) {

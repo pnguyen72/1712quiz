@@ -1,94 +1,86 @@
-#home-page {
-  &:has(#license-notice[visible]) {
-    .coverage,
-    #attempts-table-container {
-      display: none;
-    }
-
-    form > h1 > br {
-      display: initial;
-    }
-  }
-
-  & > h1 {
+#home-page:has(#license-notice[visible]) {
+  .coverage,
+  #attempts-table-container {
     display: none;
   }
-}
 
-#main {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 1rem;
-
-  form {
-    width: 100%;
+  form > h1 > br {
+    display: initial;
   }
 
-  #license-notice {
-    margin: 0;
-    position: relative;
-    height: 85vh;
+  #main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
 
-    #hawaiian {
-      height: 100%;
-      object-fit: contain;
+    form {
+      width: 100%;
     }
-    #license-text {
-      font-size: 4vh;
-      text-align: center;
-      position: absolute;
-      bottom: 8vh;
-      background-color: hsl(120, 24%, 96%);
-    }
-    #license-agree-btn {
-      display: flex;
-      position: absolute;
-      bottom: 2.5vh;
-      width: 40%;
-      height: 8vh;
-      left: 30%;
-      align-items: center;
-      cursor: pointer;
-      animation: flash 1.25s infinite ease-in-out;
 
-      #license-agree-text {
+    #license-notice {
+      margin: 0;
+      position: relative;
+      height: 85vh;
+
+      #hawaiian {
+        height: 100%;
+        object-fit: contain;
+      }
+      #license-text {
         font-size: 4vh;
-        font-weight: bold;
-        margin: auto;
+        text-align: center;
+        position: absolute;
+        bottom: 8vh;
+        background-color: hsl(120, 24%, 96%);
       }
-
-      &:hover {
-        animation: none;
-        background-color: hsl(120, 80%, 70%);
-      }
-    }
-    #license-disagree-btn {
-      position: absolute;
-      bottom: 1.5vh;
-      right: 1.5vh;
-
-      #license-disagree-text {
+      #license-agree-btn {
+        display: flex;
+        position: absolute;
+        bottom: 2.5vh;
+        width: 40%;
+        height: 8vh;
+        left: 30%;
+        align-items: center;
         cursor: pointer;
-        font-size: 1vh;
-        margin: 0;
-        color: #ededed;
-      }
+        animation: flash 1.25s infinite ease-in-out;
 
-      /* if hover is available */
-      @media not all and (hover: none) {
+        #license-agree-text {
+          font-size: 4vh;
+          font-weight: bold;
+          margin: auto;
+        }
+
         &:hover {
-          #license-disagree-text {
-            color: red;
+          animation: none;
+          background-color: hsl(120, 80%, 70%);
+        }
+      }
+      #license-disagree-btn {
+        position: absolute;
+        bottom: 1.5vh;
+        right: 1.5vh;
+
+        #license-disagree-text {
+          cursor: pointer;
+          font-size: 1vh;
+          margin: 0;
+          color: #ededed;
+        }
+
+        /* if hover is available */
+        @media not all and (hover: none) {
+          &:hover {
+            #license-disagree-text {
+              color: red;
+            }
           }
         }
       }
     }
   }
-}
 
-@media (aspect-ratio < 1.2) {
-  #home-page:has(#license-notice[visible]) {
+  @media (aspect-ratio < 1.2) {
     > h1 {
       display: block;
     }
