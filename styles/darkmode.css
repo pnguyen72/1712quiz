@@ -69,18 +69,14 @@ td {
   color: hsl(151, 70%, 40%);
 }
 
-.show-explanation {
-  color: #dfdf0c;
-}
-
 .explanation-container {
   padding-left: 4px;
 
   div.explanation:not(.empty) {
-    color: #dfdf0c !important;
+    color: hsl(60, 90%, 80%);
 
     & ~ .bx {
-      color: #dfdf0c !important;
+      color: hsl(60, 90%, 80%);
     }
   }
 

@@ -97,7 +97,7 @@
           visibility: hidden;
         }
         &:not(.empty) {
-          color: rgb(127, 127, 255);
+          color: gray !important;
         }
 
         & ~ .bx-edit {
