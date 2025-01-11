@@ -290,7 +290,7 @@
       "A_12_33": { "choice": "True" },
       "B_12_33": { "choice": "False", "isCorrect": true }
     },
-    "explanation": "It's Structured Query Language"
+    "explanation": "It's *Structured* Query Language"
   },
   "12_34": {
     "question": "Which of the following are NOT characteristics of Big Data?",

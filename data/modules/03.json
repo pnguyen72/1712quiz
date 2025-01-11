@@ -14,7 +14,7 @@
       "C_03_02": { "choice": "Open Ended" },
       "D_03_02": { "choice": "Observation", "isCorrect": true }
     },
-    "explanation": "You may observe the interviewee during the intervew, but \"observation\" is not a type of question."
+    "explanation": "You do observe the interviewee during the intervew, but \"observation\" is not a type of question."
   },
   "03_03": {
     "question": "Paul is interviewing Ming. He first explains why he is there and what he wants to accomplish in the interview. This would be done in which step of the interview process?",
@@ -146,7 +146,8 @@
       "C_03_18": { "choice": "Details from crucial areas of the interview relating to the project at hand" },
       "D_03_18": { "choice": "The actual questions that were asked as a permanent record", "isCorrect": true },
       "E_03_18": { "choice": "Any materials, documents, etc. that the interviewee gave you relevant to the project at hand" }
-    }
+    },
+    "explanation": "See figure 3-8, p. 87 for a sample interview report."
   },
   "03_19": {
     "question": "A JAD facilitator keeps track of all discussions by entering information into the computer.",
@@ -171,7 +172,8 @@
     "choices": {
       "A_03_21": { "choice": "True" },
       "B_03_21": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "I don't think the textbook ever says this about the SDLC. But it sounds like how the textbook describes the Analysis phase <b>(p. 72)</b>:<br><br>The basic process of <i>analysis</i> involves three steps:<br>• Understand the existing situation (the <b>as-­is system</b>).<br>• Identify improvements.<br>• Define requirements for the new system (the <b>to-­be system</b>).<br><br>I think the question tries to make you mix up between the SDLC and the Analysis phase."
   },
   "03_22": {
     "question": "The authors suggest that an analyst is 'very much like a ____________' and business users are like elusive suspects.",
@@ -334,7 +336,8 @@
     "choices": {
       "A_03_39": { "choice": "True" },
       "B_03_39": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "Most systems are not well-documented. But document analysis is still valuable because you can review more than just technical documentation; for example, paper reports, memorandums, policy manuals, user training manuals, organization charts, and forms. <b>(p. 94)</b>"
   },
   "03_40": {
     "question": "After creating the interview report you should:",
@@ -416,7 +419,7 @@
       "A_03_48": { "choice": "True" },
       "B_03_48": { "choice": "False", "isCorrect": true }
     },
-    "explanation": "Interview report should be written within 24 hours of the interview."
+    "explanation": "You write an interview report for each individual you interviewed. It's not a summary of all interviews. (See figure 3-8, p. 87 for a sample report.) It should be written within 48 hours of the interview."
   },
   "03_49": {
     "question": "What does it mean for a process to be fragmented?",
@@ -426,14 +429,16 @@
       "C_03_49": { "choice": "There are too many actors involved in completing the process.", "isCorrect": true },
       "D_03_49": { "choice": "The major steps in the process are completed in parallel." }
     },
-    "multiSelect": true
+    "multiSelect": true,
+    "explanation": "Wrong answers:<br>  - Cost has nothing to do with this.<br>  - A fragmented process <i>should</i> be parallelized. It's not true that it's already parallelized."
   },
   "03_50": {
     "question": "In terms of reaching the most number of people in requirements elicitation, interviews are considered better than questionnaires.",
     "choices": {
       "A_03_50": { "choice": "True" },
       "B_03_50": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "Questionnaires reach more people."
   },
   "03_51": {
     "question": "Jorge, Vice President of Operations, has requested that the updated supply chain system keep a record of all 'stock-outs' for six years. This is an example of a functional requirement.",
@@ -511,7 +516,8 @@
       "C_03_60": { "choice": "True or False questions", "isCorrect": true },
       "D_03_60": { "choice": "Written Response questions" }
     },
-    "multiSelect": true
+    "multiSelect": true,
+    "explanation": "Written-response questions are open-ended because you can write anything. Even if the question itself is just yes/no, you can still elaborate on it.<br>The other types are close-ended, because you cannot elaborate on your answer."
   },
   "03_61": {
     "question": "The three types of interview questions are: multiple choice, fill in the blank and short answer.",

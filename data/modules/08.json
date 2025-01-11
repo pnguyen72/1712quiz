@@ -267,7 +267,7 @@
       "D_08_29": { "choice": "Very rigid" },
       "E_08_29": { "choice": "Useless when considering a systems design" }
     },
-    "explanation": "A time and arrangements deal changes as the project's costs change. It's flexible!<br><br>(-&gt; How did you know I chose that option?)"
+    "explanation": "A time and arrangements deal changes as the project's costs change. It's flexible!"
   },
   "08_30": {
     "question": "In the initial stage of design, what are business requirements converted into?",

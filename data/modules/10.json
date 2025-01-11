@@ -249,7 +249,7 @@
       "D_10_26": { "choice": "Drop-down selection list" },
       "E_10_26": { "choice": "Combo box selection list", "isCorrect": true }
     },
-    "explanation": "Combo boxes are like drop-down menus, but also allow users to manually type in their selection. As typing in the selection saves on having to scroll, it's considered a shortcut for experienced users."
+    "explanation": "Combo boxes are like drop-down menus, but also allow users to manually type in the value. As typing in the selection saves on having to scroll, it's a shortcut for experienced users."
   },
   "10_27": {
     "question": "User experience refers to minimizing the number of clicks or commands to go from one field to another.",
@@ -668,7 +668,7 @@
       "D_10_70": { "choice": "Narrow and shallow" },
       "E_10_70": { "choice": "Wide and tall" }
     },
-    "explanation": "It is better to make menus broad and shallow (i.e., with each menu containing many items and each item containing only one or two layers of menus)rather than narrow and deep (i.e., with each menu containing only a few items, but each item leading to three or more layers of menus). A broad and shallow menu presents the user with the most information initially, so that he or she can see many options, and requires only a few mouse clicks or keystrokes to perform an action"
+    "explanation": "Broad/narrow = how many items each menu contains<br>Shallow/deep =  how many layers of submenu<br>A broad and shallow menu lets the user see more options at once and perform actions with fewer clicks."
   },
   "10_71": {
     "question": "Used in all systems.",

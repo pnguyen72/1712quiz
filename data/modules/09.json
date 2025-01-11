@@ -123,7 +123,7 @@
       "D_09_13": { "choice": "Dynamic Encryption System" },
       "E_09_13": { "choice": "Alternative Systems Security Algorithms" }
     },
-    "explanation": "DES stands for Data Encryption Standard.<br><br>We only learned 2 types of encryption algorithm, symmetric and asymmetric. The only asymmetric encryption algorithm we learned is <b>public key encryption</b>. So everything else is symmetric.<br><br>See <b>p. 237</b>."
+    "explanation": "DES stands for Data Encryption Standard.<br>We only learned 2 types of encryption algorithm, symmetric and asymmetric. The only asymmetric encryption algorithm we learned is <b>public key encryption</b>. So everything else is symmetric.<br>See <b>p. 237</b>."
   },
   "09_14": {
     "question": "Server-based architecture is <u>not</u> more secure than client-based architecture.",
