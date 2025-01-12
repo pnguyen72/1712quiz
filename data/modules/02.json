@@ -51,7 +51,8 @@
       "C_02_06": { "choice": "A 'Quick and Dirty' system", "isCorrect": true },
       "D_02_06": { "choice": "A method for stressing customer satisfaction" },
       "E_02_06": { "choice": "A series of versions" }
-    }
+    },
+    "explanation": "System prototyping = create a prototype, release it to users for feedback, and improve upon the prototype to release the final product.<br><br>It's \"quick\" because the prototype is fast to make. And \"dirty\" because the final product still carries some baggages of the early prototype (maybe the prototype approaches the problem a fundamentally wrong way).<br><br>The other kind of prototyping is Throwaway Prototying, where you throw away the prototype and make the final product from scratch. That one is quick but not dirty."
   },
   "02_07": {
     "question": "Scrum, XP and Dynamic systems development method (DSDM) are all classified as 'agile development' concepts.",
@@ -76,7 +77,8 @@
       "C_02_09": { "choice": "Waterfall" },
       "D_02_09": { "choice": "Parallel" },
       "E_02_09": { "choice": "System prototyping" }
-    }
+    },
+    "explanation": "\"Must be reliable\" is usualy a giveaway for V-Model. It's the method that gives the most reliable result."
   },
   "02_10": {
     "question": "If the skills required by a project cannot be met by the available project team, which would probably NOT be a reasonable solution?",
@@ -162,7 +164,8 @@
     "choices": {
       "A_02_19": { "choice": "True" },
       "B_02_19": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "Extreme programming is a small team of developers and users working in close communication. It's fast but tend to be not as reliable as other methods; it's the opposite of the project's requirement."
   },
   "02_20": {
     "question": "Nate is managing a project that is behind by one month with five months to go. He should add four to six staff persons to the project to get it back up to speed.",
@@ -330,10 +333,16 @@
     "question": "The main difference between the Parallel Development Methodology and the Iterative Development Methodology is that:",
     "choices": {
       "A_02_39": { "choice": "The Parallel Development Methodology will have various releases (like version 1.0; 2.0, etc.) and the Iterative will not" },
-      "B_02_39": { "choice": "The Iterative Methodology will create various models or prototypes with user involvement before setting on design concepts and the Parallel Methodology will not" },
+      "B_02_39": {
+        "choice": "The Iterative Methodology will create various models or prototypes with user involvement before setting on design concepts and the Parallel Methodology will not"
+      },
       "C_02_39": { "choice": "The Parallel Methodology will have subprojects and the Iterative Methodology will have various releases", "isCorrect": true },
-      "D_02_39": { "choice": "The Iterative Methodology will break the system project into sub-projects for analysis, design and implementation and then merge them into a final system and the Parallel will not" },
-      "E_02_39": { "choice": "The Parallel Methodology will create various models or prototypes with user involvement before setting on design concepts and the Iterative will not" }
+      "D_02_39": {
+        "choice": "The Iterative Methodology will break the system project into sub-projects for analysis, design and implementation and then merge them into a final system and the Parallel will not"
+      },
+      "E_02_39": {
+        "choice": "The Parallel Methodology will create various models or prototypes with user involvement before setting on design concepts and the Iterative will not"
+      }
     }
   },
   "02_40": {
@@ -547,9 +556,14 @@
   "02_63": {
     "question": "What the MAIN difference between systems prototyping and throwaway prototyping?",
     "choices": {
-      "A_02_63": { "choice": "Throwaway prototyping develops systems that will be use as 'stop-gap' systems – and generally for less than six months; while systems prototyping results in systems that will be used extensively for several years." },
+      "A_02_63": {
+        "choice": "Throwaway prototyping develops systems that will be use as 'stop-gap' systems – and generally for less than six months; while systems prototyping results in systems that will be used extensively for several years."
+      },
       "B_02_63": { "choice": "Throwaway prototyping involves users while systems prototyping does not" },
-      "C_02_63": { "choice": "Systems prototyping works with users to quickly develop a simplified working version of the proposed system; while throwaway prototyping focuses more on exploring design alternatives", "isCorrect": true },
+      "C_02_63": {
+        "choice": "Systems prototyping works with users to quickly develop a simplified working version of the proposed system; while throwaway prototyping focuses more on exploring design alternatives",
+        "isCorrect": true
+      },
       "D_02_63": { "choice": "Systems prototyping is a rapid application development methodology; while throwaway prototyping is not" },
       "E_02_63": { "choice": "Systems prototyping involves users while throwaway prototyping does not" }
     }

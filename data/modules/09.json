@@ -172,7 +172,10 @@
       "B_09_19": { "choice": "Easy and therefore more experienced members of the department take the lead." },
       "C_09_19": { "choice": "Easy and therefore outside consultants are often sourced to do the task." },
       "D_09_19": { "choice": "Easy and therefore experienced internal members are sourced to the task." },
-      "E_09_19": { "choice": "Difficult and therefore, many organizations use the skills of experienced, expert system architects (consultants or employees) who specialize in the task.", "isCorrect": true }
+      "E_09_19": {
+        "choice": "Difficult and therefore, many organizations use the skills of experienced, expert system architects (consultants or employees) who specialize in the task.",
+        "isCorrect": true
+      }
     }
   },
   "09_20": {

@@ -43,7 +43,8 @@
     "choices": {
       "A_06_06": { "choice": "True" },
       "B_06_06": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "There's no order in an ERD."
   },
   "06_07": {
     "question": "On an ERD, data elements are described as singular (1:1); plurals (1:N); or didactic (M:N).",
@@ -51,7 +52,7 @@
       "A_06_07": { "choice": "True" },
       "B_06_07": { "choice": "False", "isCorrect": true }
     },
-    "explanation": "It's one-to-one (1:1), one-to-many (1:N), or many-to-many (M:N)."
+    "explanation": "It's one-to-one (1:1), one-to-many (1:N), or many-to-many (M:N). \"Singular\", \"Plurals\", and \"didatic\" are made up."
   },
   "06_08": {
     "question": "Which would likely be an entity on a car insurance ERD?",
@@ -85,7 +86,8 @@
     "choices": {
       "A_06_11": { "choice": "True" },
       "B_06_11": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "ERD shows what data the system has, not how it's processed and transformed. That's more like a DFD."
   },
   "06_12": {
     "question": "Which would NOT likely be an attribute of an entity called \"Student\"?",
@@ -128,7 +130,8 @@
     "choices": {
       "A_06_16": { "choice": "True" },
       "B_06_16": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "So many things wrong.<br>1) ERDs do not have processes. That's for DFDs. <br>2) Neither ERDs nor DFDs are organized alphabetically.<br>3) There are no relationships between processes. There have relationships between entities, and data flows between processes."
   },
   "06_17": {
     "question": "On an ERD, data elements are listed together and place inside boxes called entities.",
@@ -184,7 +187,8 @@
     "choices": {
       "A_06_23": { "choice": "True", "isCorrect": true },
       "B_06_23": { "choice": "False" }
-    }
+    },
+    "explanation": "There are symbols on relationship lines to indicate modality (whether the relationship is 1 to 1, 1 to many, or many to many). Modality shows business rules."
   },
   "06_24": {
     "question": "ERDs and DFDs are two techniques for data modeling.",
@@ -226,7 +230,8 @@
     "choices": {
       "A_06_28": { "choice": "True" },
       "B_06_28": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "There is no hierachical structure in an ERD, and entities are referred to by names (e.g. the Car entity), not ID number."
   },
   "06_29": {
     "question": "In creating ERD's, which would most likely NOT be a source for entities?",
@@ -325,7 +330,8 @@
       "C_06_39": { "choice": "Process, data flow, data store" },
       "D_06_39": { "choice": "Process, entity and relationship" },
       "E_06_39": { "choice": "Attribute, modularity, cardinality" }
-    }
+    },
+    "explanation": "ERDs do not have process, data flow, data store; those are in DFDs. \"Modularity\" is not a thing. ERDs also have modality and cardinality, but these are properties of relationships, so they are not considered \"major\"."
   },
   "06_40": {
     "question": "A data model is a formal way of representing the data that are used and created by a business system.",
@@ -377,7 +383,8 @@
     "choices": {
       "A_06_46": { "choice": "True" },
       "B_06_46": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "There are no processes in an ERD. ERDs have entities, *attributes*, and relationships. Only DFDs have processes."
   },
   "06_47": {
     "question": "Jack is developing an ERD for a small dental practice office patient record system. The dental practice has three dentists, six hygienists, and many patients. A patient is always assigned to the same dentist for all appointments. In particular, he is working on the relationship between dentists and patients. Should it be which of the following?",
@@ -425,7 +432,8 @@
     "choices": {
       "A_06_52": { "choice": "True" },
       "B_06_52": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "Trick question. There are context DFD, level 1 DFD, and level 2 DFD. There are no such things for ERD."
   },
   "06_53": {
     "question": "An entity is described by an action verb.",
@@ -444,7 +452,7 @@
       "D_06_54": { "choice": "ITEM is included in SOLD-ITEM" },
       "E_06_54": { "choice": "PAYMENT pays for SALE" }
     },
-    "explanation": "PAYMENT <i>pays for</i> SOLD-ITEM <i>includes</i> ITEM"
+    "explanation": "PAYMENT pays for SOLD-ITEM includes ITEM"
   },
   "06_55": {
     "question": "Modality refers to which of the following?",
@@ -471,7 +479,8 @@
       "C_06_57": { "choice": "Agent" },
       "D_06_57": { "choice": "Policy" },
       "E_06_57": { "choice": "Car" }
-    }
+    },
+    "explanation": "Zip code would more likely be an attribute. An entity should be a person, a place, or a thing."
   },
   "06_58": {
     "question": "A(n) _____ entity is an entity with an identifier that describes only the entity.",

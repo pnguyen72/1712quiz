@@ -18,7 +18,7 @@
       "C_07_02": { "choice": "A table in 2NF is also in 1NF.", "isCorrect": true }
     },
     "multiSelect": true,
-    "explanation": "2NF = 1NF + no partial dependencies<br>3NF = 2NF + no transitive dependencies<br><br>1NF, 2NF, 3NF are successively stricter than the previous."
+    "explanation": "2NF = 1NF + no partial dependencies<br>3NF = 2NF + no transitive dependencies<br>1NF, 2NF, 3NF are successively stricter than the previous."
   },
   "07_03": {
     "question": "Relational tables that have a single-attribute PK, are immediately in 2NF.",
@@ -26,7 +26,7 @@
       "A_07_03": { "choice": "True", "isCorrect": true },
       "B_07_03": { "choice": "False" }
     },
-    "explanation": "A relational table is in 2NF if it does not have partial dependencies.<br><br>Partial dependency means an attribute depends on only a part of, rather than the whole, primary key.<br><br>If the primary key is a single attribute, it has no parts, so there cannot be any partial dependencies."
+    "explanation": "A relational table is in 2NF if it does not have partial dependencies.<br>Partial dependency means an attribute depends on only a part of, rather than the whole, primary key.<br>If the primary key is a single attribute, it has no parts, so there cannot be any partial dependencies."
   },
   "07_04": {
     "question": "Some redundancies in a relational DB are necessary.",
@@ -70,7 +70,7 @@
       "A_07_08": { "choice": "True", "isCorrect": true },
       "B_07_08": { "choice": "False" }
     },
-    "explanation": "AFAIK there's no \"non-functional\" dependency, all dependencies are functional in one way or another.<br><br>Partial dependency is a type of (functional) dependency where the determinant is <i>only part of</i>, rather than the whole, the identifier."
+    "explanation": "AFAIK there's no \"non-functional\" dependency, all dependencies are functional in one way or another.<br>Partial dependency is a type of (functional) dependency where the determinant is <i>only part of</i>, rather than the whole, the identifier."
   },
   "07_09": {
     "question": "Our goal with normalization is to completely eliminate redundancy.",
@@ -89,7 +89,7 @@
       "D_07_10": { "choice": "Are named the same as the relationships on the ERD" },
       "E_07_10": { "choice": "Can be compared to ERD data flows and attributes on the ERD are included in data stores on the DFD" }
     },
-    "explanation": "<i>\"The DFD data components need to correspond with the ERD's data stores (i.e., entities) and the data elements that comprise the data flows (i.e., attributes).\"</i> <b>(p. 191)</b><br><br>It's a trick question. There's a similar but incorrect choice because \"ERD data flows\" is not a thing. ERD has entities, only DFD has data flows."
+    "explanation": "Trick question. There's a similar but incorrect choice because \"ERD data flows\" is not a thing. ERD has entities, only DFD has data flows.<br><i>\"The DFD data components need to correspond with the ERD's data stores (i.e., entities) and the data elements that comprise the data flows (i.e., attributes).\"</i> <b>(p. 191)</b>"
   },
   "07_11": {
     "question": "The following table is in 1NF. If we normalize this table to 2NF, how many tables in total would exist in our relational DB after normalizing to 2NF?",

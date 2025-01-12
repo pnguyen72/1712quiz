@@ -106,7 +106,7 @@
       "A_05_13": { "choice": "True" },
       "B_05_13": { "choice": "False", "isCorrect": true }
     },
-    "explanation": "It's syntax errors and semantic errors."
+    "explanation": "It's syntax errors and semantic errors. \"English errors\" is not a thing."
   },
   "05_14": {
     "question": "Data flows going into a data store indicate that there is a logical error.",
@@ -120,7 +120,8 @@
     "choices": {
       "A_05_15": { "choice": "True" },
       "B_05_15": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "There are 2 types of error:<br>- Syntax error: the program doesn't run<br>- Semantic error:  the program runs but gives the wrong result<br>The latter is much harder to fix."
   },
   "05_16": {
     "question": "Below the top-level DFD in the DFD hierarchy is the diagram called the what?",
@@ -225,7 +226,8 @@
     "choices": {
       "A_05_28": { "choice": "True" },
       "B_05_28": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "Most processes have one top-level DFD, but then it's broken down to multiple lower-level DFDs, each explains a subprocess."
   },
   "05_29": {
     "question": "The context diagram defines how the business process or computer system interacts with its Environment.",

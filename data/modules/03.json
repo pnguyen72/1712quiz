@@ -262,7 +262,10 @@
     "choices": {
       "A_03_31": { "choice": "Watch interviewees' facial expressions, how they sit and their body language; do they cross their arms; do they lean forward?" },
       "B_03_31": { "choice": "Pay attention to what the interviewee is saying" },
-      "C_03_31": { "choice": "Explain thoroughly – it is estimated that in a strong interview session, the interviewer (you) should talk and explain about 60% of the time; and the interviewee should answer about 40% of the time", "isCorrect": true },
+      "C_03_31": {
+        "choice": "Explain thoroughly – it is estimated that in a strong interview session, the interviewer (you) should talk and explain about 60% of the time; and the interviewee should answer about 40% of the time",
+        "isCorrect": true
+      },
       "D_03_31": { "choice": "Be happy – happy people radiate confidence" },
       "E_03_31": { "choice": "If the interviewee ask you a question, answer it truthfully – and if you don't know an answer, say so" }
     }
@@ -318,7 +321,10 @@
       "B_03_37": { "choice": "JAD reports will include technology analysis while interviews will only include root cause analysis" },
       "C_03_37": { "choice": "The JAD report will include results from questionnaires while the interview report will not" },
       "D_03_37": { "choice": "It describes information from the interview or JAD session" },
-      "E_03_37": { "choice": "The interview report is generally written within 48 hours of the interview; while the JAD session report may take a week or two after the JAD session.", "isCorrect": true }
+      "E_03_37": {
+        "choice": "The interview report is generally written within 48 hours of the interview; while the JAD session report may take a week or two after the JAD session.",
+        "isCorrect": true
+      }
     }
   },
   "03_38": {
@@ -397,7 +403,8 @@
       "C_03_45": { "choice": "Document analysis" },
       "D_03_45": { "choice": "JAD session" },
       "E_03_45": { "choice": "Questionnaires", "isCorrect": true }
-    }
+    },
+    "explanation": "The description also sounds kinda like an interview. But interviews are often conducted on internal users, it's questionnaires that's often used with outsiders."
   },
   "03_46": {
     "question": "The most commonly used requirements elicitation technique is the interview.",
@@ -492,7 +499,8 @@
     "choices": {
       "A_03_57": { "choice": "True" },
       "B_03_57": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "While it's true that people with more experience should talk more, no one should dominate the discussion."
   },
   "03_58": {
     "question": "Maria, a systems analyst, is tweaking the high-level explanation of the business requirements into a more precise list of requirements. This is called 'requirements determination'.",
@@ -595,7 +603,8 @@
     "choices": {
       "A_03_69": { "choice": "True" },
       "B_03_69": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "You should share your interview report with the interviewee to ask whether you've noted their statements correctly or whether they have any clarification."
   },
   "03_70": {
     "question": "Rebecca, a fairly new employee in the company and Matt, her boss (who has been with the company for 22 years) are in your JAD session. It would probably be expected that Rebecca would not share much in the session.",

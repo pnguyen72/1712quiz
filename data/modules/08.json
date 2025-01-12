@@ -5,7 +5,7 @@
       "A_08_01": { "choice": "True", "isCorrect": true },
       "B_08_01": { "choice": "False" }
     },
-    "explanation": "Remember those questions related to the parts of the SDLC in Module 1?<br><br>Planning - <b>Why?</b><br>Analysis - <b>What?</b> (and where and who and when)<br>Design - <b>How?</b>"
+    "explanation": "Remember those questions related to the parts of the SDLC in module 1?<br><br>Planning - <b>Why?</b><br>Analysis - <b>What?</b> (and where and who and when)<br>Design - <b>How?</b>"
   },
   "08_02": {
     "question": "The system inputs and outputs will be designed along with a plan or__________ of the way the system&#39;s features will be navigated.",
@@ -57,7 +57,7 @@
       "D_08_06": { "choice": "The dissection stage" },
       "E_08_06": { "choice": "The design phase" }
     },
-    "explanation": "Analysis = business requirements<br>Design = system requirements"
+    "explanation": "Analysis = business requirements<br>Design = system requirements<br>Big bang, dissection, and installation stages are made up."
   },
   "08_07": {
     "question": "The following document is utilized with possible vendors on projects with smaller budgets, instead of sending a lengthy document to <u>all</u> possible vendors:",
@@ -349,7 +349,9 @@
     "choices": {
       "A_08_39": { "choice": "The low risk factor" },
       "B_08_39": { "choice": "You get a system that is tailored to the current business and meets specific needs", "isCorrect": true },
-      "C_08_39": { "choice": "The ability for in-house developers to work on systems that are in new programming languages and in technologies that are unknown to them prior to the development" },
+      "C_08_39": {
+        "choice": "The ability for in-house developers to work on systems that are in new programming languages and in technologies that are unknown to them prior to the development"
+      },
       "D_08_39": { "choice": "The low cost (as compared to buying a package)" },
       "E_08_39": { "choice": "The rapid development of custom systems" }
     },
@@ -390,7 +392,7 @@
       "A_08_43": { "choice": "True", "isCorrect": true },
       "B_08_43": { "choice": "False" }
     },
-    "explanation": "Custom development requires you create the software in-house.<br>Packaged software usually requires some modification to the package.<br>Outsourcing completely takes the development off your hands.<br><b>(module 8, slides 22 and 24)"
+    "explanation": "Custom development requires you create the software in-house.<br>Packaged software usually requires some modification to the package.<br>Outsourcing completely takes the development off your hands.<br><b>(module 8, slides 22 and 24)</b>"
   },
   "08_44": {
     "question": "A reason to use a packaged software solution is when there is no need to &quot;reinvent the wheel&quot;",

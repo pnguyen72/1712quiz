@@ -95,7 +95,8 @@
       "C_01_11": { "choice": "Business process internalization" },
       "D_01_11": { "choice": "Business process reengineering" },
       "E_01_11": { "choice": "Business process improvement" }
-    }
+    },
+    "explanation": "Automation = smallest/easiest improvement<br>Improvement = moderate improvement<br>Reenginerring = overhaul"
   },
   "01_12": {
     "question": "Using 'net present value' in calculating economic feasibility will allow for variations in the time value of money.",
@@ -264,7 +265,8 @@
       "C_01_31": { "choice": "Business process automation (BPA)" },
       "D_01_31": { "choice": "Business process reengineering (BPR)" },
       "E_01_31": { "choice": "Business process efficiency (BPE)" }
-    }
+    },
+    "explanation": "Automation = smallest/easiest improvement<br>Improvement = moderate improvement<br>Reenginerring = overhaul"
   },
   "01_32": {
     "question": "Which is an activity the users probably will NOT do on a project?",
@@ -302,7 +304,7 @@
       "D_01_35": { "choice": "About 65.3%" },
       "E_01_35": { "choice": "62,000" }
     },
-    "explanation": "ROI <br>= (benefit - cost)/cost <br>= (182k - 120k)/120k <br>= 0.517"
+    "explanation": "ROI<br>= (benefit - cost)/cost<br>= (182k - 120k)/120k<br>= 0.517<br>= 51.7%"
   },
   "01_36": {
     "question": "Determining business requirements is generally done in the planning phase of the SDLC.",
@@ -320,7 +322,8 @@
       "C_01_37": { "choice": "Test plan" },
       "D_01_37": { "choice": "Business process document" },
       "E_01_37": { "choice": "System request document", "isCorrect": true }
-    }
+    },
+    "explanation": "Outcomes:<br>- Planning: system request<br>- Analysis: system proposal<br>- Planning: system specification<br>- Implementation: the system itself<br>\"Business process document\" and \"Test plan\" are made up."
   },
   "01_38": {
     "question": "The primary output of the analysis phase is the system proposal.",
@@ -362,7 +365,8 @@
       "C_01_42": { "choice": "Business process automation" },
       "D_01_42": { "choice": "Business process renovation" },
       "E_01_42": { "choice": "Business process internalization" }
-    }
+    },
+    "explanation": "Automation = smallest/easiest improvement<br>Improvement = moderate improvement<br>Reenginerring = overhaul"
   },
   "01_43": {
     "question": "Which of the following project roles would serve as a primary point of contact for a project?",
@@ -498,7 +502,8 @@
       "C_01_57": { "choice": "System proposal document" },
       "D_01_57": { "choice": "Feasibility analysis document" },
       "E_01_57": { "choice": "Business process document" }
-    }
+    },
+    "explanation": "Outcomes:<br>- Planning: system request<br>- Analysis: system proposal<br>- Planning: system specification<br>- Implementation: the system itself<br>\"Business process document\" is not a thing. Feasibility analysis is part of the system request."
   },
   "01_58": {
     "question": "The project sponsor should have an idea of the business value to be gained from the system.",
@@ -550,7 +555,8 @@
     "choices": {
       "A_01_64": { "choice": "True" },
       "B_01_64": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "The two steps of the Planning phase are feasibility analysis and project initiation. Requirements determination is in the Analysis phase."
   },
   "01_65": {
     "question": "Alice is calculating whether a system will lower costs or increase revenues. What SDLC phase is she in?",
@@ -570,7 +576,8 @@
       "C_01_66": { "choice": "Business process document" },
       "D_01_66": { "choice": "System specification document" },
       "E_01_66": { "choice": "System proposal document", "isCorrect": true }
-    }
+    },
+    "explanation": "Outcomes:<br>- Planning: system request<br>- Analysis: system proposal<br>- Planning: system specification<br>- Implementation: the system itself<br>\"Business process document\" is not a thing. Feasibility analysis is part of the system request."
   },
   "01_67": {
     "question": "The type of skill that is common to systems analysts to deal fairly and honestly with other project team members is:",
