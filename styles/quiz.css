@@ -67,26 +67,16 @@
   }
 
   ul {
-    @media (width >= 750px) {
-      padding-inline-start: 2rem;
-    }
-    @media (width >= 900px) {
-      padding-inline-start: 2.25rem;
-    }
-
     margin: 0.6rem 0;
     @media print, (width < 600px) {
       margin: 0.5rem 0;
     }
 
-    li {
-      margin: 0.5rem 0;
-      @media (width < 600px) {
-        margin: 0.5rem 0;
-      }
-      @media print {
-        margin: 0.3rem 0;
-      }
+    @media (width >= 750px) {
+      padding-inline-start: 2rem;
+    }
+    @media (width >= 900px) {
+      padding-inline-start: 2.25rem;
     }
   }
 
