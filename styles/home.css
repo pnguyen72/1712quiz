@@ -31,7 +31,7 @@
     }
 
     > div {
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.5rem;
     }
 
     label:has(input:disabled) span {
@@ -39,19 +39,19 @@
     }
 
     ul {
-      margin: 0.4rem 0;
+      margin: 0.5rem 0;
     }
 
     #exam-selection {
-      margin-top: 2.4rem;
+      margin-top: 2.5rem;
       &:not([visible]) + #module-selection {
-        margin-top: 2.8rem;
+        margin-top: 3rem;
       }
 
       @media (width < 600px) {
         margin-top: 2rem;
         &:not([visible]) + #module-selection {
-          margin-top: 2rem;
+          margin-top: 2.5rem;
         }
       }
 

@@ -86,12 +86,16 @@ td {
 
 #quiz[submitted="true"] {
   .question-choices {
-    li:has(+ li.correct) {
-      margin-bottom: calc(0.4rem - 3px);
-    }
-
     li.correct {
-      margin: calc(0.4rem - 3px);
+      margin: calc(0.5rem - 3px) 0;
+      @media (width < 600px) {
+        margin: calc(0.4rem - 3px) 0;
+      }
+      @media print {
+        margin: calc(0.3rem - 3px) 0;
+      }
+
+      margin-left: -3px;
 
       label {
         padding: 3px;
@@ -99,10 +103,6 @@ td {
         background-color: #1ed96f24;
         color: #11ce73;
       }
-    }
-
-    li.correct + li {
-      margin-top: calc(0.4rem - 3px);
     }
   }
 

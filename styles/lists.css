@@ -1,15 +1,15 @@
 ul {
   list-style-type: none;
 
-  padding-inline-start: 1.25rem;
+  padding-inline-start: 1.75rem;
   @media (width < 600px) {
-    padding-inline-start: 1rem;
+    padding-inline-start: 1.5rem;
   }
   @media (width < 450px) {
-    padding-inline-start: 0.75rem;
+    padding-inline-start: 1.25rem;
   }
 
   li {
-    margin: 0.4rem;
+    margin: 0.5rem 0;
   }
 }

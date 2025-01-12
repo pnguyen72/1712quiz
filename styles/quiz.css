@@ -1,5 +1,14 @@
 .question {
-  margin-bottom: 1.6rem;
+  margin-bottom: 2rem;
+  @media (width < 600px) {
+    margin-bottom: 1.8rem;
+  }
+  @media (width < 450px) {
+    margin-bottom: 1.6rem;
+  }
+  @media print {
+    margin-bottom: 1.2rem;
+  }
 
   &:last-child {
     margin-bottom: 0.4rem;
@@ -14,6 +23,7 @@
   .question-header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: -0.15rem;
 
     .learned-tag {
       font-size: 0.9em;
@@ -41,38 +51,59 @@
   }
 
   .question-body {
-    margin: 0.4rem 0;
+    margin: 0.6rem 0;
+    @media print, (width < 600px) {
+      margin: 0.5rem 0;
+    }
   }
 
   figure {
     margin: auto;
+    margin-bottom: -0.2rem;
+
     img {
       width: 100%;
     }
   }
 
   ul {
-    margin: 0.6rem 0;
-
     @media (width >= 750px) {
-      padding-inline-start: 1.5rem;
+      padding-inline-start: 2rem;
     }
     @media (width >= 900px) {
-      padding-inline-start: 1.75rem;
+      padding-inline-start: 2.25rem;
+    }
+
+    margin: 0.6rem 0;
+    @media print, (width < 600px) {
+      margin: 0.5rem 0;
+    }
+
+    li {
+      margin: 0.5rem 0;
+      @media (width < 600px) {
+        margin: 0.5rem 0;
+      }
+      @media print {
+        margin: 0.3rem 0;
+      }
     }
   }
 
   .explanation-container {
     display: none;
-    margin-left: 2rem;
-    margin-top: 0.6rem;
     width: calc(100% - 2.25rem);
+
+    margin-top: 0.6rem;
+    @media print, (width < 600px) {
+      margin-top: 0.5rem;
+    }
 
     div.explanation {
       color: blue;
       width: calc(100% - 3rem);
 
-      & ~ .bx {
+      ~ .bx {
         display: block;
         margin: auto;
         margin-right: 0;
@@ -80,7 +111,7 @@
         color: blue;
       }
 
-      & ~ .bx-loader {
+      ~ .bx-loader {
         display: none;
       }
 
@@ -115,7 +146,7 @@
     }
 
     @media (width < 900px) {
-      margin-left: 1.75rem;
+      margin-left: 2rem;
       width: calc(100% - 2rem);
     }
 
