@@ -1,7 +1,14 @@
 #home-page {
   display: flex;
   justify-content: space-between;
-  min-height: 90vh;
+
+  min-height: calc(100vh - 6.5rem);
+  @media (width < 600px) {
+    min-height: calc(100vh - 6rem);
+  }
+  @media (width < 450px) {
+    min-height: calc(100vh - 5.5rem);
+  }
 
   > h1 {
     display: none;
