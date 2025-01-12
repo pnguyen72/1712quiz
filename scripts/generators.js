@@ -286,8 +286,9 @@ function generateQuestion(questionId, questionIndex) {
     return candidates[candidates.length - 1];
   };
   question.scrollTo = () => {
+    const margin = 32;
     question.scrollIntoView(true);
-    scrollBy(0, -0.55 * navbar.offsetHeight);
+    scrollBy(0, -margin);
     if (reviewPanel.style.display != "none") {
       scrollBy(0, -navbar.offsetHeight);
     }

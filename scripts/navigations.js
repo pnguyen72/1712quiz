@@ -189,26 +189,19 @@ function submit() {
 
 const questionsScroller = {
   current: null,
+  getQuestions: function () {
+    return quizPage.querySelectorAll(".question:is(.wrong-answer,.unsure)");
+  },
   next: function () {
     const target = this.current
       ? this.current.next(":is(.wrong-answer,.unsure)")
-      : search(
-          quizPage.querySelectorAll(".question:is(.wrong-answer,.unsure)"),
-          0,
-          // no idea what 1.6 is, but it works
-          (e) => e.getBoundingClientRect().top - 1.6 * navbar.offsetHeight
-        ).previous();
+      : nearestElement(this.getQuestions()).next();
     (target ?? this.current).scrollTo().blink();
   },
   previous: function () {
     const target = this.current
       ? this.current.previous(":is(.wrong-answer,.unsure)")
-      : search(
-          quizPage.querySelectorAll(".question:is(.wrong-answer,.unsure)"),
-          0,
-          // no idea what 1.5 is, but it works
-          (e) => e.getBoundingClientRect().top - 1.5 * navbar.offsetHeight
-        ).previous();
+      : nearestElement(this.getQuestions()).previous();
     (target ?? this.current).scrollTo().blink();
   },
 };
