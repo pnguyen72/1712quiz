@@ -54,14 +54,14 @@ td {
     opacity: 75%;
   }
   #license-text {
-    background-color: #262626;
+    background-color: #262626 !important;
     color: #f0f0f0;
   }
   #license-agree-text {
     color: #0f0116;
   }
-  #license-disagree-btn #license-disagree-text {
-    color: #c0c0c0;
+  #license-disagree-text {
+    color: #c0c0c0 !important;
   }
 }
 
