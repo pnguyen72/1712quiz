@@ -82,11 +82,26 @@
 
   .explanation-container {
     display: none;
-    width: calc(100% - 2.25rem);
 
     margin-top: 0.6rem;
     @media print, (width < 600px) {
       margin-top: 0.5rem;
+    }
+
+    margin-left: 2.25rem;
+    width: calc(100% - 2.25rem);
+    @media (width < 900px) {
+      margin-left: 2rem;
+      width: calc(100% - 2rem);
+    }
+    @media (width < 750px) {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    textarea.explanation {
+      font-family: sans-serif;
+      font-size: 1rem !important;
     }
 
     div.explanation {
@@ -108,7 +123,7 @@
       &.empty {
         color: gray;
 
-        & ~ .bx {
+        ~ .bx {
           color: gray;
         }
       }
@@ -121,55 +136,37 @@
           color: gray !important;
         }
 
-        & ~ .bx-edit {
+        ~ .bx-edit {
           display: none;
         }
-        & ~ .bx-loader {
+        ~ .bx-loader {
           display: block;
         }
       }
     }
 
-    textarea.explanation {
-      font-family: sans-serif;
-      font-size: 1rem !important;
-    }
-
-    @media (width < 900px) {
-      margin-left: 2rem;
-      width: calc(100% - 2rem);
-    }
-
     @media (width < 750px) {
-      margin-left: 0;
-      width: 100%;
-
       div.explanation {
         width: calc(100% - 2.5rem);
       }
     }
-
     @media (width < 600px) {
       div.explanation {
         width: calc(100% - 2rem);
-
-        & ~ .bx {
+        ~ .bx {
           font-size: 1.5rem;
         }
       }
     }
-
     @media (width < 475px) {
       #placeholder-expansion {
         display: none;
       }
     }
-
     @media (width < 450px) {
       div.explanation {
         width: calc(100% - 1.5rem);
-
-        & ~ .bx {
+        ~ .bx {
           font-size: 1.4rem;
         }
       }
