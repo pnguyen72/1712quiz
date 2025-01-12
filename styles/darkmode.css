@@ -87,12 +87,20 @@ td {
 #quiz[submitted="true"] {
   .question-choices {
     li.correct {
-      margin: calc(0.5rem - 3px) 0;
-      @media (width < 600px) {
-        margin: calc(0.4rem - 3px) 0;
+      &:not(:first-child) {
+        margin-top: calc(0.5rem - 3px);
       }
+      &:not(:last-child) {
+        margin-bottom: calc(0.5rem - 3px);
+      }
+
       @media print {
-        margin: calc(0.3rem - 3px) 0;
+        &:not(:first-child) {
+          margin-top: calc(0.4rem - 3px);
+        }
+        &:not(:last-child) {
+          margin-bottom: calc(0.4rem - 3px);
+        }
       }
 
       margin-left: -3px;

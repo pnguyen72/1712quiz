@@ -1,17 +1,11 @@
 .question {
   margin-bottom: 2rem;
-  @media (width < 600px) {
-    margin-bottom: 1.8rem;
-  }
-  @media (width < 450px) {
-    margin-bottom: 1.6rem;
-  }
   @media print {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.25rem;
   }
 
   &:last-child {
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
   }
 
   &.unsure .question-title {
@@ -52,7 +46,7 @@
 
   .question-body {
     margin: 0.6rem 0;
-    @media print, (width < 600px) {
+    @media print {
       margin: 0.5rem 0;
     }
   }
@@ -68,7 +62,7 @@
 
   ul {
     margin: 0.6rem 0;
-    @media print, (width < 600px) {
+    @media print {
       margin: 0.5rem 0;
     }
 
@@ -84,7 +78,7 @@
     display: none;
 
     margin-top: 0.6rem;
-    @media print, (width < 600px) {
+    @media print {
       margin-top: 0.5rem;
     }
 
