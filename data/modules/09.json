@@ -105,14 +105,13 @@
     "explanation": "It's different from Portability Requirement in that TER is what environments the system <i>currently</i> needs to operate in; while PR is what environments the system <i>may</i> need to operate in in the future.<br><br><b>(p. 231)</b>"
   },
   "09_12": {
-    "question": "The major architectural components of any system are the what?",
+    "question": "The major architectural components of any system are _____",
     "choices": {
       "A_09_12": { "choice": "IT Department" },
-      "B_09_12": { "choice": "Hardware" },
-      "C_09_12": { "choice": "Software" },
-      "D_09_12": { "choice": "IT Department and Hardware" },
-      "E_09_12": { "choice": "Hardware and Software", "isCorrect": true }
-    }
+      "B_09_12": { "choice": "Hardware", "isCorrect": true },
+      "C_09_12": { "choice": "Software", "isCorrect": true }
+    },
+    "multiSelect": true
   },
   "09_13": {
     "question": "DES is an example of what?",
