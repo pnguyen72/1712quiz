@@ -253,10 +253,8 @@ function editExplanation(explanation) {
 
   function submit() {
     form.replaceWith(container);
-
-    const questionText = question.querySelector(".question-body").innerHTML;
     const explanationText = textarea.value.trim().replaceAll("\n", "<br>");
-    submitExplanation(question.id, questionText, explanationText).then(() => {
+    submitExplanation(question, explanationText).then(() => {
       if (textarea.value != originalTextareaValue) {
         licenseGrantException("Thank you for your contribution.");
       }

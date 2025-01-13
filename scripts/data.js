@@ -100,44 +100,60 @@ function explain(question) {
   if (!explainChoice.checked) return;
 
   const questionId = question.id;
-  const doc = db.doc(questionId);
-  doc.onSnapshot((snapshot) => {
-    const explanation = question.querySelector(".explanation");
+  const explanation = question.querySelector(".explanation");
+
+  db.doc(questionId).onSnapshot((snapshot) => {
     if (explanation.tagName.toLowerCase() == "textarea") return;
 
-    const explanationText = snapshot.data()?.explanation ?? "";
     const editing = snapshot.data()?.editing;
-
-    if (editing == null) explanation.classList.remove("editing");
-    else {
+    if (editing == null) {
+      explanation.classList.remove("editing");
+    } else {
       const expiring = editing + 90000; // 90 seconds timeout
       const now = Date.now();
-      if (expiring <= now) editSignal(questionId, false);
-      else {
+      if (expiring <= now) {
+        editSignal(questionId, false);
+      } else {
         explanation.classList.add("editing");
-        setTimeout(() => editSignal(questionId, false), expiring - now);
       }
+    }
+
+    let explanationText;
+    if (question.classList.contains("joke")) {
+      const choice = question.querySelector(".choice-input:checked");
+      explanationText = snapshot.data()?.[choice.id] ?? "";
+    } else {
+      explanationText = snapshot.data()?.explanation ?? "";
     }
     explanation.write(explanationText);
     giveExplanationsWarning();
   });
 }
 
-function submitExplanation(questionId, questionText, explanationText) {
+function submitExplanation(question, explanationText) {
+  const questionId = question.id;
+  const questionText = question.querySelector(".question-body").innerHTML;
   const doc = db.doc(questionId);
-  if (explanationText) {
+
+  if (!question.classList.contains("joke")) {
+    if (!explanationText) return doc.delete();
     return doc.set({ question: questionText, explanation: explanationText });
-  } else {
-    return doc.delete();
   }
+
+  const data = { question: questionText };
+  const choice = question.querySelector(".choice-input:checked");
+  data[choice.id] = explanationText;
+  return editSignal(questionId, false).then(() =>
+    doc.set(data, { merge: true })
+  );
 }
 
 function editSignal(questionId, isEditing) {
   const doc = db.doc(questionId);
   if (isEditing) {
-    doc.set({ editing: Date.now() }, { merge: true });
+    return doc.set({ editing: Date.now() }, { merge: true });
   } else {
-    doc.update({ editing: firebase.firestore.FieldValue.delete() });
+    return doc.update({ editing: firebase.firestore.FieldValue.delete() });
   }
 }
 
