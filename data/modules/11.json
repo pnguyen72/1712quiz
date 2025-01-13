@@ -158,7 +158,8 @@
     "choices": {
       "A_11_18": { "choice": "True", "isCorrect": true },
       "B_11_18": { "choice": "False" }
-    }
+    },
+    "explanation": "Types of cohesion are (from best to worst): functional, sequential, communicational, procedural, temporal, logical, and coincidental.<br><b>(figure 9-14, p. 321)</b>"
   },
   "11_19": {
     "question": "Micah is adding implementation resources to change a logical DFD into a physical DFD. He should describe databases, files, tables, and processes as they will be implemented on the computer.",

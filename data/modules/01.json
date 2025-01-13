@@ -266,7 +266,7 @@
       "D_01_31": { "choice": "Business process reengineering (BPR)" },
       "E_01_31": { "choice": "Business process efficiency (BPE)" }
     },
-    "explanation": "Automation = smallest/easiest improvement<br>Improvement = moderate improvement<br>Reenginerring = overhaul"
+    "explanation": "Automation = smallest/easiest improvement<br>Improvement = moderate improvement<br>Reenginerring = complete overhaul, big improvement"
   },
   "01_32": {
     "question": "Which is an activity the users probably will NOT do on a project?",
@@ -475,7 +475,7 @@
       "A_01_54": { "choice": "True" },
       "B_01_54": { "choice": "False", "isCorrect": true }
     },
-    "explanation": "It's the system request."
+    "explanation": "It's the System Request, the outcome of the Planning phase.<br>System Proposal is the outcome of the Analysis phase, which describes the requirements of the system."
   },
   "01_55": {
     "question": "Becky is a systems analyst for Laswell Consulting. She is attending a three-day intensive workshop on developing applications in php. What systems analyst skill is she working on?",
@@ -503,7 +503,7 @@
       "D_01_57": { "choice": "Feasibility analysis document" },
       "E_01_57": { "choice": "Business process document" }
     },
-    "explanation": "Outcomes:<br>- Planning: system request<br>- Analysis: system proposal<br>- Planning: system specification<br>- Implementation: the system itself<br>\"Business process document\" is not a thing. Feasibility analysis is part of the system request."
+    "explanation": "Outcomes:<br>- Planning: System request<br>- Analysis: System proposal<br>- Design: System specification<br>- Implementation: The system itself<br>\"Business process document\" is not a thing. Feasibility analysis is part of the system request."
   },
   "01_58": {
     "question": "The project sponsor should have an idea of the business value to be gained from the system.",

@@ -349,9 +349,7 @@
     "choices": {
       "A_08_39": { "choice": "The low risk factor" },
       "B_08_39": { "choice": "You get a system that is tailored to the current business and meets specific needs", "isCorrect": true },
-      "C_08_39": {
-        "choice": "The ability for in-house developers to work on systems that are in new programming languages and in technologies that are unknown to them prior to the development"
-      },
+      "C_08_39": { "choice": "The ability for in-house developers to work on systems that are in new programming languages and in technologies that are unknown to them prior to the development" },
       "D_08_39": { "choice": "The low cost (as compared to buying a package)" },
       "E_08_39": { "choice": "The rapid development of custom systems" }
     },
@@ -448,7 +446,7 @@
       "A_08_50": { "choice": "True" },
       "B_08_50": { "choice": "False", "isCorrect": true }
     },
-    "explanation": "Hardware and Software Specifications are done in the design phase."
+    "explanation": "Trick question. Hardware and software specifications are done in the Design phase."
   },
   "08_51": {
     "question": "Workarounds are what?",
@@ -501,7 +499,7 @@
       "A_08_56": { "choice": "True" },
       "B_08_56": { "choice": "False", "isCorrect": true }
     },
-    "explanation": "<i>\"a variety of skills—­technical, interpersonal, functional, project management, modeling—­all must be in place for the project to move ahead smoothly\"</i> <b>(p. 208)</b><br><br><i>\"The skills that are applied during projects are either technical (e.g., Java, SQL) or functional (e.g., electronic commerce)\"</i> <b>(p. 215)</b><br><br>Technical skills is definitely not the only type. But these sentences seem to contradict (are interpersonal skills applied or not?). <span style=\"color:red\">Please edit this if you know what's going on.<span></span></span>"
+    "explanation": "<i>\"a variety of skills—­technical, interpersonal, functional, project management, modeling—­all must be in place for the project to move ahead smoothly\"</i> <b>(p. 208)</b><br><br><i>\"The skills that are applied during projects are either technical (e.g., Java, SQL) or functional (e.g., electronic commerce)\"</i> <b>(p. 215)</b><br><br>Technical skills is definitely not the only type. But these sentences seem to contradict (are interpersonal skills applied or not?). <span style=\"color:red\">Please edit this if you know what's going on.</span>"
   },
   "08_57": {
     "question": "During the design phase, the project team carefully considers the nonfunctional business requirements (such as performance, cultural and political aspects).",

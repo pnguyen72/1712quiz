@@ -333,16 +333,10 @@
     "question": "The main difference between the Parallel Development Methodology and the Iterative Development Methodology is that:",
     "choices": {
       "A_02_39": { "choice": "The Parallel Development Methodology will have various releases (like version 1.0; 2.0, etc.) and the Iterative will not" },
-      "B_02_39": {
-        "choice": "The Iterative Methodology will create various models or prototypes with user involvement before setting on design concepts and the Parallel Methodology will not"
-      },
+      "B_02_39": { "choice": "The Iterative Methodology will create various models or prototypes with user involvement before setting on design concepts and the Parallel Methodology will not" },
       "C_02_39": { "choice": "The Parallel Methodology will have subprojects and the Iterative Methodology will have various releases", "isCorrect": true },
-      "D_02_39": {
-        "choice": "The Iterative Methodology will break the system project into sub-projects for analysis, design and implementation and then merge them into a final system and the Parallel will not"
-      },
-      "E_02_39": {
-        "choice": "The Parallel Methodology will create various models or prototypes with user involvement before setting on design concepts and the Iterative will not"
-      }
+      "D_02_39": { "choice": "The Iterative Methodology will break the system project into sub-projects for analysis, design and implementation and then merge them into a final system and the Parallel will not" },
+      "E_02_39": { "choice": "The Parallel Methodology will create various models or prototypes with user involvement before setting on design concepts and the Iterative will not" }
     }
   },
   "02_40": {
@@ -556,14 +550,9 @@
   "02_63": {
     "question": "What the MAIN difference between systems prototyping and throwaway prototyping?",
     "choices": {
-      "A_02_63": {
-        "choice": "Throwaway prototyping develops systems that will be use as 'stop-gap' systems – and generally for less than six months; while systems prototyping results in systems that will be used extensively for several years."
-      },
+      "A_02_63": { "choice": "Throwaway prototyping develops systems that will be use as 'stop-gap' systems – and generally for less than six months; while systems prototyping results in systems that will be used extensively for several years." },
       "B_02_63": { "choice": "Throwaway prototyping involves users while systems prototyping does not" },
-      "C_02_63": {
-        "choice": "Systems prototyping works with users to quickly develop a simplified working version of the proposed system; while throwaway prototyping focuses more on exploring design alternatives",
-        "isCorrect": true
-      },
+      "C_02_63": { "choice": "Systems prototyping works with users to quickly develop a simplified working version of the proposed system; while throwaway prototyping focuses more on exploring design alternatives", "isCorrect": true },
       "D_02_63": { "choice": "Systems prototyping is a rapid application development methodology; while throwaway prototyping is not" },
       "E_02_63": { "choice": "Systems prototyping involves users while throwaway prototyping does not" }
     }

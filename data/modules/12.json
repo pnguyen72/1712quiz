@@ -199,7 +199,7 @@
       "A_12_22": { "choice": "True" },
       "B_12_22": { "choice": "False", "isCorrect": true }
     },
-    "explanation": "The two primary ways to optimize a relational database are (a) for query performance (i.e., how quickly and efficiently the database can retrieve and process data) and (b) for storage efficiency (i.e., minimizing the amount of disk space used)."
+    "explanation": "Trick question. \"Storage efficiency\" and \"using the smallest amount of space\" mean the same thing.<br>The two ways to optimize a database are optimizing for speed (faster querying) and optimizing for space (less space used)"
   },
   "12_23": {
     "question": "The concept for planning good performance of databases is known as what?",

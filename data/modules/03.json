@@ -262,10 +262,7 @@
     "choices": {
       "A_03_31": { "choice": "Watch interviewees' facial expressions, how they sit and their body language; do they cross their arms; do they lean forward?" },
       "B_03_31": { "choice": "Pay attention to what the interviewee is saying" },
-      "C_03_31": {
-        "choice": "Explain thoroughly – it is estimated that in a strong interview session, the interviewer (you) should talk and explain about 60% of the time; and the interviewee should answer about 40% of the time",
-        "isCorrect": true
-      },
+      "C_03_31": { "choice": "Explain thoroughly – it is estimated that in a strong interview session, the interviewer (you) should talk and explain about 60% of the time; and the interviewee should answer about 40% of the time", "isCorrect": true },
       "D_03_31": { "choice": "Be happy – happy people radiate confidence" },
       "E_03_31": { "choice": "If the interviewee ask you a question, answer it truthfully – and if you don't know an answer, say so" }
     }
@@ -321,10 +318,7 @@
       "B_03_37": { "choice": "JAD reports will include technology analysis while interviews will only include root cause analysis" },
       "C_03_37": { "choice": "The JAD report will include results from questionnaires while the interview report will not" },
       "D_03_37": { "choice": "It describes information from the interview or JAD session" },
-      "E_03_37": {
-        "choice": "The interview report is generally written within 48 hours of the interview; while the JAD session report may take a week or two after the JAD session.",
-        "isCorrect": true
-      }
+      "E_03_37": { "choice": "The interview report is generally written within 48 hours of the interview; while the JAD session report may take a week or two after the JAD session.", "isCorrect": true }
     }
   },
   "03_38": {
@@ -418,7 +412,8 @@
     "choices": {
       "A_03_47": { "choice": "True" },
       "B_03_47": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "She's doing root cause analysis.<br>Activity elimination is finding which parts of a process are unnecessary and can be removed."
   },
   "03_48": {
     "question": "Gary has eight interviews to conduct over the next week. Once he has completed all interviews, he should then write up a summary report. Preparing interview reports prior to completing all interviews will generally be premature until Gary has talked to all interviewees.",
@@ -437,7 +432,7 @@
       "D_03_49": { "choice": "The major steps in the process are completed in parallel." }
     },
     "multiSelect": true,
-    "explanation": "Wrong answers:<br>  - Cost has nothing to do with this.<br>  - A fragmented process <i>should</i> be parallelized. It's not true that it's already parallelized."
+    "explanation": "Wrong answers:<br>- Cost has nothing to do with this.<br>- A fragmented process <i>should</i> be parallelized. It's not already parallelized."
   },
   "03_50": {
     "question": "In terms of reaching the most number of people in requirements elicitation, interviews are considered better than questionnaires.",

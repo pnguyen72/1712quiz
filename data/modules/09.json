@@ -172,10 +172,7 @@
       "B_09_19": { "choice": "Easy and therefore more experienced members of the department take the lead." },
       "C_09_19": { "choice": "Easy and therefore outside consultants are often sourced to do the task." },
       "D_09_19": { "choice": "Easy and therefore experienced internal members are sourced to the task." },
-      "E_09_19": {
-        "choice": "Difficult and therefore, many organizations use the skills of experienced, expert system architects (consultants or employees) who specialize in the task.",
-        "isCorrect": true
-      }
+      "E_09_19": { "choice": "Difficult and therefore, many organizations use the skills of experienced, expert system architects (consultants or employees) who specialize in the task.", "isCorrect": true }
     }
   },
   "09_20": {
@@ -232,7 +229,7 @@
       "A_09_26": { "choice": "True", "isCorrect": true },
       "B_09_26": { "choice": "False" }
     },
-    "explanation": "It's different from Technical Environment Requirements in that PR is what environments the system <i>may</i> need to operate in in the future; while TER is what environments the system <i>currently</i> needs to operate in.<br><br><b>(p. 231)</b>"
+    "explanation": "It's different from Technical Environment Requirements in that PR is what environments the system <i>may</i> need to operate in in the future, while TER is what environments the system <i>currently</i> needs to operate in. <b>(p. 231)</b>"
   },
   "09_27": {
     "question": "The design phase is the time to select the specific software that will operate the hardware.",
