@@ -230,6 +230,10 @@
       }
     }
 
+    &.joke[answered="false"] {
+      display: none;
+    }
+
     &:is([answered="false"], .wrong-answer) .unsure-label {
       display: none;
     }
