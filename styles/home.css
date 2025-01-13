@@ -82,8 +82,9 @@
 
         .coverage {
           margin-left: 0.5rem;
-          border-radius: 20%;
-          padding: 0 0.2rem;
+          margin-right: 0.15rem;
+          border-radius: 15%;
+          padding: 0 0.25rem;
         }
       }
     }
