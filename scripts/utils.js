@@ -35,18 +35,26 @@ function getColor(accuracy) {
 function nearestElement(collection) {
   const margin = 32;
   const position = (e) => e.getBoundingClientRect().top - margin;
-  const elementPositions = [...collection].map((e) => [position(e), e]);
+  const elements = Array.from(collection);
 
   return {
-    next: () =>
-      elementPositions
-        .filter(([pos]) => pos > navbar.offsetHeight + 1)
-        .reduce((a, b) => (a[0] < b[0] ? a : b), {})[1],
+    next: function () {
+      const elementsAhead = elements.filter(
+        (e) => position(e) > navbar.offsetHeight + 1
+      );
+      if (elementsAhead.length > 0) {
+        return elementsAhead[0];
+      }
+      return elements[elements.length - 1];
+    },
 
-    previous: () =>
-      elementPositions
-        .filter(([pos]) => pos < 0)
-        .reduce((a, b) => (a[0] > b[0] ? a : b), {})[1],
+    previous: function () {
+      const elementsBehind = elements.filter((e) => position(e) < 0);
+      if (elementsBehind.length > 0) {
+        return elementsBehind[elementsBehind.length - 1];
+      }
+      return elements[0];
+    },
   };
 }
 
