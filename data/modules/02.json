@@ -157,7 +157,7 @@
       "A_02_18": { "choice": "True" },
       "B_02_18": { "choice": "False", "isCorrect": true }
     },
-    "explanation": "Cost margin of error: 100%<br>Time margin of error: 25%"
+    "explanation": "Margin of error for cost = 100%<br>Margin of error for time = 25%"
   },
   "02_19": {
     "question": "If you had a project with very clear requirements; familiar technologies; not super complex; reliable; a very long time schedule and where the need for schedule visibility is low – the best methodology might be Extreme programming.",
@@ -259,7 +259,8 @@
       "C_02_30": { "choice": "Parallel" },
       "D_02_30": { "choice": "Iterative", "isCorrect": true },
       "E_02_30": { "choice": "Throwaway prototyping" }
-    }
+    },
+    "explanation": "Process of elimination:<br>- not Waterfall because it takes very long time<br>- not Sys. Proto because it's not reliable<br>- not Parallel because it's very hard to parallelize a complex and unfamiliar project<br>Between Throw. Proto. and Iterative, the latter is better for schedule visibility."
   },
   "02_31": {
     "question": "The corporate IT department carefully needs to prioritize, select and manage a portfolio of projects.",
@@ -293,7 +294,8 @@
       "C_02_34": { "choice": "Parallel" },
       "D_02_34": { "choice": "System prototyping" },
       "E_02_34": { "choice": "Agile development", "isCorrect": true }
-    }
+    },
+    "explanation": "Familiar tech and short time schedule are usually a giveaway for Agile."
   },
   "02_35": {
     "question": "CIO is an acronym for \"Chief Information Officer\".",
@@ -368,7 +370,7 @@
       "D_02_42": { "choice": "Timeboxing", "isCorrect": true },
       "E_02_42": { "choice": "Risk management" }
     },
-    "explanation": "Timeboxing = cutting features to finish the project on time.<br>Activity elimination = improving the system process by eliminating unnecessary activities.<br>These are unrelated."
+    "explanation": "Timeboxing = cutting features to finish the project on time<br>Activity elimination = improving system efficiency by eliminating unnecessary processes<br>These are unrelated."
   },
   "02_43": {
     "question": "The Iterative approach of the RAD methodology breaks the overall project into a series of release versions.",
@@ -509,7 +511,7 @@
       "D_02_58": { "choice": "5,000 and $100,000 – and between 10 and 30 weeks" },
       "E_02_58": { "choice": "0 and $100,000 – and between 0 and 40 weeks" }
     },
-    "explanation": "Cost margin of error = 100%<br>Time margin of error = 25%"
+    "explanation": "Margin of error for cost = 100%<br>Margin of error for time = 25%"
   },
   "02_59": {
     "question": "Extreme Programming (XP) is BEST characterized as:",
