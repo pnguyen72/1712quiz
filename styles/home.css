@@ -31,15 +31,19 @@
     }
 
     > div {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.6rem;
+
+      @media (width < 600px) {
+        margin-bottom: 1.55rem;
+      }
+
+      @media (width < 450px) {
+        margin-bottom: 1.5rem;
+      }
     }
 
     label:has(input:disabled) span {
       color: gray;
-    }
-
-    ul {
-      margin: 0.5rem 0;
     }
 
     #exam-selection {

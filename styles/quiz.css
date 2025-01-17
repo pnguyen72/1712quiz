@@ -1,11 +1,17 @@
 .question {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  @media (width < 600px) {
+    margin-bottom: 2.25rem;
+  }
+  @media (width < 450px) {
+    margin-bottom: 2rem;
+  }
   @media print {
     margin-bottom: 1.25rem;
   }
 
   &:last-child {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
 
   &.unsure .question-title {
@@ -45,7 +51,13 @@
   }
 
   .question-body {
-    margin: 0.6rem 0;
+    margin: 0.7rem 0;
+    @media (width < 600px) {
+      margin: 0.65rem 0;
+    }
+    @media (width < 450px) {
+      margin: 0.6rem 0;
+    }
     @media print {
       margin: 0.5rem 0;
     }
@@ -61,11 +73,6 @@
   }
 
   ul {
-    margin: 0.6rem 0;
-    @media print {
-      margin: 0.5rem 0;
-    }
-
     @media (width >= 750px) {
       padding-inline-start: 2rem;
     }
@@ -76,11 +83,6 @@
 
   .explanation-container {
     display: none;
-
-    margin-top: 0.6rem;
-    @media print {
-      margin-top: 0.5rem;
-    }
 
     margin-left: 2.25rem;
     width: calc(100% - 2.25rem);

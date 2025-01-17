@@ -87,16 +87,58 @@ td {
 #quiz[submitted="true"] {
   .question-choices {
     li.correct {
+      &:first-child {
+        margin-top: calc(0.55rem + 3px);
+      }
       &:not(:first-child) {
-        margin-top: calc(0.5rem - 3px);
+        margin-top: calc(0.55rem - 3px);
+      }
+      &:last-child {
+        margin-bottom: calc(0.55rem + 3px);
       }
       &:not(:last-child) {
-        margin-bottom: calc(0.5rem - 3px);
+        margin-bottom: calc(0.55rem - 3px);
+      }
+
+      @media (width < 600px) {
+        &:first-child {
+          margin-top: calc(0.525rem + 3px);
+        }
+        &:not(:first-child) {
+          margin-top: calc(0.525rem - 3px);
+        }
+        &:last-child {
+          margin-bottom: calc(0.525rem + 3px);
+        }
+        &:not(:last-child) {
+          margin-bottom: calc(0.525rem - 3px);
+        }
+      }
+
+      @media (width < 450px) {
+        &:first-child {
+          margin-top: calc(0.5rem + 3px);
+        }
+        &:not(:first-child) {
+          margin-top: calc(0.5rem - 3px);
+        }
+        &:last-child {
+          margin-bottom: calc(0.5rem + 3px);
+        }
+        &:not(:last-child) {
+          margin-bottom: calc(0.5rem - 3px);
+        }
       }
 
       @media print {
+        &:first-child {
+          margin-top: calc(0.4rem + 3px);
+        }
         &:not(:first-child) {
           margin-top: calc(0.4rem - 3px);
+        }
+        &:last-child {
+          margin-bottom: calc(0.4rem + 3px);
         }
         &:not(:last-child) {
           margin-bottom: calc(0.4rem - 3px);

@@ -8,11 +8,20 @@ ul {
   @media (width < 450px) {
     padding-inline-start: 1.25rem;
   }
+}
 
-  li {
+ul,
+li,
+:has(+ ul),
+ul + * {
+  margin: 0.55rem 0;
+  @media (width < 600px) {
+    margin: 0.525rem 0;
+  }
+  @media (width < 450px) {
     margin: 0.5rem 0;
-    @media print {
-      margin: 0.4rem 0;
-    }
+  }
+  @media print {
+    margin: 0.4rem 0;
   }
 }
