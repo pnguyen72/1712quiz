@@ -48,13 +48,13 @@ td {
   outline: solid 1px #0f0116;
 }
 
-#main #license-notice {
+#home-page:has(#license-notice[visible]) #main #license-notice {
   #hawaiian {
     /* Make the license image a little nicer on the eyes. */
     opacity: 75%;
   }
   #license-text {
-    background-color: #262626 !important;
+    background-color: #262626;
     color: #f0f0f0;
   }
   #license-agree-text {
