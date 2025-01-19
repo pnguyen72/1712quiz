@@ -24,10 +24,10 @@
   }
 
   form {
-    max-width: 400px;
+    max-width: 375px;
 
-    h1 > br {
-      display: none;
+    @media (width >= 450px) {
+      white-space: nowrap;
     }
 
     > div {

@@ -31,58 +31,69 @@ function explainLearnedQuestions() {
   ) {
     alert(
       "You have exhausted the question bank. Therefore, " +
-        "some questions in this quiz are those you've already learned.\n\n" +
-        "There's an option to exclude already-learned questions in the home menu."
+        "some questions in this quiz are those you've already learned." +
+        "\n\nThere's an option to exclude learned questions from new quizzes in the home menu."
     );
     localStorage.setItem("learnedQuestionsExplained", true);
     unhide(learnedQuestionsSelection);
   }
 }
 
-function giveExplanationsWarning() {
+function explainUnansweredQuestions() {
+  if (
+    !localStorage.getItem("unansweredQuestionsExplained") ||
+    !quizPage.querySelector(".question")
+  ) {
+    alert(
+      "By default, unanswered questions are discarded and don't count towards your grade." +
+        "\n\nThere's an option to change this behavior in the home menu."
+    );
+    localStorage.setItem("unansweredQuestionsExplained", true);
+    unhide(discardUnansweredSelection);
+  }
+}
+
+function explainExplanations() {
   if (
     !localStorage.getItem("explanationWarned") &&
     document.querySelector("#quiz-page[visible] #quiz[submitted=true]")
   ) {
     alert(
-      "Warning:\n\n" +
-        "Unlike questions and answers which are from Learning Hub, " +
-        "explanations are written by your classmates, " +
-        "thus *could* be inaccurate.\n\n" +
-        "There's an option to disable explanations in the home menu."
+      "Unlike questions and answers which are from Learning Hub, " +
+        "explanations are written by your classmates, thus *could* be inaccurate." +
+        "\n\nThere's an option to disable explanations in the home menu."
     );
     localStorage.setItem("explanationWarned", true);
     unhide(explainSelection);
   }
 }
 
-function checkCompletion(quiz, interative = true) {
-  function isAnswered(question, strict = false) {
+function checkCompletion(quiz) {
+  function isAnswered(question, option = { strict: false }) {
     const definitelyYes =
       !question || question.querySelector(".choice-input:is(:checked)");
     if (definitelyYes) return true;
 
     if (!question.querySelector(".choice-input[type=checkbox]")) {
-      strict = true;
+      option.strict = true;
     }
-    if (strict) return false;
+    if (option.strict) return false;
     const previous = question.previous();
     const next = question.next();
-    return isAnswered(previous, true) && isAnswered(next, true);
+    return (
+      isAnswered(previous, { strict: true }) &&
+      isAnswered(next, { strict: true })
+    );
   }
 
   const questions = quiz.querySelectorAll(".question");
   if (questions.length == 0) return false;
   for (const question of questions) {
-    const answered = isAnswered(question);
-    if (interative && !answered) {
-      if (!confirm("There are unanswered questions. Submit anyway?")) {
-        question.scrollTo().blink();
-        return false;
-      }
-      interative = false;
+    if (isAnswered(question)) {
+      question.classList.add("answered");
+    } else {
+      question.classList.remove("answered");
     }
-    question.setAttribute("answered", Boolean(answered));
   }
   return true;
 }
@@ -100,11 +111,6 @@ function grade(quiz) {
 }
 
 function isCorrect(question) {
-  if (question.getAttribute("answered") == "false") {
-    explain(question);
-    return false;
-  }
-
   if (question.classList.contains("joke")) {
     // There are 3 kinds of joke questions:
     // 1, if all answers are incorrect
@@ -162,8 +168,8 @@ function saveProgress() {
     "#quiz-page[visible] #quiz[submitted=false]"
   );
   if (!quiz) return;
-  checkCompletion(quiz, false);
-  const selector = ".unsure,[answered=true]";
+  checkCompletion(quiz);
+  const selector = ".unsure,.answered";
   unfinishedAttempts.set(
     getAttemptData(quiz.querySelectorAll(`.question:is(${selector})`))
   );

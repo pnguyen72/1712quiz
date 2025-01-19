@@ -232,19 +232,14 @@
       }
     }
 
-    &.joke[answered="false"] {
-      display: none;
-    }
-
-    &:is([answered="false"], .wrong-answer) .unsure-label {
+    &.wrong-answer .unsure-label {
       display: none;
     }
   }
 
   &[explain="true"] .question {
     &.unsure,
-    &.wrong-answer,
-    &[answered="false"] {
+    &.wrong-answer {
       .explanation-container {
         display: flex;
       }

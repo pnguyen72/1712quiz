@@ -4,10 +4,6 @@
     display: none;
   }
 
-  form > h1 > br {
-    display: initial;
-  }
-
   #main {
     display: flex;
     flex-direction: row;
@@ -21,13 +17,16 @@
     #license-notice {
       margin: 0;
       position: relative;
-      height: 85vh;
+      height: 80vh;
+      object-fit: cover;
 
       #hawaiian {
+        max-width: 450px;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
       }
       #license-text {
+        width: 100%;
         font-size: 4vh;
         text-align: center;
         position: absolute;

@@ -37,11 +37,14 @@ moduleSelection.addEventListener("input", () => {
 questionsCountChoice.addEventListener("input", () => {
   localStorage.setItem("questions", questionsCountChoice.value);
 });
-learnedQuestionsChoice.addEventListener("input", () => {
-  localStorage.setItem("learnedQuestions", learnedQuestionsChoice.checked);
+includeLearnedQuestions.addEventListener("input", () => {
+  localStorage.setItem("learnedQuestions", includeLearnedQuestions.checked);
 });
-explainChoice.addEventListener("input", () => {
-  localStorage.setItem("explain", explainChoice.checked);
+discardUnansweredQuestions.addEventListener("input", () => {
+  localStorage.setItem("discardUnanswered", discardUnansweredQuestions.checked);
+});
+enableExplanations.addEventListener("input", () => {
+  localStorage.setItem("explain", enableExplanations.checked);
 });
 
 licenceAgreeBtn.addEventListener("click", licenseUnlock);

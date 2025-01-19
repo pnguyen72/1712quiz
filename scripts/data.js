@@ -38,7 +38,7 @@ function getQuiz(modules, count) {
   for (const module of modules) {
     newQuestions = newQuestions.concat(Object.keys(questionsData[module]));
   }
-  if (!learnedQuestionsChoice.checked) {
+  if (!includeLearnedQuestions.checked) {
     newQuestions = newQuestions.filter((id) => !knowledge.hasLearned(id));
     shuffle(newQuestions);
   } else {
@@ -85,19 +85,15 @@ knowledge.sizeOf = function (module) {
 };
 
 knowledge.update = function (quiz) {
-  const corrects = quiz.querySelectorAll(
-    ".question[answered=true]:not(.wrong-answer)"
-  );
-  const incorrects = quiz.querySelectorAll(
-    ".question[answered=true].wrong-answer"
-  );
+  const corrects = quiz.querySelectorAll(".question:not(.wrong-answer)");
+  const incorrects = quiz.querySelectorAll(".question.wrong-answer");
   corrects.forEach((question) => this.learn(question.id));
   incorrects.forEach((question) => this.unlearn(question.id));
   localStorage.setItem("knowledge", JSON.stringify(this));
 };
 
 function explain(question) {
-  if (!explainChoice.checked) return;
+  if (!enableExplanations.checked) return;
 
   const questionId = question.id;
   const explanation = question.querySelector(".explanation");
@@ -126,7 +122,7 @@ function explain(question) {
       explanationText = snapshot.data()?.explanation ?? "";
     }
     explanation.write(explanationText);
-    giveExplanationsWarning();
+    explainExplanations();
   });
 }
 

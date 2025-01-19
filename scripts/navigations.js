@@ -62,17 +62,17 @@ function initalizeSelections() {
   if (localStorage.getItem("learnedQuestionsExplained")) {
     unhide(learnedQuestionsSelection);
     const learnedQuestions = localStorage.getItem("learnedQuestions");
-    if (learnedQuestions) {
-      learnedQuestionsChoice.checked = learnedQuestions == "true";
-    }
+    includeLearnedQuestions.checked = learnedQuestions == "true";
   }
-
+  if (localStorage.getItem("unansweredQuestionsExplained")) {
+    unhide(discardUnansweredSelection);
+    const ignore = localStorage.getItem("discardUnanswered");
+    discardUnansweredQuestions.checked = ignore == "true";
+  }
   if (localStorage.getItem("explanationWarned")) {
     unhide(explainSelection);
     const explain = localStorage.getItem("explain");
-    if (explain) {
-      explainChoice.checked = explain == "true";
-    }
+    enableExplanations.checked = explain == "true";
   }
 }
 
@@ -160,11 +160,26 @@ function nextQuiz() {
 
 function submit() {
   const quiz = document.getElementById("quiz");
-  if (!checkCompletion(quiz)) return;
+
+  const unansweredQuestions = quiz.querySelectorAll(".question:not(.answered)");
+  if (unansweredQuestions.length > 0) {
+    if (!confirm("There are unanswered questions. Submit anyway?")) {
+      unansweredQuestions[0].scrollTo().blink();
+      return;
+    }
+    setTimeout(explainUnansweredQuestions, 400);
+  }
+  if (discardUnansweredQuestions.checked) {
+    unansweredQuestions.forEach((question) => question.remove());
+  } else {
+    quiz
+      .querySelectorAll(".joke:not(.answered)")
+      .forEach((question) => question.remove());
+  }
 
   const score = grade(quiz);
-  const answeredQuestions = quiz.querySelectorAll(".question[answered=true]");
-  const outOf = answeredQuestions.length;
+  const questions = quiz.querySelectorAll(".question");
+  const outOf = questions.length;
   if (outOf) {
     pastAttempts.push({
       timestamp: Date.now(),
@@ -175,16 +190,16 @@ function submit() {
       duration: navText.innerText,
       score: score,
       outOf: outOf,
-      data: getAttemptData(answeredQuestions),
+      data: getAttemptData(questions),
     });
     localStorage.setItem("attempts", JSON.stringify(pastAttempts));
-    showResult(score, outOf);
+    knowledge.update(quiz);
+    unfinishedAttempts.delete(questions);
+    unfinishedAttempts.save();
   }
-  scrollTo(0, 0);
-  knowledge.update(quiz);
   stopTimer();
-  unfinishedAttempts.delete(quiz.querySelectorAll(".question"));
-  unfinishedAttempts.save();
+  showResult(score, outOf);
+  scrollTo(0, 0);
 }
 
 const questionsScroller = {

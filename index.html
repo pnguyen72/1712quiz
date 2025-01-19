@@ -58,11 +58,7 @@
       <h1>COMP 1712 Practice Quiz</h1>
       <div id="main">
         <form id="form">
-          <h1>
-            COMP 1712
-            <br />
-            Practice Quiz
-          </h1>
+          <h1>COMP 1712 Practice Quiz</h1>
           <div id="exam-selection">
             <div>Exam:</div>
           </div>
@@ -88,19 +84,21 @@
           <div id="other-options">
             <span>Other options:</span>
             <ul>
-              <li id="learned-questions-selection" style="display: none">
+              <li id="include-learned" style="display: none">
                 <label>
-                  <input
-                    id="learned-questions"
-                    type="checkbox"
-                    checked="true"
-                  />
-                  <span>Include already-learned questions</span>
+                  <input type="checkbox" checked="true" />
+                  <span>Include learned questions in new quizzes</span>
                 </label>
               </li>
-              <li id="explain-selection" style="display: none">
+              <li id="ignore-unanswered" style="display: none">
                 <label>
-                  <input id="explain" type="checkbox" checked="true" />
+                  <input type="checkbox" checked="true" />
+                  <span>Discard unanswered questions when submitting</span>
+                </label>
+              </li>
+              <li id="explain" style="display: none">
+                <label>
+                  <input type="checkbox" checked="true" />
                   <span>Enable crowdsourced explanations</span>
                 </label>
               </li>

@@ -91,7 +91,7 @@ function generateModuleSelection() {
 function generateQuiz(questionsIds) {
   const quiz = document.createElement("div");
   quiz.id = "quiz";
-  quiz.setAttribute("explain", explainChoice.checked);
+  quiz.setAttribute("explain", enableExplanations.checked);
   quiz.setAttribute("submitted", false);
   questionsIds.forEach((id, index) => {
     const question = generateQuestion(id, index);
@@ -105,17 +105,17 @@ function generatePastAttempt(attemptData) {
   const questionsIds = Object.keys(attemptData);
   const quiz = generateQuiz(questionsIds);
   quiz.querySelectorAll(".learned-tag").forEach((tag) => tag.remove());
-  recoverAttempt(quiz, false);
+  recoverAttempt(quiz, { interactive: false });
   grade(quiz);
   unfinishedAttempts.load();
   return quiz;
 }
 
-function recoverAttempt(quiz, interative = true) {
+function recoverAttempt(quiz, option = { interactive: true }) {
   const recoverable = quiz.querySelectorAll(".question[recoverable]");
   if (recoverable.length == 0) return;
   if (
-    interative &&
+    option.interactive &&
     !confirm(
       "You have an earlier unsubmitted attempt. Do you want to recover it?"
     )
@@ -138,10 +138,10 @@ function recoverAttempt(quiz, interative = true) {
   });
   stopTimer();
   startTimer(time);
-  if (interative) {
-    checkCompletion(quiz, false);
+  if (option.interactive) {
+    checkCompletion(quiz);
     quiz
-      .querySelector(".question[answered=false]")
+      .querySelector(".question:not(.answered)")
       ?.blink()
       ?.previous()
       ?.scrollTo();
