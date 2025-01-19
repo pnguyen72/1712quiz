@@ -25,9 +25,11 @@
 
   form {
     max-width: 375px;
-
-    @media (width >= 450px) {
-      white-space: nowrap;
+    @media (width < 600px) {
+      max-width: 358px;
+    }
+    @media (width < 450px) {
+      max-width: 341px;
     }
 
     > div {
@@ -65,6 +67,8 @@
     }
 
     #module-selection {
+      white-space: nowrap;
+
       #coverage {
         color: gray;
       }
@@ -93,8 +97,13 @@
       }
     }
 
-    #other-options:not(:has([visible])) {
-      display: none;
+    #other-options {
+      &:not(:has([visible])) {
+        display: none;
+      }
+      @media (width >= 450px) {
+        white-space: nowrap;
+      }
     }
   }
 }
