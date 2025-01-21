@@ -160,8 +160,9 @@ function nextQuiz() {
 
 function submit() {
   const quiz = document.getElementById("quiz");
-
+  const questions = quiz.querySelectorAll(".question");
   const unansweredQuestions = quiz.querySelectorAll(".question:not(.answered)");
+
   if (unansweredQuestions.length > 0) {
     if (!confirm("There are unanswered questions. Submit anyway?")) {
       unansweredQuestions[0].scrollTo().blink();
@@ -169,6 +170,10 @@ function submit() {
     }
     setTimeout(explainUnansweredQuestions, 400);
   }
+
+  unfinishedAttempts.delete(questions);
+  unfinishedAttempts.save();
+
   if (discardUnansweredQuestions.checked) {
     unansweredQuestions.forEach((question) => question.remove());
   } else {
@@ -178,8 +183,9 @@ function submit() {
   }
 
   const score = grade(quiz);
-  const questions = quiz.querySelectorAll(".question");
-  const outOf = questions.length;
+  const answeredQuestions = quiz.querySelectorAll(".question");
+  const outOf = answeredQuestions.length;
+
   if (outOf) {
     pastAttempts.push({
       timestamp: Date.now(),
@@ -190,13 +196,12 @@ function submit() {
       duration: navText.innerText,
       score: score,
       outOf: outOf,
-      data: getAttemptData(questions),
+      data: getAttemptData(answeredQuestions),
     });
     localStorage.setItem("attempts", JSON.stringify(pastAttempts));
     knowledge.update(quiz);
-    unfinishedAttempts.delete(questions);
-    unfinishedAttempts.save();
   }
+
   stopTimer();
   showResult(score, outOf);
   scrollTo(0, 0);
