@@ -183,9 +183,11 @@ function showResult(score, outOf) {
   const accuracy = score / (outOf + Number.EPSILON);
   const roundedAccuracy = Math.round((accuracy + Number.EPSILON) * 100);
   resultText.innerText = `${score}/${outOf} (${roundedAccuracy}%)`;
-  const [H, S, L] = getColor(accuracy);
-  reviewPanel.style.backgroundColor = `hsl(${H}, ${S}%, ${L}%)`;
-  reviewPanel.style.color = L < 60 ? "#eee" : "#000";
+  if (outOf) {
+    const [H, S, L] = getColor(accuracy);
+    reviewPanel.style.backgroundColor = `hsl(${H}, ${S}%, ${L}%)`;
+    reviewPanel.style.color = L < 60 ? "#eee" : "#000";
+  }
   unhide(reviewPanel);
 
   const unsureQuestions = quizPage.querySelectorAll(".wrong-answer,.unsure");
