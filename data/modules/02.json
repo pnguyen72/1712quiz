@@ -52,7 +52,7 @@
       "D_02_06": { "choice": "A method for stressing customer satisfaction" },
       "E_02_06": { "choice": "A series of versions" }
     },
-    "explanation": "System prototyping = create a prototype, release it to users for feedback, and improve upon the prototype to release the final product.<br><br>It's \"quick\" because the prototype is fast to make. And \"dirty\" because the final product still carries some baggages of the early prototype (maybe the prototype approaches the problem a fundamentally wrong way).<br><br>The other kind of prototyping is Throwaway Prototying, where you throw away the prototype and make the final product from scratch. That one is quick but not dirty."
+    "explanation": "System prototyping = create a prototype, release it to users for feedback, and improve upon the prototype to release the final product.<br><br>It's \"quick\" because the prototype is fast to make. And \"dirty\" because the final product still carries some baggages of the early prototype (maybe the prototype approaches the problem in a fundamentally wrong way).<br><br>The other kind of prototyping is Throwaway Prototying, where you throw away the prototype and make the final product from scratch. That one is quick but not dirty."
   },
   "02_07": {
     "question": "Scrum, XP and Dynamic systems development method (DSDM) are all classified as 'agile development' concepts.",
@@ -78,7 +78,7 @@
       "D_02_09": { "choice": "Parallel" },
       "E_02_09": { "choice": "System prototyping" }
     },
-    "explanation": "\"Must be reliable\" is usualy a giveaway for V-Model. It's the method that gives the most reliable result."
+    "explanation": "The V-model integrates testing in every phase of the SDLC. So it gives very reliable result, but very difficult to do if you have unclear requirements or unfamiliar technology, because then you don't know what to test for.<br>We have clear requirements, very familiar technologies, and must be reliable. So V-model has all upsides with no downsides."
   },
   "02_10": {
     "question": "If the skills required by a project cannot be met by the available project team, which would probably NOT be a reasonable solution?",
@@ -260,7 +260,7 @@
       "D_02_30": { "choice": "Iterative", "isCorrect": true },
       "E_02_30": { "choice": "Throwaway prototyping" }
     },
-    "explanation": "Process of elimination:<br>- not Waterfall because it takes very long time<br>- not Sys. Proto because it's not reliable<br>- not Parallel because it's very hard to parallelize a complex and unfamiliar project<br>Between Throw. Proto. and Iterative, the latter is better for schedule visibility."
+    "explanation": "Process of elimination:<br>- not Waterfall because it takes a very long time<br>- not Sys. Proto because it's not reliable<br>- not Parallel because it's very hard to parallelize a complex and unfamiliar project<br>Between Throw. Proto. and Iterative, the latter is better for schedule visibility because you have version 1, 2, etc. to keep track of progress."
   },
   "02_31": {
     "question": "The corporate IT department carefully needs to prioritize, select and manage a portfolio of projects.",
@@ -295,7 +295,7 @@
       "D_02_34": { "choice": "System prototyping" },
       "E_02_34": { "choice": "Agile development", "isCorrect": true }
     },
-    "explanation": "Familiar tech and short time schedule are usually a giveaway for Agile."
+    "explanation": "Being easy and having short time schedule is usually a giveaway for Agile. <br>It's because the methodology downplays the formal parts of the SDLC and jumps right into coding. It may backfire if you have a conplex project, unfamiliar technology, or the program is mission-critical. But otherwise, the methodology gives you a good-enough product in a short time."
   },
   "02_35": {
     "question": "CIO is an acronym for \"Chief Information Officer\".",
@@ -370,7 +370,7 @@
       "D_02_42": { "choice": "Timeboxing", "isCorrect": true },
       "E_02_42": { "choice": "Risk management" }
     },
-    "explanation": "Timeboxing = cutting features to finish the project on time<br>Activity elimination = improving system efficiency by eliminating unnecessary processes<br>These are unrelated."
+    "explanation": "Timeboxing = cutting features to finish the project on time.<br>Activity elimination = improving system efficiency by removing unnecessary processes.<br>These are unrelated."
   },
   "02_43": {
     "question": "The Iterative approach of the RAD methodology breaks the overall project into a series of release versions.",

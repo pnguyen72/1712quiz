@@ -307,7 +307,7 @@
       "A_04_38": { "choice": "True" },
       "B_04_38": { "choice": "False", "isCorrect": true }
     },
-    "explanation": "Use cases normally contain ten to twelve major steps."
+    "explanation": "Use cases normally contain 10 - 12 major steps."
   },
   "04_39": {
     "question": "A use case is a formal way of representing how a business system interacts with its environment.",
