@@ -70,11 +70,19 @@ body {
 
 @media print {
   body {
-    font-size: 1rem;
+    font-size: 12pt !important;
     background-color: white;
 
-    #quiz-page {
-      margin: 1rem !important;
+    .page {
+      margin: 1rem 1.5rem !important;
     }
+
+    ul {
+      padding-inline-start: 1.25rem !important;
+    }
+  }
+
+  @page {
+    margin: 0 !important;
   }
 }
