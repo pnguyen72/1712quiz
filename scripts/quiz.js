@@ -39,6 +39,19 @@ function explainLearnedQuestions() {
   }
 }
 
+function explainSavingProgress() {
+  if (
+    !localStorage.getItem("savingProgressExplained") &&
+    document.querySelector(".question:not(.answered)")
+  ) {
+    alert(
+      "Did you know that your progress is saved automatically?\n" +
+        "Feel free to close this window, take a break, and come back at any time."
+    );
+    localStorage.setItem("savingProgressExplained", true);
+  }
+}
+
 function explainUnansweredQuestions() {
   if (
     !localStorage.getItem("unansweredQuestionsExplained") ||

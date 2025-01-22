@@ -156,6 +156,7 @@ function nextQuiz() {
     nextButton.disabled = false;
   }, 300);
   setTimeout(explainLearnedQuestions, 400);
+  setTimeout(explainSavingProgress, 5 * 60 * 1000); // 5 minutes
 }
 
 function submit() {
