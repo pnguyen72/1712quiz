@@ -167,17 +167,6 @@
     },
     "explanation": "Non-prime attributes are attributes that aren't identifiers. The identifiers, in this case, are PROJ_NUM and EMP_NUM, meaning the remaining five attributes are non-prime."
   },
-  "07_19": {
-    "question": "Andrew, an analyst for PaxMedia Inc., has just learned that the business rules for a system he has been working on have changed. This means what?",
-    "choices": {
-      "A_07_19": { "choice": "Andrew will be reassigned to a different project that is in its beginning stages" },
-      "B_07_19": { "choice": "The project will have to be scrapped and restarted" },
-      "C_07_19": { "choice": "The ERD data model will have to be put on hold while new DFD diagrams are created" },
-      "D_07_19": { "choice": "The ERD components will have to be changed", "isCorrect": true },
-      "E_07_19": { "choice": "Nothing – once the ERD data models have been drawn, they are 'frozen' for the system" }
-    },
-    "explanation": "<i>\"When business rules change, the relationships or other data model components will have to be altered.\"</i> <b>(p. 189)</b>"
-  },
   "07_20": {
     "question": "In a relational table, when we say attribute A functionally defines attribute B (A --> B) , it means that:",
     "choices": {
