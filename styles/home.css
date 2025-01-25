@@ -95,6 +95,13 @@
           padding: 0 0.25rem;
         }
       }
+
+      &:not(:has(.ongoing[visible])) .ongoing {
+        display: none;
+      }
+      .ongoing {
+        color: hsl(0, 100%, 45%);
+      }
     }
 
     #other-options {

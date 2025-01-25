@@ -117,6 +117,7 @@ function refreshAttemptsTable() {
 function tohomePage() {
   updateAttemptsTable();
   updateCoverage();
+  updateOngoingLabels();
   navText.style.visibility = "hidden";
   saveProgress();
   hide(reviewPanel);

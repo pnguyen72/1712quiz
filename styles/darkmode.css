@@ -42,6 +42,10 @@ select {
   color: hsl(0, 0%, 70%) !important;
 }
 
+.ongoing {
+  color: hsl(0, 100%, 60%) !important;
+}
+
 table,
 th,
 td {

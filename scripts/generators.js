@@ -43,9 +43,12 @@ function generateModuleSelection() {
     const moduleLabel = document.createElement("label");
     const moduleSelectBox = document.createElement("input");
     const moduleTitle = document.createElement("span");
+    const ongoingLabel = document.createElement("span");
     const moduleCoverage = document.createElement("span");
 
     moduleTitle.innerHTML = `${index + indexOffset}. ${name}`;
+    ongoingLabel.className = "ongoing";
+    ongoingLabel.innerText = "*";
     moduleCoverage.className = "coverage";
     moduleSelectBox.className = "module-input";
     moduleSelectBox.id = `${String(index + indexOffset).padStart(2, "0")}`;
@@ -57,6 +60,7 @@ function generateModuleSelection() {
 
     moduleLabel.appendChild(moduleSelectBox);
     moduleLabel.appendChild(moduleTitle);
+    moduleLabel.appendChild(ongoingLabel);
     module.appendChild(moduleLabel);
     module.appendChild(moduleCoverage);
     modulesList.appendChild(module);
@@ -85,7 +89,13 @@ function generateModuleSelection() {
   module.appendChild(moduleCoverage);
   modulesList.appendChild(module);
 
+  const ongoingLabel = document.createElement("li");
+  ongoingLabel.className = "ongoing";
+  ongoingLabel.innerText = "* ongoing attempt";
+  modulesList.appendChild(ongoingLabel);
+
   updateCoverage();
+  updateOngoingLabels();
 }
 
 function generateQuiz(questionsIds) {
@@ -393,7 +403,7 @@ function updateCoverage() {
   let sizeTotal = 0;
 
   // stat for each module
-  for (const module of modules.querySelectorAll("li:not(:last-child)")) {
+  for (const module of modules.querySelectorAll("li:has(.module-input)")) {
     const moduleNum = module.querySelector("input").id;
     const moduleCoverage = module.querySelector(".coverage");
 
@@ -422,9 +432,11 @@ function updateCoverage() {
   }
 
   // stat for "All of them!"
-  const moduleAllCoverage = modules.querySelector("li:last-child .coverage");
+  const moduleAllCoverage = modules.querySelector(
+    "li:has(#module-all) .coverage"
+  );
 
-  if (modules.querySelector("li:not(:last-child) .coverage:not([visible])")) {
+  if (modules.querySelector("li:has(.module-input) .coverage:not([visible])")) {
     hide(moduleAllCoverage);
     return;
   }
@@ -447,4 +459,15 @@ function updateCoverage() {
       "Congrats, you've learned 100% of the question bank! 🥳"
     );
   }
+}
+
+function updateOngoingLabels() {
+  document.querySelectorAll(".module-input").forEach((input) => {
+    const ongoingLabel = input.parentElement.querySelector(".ongoing");
+    if (Object.keys(unfinishedAttempts[input.id] ?? {}).length > 0) {
+      unhide(ongoingLabel);
+    } else {
+      hide(ongoingLabel);
+    }
+  });
 }
