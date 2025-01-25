@@ -126,9 +126,8 @@ function recoverAttempt(quiz, option = { interactive: true }) {
   if (recoverable.length == 0) return;
   if (
     option.interactive &&
-    !confirm(
-      "You have an earlier unsubmitted attempt. Do you want to recover it?"
-    )
+    !confirm("Continue your ongoing attempt?") &&
+    confirm("You will permanently lose your progress! Are you sure?")
   ) {
     unfinishedAttempts.delete(recoverable);
     return;
