@@ -30,8 +30,6 @@ function generateExamSelection() {
 }
 
 function generateModuleSelection() {
-  modulesSelectBoxes = [];
-
   const selectedExam = examSelection.querySelector("input:checked");
   const selectedModulesNames = modulesNames[selectedExam.id];
   const indexOffset = parseInt(selectedExam.getAttribute("index"));
@@ -46,16 +44,16 @@ function generateModuleSelection() {
     const moduleSelectBox = document.createElement("input");
     const moduleTitle = document.createElement("span");
     const moduleCoverage = document.createElement("span");
-    modulesSelectBoxes.push(moduleSelectBox);
 
     moduleTitle.innerHTML = `${index + indexOffset}. ${name}`;
     moduleCoverage.className = "coverage";
+    moduleSelectBox.className = "module-input";
     moduleSelectBox.id = `${String(index + indexOffset).padStart(2, "0")}`;
     moduleSelectBox.type = "checkbox";
-    moduleSelectBox.addEventListener(
-      "input",
-      () => (document.getElementById("module-all").checked = false)
-    );
+    moduleSelectBox.addEventListener("input", () => {
+      document.getElementById("module-all").checked =
+        !modulesList.querySelector(".module-input:not(:checked)");
+    });
 
     moduleLabel.appendChild(moduleSelectBox);
     moduleLabel.appendChild(moduleTitle);
@@ -76,7 +74,9 @@ function generateModuleSelection() {
   moduleSelectBox.type = "checkbox";
   moduleSelectBox.id = "module-all";
   moduleSelectBox.addEventListener("click", () =>
-    modulesSelectBoxes.forEach((box) => (box.checked = moduleSelectBox.checked))
+    document
+      .querySelectorAll(".module-input")
+      .forEach((box) => (box.checked = moduleSelectBox.checked))
   );
 
   moduleLabel.appendChild(moduleSelectBox);

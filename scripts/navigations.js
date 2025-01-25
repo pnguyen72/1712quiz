@@ -77,7 +77,8 @@ function initalizeSelections() {
 }
 
 function getSelectedModules() {
-  return modulesSelectBoxes.filter((box) => box.checked).map((box) => box.id);
+  const checkedBoxes = [...document.querySelectorAll(".module-input:checked")];
+  return checkedBoxes.map((box) => box.id);
 }
 
 function refreshAttemptsTable() {
