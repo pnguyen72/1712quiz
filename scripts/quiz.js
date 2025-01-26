@@ -42,7 +42,9 @@ function explainLearnedQuestions() {
 function explainSavingProgress() {
   if (
     !localStorage.getItem("savingProgressExplained") &&
-    document.querySelector(".question:not(.answered)")
+    document.querySelector(
+      "#quiz-page[visible] #quiz[submitted=false] .question:not(.answered)"
+    )
   ) {
     alert(
       "Did you know that your progress is saved automatically?\n" +
