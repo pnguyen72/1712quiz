@@ -11,6 +11,7 @@
   height: 2.5rem;
 
   span {
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
   }
@@ -23,10 +24,6 @@
     margin-top: 4rem;
   }
 
-  span {
-    font-size: 1.4rem;
-  }
-
   > div {
     display: flex;
     flex-direction: column;
@@ -35,7 +32,7 @@
     font-weight: bold;
 
     .bx {
-      font-size: 1.45rem;
+      font-size: 1.5rem;
     }
   }
 }
@@ -45,10 +42,6 @@ nav {
 
   &[visible] ~ .page {
     margin-bottom: 3.5rem;
-  }
-
-  span {
-    font-size: 1.5rem;
   }
 
   .bx {
