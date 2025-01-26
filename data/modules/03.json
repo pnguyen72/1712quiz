@@ -60,7 +60,7 @@
     "multiSelect": true
   },
   "03_08": {
-    "question": "A JAD facilitator recognizes that some people know more about the system and proposed system and will dominate the discussion and know that is a positive thing.",
+    "question": "A JAD facilitator recognizes that some people know more about the system and proposed system and will dominate the discussion, and knows that is a positive thing.",
     "choices": {
       "A_03_08": { "choice": "True" },
       "B_03_08": { "choice": "False", "isCorrect": true }
