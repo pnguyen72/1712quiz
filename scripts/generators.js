@@ -301,7 +301,7 @@ function generateQuestion(questionId, questionIndex) {
     const margin = 32;
     question.scrollIntoView(true);
     scrollBy(0, -margin);
-    if (reviewPanel.style.display != "none") {
+    if (getComputedStyle(reviewPanel).display != "none") {
       scrollBy(0, -navbar.offsetHeight);
     }
     // scrolling sets questionsScroller.current = null

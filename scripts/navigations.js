@@ -120,7 +120,6 @@ function tohomePage() {
   updateOngoingLabels();
   navText.style.visibility = "hidden";
   saveProgress();
-  hide(reviewPanel);
   hide(quizPage);
   unhide(homePage);
 }
@@ -128,7 +127,6 @@ function tohomePage() {
 function toQuizPage() {
   navText.style.visibility = "visible";
   stopTimer();
-  hide(reviewPanel);
   reviewPanel.style.backgroundColor = "";
   reviewPanel.style.color = "";
   resultText.innerText = "Review";

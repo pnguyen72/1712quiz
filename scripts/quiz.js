@@ -212,10 +212,6 @@ function showResult(score, outOf) {
     reviewPanel.style.color = L < 60 ? "#eee" : "#000";
   }
   unhide(reviewPanel);
-
-  const unsureQuestions = quizPage.querySelectorAll(".incorrect,.unsure");
-  prevQuest.style.visibility = nextQuest.style.visibility =
-    unsureQuestions.length > 0 ? "visible" : "hidden";
 }
 
 function toggleUnsure(question) {
@@ -224,17 +220,6 @@ function toggleUnsure(question) {
   } else {
     question.classList.add("unsure");
     explain(question);
-  }
-
-  const unsureQuestions = quizPage.querySelectorAll(".incorrect,.unsure");
-  if (unsureQuestions.length > 0) {
-    unhide(reviewPanel);
-    prevQuest.style.visibility = nextQuest.style.visibility = "visible";
-  } else {
-    if (quizPage.querySelector("#quiz:not(.submitted)")) {
-      hide(reviewPanel);
-    }
-    prevQuest.style.visibility = nextQuest.style.visibility = "hidden";
   }
 }
 

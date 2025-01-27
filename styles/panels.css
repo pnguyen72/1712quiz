@@ -35,6 +35,18 @@
       font-size: 1.5rem;
     }
   }
+
+  &:not(
+      :has(~ #quiz-page.visible #quiz.submitted),
+      :has(~ #quiz-page .question.unsure:not(:only-child))
+    ) {
+    display: none;
+  }
+
+  &:not(:has(~ #quiz-page .question:is(.incorrect, .unsure):not(:only-child)))
+    > div {
+    visibility: hidden;
+  }
 }
 
 nav {
