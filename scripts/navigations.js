@@ -1,11 +1,11 @@
 function hide(element) {
   element.style.display = "none";
-  element.removeAttribute("visible");
+  element.classList.remove("visible");
 }
 
 function unhide(element) {
   element.style.display = "";
-  element.setAttribute("visible", true);
+  element.classList.add("visible");
 }
 
 function licenseLock() {
@@ -110,7 +110,7 @@ function refreshAttemptsTable() {
   }
 
   attemptsTable
-    .querySelectorAll(".row[visible=true] .timestamp")
+    .querySelectorAll(".row.visible .timestamp")
     .forEach((td) => (td.innerText = humanize(td.getAttribute("value"))));
 }
 
@@ -213,17 +213,17 @@ function submit() {
 const questionsScroller = {
   current: null,
   getQuestions: function () {
-    return quizPage.querySelectorAll(".question:is(.wrong-answer,.unsure)");
+    return quizPage.querySelectorAll(".question:is(.incorrect,.unsure)");
   },
   next: function () {
     const target = this.current
-      ? this.current.next(":is(.wrong-answer,.unsure)")
+      ? this.current.next(":is(.incorrect,.unsure)")
       : nearestElement(this.getQuestions()).next();
     (target ?? this.current).scrollTo().blink();
   },
   previous: function () {
     const target = this.current
-      ? this.current.previous(":is(.wrong-answer,.unsure)")
+      ? this.current.previous(":is(.incorrect,.unsure)")
       : nearestElement(this.getQuestions()).previous();
     (target ?? this.current).scrollTo().blink();
   },

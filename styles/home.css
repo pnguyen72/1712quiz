@@ -50,13 +50,13 @@
 
     #exam-selection {
       margin-top: 2.5rem;
-      &:not([visible]) + #module-selection {
+      &:not(.visible) + #module-selection {
         margin-top: 3rem;
       }
 
       @media (width < 600px) {
         margin-top: 2rem;
-        &:not([visible]) + #module-selection {
+        &:not(.visible) + #module-selection {
           margin-top: 2.5rem;
         }
       }
@@ -73,7 +73,7 @@
         color: gray;
       }
 
-      &:not(:has(.coverage[visible])) {
+      &:not(:has(.coverage.visible)) {
         #coverage {
           display: none;
         }
@@ -96,7 +96,7 @@
         }
       }
 
-      &:not(:has(.ongoing[visible])) .ongoing {
+      &:not(:has(.ongoing.visible)) .ongoing {
         display: none;
       }
       .ongoing {
@@ -105,7 +105,7 @@
     }
 
     #other-options {
-      &:not(:has([visible])) {
+      &:not(:has(.visible)) {
         display: none;
       }
       @media (width >= 450px) {

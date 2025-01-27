@@ -1,4 +1,4 @@
-#home-page:has(#license-notice[visible]) {
+#home-page:has(#license-notice.visible) {
   .coverage,
   #attempts-table-container {
     display: none;
@@ -128,7 +128,7 @@
       #exam-selection {
         margin-top: 1rem;
 
-        &:not([visible]) + #module-selection {
+        &:not(.visible) + #module-selection {
           margin-top: 1rem;
         }
       }

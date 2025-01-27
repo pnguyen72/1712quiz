@@ -12,7 +12,7 @@ moduleSelection.addEventListener(
 );
 
 form.addEventListener("click", () => {
-  if (homePage.querySelector("#license-notice[visible]")) {
+  if (homePage.querySelector("#license-notice.visible")) {
     licenseText.style.animation = "blink 1s";
   }
 });
@@ -58,7 +58,7 @@ licenseDisagreeBtn.addEventListener("click", () => {
 homeButon.addEventListener("click", tohomePage);
 nextButton.addEventListener("click", () => {
   if (nextButton.disabled) return;
-  if (document.querySelector("#quiz-page[visible] #quiz[submitted=false]")) {
+  if (document.querySelector("#quiz-page.visible #quiz:not(.submitted)")) {
     submit();
   } else {
     nextQuiz();
@@ -83,7 +83,7 @@ attemptsTableContainer.querySelector(".bx").addEventListener("click", () => {
 
 window.addEventListener("beforeprint", () => {
   const quiz = document.querySelector(
-    "#quiz-page[visible] #quiz[submitted=true][explain=true]"
+    "#quiz-page.visible #quiz.submitted.explained"
   );
   if (!quiz) return;
   // Normally, to save firebase reads,

@@ -13,7 +13,7 @@ table {
 #attempts-table-container {
   position: relative;
 
-  &:not(:has(.row[visible])) {
+  &:not(:has(.row.visible)) {
     display: none;
   }
 
@@ -63,14 +63,14 @@ table {
     }
 
     @media (width < 700px) {
-      :has(.modules[visible="true"]) {
+      :has(.modules.visible) {
         .result .percentage {
           display: none;
         }
       }
     }
     @media (width < 600px) {
-      :has(.modules[visible="true"]) {
+      :has(.modules.visible) {
         .duration {
           display: none;
         }

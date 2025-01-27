@@ -27,7 +27,7 @@ function stopTimer() {
 function explainLearnedQuestions() {
   if (
     !localStorage.getItem("learnedQuestionsExplained") &&
-    document.querySelector("#quiz-page[visible] .learned-tag")
+    document.querySelector("#quiz-page.visible .learned-tag")
   ) {
     alert(
       "You have exhausted the question bank. Therefore, " +
@@ -43,7 +43,7 @@ function explainSavingProgress() {
   if (
     !localStorage.getItem("savingProgressExplained") &&
     document.querySelector(
-      "#quiz-page[visible] #quiz[submitted=false] .question:not(.answered)"
+      "#quiz-page.visible #quiz:not(.submitted) .question:not(.answered)"
     )
   ) {
     alert(
@@ -71,7 +71,7 @@ function explainUnansweredQuestions() {
 function explainExplanations() {
   if (
     !localStorage.getItem("explanationWarned") &&
-    document.querySelector("#quiz-page[visible] #quiz[submitted=true]")
+    document.querySelector("#quiz-page.visible #quiz.submitted")
   ) {
     alert(
       "Unlike questions and answers which are from Learning Hub, " +
@@ -121,39 +121,47 @@ function grade(quiz) {
   quiz
     .querySelectorAll(".choice-input")
     .forEach((input) => (input.disabled = true));
-  quiz.setAttribute("submitted", true);
+  quiz.classList.add("submitted");
   return score;
 }
 
 function isCorrect(question) {
   if (question.classList.contains("joke")) {
     // There are 3 kinds of joke questions:
-    // 1, if all answers are incorrect
+    // 1, if all answers are incorrect,
+    //    make whatever the user chose incorrect,
+    //    and randomly make one of the other options correct
     if (!question.querySelector("li.correct,.choice-input[type=checkbox]")) {
-      question.querySelector("li:has(input:checked)").className = "incorrect";
+      question
+        .querySelector("li:has(input:checked)")
+        .classList.remove("correct");
       sample(
         question.querySelectorAll("li:not(:has(input:checked))")
-      ).className = "correct";
-      question.classList.add("wrong-answer");
+      ).classList.add("correct");
       explain(question);
+      question.classList.add("incorrect");
       return false;
     }
-    // 2, if all answers are correct
-    if (!question.querySelector("li.incorrect,.choice-input[type=checkbox]")) {
-      question.querySelector("li:has(input:checked)").className = "correct";
+    // 2, if all answers are correct,
+    //    make whatever the user chose correct,
+    //    and all other choices incorrect
+    if (
+      !question.querySelector("li:not(.correct), .choice-input[type=checkbox]")
+    ) {
+      question.querySelector("li:has(input:checked)").classList.add("correct");
       question
         .querySelectorAll("li:not(:has(input:checked))")
-        .foreach((choice) => (choice.className = "incorrect"));
+        .foreach((choice) => choice.classList.remove("correct"));
       return true;
     }
-    // 3, still a joke, but mark it like a normal question
+    // 3, still a joke, but mark it like a normal question.
   }
 
   for (const choice of question.querySelectorAll("li")) {
     const input = choice.querySelector("input");
     if ((choice.className == "correct") != input.checked) {
-      question.classList.add("wrong-answer");
       explain(question);
+      question.classList.add("incorrect");
       return false;
     }
   }
@@ -180,7 +188,7 @@ function getAttemptData(questions) {
 
 function saveProgress() {
   const quiz = document.querySelector(
-    "#quiz-page[visible] #quiz[submitted=false]"
+    "#quiz-page.visible #quiz:not(.submitted)"
   );
   if (!quiz) return;
   checkCompletion(quiz);
@@ -205,7 +213,7 @@ function showResult(score, outOf) {
   }
   unhide(reviewPanel);
 
-  const unsureQuestions = quizPage.querySelectorAll(".wrong-answer,.unsure");
+  const unsureQuestions = quizPage.querySelectorAll(".incorrect,.unsure");
   prevQuest.style.visibility = nextQuest.style.visibility =
     unsureQuestions.length > 0 ? "visible" : "hidden";
 }
@@ -218,12 +226,12 @@ function toggleUnsure(question) {
     explain(question);
   }
 
-  const unsureQuestions = quizPage.querySelectorAll(".wrong-answer,.unsure");
+  const unsureQuestions = quizPage.querySelectorAll(".incorrect,.unsure");
   if (unsureQuestions.length > 0) {
     unhide(reviewPanel);
     prevQuest.style.visibility = nextQuest.style.visibility = "visible";
   } else {
-    if (quizPage.querySelector("#quiz[submitted=false]")) {
+    if (quizPage.querySelector("#quiz:not(.submitted)")) {
       hide(reviewPanel);
     }
     prevQuest.style.visibility = nextQuest.style.visibility = "hidden";

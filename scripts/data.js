@@ -85,10 +85,12 @@ knowledge.sizeOf = function (module) {
 };
 
 knowledge.update = function (quiz) {
-  const corrects = quiz.querySelectorAll(".question:not(.wrong-answer)");
-  const incorrects = quiz.querySelectorAll(".question.wrong-answer");
+  const corrects = quiz.querySelectorAll(".question:not(.incorrect)");
+  const incorrects = quiz.querySelectorAll(".question.incorrect");
+
   corrects.forEach((question) => this.learn(question.id));
   incorrects.forEach((question) => this.unlearn(question.id));
+
   localStorage.setItem("knowledge", JSON.stringify(this));
 };
 

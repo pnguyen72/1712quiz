@@ -20,7 +20,7 @@
 #review-panel {
   top: 0;
 
-  &[visible] ~ .page {
+  &.visible ~ .page {
     margin-top: 4rem;
   }
 
@@ -40,7 +40,7 @@
 nav {
   bottom: 0;
 
-  &[visible] ~ .page {
+  &.visible ~ .page {
     margin-bottom: 3.5rem;
   }
 

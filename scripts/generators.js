@@ -101,8 +101,9 @@ function generateModuleSelection() {
 function generateQuiz(questionsIds) {
   const quiz = document.createElement("div");
   quiz.id = "quiz";
-  quiz.setAttribute("explain", enableExplanations.checked);
-  quiz.setAttribute("submitted", false);
+  if (enableExplanations.checked) {
+    quiz.classList.add("explained");
+  }
   questionsIds.forEach((id, index) => {
     const question = generateQuestion(id, index);
     quiz.appendChild(question);
@@ -122,7 +123,7 @@ function generatePastAttempt(attemptData) {
 }
 
 function recoverAttempt(quiz, option = { interactive: true }) {
-  const recoverable = quiz.querySelectorAll(".question[recoverable]");
+  const recoverable = quiz.querySelectorAll(".question.recoverable");
   if (recoverable.length == 0) return;
   if (
     option.interactive &&
@@ -220,7 +221,9 @@ function generateQuestion(questionId, questionIndex) {
     const choiceInput = document.createElement("input");
     const choiceText = document.createElement("span");
 
-    choice.className = choiceData.isCorrect ? "correct" : "incorrect";
+    if (choiceData.isCorrect) {
+      choice.classList.add("correct");
+    }
     choiceInput.id = choiceId;
     choiceInput.className = "choice-input";
     choiceInput.type = questionData.multiSelect ? "checkbox" : "radio";
@@ -273,7 +276,7 @@ function generateQuestion(questionId, questionIndex) {
     question.classList.add("joke");
   }
   if (attemptData) {
-    question.setAttribute("recoverable", true);
+    question.classList.add("recoverable");
   }
   question.addEventListener(
     "animationend",
@@ -435,7 +438,7 @@ function updateCoverage() {
     "li:has(#module-all) .coverage"
   );
 
-  if (modules.querySelector("li:has(.module-input) .coverage:not([visible])")) {
+  if (modules.querySelector("li:has(.module-input) .coverage:not(.visible)")) {
     hide(moduleAllCoverage);
     return;
   }

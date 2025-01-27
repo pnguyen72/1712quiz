@@ -215,32 +215,32 @@
   }
 }
 
-#quiz[submitted="false"] {
+#quiz:not(.submitted) {
   li {
     display: grid;
   }
 }
 
-#quiz[submitted="true"] {
+#quiz.submitted {
   li.correct label {
     background-color: hsl(120, 80%, 80%);
   }
 
   .question {
     @media not print {
-      &.wrong-answer .question-title {
+      &.incorrect .question-title {
         background-color: hsla(0, 80%, 75%, 75%);
       }
     }
 
-    &.wrong-answer .unsure-label {
+    &.incorrect .unsure-label {
       display: none;
     }
   }
 
-  &[explain="true"] .question {
-    &.unsure,
-    &.wrong-answer {
+  &.explained .question {
+    &.incorrect,
+    &.unsure {
       .explanation-container {
         display: flex;
       }
@@ -253,7 +253,7 @@
     }
   }
 
-  &[explain="false"] .unsure-label {
+  &:not(.explained) .unsure-label {
     display: none;
   }
 }
@@ -278,7 +278,7 @@
     display: none !important;
   }
 
-  #quiz[submitted="true"][explain="true"] {
+  #quiz.submitted.explained {
     .explanation-container {
       display: flex;
     }
