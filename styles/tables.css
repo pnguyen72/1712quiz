@@ -53,12 +53,8 @@ table {
     td.timestamp {
       cursor: pointer;
       color: blue;
-
-      /* if hover is available */
-      @media not all and (hover: none) {
-        &:hover {
-          text-decoration: underline;
-        }
+      &:hover {
+        text-decoration: underline;
       }
     }
 
