@@ -20,10 +20,6 @@
 #review-panel {
   top: 0;
 
-  &.visible ~ .page {
-    margin-top: 4rem;
-  }
-
   > div {
     display: flex;
     flex-direction: column;
@@ -43,6 +39,16 @@
         )
     ) {
     display: none;
+
+    ~ .page {
+      margin-top: 2rem;
+      @media (width < 600px) {
+        margin-top: 1.5rem;
+      }
+      @media (width < 450px) {
+        margin-top: 1rem;
+      }
+    }
   }
 
   &:not(:has(~ #quiz-page .question:is(.incorrect, .unsure):not(:only-child)))
