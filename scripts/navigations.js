@@ -139,6 +139,7 @@ function nextQuiz() {
   const questionsCount = questionsCountChoice.value;
   const modules = getSelectedModules();
   if (modules.length == 0) {
+    tohomePage();
     moduleSelection.style.animation = "blink 1s";
     return;
   }
