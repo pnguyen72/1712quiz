@@ -37,8 +37,10 @@
   }
 
   &:not(
-      :has(~ #quiz-page.visible #quiz.submitted),
-      :has(~ #quiz-page .question.unsure:not(:only-child))
+      :has(
+          ~ #quiz-page.visible
+            :is(#quiz.submitted, .question.unsure:not(:only-child))
+        )
     ) {
     display: none;
   }
