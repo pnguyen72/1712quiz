@@ -239,7 +239,7 @@
       "D_08_26": { "choice": "The project has a project manager who can coordinate vendor efforts" }
     },
     "multiSelect": true,
-    "explanation": "See <b>figure 6-5, p. 213</b>"
+    "explanation": "See figure 6-5, p. 213"
   },
   "08_27": {
     "question": "Application Software Providers (ASPs) should be utilized when considering non-core programming and/custom needs.",

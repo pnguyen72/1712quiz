@@ -260,7 +260,7 @@
       "D_02_30": { "choice": "Iterative", "isCorrect": true },
       "E_02_30": { "choice": "Throwaway prototyping" }
     },
-    "explanation": "Process of elimination:<br>- not Waterfall because it takes a very long time<br>- not Sys. Proto because it's not reliable<br>- not Parallel because it's very hard to parallelize a complex and unfamiliar project<br>Between Throw. Proto. and Iterative, the latter is better for schedule visibility because you have version 1, 2, etc. to keep track of progress."
+    "explanation": "Process of elimination:<br>- not Waterfall because it takes a very long time<br>- not Sys. Proto because it's not reliable<br>- not Parallel because it's very hard to parallelize a complex and unfamiliar project<br><br>I think ThrowProto and Iterative are both reasonable choices. The latter is probably better for schedule visibility because you have version 1, 2, etc. to keep track of progress."
   },
   "02_31": {
     "question": "The corporate IT department carefully needs to prioritize, select and manage a portfolio of projects.",
@@ -511,7 +511,7 @@
       "D_02_58": { "choice": "5,000 and $100,000 – and between 10 and 30 weeks" },
       "E_02_58": { "choice": "0 and $100,000 – and between 0 and 40 weeks" }
     },
-    "explanation": "Margin of error for cost = 100%<br>Margin of error for time = 25%"
+    "explanation": "Margin of error for cost = 100%<br>Margin of error for time = 25%<br><br>100% of $50k is $50k, so the cost could be 50k +/- 50k = $0 - $100k<br>25% of 20 weeks is 5 weeks, so the time could be 20 +/- 5 = 15 - 25 weeks"
   },
   "02_59": {
     "question": "Extreme Programming (XP) is BEST characterized as:",

@@ -261,7 +261,8 @@
     "choices": {
       "A_04_33": { "choice": "True" },
       "B_04_33": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "The actor could be a department or another system process."
   },
   "04_34": {
     "question": "Barton is an analyst developing a use case. Which of the following will probably NOT be on his use case?",
@@ -271,7 +272,8 @@
       "C_04_34": { "choice": "A use case number" },
       "D_04_34": { "choice": "Source for the major inputs" },
       "E_04_34": { "choice": "Type of trigger" }
-    }
+    },
+    "explanation": "There's no data flow in use cases; that's for Data Flow Diagrams."
   },
   "04_35": {
     "question": "A 'temporal' trigger might be which of the following:",
@@ -413,7 +415,8 @@
     "choices": {
       "A_04_51": { "choice": "True" },
       "B_04_51": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "The actor is the entity that triggers a use case (e.g. students registering for class is a use case, student is the actor). It has nothing to do with SQL."
   },
   "04_52": {
     "question": "Barb is an analyst developing a use case. Which of the following will probably NOT be on her use case?",

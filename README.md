@@ -13,7 +13,7 @@ All questions and answers are taken from Learning Hub practice quizzes (732 in t
 - Can choose how many questions per quiz, including the entire question bank at once
 - Can opt to exclude questions you've done before from future quizzes
 - The quiz page containing all questions and answers can be printed to pdf.
-- You can submit explanations for quiz questions, or learn from the explanations of your classmates. Currently 220 out of 732 questions (~30%) have explanations.
+- You can submit explanations for quiz questions, or learn from the explanations of your classmates. Currently 230 out of 732 questions (~30%) have explanations.
 
 ## Images
 

@@ -180,7 +180,8 @@
     "choices": {
       "A_06_22": { "choice": "True", "isCorrect": true },
       "B_06_22": { "choice": "False" }
-    }
+    },
+    "explanation": "<i>\"Work iteratively and constantly challenge the data model with business rules and exceptions to see whether the diagram is communicating the business system appropriately.\"</i> <b>(p. 189)</b>"
   },
   "06_23": {
     "question": "With an ERD, special symbols are added to show high-level business rules.",
@@ -213,7 +214,8 @@
       "C_06_26": { "choice": "Data flows from DFDs" },
       "D_06_26": { "choice": "Through interviews (what users need for reports and processing)" },
       "E_06_26": { "choice": "From the CASE tool" }
-    }
+    },
+    "explanation": "The system proposal is the final deliverable of the Analysis phase, after you've done the ERD. You cannot use the system proposal to create ERDs, because it doesn't exist yet."
   },
   "06_27": {
     "question": "Anthony is working on the cardinality of doctors and patients in a large urban hospital. With the large number of doctors with varying specialties and patients that may have more than one aliment, he thinks the relationship might be noted as what?",

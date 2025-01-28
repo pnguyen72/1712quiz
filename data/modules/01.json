@@ -110,7 +110,8 @@
     "choices": {
       "A_01_13": { "choice": "True" },
       "B_01_13": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "Cost-benefit analysis and understanding feasibility are done in the planning phase."
   },
   "01_14": {
     "question": "Developing navigation methods, database, and file specifications and what architecture to use would occur in the design phase of the SDLC.",

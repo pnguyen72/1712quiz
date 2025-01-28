@@ -155,7 +155,7 @@
       "A_03_19": { "choice": "True" },
       "B_03_19": { "choice": "False", "isCorrect": true }
     },
-    "explanation": "Not <i>all</i> discussions, only relevant ones."
+    "explanation": "Not all discussions, only relevant ones. And it doesn't have to be a computer but could be a whiteboard."
   },
   "03_20": {
     "question": "Which is generally NOT true of non-functional requirements?",
@@ -285,7 +285,8 @@
       "C_03_33": { "choice": "Output can be displayed in Internet Explorer, in Firefox, or in Google Chrome browsers" },
       "D_03_33": { "choice": "System is automatically updated every 5 seconds" },
       "E_03_33": { "choice": "System can be accessed through a Blackberry device" }
-    }
+    },
+    "explanation": "Functional = what the system must be able to do (i.e. features)<br>Non-functional = how the system do it and the implications (e.g. speed, compatibility)"
   },
   "03_34": {
     "question": "Management of requirements and system scope is one of the hardest parts of managing a project.",
@@ -413,7 +414,7 @@
       "A_03_47": { "choice": "True" },
       "B_03_47": { "choice": "False", "isCorrect": true }
     },
-    "explanation": "She's doing root cause analysis.<br>Activity elimination is finding which parts of a process are unnecessary and can be removed."
+    "explanation": "She's doing root cause analysis.<br>Activity elimination is improving system efficiency by removing unnecessary processes."
   },
   "03_48": {
     "question": "Gary has eight interviews to conduct over the next week. Once he has completed all interviews, he should then write up a summary report. Preparing interview reports prior to completing all interviews will generally be premature until Gary has talked to all interviewees.",
@@ -421,7 +422,7 @@
       "A_03_48": { "choice": "True" },
       "B_03_48": { "choice": "False", "isCorrect": true }
     },
-    "explanation": "You write an interview report for each individual you interviewed. It's not a summary of all interviews. (See figure 3-8, p. 87 for a sample report.) It should be written within 48 hours of the interview."
+    "explanation": "You write an interview report for each individual you interviewed, it's not a summary of all interviews. (See figure 3-8, p. 87 for a sample report.) And it should be written within 48 hours."
   },
   "03_49": {
     "question": "What does it mean for a process to be fragmented?",
@@ -599,7 +600,7 @@
       "A_03_69": { "choice": "True" },
       "B_03_69": { "choice": "False", "isCorrect": true }
     },
-    "explanation": "You should share your interview report with the interviewee to ask whether you've noted their statements correctly or whether they have any clarification."
+    "explanation": "You should share your interview report with the interviewee to ask for correction/clarification. Scope creep has nothing to do with this."
   },
   "03_70": {
     "question": "Rebecca, a fairly new employee in the company and Matt, her boss (who has been with the company for 22 years) are in your JAD session. It would probably be expected that Rebecca would not share much in the session.",
