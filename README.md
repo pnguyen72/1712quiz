@@ -1,4 +1,4 @@
-# COMP 1712 Practice Quiz  
+# COMP 1712 Practice Quiz
 
 <https://quiz.comp1712.ca>
 
@@ -19,29 +19,29 @@ All questions and answers are taken from Learning Hub practice quizzes (732 in t
 
 ### Home page
 
-Dark mode | Light mode
-:--------:|:----------:
-![home page in dark mode](/images/home-dark.png) | ![home page in light mode](/images/home-light.png)
+|                    Dark mode                     |                     Light mode                     |
+| :----------------------------------------------: | :------------------------------------------------: |
+| ![home page in dark mode](/images/home-dark.png) | ![home page in light mode](/images/home-light.png) |
 
 ### Quiz page (before submitting)
 
-Dark mode | Light mode
-:--------:|:----------:
-![quiz page in dark mode](/images/quiz-dark.png) | ![quiz page in light mode](/images/quiz-light.png)
+|                    Dark mode                     |                     Light mode                     |
+| :----------------------------------------------: | :------------------------------------------------: |
+| ![quiz page in dark mode](/images/quiz-dark.png) | ![quiz page in light mode](/images/quiz-light.png) |
 
 ### Quiz page (after submitting)
 
-Dark mode | Light mode
-:--------:|:----------:
-![printed quiz page in dark mode](/images/quiz-submitted-dark.png) | ![submitted quiz page in light mode](/images/quiz-submitted-light.png)
+|                             Dark mode                              |                               Light mode                               |
+| :----------------------------------------------------------------: | :--------------------------------------------------------------------: |
+| ![printed quiz page in dark mode](/images/quiz-submitted-dark.png) | ![submitted quiz page in light mode](/images/quiz-submitted-light.png) |
 
 ### Quiz page (printing)
 
-Dark mode  | ![printed quiz page in dark mode](/images/quiz-printed-dark.png)
-:---------:|:---------:
+| Dark mode | ![printed quiz page in dark mode](/images/quiz-printed-dark.png) |
+| :-------: | :--------------------------------------------------------------: |
 
-Light mode | ![submitted quiz page in light mode](/images/quiz-printed-light.png)
-:---------:|:---------:
+| Light mode | ![submitted quiz page in light mode](/images/quiz-printed-light.png) |
+| :--------: | :------------------------------------------------------------------: |
 
 ## Legal
 
