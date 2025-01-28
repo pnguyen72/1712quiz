@@ -57,7 +57,7 @@
     label {
       position: relative;
       display: inline-block;
-      width: 45px;
+      width: 2.75rem;
       height: 1.5rem;
 
       #dark-mode-toggle {
@@ -67,9 +67,9 @@
           background-color: rebeccapurple;
 
           &::before {
-            -webkit-transform: translateX(16px);
-            -ms-transform: translateX(16px);
-            transform: translateX(16px);
+            -webkit-transform: translateX(1rem);
+            -ms-transform: translateX(1rem);
+            transform: translateX(1rem);
           }
         }
 
@@ -85,7 +85,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        border-radius: 34px;
+        border-radius: 2rem;
         background-color: #ccc;
         -webkit-transition: 0.4s;
         transition: 0.4s;
@@ -93,10 +93,10 @@
         &::before {
           position: absolute;
           content: "";
-          height: 16px;
-          width: 16px;
-          left: 4px;
-          bottom: 4px;
+          height: 1rem;
+          width: 1rem;
+          left: 0.25rem;
+          bottom: 0.25rem;
           border-radius: 50%;
           background-color: white;
           -webkit-transition: 0.4s;
