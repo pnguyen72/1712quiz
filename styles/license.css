@@ -1,5 +1,4 @@
 #home-page:has(#license-notice.visible) {
-  .coverage,
   #attempts-table-container {
     display: none;
   }
