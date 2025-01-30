@@ -1,5 +1,5 @@
 let disagreeNum = localStorage.getItem("disagree") ?? 0;
-const disagreeTarget = 16; // how many times user must click "no" for to be granted the exception
+const disagreeTarget = 8; // how many times user must click "no" for to be granted the exception
 let modulesNames;
 let questionsData = {};
 const pastAttempts = localStorage.getItem("attempts")
