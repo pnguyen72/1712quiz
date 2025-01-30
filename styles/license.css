@@ -70,7 +70,7 @@
         @media not all and (hover: none) {
           &:hover {
             #license-disagree-text {
-              color: red;
+              color: red !important;
             }
           }
         }
