@@ -78,7 +78,8 @@
     "choices": {
       "A_03_10": { "choice": "True" },
       "B_03_10": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "Question is confusing because:<br>–> The facilitator must never insert their own opinion.<br>–> However, if possible (without breaking neutrality), they should help the group resolve issues.<br><br>But the facilitator never actively PARTICIPATES so answer is false"
   },
   "03_11": {
     "question": "When eliciting requirements from processing clerks and lower level managers about 'how' a system works, the best approach might be: _____.",
@@ -88,7 +89,8 @@
       "C_03_11": { "choice": "Closed-ended interview questions", "isCorrect": true },
       "D_03_11": { "choice": "JAD session" },
       "E_03_11": { "choice": "Probing interview questions" }
-    }
+    },
+    "explanation": "Generally, to get a broad vision of the project, you ask upper managers open-ended questions; and to understand the details of how the system works, you ask lower managers and staff close-ended questions."
   },
   "03_12": {
     "question": "Rafael, Fraud Unit Manager, has just received an interview report from Stefano, a systems analyst. Rafael was interviewed by Stefano, and was asked to make corrections and clarifications to the interview report. In what interview phase would this occur?",
@@ -129,7 +131,8 @@
       "C_03_16": { "choice": "Customer zipcode is formatted as character data" },
       "D_03_16": { "choice": "Supplier table is available" },
       "E_03_16": { "choice": "The system must contain customer order history for three years" }
-    }
+    },
+    "explanation": "Availability isn't a system process or informational in nature, so I figured this answer was the best answer for a non-functional requirement"
   },
   "03_17": {
     "question": "In preparing for an interview, TJ does research as to areas in which the interviewee has knowledge so that he does not ask questions that an interviewee cannot answer.",
@@ -286,7 +289,7 @@
       "D_03_33": { "choice": "System is automatically updated every 5 seconds" },
       "E_03_33": { "choice": "System can be accessed through a Blackberry device" }
     },
-    "explanation": "Functional = what the system must be able to do (i.e. features)<br>Non-functional = how the system do it and the implications (e.g. speed, compatibility)"
+    "explanation": "Functional = what the system must be able to do (i.e. features)<br>Non-functional = how the system does it and the implications (e.g. speed, compatibility)"
   },
   "03_34": {
     "question": "Management of requirements and system scope is one of the hardest parts of managing a project.",
@@ -528,7 +531,8 @@
     "choices": {
       "A_03_61": { "choice": "True" },
       "B_03_61": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "Those sound more like a questionnaire. The 3 types of interview questions are: open-ended, close-ended, and probing."
   },
   "03_62": {
     "question": "Marta wants to collect facts and opinions from a wide range of geographically dispersed people quickly and with the least expense. She would probably want to use what?",
