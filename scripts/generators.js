@@ -412,7 +412,7 @@ function updateCoverage() {
     const moduleCoverage = module.querySelector(".coverage");
 
     const covered = knowledge.sizeOf(moduleNum);
-    const size = Object.keys(questionsData[moduleNum]).length;
+    const size = Object.keys(questionsData[moduleNum] ?? {}).length;
     coveredTotal += covered;
     sizeTotal += size;
 
