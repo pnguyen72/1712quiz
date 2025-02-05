@@ -265,8 +265,10 @@ function generateQuestion(questionId, questionIndex) {
   editingIndicator.title = "someone is typing";
 
   explanationContainer.appendChild(explanation);
-  explanationContainer.appendChild(editBtn);
-  explanationContainer.appendChild(editingIndicator);
+  if (typeof db != "undefined") {
+    explanationContainer.appendChild(editBtn);
+    explanationContainer.appendChild(editingIndicator);
+  }
 
   // question
   const question = document.createElement("div");

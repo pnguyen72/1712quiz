@@ -1,13 +1,3 @@
-firebase.initializeApp({
-  apiKey: "AIzaSyDV3TrfynzF0c_L-GYsG1Wd9NrIOjNvKJI",
-  authDomain: "project-2830218475636260000.firebaseapp.com",
-  projectId: "project-2830218475636260000",
-  storageBucket: "project-2830218475636260000.firebasestorage.app",
-  messagingSenderId: "85405487202",
-  appId: "1:85405487202:web:208def2286c1f22c03c13b",
-});
-const db = firebase.firestore().collection("1712");
-
 function loadData() {
   unfinishedAttempts.load();
   return _loadModulesNames().then((modules) => {
@@ -95,7 +85,9 @@ knowledge.update = function (quiz) {
 };
 
 function explain(question) {
-  if (!enableExplanations.checked) return;
+  if (!enableExplanations.checked || typeof db == "undefined") {
+    return;
+  }
 
   const questionId = question.id;
   const explanation = question.querySelector(".explanation");
@@ -129,6 +121,10 @@ function explain(question) {
 }
 
 function submitExplanation(question, explanationText) {
+  if (typeof db == "undefined") {
+    return Promise.resolve();
+  }
+
   const questionId = question.id;
   const questionText = question.querySelector(".question-body").innerHTML;
   const doc = db.doc(questionId);
@@ -147,6 +143,10 @@ function submitExplanation(question, explanationText) {
 }
 
 function editSignal(questionId, isEditing) {
+  if (typeof db == "undefined") {
+    return Promise.resolve();
+  }
+
   const doc = db.doc(questionId);
   if (isEditing) {
     return doc.set({ editing: Date.now() }, { merge: true });

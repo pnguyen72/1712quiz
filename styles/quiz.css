@@ -103,7 +103,10 @@
 
     div.explanation {
       color: blue;
-      width: calc(100% - 3rem);
+      width: 100%;
+      &:has(~ .bx) {
+        width: calc(100% - 3rem);
+      }
 
       ~ .bx {
         display: block;
