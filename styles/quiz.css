@@ -121,8 +121,11 @@
       }
 
       &.empty {
-        color: gray;
+        &:not(:has(~ .bx)) {
+          display: none;
+        }
 
+        color: gray;
         ~ .bx {
           color: gray;
         }
