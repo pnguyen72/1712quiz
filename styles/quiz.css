@@ -104,8 +104,36 @@
     div.explanation {
       color: blue;
       width: 100%;
+
       &:has(~ .bx) {
         width: calc(100% - 3rem);
+
+        @media (width < 750px) {
+          div.explanation {
+            width: calc(100% - 2.5rem);
+          }
+        }
+        @media (width < 600px) {
+          div.explanation {
+            width: calc(100% - 2rem);
+            ~ .bx {
+              font-size: 1.5rem;
+            }
+          }
+        }
+        @media (width < 475px) {
+          #placeholder-expansion {
+            display: none;
+          }
+        }
+        @media (width < 450px) {
+          div.explanation {
+            width: calc(100% - 1.5rem);
+            ~ .bx {
+              font-size: 1.4rem;
+            }
+          }
+        }
       }
 
       ~ .bx {
@@ -144,33 +172,6 @@
         }
         ~ .bx-loader {
           display: block;
-        }
-      }
-    }
-
-    @media (width < 750px) {
-      div.explanation {
-        width: calc(100% - 2.5rem);
-      }
-    }
-    @media (width < 600px) {
-      div.explanation {
-        width: calc(100% - 2rem);
-        ~ .bx {
-          font-size: 1.5rem;
-        }
-      }
-    }
-    @media (width < 475px) {
-      #placeholder-expansion {
-        display: none;
-      }
-    }
-    @media (width < 450px) {
-      div.explanation {
-        width: calc(100% - 1.5rem);
-        ~ .bx {
-          font-size: 1.4rem;
         }
       }
     }
