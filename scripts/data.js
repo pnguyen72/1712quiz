@@ -127,7 +127,7 @@ function explain(question) {
 }
 
 function submitExplanation(question, explanationText) {
-  if (typeof db == "undefined") {
+  if (typeof firebaseConfig == "undefined") {
     return Promise.resolve();
   }
 
@@ -149,7 +149,7 @@ function submitExplanation(question, explanationText) {
 }
 
 function editSignal(questionId, isEditing) {
-  if (typeof db == "undefined") {
+  if (typeof firebaseConfig == "undefined") {
     return Promise.resolve();
   }
 

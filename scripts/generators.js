@@ -268,7 +268,7 @@ function generateQuestion(questionId, questionIndex) {
   editingIndicator.title = "someone is typing";
 
   explanationContainer.appendChild(explanation);
-  if (typeof db != "undefined") {
+  if (typeof firebaseConfig != "undefined") {
     explanationContainer.appendChild(editBtn);
     explanationContainer.appendChild(editingIndicator);
   }
