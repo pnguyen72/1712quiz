@@ -71,8 +71,12 @@ function initalizeSelections() {
   }
   if (localStorage.getItem("explanationWarned")) {
     unhide(explainSelection);
-    const explain = localStorage.getItem("explain");
-    enableExplanations.checked = explain == "true";
+    const enabled = localStorage.getItem("explain") == "true";
+    enableExplanations.checked = enabled;
+    if (!enabled) return;
+  }
+  if (typeof loadFirebase != "undefined") {
+    loadFirebase();
   }
 }
 

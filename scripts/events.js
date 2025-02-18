@@ -41,7 +41,11 @@ discardUnansweredQuestions.addEventListener("input", () => {
   localStorage.setItem("discardUnanswered", discardUnansweredQuestions.checked);
 });
 enableExplanations.addEventListener("input", () => {
-  localStorage.setItem("explain", enableExplanations.checked);
+  const enabled = enableExplanations.checked;
+  if (enabled && typeof loadFirebase != "undefined") {
+    loadFirebase();
+  }
+  localStorage.setItem("explain", enabled);
 });
 
 licenceAgreeBtn.addEventListener("click", licenseUnlock);
