@@ -90,7 +90,7 @@
       "D_03_11": { "choice": "JAD session" },
       "E_03_11": { "choice": "Probing interview questions" }
     },
-    "explanation": "Generally, to get a broad vision of the project, you ask upper managers open-ended questions; and to understand the details of how the system works, you ask lower managers and staff close-ended questions."
+    "explanation": "Generally, you ask the higher-ups open-ended questions to get a broad vision of the system, and you ask low-level employees close-ended questions to get the nitty-gritty of how it works.<br><br>It's not Root Cause Analysis because that's an analysis strategy, not an elicitation technique, which are completely difference things. See <a href=\"https://docs.google.com/document/d/1MOVpEVdHEbigwvpJk2h_6VJ49L0uOAlseSyCwteGMNc/edit?tab=t.0#heading=h.rv69de6tkg04\">The Bible</a> for an explanation."
   },
   "03_12": {
     "question": "Rafael, Fraud Unit Manager, has just received an interview report from Stefano, a systems analyst. Rafael was interviewed by Stefano, and was asked to make corrections and clarifications to the interview report. In what interview phase would this occur?",
@@ -289,7 +289,7 @@
       "D_03_33": { "choice": "System is automatically updated every 5 seconds" },
       "E_03_33": { "choice": "System can be accessed through a Blackberry device" }
     },
-    "explanation": "Functional = what the system must be able to do (i.e. features)<br>Non-functional = how the system does it and the implications (e.g. speed, compatibility)"
+    "explanation": "Functional = what the system must be able to do (i.e. features)<br>Non-functional = the implications of how those features are implemented (e.g. speed, compatibility)<br>For example, you can implement the same features in either Java or JavaScript, but<br>- Java is faster =&gt; speed is a non-functional requirement<br>- Java runs on the desktop, JS runs on the browser =&gt; compatibility is a non-functional requirement"
   },
   "03_34": {
     "question": "Management of requirements and system scope is one of the hardest parts of managing a project.",

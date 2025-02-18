@@ -69,7 +69,8 @@
     "choices": {
       "A_04_09": { "choice": "True" },
       "B_04_09": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "Actors can also be the departments of a company"
   },
   "04_10": {
     "question": "Role-playing the use case with actual users is a good way to do what?",
@@ -150,7 +151,8 @@
     "choices": {
       "A_04_19": { "choice": "True" },
       "B_04_19": { "choice": "False", "isCorrect": true }
-    }
+    },
+    "explanation": "You have to talk to external users to find use cases. And after creating a use case, you have to talk to them again to confirm it."
   },
   "04_20": {
     "question": "Destination would be described on a use case in which of the following areas?",
@@ -346,7 +348,7 @@
       "A_04_43": { "choice": "True" },
       "B_04_43": { "choice": "False", "isCorrect": true }
     },
-    "explanation": "Use cases can vary from one organization to another in terms of the content included. Not all use cases have all of these sections."
+    "explanation": "The content and format of use cases vary by organization. Not all use cases have this format; this is just the format that they teach you. <b>(p. 114)</b>"
   },
   "04_44": {
     "question": "Which is NOT true of use cases?",

@@ -166,7 +166,7 @@
       "A_06_20": { "choice": "True" },
       "B_06_20": { "choice": "False", "isCorrect": true }
     },
-    "explanation": "Information about entities are attributes. Relationships are more like information about the system (i.e. how entities are related)."
+    "explanation": "Information captured about entities are <i>attributes</i>. Relationships are information about the system, particularly, about how entities are related to each other."
   },
   "06_21": {
     "question": "During the analysis phase logical data models are created.",
@@ -454,7 +454,7 @@
       "D_06_54": { "choice": "ITEM is included in SOLD-ITEM" },
       "E_06_54": { "choice": "PAYMENT pays for SALE" }
     },
-    "explanation": "PAYMENT pays for SOLD-ITEM includes ITEM"
+    "explanation": "The correct relationships are \"PAYMENT pays for SOLD-ITEM includes ITEM\""
   },
   "06_55": {
     "question": "Modality refers to which of the following?",

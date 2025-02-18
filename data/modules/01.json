@@ -548,7 +548,8 @@
       "C_01_63": { "choice": "Analysis", "isCorrect": true },
       "D_01_63": { "choice": "Business requirements are not developed by systems analysts, but by business analysts" },
       "E_01_63": { "choice": "Implementation" }
-    }
+    },
+    "explanation": "Determining the business requirements of a system is a step inside the analysis phase of the SDLC."
   },
   "01_64": {
     "question": "The planning phase of the SDLC will have two steps: project initiation and requirements determination.",
