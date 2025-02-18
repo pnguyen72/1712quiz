@@ -107,8 +107,9 @@ function generateQuiz(questionsIds) {
     quiz.classList.add("explained");
   }
   questionsIds.forEach((id, index) => {
-    const question = generateQuestion(id, index);
-    quiz.appendChild(question);
+    setTimeout(() => {
+      quiz.appendChild(generateQuestion(id, index));
+    }, Math.min(index * 20, 400));
   });
   return quiz;
 }

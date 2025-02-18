@@ -153,12 +153,12 @@ function nextQuiz() {
   startTimer();
   nextButton.disabled = true;
   // timeout so that these run after the page has loaded
-  // 300ms should be enough
+  // 500 should be enough
   setTimeout(() => {
     recoverAttempt(quiz);
     nextButton.disabled = false;
-  }, 300);
-  setTimeout(explainLearnedQuestions, 400);
+    explainLearnedQuestions();
+  }, 500);
   setTimeout(explainSavingProgress, 5 * 60 * 1000); // 5 minutes
 }
 
