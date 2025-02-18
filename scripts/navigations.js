@@ -75,9 +75,7 @@ function initalizeSelections() {
     enableExplanations.checked = enabled;
     if (!enabled) return;
   }
-  if (typeof loadFirebase != "undefined") {
-    loadFirebase();
-  }
+  loadExplanationResources();
 }
 
 function getSelectedModules() {

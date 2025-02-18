@@ -232,8 +232,8 @@ function editExplanation(explanation) {
   const textarea = document.createElement("textarea");
   form.className = "explanation-container";
   textarea.className = "explanation";
-  textarea.value = explanation.innerHTML.replaceAll(/\s*<br>\s*/g, "\n");
-  if (textarea.value == placeholderExplanation) textarea.value = "";
+  textarea.value = explanation.value.replaceAll(/\s*<br>\s*/g, "<br>\n");
+  textarea.placeholder = "Use markdown to format your explanation";
   const originalTextareaValue = textarea.value;
 
   const submitBtn = document.createElement("button");
@@ -258,7 +258,7 @@ function editExplanation(explanation) {
 
   form.addEventListener("reset", (event) => {
     event.preventDefault();
-    textarea.value = originalTextareaValue;
+    textarea.value = explanation.value;
     submit();
   });
 
@@ -269,8 +269,7 @@ function editExplanation(explanation) {
 
   function submit() {
     form.replaceWith(container);
-    const explanationText = textarea.value.trim().replaceAll("\n", "<br>");
-    submitExplanation(question, explanationText).then(() => {
+    submitExplanation(question, textarea.value).then(() => {
       if (textarea.value != originalTextareaValue) {
         licenseGrantException("Thank you for your contribution.");
       }

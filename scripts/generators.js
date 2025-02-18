@@ -1,5 +1,6 @@
 function generateExamSelection() {
   const selections = document.createElement("ul");
+  selections.className = "menu-choices";
   if (Object.keys(modulesNames).length < 2) {
     hide(examSelection);
   } else {
@@ -36,6 +37,7 @@ function generateModuleSelection() {
 
   const modulesList = document.createElement("ul");
   modulesList.id = "modules-list";
+  modulesList.className = "menu-choices";
   document.getElementById("modules-list").replaceWith(modulesList);
 
   selectedModulesNames.forEach((name, index) => {
@@ -246,9 +248,10 @@ function generateQuestion(questionId, questionIndex) {
   explanationContainer.className = "explanation-container";
   explanation.className = "explanation";
   explanation.write = (value) => {
+    explanation.value = value ?? "";
     if (value) {
       explanation.classList.remove("empty");
-      explanation.innerHTML = value;
+      explanation.innerHTML = converter.makeHtml(value);
     } else {
       explanation.classList.add("empty");
       explanation.innerHTML = placeholderExplanation;

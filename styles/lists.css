@@ -1,4 +1,4 @@
-ul {
+ul:is(.menu-choices, .question-choices) {
   list-style-type: none;
 
   padding-inline-start: 1.75rem;
@@ -8,20 +8,20 @@ ul {
   @media (width < 450px) {
     padding-inline-start: 1.25rem;
   }
-}
 
-ul,
-li,
-:has(+ ul),
-ul + * {
-  margin: 0.55rem 0;
-  @media (width < 600px) {
-    margin: 0.525rem 0;
-  }
-  @media (width < 450px) {
-    margin: 0.5rem 0;
-  }
-  @media print {
-    margin: 0.4rem 0;
+  &,
+  > li,
+  &:has(+ ul),
+  + * {
+    margin: 0.55rem 0;
+    @media (width < 600px) {
+      margin: 0.525rem 0;
+    }
+    @media (width < 450px) {
+      margin: 0.5rem 0;
+    }
+    @media print {
+      margin: 0.4rem 0;
+    }
   }
 }

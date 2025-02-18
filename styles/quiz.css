@@ -73,7 +73,7 @@
     }
   }
 
-  ul {
+  .question-choices {
     @media (width >= 750px) {
       padding-inline-start: 2rem;
     }
@@ -133,6 +133,29 @@
               font-size: 1.4rem;
             }
           }
+        }
+      }
+
+      > * {
+        margin: 0.8rem 0;
+        &:has(+ ul) {
+          margin-bottom: 0.4rem;
+        }
+      }
+      > *:first-child {
+        margin-top: 0;
+      }
+      > *:last-child {
+        margin-bottom: 0;
+      }
+
+      > ul {
+        &:only-child {
+          padding-inline-start: 1rem;
+        }
+        margin-top: 0.4rem;
+        li {
+          margin: 0.4rem 0;
         }
       }
 

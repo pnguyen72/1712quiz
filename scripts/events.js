@@ -42,9 +42,7 @@ discardUnansweredQuestions.addEventListener("input", () => {
 });
 enableExplanations.addEventListener("input", () => {
   const enabled = enableExplanations.checked;
-  if (enabled && typeof loadFirebase != "undefined") {
-    loadFirebase();
-  }
+  if (enabled) loadExplanationResources();
   localStorage.setItem("explain", enabled);
 });
 
