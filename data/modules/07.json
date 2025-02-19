@@ -2,20 +2,20 @@
   "07_01": {
     "question": "What is true about creating an entity relationship diagram?",
     "choices": {
-      "A_07_01": { "choice": "There will be at most seven entities" },
-      "B_07_01": { "choice": "It is an iterative process", "isCorrect": true },
-      "C_07_01": { "choice": "If you identify more than seven entities, analyze and combine until you have seven or less" },
-      "D_07_01": { "choice": "There will be at most seven relationships" },
-      "E_07_01": { "choice": "Entities will have at most seven attributes" }
+      "A": { "choice": "There will be at most seven entities" },
+      "B": { "choice": "It is an iterative process", "isCorrect": true },
+      "C": { "choice": "If you identify more than seven entities, analyze and combine until you have seven or less" },
+      "D": { "choice": "There will be at most seven relationships" },
+      "E": { "choice": "Entities will have at most seven attributes" }
     },
     "explanation": "<i>\"Work iteratively and constantly challenge the data model with business rules and exceptions to see whether the diagram is communicating the business system appropriately.\"</i> <b>(p. 189)</b>"
   },
   "07_02": {
     "question": "Select all that applies to various normal forms:",
     "choices": {
-      "A_07_02": { "choice": "A table in 3NF is also in 2NF", "isCorrect": true },
-      "B_07_02": { "choice": "A table in 3NF is also in 1NF.", "isCorrect": true },
-      "C_07_02": { "choice": "A table in 2NF is also in 1NF.", "isCorrect": true }
+      "A": { "choice": "A table in 3NF is also in 2NF", "isCorrect": true },
+      "B": { "choice": "A table in 3NF is also in 1NF.", "isCorrect": true },
+      "C": { "choice": "A table in 2NF is also in 1NF.", "isCorrect": true }
     },
     "multiSelect": true,
     "explanation": "2NF = 1NF + no partial dependencies<br>3NF = 2NF + no transitive dependencies<br>1NF, 2NF, 3NF are successively stricter than the previous."
@@ -23,24 +23,24 @@
   "07_03": {
     "question": "Relational tables that have a single-attribute PK, are immediately in 2NF.",
     "choices": {
-      "A_07_03": { "choice": "True", "isCorrect": true },
-      "B_07_03": { "choice": "False" }
+      "A": { "choice": "True", "isCorrect": true },
+      "B": { "choice": "False" }
     },
     "explanation": "A relational table is in 2NF if it does not have partial dependencies.<br>Partial dependency means an attribute depends on only a part of, rather than the whole, primary key.<br>If the primary key is a single attribute, it has no parts, so there cannot be any partial dependencies."
   },
   "07_04": {
     "question": "Some redundancies in a relational DB are necessary.",
     "choices": {
-      "A_07_04": { "choice": "True", "isCorrect": true },
-      "B_07_04": { "choice": "False" }
+      "A": { "choice": "True", "isCorrect": true },
+      "B": { "choice": "False" }
     },
-    "explanation": "When normalizing to 3NF, you<br>1. create a new entity for each transitive dependency<br>2. remove the <i>dependent</i> attributes from the original entity, but keep the other attributes.<br>=&gt; The attributes that you <i>don't</i> remove are foreign keys, they are <b>necessary redundancies</b>.<br><br>For example, this table<br><table><tbody><tr><td><b>EMP_NUM</b></td><td>EMP_NAME</td><td>JOB_CLASS</td><td>WAGE</td></tr></tbody></table><br>has a transitive dependency JOB_CLASS --&gt; WAGE, so it's normalized into<br><table><tbody><tr><td><b>EMP_NUM</b></td><td>EMP_NAME</td><td>JOB_CLASS</td></tr></tbody></table><br><table><tbody><tr><td><b>JOB_CLASS</b></td><td>WAGE</td></tr></tbody></table><br>JOB_CLASS in the 1st table is a foreign key. It's redundant with JOB_CLASS in the 2nd table, but necessary to link the 2 tables together.<br><br><b>(module 7, slide 20)</b>"
+    "explanation": "<p>When normalizing to 3NF, you<br>1. create a new entity for each transitive dependency<br>2. remove the <i>dependent</i> attributes from the original entity, but keep the other attributes.<br>=&gt; The attributes that you <i>don't</i> remove are foreign keys, they are <b>necessary redundancies</b>.<br><br>For example, this table<br></p><table><tbody><tr><td><b>EMP<em>NUM</em></b></td><td>EMPNAME</td><td>JOB<em>CLASS</em></td><td>WAGE</td></tr></tbody></table><br>has a transitive dependency JOBCLASS --&gt; WAGE, so it's normalized into<br><table><tbody><tr><td><b>EMP<em>NUM</em></b></td><td>EMPNAME</td><td>JOB<em>CLASS</em></td></tr></tbody></table><br><table><tbody><tr><td><b>JOBCLASS</b></td><td>WAGE</td></tr></tbody></table><br>JOB<em>CLASS in the 1st table is a foreign key. It's redundant with JOB</em>CLASS in the 2nd table, but necessary to link the 2 tables together.<br><br><b>(module 7, slide 20)</b><p></p>"
   },
   "07_05": {
     "question": "Once we have an ERD, we can be sure we have a good database structure.",
     "choices": {
-      "A_07_05": { "choice": "True" },
-      "B_07_05": { "choice": "False", "isCorrect": true }
+      "A": { "choice": "True" },
+      "B": { "choice": "False", "isCorrect": true }
     },
     "explanation": "You also have to normalize it."
   },
@@ -48,46 +48,46 @@
     "question": "The following table is _____",
     "hasImage": true,
     "choices": {
-      "A_07_06": { "choice": "not a relational table", "isCorrect": true },
-      "B_07_06": { "choice": "a relational table in 3NF" },
-      "C_07_06": { "choice": "a relational table that is only 1NF" },
-      "D_07_06": { "choice": "a relational table in 2NF" }
+      "A": { "choice": "not a relational table", "isCorrect": true },
+      "B": { "choice": "a relational table in 3NF" },
+      "C": { "choice": "a relational table that is only 1NF" },
+      "D": { "choice": "a relational table in 2NF" }
     },
     "explanation": "Each row (project) has multiple values (employees), so this table is not 1NF.<br>2NF requires 1NF, and 3NF requires 2NF, so it can't be the other ones either."
   },
   "07_07": {
     "question": "Foreign keys in a relational DB are an example of _____",
     "choices": {
-      "A_07_07": { "choice": "unwanted/unnecessary redundancy" },
-      "B_07_07": { "choice": "FKs are not redundancy at all" },
-      "C_07_07": { "choice": "necessary redundancy", "isCorrect": true }
+      "A": { "choice": "unwanted/unnecessary redundancy" },
+      "B": { "choice": "FKs are not redundancy at all" },
+      "C": { "choice": "necessary redundancy", "isCorrect": true }
     },
     "explanation": "When normalizing to 3NF, you<br>1. create a new entity for each transitive dependency<br>2. remove the <i>dependent</i> attributes from the original entity, but keep the other attributes.<br>=&gt; The attributes that you <i>don't</i> remove are foreign keys, they are <b>necessary redundancies</b>.<br><br>For example, this table<br><table><tbody><tr><td><b>EMP_NUM</b></td><td>EMP_NAME</td><td>JOB_CLASS</td><td>WAGE</td></tr></tbody></table><br>has a transitive dependency JOB_CLASS --&gt; WAGE, so it's normalized into<br><table><tbody><tr><td><b>EMP_NUM</b></td><td>EMP_NAME</td><td>JOB_CLASS</td></tr></tbody></table><br><table><tbody><tr><td><b>JOB_CLASS</b></td><td>WAGE</td></tr></tbody></table><br>JOB_CLASS in the 1st table is a foreign key. It's redundant with JOB_CLASS in the 2nd table, but necessary to link the 2 tables together.<br><br><b>(module 7, slide 20)</b>"
   },
   "07_08": {
     "question": "Partial dependency is a form of functional dependency.",
     "choices": {
-      "A_07_08": { "choice": "True", "isCorrect": true },
-      "B_07_08": { "choice": "False" }
+      "A": { "choice": "True", "isCorrect": true },
+      "B": { "choice": "False" }
     },
     "explanation": "AFAIK there's no \"non-functional\" dependency, all dependencies are functional in one way or another.<br>Partial dependency is a type of (functional) dependency where the determinant is <i>only part of</i>, rather than the whole, the identifier."
   },
   "07_09": {
     "question": "Our goal with normalization is to completely eliminate redundancy.",
     "choices": {
-      "A_07_09": { "choice": "True" },
-      "B_07_09": { "choice": "False", "isCorrect": true }
+      "A": { "choice": "True" },
+      "B": { "choice": "False", "isCorrect": true }
     },
     "explanation": "When normalizing to 3NF, you<br>1. create a new entity for each transitive dependency<br>2. remove the <i>dependent</i> attributes from the original entity, but keep the other attributes.<br>=&gt; The attributes that you <i>don't</i> remove are foreign keys, they are <b>necessary redundancies</b>.<br><br>For example, this table<br><table><tbody><tr><td><b>EMP_NUM</b></td><td>EMP_NAME</td><td>JOB_CLASS</td><td>WAGE</td></tr></tbody></table><br>has a transitive dependency JOB_CLASS --&gt; WAGE, so it's normalized into<br><table><tbody><tr><td><b>EMP_NUM</b></td><td>EMP_NAME</td><td>JOB_CLASS</td></tr></tbody></table><br><table><tbody><tr><td><b>JOB_CLASS</b></td><td>WAGE</td></tr></tbody></table><br>JOB_CLASS in the 1st table is a foreign key. It's redundant with JOB_CLASS in the 2nd table, but necessary to link the 2 tables together.<br><br><b>(module 7, slide 20)</b>"
   },
   "07_10": {
     "question": "Balance occurs between DFDs and ERDs when the data stores _____",
     "choices": {
-      "A_07_10": { "choice": "Can be equated to entities on the ERD and when entities are referred to by data stores on the DFD", "isCorrect": true },
-      "B_07_10": { "choice": "Are uniquely named" },
-      "C_07_10": { "choice": "Have only one input and one output flow" },
-      "D_07_10": { "choice": "Are named the same as the relationships on the ERD" },
-      "E_07_10": { "choice": "Can be compared to ERD data flows and attributes on the ERD are included in data stores on the DFD" }
+      "A": { "choice": "Can be equated to entities on the ERD and when entities are referred to by data stores on the DFD", "isCorrect": true },
+      "B": { "choice": "Are uniquely named" },
+      "C": { "choice": "Have only one input and one output flow" },
+      "D": { "choice": "Are named the same as the relationships on the ERD" },
+      "E": { "choice": "Can be compared to ERD data flows and attributes on the ERD are included in data stores on the DFD" }
     },
     "explanation": "Trick question. There's a similar but incorrect choice because \"ERD data flows\" is not a thing. ERD has entities, only DFD has data flows.<br><i>\"The DFD data components need to correspond with the ERD's data stores (i.e., entities) and the data elements that comprise the data flows (i.e., attributes).\"</i> <b>(p. 191)</b>"
   },
@@ -95,53 +95,53 @@
     "question": "The following table is in 1NF. If we normalize this table to 2NF, how many tables in total would exist in our relational DB after normalizing to 2NF?",
     "hasImage": true,
     "choices": {
-      "A_07_11": { "choice": "1" },
-      "B_07_11": { "choice": "2" },
-      "C_07_11": { "choice": "3", "isCorrect": true },
-      "D_07_11": { "choice": "4" }
+      "A": { "choice": "1" },
+      "B": { "choice": "2" },
+      "C": { "choice": "3", "isCorrect": true },
+      "D": { "choice": "4" }
     },
     "explanation": "<table><tbody><tr><td><b>ISBN</b></td><td><b>AuthorNum</b></td><td>Royalty</td></tr></tbody></table><br><table><tbody><tr><td><b>ISBN</b></td><td>BookTitle</td><td>Publisher</td><td>Edition</td></tr></tbody></table><br><table><tbody><tr><td><b>AuthorNum</b></td><td>LastName</td></tr></tbody></table><br><b>(lab 7.1)</b>"
   },
   "07_12": {
     "question": "Omar has a model with 85 entities. He can do which of the following?",
     "choices": {
-      "A_07_12": { "choice": "Stop – he has all entities defined" },
-      "B_07_12": { "choice": "Co-validate the entities with the level 2 DFD diagrams" },
-      "C_07_12": { "choice": "Compress these into at most seven entity grouping units" },
-      "D_07_12": { "choice": "Sort the entities alphabetically" },
-      "E_07_12": { "choice": "Group these into related subject areas", "isCorrect": true }
+      "A": { "choice": "Stop – he has all entities defined" },
+      "B": { "choice": "Co-validate the entities with the level 2 DFD diagrams" },
+      "C": { "choice": "Compress these into at most seven entity grouping units" },
+      "D": { "choice": "Sort the entities alphabetically" },
+      "E": { "choice": "Group these into related subject areas", "isCorrect": true }
     },
-    "explanation": "<i>\"If the model becomes too complex or busy, the model can be broken down into subject areas.\"</i> <b>(p. 189)</b>"
+    "explanation": "*\"If the model becomes too complex or busy, the model can be broken down into subject areas.\"* **(p. 189)**"
   },
   "07_13": {
     "question": "In a functional dependence, the determinant is always a single attribute.",
     "choices": {
-      "A_07_13": { "choice": "True" },
-      "B_07_13": { "choice": "False", "isCorrect": true }
+      "A": { "choice": "True" },
+      "B": { "choice": "False", "isCorrect": true }
     },
     "explanation": "Determinant = the thing the dependent depends on.<br>Multiple attributes may be required to determine another attribute.<br>For example, (ISBN, Author_Num) --&gt; Royalty <b>(lab 7.1)</b>"
   },
   "07_14": {
     "question": "In a functional dependence, the dependent is always a single attribute.",
     "choices": {
-      "A_07_14": { "choice": "True" },
-      "B_07_14": { "choice": "False", "isCorrect": true }
+      "A": { "choice": "True" },
+      "B": { "choice": "False", "isCorrect": true }
     },
     "explanation": "Determinant = the thing the dependent depends on.<br>There may be multiple dependents. For example, <i>\"given an employee's number, we would know their name, job class and charge per hour.\"</i> <b>(module 7, slide 12)</b>"
   },
   "07_15": {
     "question": "CRUD stands for create, read, update and delete and can be used to verify DFDs and ERDs.",
     "choices": {
-      "A_07_15": { "choice": "True", "isCorrect": true },
-      "B_07_15": { "choice": "False" }
+      "A": { "choice": "True", "isCorrect": true },
+      "B": { "choice": "False" }
     },
     "explanation": "<i>\"A useful tool to clearly depict the interrelationship between process and data models is the create, read, update, delete (CRUD) matrix.\"</i> <b>(p. 192)</b>"
   },
   "07_16": {
     "question": "A transitive dependency is a form of partial dependency.",
     "choices": {
-      "A_07_16": { "choice": "True" },
-      "B_07_16": { "choice": "False", "isCorrect": true }
+      "A": { "choice": "True" },
+      "B": { "choice": "False", "isCorrect": true }
     },
     "explanation": "Transitive means the determinant is a non-identifier. Partial means the determinant is a part of the identifier. These are unrelated."
   },
@@ -149,31 +149,31 @@
     "question": "The following table is in 1NF. If we normalize this table to 2NF, how many tables in total would exist in the resulting DB?",
     "hasImage": true,
     "choices": {
-      "A_07_17": { "choice": "1" },
-      "B_07_17": { "choice": "2" },
-      "C_07_17": { "choice": "3", "isCorrect": true },
-      "D_07_17": { "choice": "4" }
+      "A": { "choice": "1" },
+      "B": { "choice": "2" },
+      "C": { "choice": "3", "isCorrect": true },
+      "D": { "choice": "4" }
     },
-    "explanation": "1. MedName --&gt; ShelfLife<br>2. PatientID --&gt; PatientName<br>3. (MedName, PatientID, Date) --&gt; (RefillsAllowed, Dosage)"
+    "explanation": "<ol><br><li>MedName --&gt; ShelfLife<br>2. PatientID --&gt; PatientName<br>3. (MedName, PatientID, Date) --&gt; (RefillsAllowed, Dosage)</li><br></ol>"
   },
   "07_18": {
     "question": "How many non-prime attributes do you see in the following dependency diagram?",
     "hasImage": true,
     "choices": {
-      "A_07_18": { "choice": "2" },
-      "B_07_18": { "choice": "3" },
-      "C_07_18": { "choice": "4" },
-      "D_07_18": { "choice": "5", "isCorrect": true }
+      "A": { "choice": "2" },
+      "B": { "choice": "3" },
+      "C": { "choice": "4" },
+      "D": { "choice": "5", "isCorrect": true }
     },
     "explanation": "Non-prime attributes are attributes that aren't identifiers. The identifiers, in this case, are PROJ_NUM and EMP_NUM, meaning the remaining five attributes are non-prime."
   },
   "07_20": {
     "question": "In a relational table, when we say attribute A functionally defines attribute B (A --> B) , it means that:",
     "choices": {
-      "A_07_20": { "choice": "A and B must both be part of the PK." },
-      "B_07_20": { "choice": "there is only one value of B for any given value of A.", "isCorrect": true },
-      "C_07_20": { "choice": "A and B must not be part of the PK." },
-      "D_07_20": { "choice": "there is only one value of A for any given value of B." }
+      "A": { "choice": "A and B must both be part of the PK." },
+      "B": { "choice": "there is only one value of B for any given value of A.", "isCorrect": true },
+      "C": { "choice": "A and B must not be part of the PK." },
+      "D": { "choice": "there is only one value of A for any given value of B." }
     },
     "explanation": "<i>\"We say PROJ_NUM functionally defines PROJ_Name, because only one name is associated with any given project number.\"</i> <b>(module 7, slide 10)</b>"
   }

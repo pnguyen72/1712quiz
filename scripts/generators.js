@@ -245,7 +245,7 @@ function generateQuestion(questionId, questionIndex) {
     if (choiceData.isCorrect) {
       choice.classList.add("correct");
     }
-    choiceInput.id = choiceId;
+    choiceInput.id = `${choiceId}_${questionId}`;
     choiceInput.className = "choice-input";
     choiceInput.type = questionData.multiSelect ? "checkbox" : "radio";
     choiceInput.name = questionId;
