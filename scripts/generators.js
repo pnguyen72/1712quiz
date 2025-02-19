@@ -267,6 +267,8 @@ function generateQuestion(questionId, questionIndex) {
   explanationContainer.className = "explanation-container";
   explanation.className = "explanation";
   explanation.write = (value) => {
+    if (!converter) return;
+
     explanation.value = value ?? "";
     if (value) {
       explanation.classList.remove("empty");
