@@ -91,7 +91,7 @@ knowledge.update = function (quiz) {
 };
 
 function explain(question) {
-  if (!enableExplanations.checked || typeof db == "undefined") {
+  if (!enableExplanations.checked || !db) {
     return;
   }
 
@@ -127,7 +127,7 @@ function explain(question) {
 }
 
 function submitExplanation(question, explanationText) {
-  if (typeof firebaseConfig == "undefined") {
+  if (!db) {
     return Promise.resolve();
   }
 
@@ -149,7 +149,7 @@ function submitExplanation(question, explanationText) {
 }
 
 function editSignal(questionId, isEditing) {
-  if (typeof firebaseConfig == "undefined") {
+  if (!db) {
     return Promise.resolve();
   }
 
