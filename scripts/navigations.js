@@ -146,7 +146,9 @@ function nextQuiz() {
     return;
   }
   const questionsIds = getQuiz(modules, questionsCount);
-  const quiz = generateQuiz(questionsIds);
+  const quiz = generateQuiz(questionsIds, {
+    buffered: questionsIds.length > 40,
+  });
   document.getElementById("quiz").replaceWith(quiz);
   quiz.addEventListener("input", saveProgress);
   toQuizPage();

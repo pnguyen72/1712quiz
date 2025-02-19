@@ -100,17 +100,23 @@ function generateModuleSelection() {
   updateOngoingLabels();
 }
 
-function generateQuiz(questionsIds) {
+function generateQuiz(questionsIds, option = { buffered: false }) {
   const quiz = document.createElement("div");
   quiz.id = "quiz";
   if (enableExplanations.checked) {
     quiz.classList.add("explained");
   }
-  questionsIds.forEach((id, index) => {
-    setTimeout(() => {
-      quiz.appendChild(generateQuestion(id, index));
-    }, Math.min(index * 20, 400));
-  });
+  if (option.buffered) {
+    questionsIds.forEach((id, index) =>
+      setTimeout(() => {
+        quiz.appendChild(generateQuestion(id, index));
+      }, Math.min(index * 20, 400))
+    );
+  } else {
+    questionsIds.forEach((id, index) =>
+      quiz.appendChild(generateQuestion(id, index))
+    );
+  }
   return quiz;
 }
 
