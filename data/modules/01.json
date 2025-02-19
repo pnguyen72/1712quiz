@@ -2,7 +2,7 @@
   "01_01": {
     "question": "Linda is a clerk in the accounting department. She was interviewed by David and is excited about the proposed system that will utilize electronic funds transfer. This would be an example of ______.",
     "choices": {
-      "A": { "choice": "Intangible benefit", "isCorrect": true },
+      "A": { "choice": "Intangible benefit", "correct": true },
       "B": { "choice": "Tangible benefit" },
       "C": { "choice": "Cash flow" },
       "D": { "choice": "Return on investment" },
@@ -15,7 +15,7 @@
       "A": { "choice": "Technical" },
       "B": { "choice": "Management" },
       "C": { "choice": "Interpersonal" },
-      "D": { "choice": "Analytical", "isCorrect": true },
+      "D": { "choice": "Analytical", "correct": true },
       "E": { "choice": "Business" }
     }
   },
@@ -23,20 +23,20 @@
     "question": "To be compatible, all costs and benefits should use the current value of money since variations over time will (a) not affect the return on investment and (b) it is difficult (or impossible) to estimate future value of money.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "01_04": {
     "question": "The requirements analyst role includes complete and accurate determination of what the system requirements consist of for all stakeholders.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "01_05": {
     "question": "Which of the following project roles would insure that the system conforms to information systems standards?",
     "choices": {
-      "A": { "choice": "Systems analyst", "isCorrect": true },
+      "A": { "choice": "Systems analyst", "correct": true },
       "B": { "choice": "Project manager" },
       "C": { "choice": "Change management analyst" },
       "D": { "choice": "Business analyst" },
@@ -46,7 +46,7 @@
   "01_06": {
     "question": "The three factors in the text for a feasibility analysis are: technical feasibility; organizational feasibility and economic feasibility.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -54,7 +54,7 @@
     "question": "Kallie is creating use cases, data flow diagrams, and entity relationship diagrams. In what phase of the SDLC would she do this?",
     "choices": {
       "A": { "choice": "Design" },
-      "B": { "choice": "Analysis", "isCorrect": true },
+      "B": { "choice": "Analysis", "correct": true },
       "C": { "choice": "Planning" },
       "D": { "choice": "Construction" },
       "E": { "choice": "Implementation" }
@@ -63,14 +63,14 @@
   "01_08": {
     "question": "Interviewing is generally done in the analysis phase of the SDLC.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "01_09": {
     "question": "Another outcome of the planning phase is the:",
     "choices": {
-      "A": { "choice": "Project plan", "isCorrect": true },
+      "A": { "choice": "Project plan", "correct": true },
       "B": { "choice": "Business process document" },
       "C": { "choice": "System specification document" },
       "D": { "choice": "Feasibility analysis document" },
@@ -82,7 +82,7 @@
     "choices": {
       "A": { "choice": "Internal rate of return analysis" },
       "B": { "choice": "Break-even point analysis" },
-      "C": { "choice": "Net present value analysis", "isCorrect": true },
+      "C": { "choice": "Net present value analysis", "correct": true },
       "D": { "choice": "Cash flow analysis" },
       "E": { "choice": "Return on investment analysis" }
     }
@@ -90,7 +90,7 @@
   "01_11": {
     "question": "Joan's project is to take a fairly straight-forward manual process and make it an electronic process. This will make the processing more efficient. Which of the following requirements analysis strategies is she using?",
     "choices": {
-      "A": { "choice": "Business process automation", "isCorrect": true },
+      "A": { "choice": "Business process automation", "correct": true },
       "B": { "choice": "Business process renovation" },
       "C": { "choice": "Business process internalization" },
       "D": { "choice": "Business process reengineering" },
@@ -101,7 +101,7 @@
   "01_12": {
     "question": "Using 'net present value' in calculating economic feasibility will allow for variations in the time value of money.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -109,21 +109,21 @@
     "question": "In SDLC, analysis is generally divided into three steps: understanding the as-is system; developing a cost-benefit analysis; and understanding the technical feasibility.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "Cost-benefit analysis and understanding feasibility are done in the planning phase."
   },
   "01_14": {
     "question": "Developing navigation methods, database, and file specifications and what architecture to use would occur in the design phase of the SDLC.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "01_15": {
     "question": "Anne has asked users and managers to identify problems with the as-is system and to describe how to solve them in the to-be system. She is probably in the analysis phase of SDLC.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -134,7 +134,7 @@
       "B": { "choice": "JAD" },
       "C": { "choice": "Organizational Feasibility" },
       "D": { "choice": "Observation" },
-      "E": { "choice": "Interviews", "isCorrect": true }
+      "E": { "choice": "Interviews", "correct": true }
     }
   },
   "01_17": {
@@ -144,7 +144,7 @@
       "B": { "choice": "Intangible benefit" },
       "C": { "choice": "Ongoing cost" },
       "D": { "choice": "Operating cost" },
-      "E": { "choice": "Development cost", "isCorrect": true }
+      "E": { "choice": "Development cost", "correct": true }
     }
   },
   "01_18": {
@@ -158,14 +158,14 @@
   "01_19": {
     "question": "The three feasibility analyses in the text were: organizational feasibility, technical feasibility, and economic feasibility.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "01_20": {
     "question": "Which is NOT true for systems analysts?",
     "choices": {
-      "A": { "choice": "They are the project sponsors for system proposals", "isCorrect": true },
+      "A": { "choice": "They are the project sponsors for system proposals", "correct": true },
       "B": { "choice": "They play a key role in information systems development projects" },
       "C": { "choice": "They do things and challenge the current way that an organization works" },
       "D": { "choice": "They create value for an organization" },
@@ -175,7 +175,7 @@
   "01_21": {
     "question": "A system request will generally have these items: project sponsor; business need; business requirements; business value; special issues or constraints.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -184,7 +184,7 @@
     "choices": {
       "A": { "choice": "Infrastructure analyst" },
       "B": { "choice": "Business analyst" },
-      "C": { "choice": "Requirements analyst", "isCorrect": true },
+      "C": { "choice": "Requirements analyst", "correct": true },
       "D": { "choice": "Systems analyst" },
       "E": { "choice": "Change management analyst" }
     }
@@ -193,13 +193,13 @@
     "question": "If the development team of an organization is not familiar with the technologies that may be used, the project should be cancelled.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "01_24": {
     "question": "Which was NOT given as a method for determining business requirements?",
     "choices": {
-      "A": { "choice": "Benchmarking", "isCorrect": true },
+      "A": { "choice": "Benchmarking", "correct": true },
       "B": { "choice": "Interviewing" },
       "C": { "choice": "Observation" },
       "D": { "choice": "Questionnaires and surveys" },
@@ -209,7 +209,7 @@
   "01_25": {
     "question": "The normal sequence of SDLC phase outputs (from beginning to end) would be: system request; system proposal; system specifications; and installed system.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -217,13 +217,13 @@
     "question": "When compared to a business analyst, the systems analyst will identify how the system will provide business value.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "01_27": {
     "question": "The champion supports the project with resources and political support.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -232,7 +232,7 @@
     "choices": {
       "A": { "choice": "Interpersonal" },
       "B": { "choice": "Ethical" },
-      "C": { "choice": "Business", "isCorrect": true },
+      "C": { "choice": "Business", "correct": true },
       "D": { "choice": "Analytical" },
       "E": { "choice": "Technical" }
     }
@@ -241,7 +241,7 @@
     "question": "Because the cost can be immense, _________ is one of the most critical steps in implementation.",
     "choices": {
       "A": { "choice": "Coding" },
-      "B": { "choice": "Testing", "isCorrect": true },
+      "B": { "choice": "Testing", "correct": true },
       "C": { "choice": "Documentation" },
       "D": { "choice": "Developing a conversion strategy" },
       "E": { "choice": "Training" }
@@ -254,14 +254,14 @@
       "B": { "choice": "Infrastructure analyst" },
       "C": { "choice": "Business analyst" },
       "D": { "choice": "Requirements analyst" },
-      "E": { "choice": "Systems analyst", "isCorrect": true }
+      "E": { "choice": "Systems analyst", "correct": true }
     }
   },
   "01_31": {
     "question": "Moderate changes to existing processes falls under the _________ analysis.",
     "choices": {
       "A": { "choice": "Business process blue-skying (BPB)" },
-      "B": { "choice": "Business process improvement (BPI)", "isCorrect": true },
+      "B": { "choice": "Business process improvement (BPI)", "correct": true },
       "C": { "choice": "Business process automation (BPA)" },
       "D": { "choice": "Business process reengineering (BPR)" },
       "E": { "choice": "Business process efficiency (BPE)" }
@@ -274,7 +274,7 @@
       "A": { "choice": "Have some official roles on the project team" },
       "B": { "choice": "Perform hands-on activities for the project" },
       "C": { "choice": "Be assigned specific tasks to perform (with clear deadlines)" },
-      "D": { "choice": "Budget funds for the project", "isCorrect": true },
+      "D": { "choice": "Budget funds for the project", "correct": true },
       "E": { "choice": "Make decisions that influence the project" }
     }
   },
@@ -282,13 +282,13 @@
     "question": "Because of the need to be focused on providing information about the business value of a system, a systems analyst will probably have much training or experience in programming or application development.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "01_34": {
     "question": "Which phase is generally the longest and most expensive part of the development process?",
     "choices": {
-      "A": { "choice": "Implementation", "isCorrect": true },
+      "A": { "choice": "Implementation", "correct": true },
       "B": { "choice": "Design" },
       "C": { "choice": "Analysis" },
       "D": { "choice": "Planning" },
@@ -300,7 +300,7 @@
     "choices": {
       "A": { "choice": "About 34%" },
       "B": { "choice": "Less than 20%" },
-      "C": { "choice": "About 51.7%", "isCorrect": true },
+      "C": { "choice": "About 51.7%", "correct": true },
       "D": { "choice": "About 65.3%" },
       "E": { "choice": "62,000" }
     },
@@ -310,7 +310,7 @@
     "question": "Determining business requirements is generally done in the planning phase of the SDLC.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "It's the analysis phase."
   },
@@ -321,14 +321,14 @@
       "B": { "choice": "System specification document" },
       "C": { "choice": "Test plan" },
       "D": { "choice": "Business process document" },
-      "E": { "choice": "System request document", "isCorrect": true }
+      "E": { "choice": "System request document", "correct": true }
     },
     "explanation": "Outcomes:\n- Planning: system request\n- Analysis: system proposal\n- Planning: system specification \n- Implementation: the system itself\n\n\"Business process document\" and \"Test plan\" are made up."
   },
   "01_38": {
     "question": "The primary output of the analysis phase is the system proposal.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -336,14 +336,14 @@
     "question": "The question 'Can we build it' is asked in the design phase.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "It's the planning phase, specifically, the feasibility analysis."
   },
   "01_40": {
     "question": "Systems that are cancelled or abandoned are frequently due to a lack of clarity about how the system should support an organization's goals and improve processes..",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -352,7 +352,7 @@
     "choices": {
       "A": { "choice": "Change management analyst" },
       "B": { "choice": "Infrastructure analyst" },
-      "C": { "choice": "Business analyst", "isCorrect": true },
+      "C": { "choice": "Business analyst", "correct": true },
       "D": { "choice": "Systems analyst" },
       "E": { "choice": "Project manager" }
     }
@@ -360,7 +360,7 @@
   "01_42": {
     "question": "Wayne is a senior director of finance. His company only recently came under Sarbanes-Oxley regulations and is the project sponsor to become compliant. He realizes that examining the as-is system may not be much help as the regulations are so radical that a major analysis and design project must be completed to make the company compliant. He is leaning towards: ______________",
     "choices": {
-      "A": { "choice": "Business process reengineering", "isCorrect": true },
+      "A": { "choice": "Business process reengineering", "correct": true },
       "B": { "choice": "Business process improvement" },
       "C": { "choice": "Business process automation" },
       "D": { "choice": "Business process renovation" },
@@ -371,7 +371,7 @@
   "01_43": {
     "question": "Which of the following project roles would serve as a primary point of contact for a project?",
     "choices": {
-      "A": { "choice": "Project sponsor", "isCorrect": true },
+      "A": { "choice": "Project sponsor", "correct": true },
       "B": { "choice": "Infrastructure analyst" },
       "C": { "choice": "Business analyst" },
       "D": { "choice": "Systems analyst" },
@@ -385,7 +385,7 @@
       "B": { "choice": "Cash flow" },
       "C": { "choice": "Internal rate of return" },
       "D": { "choice": "Net present value" },
-      "E": { "choice": "Break-even point", "isCorrect": true }
+      "E": { "choice": "Break-even point", "correct": true }
     }
   },
   "01_45": {
@@ -393,7 +393,7 @@
     "choices": {
       "A": { "choice": "Analytical" },
       "B": { "choice": "Ethical" },
-      "C": { "choice": "Interpersonal", "isCorrect": true },
+      "C": { "choice": "Interpersonal", "correct": true },
       "D": { "choice": "Technical" },
       "E": { "choice": "Business" }
     }
@@ -404,7 +404,7 @@
       "A": { "choice": "Net present value" },
       "B": { "choice": "Break-even point" },
       "C": { "choice": "Internal rate of return" },
-      "D": { "choice": "Return on investment", "isCorrect": true },
+      "D": { "choice": "Return on investment", "correct": true },
       "E": { "choice": "Cash flow" }
     }
   },
@@ -412,7 +412,7 @@
     "question": "Which of the following project roles would probably make a presentation about the objectives of a proposed project and its benefits to executives who will benefit directly from the project?",
     "choices": {
       "A": { "choice": "Chief Information Officer (CIO)" },
-      "B": { "choice": "Champion", "isCorrect": true },
+      "B": { "choice": "Champion", "correct": true },
       "C": { "choice": "Requirements analyst" },
       "D": { "choice": "Project manager" },
       "E": { "choice": "Systems analyst" }
@@ -421,7 +421,7 @@
   "01_48": {
     "question": "Which would normally NOT be a reason for a project?",
     "choices": {
-      "A": { "choice": "An open source platform has just come on the market", "isCorrect": true },
+      "A": { "choice": "An open source platform has just come on the market", "correct": true },
       "B": { "choice": "When a business need has been identified" },
       "C": { "choice": "An existing system just isn't working properly and the workaround is tedious" },
       "D": { "choice": "A consultant has suggested a new customer relationship management system" },
@@ -432,7 +432,7 @@
     "question": "Which is NOT an attribute of a systems analyst?",
     "choices": {
       "A": { "choice": "Understanding what to change" },
-      "B": { "choice": "Selecting which projects to approve", "isCorrect": true },
+      "B": { "choice": "Selecting which projects to approve", "correct": true },
       "C": { "choice": "Serving as a change agent" },
       "D": { "choice": "Convincing others of the need to change" },
       "E": { "choice": "Knowing how to change it" }
@@ -441,21 +441,21 @@
   "01_50": {
     "question": "The primary goal of a system is to create value for the organization.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "01_51": {
     "question": "When compared to a systems analyst, the business analyst will probably have more responsibility for determining business value.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "01_52": {
     "question": "The key person in the SDLC is the systems analyst who analyzed the business situation, identifies opportunities for improvements and design an information system to implement the improvements.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -465,7 +465,7 @@
       "A": { "choice": "Analysis" },
       "B": { "choice": "Implementation" },
       "C": { "choice": "Transition" },
-      "D": { "choice": "Design", "isCorrect": true },
+      "D": { "choice": "Design", "correct": true },
       "E": { "choice": "Planning" }
     }
   },
@@ -473,7 +473,7 @@
     "question": "The document that describes the business reasons for building a system and the value that the system is expected to provide is called the \"System Proposal.\"",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "It's the System Request, the outcome of the Planning phase.\n\nSystem Proposal is the outcome of the Analysis phase, which describes the requirements of the system."
   },
@@ -481,7 +481,7 @@
     "question": "Becky is a systems analyst for Laswell Consulting. She is attending a three-day intensive workshop on developing applications in php. What systems analyst skill is she working on?",
     "choices": {
       "A": { "choice": "Business" },
-      "B": { "choice": "Technical", "isCorrect": true },
+      "B": { "choice": "Technical", "correct": true },
       "C": { "choice": "Interpersonal" },
       "D": { "choice": "Ethical" },
       "E": { "choice": "Analytical" }
@@ -491,13 +491,13 @@
     "question": "Systems analysis and design projects are highly effective, with less than 3% of all projects cancelled or abandoned.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "01_57": {
     "question": "The outcome of the design phase is the:",
     "choices": {
-      "A": { "choice": "System specification document", "isCorrect": true },
+      "A": { "choice": "System specification document", "correct": true },
       "B": { "choice": "System request document" },
       "C": { "choice": "System proposal document" },
       "D": { "choice": "Feasibility analysis document" },
@@ -508,14 +508,14 @@
   "01_58": {
     "question": "The project sponsor should have an idea of the business value to be gained from the system.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "01_59": {
     "question": "The SDLC generally can be broken into four phases: planning, analysis, design and implementation.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -523,20 +523,20 @@
     "question": "Juan is creating use cases. He is working in the design phase of the SDLC.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "01_61": {
     "question": "The business analyst role focuses on the business issues surrounding the system.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "01_62": {
     "question": "The primary output of the planning phase is the system request.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -545,7 +545,7 @@
     "choices": {
       "A": { "choice": "Design" },
       "B": { "choice": "Planning" },
-      "C": { "choice": "Analysis", "isCorrect": true },
+      "C": { "choice": "Analysis", "correct": true },
       "D": { "choice": "Business requirements are not developed by systems analysts, but by business analysts" },
       "E": { "choice": "Implementation" }
     },
@@ -555,14 +555,14 @@
     "question": "The planning phase of the SDLC will have two steps: project initiation and requirements determination.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "The two steps of the Planning phase are feasibility analysis and project initiation. Requirements determination is in the Analysis phase."
   },
   "01_65": {
     "question": "Alice is calculating whether a system will lower costs or increase revenues. What SDLC phase is she in?",
     "choices": {
-      "A": { "choice": "Planning", "isCorrect": true },
+      "A": { "choice": "Planning", "correct": true },
       "B": { "choice": "Analysis" },
       "C": { "choice": "Design" },
       "D": { "choice": "Evaluation" },
@@ -576,7 +576,7 @@
       "B": { "choice": "System request document" },
       "C": { "choice": "Business process document" },
       "D": { "choice": "System specification document" },
-      "E": { "choice": "System proposal document", "isCorrect": true }
+      "E": { "choice": "System proposal document", "correct": true }
     },
     "explanation": "Outcomes:\n- Planning: system request\n- Analysis: system proposal\n- Planning: system specification\n- Implementation: the system itself\n\n\"Business process document\" is not a thing. Feasibility analysis is part of the system request."
   },
@@ -586,21 +586,21 @@
       "A": { "choice": "Interpersonal" },
       "B": { "choice": "Technical" },
       "C": { "choice": "Business" },
-      "D": { "choice": "Ethical", "isCorrect": true },
+      "D": { "choice": "Ethical", "correct": true },
       "E": { "choice": "Analytical" }
     }
   },
   "01_68": {
     "question": "Numerous studies report that projects involving information technology experience failure rates from 30% - 70%.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "01_69": {
     "question": "A support plan for the system is established in the implementation phase of the SDLC.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -608,7 +608,7 @@
     "question": "Systems analysts are generally experts in business, finance, and application development.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   }
 }

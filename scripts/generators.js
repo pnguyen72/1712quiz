@@ -242,7 +242,7 @@ function generateQuestion(questionId, questionIndex) {
     const choiceInput = document.createElement("input");
     const choiceText = document.createElement("span");
 
-    if (choiceData.isCorrect) {
+    if (choiceData.correct) {
       choice.classList.add("correct");
     }
     choiceInput.id = `${choiceId}_${questionId}`;

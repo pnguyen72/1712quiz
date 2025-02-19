@@ -2,7 +2,7 @@
   "09_01": {
     "question": "A sample access control requirement would be what?",
     "choices": {
-      "A": { "choice": "Customer service reps can modify customer files but not delete them", "isCorrect": true },
+      "A": { "choice": "Customer service reps can modify customer files but not delete them", "correct": true },
       "B": { "choice": "Data will be encrypted for secure ordering" },
       "C": { "choice": "All uploaded files will be checked for viruses" },
       "D": { "choice": "The system will cost $38,900 per minute of downtime in lost revenues" }
@@ -13,7 +13,7 @@
   "09_02": {
     "question": "Server virtualization involves what?",
     "choices": {
-      "A": { "choice": "Partitioning a physical server into smaller virtual servers", "isCorrect": true },
+      "A": { "choice": "Partitioning a physical server into smaller virtual servers", "correct": true },
       "B": { "choice": "Stacking blade servers" },
       "C": { "choice": "Using a laptop as a server" }
     },
@@ -24,7 +24,7 @@
     "question": "Thick clients contain what?",
     "choices": {
       "A": { "choice": "Enormous storage abilities" },
-      "B": { "choice": "Almost all or most of the application logic", "isCorrect": true },
+      "B": { "choice": "Almost all or most of the application logic", "correct": true },
       "C": { "choice": "Almost none or less than half of the application logic" },
       "D": { "choice": "Almost all of the data logic" }
     },
@@ -37,7 +37,7 @@
       "A": { "choice": "Low" },
       "B": { "choice": "Low-Medium" },
       "C": { "choice": "High-medium" },
-      "D": { "choice": "High", "isCorrect": true },
+      "D": { "choice": "High", "correct": true },
       "E": { "choice": "Very High" }
     },
     "explanation": "We know that client-server architecture has high scalability, but it's not clear why it's \"high\" rather than \"very high\"."
@@ -45,7 +45,7 @@
   "09_05": {
     "question": "It is not uncommon for the cost of a power disruption to be hundreds or thousands of times the cost of failed components.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     },
     "explanation": "<i>\"The cost of disruptions to a company’s primary website or to the LANs and backbones that support telephone sales operations often measures in millions of dollars. Amazon.com, for example, had average in 2017 revenues of more than $6.9 million per hour, so if its website was unavailable for an hour or two, it would cost them millions of dollars in lost revenue if customers took their business elsewhere. Companies that do less e-business or telephone sales have lower costs, but recent surveys suggest that losses of $100,000 to $200,000 per hour are not uncommon for major customer-facing information systems.\"</i><br><b>(p. 254)</b>"
@@ -57,7 +57,7 @@
       "B": { "choice": "Technical Environment Requirements" },
       "C": { "choice": "Portability Requirements" },
       "D": { "choice": "Scalability Requirements" },
-      "E": { "choice": "Maintainability Requirements", "isCorrect": true }
+      "E": { "choice": "Maintainability Requirements", "correct": true }
     },
     "explanation": "figure 7-5, p. 232; also module 9, slide 33"
   },
@@ -65,7 +65,7 @@
     "question": "There are three advantages associated with client-server architecture.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "Actually, there are four!<br>- Scalable (also meaning it's flexible)<br>- Supportive of many different client and server types (using middleware)<br>- Presentation, application, and data storage/access logic can be designed independently<br>- Easily replaceable (if a server fails, it can be swapped easily and won't affect the whole system)"
   },
@@ -74,7 +74,7 @@
     "choices": {
       "A": { "choice": "Overestimate; Difficulty" },
       "B": { "choice": "Overestimate; Simplicity" },
-      "C": { "choice": "Underestimate; Difficulty", "isCorrect": true },
+      "C": { "choice": "Underestimate; Difficulty", "correct": true },
       "D": { "choice": "Underestimate; Simplicity" }
     },
     "multiSelect": true
@@ -82,7 +82,7 @@
   "09_09": {
     "question": "System Integration Requirements can be defined as the extent to which the system will operate with other systems.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -90,14 +90,14 @@
     "question": "Client-server scalability is less than server-based scalability.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "09_11": {
     "question": "Special hardware, software, and network requirements imposed by business requirements.",
     "choices": {
       "A": { "choice": "System Integration Requirements" },
-      "B": { "choice": "Technical Environment Requirements", "isCorrect": true },
+      "B": { "choice": "Technical Environment Requirements", "correct": true },
       "C": { "choice": "Portability Requirements" },
       "D": { "choice": "Scalability Requirements" },
       "E": { "choice": "Maintainability Requirements" }
@@ -108,8 +108,8 @@
     "question": "The major architectural components of any system are _____",
     "choices": {
       "A": { "choice": "IT Department" },
-      "B": { "choice": "Hardware", "isCorrect": true },
-      "C": { "choice": "Software", "isCorrect": true }
+      "B": { "choice": "Hardware", "correct": true },
+      "C": { "choice": "Software", "correct": true }
     },
     "multiSelect": true
   },
@@ -117,7 +117,7 @@
     "question": "DES is an example of what?",
     "choices": {
       "A": { "choice": "Asymmetric Encryption Algorithm" },
-      "B": { "choice": "Symmetric Encryption Algorithm", "isCorrect": true },
+      "B": { "choice": "Symmetric Encryption Algorithm", "correct": true },
       "C": { "choice": "Bi-Adjusted Encryption Algorithm" },
       "D": { "choice": "Dynamic Encryption System" },
       "E": { "choice": "Alternative Systems Security Algorithms" }
@@ -128,14 +128,14 @@
     "question": "Server-based architecture is <u>not</u> more secure than client-based architecture.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "Client-based = fat client"
   },
   "09_15": {
     "question": "An example of a cultural requirement would be offering the system in English and Spanish.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     },
     "explanation": "Language requirements are part of cultural requirements - more specifically, they're called multilingual requirements.<br><br>See <b>figure 7-8, p. 239</b>"
@@ -143,7 +143,7 @@
   "09_16": {
     "question": "Technical Environment Requirements can be defined as special hardware, software, and network requirements imposed by business requirements",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -153,14 +153,14 @@
       "A": { "choice": "The number of drives installed" },
       "B": { "choice": "The number of logics on the local server" },
       "C": { "choice": "The number of terminals on the network" },
-      "D": { "choice": "The number of specialized server computers", "isCorrect": true }
+      "D": { "choice": "The number of specialized server computers", "correct": true }
     },
     "multiSelect": true
   },
   "09_18": {
     "question": "An example of an asymmetric encryption algorithm is public key encryption.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -171,14 +171,14 @@
       "B": { "choice": "Easy and therefore more experienced members of the department take the lead." },
       "C": { "choice": "Easy and therefore outside consultants are often sourced to do the task." },
       "D": { "choice": "Easy and therefore experienced internal members are sourced to the task." },
-      "E": { "choice": "Difficult and therefore, many organizations use the skills of experienced, expert system architects (consultants or employees) who specialize in the task.", "isCorrect": true }
+      "E": { "choice": "Difficult and therefore, many organizations use the skills of experienced, expert system architects (consultants or employees) who specialize in the task.", "correct": true }
     }
   },
   "09_20": {
     "question": "The term in the computing domain which refers to the creation of devices or storage with the use of software and not hardware is what?",
     "choices": {
       "A": { "choice": "Encryption" },
-      "B": { "choice": "Virtualization", "isCorrect": true },
+      "B": { "choice": "Virtualization", "correct": true },
       "C": { "choice": "Dynamic Creation" },
       "D": { "choice": "Alternative Devices" }
     },
@@ -188,7 +188,7 @@
     "question": "An example of making an unstated norm explicit would be to make a field modifiable by a manager to represent the local format.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "Making a fields modifiable is <u>customizable requirement</u>.<br><br>Making unstated norms explicit is, for example, explicitly stating your date format and measurement unit."
   },
@@ -196,21 +196,21 @@
     "question": "The architectural components of any system are the network and the hardware.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "Software too :)"
   },
   "09_23": {
     "question": "Maintainability Requirements can be defined as expected business changes to which the system should be able to adapt.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "09_24": {
     "question": "Data storage, Data Access Logic, Application Logic and Presentation Logic are the four basic functions of software systems.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -218,14 +218,14 @@
     "question": "Client-based architecture is complex and there is minimal chance of network circuits being overloaded due to growing network applications.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "Client-based = fat client"
   },
   "09_26": {
     "question": "Portability Requirements can be defined as the extent to which the system will need to operate in other environments.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     },
     "explanation": "It's different from Technical Environment Requirements in that PR is what environments the system <i>may</i> need to operate in in the future, while TER is what environments the system <i>currently</i> needs to operate in. <b>(p. 231)</b>"
@@ -233,14 +233,14 @@
   "09_27": {
     "question": "The design phase is the time to select the specific software that will operate the hardware.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "09_28": {
     "question": "The extent to which the system will operate with other systems.",
     "choices": {
-      "A": { "choice": "System Integration Requirements", "isCorrect": true },
+      "A": { "choice": "System Integration Requirements", "correct": true },
       "B": { "choice": "Technical Environment Requirements" },
       "C": { "choice": "Portability Requirements" },
       "D": { "choice": "Scalability Requirements" },
@@ -251,7 +251,7 @@
   "09_29": {
     "question": "The cost of development associated with Client-Based systems is:",
     "choices": {
-      "A": { "choice": "Low", "isCorrect": true },
+      "A": { "choice": "Low", "correct": true },
       "B": { "choice": "Low-Medium" },
       "C": { "choice": "High-medium" },
       "D": { "choice": "High" },
@@ -262,32 +262,32 @@
     "question": "Maintainability Requirements can be defined as the extent to which the system will need to operate in other environments.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "Maintainability Requirements refer to how easily the system can be updated, fixed, or enhanced, not how it operates in different environments."
   },
   "09_31": {
     "question": "The objective of architecture design is to determine how the software components of the information system will be assigned to the hardware devices of the system.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "09_32": {
     "question": "Mobile application architectures are where the:",
     "choices": {
-      "A": { "choice": "Client device is responsible for presentation logic", "isCorrect": true },
-      "B": { "choice": "Client device is responsible for business logic", "isCorrect": true },
-      "C": { "choice": "The server is responsible for data access logic", "isCorrect": true },
-      "D": { "choice": "The server stores the data", "isCorrect": true }
+      "A": { "choice": "Client device is responsible for presentation logic", "correct": true },
+      "B": { "choice": "Client device is responsible for business logic", "correct": true },
+      "C": { "choice": "The server is responsible for data access logic", "correct": true },
+      "D": { "choice": "The server stores the data", "correct": true }
     },
     "multiSelect": true
   },
   "09_33": {
     "question": "What is/are the disadvantage(s) associated with n-tiered architecture?",
     "choices": {
-      "A": { "choice": "They put great load on the network", "isCorrect": true },
-      "B": { "choice": "It is more difficult to program and test software", "isCorrect": true },
+      "A": { "choice": "They put great load on the network", "correct": true },
+      "B": { "choice": "It is more difficult to program and test software", "correct": true },
       "C": { "choice": "The clients capture keystrokes" },
       "D": { "choice": "They are always slower" },
       "E": { "choice": "They are the very first architecture system" }
@@ -299,7 +299,7 @@
     "question": "The objective of architecture design is to determine what?",
     "choices": {
       "A": { "choice": "How aesthetically pleasing the server system will be" },
-      "B": { "choice": "What parts of the application software will be assigned to what hardware", "isCorrect": true },
+      "B": { "choice": "What parts of the application software will be assigned to what hardware", "correct": true },
       "C": { "choice": "How the computers will be arranged to provide ample storage" },
       "D": { "choice": "Where the mainframe will be situated" }
     },
@@ -308,7 +308,7 @@
   "09_35": {
     "question": "An example of a multilingual requirement is what?",
     "choices": {
-      "A": { "choice": "The system will operate in English, French and Spanish", "isCorrect": true },
+      "A": { "choice": "The system will operate in English, French and Spanish", "correct": true },
       "B": { "choice": "Country managers can define custom fields" },
       "C": { "choice": "All date fields will be presented in a uniform format" },
       "D": { "choice": "Personal information about English customers cannot be sent to Chinese systems" },
@@ -318,14 +318,14 @@
   "09_36": {
     "question": "There are four advantages associated with client-server architecture.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "09_37": {
     "question": "An example of a capacity requirement would be:",
     "choices": {
-      "A": { "choice": "Transmissions require 300K of data", "isCorrect": true },
+      "A": { "choice": "Transmissions require 300K of data", "correct": true },
       "B": { "choice": "The systems uptime will be 99%" },
       "C": { "choice": "Response time must be &lt;2.8 seconds for any transactions" },
       "D": { "choice": "The inventory database will be updated in real time" }
@@ -336,7 +336,7 @@
   "09_38": {
     "question": "Client-server scalability is greater than server-based scalability.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -344,7 +344,7 @@
     "question": "An ATM dialing a network provides the IT department with a quick cash withdrawal for emergency purposes.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "I think ATM in this context refers to ATM circuits, a form of network connection, unrelated to the money machines. <b>(p. 224)</b>"
   },
@@ -352,7 +352,7 @@
     "question": "System Integration Requirements can be defined as the extent to which the system will need to operate in other environments.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "System Integration Requirements is the extent to which the system will need to operate <b>with other systems</b> (e.g. the system will work with existing database).<br><br>The extent to which the system will need to operate in other environments is <b>Portability Requirements</b> (e.g. system may need to operate on mobile)"
   },
@@ -362,17 +362,17 @@
       "A": { "choice": "System Integration Requirements" },
       "B": { "choice": "Technical Environment Requirements" },
       "C": { "choice": "Portability Requirements" },
-      "D": { "choice": "Scalability Requirements", "isCorrect": true },
+      "D": { "choice": "Scalability Requirements", "correct": true },
       "E": { "choice": "Maintainability Requirements" }
     }
   },
   "09_42": {
     "question": "Which of the following is an advantage of client-server architectures?",
     "choices": {
-      "A": { "choice": "They are scalable", "isCorrect": true },
-      "B": { "choice": "They can support different types of systems", "isCorrect": true },
-      "C": { "choice": "It is easy to separate different logic functions", "isCorrect": true },
-      "D": { "choice": "Reliability", "isCorrect": true }
+      "A": { "choice": "They are scalable", "correct": true },
+      "B": { "choice": "They can support different types of systems", "correct": true },
+      "C": { "choice": "It is easy to separate different logic functions", "correct": true },
+      "D": { "choice": "Reliability", "correct": true }
     },
     "multiSelect": true,
     "explanation": "Benefits of client-server architecture:<br>- Scalable<br>- Can support many different types of clients and servers<br>- Can design each logic function independently<br>- If a server fails, only the applications requiring that server will fail<br><b>(module 9, slide 11)</b>"
@@ -380,18 +380,18 @@
   "09_43": {
     "question": "The primary hardware components of a system consist of:",
     "choices": {
-      "A": { "choice": "Client computers", "isCorrect": true },
-      "B": { "choice": "Servers", "isCorrect": true },
-      "C": { "choice": "Network", "isCorrect": true }
+      "A": { "choice": "Client computers", "correct": true },
+      "B": { "choice": "Servers", "correct": true },
+      "C": { "choice": "Network", "correct": true }
     },
     "multiSelect": true
   },
   "09_44": {
     "question": "Form(s) of network connection(s) in a system include:",
     "choices": {
-      "A": { "choice": "ATM", "isCorrect": true },
+      "A": { "choice": "ATM", "correct": true },
       "B": { "choice": "T2" },
-      "C": { "choice": "DSL", "isCorrect": true }
+      "C": { "choice": "DSL", "correct": true }
     },
     "multiSelect": true,
     "explanation": "<i>\"The network that connects the computers can vary [...] such as cable modem, DSL, or T1 circuits, to high-­speed always-­on Ethernet, T3, or ATM circuits.\"</i> <b>(p. 224)</b><br><br>I don't think we ever learned what T2 is."
@@ -399,7 +399,7 @@
   "09_45": {
     "question": "An example of making an unstated norm explicit would be to make an input field explicitly defined, such as a date will use month-day-year format.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -409,7 +409,7 @@
       "A": { "choice": "1" },
       "B": { "choice": "2" },
       "C": { "choice": "3" },
-      "D": { "choice": "4", "isCorrect": true },
+      "D": { "choice": "4", "correct": true },
       "E": { "choice": "5" }
     },
     "explanation": "1. Data storage<br>2. Data access logic<br>3. Application logic<br>4. Presentation logic<br><b>(p. 223-224)</b>"
@@ -417,7 +417,7 @@
   "09_47": {
     "question": "Server-based architecture is more secure than client-based architecture.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     },
     "explanation": "Server-based architecture has the server do all four application functions. Client-based architecture has the client do the presentation logic. As the client in server-based architecture has less control over the logic of the system, server-based architecture is more secure."
@@ -427,7 +427,7 @@
     "choices": {
       "A": { "choice": "System Integration Requirements" },
       "B": { "choice": "Technical Environment Requirements" },
-      "C": { "choice": "Portability Requirements", "isCorrect": true },
+      "C": { "choice": "Portability Requirements", "correct": true },
       "D": { "choice": "Scalability Requirements" },
       "E": { "choice": "Maintainability Requirements" }
     }
@@ -437,7 +437,7 @@
     "choices": {
       "A": { "choice": "2" },
       "B": { "choice": "3" },
-      "C": { "choice": "4", "isCorrect": true },
+      "C": { "choice": "4", "correct": true },
       "D": { "choice": "5" },
       "E": { "choice": "7" }
     },
@@ -448,7 +448,7 @@
     "choices": {
       "A": { "choice": "1" },
       "B": { "choice": "2" },
-      "C": { "choice": "3", "isCorrect": true },
+      "C": { "choice": "3", "correct": true },
       "D": { "choice": "4" },
       "E": { "choice": "5" }
     },
@@ -458,7 +458,7 @@
     "question": "Client-server architecture holds the client responsible for_____ and server is only responsible for _____.",
     "choices": {
       "A": { "choice": "Application Logic; Presentation Logic" },
-      "B": { "choice": "Presentation Logic; Data Access Logic and Data Storage", "isCorrect": true },
+      "B": { "choice": "Presentation Logic; Data Access Logic and Data Storage", "correct": true },
       "C": { "choice": "Data Access Logic and Presentation Logic; Data Storage" },
       "D": { "choice": "Application Logic; Data Storage" },
       "E": { "choice": "Data Storage; Application Logic" }
@@ -467,15 +467,15 @@
   "09_52": {
     "question": "Client computers, Servers, and Networks are the three primary hardware components of a system.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "09_53": {
     "question": "Server-based architecture is _________",
     "choices": {
-      "A": { "choice": "When the clients capture keystrokes", "isCorrect": true },
-      "B": { "choice": "The very first architecture system", "isCorrect": true },
+      "A": { "choice": "When the clients capture keystrokes", "correct": true },
+      "B": { "choice": "The very first architecture system", "correct": true },
       "C": { "choice": "Outdated and never used" }
     },
     "multiSelect": true,

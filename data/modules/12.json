@@ -3,7 +3,7 @@
     "question": "Systems to support decision making generally need to update data frequently with a large volume of data.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "12_02": {
@@ -13,13 +13,13 @@
       "B": { "choice": "Text" },
       "C": { "choice": "Integer" },
       "D": { "choice": "Date" },
-      "E": { "choice": "Video", "isCorrect": true }
+      "E": { "choice": "Video", "correct": true }
     }
   },
   "12_03": {
     "question": "Most relational database systems support which of the following?",
     "choices": {
-      "A": { "choice": "Referential integrity", "isCorrect": true },
+      "A": { "choice": "Referential integrity", "correct": true },
       "B": { "choice": "Pop-up menus" },
       "C": { "choice": "Customizable user-interface colors and graphics" },
       "D": { "choice": "The &#39;three-clicks&#39; rule" },
@@ -30,14 +30,14 @@
     "question": "One activity in the data storage design activity is to update the CRUDE matrix.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "12_05": {
     "question": "Most relational database management systems support &#39;sticky&#39; quantitative processing.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "\"sticky\" is made up"
   },
@@ -48,13 +48,13 @@
       "B": { "choice": "DFD master" },
       "C": { "choice": "Denormalization" },
       "D": { "choice": "Pop-up menu" },
-      "E": { "choice": "CASE", "isCorrect": true }
+      "E": { "choice": "CASE", "correct": true }
     }
   },
   "12_07": {
     "question": "The purpose of creating physical ERDs is to do what?",
     "choices": {
-      "A": { "choice": "Depict the &quot;business view&quot; of the data, but omit any implementation details", "isCorrect": true },
+      "A": { "choice": "Depict the &quot;business view&quot; of the data, but omit any implementation details", "correct": true },
       "B": { "choice": "Normalize the database to third normal form" },
       "C": { "choice": "Do a new technology analysis" },
       "D": { "choice": "Drive the users nuts" },
@@ -64,7 +64,7 @@
   "12_08": {
     "question": "Rachel wants aggregated data like find the number of banking customers who have savings accounts over $100,000 and home mortgages with her bank. She probably wants to use a Decision Support System.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -72,7 +72,7 @@
     "question": "When converting a logical ERD into a physical data model, you will want to specify both primary keys and international keys.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "It's primary and foreign keys. \"International key\" is not a thing."
   },
@@ -82,7 +82,7 @@
       "A": { "choice": "Hierarchical database" },
       "B": { "choice": "Tree database" },
       "C": { "choice": "Green database" },
-      "D": { "choice": "Relational database", "isCorrect": true },
+      "D": { "choice": "Relational database", "correct": true },
       "E": { "choice": "Piecemeal database" }
     }
   },
@@ -92,7 +92,7 @@
       "A": { "choice": "Data storage" },
       "B": { "choice": "Presentation logic" },
       "C": { "choice": "Data access logic" },
-      "D": { "choice": "Linked-list modules", "isCorrect": true },
+      "D": { "choice": "Linked-list modules", "correct": true },
       "E": { "choice": "Application logic" }
     }
   },
@@ -101,7 +101,7 @@
     "choices": {
       "A": { "choice": "Microsoft Access" },
       "B": { "choice": "SQL Server" },
-      "C": { "choice": "MySQL", "isCorrect": true },
+      "C": { "choice": "MySQL", "correct": true },
       "D": { "choice": "Excel" },
       "E": { "choice": "CASE" }
     }
@@ -110,7 +110,7 @@
     "question": "Juan is using a file that is created by an older, legacy system. It is likely that the data is what?",
     "choices": {
       "A": { "choice": "Unusable" },
-      "B": { "choice": "In a proprietary format", "isCorrect": true },
+      "B": { "choice": "In a proprietary format", "correct": true },
       "C": { "choice": "In a standard format (like comma separated value)" },
       "D": { "choice": "Is sorted by customer&#39;s middle name" },
       "E": { "choice": "In an object-oriented structure like Ariel" }
@@ -123,13 +123,13 @@
       "B": { "choice": "Be transaction processing systems" },
       "C": { "choice": "Be audit files" },
       "D": { "choice": "Use Gantt charts" },
-      "E": { "choice": "Usually just read data – and often in ad hoc ways", "isCorrect": true }
+      "E": { "choice": "Usually just read data – and often in ad hoc ways", "correct": true }
     }
   },
   "12_15": {
     "question": "When you join two relational database tables together, frequently the primary key in one table will be a(n) ____________ in the other table.",
     "choices": {
-      "A": { "choice": "Foreign key", "isCorrect": true },
+      "A": { "choice": "Foreign key", "correct": true },
       "B": { "choice": "International key" },
       "C": { "choice": "Primary key" },
       "D": { "choice": "Linked list" },
@@ -140,7 +140,7 @@
     "question": "One process when considering data storage design is to move from physical data models to logical data models.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "It's the other way around. You have logical models in the nalysis phase, and they become physical models in the design phase."
   },
@@ -151,7 +151,7 @@
       "B": { "choice": "CRM" },
       "C": { "choice": "ERP" },
       "D": { "choice": "BPR" },
-      "E": { "choice": "SQL", "isCorrect": true }
+      "E": { "choice": "SQL", "correct": true }
     }
   },
   "12_18": {
@@ -159,7 +159,7 @@
     "choices": {
       "A": { "choice": "Finding particular records that are stored in legacy databases" },
       "B": { "choice": "Finding processes that are stored in object databases" },
-      "C": { "choice": "Finding aggregated data", "isCorrect": true },
+      "C": { "choice": "Finding aggregated data", "correct": true },
       "D": { "choice": "Analyzing audit (or log) files for possible intrusion and security breaches" },
       "E": { "choice": "Red and green linked list processing" }
     }
@@ -170,7 +170,7 @@
       "A": { "choice": "Large bit files" },
       "B": { "choice": "Audio files" },
       "C": { "choice": "Video files" },
-      "D": { "choice": "Files with uniform structure", "isCorrect": true },
+      "D": { "choice": "Files with uniform structure", "correct": true },
       "E": { "choice": "image files" }
     },
     "explanation": "files with uniform structure are more aligned with relational databases, where data is organized into tables with a fixed schema. Document-oriented databases allow for a more flexible and dynamic schema."
@@ -179,7 +179,7 @@
     "question": "Maria is working for the Minneapolis Dance Troop (MDT) and wants a database that can support text, numbers, video, and audio. She will probably select the multidimensional database format.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "A multidimensional database is typically used for organizing and analyzing data in a structure suited for OLAP (Online Analytical Processing), such as sales data or financial data. However, for a database that needs to support a variety of data types like text, numbers, video, and audio, Maria would likely select a multimedia database or a NoSQL database (such as a document-based or object-oriented database) rather than a multidimensional one. These types of databases are designed to handle diverse data formats effectively."
   },
@@ -187,7 +187,7 @@
     "question": "This type of file records &quot;before&quot; and &quot;after&quot; images of data as the data gets altered.",
     "choices": {
       "A": { "choice": "Intelligent files" },
-      "B": { "choice": "Audit files", "isCorrect": true },
+      "B": { "choice": "Audit files", "correct": true },
       "C": { "choice": "Master files" },
       "D": { "choice": "Raw files" },
       "E": { "choice": "Prime files" }
@@ -197,14 +197,14 @@
     "question": "The two primary ways to optimize a relational database are (a) for storage efficiency and (b) for using the smallest amount of space.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "Trick question. \"Storage efficiency\" and \"using the smallest amount of space\" mean the same thing.<br>The two ways to optimize a database are optimizing for speed (faster querying) and optimizing for space (less space used)"
   },
   "12_23": {
     "question": "The concept for planning good performance of databases is known as what?",
     "choices": {
-      "A": { "choice": "Volumetrics", "isCorrect": true },
+      "A": { "choice": "Volumetrics", "correct": true },
       "B": { "choice": "Econometrics" },
       "C": { "choice": "Moving averages" },
       "D": { "choice": "Correlation" },
@@ -214,21 +214,21 @@
   "12_24": {
     "question": "Referential integrity is the idea of ensuring that values linking the tables together through the primary and foreign keys are valid and correctly synchronized.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "12_25": {
     "question": "When moving from logical data models to physical data models, you should update your CRUD matrix.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "12_26": {
     "question": "The most efficient tables in a relational database in terms of storage space have no redundant data and very few null values.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -238,7 +238,7 @@
       "A": { "choice": "History files" },
       "B": { "choice": "Audit files" },
       "C": { "choice": "Look-up files" },
-      "D": { "choice": "Algebra files", "isCorrect": true },
+      "D": { "choice": "Algebra files", "correct": true },
       "E": { "choice": "Transaction files" }
     }
   },
@@ -248,7 +248,7 @@
       "A": { "choice": "The first value in a table" },
       "B": { "choice": "The median value in a table" },
       "C": { "choice": "The smallest value in a table" },
-      "D": { "choice": "A value that specifes what should be placed in a column", "isCorrect": true },
+      "D": { "choice": "A value that specifes what should be placed in a column", "correct": true },
       "E": { "choice": "A mistake made by Dee (aka the name &quot;Dee&#39;s fault&quot;)" }
     }
   },
@@ -256,14 +256,14 @@
     "question": "Data marts are larger, aggregated legacy databases.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "Data marts are typically smaller, specialized subsets of data warehouses, designed to serve the needs of a specific business unit or function. They often contain aggregated data but are not larger legacy databases. Legacy databases refer to older, outdated systems, while data marts are part of modern data architecture used for specific analytical purposes."
   },
   "12_30": {
     "question": "When changing logical data models to physical data models, you will want to change entities to tables or files.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -271,7 +271,7 @@
     "question": "The CRUD matrix shows which of the following?",
     "choices": {
       "A": { "choice": "The crud that is coming into the system and how to quarantine it" },
-      "B": { "choice": "Exactly how data are used and created by the major processes in the system", "isCorrect": true },
+      "B": { "choice": "Exactly how data are used and created by the major processes in the system", "correct": true },
       "C": { "choice": "The 1:M relationships on an ERD diagram" },
       "D": { "choice": "The external entities, process and major data flows from the Context DFD diagram" },
       "E": { "choice": "Where customer, relationships, users and developers will interact with a system" }
@@ -280,7 +280,7 @@
   "12_32": {
     "question": "Decision support systems are not designed to find individual records, but to find aggregated information (such as &#39;what three products sold the best in Boston in February&#39;).",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -288,7 +288,7 @@
     "question": "The standard method language for accessing the data in relational database tables is: SQL – Standard Query Logic.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "It's *Structured* Query Language"
   },
@@ -305,7 +305,7 @@
     "question": "Primary keys are which of the following?",
     "choices": {
       "A": { "choice": "The same as default keys (or default values)" },
-      "B": { "choice": "Unique values for each record in a file or table", "isCorrect": true },
+      "B": { "choice": "Unique values for each record in a file or table", "correct": true },
       "C": { "choice": "Elementary values (like &#39;primary&#39; school)" },
       "D": { "choice": "Prime numbers in a Fibonacci sequence" },
       "E": { "choice": "The same as foreign keys" }
@@ -315,17 +315,17 @@
     "question": "A DSS is a design support structure and does the &#39;ETL&#39; (extract, transform and load) to create data warehouses.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "A DSS (Decision Support System) is a system designed to help with decision-making by providing data analysis and modeling tools. It is not responsible for performing ETL (Extract, Transform, Load) operations."
   },
   "12_37": {
     "question": "New databases collectively referred to as NoSQL databases have appeared in recent years. Which of the following are categorized as a NoSQL database?",
     "choices": {
-      "A": { "choice": "Document-oriented database", "isCorrect": true },
-      "B": { "choice": "Wide column stores", "isCorrect": true },
-      "C": { "choice": "Graph databases", "isCorrect": true },
-      "D": { "choice": "Extensible record stores", "isCorrect": true },
+      "A": { "choice": "Document-oriented database", "correct": true },
+      "B": { "choice": "Wide column stores", "correct": true },
+      "C": { "choice": "Graph databases", "correct": true },
+      "D": { "choice": "Extensible record stores", "correct": true },
       "E": { "choice": "Relational Database system" }
     },
     "multiSelect": true
@@ -336,7 +336,7 @@
       "A": { "choice": "Primary keys and foreign keys" },
       "B": { "choice": "International keys and redundancy" },
       "C": { "choice": "Adjectives and adverbs" },
-      "D": { "choice": "Redundancy and null values", "isCorrect": true },
+      "D": { "choice": "Redundancy and null values", "correct": true },
       "E": { "choice": "Special characters and primary keys" }
     }
   },
@@ -344,7 +344,7 @@
     "question": "Which of the following are not a RDBMS?",
     "choices": {
       "A": { "choice": "Oracle" },
-      "B": { "choice": "NoSQL", "isCorrect": true },
+      "B": { "choice": "NoSQL", "correct": true },
       "C": { "choice": "SQL" },
       "D": { "choice": "MySQL" }
     },
@@ -353,7 +353,7 @@
   "12_40": {
     "question": "The project team is very knowledgeable about relational database management systems. In terms of feasibility, this might be best known as what?",
     "choices": {
-      "A": { "choice": "Technical feasibility (&#39;can we build it&#39;)", "isCorrect": true },
+      "A": { "choice": "Technical feasibility (&#39;can we build it&#39;)", "correct": true },
       "B": { "choice": "Economic feasibility (&#39;should we build it&#39;)" },
       "C": { "choice": "Managerial feasibility (&#39;why would we build it&#39;)" },
       "D": { "choice": "Graphical feasibility (&#39;does it fit this project&#39;)" },
@@ -366,7 +366,7 @@
       "A": { "choice": "Executive support system (ESS)" },
       "B": { "choice": "Barcode processing system (BPS)" },
       "C": { "choice": "Management information system (MIS)" },
-      "D": { "choice": "Transaction Processing system (TPS)", "isCorrect": true },
+      "D": { "choice": "Transaction Processing system (TPS)", "correct": true },
       "E": { "choice": "A grocery store processing system (GSPS)" }
     }
   },
@@ -376,7 +376,7 @@
       "A": { "choice": "Roster Files" },
       "B": { "choice": "Training files" },
       "C": { "choice": "Master files" },
-      "D": { "choice": "Transaction files", "isCorrect": true },
+      "D": { "choice": "Transaction files", "correct": true },
       "E": { "choice": "Integrated files" }
     }
   },
@@ -384,7 +384,7 @@
     "question": "Informix is a pure OODBMS package.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "It is primarily a relational database management system (RDBMS),"
   },
@@ -392,7 +392,7 @@
     "question": "When working on a major project, project teams will always select and stay with only one database format for consistency of development and use.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "12_45": {
@@ -402,7 +402,7 @@
       "B": { "choice": "Relational databases" },
       "C": { "choice": "Object databases" },
       "D": { "choice": "Multidimensional databases" },
-      "E": { "choice": "Federal database", "isCorrect": true }
+      "E": { "choice": "Federal database", "correct": true }
     }
   },
   "12_46": {
@@ -412,13 +412,13 @@
       "B": { "choice": "Hierarchical" },
       "C": { "choice": "Legacy" },
       "D": { "choice": "Object" },
-      "E": { "choice": "Relational", "isCorrect": true }
+      "E": { "choice": "Relational", "correct": true }
     }
   },
   "12_47": {
     "question": "Although TJ did a lot of work normalizing the database so that it is in third normal form (3NF), he may want to &#39;denormalize&#39; it so that access might be faster.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -428,7 +428,7 @@
       "A": { "choice": "Axes" },
       "B": { "choice": "Parallels" },
       "C": { "choice": "Concretes" },
-      "D": { "choice": "Joins", "isCorrect": true },
+      "D": { "choice": "Joins", "correct": true },
       "E": { "choice": "Enrolls" }
     }
   },
@@ -436,7 +436,7 @@
     "question": "The two basic formats for data storage consist of which of the following?",
     "choices": {
       "A": { "choice": "Spreadsheets and documents" },
-      "B": { "choice": "Files and databases", "isCorrect": true },
+      "B": { "choice": "Files and databases", "correct": true },
       "C": { "choice": "Databases and presentations" },
       "D": { "choice": "Flash and web forms" },
       "E": { "choice": "ERDs and Use cases" }
@@ -446,7 +446,7 @@
     "question": "The best design for accessing data faster is generally the most efficient storage as well.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "To make data access faster, you *index* it. The indexing will take storage space.<br>\n**(module 12, slide 34-36)**"
   },
@@ -454,7 +454,7 @@
     "question": "Brian wants an e-commerce system to be able to do a lot of rapid processing – like search for particular keywords in documents; return the price of an item; update quantities in the shopping cart. He is probably building an Expert System.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "12_52": {
@@ -462,7 +462,7 @@
     "choices": {
       "A": { "choice": "History Files" },
       "B": { "choice": "Audit files" },
-      "C": { "choice": "Master files", "isCorrect": true },
+      "C": { "choice": "Master files", "correct": true },
       "D": { "choice": "Transaction files" },
       "E": { "choice": "Intelligent files" }
     }
@@ -470,7 +470,7 @@
   "12_53": {
     "question": "When changing from logical data models to physical data models, you will want to change the attributes of the logical ERD to fields in the physical ERD.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -478,7 +478,7 @@
     "question": "A great advantage of object-oriented database management systems is their easy of learning.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "12_55": {
@@ -486,7 +486,7 @@
     "choices": {
       "A": { "choice": "Master files and transaction files" },
       "B": { "choice": "Audit files and look-up files" },
-      "C": { "choice": "Hierarchical databases and network databases", "isCorrect": true },
+      "C": { "choice": "Hierarchical databases and network databases", "correct": true },
       "D": { "choice": "Tree databases and leaf databases" },
       "E": { "choice": "Red databases and Green databases" }
     }
@@ -495,7 +495,7 @@
     "question": "The concept of putting records that are somehow related together on the same server (or storage device) is called what?",
     "choices": {
       "A": { "choice": "Carmelization" },
-      "B": { "choice": "Clustering", "isCorrect": true },
+      "B": { "choice": "Clustering", "correct": true },
       "C": { "choice": "Joining" },
       "D": { "choice": "Normalization" },
       "E": { "choice": "Hybrid technologies" }
@@ -504,7 +504,7 @@
   "12_57": {
     "question": "A relational database that is used extensively in data warehousing is a multidimensional database.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -512,7 +512,7 @@
     "question": "The most efficient tables (in terms of storage efficiency) in relational database management systems have which of the following?",
     "choices": {
       "A": { "choice": "Have duplicate data, especially for when more than one table is joined together for queries" },
-      "B": { "choice": "Have no redundant data", "isCorrect": true },
+      "B": { "choice": "Have no redundant data", "correct": true },
       "C": { "choice": "Are denormalized" },
       "D": { "choice": "Have entire tables duplicated" },
       "E": { "choice": "Use plasma technologies" }
@@ -522,14 +522,14 @@
     "question": "Sanjay is creating a screen form that interfaces with a relational database. He should use the median (middle) value in the database as his default value – as that will make it easier for the users to move up and down in the table.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "12_60": {
     "question": "An &#39;international key&#39; is used to relate two tables together (like customer ID from the customer table is an international key in the order table).",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "It's called foreign key"
   },
@@ -537,7 +537,7 @@
     "question": "One goal is data storage design is to spread the data over all storage devices so that the redundancy will make for more efficient storage.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "12_62": {
@@ -546,7 +546,7 @@
       "A": { "choice": "Data warehouses" },
       "B": { "choice": "Data marts" },
       "C": { "choice": "Aggregated data" },
-      "D": { "choice": "Object orientation", "isCorrect": true },
+      "D": { "choice": "Object orientation", "correct": true },
       "E": { "choice": "Multidimensional databases" }
     }
   },
@@ -555,7 +555,7 @@
     "choices": {
       "A": { "choice": "Use legacy databases in a indexed sequential access method" },
       "B": { "choice": "Encrypt all data with 256 byte encryption" },
-      "C": { "choice": "Denormalize the tables", "isCorrect": true },
+      "C": { "choice": "Denormalize the tables", "correct": true },
       "D": { "choice": "Delete all primary keys" },
       "E": { "choice": "Only use alphabetic data" }
     }
@@ -564,7 +564,7 @@
     "question": "Oracle is an example of an object-oriented database system.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "Oracle is primarily a relational database management system (RDBMS)"
   },
@@ -572,7 +572,7 @@
     "question": "The type of processing system that creates reports for supervisors (and other functional users) probably would be which of the following?",
     "choices": {
       "A": { "choice": "Transaction Processing System (TPS)" },
-      "B": { "choice": "Management Information System (MIS)", "isCorrect": true },
+      "B": { "choice": "Management Information System (MIS)", "correct": true },
       "C": { "choice": "Executive Support System (ESS)" },
       "D": { "choice": "Decision Support System (DSS)" },
       "E": { "choice": "Rebate Management System (RMS)" }
@@ -581,7 +581,7 @@
   "12_66": {
     "question": "Marco is working for Apple on iTunes and needs to have a database that can store complex data. His best choice might be which of the following?",
     "choices": {
-      "A": { "choice": "An object database", "isCorrect": true },
+      "A": { "choice": "An object database", "correct": true },
       "B": { "choice": "A relational database" },
       "C": { "choice": "A red-green database" },
       "D": { "choice": "A tree database" },
@@ -591,7 +591,7 @@
   "12_67": {
     "question": "Microsoft Access is an end-user database.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   }

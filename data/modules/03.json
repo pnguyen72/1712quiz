@@ -2,7 +2,7 @@
   "03_01": {
     "question": "Yuri wants to interview both managers and staff in the accounting department for the updated credit analysis project. This is an appropriate group for first round interviews.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -12,14 +12,14 @@
       "A": { "choice": "Close ended" },
       "B": { "choice": "Probing" },
       "C": { "choice": "Open Ended" },
-      "D": { "choice": "Observation", "isCorrect": true }
+      "D": { "choice": "Observation", "correct": true }
     },
     "explanation": "You do observe the interviewee during the intervew, but \"observation\" is not a type of question."
   },
   "03_03": {
     "question": "Paul is interviewing Ming. He first explains why he is there and what he wants to accomplish in the interview. This would be done in which step of the interview process?",
     "choices": {
-      "A": { "choice": "Conducting the interview", "isCorrect": true },
+      "A": { "choice": "Conducting the interview", "correct": true },
       "B": { "choice": "Preparing for the interview" },
       "C": { "choice": "Selecting interviewees" },
       "D": { "choice": "Post-interview follow-up" },
@@ -29,10 +29,10 @@
   "03_04": {
     "question": "Practical tips states that interpersonal skills are important, they include which of the following?",
     "choices": {
-      "A": { "choice": "Being honest", "isCorrect": true },
-      "B": { "choice": "Be happy", "isCorrect": true },
-      "C": { "choice": "Ability to summarize key points", "isCorrect": true },
-      "D": { "choice": "Paying attention", "isCorrect": true }
+      "A": { "choice": "Being honest", "correct": true },
+      "B": { "choice": "Be happy", "correct": true },
+      "C": { "choice": "Ability to summarize key points", "correct": true },
+      "D": { "choice": "Paying attention", "correct": true }
     },
     "multiSelect": true
   },
@@ -40,13 +40,13 @@
     "question": "To get to more depth in understanding the as-is system, document analysis and observation generally are more beneficial as compared to interviews and JAD sessions.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "03_06": {
     "question": "Online questionnaires are growing in use, but generally online questionnaires have a lower completion rate.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -55,7 +55,7 @@
     "choices": {
       "A": { "choice": "Open Ended questions" },
       "B": { "choice": "Close ended questions" },
-      "C": { "choice": "Probing questions", "isCorrect": true }
+      "C": { "choice": "Probing questions", "correct": true }
     },
     "multiSelect": true
   },
@@ -63,13 +63,13 @@
     "question": "A JAD facilitator recognizes that some people know more about the system and proposed system and will dominate the discussion, and knows that is a positive thing.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "03_09": {
     "question": "One of the first activities of an analyst is to determine the business requirements for the new system.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -77,7 +77,7 @@
     "question": "A JAD facilitator can participate in the discussion to settle a disagreement.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "Question is confusing because:\n- The facilitator must never insert their own opinion.\n- However, if possible (without breaking neutrality), they should help the group resolve issues.\n\nBut the facilitator never actively PARTICIPATES so answer is false."
   },
@@ -86,7 +86,7 @@
     "choices": {
       "A": { "choice": "Document analysis" },
       "B": { "choice": "Root cause analysis" },
-      "C": { "choice": "Closed-ended interview questions", "isCorrect": true },
+      "C": { "choice": "Closed-ended interview questions", "correct": true },
       "D": { "choice": "JAD session" },
       "E": { "choice": "Probing interview questions" }
     },
@@ -99,34 +99,34 @@
       "B": { "choice": "Selecting interviewees" },
       "C": { "choice": "Conducting the interview" },
       "D": { "choice": "Preparing for the interview" },
-      "E": { "choice": "Post-interview follow-up", "isCorrect": true }
+      "E": { "choice": "Post-interview follow-up", "correct": true }
     }
   },
   "03_13": {
     "question": "Generally beginning analysts should avoid unstructured interviews and likewise should avoid \"winging it\".",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "03_14": {
     "question": "In interviews, Ross has learned that the new order entry system must be available in at least three formats (mobile, web browser, and local area network based); that it must function in either English or Spanish; and that the system must return order forms and data in less than 2 seconds. He recognizes these as nonfunctional requirements.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "03_15": {
     "question": "Interpersonal skills are those that enable a person to develop a rapport and are important for interviewing.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "03_16": {
     "question": "An example of a nonfunctional requirement is ____________",
     "choices": {
-      "A": { "choice": "System can be used in any of 100 offices worldwide", "isCorrect": true },
+      "A": { "choice": "System can be used in any of 100 offices worldwide", "correct": true },
       "B": { "choice": "SQL queries from customer table and order table are available" },
       "C": { "choice": "Customer zipcode is formatted as character data" },
       "D": { "choice": "Supplier table is available" },
@@ -137,7 +137,7 @@
   "03_17": {
     "question": "In preparing for an interview, TJ does research as to areas in which the interviewee has knowledge so that he does not ask questions that an interviewee cannot answer.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -147,7 +147,7 @@
       "A": { "choice": "Interview's name; interviewee's name" },
       "B": { "choice": "Summary of what the interviewee said" },
       "C": { "choice": "Details from crucial areas of the interview relating to the project at hand" },
-      "D": { "choice": "The actual questions that were asked as a permanent record", "isCorrect": true },
+      "D": { "choice": "The actual questions that were asked as a permanent record", "correct": true },
       "E": { "choice": "Any materials, documents, etc. that the interviewee gave you relevant to the project at hand" }
     },
     "explanation": "See figure 3-8, p. 87 for a sample interview report."
@@ -156,7 +156,7 @@
     "question": "A JAD facilitator keeps track of all discussions by entering information into the computer.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "Not all discussions, only relevant ones. And it doesn't have to be a computer but could be a whiteboard."
   },
@@ -167,21 +167,21 @@
       "B": { "choice": "Systems may need to adapt from global solutions to local realities" },
       "C": { "choice": "Color interpretations on screens and forms may be different in different geographical places" },
       "D": { "choice": "Cultural differences can be considered" },
-      "E": { "choice": "Systems may need to have actual expenses from global operations", "isCorrect": true }
+      "E": { "choice": "Systems may need to have actual expenses from global operations", "correct": true }
     }
   },
   "03_21": {
     "question": "The SDLC moves from the current system (often called the \"past system\") to the new system (often called the \"future system\").",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "I don't think the textbook ever says this about the SDLC. But it sounds like how the textbook describes the Analysis phase **(p. 72)**:\n\nThe basic process of *analysis* involves three steps:\n-  Understand the existing situation (the **as-­is system**).\n- Identify improvements.\n- Define requirements for the new system (the **to-­be system**).\n\nI think the question tries to make you mix up between the SDLC and the Analysis phase."
   },
   "03_22": {
     "question": "The authors suggest that an analyst is 'very much like a ____________' and business users are like elusive suspects.",
     "choices": {
-      "A": { "choice": "Detective", "isCorrect": true },
+      "A": { "choice": "Detective", "correct": true },
       "B": { "choice": "Forensic scientist" },
       "C": { "choice": "Politician" },
       "D": { "choice": "Police professional" },
@@ -192,7 +192,7 @@
     "question": "Generally 'system requirements' are developed in the analysis phase and evolve to more technical 'business requirements' in the design phase.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "It's the other way around."
   },
@@ -203,13 +203,13 @@
       "B": { "choice": "Technology Analysis" },
       "C": { "choice": "Business Process Improvement" },
       "D": { "choice": "Formal Benchmarking" },
-      "E": { "choice": "Informal Benchmarking", "isCorrect": true }
+      "E": { "choice": "Informal Benchmarking", "correct": true }
     }
   },
   "03_25": {
     "question": "The most important purpose of the requirements definition is to define the scope of the system.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -217,7 +217,7 @@
     "question": "The line between analysis and design is sometimes very blurry. One reason is that _____:",
     "choices": {
       "A": { "choice": "scope creep has occurred" },
-      "B": { "choice": "the deliverables are really the first step in the design of the new system", "isCorrect": true },
+      "B": { "choice": "the deliverables are really the first step in the design of the new system", "correct": true },
       "C": { "choice": "object-oriented methods are generally fuzzier as compared to waterfall methods" },
       "D": { "choice": "there is inadequate funding for the analysis phase to do a complete analysis" },
       "E": { "choice": "analysts are generally rushed to complete the system proposal" }
@@ -227,7 +227,7 @@
     "question": "Which is NOT a requirements analysis strategy?",
     "choices": {
       "A": { "choice": "Developing requirements for the to-be system" },
-      "B": { "choice": "Understanding of screen design, layout and navigation", "isCorrect": true },
+      "B": { "choice": "Understanding of screen design, layout and navigation", "correct": true },
       "C": { "choice": "Understanding of the as-is system" },
       "D": { "choice": "Identifying improvements" },
       "E": { "choice": "Root cause analysis" }
@@ -237,7 +237,7 @@
     "question": "A technique where a set of written questions are distributed to people (frequently to a large number of people) is: _____.",
     "choices": {
       "A": { "choice": "Observation" },
-      "B": { "choice": "Questionnaires", "isCorrect": true },
+      "B": { "choice": "Questionnaires", "correct": true },
       "C": { "choice": "Document Analysis" },
       "D": { "choice": "Joint Application Development (JAD) sessions" },
       "E": { "choice": "Interviews" }
@@ -246,7 +246,7 @@
   "03_29": {
     "question": "Cindi Flores distributed 'white-papers' on RFID, ERP, GPS and SOA to a user-management group. She then asked them to 'think outside the box' on where these technologies could be used in the company. This would be an example of \"technology analysis.\"",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -257,7 +257,7 @@
       "B": { "choice": "Document analysis" },
       "C": { "choice": "Interviewing" },
       "D": { "choice": "Joint application design (JAD) sessions" },
-      "E": { "choice": "Observation", "isCorrect": true }
+      "E": { "choice": "Observation", "correct": true }
     }
   },
   "03_31": {
@@ -265,7 +265,7 @@
     "choices": {
       "A": { "choice": "Watch interviewees' facial expressions, how they sit and their body language; do they cross their arms; do they lean forward?" },
       "B": { "choice": "Pay attention to what the interviewee is saying" },
-      "C": { "choice": "Explain thoroughly – it is estimated that in a strong interview session, the interviewer (you) should talk and explain about 60% of the time; and the interviewee should answer about 40% of the time", "isCorrect": true },
+      "C": { "choice": "Explain thoroughly – it is estimated that in a strong interview session, the interviewer (you) should talk and explain about 60% of the time; and the interviewee should answer about 40% of the time", "correct": true },
       "D": { "choice": "Be happy – happy people radiate confidence" },
       "E": { "choice": "If the interviewee ask you a question, answer it truthfully – and if you don't know an answer, say so" }
     }
@@ -275,7 +275,7 @@
     "choices": {
       "A": { "choice": "Figuring out what is to be done" },
       "B": { "choice": "Selecting participants" },
-      "C": { "choice": "All JAD sessions are structured and must be carefully planned", "isCorrect": true },
+      "C": { "choice": "All JAD sessions are structured and must be carefully planned", "correct": true },
       "D": { "choice": "Preparing for the session" },
       "E": { "choice": "Writing up results and a report" }
     }
@@ -283,7 +283,7 @@
   "03_33": {
     "question": "An example of a functional requirement is _________",
     "choices": {
-      "A": { "choice": "Access to the customer order system", "isCorrect": true },
+      "A": { "choice": "Access to the customer order system", "correct": true },
       "B": { "choice": "System should be available in English and Spanish" },
       "C": { "choice": "Output can be displayed in Internet Explorer, in Firefox, or in Google Chrome browsers" },
       "D": { "choice": "System is automatically updated every 5 seconds" },
@@ -294,7 +294,7 @@
   "03_34": {
     "question": "Management of requirements and system scope is one of the hardest parts of managing a project.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -302,7 +302,7 @@
     "question": "In RAD or agile development methodology (especially with BPR), a significant amount of time and effort is spent in understanding the as-is system.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "03_36": {
@@ -312,7 +312,7 @@
       "B": { "choice": "Ask a close ended question" },
       "C": { "choice": "Turn on your tape recorder" },
       "D": { "choice": "Get started by asking the first question on your list" },
-      "E": { "choice": "Build rapport with the interviewee so he or she trusts you", "isCorrect": true }
+      "E": { "choice": "Build rapport with the interviewee so he or she trusts you", "correct": true }
     }
   },
   "03_37": {
@@ -322,7 +322,7 @@
       "B": { "choice": "JAD reports will include technology analysis while interviews will only include root cause analysis" },
       "C": { "choice": "The JAD report will include results from questionnaires while the interview report will not" },
       "D": { "choice": "It describes information from the interview or JAD session" },
-      "E": { "choice": "The interview report is generally written within 48 hours of the interview; while the JAD session report may take a week or two after the JAD session.", "isCorrect": true }
+      "E": { "choice": "The interview report is generally written within 48 hours of the interview; while the JAD session report may take a week or two after the JAD session.", "correct": true }
     }
   },
   "03_38": {
@@ -332,14 +332,14 @@
       "B": { "choice": "Create functional requirements" },
       "C": { "choice": "To give a very high-level explanation of the business requirements" },
       "D": { "choice": "Create non-functional requirements" },
-      "E": { "choice": "Create cost/benefit analysis", "isCorrect": true }
+      "E": { "choice": "Create cost/benefit analysis", "correct": true }
     }
   },
   "03_39": {
     "question": "Most existing systems are well documented which leads to document analysis being very valuable.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "Most systems are not well-documented. But document analysis is still valuable because you can review more than just technical documentation; for example, paper reports, memorandums, policy manuals, user training manuals, organization charts, and forms. **(p. 94)**"
   },
@@ -350,7 +350,7 @@
       "B": { "choice": "Change the document into a unchangeable format (like a pdf file) so that it cannot be changed or edited" },
       "C": { "choice": "Distribute the interview report to all others that are on the interview schedule so they will not have to go over the same materials" },
       "D": { "choice": "Distribute the interview report to the interviewee's manager." },
-      "E": { "choice": "Send a copy to the interviewee with a request to read it and correct or clarify", "isCorrect": true }
+      "E": { "choice": "Send a copy to the interviewee with a request to read it and correct or clarify", "correct": true }
     }
   },
   "03_41": {
@@ -358,7 +358,7 @@
     "choices": {
       "A": { "choice": "Open Ended" },
       "B": { "choice": "Questionnaires" },
-      "C": { "choice": "Close ended", "isCorrect": true },
+      "C": { "choice": "Close ended", "correct": true },
       "D": { "choice": "Probing" },
       "E": { "choice": "Observation" }
     }
@@ -367,7 +367,7 @@
     "question": "An interview report is prepared in which step of the interview process?",
     "choices": {
       "A": { "choice": "Preparing for the interview" },
-      "B": { "choice": "Post interview following-up", "isCorrect": true },
+      "B": { "choice": "Post interview following-up", "correct": true },
       "C": { "choice": "Selecting an interviewee" },
       "D": { "choice": "Designing interview questions" },
       "E": { "choice": "Conducting the interview" }
@@ -380,14 +380,14 @@
       "B": { "choice": "More closed ended" },
       "C": { "choice": "Boxing structure" },
       "D": { "choice": "Structured" },
-      "E": { "choice": "Probing", "isCorrect": true }
+      "E": { "choice": "Probing", "correct": true }
     }
   },
   "03_44": {
     "question": "When eliciting requirements, the most commonly used technique is: __________",
     "choices": {
       "A": { "choice": "Joint Application Development (JAD) sessions" },
-      "B": { "choice": "Interviews", "isCorrect": true },
+      "B": { "choice": "Interviews", "correct": true },
       "C": { "choice": "Questionnaires / surveys" },
       "D": { "choice": "Document Analysis" },
       "E": { "choice": "Observation" }
@@ -400,14 +400,14 @@
       "B": { "choice": "Interview" },
       "C": { "choice": "Document analysis" },
       "D": { "choice": "JAD session" },
-      "E": { "choice": "Questionnaires", "isCorrect": true }
+      "E": { "choice": "Questionnaires", "correct": true }
     },
     "explanation": "The description also sounds kinda like an interview. But interviews are often conducted on internal users, it's questionnaires that's often used with outsiders."
   },
   "03_46": {
     "question": "The most commonly used requirements elicitation technique is the interview.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -415,7 +415,7 @@
     "question": "Marta wants to focus on 'why' a particular lockout situation occurs on a customer relationship management system, rather than just developing a work-around fix. She is doing activity elimination.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "She's doing root cause analysis.<br>Activity elimination is improving system efficiency by removing unnecessary processes."
   },
@@ -423,7 +423,7 @@
     "question": "Gary has eight interviews to conduct over the next week. Once he has completed all interviews, he should then write up a summary report. Preparing interview reports prior to completing all interviews will generally be premature until Gary has talked to all interviewees.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "You write an interview report for each individual you interviewed, it's not a summary of all interviews. (See **figure 3-8, p. 87** for a sample report.) And it should be written within 48 hours."
   },
@@ -431,8 +431,8 @@
     "question": "What does it mean for a process to be fragmented?",
     "choices": {
       "A": { "choice": "The major steps required to complete the process cost too much." },
-      "B": { "choice": "There are too many steps required to complete the process.", "isCorrect": true },
-      "C": { "choice": "There are too many actors involved in completing the process.", "isCorrect": true },
+      "B": { "choice": "There are too many steps required to complete the process.", "correct": true },
+      "C": { "choice": "There are too many actors involved in completing the process.", "correct": true },
       "D": { "choice": "The major steps in the process are completed in parallel." }
     },
     "multiSelect": true,
@@ -442,14 +442,14 @@
     "question": "In terms of reaching the most number of people in requirements elicitation, interviews are considered better than questionnaires.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "Questionnaires reach more people."
   },
   "03_51": {
     "question": "Jorge, Vice President of Operations, has requested that the updated supply chain system keep a record of all 'stock-outs' for six years. This is an example of a functional requirement.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -460,20 +460,20 @@
       "B": { "choice": "Problem analysis" },
       "C": { "choice": "Outcome analysis" },
       "D": { "choice": "Complaint processing" },
-      "E": { "choice": "Informal benchmarking", "isCorrect": true }
+      "E": { "choice": "Informal benchmarking", "correct": true }
     }
   },
   "03_53": {
     "question": "The requirements-elicitation process is used for building financial support for the project and establishing common understanding of technologies and rapport between the project team building the system and the users of the system.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "03_54": {
     "question": "When an analyst is seeking a more wide ranging response to questions they would probably use which type of question?",
     "choices": {
-      "A": { "choice": "Open Ended", "isCorrect": true },
+      "A": { "choice": "Open Ended", "correct": true },
       "B": { "choice": "Observation" },
       "C": { "choice": "Probing" },
       "D": { "choice": "Close ended" }
@@ -483,13 +483,13 @@
     "question": "A JAD facilitator allows sidebar discussions and unstructured activities.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "03_56": {
     "question": "Miski has modified an existing time reporting system for hourly employees to be more efficient as they can text message when they are leaving a job site. This would be an example of Business Process Automation.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -497,30 +497,30 @@
     "question": "One person dominating the group discussion of a JAD session will normally lead to a positive outcome.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "While it's true that people with more experience should talk more, no one should dominate the discussion."
   },
   "03_58": {
     "question": "Maria, a systems analyst, is tweaking the high-level explanation of the business requirements into a more precise list of requirements. This is called 'requirements determination'.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "03_59": {
     "question": "Your company updated its processes for financial reporting when Sarbanes-Oxley became law. Additional changes in Sarbanes-Oxley reporting have been mandated to start in one year. To help you understand the as-is system, you should review the documentation, processes and procedures that were developed with the initial Sarbanes-Oxley project.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "03_60": {
     "question": "Which of the following types of questions are close-ended?",
     "choices": {
-      "A": { "choice": "Multiple Choice questions", "isCorrect": true },
-      "B": { "choice": "Multi-Select questions", "isCorrect": true },
-      "C": { "choice": "True or False questions", "isCorrect": true },
+      "A": { "choice": "Multiple Choice questions", "correct": true },
+      "B": { "choice": "Multi-Select questions", "correct": true },
+      "C": { "choice": "True or False questions", "correct": true },
       "D": { "choice": "Written Response questions" }
     },
     "multiSelect": true,
@@ -530,7 +530,7 @@
     "question": "The three types of interview questions are: multiple choice, fill in the blank and short answer.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "Those sound more like a questionnaire. The 3 types of interview questions are: open-ended, close-ended, and probing."
   },
@@ -540,7 +540,7 @@
       "A": { "choice": "Document analysis" },
       "B": { "choice": "Interview" },
       "C": { "choice": "Observation" },
-      "D": { "choice": "Questionnaires", "isCorrect": true },
+      "D": { "choice": "Questionnaires", "correct": true },
       "E": { "choice": "JAD session" }
     }
   },
@@ -551,13 +551,13 @@
       "B": { "choice": "Analyst who prepared the system proposal" },
       "C": { "choice": "Key decision makers" },
       "D": { "choice": "Management representatives" },
-      "E": { "choice": "Computer Center director", "isCorrect": true }
+      "E": { "choice": "Computer Center director", "correct": true }
     }
   },
   "03_64": {
     "question": "A JAD facilitator sets the meeting agenda.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -566,7 +566,7 @@
     "choices": {
       "A": { "choice": "Create a new hybrid department that will beta test the final system" },
       "B": { "choice": "Balance the work load for departments so the regular day-to-day functions can still continue while the JAD team is off-site" },
-      "C": { "choice": "Have a broad mix of organizational levels in the JAD session", "isCorrect": true },
+      "C": { "choice": "Have a broad mix of organizational levels in the JAD session", "correct": true },
       "D": { "choice": "Prevent domination by only a few individuals in the JAD session" },
       "E": { "choice": "Reduce the time necessary for the length of JAD session meetings" }
     }
@@ -574,7 +574,7 @@
   "03_66": {
     "question": "Some people have suggested that the 'analysis' phase could be clearer if it was called the 'analysis and initial design' phase.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -583,7 +583,7 @@
     "choices": {
       "A": { "choice": "Document Analysis" },
       "B": { "choice": "Questionnaires / surveys" },
-      "C": { "choice": "Observation", "isCorrect": true },
+      "C": { "choice": "Observation", "correct": true },
       "D": { "choice": "Interviews" },
       "E": { "choice": "Joint Application Development (JAD) sessions" }
     }
@@ -593,7 +593,7 @@
     "choices": {
       "A": { "choice": "Document analysis of what the system was to do" },
       "B": { "choice": "Additional interviews with top level managers in the finance area" },
-      "C": { "choice": "Observation of how the analysts do their work", "isCorrect": true },
+      "C": { "choice": "Observation of how the analysts do their work", "correct": true },
       "D": { "choice": "A JAD session with end users, financial analysts and top managers" },
       "E": { "choice": "Questionnaires / survey of end users of the system" }
     }
@@ -602,21 +602,21 @@
     "question": "Unless ordered by the lead analyst for a project, you should not share your interview report with those that you interviewed. Doing so will almost always result in scope creep and changes in the requirements.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "You should share your interview report with the interviewee to ask for correction/clarification. Scope creep has nothing to do with this."
   },
   "03_70": {
     "question": "Rebecca, a fairly new employee in the company and Matt, her boss (who has been with the company for 22 years) are in your JAD session. It would probably be expected that Rebecca would not share much in the session.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "03_71": {
     "question": "According to the authors, in moving \"from here to there\", an analyst needs:",
     "choices": {
-      "A": { "choice": "Strong critical thinking skills", "isCorrect": true },
+      "A": { "choice": "Strong critical thinking skills", "correct": true },
       "B": { "choice": "Microsoft Project Management software skills" },
       "C": { "choice": "An understanding of corporate politics" },
       "D": { "choice": "Knowledge on how to stop scope creep" },
@@ -626,7 +626,7 @@
   "03_72": {
     "question": "To create the requirements definition, the project team first should consider the kinds of functional and non-functional requirements that they will collect about the system.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   }

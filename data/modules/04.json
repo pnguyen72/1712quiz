@@ -2,21 +2,21 @@
   "04_01": {
     "question": "Use cases can vary from one organization to another in terms of the degree of formality employed.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "04_02": {
     "question": "It is common practice to create smaller, more focused use cases breaking the whole process down into parts.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "04_03": {
     "question": "Use cases will have inputs and outputs.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -26,14 +26,14 @@
       "A": { "choice": "The Champion" },
       "B": { "choice": "The Systems Analyst" },
       "C": { "choice": "The Project Sponsor" },
-      "D": { "choice": "An external user of the system", "isCorrect": true },
+      "D": { "choice": "An external user of the system", "correct": true },
       "E": { "choice": "The Project manager" }
     }
   },
   "04_05": {
     "question": "Use cases are especially valuable for business system applications and websites.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -44,14 +44,14 @@
       "B": { "choice": "Users are involved" },
       "C": { "choice": "Major processes are analyzed" },
       "D": { "choice": "Analysts are involved" },
-      "E": { "choice": "Major costs are analyzed", "isCorrect": true }
+      "E": { "choice": "Major costs are analyzed", "correct": true }
     }
   },
   "04_07": {
     "question": "Use cases are especially valuable for batch processes, computationally intensive applications, and data warehousing.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "04_08": {
@@ -60,7 +60,7 @@
       "A": { "choice": "Other analysts" },
       "B": { "choice": "Programmers" },
       "C": { "choice": "Project Sponsor" },
-      "D": { "choice": "Users", "isCorrect": true },
+      "D": { "choice": "Users", "correct": true },
       "E": { "choice": "Equipment vendors" }
     }
   },
@@ -68,7 +68,7 @@
     "question": "Liang has identified the payroll authorization office as the actor in a use case. This would be incorrect as primary actors need to be singular like a customer or a patient or a student.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "Actors can also be the departments of a company"
   },
@@ -78,7 +78,7 @@
       "A": { "choice": "Identify elements within steps" },
       "B": { "choice": "Identify the use case" },
       "C": { "choice": "Identify the major steps within each use case" },
-      "D": { "choice": "Confirm the use case", "isCorrect": true },
+      "D": { "choice": "Confirm the use case", "correct": true },
       "E": { "choice": "Identify the primary actor" }
     }
   },
@@ -86,7 +86,7 @@
     "question": "The most common ways to elicit information for use cases is with questionnaires of the affected users.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "The most common elicitation technique is interview."
   },
@@ -94,7 +94,7 @@
     "question": "Use cases are a type of 'data-driven modeling'.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "It's event-driven modeling."
   },
@@ -103,7 +103,7 @@
     "choices": {
       "A": { "choice": "Name" },
       "B": { "choice": "Number" },
-      "C": { "choice": "Statement of business value", "isCorrect": true },
+      "C": { "choice": "Statement of business value", "correct": true },
       "D": { "choice": "Major inputs" },
       "E": { "choice": "Trigger" }
     }
@@ -111,35 +111,35 @@
   "04_14": {
     "question": "A temporal trigger might be related to time, such as 30 days have passed and a late fee needs to be assessed.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "04_15": {
     "question": "Use cases give more detail about requirements.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "04_16": {
     "question": "Use cases sometimes are called 'business scenarios'.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "04_17": {
     "question": "Use cases normally contain ten to twelve major steps.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "04_18": {
     "question": "Ralph wants to illustrate how a system interacts with the environment. The best solution for him would be to use a what?",
     "choices": {
-      "A": { "choice": "Use case", "isCorrect": true },
+      "A": { "choice": "Use case", "correct": true },
       "B": { "choice": "Requirements flow chart" },
       "C": { "choice": "Storyboard" },
       "D": { "choice": "HIPO chart (hierarchy, input, process, output)" },
@@ -150,7 +150,7 @@
     "question": "Use cases are always internal and rarely shared or discussed with business users.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "You have to talk to external users to find use cases. And after creating a use case, you have to talk to them again to confirm it."
   },
@@ -159,7 +159,7 @@
     "choices": {
       "A": { "choice": "Importance level" },
       "B": { "choice": "Major inputs" },
-      "C": { "choice": "Destination", "isCorrect": true },
+      "C": { "choice": "Destination", "correct": true },
       "D": { "choice": "Trigger" },
       "E": { "choice": "Primary actor" }
     }
@@ -167,21 +167,21 @@
   "04_21": {
     "question": "Dr. O'Brien's dental office calls a patient three days before an appointment. This could be an example of a temporal trigger.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "04_22": {
     "question": "Tina is a systems analyst and is describing how a system should react to an event. She is creating a use case.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "04_23": {
     "question": "Each use case has a name and a number.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -190,7 +190,7 @@
     "choices": {
       "A": { "choice": "Beth, a software vendor for Peachtree Accounting Software" },
       "B": { "choice": "Casey, a fellow analyst who is more experienced in making use cases" },
-      "C": { "choice": "Amy, a team manager in the accounts payable department", "isCorrect": true },
+      "C": { "choice": "Amy, a team manager in the accounts payable department", "correct": true },
       "D": { "choice": "Bill, a Java programmer in the applications development area." },
       "E": { "choice": "Lisa, the project manager for the project" }
     }
@@ -202,35 +202,35 @@
       "B": { "choice": "The temporal triggers" },
       "C": { "choice": "The external actors" },
       "D": { "choice": "The elements within steps" },
-      "E": { "choice": "The major steps for each use case", "isCorrect": true }
+      "E": { "choice": "The major steps for each use case", "correct": true }
     }
   },
   "04_26": {
     "question": "Use cases are diagrams with three components: selection, process, iteration.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "04_27": {
     "question": "A trigger is based on cost/benefit analysis, like an employee labor report, a sale of an item, or the purchase of new hardware.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "04_28": {
     "question": "The event that causes the use case to begin is referred to as the name.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "It's the trigger."
   },
   "04_29": {
     "question": "The 'actor' is the external user that triggers the event to which the system responds.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -240,21 +240,21 @@
       "A": { "choice": "Identify the use case" },
       "B": { "choice": "Identify elements within steps" },
       "C": { "choice": "Identify the major steps within each use case" },
-      "D": { "choice": "Identify the analyst", "isCorrect": true },
+      "D": { "choice": "Identify the analyst", "correct": true },
       "E": { "choice": "Confirm the use case" }
     }
   },
   "04_31": {
     "question": "External triggers might be something like a customer calling a doctor for an appointment or a student registering for a class.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
   "04_32": {
     "question": "Each use case contains a fairly complete description of all the activities that occur in response to a trigger event.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -262,14 +262,14 @@
     "question": "The actor of a use case refers to only a person that interacts with the system.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "The actor could be a department or another system process."
   },
   "04_34": {
     "question": "Barton is an analyst developing a use case. Which of the following will probably NOT be on his use case?",
     "choices": {
-      "A": { "choice": "Description of data flows", "isCorrect": true },
+      "A": { "choice": "Description of data flows", "correct": true },
       "B": { "choice": "Use case name" },
       "C": { "choice": "A use case number" },
       "D": { "choice": "Source for the major inputs" },
@@ -280,7 +280,7 @@
   "04_35": {
     "question": "A 'temporal' trigger might be which of the following:",
     "choices": {
-      "A": { "choice": "The date changes to the first day of the month", "isCorrect": true },
+      "A": { "choice": "The date changes to the first day of the month", "correct": true },
       "B": { "choice": "A new shipping of goods arrives and needs to be added to the inventory" },
       "C": { "choice": "A patient calls to make an appointment with a doctor" },
       "D": { "choice": "The accounting department needs information for a report" },
@@ -291,7 +291,7 @@
     "question": "The final step in building use cases is to use a CASE analysis tool to verify that the inputs and outputs are discrete items triggered by external events.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "The last step is to confirm it with the user."
   },
@@ -302,21 +302,21 @@
       "B": { "choice": "Identification of the trigger" },
       "C": { "choice": "Major inputs descriptions" },
       "D": { "choice": "Major steps performed" },
-      "E": { "choice": "Secondary Actor", "isCorrect": true }
+      "E": { "choice": "Secondary Actor", "correct": true }
     }
   },
   "04_38": {
     "question": "Use cases generally have up to 20 major steps spelled out in great detail.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "Use cases normally contain 10 - 12 major steps."
   },
   "04_39": {
     "question": "A use case is a formal way of representing how a business system interacts with its environment.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -324,21 +324,21 @@
     "question": "Project managers, business analysts and systems analysts create all use cases without user input.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "04_41": {
     "question": "Use cases can be identified by reviewing the functional requirements.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "It's the other way around. You build use cases first, which then tell you the functional requirements."
   },
   "04_42": {
     "question": "Use cases are a type of 'event-driven modeling'.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -346,7 +346,7 @@
     "question": "Each use case has a name, a number, importance level, brief description, primary actor, trigger, major inputs and outputs, and a list of major steps.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "The content and format of use cases vary by organization. Not all use cases have this format; this is just the format that they teach you. <b>(p. 114)</b>"
   },
@@ -354,7 +354,7 @@
     "question": "Which is NOT true of use cases?",
     "choices": {
       "A": { "choice": "They illustrates the activities that are performed by the users of the system" },
-      "B": { "choice": "They illustrate what starts (or triggers) an event, all the people that are involved, and how the system provides value", "isCorrect": true },
+      "B": { "choice": "They illustrate what starts (or triggers) an event, all the people that are involved, and how the system provides value", "correct": true },
       "C": { "choice": "They sometimes are called 'business scenarios' (although 'use case' is generally preferred)" },
       "D": { "choice": "They can be thought of as an external or functional view of a business process" },
       "E": { "choice": "They are formal ways of representing how a business system interacts with its environment" }
@@ -367,7 +367,7 @@
       "A": { "choice": "What triggers these inputs and outputs" },
       "B": { "choice": "Using activity elimination to see if these inputs and outputs are really needed" },
       "C": { "choice": "Only the common inputs and outputs" },
-      "D": { "choice": "All possible inputs and outputs (even with rare occurrences)", "isCorrect": true },
+      "D": { "choice": "All possible inputs and outputs (even with rare occurrences)", "correct": true },
       "E": { "choice": "Developing separate use cases for every possible input and every possible output" }
     }
   },
@@ -375,7 +375,7 @@
     "question": "Use cases are used to more fully delineate what?",
     "choices": {
       "A": { "choice": "System proposals" },
-      "B": { "choice": "Requirements definition", "isCorrect": true },
+      "B": { "choice": "Requirements definition", "correct": true },
       "C": { "choice": "Data flows" },
       "D": { "choice": "System boundaries" },
       "E": { "choice": "Resources used in the system" }
@@ -385,7 +385,7 @@
     "question": "Use cases are always numbered sequentially from start to finish.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "04_48": {
@@ -394,14 +394,14 @@
       "A": { "choice": "Not of importance at this stage" },
       "B": { "choice": "Described on special 'exception' use cases" },
       "C": { "choice": "Given use case ID's of \"SC\" (for special case) and a number" },
-      "D": { "choice": "Frequently overlooked by users", "isCorrect": true },
+      "D": { "choice": "Frequently overlooked by users", "correct": true },
       "E": { "choice": "Written as exceptions at the bottom of the relevant use case" }
     }
   },
   "04_49": {
     "question": "Use cases can vary from one organization to another in terms of the content included.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -409,14 +409,14 @@
     "question": "Each use case has the same name (like \"Customer Relationship Management System\") followed by an identifying letter (\"A\", \"B\", etc.).",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     }
   },
   "04_51": {
     "question": "The 'actor' is the internal action that occurs based on a SQL query (like: sort, select).",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "The actor is the entity that triggers a use case (e.g. students registering for class is a use case, student is the actor). It has nothing to do with SQL."
   },
@@ -426,14 +426,14 @@
       "A": { "choice": "Importance level" },
       "B": { "choice": "Short Description" },
       "C": { "choice": "Information for steps" },
-      "D": { "choice": "Destination for the major inputs", "isCorrect": true },
+      "D": { "choice": "Destination for the major inputs", "correct": true },
       "E": { "choice": "Type of trigger" }
     }
   },
   "04_53": {
     "question": "A use case depicts a set of activities performed to produce some output result.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -441,14 +441,14 @@
     "question": "Triggers are referred to as external or internal.",
     "choices": {
       "A": { "choice": "True" },
-      "B": { "choice": "False", "isCorrect": true }
+      "B": { "choice": "False", "correct": true }
     },
     "explanation": "It's external or temporal. \"Internal trigger\" is not a thing."
   },
   "04_55": {
     "question": "After working with Chris (who is a staff member in the registrar's office) on major steps in the registration process, Maureen (a systems analyst) will next do what?",
     "choices": {
-      "A": { "choice": "Create use cases", "isCorrect": true },
+      "A": { "choice": "Create use cases", "correct": true },
       "B": { "choice": "Create narrative storyboards" },
       "C": { "choice": "Create data-entity maps" },
       "D": { "choice": "Create user interface screens" },
@@ -458,7 +458,7 @@
   "04_56": {
     "question": "Use cases illustrate the activities that are performed by the users of the system.",
     "choices": {
-      "A": { "choice": "True", "isCorrect": true },
+      "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
   },
@@ -467,7 +467,7 @@
     "choices": {
       "A": { "choice": "Ask Drew in the students affairs office to confirm the use case" },
       "B": { "choice": "Ask Patrick in the study abroad office to confirm the use case" },
-      "C": { "choice": "Ask Wendy in the registrar's office to confirm the use case", "isCorrect": true },
+      "C": { "choice": "Ask Wendy in the registrar's office to confirm the use case", "correct": true },
       "D": { "choice": "Ask Jonathan, a student who just completed a study-abroad experience, to confirm the use case" },
       "E": { "choice": "Ask Taylor, another systems analyst to confirm the use case" }
     }
@@ -479,13 +479,13 @@
       "B": { "choice": "The importance level is 'high'" },
       "C": { "choice": "The primary actor is an external customer" },
       "D": { "choice": "The trigger is an external one" },
-      "E": { "choice": "The steps are of varying size", "isCorrect": true }
+      "E": { "choice": "The steps are of varying size", "correct": true }
     }
   },
   "04_59": {
     "question": "A use case helps do which of the following?",
     "choices": {
-      "A": { "choice": "Understand system activities and requirements", "isCorrect": true },
+      "A": { "choice": "Understand system activities and requirements", "correct": true },
       "B": { "choice": "Clarify ongoing costs for a system" },
       "C": { "choice": "Identify risks with the project" },
       "D": { "choice": "Refine project management milestones" },
@@ -496,10 +496,10 @@
     "question": "Some organizations may choose to include additional sections on their use case forms, these may include which of the following?",
     "multiSelect": true,
     "choices": {
-      "A": { "choice": "Frequency of use", "isCorrect": true },
-      "B": { "choice": "Notes and issues", "isCorrect": true },
-      "C": { "choice": "Alternative paths", "isCorrect": true },
-      "D": { "choice": "Business rules", "isCorrect": true }
+      "A": { "choice": "Frequency of use", "correct": true },
+      "B": { "choice": "Notes and issues", "correct": true },
+      "C": { "choice": "Alternative paths", "correct": true },
+      "D": { "choice": "Business rules", "correct": true }
     }
   }
 }
