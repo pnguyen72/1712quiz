@@ -146,21 +146,16 @@ function nextQuiz() {
     return;
   }
   const questionsIds = getQuiz(modules, questionsCount);
-  const quiz = generateQuiz(questionsIds, {
-    buffered: questionsIds.length > 40,
+  const quiz = generateQuiz(questionsIds, (quiz) => {
+    recoverAttempt(quiz);
+    nextButton.disabled = false;
+    explainLearnedQuestions();
   });
   document.getElementById("quiz").replaceWith(quiz);
   quiz.addEventListener("input", saveProgress);
   toQuizPage();
   startTimer();
   nextButton.disabled = true;
-  // timeout so that these run after the page has loaded
-  // 500 should be enough
-  setTimeout(() => {
-    recoverAttempt(quiz);
-    nextButton.disabled = false;
-    explainLearnedQuestions();
-  }, 500);
   setTimeout(explainSavingProgress, 5 * 60 * 1000); // 5 minutes
 }
 
@@ -208,6 +203,7 @@ function submit() {
     knowledge.update(quiz);
   }
 
+  quiz.classList.add("submitted");
   stopTimer();
   showResult(score, outOf);
   scrollTo(0, 0);

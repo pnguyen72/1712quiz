@@ -100,34 +100,46 @@ function generateModuleSelection() {
   updateOngoingLabels();
 }
 
-function generateQuiz(questionsIds, option = { buffered: false }) {
+function generateQuiz(questionsIds, callback = null) {
   const quiz = document.createElement("div");
   quiz.id = "quiz";
   if (enableExplanations.checked) {
     quiz.classList.add("explained");
   }
-  if (option.buffered) {
-    questionsIds.forEach((id, index) =>
-      setTimeout(() => {
-        quiz.appendChild(generateQuestion(id, index));
-      }, Math.min(index * 20, 400))
-    );
-  } else {
+
+  if (!callback) {
     questionsIds.forEach((id, index) =>
       quiz.appendChild(generateQuestion(id, index))
     );
+    return quiz;
   }
+
+  const count = questionsIds.length;
+  for (let i = 0; i < Math.min(5, count); ++i) {
+    setTimeout(
+      () => quiz.appendChild(generateQuestion(questionsIds[i], i)),
+      i * 20
+    );
+  }
+  setTimeout(() => {
+    for (let i = 5; i < count; ++i) {
+      quiz.appendChild(generateQuestion(questionsIds[i], i));
+    }
+    callback(quiz);
+  }, 200);
   return quiz;
 }
 
 function generatePastAttempt(attemptData) {
   unfinishedAttempts.set(attemptData);
   const questionsIds = Object.keys(attemptData);
-  const quiz = generateQuiz(questionsIds);
-  quiz.querySelectorAll(".learned-tag").forEach((tag) => tag.remove());
-  recoverAttempt(quiz, { interactive: false });
-  grade(quiz);
-  unfinishedAttempts.load();
+  const quiz = generateQuiz(questionsIds, (quiz) => {
+    quiz.querySelectorAll(".learned-tag").forEach((tag) => tag.remove());
+    recoverAttempt(quiz, { interactive: false });
+    grade(quiz);
+    unfinishedAttempts.load();
+  });
+  quiz.classList.add("submitted");
   return quiz;
 }
 

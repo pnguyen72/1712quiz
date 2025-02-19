@@ -121,7 +121,6 @@ function grade(quiz) {
   quiz
     .querySelectorAll(".choice-input")
     .forEach((input) => (input.disabled = true));
-  quiz.classList.add("submitted");
   return score;
 }
 
