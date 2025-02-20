@@ -172,9 +172,6 @@ function submit() {
     setTimeout(explainUnansweredQuestions, 400);
   }
 
-  unfinishedAttempts.delete(questions);
-  unfinishedAttempts.save();
-
   if (discardUnansweredQuestions.checked) {
     unansweredQuestions.forEach((question) => question.remove());
   } else {
@@ -202,6 +199,9 @@ function submit() {
     localStorage.setItem("attempts", JSON.stringify(pastAttempts));
     knowledge.update(quiz);
   }
+
+  unfinishedAttempts.delete(questions);
+  unfinishedAttempts.save();
 
   quiz.classList.add("submitted");
   stopTimer();
