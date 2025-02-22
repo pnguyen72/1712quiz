@@ -6,15 +6,16 @@
 
 All questions and answers are taken from Learning Hub practice quizzes (732 in total), but the front-end is homemade from scratch, with better UI/UX and more advanced features:
 
-- Has dark mode (thanks [Justin](https://github.com/JCardas))
-- Much faster to submit a quiz (1-2s on Learning Hub, versus instantaneous)
-- Much faster to start a new quiz (several clicks on Learning Hub, versus 1)
+- Dark mode
+- Much faster to submit a quiz (instantaneous, vs. 1-2s on Learning Hub)
+- Much faster to start a new quiz (one click, vs. several on Learning Hub)
 - Can combine multiple modules into one quiz
 - Can choose how many questions per quiz, up to the entire question bank
 - Unable to finish the quiz? Just submit, unanswered questions don't count.
 - Questions you've answered correctly won't appear in future quizzes.
 - The quiz page containing all questions and answers can be printed to pdf.
-- You can submit explanations for quiz questions, or learn from the explanations of your classmates. Currently 235 / 732 questions (~32%) have explanations.
+- Crowdsourced explanations for quiz questions. Currently 237 / 732 questions (~32%) have explanations.<br>
+  (It's not moderated, pls play nice 🙏)
 
 ## Images
 
@@ -43,6 +44,12 @@ All questions and answers are taken from Learning Hub practice quizzes (732 in t
 
 | Light mode | ![submitted quiz page in light mode](/images/quiz-printed-light.png) |
 | :--------: | :------------------------------------------------------------------: |
+
+## Credits
+
+- Thanks [Justin](https://github.com/JCardas) for dark mode. 😎
+- Thanks [Szymon](https://github.com/SzymZem) for the HTML to JSON script.
+  Unfortunately the script no longer works with Learning Hub's current version so it has been removed, but its legacy lives on. 🪦💚
 
 ## Legal
 
