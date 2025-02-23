@@ -11,7 +11,7 @@ function isNumber(object) {
 }
 
 function shuffleChoices(choices) {
-  if (choices[0][1].choice == "True") {
+  if (["True", "Yes"].includes(choices[0][1].choice)) {
     return;
   }
   if (choices.every((choiceData) => isNumber(choiceData[1].choice))) {
