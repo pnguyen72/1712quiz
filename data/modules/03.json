@@ -629,5 +629,19 @@
       "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
     }
+  },
+  "03_73": {
+    "question": "It is always better to focus on the solution first, instead of focusing on the problem. We should not waste time trying to figure out the root causes of a given problem.",
+    "choices": {
+      "A": { "choice": "True" },
+      "B": { "choice": "False", "correct": true }
+    }
+  },
+  "03_74": {
+    "question": "It's not a bad idea to explore and study how other companies/organizations have built a system to address a particular business need.",
+    "choices": {
+      "A": { "choice": "True", "correct": true },
+      "B": { "choice": "False" }
+    }
   }
 }

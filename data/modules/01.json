@@ -610,5 +610,69 @@
       "A": { "choice": "True" },
       "B": { "choice": "False", "correct": true }
     }
+  },
+  "01_71": {
+    "question": "Even though the work we do in different phases of SDLC might mix and match in various patterns, there is generally an order/sequence to these phases.",
+    "choices": {
+      "A": { "choice": "True", "correct": true },
+      "B": { "choice": "False" }
+    }
+  },
+  "01_72": {
+    "question": "In what phase of the SDLC do you focus on the reason for building a system?",
+    "choices": {
+      "A": { "choice": "Design" },
+      "B": { "choice": "Implementation" },
+      "C": { "choice": "Planning", "correct": true },
+      "D": { "choice": "Analysis" }
+    }
+  },
+  "01_73": {
+    "question": "How would you describe the following piece of information.<p>As a faculty in BCIT I get to see my weekly schedule on my.bcit.ca. However I have to mannually recreate that scheduole on my person calendar. If there was a way to export the schedule to outlook calendar, that would save me a lot of time.",
+    "choices": {
+      "A": { "choice": "It's describing a problem with an as-is system.", "correct": true },
+      "B": { "choice": "It's suggesting a way to improve the to-be system." },
+      "C": { "choice": "It's describing a problem with a to-be system." },
+      "D": { "choice": "It's describing a requirement for the to-be system", "correct": true }
+    },
+    "multiSelect": true
+  },
+  "01_74": {
+    "question": "It is only the system analyst that can sponsor a project in an organization.",
+    "choices": {
+      "A": { "choice": "True" },
+      "B": { "choice": "False", "correct": true }
+    }
+  },
+  "01_75": {
+    "question": "The system request should be submitted along side with a feasibility analysis, so that the approval committee can make decision based on all factors.",
+    "choices": {
+      "A": { "choice": "True" },
+      "B": { "choice": "False", "correct": true }
+    }
+  },
+  "01_76": {
+    "question": "As long as the project benefits are higher than the project costs, we say the project is economically feasible.",
+    "choices": {
+      "A": { "choice": "True" },
+      "B": { "choice": "False", "correct": true }
+    }
+  },
+  "01_77": {
+    "question": "Why should the value of projects be evaluated over time?",
+    "choices": {
+      "A": { "choice": "Because the value of inflows and outflows might change year by year.", "correct": true },
+      "B": { "choice": "Because the value of money changes over time.", "correct": true },
+      "C": { "choice": "Because a system that is not profitable now, might become profitable next year.", "correct": true },
+      "D": { "choice": "Because a system that is profitable now, might become a burden next year.", "correct": true }
+    },
+    "multiSelect": true
+  },
+  "01_78": {
+    "question": "Any system that is technically and economically feasible, will ultimately be accepted by its users and incorporated into the ongoing operations of the organizations.",
+    "choices": {
+      "A": { "choice": "True" },
+      "B": { "choice": "False", "correct": true }
+    }
   }
 }

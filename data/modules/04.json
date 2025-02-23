@@ -501,5 +501,54 @@
       "C": { "choice": "Alternative paths", "correct": true },
       "D": { "choice": "Business rules", "correct": true }
     }
+  },
+  "04_61": {
+    "question": "Choose all that applies about Use Cases:",
+    "choices": {
+      "A": { "choice": "Use Cases are most useful in clarifying non-functional requirements." },
+      "B": { "choice": "Use Cases give us an internal view of the to-be system." },
+      "C": { "choice": "Use Cases are developed by the users of the system." },
+      "D": { "choice": "Use Cases help us express the user requirements.", "correct": true }
+    },
+    "multiSelect": true
+  },
+  "04_62": {
+    "question": "It is the primary actor of a use case that initiates the event to which the system responds.",
+    "choices": {
+      "A": { "choice": "True", "correct": true },
+      "B": { "choice": "False" }
+    }
+  },
+  "04_63": {
+    "question": "\"Time to pay a bill\" is a _____",
+    "choices": {
+      "A": { "choice": "Temporal trigger", "correct": true },
+      "B": { "choice": "Internal trigger" },
+      "C": { "choice": "External trigger" }
+    }
+  },
+  "04_64": {
+    "question": "\"Customer has placed an order\" is a _____",
+    "choices": {
+      "A": { "choice": "Temporal trigger" },
+      "B": { "choice": "Internal trigger" },
+      "C": { "choice": "External trigger", "correct": true }
+    }
+  },
+  "04_65": {
+    "question": "\"Customer payment is received\" is a _____",
+    "choices": {
+      "A": { "choice": "Temporal trigger" },
+      "B": { "choice": "Internal trigger" },
+      "C": { "choice": "External trigger", "correct": true }
+    }
+  },
+  "04_66": {
+    "question": "\"Library book is due\" is a _____",
+    "choices": {
+      "A": { "choice": "Temporal trigger", "correct": true },
+      "B": { "choice": "Internal trigger" },
+      "C": { "choice": "External trigger" }
+    }
   }
 }

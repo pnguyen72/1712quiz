@@ -575,5 +575,35 @@
       "D": { "choice": "Iterative" },
       "E": { "choice": "Parallel", "correct": true }
     }
+  },
+  "02_66": {
+    "question": "Which of the following statements is true?",
+    "choices": {
+      "A": { "choice": "The <b>risk of not shipping on time</b> should be addressed before the <b>risk of building the wrong thing</b>.", "correct": true },
+      "B": { "choice": "The <b>risk of building the wrong thing</b> is the most important risk and should be targeted first." },
+      "C": { "choice": "Both risks are on the same level of urgency and importance." },
+      "D": { "choice": "The risks mentioned are not the most important risks." }
+    }
+  },
+  "02_67": {
+    "question": "Organizations usually focus on only one project at a time.",
+    "choices": {
+      "A": { "choice": "True" },
+      "B": { "choice": "False", "correct": true }
+    }
+  },
+  "02_68": {
+    "question": "Agile methodology has proven itself time after time, that it is the best methodology for developing any software project.",
+    "choices": {
+      "A": { "choice": "True" },
+      "B": { "choice": "False", "correct": true }
+    }
+  },
+  "02_69": {
+    "question": "Organizations should try to produce more documentation for each phase of the SDLC.",
+    "choices": {
+      "A": { "choice": "True" },
+      "B": { "choice": "False", "correct": true }
+    }
   }
 }

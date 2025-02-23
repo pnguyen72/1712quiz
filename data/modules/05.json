@@ -297,5 +297,49 @@
       "A": { "choice": "True" },
       "B": { "choice": "False", "correct": true }
     }
+  },
+  "05_38": {
+    "question": "A DFD is a type of flowchart that shows a sequence of steps to complete a process.",
+    "choices": {
+      "A": { "choice": "True" },
+      "B": { "choice": "False", "correct": true }
+    }
+  },
+  "05_39": {
+    "question": "Are the two diagrams balanced?",
+    "choices": {
+      "A": { "choice": "Yes", "correct": true },
+      "B": { "choice": "No" }
+    },
+    "hasImage": true
+  },
+  "05_40": {
+    "question": "Which of the following elements appear on a context diagram?",
+    "choices": {
+      "A": { "choice": "Process", "correct": true },
+      "B": { "choice": "Data Flow", "correct": true },
+      "C": { "choice": "Data Store" },
+      "D": { "choice": "External Entities", "correct": true }
+    },
+    "multiSelect": true
+  },
+  "05_41": {
+    "question": "How many Level 1 DFDs would you create for the process of buying glasses?",
+    "choices": {
+      "A": { "choice": "3", "correct": true },
+      "B": { "choice": "4" },
+      "C": { "choice": "5" },
+      "D": { "choice": "6" }
+    }
+  },
+  "05_42": {
+    "question": "How many syntax errors does this DFD have?",
+    "choices": {
+      "A": { "choice": "1" },
+      "B": { "choice": "3" },
+      "C": { "choice": "5", "correct": true },
+      "D": { "choice": "7" }
+    },
+    "hasImage": true
   }
 }

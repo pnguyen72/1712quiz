@@ -4,7 +4,7 @@
 
 ## Features
 
-All questions and answers are taken from Learning Hub practice quizzes (732 in total), but the front-end is homemade from scratch, with better UI/UX and more advanced features:
+All questions and answers are taken from Learning Hub practice quizzes (765 in total), but the front-end is homemade from scratch, with better UI/UX and more advanced features:
 
 - Dark mode
 - Much faster to submit a quiz (instantaneous, vs. 1-2s on Learning Hub)
@@ -14,7 +14,7 @@ All questions and answers are taken from Learning Hub practice quizzes (732 in t
 - Unable to finish the quiz? Just submit, unanswered questions don't count.
 - Questions you've answered correctly won't appear in future quizzes.
 - The quiz page containing all questions and answers can be printed to pdf.
-- Crowdsourced explanations for quiz questions. Currently 237 / 732 questions (~32%) have explanations.<br>
+- Crowdsourced explanations for quiz questions. Currently 237 / 765 questions (~31%) have explanations.<br>
   (It's not moderated, pls play nice 🙏)
 
 ## Images
