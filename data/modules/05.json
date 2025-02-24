@@ -330,7 +330,8 @@
       "B": { "choice": "4" },
       "C": { "choice": "5" },
       "D": { "choice": "6" }
-    }
+    },
+    "hasImage": true
   },
   "05_42": {
     "question": "How many syntax errors does this DFD have?",
