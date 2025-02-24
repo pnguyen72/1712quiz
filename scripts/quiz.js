@@ -156,7 +156,7 @@ function isCorrect(question) {
     // 3, still a joke, but mark it like a normal question.
   }
 
-  for (const choice of question.querySelectorAll("li")) {
+  for (const choice of question.querySelectorAll(".question-choices li")) {
     const input = choice.querySelector("input");
     if ((choice.className == "correct") != input.checked) {
       explain(question);
