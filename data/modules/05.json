@@ -336,10 +336,10 @@
   "05_42": {
     "question": "How many syntax errors does this DFD have?",
     "choices": {
-      "A": { "choice": "1" },
-      "B": { "choice": "3" },
-      "C": { "choice": "5", "correct": true },
-      "D": { "choice": "7" }
+      "A": { "choice": "3" },
+      "B": { "choice": "4" },
+      "C": { "choice": "5" },
+      "D": { "choice": "6", "correct": true }
     },
     "hasImage": true
   }
