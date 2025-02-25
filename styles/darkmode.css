@@ -204,7 +204,7 @@ td {
 
 @keyframes blink {
   0% {
-    background-color: hsl(0, 50%, 50%);
+    background-color: hsl(180, 60%, 50%);
   }
   100% {
     background-color: #262626;
