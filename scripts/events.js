@@ -14,6 +14,7 @@ moduleSelection.addEventListener(
 form.addEventListener("click", () => {
   if (homePage.querySelector("#license-notice.visible")) {
     licenseText.style.animation = "blink 1s";
+    window.scrollTo(0, 0);
   }
 });
 form.addEventListener("input", refreshAttemptsTable);
