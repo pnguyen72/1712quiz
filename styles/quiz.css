@@ -138,7 +138,7 @@
 
       > * {
         margin: 0.8rem 0;
-        &:has(+ ul) {
+        &:has(+ :is(ul, ol)) {
           margin-bottom: 0.4rem;
         }
       }
@@ -149,7 +149,7 @@
         margin-bottom: 0;
       }
 
-      > ul {
+      > :is(ul, ol) {
         &:only-child {
           padding-inline-start: 1rem;
         }
