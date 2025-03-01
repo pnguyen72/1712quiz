@@ -176,6 +176,7 @@ function getAttemptData(questions) {
     const questionData = {
       time: time / questions.length,
       unsure: question.querySelector(".unsure-check").checked,
+      learned: Boolean(question.querySelector(".learned-tag")),
     };
     for (const choice of question.querySelectorAll(".choice-input")) {
       questionData[choice.id] = choice.checked;

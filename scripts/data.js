@@ -3,12 +3,8 @@ let questionsData = {};
 const pastAttempts = localStorage.getItem("attempts")
   ? JSON.parse(localStorage.getItem("attempts"))
   : [];
-const knowledge = localStorage.getItem("knowledge")
-  ? JSON.parse(localStorage.getItem("knowledge"))
-  : {};
 
 function loadQuestions() {
-  unfinishedAttempts.load();
   const promises = [];
   const numberOfModules = Object.values(modulesNames)
     .map((module) => module.length)
@@ -16,6 +12,8 @@ function loadQuestions() {
   for (let i = 1; i <= numberOfModules; ++i) {
     promises.push(_loadModule(String(i).padStart(2, "0")));
   }
+  unfinishedAttempts.load();
+  knowledge.load();
   return Promise.all(promises);
 }
 
@@ -55,39 +53,46 @@ function getQuiz(modules, count) {
   return [...new Set([...recoveredQuestions, ...newQuestions])].slice(0, count);
 }
 
-knowledge.learn = function (questionId) {
-  const module = questionId.split("_")[0];
-  if (!Object.hasOwn(this, module)) {
-    this[module] = {};
-  }
-  this[module][questionId] = true;
-};
+const knowledge = {
+  load: function () {
+    const storedData = localStorage.getItem("knowledge");
+    if (storedData) {
+      Object.assign(this, JSON.parse(storedData));
+    }
+  },
 
-knowledge.unlearn = function (questionId) {
-  const module = questionId.split("_")[0];
-  delete this[module]?.[questionId];
-};
+  learn: function (questionId) {
+    const module = questionId.split("_")[0];
+    if (!Object.hasOwn(this, module)) {
+      this[module] = {};
+    }
+    this[module][questionId] = true;
+  },
 
-knowledge.hasLearned = function (questionId) {
-  const module = questionId.split("_")[0];
-  return Boolean(this[module]?.[questionId]);
-};
+  unlearn: function (questionId) {
+    const module = questionId.split("_")[0];
+    delete this[module]?.[questionId];
+  },
 
-knowledge.sizeOf = function (module) {
-  if (!Object.hasOwn(this, module)) {
-    return 0;
-  }
-  return Object.keys(this[module]).length;
-};
+  hasLearned: function (questionId) {
+    const module = questionId.split("_")[0];
+    return Boolean(this[module]?.[questionId]);
+  },
 
-knowledge.update = function (quiz) {
-  const corrects = quiz.querySelectorAll(".question:not(.incorrect)");
-  const incorrects = quiz.querySelectorAll(".question.incorrect");
+  sizeOf: function (module) {
+    if (!Object.hasOwn(this, module)) {
+      return 0;
+    }
+    return Object.keys(this[module]).length;
+  },
 
-  corrects.forEach((question) => this.learn(question.id));
-  incorrects.forEach((question) => this.unlearn(question.id));
-
-  localStorage.setItem("knowledge", JSON.stringify(this));
+  update: function (quiz) {
+    const corrects = quiz.querySelectorAll(".question:not(.incorrect)");
+    const incorrects = quiz.querySelectorAll(".question.incorrect");
+    corrects.forEach((question) => this.learn(question.id));
+    incorrects.forEach((question) => this.unlearn(question.id));
+    localStorage.setItem("knowledge", JSON.stringify(this));
+  },
 };
 
 function explain(question) {

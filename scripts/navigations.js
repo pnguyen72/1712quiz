@@ -146,13 +146,14 @@ function nextQuiz() {
     return;
   }
   const questionsIds = getQuiz(modules, questionsCount);
-  const quiz = generateQuiz(questionsIds, (quiz) => {
-    recoverAttempt(quiz);
-    nextButton.disabled = false;
-    explainLearnedQuestions();
+  generateQuiz(questionsIds, {
+    callback: (quiz) => {
+      recoverAttempt(quiz);
+      nextButton.disabled = false;
+      explainLearnedQuestions();
+      quiz.addEventListener("input", saveProgress);
+    },
   });
-  document.getElementById("quiz").replaceWith(quiz);
-  quiz.addEventListener("input", saveProgress);
   toQuizPage();
   startTimer();
   nextButton.disabled = true;
@@ -171,8 +172,6 @@ function submit() {
     }
     setTimeout(explainUnansweredQuestions, 400);
   }
-
-  unfinishedAttempts.delete(questions);
 
   if (discardUnansweredQuestions.checked) {
     unansweredQuestions.forEach((question) => question.remove());
@@ -202,6 +201,7 @@ function submit() {
     knowledge.update(quiz);
   }
 
+  unfinishedAttempts.delete(questions);
   unfinishedAttempts.save();
   quiz.classList.add("submitted");
   stopTimer();

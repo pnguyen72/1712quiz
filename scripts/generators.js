@@ -100,47 +100,55 @@ function generateModuleSelection() {
   updateOngoingLabels();
 }
 
-function generateQuiz(questionsIds, callback = null) {
+function generateQuiz(questionsIds, option = {}) {
+  option = Object.assign({ async: true, callback: () => {} }, option);
+
   const quiz = document.createElement("div");
+  document.getElementById("quiz").replaceWith(quiz);
   quiz.id = "quiz";
   if (enableExplanations.checked) {
     quiz.classList.add("explained");
   }
 
-  if (!callback) {
+  if (!option.async) {
     questionsIds.forEach((id, index) =>
       quiz.appendChild(generateQuestion(id, index))
     );
-    return quiz;
+    option.callback(quiz);
+    return;
   }
 
   const count = questionsIds.length;
-  for (let i = 0; i < Math.min(5, count); ++i) {
-    setTimeout(
-      () => quiz.appendChild(generateQuestion(questionsIds[i], i)),
-      i * 20
-    );
+  for (let i = 0; i < Math.min(4, count); ++i) {
+    quiz.appendChild(generateQuestion(questionsIds[i], i));
   }
   setTimeout(() => {
-    for (let i = 5; i < count; ++i) {
+    for (let i = 4; i < count; ++i)
       quiz.appendChild(generateQuestion(questionsIds[i], i));
-    }
-    callback(quiz);
+    option.callback(quiz);
   }, 200);
-  return quiz;
 }
 
 function generatePastAttempt(attemptData) {
-  unfinishedAttempts.set(attemptData);
   const questionsIds = Object.keys(attemptData);
-  const quiz = generateQuiz(questionsIds, (quiz) => {
-    quiz.querySelectorAll(".learned-tag").forEach((tag) => tag.remove());
-    recoverAttempt(quiz, { interactive: false });
-    grade(quiz);
-    unfinishedAttempts.load();
+  unfinishedAttempts.set(attemptData);
+  questionsIds.forEach((id) => {
+    if (attemptData[id].learned) {
+      knowledge.learn(id);
+    } else {
+      knowledge.unlearn(id);
+    }
   });
-  quiz.classList.add("submitted");
-  return quiz;
+  generateQuiz(questionsIds, {
+    async: false,
+    callback: (quiz) => {
+      quiz.classList.add("submitted");
+      recoverAttempt(quiz, { interactive: false });
+      grade(quiz);
+      unfinishedAttempts.load();
+      knowledge.load();
+    },
+  });
 }
 
 function recoverAttempt(quiz, option = { interactive: true }) {
@@ -383,9 +391,7 @@ function updateAttemptsTable() {
       timestamp.className = "timestamp";
       timestamp.setAttribute("value", attempt.timestamp);
       timestamp.addEventListener("click", () => {
-        document
-          .getElementById("quiz")
-          .replaceWith(generatePastAttempt(attempt.data));
+        generatePastAttempt(attempt.data);
         toQuizPage();
         showResult(score, outOf);
         navText.innerText = attempt.duration;
