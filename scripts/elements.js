@@ -1,6 +1,6 @@
 const reviewPanel = document.getElementById("review-panel");
 const resultText = reviewPanel.querySelector("p span");
-const [prevQuest, nextQuest] = reviewPanel.querySelectorAll('& > div');
+const [prevQuest, nextQuest] = reviewPanel.querySelectorAll("& > div");
 const navbar = document.getElementById("navbar");
 const navText = navbar.querySelector("span");
 navText.style.width = getComputedStyle(navText).width;
@@ -20,6 +20,6 @@ const questionsCountChoice = document.getElementById("questions-count-choice");
 const explainSelection = document.getElementById("explain");
 const learnedQuestionsSelection = document.getElementById("include-learned");
 const discardUnansweredSelection = document.getElementById("ignore-unanswered");
-const enableExplanations = explainSelection.querySelector("input")
+const enableExplanations = explainSelection.querySelector("input");
 const includeLearnedQuestions = learnedQuestionsSelection.querySelector("input");
 const discardUnansweredQuestions = discardUnansweredSelection.querySelector("input");
