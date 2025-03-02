@@ -100,9 +100,7 @@ function generateModuleSelection() {
     updateOngoingLabels();
 }
 
-function generateQuiz(questionsIds, option = {}) {
-    option = Object.assign({ async: true, callback: () => {} }, option);
-
+function generateQuiz(questionsIds, callback) {
     const quiz = document.createElement("div");
     document.getElementById("quiz").replaceWith(quiz);
     quiz.id = "quiz";
@@ -110,22 +108,14 @@ function generateQuiz(questionsIds, option = {}) {
         quiz.classList.add("explained");
     }
 
-    if (!option.async) {
-        questionsIds.forEach((id, index) =>
-            quiz.appendChild(generateQuestion(id, index))
-        );
-        option.callback(quiz);
-        return;
-    }
-
-    const count = questionsIds.length;
-    for (let i = 0; i < Math.min(4, count); ++i) {
+    const total_count = questionsIds.length;
+    const first_round_count = Math.min(5, total_count);
+    for (let i = 0; i < first_round_count; ++i)
         quiz.appendChild(generateQuestion(questionsIds[i], i));
-    }
     setTimeout(() => {
-        for (let i = 4; i < count; ++i)
+        for (let i = first_round_count; i < total_count; ++i)
             quiz.appendChild(generateQuestion(questionsIds[i], i));
-        option.callback(quiz);
+        callback(quiz);
     }, 200);
 }
 
@@ -139,51 +129,38 @@ function generatePastAttempt(attemptData) {
             knowledge.unlearn(id);
         }
     });
-    generateQuiz(questionsIds, {
-        async: false,
-        callback: (quiz) => {
-            quiz.classList.add("submitted");
-            recoverAttempt(quiz, { interactive: false });
-            grade(quiz);
-            unfinishedAttempts.load();
-            knowledge.load();
-        },
-    });
-}
 
-function recoverAttempt(quiz, option = { interactive: true }) {
-    const recoverable = quiz.querySelectorAll(".question.recoverable");
-    if (recoverable.length == 0) return;
-    if (
-        option.interactive &&
-        !confirm("Continue your ongoing attempt?") &&
-        confirm("You will permanently lose your progress! Are you sure?")
-    ) {
-        unfinishedAttempts.delete(recoverable);
-        return;
+    const quiz = document.createElement("div");
+    document.getElementById("quiz").replaceWith(quiz);
+    quiz.id = "quiz";
+    if (enableExplanations.checked) {
+        quiz.classList.add("explained");
+    }
+    quiz.classList.add("submitted");
+
+    function addQuestion(index) {
+        const question = generateQuestion(questionsIds[index], index);
+        const time = recoverQuestion(question);
+        gradeQuestion(question);
+        quiz.appendChild(question);
+        return time;
     }
 
     let time = 0;
-    recoverable.forEach((question) => {
-        const attemptData = unfinishedAttempts.get(question.id);
-        question
-            .querySelectorAll(".choice-input")
-            .forEach((input) => (input.checked = attemptData[input.id]));
-        time += attemptData.time;
-        if (attemptData.unsure) {
-            question.querySelector(".unsure-check").checked = true;
-            toggleUnsure(question);
-        }
-    });
-    stopTimer();
-    startTimer(time);
-    if (option.interactive) {
-        checkCompletion(quiz);
-        quiz.querySelector(".question:not(.answered)")
-            ?.blink()
-            ?.previous()
-            ?.scrollTo();
+    const total_count = questionsIds.length;
+    const first_round_count = Math.min(5, total_count);
+    for (let i = 0; i < first_round_count; ++i) {
+        time += addQuestion(i);
     }
+    setTimeout(() => {
+        for (let i = first_round_count; i < total_count; ++i) {
+            time += addQuestion(i);
+        }
+        unfinishedAttempts.load();
+        knowledge.load();
+        stopTimer();
+        startTimer(time);
+    }, 200);
 }
 
 function generateQuestion(questionId, questionIndex) {

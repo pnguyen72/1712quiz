@@ -113,18 +113,60 @@ function checkCompletion(quiz) {
     return true;
 }
 
+function recoverAttempt(quiz) {
+    const recoverable = quiz.querySelectorAll(".question.recoverable");
+    if (recoverable.length == 0) {
+        return;
+    }
+
+    if (
+        !confirm("Continue your ongoing attempt?") &&
+        confirm("You will permanently lose your progress! Are you sure?")
+    ) {
+        unfinishedAttempts.delete(recoverable);
+        return;
+    }
+
+    let time = 0;
+    recoverable.forEach((question) => (time += recoverQuestion(question)));
+    stopTimer();
+    startTimer(time);
+    checkCompletion(quiz);
+    quiz.querySelector(".question:not(.answered)")
+        ?.blink()
+        ?.previous()
+        ?.scrollTo();
+}
+
+function recoverQuestion(question) {
+    if (!question.matches(".recoverable")) {
+        return 0;
+    }
+    const attemptData = unfinishedAttempts.get(question.id);
+    question
+        .querySelectorAll(".choice-input")
+        .forEach((input) => (input.checked = attemptData[input.id]));
+    if (attemptData.unsure) {
+        question.querySelector(".unsure-check").checked = true;
+        question.classList.add("unsure");
+    }
+    return attemptData.time;
+}
+
 function grade(quiz) {
     let score = 0;
     quiz.querySelectorAll(".question").forEach(
-        (question) => (score += isCorrect(question))
+        (question) => (score += gradeQuestion(question))
     );
-    quiz.querySelectorAll(".choice-input").forEach(
-        (input) => (input.disabled = true)
-    );
+    quiz.classList.add("submitted");
     return score;
 }
 
-function isCorrect(question) {
+function gradeQuestion(question) {
+    question
+        .querySelectorAll(".choice-input")
+        .forEach((input) => (input.disabled = true));
+
     if (question.classList.contains("joke")) {
         // There are 3 kinds of joke questions:
         // 1, if all answers are incorrect,

@@ -148,13 +148,11 @@ function nextQuiz() {
         return;
     }
     const questionsIds = getQuiz(modules, questionsCount);
-    generateQuiz(questionsIds, {
-        callback: (quiz) => {
-            recoverAttempt(quiz);
-            nextButton.disabled = false;
-            explainLearnedQuestions();
-            quiz.addEventListener("input", saveProgress);
-        },
+    generateQuiz(questionsIds, (quiz) => {
+        recoverAttempt(quiz);
+        explainLearnedQuestions();
+        quiz.addEventListener("input", saveProgress);
+        nextButton.disabled = false;
     });
     toQuizPage();
     startTimer();
@@ -207,7 +205,6 @@ function submit() {
 
     unfinishedAttempts.delete(questions);
     unfinishedAttempts.save();
-    quiz.classList.add("submitted");
     stopTimer();
     showResult(score, outOf);
     scrollTo(0, 0);
