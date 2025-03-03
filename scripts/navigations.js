@@ -172,22 +172,24 @@ function submit() {
             unansweredQuestions[0].scrollTo().blink();
             return;
         }
-        setTimeout(explainUnansweredQuestions, 400);
-    }
-
-    if (discardUnansweredQuestions.checked) {
-        unansweredQuestions.forEach((question) => question.remove());
-    } else {
-        quiz.querySelectorAll(".joke:not(.answered)").forEach((question) =>
-            question.remove()
-        );
+        if (
+            discardUnansweredQuestions.checked &&
+            unansweredQuestions.length < questions.length
+        ) {
+            setTimeout(explainUnansweredQuestions, 400);
+            unansweredQuestions.forEach((question) => question.remove());
+        } else {
+            unansweredQuestions.forEach(
+                (question) => question.matches(".joke") && question.remove()
+            );
+        }
     }
 
     const score = grade(quiz);
     const answeredQuestions = quiz.querySelectorAll(".question");
     const outOf = answeredQuestions.length;
 
-    if (outOf) {
+    if (unansweredQuestions.length < questions.length) {
         pastAttempts.push({
             timestamp: Date.now(),
             exam: examSelection.querySelector("input:checked").id,
