@@ -39,10 +39,10 @@ function getQuiz(modules, count) {
         newQuestions = newQuestions.sort(
             (q1, q2) =>
                 // prettier-ignore
-                // unlearned questions first
+                // order by knowledge (ascending, meaning unlearned questions first)
                 (knowledge.hasLearned(q1) - knowledge.hasLearned(q2)) +
-        // then, sort by random
-        (Math.random() - 0.5)
+                // then by random
+                (Math.random() - 0.5)
         );
     }
     newQuestions = shuffle(newQuestions.slice(0, count));
