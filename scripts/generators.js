@@ -40,11 +40,11 @@ function generateModuleSelection() {
     modulesList.className = "menu-choices";
     document.getElementById("modules-list").replaceWith(modulesList);
 
-    const loadingPromises = [];
+    const loadPromises = [];
 
     selectedModulesNames.forEach((name, index) => {
         const moduleId = `${String(index + indexOffset).padStart(2, "0")}`;
-        loadingPromises.push(questionsData.load(moduleId));
+        loadPromises.push(questionsData.load(moduleId));
 
         const module = document.createElement("li");
         const moduleLabel = document.createElement("label");
@@ -102,7 +102,8 @@ function generateModuleSelection() {
     modulesList.appendChild(ongoingLabel);
 
     updateOngoingLabels();
-    Promise.all(loadingPromises).then(() => updateCoverage());
+    updateCoverage();
+    Promise.all(loadPromises).then(modulesSize.save);
 }
 
 function generateQuiz(questionsIds, callback) {
@@ -429,7 +430,7 @@ function updateCoverage() {
         const moduleCoverage = module.querySelector(".coverage");
 
         const covered = knowledge.sizeOf(moduleNum);
-        const size = Object.keys(questionsData[moduleNum] ?? {}).length;
+        const size = questionsData.sizeOf(moduleNum);
         coveredTotal += covered;
         sizeTotal += size;
 

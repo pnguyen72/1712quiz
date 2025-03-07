@@ -3,6 +3,9 @@ let questionsData = {};
 const pastAttempts = localStorage.getItem("attempts")
     ? JSON.parse(localStorage.getItem("attempts"))
     : [];
+const modulesSize = localStorage.getItem("modulesSize")
+    ? JSON.parse(localStorage.getItem("modulesSize"))
+    : {};
 
 function loadStorage() {
     unfinishedAttempts.load();
@@ -13,15 +16,33 @@ questionsData.load = function (module) {
     if (Object.hasOwn(this, module)) {
         return Promise.resolve();
     }
+    this[module] = {};
     return fetch(`./data/modules/${module}.json`)
         .then((response) => response.json())
         .catch(() => new Object())
-        .then((questions) => (this[module] = questions));
+        .then((questions) => {
+            this[module] = questions;
+            modulesSize[module] = Object.keys(questions).length;
+        });
 };
 
 questionsData.get = function (id) {
     const module = id.split("_")[0];
     return questionsData[module][id];
+};
+
+questionsData.sizeOf = function (module) {
+    if (
+        !Object.hasOwn(questionsData, module) &&
+        Object.hasOwn(modulesSize, module)
+    ) {
+        return modulesSize[module];
+    }
+    return Object.keys(questionsData[module] ?? {}).length;
+};
+
+modulesSize.save = function () {
+    localStorage.setItem("modulesSize", JSON.stringify(modulesSize));
 };
 
 function getQuiz(modules, count) {
