@@ -4,18 +4,20 @@ const pastAttempts = localStorage.getItem("attempts")
     ? JSON.parse(localStorage.getItem("attempts"))
     : [];
 
-function loadQuestions() {
-    const promises = [];
-    const numberOfModules = Object.values(modulesNames)
-        .map((module) => module.length)
-        .reduce((a, b) => a + b, 0);
-    for (let i = 1; i <= numberOfModules; ++i) {
-        promises.push(_loadModule(String(i).padStart(2, "0")));
-    }
+function loadStorage() {
     unfinishedAttempts.load();
     knowledge.load();
-    return Promise.all(promises);
 }
+
+questionsData.load = function (module) {
+    if (Object.hasOwn(this, module)) {
+        return Promise.resolve();
+    }
+    return fetch(`./data/modules/${module}.json`)
+        .then((response) => response.json())
+        .catch(() => new Object())
+        .then((questions) => (this[module] = questions));
+};
 
 questionsData.get = function (id) {
     const module = id.split("_")[0];
@@ -223,13 +225,4 @@ function loadModulesNames() {
     return fetch("./data/modules.json")
         .then((response) => response.json())
         .then((data) => (modulesNames = data));
-}
-
-function _loadModule(module) {
-    return fetch(`./data/modules/${module}.json`)
-        .then((response) => {
-            if (!response.ok) return {};
-            return response.json();
-        })
-        .then((questions) => (questionsData[module] = questions));
 }

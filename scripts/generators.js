@@ -40,7 +40,12 @@ function generateModuleSelection() {
     modulesList.className = "menu-choices";
     document.getElementById("modules-list").replaceWith(modulesList);
 
+    const loadingPromises = [];
+
     selectedModulesNames.forEach((name, index) => {
+        const moduleId = `${String(index + indexOffset).padStart(2, "0")}`;
+        loadingPromises.push(questionsData.load(moduleId));
+
         const module = document.createElement("li");
         const moduleLabel = document.createElement("label");
         const moduleSelectBox = document.createElement("input");
@@ -53,7 +58,7 @@ function generateModuleSelection() {
         ongoingLabel.innerText = "*";
         moduleCoverage.className = "coverage";
         moduleSelectBox.className = "module-input";
-        moduleSelectBox.id = `${String(index + indexOffset).padStart(2, "0")}`;
+        moduleSelectBox.id = moduleId;
         moduleSelectBox.type = "checkbox";
         moduleSelectBox.addEventListener("input", () => {
             document.getElementById("module-all").checked =
@@ -96,8 +101,8 @@ function generateModuleSelection() {
     ongoingLabel.innerText = "* ongoing attempt";
     modulesList.appendChild(ongoingLabel);
 
-    updateCoverage();
     updateOngoingLabels();
+    Promise.all(loadingPromises).then(() => updateCoverage());
 }
 
 function generateQuiz(questionsIds, callback) {

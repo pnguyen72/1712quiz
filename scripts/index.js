@@ -4,9 +4,7 @@ if (!matchMedia("(hover: none)").matches) {
         .forEach((icon) => icon.classList.add("bx-tada-hover"));
 }
 tohomePage();
+loadStorage();
 await loadModulesNames();
 initalizeSelections();
 licenseLock();
-await loadQuestions();
-updateCoverage();
-updateOngoingLabels();
