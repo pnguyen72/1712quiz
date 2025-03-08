@@ -4,14 +4,6 @@ body {
   .page {
     footer {
       #footer {
-        #links {
-          a {
-            padding: 2px 6px 2px 6px;
-            border-radius: 6px;
-            background-color: rebeccapurple;
-            color: #fff;
-          }
-        }
         #github .bx {
           color: rebeccapurple;
           background-color: #e0e0e0;
@@ -20,6 +12,10 @@ body {
       }
     }
   }
+}
+
+a:is(:link, :visited) {
+  color: cyan !important;
 }
 
 input {

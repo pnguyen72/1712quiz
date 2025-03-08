@@ -5,6 +5,10 @@ body {
   margin: 0;
   background-color: hsl(120, 28%, 95%);
 
+  a:is(:link, :visited) {
+    color: blue;
+  }
+
   .page {
     display: flex;
     flex-direction: column;

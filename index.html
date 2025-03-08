@@ -137,37 +137,63 @@
       <footer>
         <hr />
         <div id="footer">
-          <div id="links">
-            <a
-              href="https://docs.google.com/document/d/1MOVpEVdHEbigwvpJk2h_6VJ49L0uOAlseSyCwteGMNc/edit?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Old Testament (midterm notes)
-            </a>
-            <a
-              href="https://docs.google.com/document/d/1te3-P5Rm_u4fdDsJFVOWigXhoSgLdk8tMQN2CvaR7pk/edit?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              New Testament (final notes)
-            </a>
+          <div id="user">
+            <span id="welcome">Welcome back, username</span>
+            <div class="toggle-container">
+              <span>Logged in</span>
+              <label>
+                <input
+                  type="checkbox"
+                  id="login-toggle"
+                  class="toggle"
+                  checked
+                />
+                <span class="slider"></span>
+              </label>
+            </div>
           </div>
-          <div id="dark-mode-toggle-container">
-            <span>Dark mode</span>
-            <label>
-              <input type="checkbox" id="dark-mode-toggle" />
-              <span id="slider"></span>
-            </label>
-          </div>
-          <div id="github">
+          <div id="leaderboard">
             <a
-              href="https://github.com/pnguyen72/1712quiz"
+              href="https://leaderboard.comp1712.ca/"
               target="_blank"
               rel="noopener noreferrer"
+              >Go to leaderboard</a
             >
-              <i class="bx bxl-github"></i>
-            </a>
+            <div class="toggle-container">
+              <span>Compete in leaderboard</span>
+              <label>
+                <input
+                  type="checkbox"
+                  id="leaderboard-toggle"
+                  class="toggle"
+                  checked
+                />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+          <div id="settings">
+            <div id="github">
+              <a
+                href="https://github.com/pnguyen72/1712quiz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="bx bxl-github"></i>
+              </a>
+            </div>
+            <div class="toggle-container">
+              <span>Dark mode</span>
+              <label>
+                <input
+                  type="checkbox"
+                  id="dark-mode-toggle"
+                  class="toggle"
+                  checked
+                />
+                <span class="slider"></span>
+              </label>
+            </div>
           </div>
         </div>
       </footer>

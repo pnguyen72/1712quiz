@@ -10,47 +10,29 @@
     font-size: 0.8em;
   }
 
-  #links {
+  > * {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    gap: 0.25rem;
+  }
 
-    a {
-      text-decoration: none;
-      color: #04442c;
+  #welcome {
+    margin-bottom: 0.5rem;
+    max-width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
 
-      &:first-child {
-        margin-right: 1.75rem;
-        @media (width < 900px) {
-          margin-right: 1.25rem;
-        }
-        @media (width < 800px) {
-          margin-right: 0.75rem;
-        }
-      }
+    @media (width <900px) {
+      max-width: 300px;
     }
-
-    /*
-     * Do not disable hover on mobile in this particular case.
-     * The 2 links are a bit close, it's possible to misclick,
-     * the hover effect indicates which one the user just clicked.
-     */
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @media (width < 750px) {
-      flex-direction: column;
-      align-items: start;
-
-      a:first-child {
-        margin-right: 0;
-        margin-bottom: 0.5rem;
-      }
+    @media (width <750px) {
+      max-width: 200px;
     }
   }
 
-  #dark-mode-toggle-container {
+  .toggle-container {
     display: flex;
     align-items: center;
 
@@ -60,10 +42,10 @@
       width: 2.75rem;
       height: 1.5rem;
 
-      #dark-mode-toggle {
+      .toggle {
         display: none;
 
-        &:checked + #slider {
+        &:checked + .slider {
           background-color: rebeccapurple;
 
           &::before {
@@ -73,12 +55,12 @@
           }
         }
 
-        &:focus + #slider {
+        &:focus + .slider {
           box-shadow: 0 0 1px rebeccapurple;
         }
       }
 
-      #slider {
+      .slider {
         position: absolute;
         cursor: pointer;
         top: 0;
