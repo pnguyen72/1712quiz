@@ -2,23 +2,38 @@
   font-size: 0.95em;
   display: grid;
   justify-content: space-evenly;
-  grid-template-areas:
-    "welcome leaderboard-link github"
-    "login leaderboard dark-mode";
   gap: 0.4rem;
 
-  @media (width < 750px) {
-    grid-template-areas:
-      "welcome github"
-      "login leaderboard-link"
-      "leaderboard dark-mode";
-  }
   @media (width < 600px) {
     font-size: 0.9em;
   }
   @media (width < 450px) {
     font-size: 0.85em;
     justify-content: space-between;
+  }
+
+  &.logged-in {
+    grid-template-areas:
+      "welcome leaderboard-link github"
+      "login leaderboard dark-mode";
+
+    @media (width < 750px) {
+      grid-template-areas:
+        "welcome github"
+        "login leaderboard-link"
+        "leaderboard dark-mode";
+    }
+  }
+
+  &:not(.logged-in) {
+    grid-template-areas:
+      "leaderboard-link github"
+      "leaderboard dark-mode";
+
+    #welcome,
+    #login {
+      display: none;
+    }
   }
 
   #welcome {

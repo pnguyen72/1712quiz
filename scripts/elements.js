@@ -23,3 +23,6 @@ const discardUnansweredSelection = document.getElementById("ignore-unanswered");
 const enableExplanations = explainSelection.querySelector("input");
 const includeLearnedQuestions = learnedQuestionsSelection.querySelector("input");
 const discardUnansweredQuestions = discardUnansweredSelection.querySelector("input");
+const footer = document.getElementById("footer");
+const loginToggle = document.getElementById("login-toggle");
+const leaderboardToggle = document.getElementById("leaderboard-toggle");

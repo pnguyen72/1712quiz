@@ -59,6 +59,12 @@ function initalizeSelections() {
         questionsCountChoice.value = questionsCount;
     }
 
+    if (localStorage.getItem("login")) {
+        login();
+        leaderboardToggle.checked =
+            localStorage.getItem("leaderboard") == "true";
+    }
+
     if (localStorage.getItem("learnedQuestionsExplained")) {
         unhide(learnedQuestionsSelection);
         const learnedQuestions = localStorage.getItem("learnedQuestions");
