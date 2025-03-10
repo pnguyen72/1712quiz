@@ -1,7 +1,7 @@
 #footer {
   font-size: 0.95em;
   display: grid;
-  justify-content: space-between;
+  justify-content: space-evenly;
   grid-template-areas:
     "welcome leaderboard-link github"
     "login leaderboard dark-mode";
@@ -13,14 +13,12 @@
       "login leaderboard-link"
       "leaderboard dark-mode";
   }
-  @media (500px <= width < 750px) {
-    justify-content: space-evenly;
-  }
   @media (width < 600px) {
     font-size: 0.9em;
   }
   @media (width < 450px) {
     font-size: 0.85em;
+    justify-content: space-between;
   }
 
   #welcome {
