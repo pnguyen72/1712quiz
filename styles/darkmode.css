@@ -197,9 +197,9 @@ td {
       color: cyan !important;
     }
   }
-  .bx {
-    background-color: #262626;
-  }
+}
+.bxs-x-circle {
+  background-color: #262626;
 }
 
 @keyframes blink {

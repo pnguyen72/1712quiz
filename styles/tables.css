@@ -17,29 +17,9 @@ table {
     display: none;
   }
 
-  .bx {
-    position: absolute;
-    color: hsl(0, 80%, 45%);
-    background-color: hsl(120, 28%, 95%);
-    border-radius: 50%;
-
-    font-size: 1.9rem;
+  .bxs-x-circle {
     top: -0.75rem;
     right: -0.75rem;
-
-    @media (width < 600px) {
-      height: 1.75rem;
-      width: 1.75rem;
-      top: -0.68rem;
-      right: -0.68rem;
-    }
-
-    @media (width < 450px) {
-      height: 1.59rem;
-      width: 1.59rem;
-      top: -0.62rem;
-      right: -0.62rem;
-    }
   }
 
   /* if hover is available */

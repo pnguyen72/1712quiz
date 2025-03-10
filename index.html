@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="./styles/license.css" />
     <link rel="stylesheet" href="./styles/page.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/login.css" />
     <link rel="stylesheet" href="./styles/quiz.css" />
     <link rel="stylesheet" href="./styles/darkmode.css" id="dark-mode-css" />
     <link
@@ -156,6 +157,36 @@
             >Leaderboard</a
           >
           <div id="leaderboard" class="toggle-container">
+            <div class="login-popup">
+              <form class="login-form register">
+                <i class="bx bxs-x-circle"></i>
+                <h2>
+                  <span id="register-tab">Register</span> |
+                  <span id="login-tab">Login</span>
+                </h2>
+
+                <div class="entry" id="username-container">
+                  <label for="username">Username</label>
+                  <input type="text" name="username" name="username" required />
+                </div>
+
+                <div class="entry" id="password-container">
+                  <label for="password">Password</label>
+                  <input type="text" name="password" id="password" />
+                </div>
+
+                <div>
+                  <label>
+                    <input type="checkbox" required /> To compete in the
+                    leaderboard your quiz results need to be uploaded to the
+                    server. You understand and accept its privacy implications.
+                  </label>
+                </div>
+
+                <button id="register-btn"><b>Register</b></button>
+                <button id="login-btn"><b>Login</b></button>
+              </form>
+            </div>
             <span>Compete in leaderboard</span>
             <label>
               <input type="checkbox" id="leaderboard-toggle" class="toggle" />

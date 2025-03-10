@@ -4,7 +4,7 @@ input {
 
   /* if hover is available */
   @media not all and (hover: none) {
-    &:enabled:hover {
+    &:not([type="text"]):enabled:hover {
       transform: scale(1.2);
     }
   }
@@ -16,4 +16,12 @@ input {
 
 select {
   margin-left: 0.25rem;
+}
+
+.bxs-x-circle {
+  position: absolute;
+  color: hsl(0, 80%, 45%);
+  background-color: hsl(120, 28%, 95%);
+  border-radius: 50%;
+  font-size: 2rem;
 }

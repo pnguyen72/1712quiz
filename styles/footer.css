@@ -69,6 +69,10 @@
     }
   }
 
+  #leaderboard {
+    position: relative;
+  }
+
   #github .bx {
     color: #04442c;
     font-size: 1.6rem;
@@ -85,7 +89,7 @@
     display: flex;
     align-items: center;
 
-    label {
+    label:has(.toggle) {
       position: relative;
       display: inline-block;
       width: 2.75rem;

@@ -1,0 +1,82 @@
+.login-popup {
+  position: absolute;
+  bottom: 4.25rem;
+}
+
+.login-form {
+  width: 20rem;
+  padding: 1rem;
+  background-color: hsl(120, 28%, 95%);
+  border: 2px solid #04442c;
+  box-shadow: 0px 0px 0.8rem #04442c;
+  border-radius: 2rem;
+
+  &.login {
+    #login-tab {
+      color: black;
+    }
+    #username-container,
+    #register-btn {
+      display: none;
+    }
+  }
+
+  &.register {
+    #register-tab {
+      color: black;
+    }
+    #password-container,
+    #login-btn {
+      display: none;
+    }
+  }
+
+  > * {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    color: gray;
+    span:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .bxs-x-circle {
+    top: 1rem;
+    right: 0.75rem;
+  }
+
+  .entry {
+    display: flex;
+    justify-content: space-between;
+
+    label {
+      align-self: center;
+    }
+
+    input[type="text"] {
+      width: 63%;
+      padding: 0.75rem;
+    }
+  }
+
+  button {
+    background-color: #04442c;
+    font-size: 1rem;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 0.5rem;
+
+    @media not all and (hover: none) {
+      &:hover {
+        scale: 1.05;
+      }
+    }
+  }
+}
