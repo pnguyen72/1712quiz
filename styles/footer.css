@@ -1,25 +1,52 @@
 #footer {
-  font-size: 0.9em;
-  display: flex;
+  font-size: 0.95em;
+  display: grid;
   justify-content: space-between;
+  grid-template-areas:
+    "welcome leaderboard-link github"
+    "login leaderboard dark-mode";
+  gap: 0.4rem;
 
+  @media (width < 750px) {
+    grid-template-areas:
+      "welcome github"
+      "login leaderboard-link"
+      "leaderboard dark-mode";
+  }
+  @media (500px <= width < 750px) {
+    justify-content: space-evenly;
+  }
   @media (width < 600px) {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   @media (width < 450px) {
-    font-size: 0.8em;
-  }
-
-  > * {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.25rem;
+    font-size: 0.85em;
   }
 
   #welcome {
-    margin-bottom: 0.5rem;
+    grid-area: welcome;
+  }
+  #login {
+    grid-area: login;
+  }
+  #leaderboard {
+    grid-area: leaderboard;
+  }
+  #dark-mode {
+    grid-area: dark-mode;
+  }
+  #github {
+    grid-area: github;
+  }
+  #leaderboard-link {
+    grid-area: leaderboard-link;
+  }
+
+  > * {
+    margin: auto;
+  }
+
+  #welcome {
     max-width: 400px;
     white-space: nowrap;
     overflow: hidden;
@@ -27,8 +54,17 @@
     @media (width <900px) {
       max-width: 300px;
     }
-    @media (width <750px) {
-      max-width: 200px;
+  }
+
+  #github .bx {
+    color: #04442c;
+    font-size: 1.6rem;
+
+    @media (width < 600px) {
+      font-size: 1.55rem;
+    }
+    @media (width < 450px) {
+      font-size: 1.5rem;
     }
   }
 
@@ -85,27 +121,6 @@
           transition: 0.4s;
         }
       }
-    }
-  }
-
-  #github {
-    display: flex;
-    align-items: center;
-
-    .bx {
-      color: #04442c;
-      font-size: 1.6rem;
-
-      @media (width < 600px) {
-        font-size: 1.55rem;
-      }
-      @media (width < 450px) {
-        font-size: 1.5rem;
-      }
-    }
-
-    @media (width < 400px) {
-      display: none;
     }
   }
 }
