@@ -1,6 +1,7 @@
 .login-popup {
   position: absolute;
   bottom: 4.25rem;
+  font-size: 1rem;
 }
 
 .login-form {
@@ -64,7 +65,6 @@
 
   button {
     background-color: #04442c;
-    font-size: 1rem;
     color: white;
     padding: 1rem;
     cursor: pointer;

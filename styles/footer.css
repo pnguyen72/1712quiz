@@ -89,11 +89,13 @@
     display: flex;
     align-items: center;
 
-    label:has(.toggle) {
-      position: relative;
-      display: inline-block;
-      width: 2.75rem;
-      height: 1.5rem;
+    label {
+      &:has(.toggle) {
+        position: relative;
+        display: inline-block;
+        width: 2.75rem;
+        height: 1.5rem;
+      }
 
       .toggle {
         display: none;
