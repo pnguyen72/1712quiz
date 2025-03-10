@@ -80,17 +80,13 @@
         display: none;
 
         &:checked + .slider {
-          background-color: rebeccapurple;
+          background-color: #04442c;
 
           &::before {
             -webkit-transform: translateX(1rem);
             -ms-transform: translateX(1rem);
             transform: translateX(1rem);
           }
-        }
-
-        &:focus + .slider {
-          box-shadow: 0 0 1px rebeccapurple;
         }
       }
 

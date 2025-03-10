@@ -9,6 +9,10 @@ body {
           background-color: #e0e0e0;
           border-radius: 50%;
         }
+
+        .toggle:checked + .slider {
+          background-color: rebeccapurple;
+        }
       }
     }
   }
