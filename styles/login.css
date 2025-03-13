@@ -1,10 +1,10 @@
-.login-popup {
+#login-popup {
   position: absolute;
   bottom: 4.25rem;
   font-size: 1rem;
 }
 
-.login-form {
+#login-form {
   width: 20rem;
   padding: 1rem;
   background-color: hsl(120, 28%, 95%);
@@ -58,13 +58,15 @@
     }
 
     input[type="text"] {
-      width: 63%;
+      width: 65%;
+      font-size: 0.95rem;
       padding: 0.75rem;
     }
   }
 
   button {
     background-color: #04442c;
+    font-size: 1rem;
     color: white;
     padding: 1rem;
     cursor: pointer;

@@ -157,8 +157,8 @@
             >Leaderboard</a
           >
           <div id="leaderboard" class="toggle-container">
-            <div class="login-popup">
-              <form class="login-form register">
+            <div id="login-popup" style="display: none">
+              <form id="login-form" class="register">
                 <i class="bx bxs-x-circle"></i>
                 <h2>
                   <span id="register-tab">Register</span> |
@@ -167,12 +167,23 @@
 
                 <div class="entry" id="username-container">
                   <label for="username">Username</label>
-                  <input type="text" name="username" name="username" required />
+                  <input
+                    type="text"
+                    name="username"
+                    placeholder="2-12 alphanumeric char"
+                    class="username"
+                    pattern="[\w\s\-]{2,12}"
+                  />
                 </div>
 
                 <div class="entry" id="password-container">
                   <label for="password">Password</label>
-                  <input type="text" name="password" id="password" />
+                  <input
+                    type="text"
+                    name="password"
+                    placeholder="don't tell me you lost it"
+                    class="password"
+                  />
                 </div>
 
                 <div>
@@ -235,3 +246,4 @@
     <script src="./scripts/index.js" type="module"></script>
   </body>
 </html>
+w
