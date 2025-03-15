@@ -49,7 +49,7 @@ discardUnansweredQuestions.addEventListener("input", () => {
 });
 enableExplanations.addEventListener("input", () => {
     const enabled = enableExplanations.checked;
-    if (enabled) loadExplanationResources();
+    if (enabled) loadResources();
     localStorage.setItem("explain", enabled);
 });
 

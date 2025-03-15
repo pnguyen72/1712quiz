@@ -13,8 +13,11 @@ const loginBtn = document.getElementById("login-btn");
 
 leaderboardToggle.addEventListener("input", () => {
     localStorage.setItem("leaderboard", leaderboardToggle.checked);
-    if (leaderboardToggle.checked && !isLoggedIn()) {
-        attemptLogin();
+    if (leaderboardToggle.checked) {
+        loadResources();
+        if (!isLoggedIn()) {
+            attemptLogin();
+        }
     }
 });
 

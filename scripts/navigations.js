@@ -81,7 +81,7 @@ function initalizeSelections() {
         enableExplanations.checked = enabled;
         if (!enabled) return;
     }
-    loadExplanationResources();
+    loadResources();
 }
 
 function getSelectedModules() {
