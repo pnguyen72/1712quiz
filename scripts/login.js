@@ -34,15 +34,16 @@ loginTab.addEventListener("click", () => {
     passwordField.focus();
 });
 
-registerBtn.addEventListener("click", (e) => {
+loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    register();
+
+    if (loginForm.classList.contains("register")) {
+        register();
+    } else {
+        login();
+    }
 });
 
-loginBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    login();
-});
 function isLoggedIn() {
     return footer.classList.contains("logged-in");
 }
