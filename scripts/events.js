@@ -11,10 +11,18 @@ moduleSelection.addEventListener(
     () => (moduleSelection.style.animation = "")
 );
 
+navbar.addEventListener("click", () => {
+    if (loginPopup.matches(".visible")) {
+        cancelLogin.click();
+    }
+});
 form.addEventListener("click", () => {
-    if (homePage.querySelector("#license-notice.visible")) {
+    if (licenseNotice.matches(".visible")) {
         licenseText.style.animation = "blink 1s";
         window.scrollTo(0, 0);
+    }
+    if (loginPopup.matches(".visible")) {
+        cancelLogin.click();
     }
 });
 form.addEventListener("input", refreshAttemptsTable);

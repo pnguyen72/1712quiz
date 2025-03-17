@@ -1,3 +1,4 @@
+const username = document.getElementById("username");
 const loginToggle = document.getElementById("login-toggle");
 const leaderboardToggle = document.getElementById("leaderboard-toggle");
 const loginPopup = document.getElementById("login-popup");
@@ -13,11 +14,8 @@ const loginBtn = document.getElementById("login-btn");
 
 leaderboardToggle.addEventListener("input", () => {
     localStorage.setItem("leaderboard", leaderboardToggle.checked);
-    if (leaderboardToggle.checked) {
-        loadResources();
-        if (!isLoggedIn()) {
-            attemptLogin();
-        }
+    if (leaderboardToggle.checked && !isLoggedIn()) {
+        attemptLogin();
     }
 });
 
@@ -28,14 +26,8 @@ cancelLogin.addEventListener("click", () => {
     leaderboardToggle.checked = false;
 });
 
-registerTab.addEventListener("click", () => {
-    loginForm.classList.replace("login", "register");
-    usernameField.focus();
-});
-loginTab.addEventListener("click", () => {
-    loginForm.classList.replace("register", "login");
-    passwordField.focus();
-});
+registerTab.addEventListener("click", toRegisterMode);
+loginTab.addEventListener("click", tologinMode);
 
 loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -47,23 +39,89 @@ loginForm.addEventListener("submit", (e) => {
     }
 });
 
+function tologinMode() {
+    loginForm.classList.replace("register", "login");
+    passwordField.focus();
+    passwordField.required = true;
+    usernameField.required = false;
+}
+
+function toRegisterMode() {
+    loginForm.classList.replace("login", "register");
+    usernameField.focus();
+    usernameField.required = true;
+    passwordField.required = false;
+}
+
 function isLoggedIn() {
     return footer.classList.contains("logged-in");
 }
 
 function attemptLogin() {
+    loadFirebase();
     leaderboardToggle.disabled = true;
     leaderboardSlider.style.backgroundColor = "gray";
     unhide(loginPopup);
-    if (loginForm.classList.contains("register")) {
-        usernameField.focus();
-        usernameField.required = true;
-        passwordField.required = false;
-    } else {
-        passwordField.focus();
-        passwordField.required = true;
-        usernameField.required = false;
+}
+
+function getRandomPassword() {
+    const timestamp = Date.now().toString(36);
+    const random = Math.random().toString(36).slice(2);
+    let result = "";
+    for (let i = 0; i < Math.min(random.length, timestamp.length); ++i) {
+        result += random.slice(i, i + 1) + timestamp.slice(i, i + 1);
     }
+    return result;
+}
+
+async function register() {
+    await loadFirebase();
+    const username = usernameField.value.trim();
+
+    const usrDoc = await leaderboard.doc("users").get();
+    if (usrDoc.data()?.[username]) {
+        alert("Username already exists.");
+        usernameField.focus();
+        return false;
+    }
+
+    const password = getRandomPassword();
+    leaderboard.doc("passwords").set({ [password]: username }, { merge: true });
+    leaderboard.doc("users").set({ [username]: true }, { merge: true });
+    localStorage.setItem("password", password);
+    alert(`Your password is: ${password}\n\nKeep it safe and don't lose it.`);
+    passwordField.value = password;
+    loginSuccess(username);
+    tologinMode();
+    return true;
+}
+
+async function login(option = { interactive: true }) {
+    await loadFirebase();
+    const password = passwordField.value.trim();
+
+    const pwdDoc = await leaderboard.doc("passwords").get();
+    const username = pwdDoc.data()?.[password];
+    if (!username) {
+        if (option.interactive) {
+            alert("Incorrect password.");
+            passwordField.focus();
+        }
+        const storedPassword = localStorage.getItem("password");
+        if (password == storedPassword) {
+            if (!option.interactive) {
+                passwordField.value = "";
+            }
+            localStorage.removeItem("password");
+        } else if (storedPassword) {
+            passwordField.value = storedPassword;
+        }
+        return false;
+    }
+
+    localStorage.setItem("password", password);
+    loginSuccess(username);
+    return true;
 }
 
 function stopAttemptLogin() {
@@ -72,15 +130,8 @@ function stopAttemptLogin() {
     hide(loginPopup);
 }
 
-function register() {
-    // TODO
-
-    login();
-}
-
-function login() {
-    // TODO
-
+function loginSuccess(name) {
+    username.innerText = name;
     footer.classList.add("logged-in");
     loginToggle.checked = true;
     localStorage.setItem("login", "true");

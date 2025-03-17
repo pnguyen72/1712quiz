@@ -59,10 +59,19 @@ function initalizeSelections() {
         questionsCountChoice.value = questionsCount;
     }
 
-    if (localStorage.getItem("login")) {
-        login();
-        leaderboardToggle.checked =
-            localStorage.getItem("leaderboard") == "true";
+    passwordField.value = localStorage.getItem("password");
+    if (passwordField.value) {
+        tologinMode();
+        if (localStorage.getItem("login")) {
+            login({ interactive: false }).then((success) => {
+                if (success) {
+                    leaderboardToggle.checked =
+                        localStorage.getItem("leaderboard") == "true";
+                }
+            });
+        }
+    } else {
+        toRegisterMode();
     }
 
     if (localStorage.getItem("learnedQuestionsExplained")) {
