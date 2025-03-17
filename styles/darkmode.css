@@ -210,3 +210,28 @@ td {
     background-color: #262626;
   }
 }
+
+#login-form {
+  background-color: #262626;
+  border: 2px solid rebeccapurple;
+  box-shadow: 0px 0px 0.8rem rebeccapurple;
+
+  &.login #login-tab,
+  &.register #register-tab {
+    color: white;
+  }
+
+  h2 {
+    color: hsl(0, 0%, 36%);
+  }
+
+  input[type="text"] {
+    background-color: #262626;
+    color: white;
+    border: 2px solid silver;
+  }
+
+  button {
+    background-color: rebeccapurple;
+  }
+}
