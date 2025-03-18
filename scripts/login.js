@@ -13,8 +13,9 @@ const registerBtn = document.getElementById("register-btn");
 const loginBtn = document.getElementById("login-btn");
 
 leaderboardToggle.addEventListener("input", () => {
-    localStorage.setItem("leaderboard", leaderboardToggle.checked);
-    if (leaderboardToggle.checked && !isLoggedIn()) {
+    if (!leaderboardToggle.checked) {
+        localStorage.remove("leaderboard");
+    } else if (!isLoggedIn()) {
         attemptLogin();
     }
 });
@@ -122,6 +123,8 @@ async function login(option = { interactive: true }) {
         if (option.interactive) {
             alert("Incorrect password.");
             passwordField.focus();
+        } else {
+            leaderboardToggle.checked = false;
         }
         const storedPassword = localStorage.getItem("password");
         if (password == storedPassword) {
@@ -150,7 +153,8 @@ function loginSuccess(name) {
     setUsername(name);
     footer.classList.add("logged-in");
     loginToggle.checked = true;
-    localStorage.setItem("login", "true");
+    localStorage.setItem("leaderboard", leaderboardToggle.checked);
+    localStorage.setItem("login", true);
     stopAttemptLogin();
 }
 
