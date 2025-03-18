@@ -1,11 +1,6 @@
 window.addEventListener("beforeunload", saveProgress);
 document.addEventListener("scroll", () => (questionsScroller.current = null));
 
-licenseText.addEventListener(
-    "animationend",
-    () => (licenseText.style.animation = "")
-);
-
 moduleSelection.addEventListener(
     "animationend",
     () => (moduleSelection.style.animation = "")
@@ -17,10 +12,6 @@ navbar.addEventListener("click", () => {
     }
 });
 form.addEventListener("click", () => {
-    if (licenseNotice.matches(".visible")) {
-        licenseText.style.animation = "blink 1s";
-        window.scrollTo(0, 0);
-    }
     if (loginPopup.matches(".visible")) {
         cancelLogin.click();
     }
@@ -59,17 +50,6 @@ enableExplanations.addEventListener("input", () => {
     const enabled = enableExplanations.checked;
     if (enabled) loadResources();
     localStorage.setItem("explain", enabled);
-});
-
-licenceAgreeBtn.addEventListener("click", licenseUnlock);
-licenseDisagreeBtn.addEventListener("click", () => {
-    if (++disagreeNum < disagreeTarget) {
-        alert("You can't disagree, dummy!");
-        localStorage.setItem("disagree", disagreeNum);
-    } else {
-        licenseGrantException("Fine. 🙄");
-        localStorage.removeItem("disagree");
-    }
 });
 
 homeButon.addEventListener("click", tohomePage);

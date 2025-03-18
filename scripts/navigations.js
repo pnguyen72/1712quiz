@@ -8,41 +8,6 @@ function unhide(element) {
     element.classList.add("visible");
 }
 
-function licenseLock() {
-    if (
-        sessionStorage.getItem("licenseAgreed") == "true" ||
-        localStorage.getItem("licenseException") == "true"
-    ) {
-        return;
-    }
-    unhide(licenseNotice);
-    for (input of form.querySelectorAll("input,select")) {
-        input.disabled = true;
-    }
-    hide(navbar);
-}
-
-function licenseUnlock() {
-    sessionStorage.setItem("licenseAgreed", true);
-    hide(licenseNotice);
-    for (input of form.querySelectorAll("input,select")) {
-        input.disabled = false;
-    }
-    document.getElementById("main").style.display = "block";
-    unhide(navbar);
-}
-
-function licenseGrantException(prompt) {
-    if (localStorage.getItem("licenseException")) return;
-
-    let alertText = "You don't have to wear a Hawaiian shirt to the exam.";
-    if (prompt) alertText = `${prompt}\n${alertText}`;
-
-    alert(alertText);
-    licenseUnlock();
-    localStorage.setItem("licenseException", true);
-}
-
 function initalizeSelections() {
     generateExamSelection();
 
