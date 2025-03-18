@@ -164,7 +164,7 @@ function generatePastAttempt(attemptData) {
         }
         unfinishedAttempts.load();
         knowledge.load();
-        stopTimer();
+        quizTimer.stop();
         startTimer(time);
     }, 200);
 }

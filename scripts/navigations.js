@@ -110,7 +110,7 @@ function tohomePage() {
 
 function toQuizPage() {
     navText.style.visibility = "visible";
-    stopTimer();
+    quizTimer.stop();
     reviewPanel.style.backgroundColor = "";
     reviewPanel.style.color = "";
     resultText.innerText = "Review";
@@ -198,7 +198,7 @@ function submit() {
 
     unfinishedAttempts.delete(questions);
     unfinishedAttempts.save();
-    stopTimer();
+    quizTimer.stop();
     showResult(score, outOf);
     scrollTo(0, 0);
 }

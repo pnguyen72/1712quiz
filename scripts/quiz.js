@@ -1,4 +1,4 @@
-var quizTimer;
+var quizTimer = { stop: () => null };
 
 function startTimer(initial = 0) {
     function display(time) {
@@ -13,15 +13,17 @@ function startTimer(initial = 0) {
     }
 
     let time = Math.round(initial);
+    const startTime = Date.now();
+
     display(time);
     quizTimer = {
-        id: setInterval(() => display(++time), 1000),
+        id: setInterval(() => {
+            time = Math.round(initial + (Date.now() - startTime) / 1000);
+            display(time);
+        }, 1000),
         getTime: () => time,
+        stop: () => clearInterval(quizTimer.id),
     };
-}
-
-function stopTimer() {
-    clearInterval(quizTimer?.id);
 }
 
 function explainLearnedQuestions() {
@@ -129,7 +131,7 @@ function recoverAttempt(quiz) {
 
     let time = 0;
     recoverable.forEach((question) => (time += recoverQuestion(question)));
-    stopTimer();
+    quizTimer.stop();
     startTimer(time);
     checkCompletion(quiz);
     quiz.querySelector(".question:not(.answered)")
