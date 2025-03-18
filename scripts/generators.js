@@ -146,26 +146,22 @@ function generatePastAttempt(attemptData) {
 
     function addQuestion(index) {
         const question = generateQuestion(questionsIds[index], index);
-        const time = recoverQuestion(question);
+        recoverQuestion(question);
         gradeQuestion(question);
         quiz.appendChild(question);
-        return time;
     }
 
-    let time = 0;
     const total_count = questionsIds.length;
     const first_round_count = Math.min(5, total_count);
     for (let i = 0; i < first_round_count; ++i) {
-        time += addQuestion(i);
+        addQuestion(i);
     }
     setTimeout(() => {
         for (let i = first_round_count; i < total_count; ++i) {
-            time += addQuestion(i);
+            addQuestion(i);
         }
         unfinishedAttempts.load();
         knowledge.load();
-        quizTimer.stop();
-        startTimer(time);
     }, 200);
 }
 
