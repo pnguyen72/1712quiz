@@ -146,7 +146,7 @@ function explain(question) {
         }
 
         let explanationText;
-        if (question.classList.contains("joke")) {
+        if (question.matches(".joke")) {
             const choice = question.querySelector(".choice-input:checked");
             explanationText = snapshot.data()?.[choice.id] ?? "";
         } else {
@@ -166,7 +166,7 @@ function submitExplanation(question, explanationText) {
     const questionText = question.querySelector(".question-body").innerHTML;
     const doc = db.doc(questionId);
 
-    if (!question.classList.contains("joke")) {
+    if (!question.matches(".joke")) {
         if (!explanationText) return doc.delete();
         return doc.set({
             question: questionText,

@@ -167,7 +167,7 @@ function gradeQuestion(question) {
         .querySelectorAll(".choice-input")
         .forEach((input) => (input.disabled = true));
 
-    if (question.classList.contains("joke")) {
+    if (question.matches(".joke")) {
         // There are 3 kinds of joke questions:
         // 1, if all answers are incorrect,
         //    make whatever the user chose incorrect,
@@ -263,7 +263,7 @@ function showResult(score, outOf) {
 }
 
 function toggleUnsure(question) {
-    if (question.classList.contains("unsure")) {
+    if (question.matches(".unsure")) {
         question.classList.remove("unsure");
     } else {
         question.classList.add("unsure");

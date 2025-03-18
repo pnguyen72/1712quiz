@@ -201,21 +201,32 @@ function submit() {
     }
 
     const score = grade(quiz);
-    const answeredQuestions = quiz.querySelectorAll(".question");
-    const outOf = answeredQuestions.length;
+    const filteredQuestions = quiz.querySelectorAll(".question");
+    const outOf = filteredQuestions.length;
 
     if (unansweredQuestions.length < questions.length) {
-        pastAttempts.push({
+        const modules = getSelectedModules();
+        const attemptData = {
             timestamp: Date.now(),
             exam: examSelection.querySelector("input:checked").id,
-            modules: getSelectedModules()
-                .map((x) => parseInt(x))
-                .join(", "),
+            modules: modules.map((x) => parseInt(x)).join(", "),
             duration: navText.innerText,
             score: score,
             outOf: outOf,
-            data: getAttemptData(answeredQuestions),
-        });
+            data: getAttemptData(filteredQuestions),
+        };
+        pastAttempts.push(attemptData);
+        if (leaderboardToggle.checked && score > 0) {
+            attemptData.outOf = sum(modules.map(questionsData.sizeOf));
+            attemptData.grade = score / attemptData.outOf;
+            attemptData.user = getUsername();
+            if (!discardUnansweredQuestions.checked) {
+                const answeredQuestions =
+                    quiz.querySelectorAll(".question.answered");
+                attemptData.data = getAttemptData(answeredQuestions);
+            }
+            submitToLeaderboard(attemptData);
+        }
         localStorage.setItem("attempts", JSON.stringify(pastAttempts));
         knowledge.update(quiz);
     }

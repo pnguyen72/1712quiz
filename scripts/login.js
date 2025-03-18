@@ -32,7 +32,7 @@ loginTab.addEventListener("click", tologinMode);
 loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    if (loginForm.classList.contains("register")) {
+    if (loginForm.matches(".register")) {
         register();
     } else {
         login();
@@ -54,7 +54,15 @@ function toRegisterMode() {
 }
 
 function isLoggedIn() {
-    return footer.classList.contains("logged-in");
+    return footer.matches(".logged-in");
+}
+
+function getUsername() {
+    return username.innerText;
+}
+
+function setUsername(name) {
+    username.innerText = name;
 }
 
 function attemptLogin() {
@@ -74,20 +82,27 @@ function getRandomPassword() {
     return result;
 }
 
+async function usernameExists(username) {
+    await loadFirebase();
+    if (!userDB) return;
+
+    const docs = await userDB.where("name", "==", username).limit(1).get();
+    return docs.size > 0;
+}
+
 async function register() {
     await loadFirebase();
-    const username = usernameField.value.trim();
+    if (!userDB) return;
 
-    const usrDoc = await leaderboard.doc("users").get();
-    if (usrDoc.data()?.[username]) {
+    const username = usernameField.value.trim();
+    if (await usernameExists(username)) {
         alert("Username already exists.");
         usernameField.focus();
         return false;
     }
 
     const password = getRandomPassword();
-    leaderboard.doc("passwords").set({ [password]: username }, { merge: true });
-    leaderboard.doc("users").set({ [username]: true }, { merge: true });
+    userDB.doc(password).set({ name: username });
     localStorage.setItem("password", password);
     alert(`Your password is: ${password}\n\nKeep it safe and don't lose it.`);
     passwordField.value = password;
@@ -98,10 +113,11 @@ async function register() {
 
 async function login(option = { interactive: true }) {
     await loadFirebase();
-    const password = passwordField.value.trim();
+    if (!userDB) return;
 
-    const pwdDoc = await leaderboard.doc("passwords").get();
-    const username = pwdDoc.data()?.[password];
+    const password = passwordField.value.trim();
+    const userDoc = await userDB.doc(password).get();
+    const username = userDoc.data()?.name;
     if (!username) {
         if (option.interactive) {
             alert("Incorrect password.");
@@ -131,7 +147,7 @@ function stopAttemptLogin() {
 }
 
 function loginSuccess(name) {
-    username.innerText = name;
+    setUsername(name);
     footer.classList.add("logged-in");
     loginToggle.checked = true;
     localStorage.setItem("login", "true");
@@ -142,4 +158,12 @@ function logout() {
     footer.classList.remove("logged-in");
     leaderboardToggle.checked = false;
     localStorage.removeItem("login");
+}
+
+async function submitToLeaderboard(attemptData) {
+    await loadFirebase();
+    if (!leaderboardDB) return;
+
+    const attemptID = attemptData.user + attemptData.timestamp;
+    leaderboardDB.doc(attemptID).set(attemptData);
 }

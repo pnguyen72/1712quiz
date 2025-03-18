@@ -24,6 +24,10 @@ function sample(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
 
+function sum(array) {
+    return array.reduce((acc, val) => acc + val, 0);
+}
+
 function getColor(accuracy) {
     accuracy *= 100;
     const H = (5 / 4) * Math.max(accuracy - 20, 0);
