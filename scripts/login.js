@@ -17,6 +17,8 @@ leaderboardToggle.addEventListener("input", () => {
         localStorage.remove("leaderboard");
     } else if (!isLoggedIn()) {
         attemptLogin();
+    } else {
+        localStorage.setItem("leaderboard", true);
     }
 });
 
@@ -145,7 +147,10 @@ async function login(option = { interactive: true }) {
 
 function stopAttemptLogin() {
     leaderboardToggle.disabled = false;
-    leaderboardSlider.style.backgroundColor = "";
+    if (leaderboardSlider.style.backgroundColor) {
+        leaderboardSlider.style.backgroundColor = "";
+        localStorage.setItem("leaderboard", true);
+    }
     hide(loginPopup);
 }
 
@@ -153,7 +158,6 @@ function loginSuccess(name) {
     setUsername(name);
     footer.classList.add("logged-in");
     loginToggle.checked = true;
-    localStorage.setItem("leaderboard", leaderboardToggle.checked);
     localStorage.setItem("login", true);
     stopAttemptLogin();
 }
