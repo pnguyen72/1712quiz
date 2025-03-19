@@ -1,12 +1,48 @@
-if (!matchMedia("(hover: none)").matches) {
-    document
-        .querySelectorAll(".bx")
-        .forEach((icon) => icon.classList.add("bx-tada-hover"));
-}
-
 const urlParams = new URLSearchParams(window.location.search);
 const filterByUser = urlParams.get("user");
 const attemptID = urlParams.get("attempt");
+
+async function submitToLeaderboard(attemptData) {
+    await loadFirebase();
+    if (!leaderboardDB) return;
+
+    function betterThan(attempt1, attempt2) {
+        const grade1 = attempt1.score / attempt1.outOf;
+        const grade2 = attempt2.score / attempt2.outOf;
+
+        if (grade1 != grade2) return grade1 > grade2;
+
+        const speed1 = attempt1.speed;
+        const speed2 = attempt2.speed;
+
+        if (speed1 != speed2) return speed1 > speed2;
+
+        const timestamp1 = attempt1.timestamp;
+        const timestamp2 = attempt2.timestamp;
+
+        return timestamp1 > timestamp2;
+    }
+
+    leaderboardDB
+        .where("user", "==", attemptData.user)
+        .where("modules", "==", attemptData.modules)
+        .limit(1)
+        .get()
+        .then((snapshot) => {
+            if (snapshot.empty) {
+                // user + timestamp is just a convenient way to create a unique ID,
+                // it's does not necessarily reflect the actual user or timestamp of the attempt
+                const attemptID = `${attemptData.user}_${attemptData.timestamp}`;
+                leaderboardDB.doc(attemptID).set(attemptData);
+            } else {
+                snapshot.forEach(
+                    (doc) =>
+                        betterThan(attemptData, doc.data()) &&
+                        doc.ref.set(attemptData)
+                );
+            }
+        });
+}
 
 async function updateLeaderboard() {
     await loadFirebase();
@@ -30,6 +66,7 @@ async function updateLeaderboard() {
     }
     query
         .orderBy("grade", "desc")
+        .orderBy("outOf", "desc")
         .orderBy("speed", "desc")
         .limit(20)
         .onSnapshot((snapshot) => {
@@ -37,13 +74,8 @@ async function updateLeaderboard() {
                 .querySelectorAll(".row")
                 .forEach((row) => row.remove());
 
-            const seen = new Set();
-
-            snapshot.forEach((data) => {
-                const attempt = data.data();
-                const category = attempt.user + attempt.modules;
-                if (seen.has(category)) return;
-                seen.add(category);
+            snapshot.forEach((doc) => {
+                const attempt = doc.data();
 
                 const score = attempt.score;
                 const outOf = attempt.outOf;
@@ -71,11 +103,7 @@ async function updateLeaderboard() {
                 timestamp.className = "timestamp";
                 timestamp.setAttribute("value", attempt.timestamp);
                 timestamp.addEventListener("click", () =>
-                    open(
-                        "/leaderboard.html?attempt=" +
-                            attempt.user +
-                            attempt.timestamp
-                    )
+                    open("/leaderboard.html?attempt=" + doc.id)
                 );
 
                 modules.className = "modules";
@@ -113,10 +141,12 @@ async function updateLeaderboard() {
         });
 }
 
-if (!attemptID) {
-    form.removeEventListener("input", refreshAttemptsTable);
-    form.addEventListener("input", updateLeaderboard);
-    loadModulesNames().then(initalizeSelections);
-} else {
-    toQuizPage();
+if (location.pathname == "/leaderboard.html") {
+    if (!attemptID) {
+        form.removeEventListener("input", refreshAttemptsTable);
+        form.addEventListener("input", updateLeaderboard);
+        loadModulesNames().then(initalizeSelections);
+    } else {
+        toQuizPage();
+    }
 }

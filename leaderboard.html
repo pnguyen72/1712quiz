@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>COMP 1712 Practice Quiz</title>
+    <title>COMP 1712 Leaderboard</title>
     <meta content="website" property="og:type" />
     <meta content="COMP 1712 Leaderboard" property="og:title" />
-    <meta content="polina's best disciples" property="og:description" />
-    <meta content="https://quiz.comp1712.ca/leaderboard" property="og:url" />
+    <meta content="1712 gamified 🔥" property="og:description" />
+    <meta
+      content="https://quiz.comp1712.ca/leaderboard.html"
+      property="og:url"
+    />
     <meta
       content="https://quiz.comp1712.ca/images/favicon.ico"
       property="og:image"
@@ -104,7 +107,7 @@
             <tbody>
               <tr class="header">
                 <th class="user">User</th>
-                <th class="timestamp">Date</th>
+                <th class="timestamp">When</th>
                 <th class="modules">Module(s)</th>
                 <th class="duration">Duration</th>
                 <th class="result">Result</th>
@@ -216,6 +219,13 @@
     <div id="quiz-page" class="page">
       <div id="quiz"></div>
     </div>
+    <script>
+      if (!matchMedia("(hover: none)").matches) {
+        document
+          .querySelectorAll(".bx")
+          .forEach((icon) => icon.classList.add("bx-tada-hover"));
+      }
+    </script>
     <script src="./scripts/firebase.js"></script>
     <script src="./scripts/loader.js"></script>
     <script src="./scripts/globalVar.js"></script>

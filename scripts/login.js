@@ -167,11 +167,3 @@ function logout() {
     leaderboardToggle.checked = false;
     localStorage.removeItem("login");
 }
-
-async function submitToLeaderboard(attemptData) {
-    await loadFirebase();
-    if (!leaderboardDB) return;
-
-    const attemptID = attemptData.user + attemptData.timestamp;
-    leaderboardDB.doc(attemptID).set(attemptData);
-}
