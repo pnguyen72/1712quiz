@@ -186,8 +186,7 @@ function submit() {
             data: getAttemptData(filteredQuestions),
         };
         pastAttempts.push(attemptData);
-        if (leaderboardToggle.checked && score > 0) {
-            attemptData.grade = Math.round((10 * score) / outOf);
+        if (leaderboardToggle.checked && getUsername() && score > 0) {
             attemptData.speed = outOf / quizTimer.getTime();
             attemptData.user = getUsername();
             if (!discardUnansweredQuestions.checked) {

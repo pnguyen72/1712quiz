@@ -7,20 +7,16 @@ async function submitToLeaderboard(attemptData) {
     if (!leaderboardDB) return;
 
     function betterThan(attempt1, attempt2) {
-        const grade1 = attempt1.score / attempt1.outOf;
-        const grade2 = attempt2.score / attempt2.outOf;
+        if (attempt1.score != attempt2.score)
+            return attempt1.score > attempt2.score;
 
-        if (grade1 != grade2) return grade1 > grade2;
+        if (attempt1.outOf != attempt2.outOf)
+            return attempt1.outOf < attempt2.outOf;
 
-        const speed1 = attempt1.speed;
-        const speed2 = attempt2.speed;
+        if (attempt1.speed != attempt2.speed)
+            return attempt1.speed > attempt2.speed;
 
-        if (speed1 != speed2) return speed1 > speed2;
-
-        const timestamp1 = attempt1.timestamp;
-        const timestamp2 = attempt2.timestamp;
-
-        return timestamp1 > timestamp2;
+        return attempt1.timestamp > attempt2.timestamp;
     }
 
     leaderboardDB
@@ -65,8 +61,8 @@ async function updateLeaderboard() {
         query = query.where("user", "==", filterByUser);
     }
     query
-        .orderBy("grade", "desc")
-        .orderBy("outOf", "desc")
+        .orderBy("score", "desc")
+        .orderBy("outOf", "asc")
         .orderBy("speed", "desc")
         .limit(20)
         .onSnapshot((snapshot) => {
