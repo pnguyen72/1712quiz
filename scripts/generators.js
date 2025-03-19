@@ -261,7 +261,8 @@ function generateQuestion(questionId, questionIndex) {
             explanation.innerHTML = converter.makeHtml(value);
         } else {
             explanation.classList.add("empty");
-            explanation.innerHTML = placeholderExplanation;
+            explanation.innerHTML = `No explanation available.
+            <span id="placeholder-expansion">Why don't you add one?</span>`;
         }
     };
     explanation.write(questionData.explanation);
