@@ -4,21 +4,46 @@ if (!matchMedia("(hover: none)").matches) {
         .forEach((icon) => icon.classList.add("bx-tada-hover"));
 }
 
+const urlParams = new URLSearchParams(window.location.search);
+const filterByUser = urlParams.get("user");
+const attemptID = urlParams.get("attempt");
+
 async function updateLeaderboard() {
     await loadFirebase();
     if (!leaderboardDB) return;
 
-    leaderboardDB
-        .where("grade", ">=", 5)
+    const exam = getSelectedExam();
+    const modules = getSelectedModules();
+
+    let query = leaderboardDB;
+    if (modules.length > 0) {
+        query = query.where(
+            "modules",
+            "==",
+            modules.map((x) => parseInt(x)).join(", ")
+        );
+    } else {
+        query = query.where("exam", "==", exam);
+    }
+    if (filterByUser) {
+        query = query.where("user", "==", filterByUser);
+    }
+    query
         .orderBy("grade", "desc")
         .orderBy("speed", "desc")
+        .limit(20)
         .onSnapshot((snapshot) => {
             attemptsTable
                 .querySelectorAll(".row")
                 .forEach((row) => row.remove());
 
+            const seen = new Set();
+
             snapshot.forEach((data) => {
                 const attempt = data.data();
+                const category = attempt.user + attempt.modules;
+                if (seen.has(category)) return;
+                seen.add(category);
 
                 const score = attempt.score;
                 const outOf = attempt.outOf;
@@ -88,5 +113,10 @@ async function updateLeaderboard() {
         });
 }
 
-loadModulesNames().then(initalizeSelections);
-updateLeaderboard();
+if (!attemptID) {
+    form.removeEventListener("input", refreshAttemptsTable);
+    form.addEventListener("input", updateLeaderboard);
+    loadModulesNames().then(initalizeSelections);
+} else {
+    toQuizPage();
+}

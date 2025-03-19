@@ -58,6 +58,10 @@ function initalizeSelections() {
     loadResources();
 }
 
+function getSelectedExam() {
+    return examSelection.querySelector("input:checked")?.id;
+}
+
 function getSelectedModules() {
     const checkedBoxes = [
         ...document.querySelectorAll(".module-input:checked"),
@@ -66,7 +70,7 @@ function getSelectedModules() {
 }
 
 function refreshAttemptsTable() {
-    const selectedExam = examSelection.querySelector("input:checked")?.id;
+    const selectedExam = getSelectedExam();
     const selectedModules = getSelectedModules()
         .map((x) => parseInt(x))
         .join(", ");

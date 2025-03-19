@@ -13,11 +13,20 @@ table {
 #attempts-table-container {
   position: relative;
 
-  &:not(:has(.row.visible)) {
+  #leaderboard-empty {
     display: none;
   }
 
-  .bxs-x-circle {
+  &:not(:has(.row.visible)) {
+    #leaderboard-empty {
+      display: block;
+    }
+    #attempts-table {
+      display: none;
+    }
+  }
+
+  #attempts-table-delete {
     top: -0.75rem;
     right: -0.75rem;
   }

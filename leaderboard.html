@@ -75,24 +75,24 @@
               </select>
             </label>
           </div>
-          <div id="other-options" style="display: none">
+          <div id="other-options">
             <span>Other options:</span>
             <ul class="menu-choices">
               <li id="include-learned" style="display: none">
                 <label>
-                  <input type="checkbox" checked="true" />
+                  <input type="checkbox" checked />
                   <span>Include learned questions</span>
                 </label>
               </li>
               <li id="ignore-unanswered" style="display: none">
                 <label>
-                  <input type="checkbox" checked="true" />
+                  <input type="checkbox" />
                   <span>Discard unanswered questions</span>
                 </label>
               </li>
               <li id="explain" style="display: none">
                 <label>
-                  <input type="checkbox" checked="true" />
+                  <input type="checkbox" />
                   <span>Enable crowdsourced explanations</span>
                 </label>
               </li>
@@ -111,7 +111,13 @@
               </tr>
             </tbody>
           </table>
-          <i class="bx bxs-x-circle"></i>
+          <div id="leaderboard-empty" style="font-size: 1.5rem">
+            <p>There's nothing here to see. 😔</p>
+            <p>
+              But, you can <a href="/">take a quiz</a> to claim the first spot!
+              🔥
+            </p>
+          </div>
         </div>
       </div>
       <footer>

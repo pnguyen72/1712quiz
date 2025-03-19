@@ -65,18 +65,20 @@ nextButton.addEventListener("click", () => {
 prevQuest.addEventListener("click", () => questionsScroller.previous());
 nextQuest.addEventListener("click", () => questionsScroller.next());
 
-attemptsTableContainer.querySelector(".bx").addEventListener("click", () => {
-    if (
-        confirm(
-            "Delete attempts history? " +
-                "You will also lose track of which questions you have learned."
-        )
-    ) {
-        localStorage.removeItem("attempts");
-        localStorage.removeItem("knowledge");
-        location.reload();
-    }
-});
+document
+    .getElementById("attempts-table-delete")
+    ?.addEventListener("click", () => {
+        if (
+            confirm(
+                "Delete attempts history? " +
+                    "You will also lose track of which questions you have learned."
+            )
+        ) {
+            localStorage.removeItem("attempts");
+            localStorage.removeItem("knowledge");
+            location.reload();
+        }
+    });
 
 window.addEventListener("beforeprint", () => {
     const quiz = document.querySelector(
