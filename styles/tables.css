@@ -21,7 +21,8 @@ table {
     #leaderboard-empty {
       display: block;
     }
-    #attempts-table {
+    #attempts-table,
+    #attempts-table-delete {
       display: none;
     }
   }

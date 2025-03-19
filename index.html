@@ -53,7 +53,7 @@
       <span style="visibility: hidden">00:00:00</span>
       <i class="bx bxs-right-arrow-circle"></i>
     </nav>
-    <div id="home-page" class="page">
+    <div id="home-page" class="page visible">
       <h1 class="app-title">COMP 1712 Practice Quiz</h1>
       <div id="main">
         <form id="form">
@@ -140,22 +140,9 @@
         <div id="footer">
           <span id="welcome">
             Welcome,
-            <span id="username">username</span>
+            <span id="username"></span>
           </span>
-          <div id="login" class="toggle-container">
-            <span>Login</span>
-            <label>
-              <input type="checkbox" id="login-toggle" class="toggle" />
-              <span class="slider"></span>
-            </label>
-          </div>
-          <a
-            id="leaderboard-link"
-            href="/leaderboard.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Leaderboard</a
-          >
+          <a id="leaderboard-link" href="/leaderboard.html">Leaderboard</a>
           <div id="leaderboard" class="toggle-container">
             <div id="login-popup" style="display: none">
               <form id="login-form" class="register">
@@ -228,7 +215,7 @@
         </div>
       </footer>
     </div>
-    <div id="quiz-page" class="page">
+    <div id="quiz-page" class="page" style="display: none">
       <div id="quiz"></div>
     </div>
     <script src="./scripts/firebase.js"></script>

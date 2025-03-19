@@ -1,5 +1,4 @@
 const username = document.getElementById("username");
-const loginToggle = document.getElementById("login-toggle");
 const leaderboardToggle = document.getElementById("leaderboard-toggle");
 const loginPopup = document.getElementById("login-popup");
 const loginForm = document.getElementById("login-form");
@@ -13,16 +12,13 @@ const registerBtn = document.getElementById("register-btn");
 const loginBtn = document.getElementById("login-btn");
 
 leaderboardToggle.addEventListener("input", () => {
-    if (!leaderboardToggle.checked) {
-        localStorage.remove("leaderboard");
-    } else if (!isLoggedIn()) {
+    if (leaderboardToggle.checked) {
         attemptLogin();
-    } else {
         localStorage.setItem("leaderboard", true);
+    } else {
+        logout();
     }
 });
-
-loginToggle.addEventListener("input", () => logout());
 
 cancelLogin.addEventListener("click", () => {
     stopAttemptLogin();
@@ -137,12 +133,11 @@ async function login(option = { interactive: true }) {
         } else if (storedPassword) {
             passwordField.value = storedPassword;
         }
-        return false;
+        return;
     }
 
     localStorage.setItem("password", password);
     loginSuccess(username);
-    return true;
 }
 
 function stopAttemptLogin() {
@@ -157,13 +152,13 @@ function stopAttemptLogin() {
 function loginSuccess(name) {
     setUsername(name);
     footer.classList.add("logged-in");
-    loginToggle.checked = true;
-    localStorage.setItem("login", true);
     stopAttemptLogin();
+    leaderboardToggle.checked = true;
 }
 
 function logout() {
     footer.classList.remove("logged-in");
     leaderboardToggle.checked = false;
-    localStorage.removeItem("login");
+    localStorage.removeItem("leaderboard");
+    setUsername(null);
 }

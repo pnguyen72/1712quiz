@@ -38,7 +38,7 @@
 
   h2 {
     font-size: 1.75rem;
-    color: gray;
+    color: hsl(0, 0%, 60%);
     span:hover {
       text-decoration: underline;
     }

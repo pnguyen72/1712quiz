@@ -14,13 +14,17 @@
   &.logged-in {
     grid-template-areas:
       "welcome leaderboard-link github"
-      "login leaderboard dark-mode";
+      "welcome leaderboard dark-mode";
 
     @media (width < 750px) {
       grid-template-areas:
         "welcome github"
-        "login leaderboard-link"
+        "leaderboard-link github"
         "leaderboard dark-mode";
+
+      #github .bx {
+        font-size: 1.8em;
+      }
     }
   }
 
@@ -37,9 +41,6 @@
 
   #welcome {
     grid-area: welcome;
-  }
-  #login {
-    grid-area: login;
   }
   #leaderboard {
     grid-area: leaderboard;
@@ -74,14 +75,7 @@
 
   #github .bx {
     color: #04442c;
-    font-size: 1.6rem;
-
-    @media (width < 600px) {
-      font-size: 1.55rem;
-    }
-    @media (width < 450px) {
-      font-size: 1.5rem;
-    }
+    font-size: 1.65em;
   }
 
   .toggle-container {

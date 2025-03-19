@@ -27,13 +27,8 @@ function initalizeSelections() {
     passwordField.value = localStorage.getItem("password");
     if (passwordField.value) {
         tologinMode();
-        if (localStorage.getItem("login")) {
-            login({ interactive: false }).then((success) => {
-                if (success) {
-                    leaderboardToggle.checked =
-                        localStorage.getItem("leaderboard") == "true";
-                }
-            });
+        if (localStorage.getItem("leaderboard")) {
+            login({ interactive: false });
         }
     } else {
         toRegisterMode();
