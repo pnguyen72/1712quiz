@@ -3,17 +3,13 @@
   <head>
     <title>COMP 1712 Practice Quiz</title>
     <meta content="website" property="og:type" />
-    <meta content="COMP 1712 Practice Quiz" property="og:title" />
+    <meta content="COMP 1712 Leaderboard" property="og:title" />
+    <meta content="polina's best disciples" property="og:description" />
+    <meta content="https://quiz.comp1712.ca/leaderboard" property="og:url" />
     <meta
-      content="Like the Learning Hub practice quiz, but with better UI/UX and more advanced features."
-      property="og:description"
-    />
-    <meta content="https://quiz.comp1712.ca" property="og:url" />
-    <meta
-      content="https://quiz.comp1712.ca/images/license.png"
+      content="https://quiz.comp1712.ca/images/favicon.ico"
       property="og:image"
     />
-    <meta content="summary_large_image" name="twitter:card" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
@@ -48,16 +44,15 @@
         Next question
       </div>
     </div>
-    <nav id="navbar" class="panel visible">
+    <nav id="navbar" class="panel" style="display: none">
       <i class="bx bxs-home"></i>
-      <span style="visibility: hidden">00:00:00</span>
+      <span>00:00:00</span>
       <i class="bx bxs-right-arrow-circle"></i>
     </nav>
     <div id="home-page" class="page">
-      <h1>COMP 1712 Practice Quiz</h1>
       <div id="main">
         <form id="form">
-          <h1>COMP 1712 Practice Quiz</h1>
+          <h1>COMP 1712 Leaderboard</h1>
           <div id="exam-selection">
             <div>Exam:</div>
           </div>
@@ -68,7 +63,7 @@
             </div>
             <ul id="modules-list"></ul>
           </div>
-          <div>
+          <div style="display: none">
             <label>
               <span>Questions per attempt:</span>
               <select id="questions-count-choice" style="font-size: 1rem">
@@ -80,7 +75,7 @@
               </select>
             </label>
           </div>
-          <div id="other-options">
+          <div id="other-options" style="display: none">
             <span>Other options:</span>
             <ul class="menu-choices">
               <li id="include-learned" style="display: none">
@@ -104,27 +99,11 @@
             </ul>
           </div>
         </form>
-        <figure id="license-notice" style="display: none">
-          <img
-            src="images/hawaiian.jpg"
-            alt="man wearing a Hawaiian shirt"
-            id="hawaiian"
-          />
-          <p id="license-text">
-            By using this website you agree to wear a Hawaiian shirt to the
-            exam.
-          </p>
-          <div id="license-agree-btn">
-            <p id="license-agree-text">Agree</p>
-          </div>
-          <div id="license-disagree-btn">
-            <p id="license-disagree-text">no</p>
-          </div>
-        </figure>
         <div id="attempts-table-container">
           <table id="attempts-table">
             <tbody>
               <tr class="header">
+                <th class="user">User</th>
                 <th class="timestamp">Date</th>
                 <th class="modules">Module(s)</th>
                 <th class="duration">Duration</th>
@@ -151,10 +130,10 @@
           </div>
           <a
             id="leaderboard-link"
-            href="/leaderboard.html"
+            href="/"
             target="_blank"
             rel="noopener noreferrer"
-            >Leaderboard</a
+            >Practice quiz</a
           >
           <div id="leaderboard" class="toggle-container">
             <div id="login-popup" style="display: none">
@@ -241,9 +220,8 @@
     <script src="./scripts/navigations.js"></script>
     <script src="./scripts/quiz.js"></script>
     <script src="./scripts/events.js"></script>
-    <script src="./scripts/license.js"></script>
     <script src="./scripts/darkMode.js"></script>
     <script src="./scripts/login.js"></script>
-    <script src="./scripts/index.js"></script>
+    <script src="./scripts/leaderboard.js" type="module"></script>
   </body>
 </html>

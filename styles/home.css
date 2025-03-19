@@ -2,12 +2,12 @@
   display: flex;
   justify-content: space-between;
 
-  min-height: calc(100vh - 6.5rem);
+  min-height: calc(100vh - 4rem);
   @media (width < 600px) {
-    min-height: calc(100vh - 6rem);
+    min-height: calc(100vh - 3.5rem);
   }
   @media (width < 450px) {
-    min-height: calc(100vh - 5.5rem);
+    min-height: calc(100vh - 3rem);
   }
 
   > h1 {

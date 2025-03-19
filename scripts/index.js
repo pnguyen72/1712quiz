@@ -3,8 +3,6 @@ if (!matchMedia("(hover: none)").matches) {
         .querySelectorAll(".bx")
         .forEach((icon) => icon.classList.add("bx-tada-hover"));
 }
-tohomePage();
 loadStorage();
-await loadModulesNames();
-initalizeSelections();
-licenseLock();
+updateAttemptsTable();
+loadModulesNames().then(initalizeSelections).then(licenseLock);

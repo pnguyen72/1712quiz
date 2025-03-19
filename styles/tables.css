@@ -30,7 +30,7 @@ table {
   }
 
   #attempts-table {
-    td.timestamp {
+    td:is(.user, .timestamp) {
       cursor: pointer;
       color: blue;
       &:hover {

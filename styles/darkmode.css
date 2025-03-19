@@ -193,7 +193,7 @@ td {
 }
 #attempts-table-container {
   #attempts-table {
-    td.timestamp {
+    td:is(.user, .timestamp) {
       color: cyan !important;
     }
   }

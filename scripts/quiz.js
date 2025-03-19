@@ -22,10 +22,10 @@ function startTimer(initial = 0) {
             display(time);
         }, 1000),
         getTime: () => time,
-        stop: () => clearInterval(quizTimer.id),
+        stop: () => clearInterval(this.id),
     };
 }
-
+    
 function explainLearnedQuestions() {
     if (
         !localStorage.getItem("learnedQuestionsExplained") &&

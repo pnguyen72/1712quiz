@@ -183,12 +183,13 @@ function submit() {
         pastAttempts.push(attemptData);
         if (leaderboardToggle.checked && score > 0) {
             attemptData.outOf = sum(modules.map(questionsData.sizeOf));
-            attemptData.grade = score / attemptData.outOf;
+            attemptData.grade = Math.round((10 * score) / attemptData.outOf);
+            attemptData.speed = attemptData.outOf / quizTimer.getTime();
             attemptData.user = getUsername();
             if (!discardUnansweredQuestions.checked) {
-                const answeredQuestions =
-                    quiz.querySelectorAll(".question.answered");
-                attemptData.data = getAttemptData(answeredQuestions);
+                attemptData.data = getAttemptData(
+                    quiz.querySelectorAll(".question.answered")
+                );
             }
             submitToLeaderboard(attemptData);
         }
