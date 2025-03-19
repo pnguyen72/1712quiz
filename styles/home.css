@@ -10,11 +10,11 @@
     min-height: calc(100vh - 3rem);
   }
 
-  > h1 {
+  > .app-title {
     display: none;
   }
 
-  h1 {
+  .app-title {
     font-size: 2rem;
     @media (width < 600px) {
       font-size: 1.75rem;
@@ -22,6 +22,7 @@
     margin-top: 1rem;
     margin-bottom: 1.5rem;
     white-space: nowrap;
+    cursor: pointer;
   }
 
   form {
@@ -115,5 +116,9 @@
     }
 
     margin-bottom: 2.5rem;
+  }
+
+  #leaderboard-empty {
+    font-size: 1.5rem;
   }
 }

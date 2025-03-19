@@ -1,6 +1,6 @@
-const urlParams = new URLSearchParams(window.location.search);
-const filterByUser = urlParams.get("user");
-const attemptID = urlParams.get("attempt");
+function isLeaderboardPage() {
+    return location.pathname.endsWith("leaderboard.html");
+}
 
 async function submitToLeaderboard(attemptData) {
     await loadFirebase();
@@ -73,6 +73,7 @@ async function updateLeaderboard() {
             attemptsTable
                 .querySelectorAll(".row")
                 .forEach((row) => row.remove());
+            document.getElementById("leaderboard-empty").style.display = "";
 
             snapshot.forEach((doc) => {
                 const attempt = doc.data();
@@ -96,14 +97,18 @@ async function updateLeaderboard() {
 
                 user.className = "user";
                 user.innerText = attempt.user;
-                user.addEventListener("click", () =>
-                    open("/leaderboard.html?user=" + attempt.user)
+                user.addEventListener(
+                    "click",
+                    () =>
+                        filterByUser != attempt.user &&
+                        (location = `/leaderboard.html?user=${attempt.user}`)
                 );
 
                 timestamp.className = "timestamp";
                 timestamp.setAttribute("value", attempt.timestamp);
-                timestamp.addEventListener("click", () =>
-                    open("/leaderboard.html?attempt=" + doc.id)
+                timestamp.addEventListener(
+                    "click",
+                    () => (location = `/leaderboard.html?attempt=${doc.id}`)
                 );
 
                 modules.className = "modules";
@@ -139,14 +144,4 @@ async function updateLeaderboard() {
 
             refreshAttemptsTable();
         });
-}
-
-if (location.pathname == "/leaderboard.html") {
-    if (!attemptID) {
-        form.removeEventListener("input", refreshAttemptsTable);
-        form.addEventListener("input", updateLeaderboard);
-        loadModulesNames().then(initalizeSelections);
-    } else {
-        toQuizPage();
-    }
 }

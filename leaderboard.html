@@ -55,7 +55,7 @@
     <div id="home-page" class="page">
       <div id="main">
         <form id="form">
-          <h1>COMP 1712 Leaderboard</h1>
+          <h1 class="app-title">COMP 1712 Leaderboard</h1>
           <div id="exam-selection">
             <div>Exam:</div>
           </div>
@@ -78,7 +78,7 @@
               </select>
             </label>
           </div>
-          <div id="other-options">
+          <div id="other-options" style="display: none">
             <span>Other options:</span>
             <ul class="menu-choices">
               <li id="include-learned" style="display: none">
@@ -114,12 +114,9 @@
               </tr>
             </tbody>
           </table>
-          <div id="leaderboard-empty" style="font-size: 1.5rem">
-            <p>There's nothing here to see. 😔</p>
-            <p>
-              But, you can <a href="/">take a quiz</a> to claim the first spot!
-              🔥
-            </p>
+          <div id="leaderboard-empty" style="display: none">
+            <p>🤫 No one has found this page yet.</p>
+            <p><a href="/">Take a quiz</a> to claim the first spot! 🔥</p>
           </div>
         </div>
       </div>
@@ -219,13 +216,6 @@
     <div id="quiz-page" class="page">
       <div id="quiz"></div>
     </div>
-    <script>
-      if (!matchMedia("(hover: none)").matches) {
-        document
-          .querySelectorAll(".bx")
-          .forEach((icon) => icon.classList.add("bx-tada-hover"));
-      }
-    </script>
     <script src="./scripts/firebase.js"></script>
     <script src="./scripts/loader.js"></script>
     <script src="./scripts/globalVar.js"></script>
@@ -238,6 +228,7 @@
     <script src="./scripts/events.js"></script>
     <script src="./scripts/darkMode.js"></script>
     <script src="./scripts/login.js"></script>
-    <script src="./scripts/leaderboard.js" type="module"></script>
+    <script src="./scripts/leaderboard.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

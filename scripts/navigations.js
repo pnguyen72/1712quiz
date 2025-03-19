@@ -51,7 +51,8 @@ function initalizeSelections() {
     }
     if (localStorage.getItem("explanationWarned")) {
         unhide(explainSelection);
-        const enabled = localStorage.getItem("explain") == "true";
+        const enabled =
+            localStorage.getItem("explain") == "true" && !isLeaderboardPage();
         enableExplanations.checked = enabled;
         if (!enabled) return;
     }
