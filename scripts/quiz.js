@@ -22,7 +22,7 @@ function startTimer(initial = 0) {
             display(time);
         }, 1000),
         getTime: () => time,
-        stop: () => clearInterval(this.id),
+        stop: () => clearInterval(quizTimer.id),
     };
 }
     
