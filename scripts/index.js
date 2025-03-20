@@ -8,7 +8,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const filterByUser = urlParams.get("user");
 const attemptID = urlParams.get("attempt");
 
-function init() {
+async function init() {
     if (!isLeaderboardPage()) {
         loadStorage();
         updateAttemptsTable();
@@ -21,6 +21,7 @@ function init() {
         loadModulesNames().then(initalizeSelections);
     } else {
         toQuizPage();
+        generatePastAttempt(await getLeaderboardAttempt(attemptID));
     }
 }
 

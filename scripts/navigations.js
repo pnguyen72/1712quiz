@@ -127,12 +127,14 @@ function nextQuiz() {
         moduleSelection.style.animation = "blink 1s";
         return;
     }
-    const questionsIds = getQuiz(modules, questionsCount);
-    generateQuiz(questionsIds, (quiz) => {
-        recoverAttempt(quiz);
-        explainLearnedQuestions();
-        quiz.addEventListener("input", saveProgress);
-        nextButton.disabled = false;
+
+    getQuiz(modules, questionsCount).then((questionsIds) => {
+        generateQuiz(questionsIds, (quiz) => {
+            recoverAttempt(quiz);
+            explainLearnedQuestions();
+            quiz.addEventListener("input", saveProgress);
+            nextButton.disabled = false;
+        });
     });
     toQuizPage();
     startTimer();

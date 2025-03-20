@@ -1,5 +1,5 @@
 let modulesNames = null;
-let questionsData = {};
+let questionsData = { __loader: {} };
 const pastAttempts = localStorage.getItem("attempts")
     ? JSON.parse(localStorage.getItem("attempts"))
     : [];
@@ -14,38 +14,43 @@ function loadStorage() {
 
 questionsData.load = function (module) {
     if (Object.hasOwn(this, module)) {
-        return Promise.resolve();
+        return Promise.resolve(this[module]);
     }
-    this[module] = {};
-    return fetch(`./data/modules/${module}.json`)
+    if (Object.hasOwn(this.__loader, module)) {
+        return this.__loader[module];
+    }
+    this.__loader[module] = fetch(`./data/modules/${module}.json`)
         .then((response) => response.json())
         .catch(() => new Object())
         .then((questions) => {
             this[module] = questions;
             modulesSize[module] = Object.keys(questions).length;
+            return questions;
         });
+    return this.__loader[module];
 };
 
-questionsData.get = function (id) {
+questionsData.get = async function (id) {
     const module = id.split("_")[0];
-    return questionsData[module][id];
+    const moduleQuestions = await this.load(module);
+    return moduleQuestions[id];
 };
 
-questionsData.sizeOf = function (module) {
+questionsData.sizeOf = async function (module) {
     if (
         !Object.hasOwn(questionsData, module) &&
         Object.hasOwn(modulesSize, module)
     ) {
         return modulesSize[module];
     }
-    return Object.keys(questionsData[module] ?? {}).length;
+    return Object.keys((await this.load(module)) ?? {}).length;
 };
 
 modulesSize.save = function () {
     localStorage.setItem("modulesSize", JSON.stringify(modulesSize));
 };
 
-function getQuiz(modules, count) {
+async function getQuiz(modules, count) {
     let recoveredQuestions = unfinishedAttempts.get(modules, count);
     if (recoveredQuestions.length >= count) {
         return recoveredQuestions;
@@ -53,7 +58,9 @@ function getQuiz(modules, count) {
 
     let newQuestions = [];
     for (const module of modules) {
-        newQuestions = newQuestions.concat(Object.keys(questionsData[module]));
+        newQuestions = newQuestions.concat(
+            Object.keys(await questionsData.load(module))
+        );
     }
     if (!includeLearnedQuestions.checked) {
         newQuestions = newQuestions.filter((id) => !knowledge.hasLearned(id));

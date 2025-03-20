@@ -141,3 +141,11 @@ async function updateLeaderboard() {
             refreshAttemptsTable();
         });
 }
+
+async function getLeaderboardAttempt(id) {
+    await loadFirebase();
+    if (!leaderboardDB) return;
+
+    const attemptDoc = await leaderboardDB.doc(id).get();
+    return attemptDoc.data();
+}

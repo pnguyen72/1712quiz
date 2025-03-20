@@ -106,7 +106,7 @@ function generateModuleSelection() {
     Promise.all(loadPromises).then(modulesSize.save);
 }
 
-function generateQuiz(questionsIds, callback) {
+async function generateQuiz(questionsIds, callback) {
     const quiz = document.createElement("div");
     document.getElementById("quiz").replaceWith(quiz);
     quiz.id = "quiz";
@@ -116,20 +116,31 @@ function generateQuiz(questionsIds, callback) {
 
     const total_count = questionsIds.length;
     const first_round_count = Math.min(5, total_count);
-    for (let i = 0; i < first_round_count; ++i)
-        quiz.appendChild(generateQuestion(questionsIds[i], i));
+    for (let i = 0; i < first_round_count; ++i) {
+        const questionId = questionsIds[i];
+        generateQuestion(questionId, i).then((question) =>
+            quiz.appendChild(question)
+        );
+    }
     setTimeout(() => {
-        for (let i = first_round_count; i < total_count; ++i)
-            quiz.appendChild(generateQuestion(questionsIds[i], i));
+        for (let i = first_round_count; i < total_count; ++i) {
+            const questionId = questionsIds[i];
+            generateQuestion(questionId, i).then((question) =>
+                quiz.appendChild(question)
+            );
+        }
         callback(quiz);
     }, 200);
 }
 
-function generatePastAttempt(attemptData) {
-    const questionsIds = Object.keys(attemptData);
-    unfinishedAttempts.set(attemptData);
+async function generatePastAttempt(attempt) {
+    showResult(attempt.score, attempt.outOf);
+    navText.innerText = attempt.duration;
+
+    const questionsIds = Object.keys(attempt.data);
+    unfinishedAttempts.set(attempt.data);
     questionsIds.forEach((id) => {
-        if (attemptData[id].learned) {
+        if (attempt.data[id].learned) {
             knowledge.learn(id);
         } else {
             knowledge.unlearn(id);
@@ -145,10 +156,12 @@ function generatePastAttempt(attemptData) {
     quiz.classList.add("submitted");
 
     function addQuestion(index) {
-        const question = generateQuestion(questionsIds[index], index);
-        recoverQuestion(question);
-        gradeQuestion(question);
-        quiz.appendChild(question);
+        const questionId = questionsIds[index];
+        return generateQuestion(questionId, index).then((question) => {
+            recoverQuestion(question);
+            gradeQuestion(question);
+            quiz.appendChild(question);
+        });
     }
 
     const total_count = questionsIds.length;
@@ -157,16 +170,19 @@ function generatePastAttempt(attemptData) {
         addQuestion(i);
     }
     setTimeout(() => {
+        const promises = [];
         for (let i = first_round_count; i < total_count; ++i) {
-            addQuestion(i);
+            promises.push(addQuestion(i));
         }
-        unfinishedAttempts.load();
-        knowledge.load();
+        Promise.all(promises).then(() => {
+            unfinishedAttempts.load();
+            knowledge.load();
+        });
     }, 200);
 }
 
-function generateQuestion(questionId, questionIndex) {
-    const questionData = questionsData.get(questionId);
+async function generateQuestion(questionId, questionIndex) {
+    const questionData = await questionsData.get(questionId);
     const choices = Object.entries(questionData.choices);
     const attemptData = unfinishedAttempts.get(questionId);
     shuffleChoices(choices);
@@ -376,10 +392,8 @@ function updateAttemptsTable() {
             timestamp.className = "timestamp";
             timestamp.setAttribute("value", attempt.timestamp);
             timestamp.addEventListener("click", () => {
-                generatePastAttempt(attempt.data);
                 toQuizPage();
-                showResult(score, outOf);
-                navText.innerText = attempt.duration;
+                generatePastAttempt(attempt);
             });
 
             modules.className = "modules";
@@ -414,7 +428,7 @@ function updateAttemptsTable() {
     refreshAttemptsTable();
 }
 
-function updateCoverage() {
+async function updateCoverage() {
     const modules = homePage.querySelector("#modules-list");
     if (!modules.querySelector("li")) return; // if module list hasn't been generated
 
@@ -427,7 +441,7 @@ function updateCoverage() {
         const moduleCoverage = module.querySelector(".coverage");
 
         const covered = knowledge.sizeOf(moduleNum);
-        const size = questionsData.sizeOf(moduleNum);
+        const size = await questionsData.sizeOf(moduleNum);
         coveredTotal += covered;
         sizeTotal += size;
 
