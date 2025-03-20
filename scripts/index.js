@@ -15,14 +15,24 @@ async function init() {
         loadModulesNames().then(initalizeSelections).then(licenseLock);
         return;
     }
-    if (!attemptID) {
-        form.removeEventListener("input", refreshAttemptsTable);
-        form.addEventListener("input", updateLeaderboard);
-        loadModulesNames().then(initalizeSelections);
-    } else {
-        toQuizPage();
-        generatePastAttempt(await getLeaderboardAttempt(attemptID));
+
+    if (attemptID) {
+        visitLeaderboardAttempt(attemptID);
+        homeButton.removeEventListener("click", tohomePage);
+        homeButton.addEventListener(
+            "click",
+            () => (location = "/leaderboard.html")
+        );
+        nextButton.removeEventListener("click", toNextPage);
+        nextButton.addEventListener(
+            "click",
+            () => (location = "/leaderboard.html")
+        );
     }
+
+    form.removeEventListener("input", refreshAttemptsTable);
+    form.addEventListener("input", updateLeaderboard);
+    loadModulesNames().then(initalizeSelections);
 }
 
 init();

@@ -99,16 +99,38 @@ function refreshAttemptsTable() {
 }
 
 function tohomePage() {
-    updateAttemptsTable();
-    updateCoverage();
-    updateOngoingLabels();
-    navText.style.visibility = "hidden";
-    saveProgress();
+    if (isLeaderboardPage()) {
+        hide(navbar);
+    } else {
+        updateAttemptsTable();
+        updateCoverage();
+        updateOngoingLabels();
+        navText.style.visibility = "hidden";
+        saveProgress();
+    }
     hide(quizPage);
     unhide(homePage);
 }
 
+function toNextPage() {
+    if (nextButton.disabled) {
+        return;
+    }
+    if (isLeaderboardPage()) {
+        tohomePage();
+        return;
+    }
+    if (document.querySelector("#quiz-page.visible #quiz:not(.submitted)")) {
+        submit();
+    } else {
+        nextQuiz();
+    }
+}
+
 function toQuizPage() {
+    if (isLeaderboardPage()) {
+        unhide(navbar);
+    }
     navText.style.visibility = "visible";
     quizTimer.stop();
     reviewPanel.style.backgroundColor = "";

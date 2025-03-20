@@ -102,10 +102,10 @@ async function updateLeaderboard() {
 
                 timestamp.className = "timestamp";
                 timestamp.setAttribute("value", attempt.timestamp);
-                timestamp.addEventListener(
-                    "click",
-                    () => (location = `/leaderboard.html?attempt=${doc.id}`)
-                );
+                timestamp.addEventListener("click", () => {
+                    toQuizPage();
+                    generatePastAttempt(attempt);
+                });
 
                 modules.className = "modules";
                 modules.innerText = attempt.modules;
@@ -142,10 +142,12 @@ async function updateLeaderboard() {
         });
 }
 
-async function getLeaderboardAttempt(id) {
+async function visitLeaderboardAttempt(id) {
+    toQuizPage();
+
     await loadFirebase();
     if (!leaderboardDB) return;
 
     const attemptDoc = await leaderboardDB.doc(id).get();
-    return attemptDoc.data();
+    generatePastAttempt(attemptDoc.data());
 }

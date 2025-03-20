@@ -58,15 +58,8 @@ enableExplanations.addEventListener("input", () => {
     localStorage.setItem("explain", enabled);
 });
 
-homeButon.addEventListener("click", tohomePage);
-nextButton.addEventListener("click", () => {
-    if (nextButton.disabled) return;
-    if (document.querySelector("#quiz-page.visible #quiz:not(.submitted)")) {
-        submit();
-    } else {
-        nextQuiz();
-    }
-});
+homeButton.addEventListener("click", tohomePage);
+nextButton.addEventListener("click", toNextPage);
 
 prevQuest.addEventListener("click", () => questionsScroller.previous());
 nextQuest.addEventListener("click", () => questionsScroller.next());
