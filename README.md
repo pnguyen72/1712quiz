@@ -14,8 +14,10 @@ All questions and answers are taken from Learning Hub practice quizzes (765 in t
 - Unable to finish the quiz? Just submit, unanswered questions don't count.
 - Questions you've answered correctly won't appear in future quizzes.
 - The quiz page containing all questions with highlighted answers can be printed to pdf.
-- Crowdsourced explanations for quiz questions. Currently 244 / 765 questions (~32%) have explanations.<br>
-  (It's not moderated, please play nice. 🙏)
+
+Plus a few gimmicks (things no one asked for but I added anyway because why not):
+- Crowdsourced explanations of quiz questions
+- A leaderboard: <https://quiz.comp1712.ca/leaderboard>
 
 ## Images
 
