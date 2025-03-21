@@ -39,6 +39,15 @@
     }
   }
 
+  &.leaderboard-page {
+    display: flex;
+
+    #welcome,
+    #leaderboard {
+      display: none;
+    }
+  }
+
   #welcome {
     grid-area: welcome;
   }

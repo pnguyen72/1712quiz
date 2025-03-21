@@ -24,14 +24,16 @@ function initalizeSelections() {
         questionsCountChoice.value = questionsCount;
     }
 
-    passwordField.value = localStorage.getItem("password");
-    if (passwordField.value) {
-        tologinMode();
-        if (localStorage.getItem("leaderboard")) {
-            login({ interactive: false });
+    if (!isLeaderboardPage()) {
+        passwordField.value = localStorage.getItem("password");
+        if (passwordField.value) {
+            tologinMode();
+            if (localStorage.getItem("leaderboard")) {
+                login({ interactive: false });
+            }
+        } else {
+            toRegisterMode();
         }
-    } else {
-        toRegisterMode();
     }
 
     if (localStorage.getItem("learnedQuestionsExplained")) {

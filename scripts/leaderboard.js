@@ -1,11 +1,12 @@
 const appTitle = document.querySelector(".app-title span");
 
-appTitle.parentElement
-    .querySelector(".bx")
-    .addEventListener("click", stopFilterByUser);
-
 function isLeaderboardPage() {
     return location.pathname.endsWith("leaderboard.html");
+}
+
+if (isLeaderboardPage()) {
+    const stopFilterButton = appTitle.parentElement.querySelector(".bx");
+    stopFilterButton.addEventListener("click", stopFilterByUser);
 }
 
 async function submitToLeaderboard(attemptData) {
