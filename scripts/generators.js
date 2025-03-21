@@ -429,6 +429,8 @@ function updateAttemptsTable() {
 }
 
 async function updateCoverage() {
+    if (isLeaderboardPage()) return;
+
     const modules = homePage.querySelector("#modules-list");
     if (!modules.querySelector("li")) return; // if module list hasn't been generated
 
@@ -497,6 +499,8 @@ async function updateCoverage() {
 }
 
 function updateOngoingLabels() {
+    if (isLeaderboardPage()) return;
+
     document.querySelectorAll(".module-input").forEach((input) => {
         const ongoingLabel = input.parentElement.querySelector(".ongoing");
         if (Object.keys(unfinishedAttempts[input.id] ?? {}).length > 0) {
