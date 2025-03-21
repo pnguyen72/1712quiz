@@ -1,3 +1,9 @@
+const appTitle = document.querySelector(".app-title span");
+
+appTitle.parentElement
+    .querySelector(".bx")
+    .addEventListener("click", stopFilterByUser);
+
 function isLeaderboardPage() {
     return location.pathname.endsWith("leaderboard.html");
 }
@@ -57,8 +63,8 @@ async function updateLeaderboard() {
     } else {
         query = query.where("exam", "==", exam);
     }
-    if (filterByUser) {
-        query = query.where("user", "==", filterByUser);
+    if (selectedUser) {
+        query = query.where("user", "==", selectedUser);
     }
     query
         .orderBy("score", "desc")
@@ -93,11 +99,8 @@ async function updateLeaderboard() {
 
                 user.className = "user";
                 user.innerText = attempt.user;
-                user.addEventListener(
-                    "click",
-                    () =>
-                        filterByUser != attempt.user &&
-                        (location = `/leaderboard.html?user=${attempt.user}`)
+                user.addEventListener("click", () =>
+                    filterByUser(attempt.user)
                 );
 
                 timestamp.className = "timestamp";
@@ -140,6 +143,19 @@ async function updateLeaderboard() {
 
             refreshAttemptsTable();
         });
+}
+
+function filterByUser(username) {
+    selectedUser = username;
+    appTitle.innerHTML = `
+    COMP 1712: <span class="username">${username}</span>`;
+    updateLeaderboard();
+}
+
+function stopFilterByUser() {
+    selectedUser = null;
+    appTitle.innerHTML = "COMP 1712 Leaderboard";
+    updateLeaderboard();
 }
 
 async function visitLeaderboardAttempt(id) {

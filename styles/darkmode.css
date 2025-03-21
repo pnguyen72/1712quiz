@@ -45,6 +45,10 @@ td {
   outline: solid 1px #0f0116;
 }
 
+#home-page .app-title .username {
+  color: hsl(270, 100%, 75%);
+}
+
 #home-page:has(#license-notice.visible) #main #license-notice {
   #hawaiian {
     /* Make the license image a little nicer on the eyes. */

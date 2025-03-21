@@ -5,7 +5,7 @@ if (!matchMedia("(hover: none)").matches) {
 }
 
 const urlParams = new URLSearchParams(window.location.search);
-const filterByUser = urlParams.get("user");
+let selectedUser = urlParams.get("user");
 const attemptID = urlParams.get("attempt");
 
 async function init() {

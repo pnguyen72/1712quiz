@@ -1,12 +1,6 @@
 window.addEventListener("beforeunload", saveProgress);
 document.addEventListener("scroll", () => (questionsScroller.current = null));
 
-document
-    .querySelectorAll(".app-title")
-    .forEach((title) =>
-        title.addEventListener("click", () => (location = location.pathname))
-    );
-
 moduleSelection.addEventListener(
     "animationend",
     () => (moduleSelection.style.animation = "")
