@@ -43,6 +43,7 @@ function tologinMode() {
     passwordField.focus();
     passwordField.required = true;
     usernameField.required = false;
+    username.value = "";
 }
 
 function toRegisterMode() {
