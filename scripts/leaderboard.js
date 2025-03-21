@@ -1,7 +1,7 @@
 const appTitle = document.querySelector(".app-title span");
 
 function isLeaderboardPage() {
-    return location.pathname.endsWith("leaderboard.html");
+    return typeof LEADERBOARD_PAGE != "undefined";
 }
 
 if (isLeaderboardPage()) {
