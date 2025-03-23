@@ -8,7 +8,7 @@ const urlParams = new URLSearchParams(window.location.search);
 let selectedUser = urlParams.get("user");
 const attemptID = urlParams.get("attempt");
 
-async function init() {
+(() => {
     if (!isLeaderboardPage()) {
         loadStorage();
         updateAttemptsTable();
@@ -33,6 +33,4 @@ async function init() {
     form.removeEventListener("input", refreshAttemptsTable);
     form.addEventListener("input", updateLeaderboard);
     loadModulesNames().then(initalizeSelections);
-}
-
-init();
+})();
