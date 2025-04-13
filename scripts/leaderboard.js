@@ -1,4 +1,5 @@
 const appTitle = document.querySelector(".app-title span");
+let selectedUser = null;
 
 function isLeaderboardPage() {
     return typeof LEADERBOARD_PAGE != "undefined";
@@ -89,27 +90,36 @@ async function updateLeaderboard() {
                 );
                 const [H, S, L] = getColor(accuracy);
 
-                const row = document.createElement("tr");
+                const userLink = document.createElement("a");
                 const user = document.createElement("td");
+                const attemptLink = document.createElement("a");
                 const timestamp = document.createElement("td");
                 const modules = document.createElement("td");
                 const duration = document.createElement("td");
                 const result = document.createElement("td");
                 const resultScore = document.createElement("span");
                 const resultPercentage = document.createElement("span");
+                const row = document.createElement("tr");
 
+                userLink.href = `?user=${attempt.user}`;
+                userLink.className = "username";
+                userLink.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    filterByUser(attempt.user);
+                });
+                userLink.innerText = attempt.user;
                 user.className = "user";
-                user.innerText = attempt.user;
-                user.addEventListener("click", () =>
-                    filterByUser(attempt.user)
-                );
+                user.appendChild(userLink);
 
-                timestamp.className = "timestamp";
-                timestamp.setAttribute("value", attempt.timestamp);
-                timestamp.addEventListener("click", () => {
+                attemptLink.href = `?attempt=${doc.id}`;
+                attemptLink.className = "timestamp";
+                attemptLink.setAttribute("value", attempt.timestamp);
+                attemptLink.addEventListener("click", (e) => {
+                    e.preventDefault();
                     toQuizPage();
                     generatePastAttempt(attempt);
                 });
+                timestamp.appendChild(attemptLink);
 
                 modules.className = "modules";
                 modules.innerText = attempt.modules;
@@ -154,9 +164,13 @@ function filterByUser(username) {
 }
 
 function stopFilterByUser() {
-    selectedUser = null;
-    appTitle.innerHTML = "COMP 1712 Leaderboard";
-    updateLeaderboard();
+    if (urlSelectedUser) {
+        location = "/leaderboard.html";
+    } else {
+        selectedUser = null;
+        appTitle.innerHTML = "COMP 1712 Leaderboard";
+        updateLeaderboard();
+    }
 }
 
 async function visitLeaderboardAttempt(id) {

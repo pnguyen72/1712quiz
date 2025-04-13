@@ -5,8 +5,7 @@ if (!matchMedia("(hover: none)").matches) {
 }
 
 const urlParams = new URLSearchParams(window.location.search);
-let selectedUser = urlParams.get("user");
-const attemptID = urlParams.get("attempt");
+const urlSelectedUser = urlParams.get("user");
 
 (() => {
     if (!isLeaderboardPage()) {
@@ -16,8 +15,9 @@ const attemptID = urlParams.get("attempt");
         return;
     }
 
-    if (attemptID) {
-        visitLeaderboardAttempt(attemptID);
+    const urlAttemptID = urlParams.get("attempt");
+    if (urlAttemptID) {
+        visitLeaderboardAttempt(urlAttemptID);
         homeButton.removeEventListener("click", tohomePage);
         homeButton.addEventListener(
             "click",
@@ -28,6 +28,8 @@ const attemptID = urlParams.get("attempt");
             "click",
             () => (location = "/leaderboard.html")
         );
+    } else if (urlSelectedUser) {
+        filterByUser(urlSelectedUser);
     }
 
     form.removeEventListener("input", refreshAttemptsTable);
