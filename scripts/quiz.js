@@ -25,7 +25,7 @@ function startTimer(initial = 0) {
         stop: () => clearInterval(quizTimer.id),
     };
 }
-    
+
 function explainLearnedQuestions() {
     if (
         !localStorage.getItem("learnedQuestionsExplained") &&
@@ -134,10 +134,13 @@ function recoverAttempt(quiz) {
     quizTimer.stop();
     startTimer(time);
     checkCompletion(quiz);
-    quiz.querySelector(".question:not(.answered)")
-        ?.blink()
-        ?.previous()
-        ?.scrollTo();
+
+    const unansweredQuestion = quiz.querySelector(".question:not(.answered)");
+    if (unansweredQuestion) {
+        unansweredQuestion.blink().previous()?.scrollTo();
+    } else {
+        quiz.querySelector(".question:last-child")?.scrollTo();
+    }
 }
 
 function recoverQuestion(question) {

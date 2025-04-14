@@ -129,7 +129,7 @@ async function generateQuiz(questionsIds, callback) {
                 quiz.appendChild(question)
             );
         }
-        callback(quiz);
+        setTimeout(() => callback(quiz), 300);
     }, 200);
 }
 

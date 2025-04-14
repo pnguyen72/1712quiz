@@ -163,7 +163,7 @@ function nextQuiz() {
     toQuizPage();
     startTimer();
     nextButton.disabled = true;
-    setTimeout(explainSavingProgress, 5 * 60 * 1000); // 5 minutes
+    setTimeout(explainSavingProgress, 10 * 60 * 1000); // 10 minutes
 }
 
 function submit() {
