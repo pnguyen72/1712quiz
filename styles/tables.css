@@ -41,10 +41,11 @@ table {
 
   #attempts-table {
     white-space: nowrap;
-  
+
     td:is(.user, .timestamp) {
       cursor: pointer;
       color: blue;
+
       &:hover {
         text-decoration: underline;
       }
