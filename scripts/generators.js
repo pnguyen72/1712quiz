@@ -106,7 +106,7 @@ function generateModuleSelection() {
     Promise.all(loadPromises).then(modulesSize.save);
 }
 
-async function generateQuiz(questionsIds, callback) {
+async function generateQuiz(questionsIds, callback = null) {
     const quiz = document.createElement("div");
     document.getElementById("quiz").replaceWith(quiz);
     quiz.id = "quiz";
@@ -114,22 +114,26 @@ async function generateQuiz(questionsIds, callback) {
         quiz.classList.add("explained");
     }
 
-    const total_count = questionsIds.length;
-    const first_round_count = Math.min(5, total_count);
-    for (let i = 0; i < first_round_count; ++i) {
-        const questionId = questionsIds[i];
-        generateQuestion(questionId, i).then((question) =>
+    function addQuestion(index) {
+        const questionId = questionsIds[index];
+        return generateQuestion(questionId, index).then((question) =>
             quiz.appendChild(question)
         );
     }
+
+    const total_count = questionsIds.length;
+    const first_round_count = Math.min(5, total_count);
+    for (let i = 0; i < first_round_count; ++i) {
+        addQuestion(i);
+    }
     setTimeout(() => {
+        const promises = [];
         for (let i = first_round_count; i < total_count; ++i) {
-            const questionId = questionsIds[i];
-            generateQuestion(questionId, i).then((question) =>
-                quiz.appendChild(question)
-            );
+            promises.push(addQuestion(i));
         }
-        setTimeout(() => callback(quiz), 300);
+        if (callback) {
+            Promise.all(promises).then(() => callback(quiz));
+        }
     }, 200);
 }
 
