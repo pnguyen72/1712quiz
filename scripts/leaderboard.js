@@ -117,7 +117,7 @@ async function updateLeaderboard() {
                 attemptLink.addEventListener("click", (e) => {
                     e.preventDefault();
                     toQuizPage();
-                    generatePastAttempt(attempt);
+                    generatePastAttempt(attempt, { learnedTags: false });
                 });
                 timestamp.appendChild(attemptLink);
 
@@ -180,5 +180,5 @@ async function visitLeaderboardAttempt(id) {
     if (!leaderboardDB) return;
 
     const attemptDoc = await leaderboardDB.doc(id).get();
-    generatePastAttempt(attemptDoc.data());
+    generatePastAttempt(attemptDoc.data(), { learnedTags: false });
 }

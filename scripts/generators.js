@@ -137,19 +137,21 @@ async function generateQuiz(questionsIds, callback = null) {
     }, 200);
 }
 
-async function generatePastAttempt(attempt) {
+async function generatePastAttempt(attempt, option = { learnedTags: true }) {
     showResult(attempt.score, attempt.outOf);
     navText.innerText = attempt.duration;
 
     const questionsIds = Object.keys(attempt.data);
     unfinishedAttempts.set(attempt.data);
-    questionsIds.forEach((id) => {
-        if (attempt.data[id].learned) {
-            knowledge.learn(id);
-        } else {
-            knowledge.unlearn(id);
-        }
-    });
+    if (option.learnedTags) {
+        questionsIds.forEach((id) => {
+            if (attempt.data[id].learned) {
+                knowledge.learn(id);
+            } else {
+                knowledge.unlearn(id);
+            }
+        });
+    }
 
     const quiz = document.createElement("div");
     document.getElementById("quiz").replaceWith(quiz);
@@ -180,7 +182,9 @@ async function generatePastAttempt(attempt) {
         }
         Promise.all(promises).then(() => {
             unfinishedAttempts.load();
-            knowledge.load();
+            if (option.learnedTags) {
+                knowledge.load();
+            }
         });
     }, 200);
 }
