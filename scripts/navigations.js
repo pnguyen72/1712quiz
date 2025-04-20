@@ -8,10 +8,17 @@ function unhide(element) {
     element.classList.add("visible");
 }
 
+function blink(element) {
+    element.classList.add("blink");
+    setTimeout(() => {
+        element.classList.remove("blink");
+    }, 1000);
+}
+
 function initalizeSelections() {
     generateExamSelection();
 
-    const defaultExam = Object.keys(modulesNames)[0];
+    const defaultExam = Object.keys(metadata.modules)[0];
     const exam = localStorage.getItem("exam") ?? defaultExam;
     if (document.getElementById(exam)) {
         document.getElementById(exam).click();
@@ -37,9 +44,9 @@ function initalizeSelections() {
     }
 
     if (localStorage.getItem("learnedQuestionsExplained")) {
-        unhide(learnedQuestionsSelection);
-        const learnedQuestions = localStorage.getItem("learnedQuestions");
-        includeLearnedQuestions.checked = learnedQuestions == "true";
+        unhide(excludeLearnedSelection);
+        const excludeLearned = localStorage.getItem("excludeLearned");
+        excludeLearnedQuestions.checked = excludeLearned == "true";
     }
     if (localStorage.getItem("unansweredQuestionsExplained")) {
         unhide(discardUnansweredSelection);
@@ -65,6 +72,11 @@ function getSelectedModules() {
         ...document.querySelectorAll(".module-input:checked"),
     ];
     return checkedBoxes.map((box) => box.id);
+}
+
+function getSelectedQuestionBanks() {
+    const checkedBanks = [...document.querySelectorAll(".bank-input:checked")];
+    return checkedBanks.map((box) => box.id);
 }
 
 function refreshAttemptsTable() {
@@ -148,11 +160,17 @@ function nextQuiz() {
     const modules = getSelectedModules();
     if (modules.length == 0) {
         tohomePage();
-        moduleSelection.style.animation = "blink 1s";
+        blink(moduleSelection);
+        return;
+    }
+    const banks = getSelectedQuestionBanks();
+    if (banks.length == 0) {
+        tohomePage();
+        blink(questionBankSelection);
         return;
     }
 
-    getQuiz(modules, questionsCount).then((questionsIds) => {
+    getQuiz(modules, banks, questionsCount).then((questionsIds) => {
         generateQuiz(questionsIds, (quiz) => {
             recoverAttempt(quiz);
             explainLearnedQuestions();
@@ -175,7 +193,8 @@ function submit() {
 
     if (unansweredQuestions.length > 0) {
         if (!confirm("There are unanswered questions. Submit anyway?")) {
-            unansweredQuestions[0].scrollTo().blink();
+            unansweredQuestions[0].scrollTo();
+            blink(unansweredQuestions[0]);
             return;
         }
         if (

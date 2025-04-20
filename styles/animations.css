@@ -1,3 +1,7 @@
+.blink {
+  animation: blink 1s;
+}
+
 @keyframes blink {
   0% {
     background-color: hsl(0, 80%, 70%);

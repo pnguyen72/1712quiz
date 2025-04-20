@@ -1,20 +1,22 @@
 function generateExamSelection() {
     const selections = document.createElement("ul");
     selections.className = "menu-choices";
-    if (Object.keys(modulesNames).length < 2) {
+
+    examSelection.appendChild(selections);
+    if (Object.keys(metadata.modules).length < 2) {
         hide(examSelection);
     } else {
         unhide(examSelection);
     }
 
-    let index = 1;
-    for (const exam in modulesNames) {
+    let indexOffset = 1;
+    for (const exam in metadata.modules) {
         const choiceInput = document.createElement("input");
         choiceInput.id = exam;
         choiceInput.type = "radio";
         choiceInput.name = "exam";
-        choiceInput.setAttribute("index", index);
-        index += modulesNames[exam].length;
+        choiceInput.setAttribute("indexOffset", indexOffset);
+        indexOffset += metadata.modules[exam].length;
 
         const choiceText = document.createElement("span");
         choiceText.innerText = exam;
@@ -27,22 +29,33 @@ function generateExamSelection() {
         choice.appendChild(choiceLabel);
         selections.appendChild(choice);
     }
-    examSelection.appendChild(selections);
 }
 
 function generateModuleSelection() {
     const selectedExam = examSelection.querySelector("input:checked");
-    const selectedModulesNames = modulesNames[selectedExam.id];
-    const indexOffset = parseInt(selectedExam.getAttribute("index"));
+    let indexOffset;
+    let selectedModules;
+    if (metadata.cumulative) {
+        indexOffset = 1;
+        selectedModules = [];
+        for (const module in metadata.modules) {
+            selectedModules = selectedModules.concat(metadata.modules[module]);
+            if (module == selectedExam.id) {
+                break;
+            }
+        }
+    } else {
+        indexOffset = parseInt(selectedExam.getAttribute("indexOffset"));
+        selectedModules = metadata.modules[selectedExam.id];
+    }
 
-    const modulesList = document.createElement("ul");
-    modulesList.id = "modules-list";
-    modulesList.className = "menu-choices";
-    document.getElementById("modules-list").replaceWith(modulesList);
+    const selections = document.createElement("ul");
+    selections.id = "modules";
+    selections.className = "menu-choices";
+    document.getElementById("modules").replaceWith(selections);
 
     const loadPromises = [];
-
-    selectedModulesNames.forEach((name, index) => {
+    selectedModules.forEach((name, index) => {
         const moduleId = `${String(index + indexOffset).padStart(2, "0")}`;
         loadPromises.push(questionsData.load(moduleId));
 
@@ -62,7 +75,7 @@ function generateModuleSelection() {
         moduleSelectBox.type = "checkbox";
         moduleSelectBox.addEventListener("input", () => {
             document.getElementById("module-all").checked =
-                !modulesList.querySelector(".module-input:not(:checked)");
+                !selections.querySelector(".module-input:not(:checked)");
         });
 
         moduleLabel.appendChild(moduleSelectBox);
@@ -70,7 +83,7 @@ function generateModuleSelection() {
         moduleLabel.appendChild(ongoingLabel);
         module.appendChild(moduleLabel);
         module.appendChild(moduleCoverage);
-        modulesList.appendChild(module);
+        selections.appendChild(module);
     });
 
     const module = document.createElement("li");
@@ -79,8 +92,7 @@ function generateModuleSelection() {
     const moduleTitle = document.createElement("span");
     const moduleCoverage = document.createElement("span");
 
-    moduleTitle.innerText = "All of them!";
-    moduleTitle.style.fontWeight = "bold";
+    moduleTitle.innerHTML = "<b>All of them!</b>";
     moduleCoverage.className = "coverage";
     moduleSelectBox.type = "checkbox";
     moduleSelectBox.id = "module-all";
@@ -94,16 +106,60 @@ function generateModuleSelection() {
     moduleLabel.appendChild(moduleTitle);
     module.appendChild(moduleLabel);
     module.appendChild(moduleCoverage);
-    modulesList.appendChild(module);
+    selections.appendChild(module);
+
+    (localStorage.getItem("modules") ?? "")
+        .split(" ")
+        .forEach((module) => document.getElementById(module)?.click());
 
     const ongoingLabel = document.createElement("li");
     ongoingLabel.className = "ongoing";
     ongoingLabel.innerText = "* ongoing attempt";
-    modulesList.appendChild(ongoingLabel);
+    selections.appendChild(ongoingLabel);
 
     updateOngoingLabels();
     updateCoverage();
-    Promise.all(loadPromises).then(modulesSize.save);
+}
+
+async function generateQuestionBankSelection() {
+    const selections = document.createElement("ul");
+    selections.id = "banks";
+    selections.className = "menu-choices";
+    document.getElementById("banks").replaceWith(selections);
+
+    const modules = document.querySelectorAll(".module-input");
+    const storedSelections =
+        localStorage.getItem("bank") ??
+        Object.keys(metadata.questionBanks).join(" ");
+
+    for (const [bank, name] of Object.entries(metadata.questionBanks)) {
+        let size = 0;
+        for (const module of modules) {
+            size += await questionsData.sizeOf(module.id, bank);
+        }
+        if (size == 0) {
+            continue;
+        }
+
+        const choiceInput = document.createElement("input");
+        choiceInput.id = bank;
+        choiceInput.className = "bank-input";
+        choiceInput.type = "checkbox";
+        choiceInput.name = "bank";
+        choiceInput.checked = storedSelections.includes(bank);
+
+        const choiceText = document.createElement("span");
+        choiceText.innerText = name;
+
+        const choiceLabel = document.createElement("label");
+        choiceLabel.appendChild(choiceInput);
+        choiceLabel.appendChild(choiceText);
+
+        const choice = document.createElement("li");
+        choice.appendChild(choiceLabel);
+        selections.appendChild(choice);
+    }
+    selections.querySelector("li:first-child:last-child input")?.click();
 }
 
 async function generateQuiz(questionsIds, callback = null) {
@@ -134,7 +190,7 @@ async function generateQuiz(questionsIds, callback = null) {
         if (callback) {
             Promise.all(promises).then(() => callback(quiz));
         }
-    }, 200);
+    }, Math.min(150, total_count / 2));
 }
 
 async function generatePastAttempt(attempt, option = { learnedTags: true }) {
@@ -186,7 +242,7 @@ async function generatePastAttempt(attempt, option = { learnedTags: true }) {
                 knowledge.load();
             }
         });
-    }, 200);
+    }, Math.min(150, total_count / 2));
 }
 
 async function generateQuestion(questionId, questionIndex) {
@@ -315,12 +371,8 @@ async function generateQuestion(questionId, questionIndex) {
     if (attemptData) {
         question.classList.add("recoverable");
     }
-    question.addEventListener(
-        "animationend",
-        () => (question.style.animation = "")
-    );
     // the selector is cursed because the question id starts with a number
-    // it's too inconvenient to change that now
+    // it's too inconvenient to change it now
     const questionSelector = `#\\3${questionId[0]} ${questionId.slice(1)}`;
     question.next = function (selector = "") {
         return quizPage.querySelector(
@@ -346,14 +398,9 @@ async function generateQuestion(questionId, questionIndex) {
             scrollBy(0, -navbar.offsetHeight);
         }
         // scrolling sets questionsScroller.current = null
-        // so we wait for the scroll to finish first, avoiding race condition
+        // so we wait for the scroll to finish first
         // 100ms should be enough?
         setTimeout(() => (questionsScroller.current = question), 100);
-        return question;
-    };
-    question.blink = () => {
-        question.style.animation = "blink 1s";
-        return question;
     };
 
     question.appendChild(questionHeader);
@@ -439,7 +486,7 @@ function updateAttemptsTable() {
 async function updateCoverage() {
     if (isLeaderboardPage()) return;
 
-    const modules = homePage.querySelector("#modules-list");
+    const modules = document.getElementById("modules");
     if (!modules.querySelector("li")) return; // if module list hasn't been generated
 
     let coveredTotal = 0;

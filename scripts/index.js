@@ -11,7 +11,7 @@ const urlSelectedUser = urlParams.get("user");
     if (!isLeaderboardPage()) {
         loadStorage();
         updateAttemptsTable();
-        loadModulesNames().then(initalizeSelections).then(licenseLock);
+        loadMetadata().then(initalizeSelections).then(licenseLock);
         return;
     }
 
@@ -34,5 +34,5 @@ const urlSelectedUser = urlParams.get("user");
 
     form.removeEventListener("input", refreshAttemptsTable);
     form.addEventListener("input", updateLeaderboard);
-    loadModulesNames().then(initalizeSelections);
+    loadMetadata().then(initalizeSelections);
 })();

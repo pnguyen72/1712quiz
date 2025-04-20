@@ -1,11 +1,6 @@
 window.addEventListener("beforeunload", saveProgress);
 document.addEventListener("scroll", () => (questionsScroller.current = null));
 
-moduleSelection.addEventListener(
-    "animationend",
-    () => (moduleSelection.style.animation = "")
-);
-
 navbar.addEventListener("click", () => {
     if (loginPopup.matches(".visible")) {
         cancelLogin.click();
@@ -23,12 +18,7 @@ examSelection.addEventListener("input", () => {
         examSelection.querySelector("input:checked").id
     );
     generateModuleSelection();
-    if (localStorage.getItem("modules")) {
-        localStorage
-            .getItem("modules")
-            .split(" ")
-            .forEach((module) => document.getElementById(module)?.click());
-    }
+    generateQuestionBankSelection();
 });
 moduleSelection.addEventListener("input", () => {
     localStorage.setItem("modules", getSelectedModules().join(" "));
@@ -37,8 +27,11 @@ moduleSelection.addEventListener("input", () => {
 questionsCountChoice.addEventListener("input", () => {
     localStorage.setItem("questions", questionsCountChoice.value);
 });
-includeLearnedQuestions.addEventListener("input", () => {
-    localStorage.setItem("learnedQuestions", includeLearnedQuestions.checked);
+questionBankSelection.addEventListener("input", () => {
+    localStorage.setItem("bank", getSelectedQuestionBanks().join(" "));
+});
+excludeLearnedQuestions.addEventListener("input", () => {
+    localStorage.setItem("excludeLearned", excludeLearnedQuestions.checked);
 });
 discardUnansweredQuestions.addEventListener("input", () => {
     localStorage.setItem(

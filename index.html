@@ -66,7 +66,7 @@
               <u>Modules:</u>
               <span id="coverage" class="coverage">learned</span>
             </div>
-            <ul id="modules-list"></ul>
+            <ul id="modules"></ul>
           </div>
           <div>
             <label>
@@ -80,13 +80,17 @@
               </select>
             </label>
           </div>
-          <div id="other-options">
-            <u>Other options:</u>
+          <div id="question-bank-selection">
+            <u>Question banks:</u>
+            <ul id="banks"></ul>
+          </div>
+          <div id="behavior">
+            <u>Behavior:</u>
             <ul class="menu-choices">
-              <li id="include-learned" style="display: none">
+              <li id="exclude-learned" style="display: none">
                 <label>
-                  <input type="checkbox" checked="true" />
-                  <span>Include learned questions</span>
+                  <input type="checkbox" />
+                  <span>Exclude learned questions</span>
                 </label>
               </li>
               <li id="ignore-unanswered" style="display: none">

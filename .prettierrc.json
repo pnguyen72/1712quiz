@@ -3,15 +3,11 @@
   "overrides": [
     {
       "files": ["*.js"],
-      "options": {
-        "tabWidth": 4
-      }
+      "options": { "tabWidth": 4 }
     },
     {
-      "files": ["*.json", "elements.js"],
-      "options": {
-        "printWidth": 999999
-      }
+      "files": ["data/modules/*.json", "elements.js"],
+      "options": { "printWidth": 9999 }
     }
   ]
 }

@@ -37,7 +37,7 @@ function explainLearnedQuestions() {
                 "\n\nThere's an option to exclude learned questions from new quizzes in the home menu."
         );
         localStorage.setItem("learnedQuestionsExplained", true);
-        unhide(learnedQuestionsSelection);
+        unhide(excludeLearnedSelection);
     }
 }
 
@@ -76,8 +76,7 @@ function explainExplanations() {
         document.querySelector("#quiz-page.visible #quiz.submitted")
     ) {
         alert(
-            "Unlike questions and answers which are from Learning Hub, " +
-                "explanations are written by your classmates, thus *could* be inaccurate." +
+            "Beware that explanations are crowdsourced, thus could be inaccurate." +
                 "\n\nThere's an option to disable explanations in the home menu."
         );
         localStorage.setItem("explanationWarned", true);
@@ -137,7 +136,8 @@ function recoverAttempt(quiz) {
 
     const unansweredQuestion = quiz.querySelector(".question:not(.answered)");
     if (unansweredQuestion) {
-        unansweredQuestion.blink().previous()?.scrollTo();
+        blink(unansweredQuestion);
+        unansweredQuestion.previous()?.scrollTo();
     } else {
         quiz.querySelector(".question:last-child")?.scrollTo();
     }

@@ -1,11 +1,9 @@
-let modulesNames = null;
-let questionsData = { __loader: {} };
+let metadata = {};
+const questionsData = { __loader: {} };
+const questionBanks = {};
 const pastAttempts = localStorage.getItem("attempts")
     ? JSON.parse(localStorage.getItem("attempts"))
     : [];
-const modulesSize = localStorage.getItem("modulesSize")
-    ? JSON.parse(localStorage.getItem("modulesSize"))
-    : {};
 
 function loadStorage() {
     unfinishedAttempts.load();
@@ -23,8 +21,23 @@ questionsData.load = function (module) {
         .then((response) => response.json())
         .catch(() => new Object())
         .then((questions) => {
+            questionBanks[module] = {};
+            for (const bank in metadata.questionBanks) {
+                questionBanks[module][bank] = [];
+            }
+            const defaultBank = Object.keys(metadata.questionBanks)[0];
+            for (const [questionId, question] of Object.entries(questions)) {
+                if (!question.bank) {
+                    questionBanks[module][defaultBank].push(questionId);
+                } else {
+                    for (const bank in metadata.questionBanks) {
+                        if (question.bank.includes(bank)) {
+                            questionBanks[module][bank].push(questionId);
+                        }
+                    }
+                }
+            }
             this[module] = questions;
-            modulesSize[module] = Object.keys(questions).length;
             return questions;
         });
     return this.__loader[module];
@@ -36,41 +49,41 @@ questionsData.get = async function (id) {
     return moduleQuestions[id];
 };
 
-questionsData.sizeOf = async function (module) {
-    if (
-        !Object.hasOwn(questionsData, module) &&
-        Object.hasOwn(modulesSize, module)
-    ) {
-        return modulesSize[module];
+questionsData.sizeOf = async function (module, bank = null) {
+    await this.load(module);
+    if (bank) {
+        return questionBanks[module]?.[bank]?.length ?? 0;
     }
-    return Object.keys((await this.load(module)) ?? {}).length;
+    return Object.keys(this[module] ?? {}).length;
 };
 
-modulesSize.save = function () {
-    localStorage.setItem("modulesSize", JSON.stringify(modulesSize));
-};
-
-async function getQuiz(modules, count) {
+async function getQuiz(modules, banks, count) {
     let recoveredQuestions = unfinishedAttempts.get(modules, count);
     if (recoveredQuestions.length >= count) {
         return recoveredQuestions;
     }
 
-    let newQuestions = [];
+    let newQuestions = new Set();
     for (const module of modules) {
-        newQuestions = newQuestions.concat(
-            Object.keys(await questionsData.load(module))
-        );
+        await questionsData.load(module);
+        for (const bank of banks) {
+            newQuestions = new Set([
+                ...newQuestions,
+                ...questionBanks[module][bank],
+            ]);
+        }
     }
-    if (!includeLearnedQuestions.checked) {
-        newQuestions = newQuestions.filter((id) => !knowledge.hasLearned(id));
+    if (excludeLearnedQuestions.checked) {
+        newQuestions = Array.from(newQuestions).filter(
+            (id) => !knowledge.hasLearned(id)
+        );
         shuffle(newQuestions);
     } else {
-        newQuestions = newQuestions.sort(
+        newQuestions = Array.from(newQuestions).sort(
             (q1, q2) =>
-                // prettier-ignore
-                // order by knowledge (ascending, meaning unlearned questions first)
-                (knowledge.hasLearned(q1) - knowledge.hasLearned(q2)) +
+                // order by knowledge (unlearned questions first)
+                knowledge.hasLearned(q1) -
+                knowledge.hasLearned(q2) +
                 // then by random
                 (Math.random() - 0.5)
         );
@@ -249,8 +262,13 @@ const unfinishedAttempts = {
     },
 };
 
-function loadModulesNames() {
-    return fetch("./data/modules.json")
+function loadMetadata() {
+    return fetch("./data/metadata.json")
         .then((response) => response.json())
-        .then((data) => (modulesNames = data));
+        .then((data) => {
+            if (!data.questionBanks) {
+                data.questionBanks = { LH: "LH" };
+            }
+            metadata = data;
+        });
 }
