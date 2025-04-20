@@ -89,10 +89,10 @@ function generateModuleSelection() {
     const module = document.createElement("li");
     const moduleLabel = document.createElement("label");
     const moduleSelectBox = document.createElement("input");
-    const moduleTitle = document.createElement("span");
+    const moduleTitle = document.createElement("b");
     const moduleCoverage = document.createElement("span");
 
-    moduleTitle.innerHTML = "<b>All of them!</b>";
+    moduleTitle.innerText = "All of them!";
     moduleCoverage.className = "coverage";
     moduleSelectBox.type = "checkbox";
     moduleSelectBox.id = "module-all";
@@ -289,14 +289,15 @@ async function generateQuestion(questionId, questionIndex) {
     questionBody.innerHTML = questionData.question;
 
     // image (if exists)
-    let image;
+    const questionImage = document.createElement("figure");
     if (questionData.hasImage) {
-        image = document.createElement("figure");
         const img = document.createElement("img");
-        img.setAttribute("src", `./data/images/${questionId}.png`);
-        image.appendChild(img);
+        img.setAttribute(
+            "src",
+            getImagePath(questionId, questionData.hasImage.transparent)
+        );
+        questionImage.appendChild(img);
     }
-    const questionImage = image;
 
     // choices
     const questionChoices = document.createElement("ul");
@@ -306,6 +307,7 @@ async function generateQuestion(questionId, questionIndex) {
         const choiceLabel = document.createElement("label");
         const choiceInput = document.createElement("input");
         const choiceText = document.createElement("span");
+        let choiceImage = document.createElement("img");
 
         if (choiceData.correct) {
             choice.classList.add("correct");
@@ -315,11 +317,29 @@ async function generateQuestion(questionId, questionIndex) {
         choiceInput.type = questionData.multiSelect ? "checkbox" : "radio";
         choiceInput.name = questionId;
 
-        choiceText.innerHTML = choiceData.choice;
+        if (choiceData.choice) {
+            choiceText.innerHTML = choiceData.choice;
+        }
+
+        if (choiceData.hasImage) {
+            choiceImage.className = "choice-image";
+            choiceImage.setAttribute(
+                "src",
+                getImagePath(
+                    `${questionId}_${choiceId}`,
+                    choiceData.hasImage.transparent
+                )
+            );
+        }
 
         choiceLabel.appendChild(choiceInput);
-        choiceLabel.appendChild(choiceText);
+        if (choiceData.choice) {
+            choiceLabel.appendChild(choiceText);
+        }
         choice.appendChild(choiceLabel);
+        if (choiceData.hasImage) {
+            choiceLabel.appendChild(choiceImage);
+        }
         questionChoices.appendChild(choice);
     });
 

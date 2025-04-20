@@ -10,6 +10,18 @@ function loadStorage() {
     knowledge.load();
 }
 
+function getImagePath(id, transparent = false) {
+    let path = `./data/images/${id}`;
+    if (transparent) {
+        if (darkModeLink.disabled) {
+            path += "-light";
+        } else {
+            path += "-dark";
+        }
+    }
+    return path + ".png";
+}
+
 questionsData.load = function (module) {
     if (Object.hasOwn(this, module)) {
         return Promise.resolve(this[module]);

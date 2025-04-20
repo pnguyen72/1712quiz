@@ -69,10 +69,15 @@
   figure {
     margin: auto;
     margin-bottom: -0.2rem;
+  }
 
-    img {
-      max-width: 100%;
-      max-height: 50vh;
+  img {
+    max-width: 100%;
+    max-height: 50vh;
+
+    &.choice-image {
+      max-width: calc(100% - 2rem);
+      max-height: 25vh;
     }
   }
 
@@ -259,6 +264,11 @@
   }
 }
 
+.question-choices label:has(img) {
+  display: flex;
+  align-items: center;
+}
+
 #quiz.submitted {
   li.correct {
     margin-left: -3px;
@@ -287,6 +297,9 @@
 
     label {
       padding: 6px 6px 3px 3px;
+      &:has(img) {
+        padding-top: 3px;
+      }
       border-radius: 6px;
       background-color: hsl(120, 80%, 80%);
     }
