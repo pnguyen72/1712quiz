@@ -551,6 +551,7 @@
       "D": { "choice": "The ERD components will have to be changed", "correct": true },
       "E": { "choice": "Nothing – once the ERD data models have been drawn, they are 'frozen' for the system" }
     },
+    "bank": "F-24",
     "explanation": "*\"When business rules change, the relationships or other data model components will have to be altered.\"* **(p. 189)**"
   },
   "06_66": {
@@ -558,7 +559,8 @@
     "choices": {
       "A": { "choice": "True" },
       "B": { "choice": "False", "correct": true }
-    }
+    },
+    "bank": "F-24"
   },
   "06_67": {
     "question": "ERD is the only way to model data requirements for the system.",
@@ -578,24 +580,27 @@
       "F": { "choice": "Book", "correct": true },
       "G": { "choice": "Author", "correct": true }
     },
-    "multiSelect": true
+    "multiSelect": true,
+    "bank": "F-24"
   },
   "06_69": {
     "question": "An intersection/bridge entity, often has two identifiers.",
     "choices": {
       "A": { "choice": "True" },
       "B": { "choice": "False", "correct": true }
-    }
+    },
+    "bank": "F-24"
   },
   "06_70": {
-    "question": "\"A pilot cannot be on duty for more than 10 hours during a 24-hour period.\"<p>If the following ERD models the business rule above, <b>what are the minimum number of attributes that are required for the entity DUTY</b>, so we can guarantee the constraint on the hours of flights for pilots?",
+    "question": "\"A pilot cannot be on duty for more than 10 hours during a 24-hour period.\"<p>If the following ERD models the business rule above, what are the required attributes for the entity <code>DUTY</code> so that we can guarantee the constraint on the hours of flights for pilots?",
     "choices": {
       "A": { "choice": "DUTY_DURATION" },
       "B": { "choice": "DUTY_DATE, DUTY_DURATION", "correct": true },
       "C": { "choice": "DUTY_CODE, DUTY_DATE" },
       "D": { "choice": "DUTY_DATE" }
     },
-    "hasImage": true
+    "hasImage": true,
+    "bank": "F-24"
   },
   "06_71": {
     "question": "What is the type of relationship between PROFESSOR and CLASS as described in the business rule:<p>\"A professor may teach up to four classes during a semester.\"",
@@ -604,24 +609,27 @@
       "B": { "choice": "1:4" },
       "C": { "choice": "1:M", "correct": true },
       "D": { "choice": "M:N" }
-    }
+    },
+    "bank": "F-24"
   },
   "06_72": {
     "question": "A relationship is always between two different entities.",
     "choices": {
       "A": { "choice": "True" },
       "B": { "choice": "False", "correct": true }
-    }
+    },
+    "bank": "F-24"
   },
   "06_73": {
     "question": "Select all business rules that are consistent with the following data model.",
     "choices": {
-      "A": { "choice": "Each EMPLOYEE must have at least one PERFORMANCE_REVIEW." },
-      "B": { "choice": "Every JOB_SKILL is associated with at least one EMPLOYEE." },
-      "C": { "choice": "All EMPLOYEEs have a TRAINING_HISTORY." },
-      "D": { "choice": "A SKILL_LEVEL might apply to multiple JOB_SKILLs.", "correct": true }
+      "A": { "choice": "Each <code>EMPLOYEE</code> must have at least one <code>PERFORMANCE_REVIEW</code>." },
+      "B": { "choice": "Every <code>JOB_SKILL</code> is associated with at least one <code>EMPLOYEE</code>.", "correct": true },
+      "C": { "choice": "All <code>EMPLOYEEs</code> have a <code>TRAINING_HISTORY</code>." },
+      "D": { "choice": "A <code>SKILL_LEVEL</code> might apply to multiple <code>JOB_SKILLs</code>." }
     },
     "multiSelect": true,
-    "hasImage": true
+    "hasImage": true,
+    "bank": "F-24"
   }
 }

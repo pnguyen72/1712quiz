@@ -500,24 +500,27 @@
       "B": { "choice": "Notes and issues", "correct": true },
       "C": { "choice": "Alternative paths", "correct": true },
       "D": { "choice": "Business rules", "correct": true }
-    }
+    },
+    "bank": "F-24"
   },
   "04_61": {
-    "question": "Choose all that applies about Use Cases:",
+    "question": "Choose all that applies about use cases:",
     "choices": {
-      "A": { "choice": "Use Cases are most useful in clarifying non-functional requirements." },
-      "B": { "choice": "Use Cases give us an internal view of the to-be system." },
-      "C": { "choice": "Use Cases are developed by the users of the system." },
-      "D": { "choice": "Use Cases help us express the user requirements.", "correct": true }
+      "A": { "choice": "Use cases are most useful in clarifying non-functional requirements." },
+      "B": { "choice": "Use cases give us an internal view of the to-be system." },
+      "C": { "choice": "Use cases are developed by the users of the system." },
+      "D": { "choice": "Use cases help us express the user requirements.", "correct": true }
     },
-    "multiSelect": true
+    "multiSelect": true,
+    "bank": "F-24"
   },
   "04_62": {
     "question": "It is the primary actor of a use case that initiates the event to which the system responds.",
     "choices": {
       "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
-    }
+    },
+    "bank": "F-24"
   },
   "04_63": {
     "question": "\"Time to pay a bill\" is a _____",
@@ -525,7 +528,8 @@
       "A": { "choice": "Temporal trigger", "correct": true },
       "B": { "choice": "Internal trigger" },
       "C": { "choice": "External trigger" }
-    }
+    },
+    "bank": "F-24"
   },
   "04_64": {
     "question": "\"Customer has placed an order\" is a _____",
@@ -533,7 +537,8 @@
       "A": { "choice": "Temporal trigger" },
       "B": { "choice": "Internal trigger" },
       "C": { "choice": "External trigger", "correct": true }
-    }
+    },
+    "bank": "F-24"
   },
   "04_65": {
     "question": "\"Customer payment is received\" is a _____",
@@ -541,7 +546,8 @@
       "A": { "choice": "Temporal trigger" },
       "B": { "choice": "Internal trigger" },
       "C": { "choice": "External trigger", "correct": true }
-    }
+    },
+    "bank": "F-24"
   },
   "04_66": {
     "question": "\"Library book is due\" is a _____",
@@ -549,6 +555,7 @@
       "A": { "choice": "Temporal trigger", "correct": true },
       "B": { "choice": "Internal trigger" },
       "C": { "choice": "External trigger" }
-    }
+    },
+    "bank": "F-24"
   }
 }

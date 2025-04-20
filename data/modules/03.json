@@ -436,6 +436,7 @@
       "D": { "choice": "The major steps in the process are completed in parallel." }
     },
     "multiSelect": true,
+    "bank": "F-24",
     "explanation": "Wrong answers:\n- Cost has nothing to do with this.\n- A fragmented process *should* be parallelized. It's not already parallelized."
   },
   "03_50": {
@@ -524,6 +525,7 @@
       "D": { "choice": "Written Response questions" }
     },
     "multiSelect": true,
+    "bank": "F-24",
     "explanation": "Written-response questions are open-ended because you can write anything. Even if the question itself is just yes/no, you can still elaborate on it.\n\nThe other types are close-ended, because you cannot elaborate on your answer."
   },
   "03_61": {
@@ -628,20 +630,23 @@
     "choices": {
       "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
-    }
+    },
+    "bank": "F-24"
   },
   "03_73": {
     "question": "It is always better to focus on the solution first, instead of focusing on the problem. We should not waste time trying to figure out the root causes of a given problem.",
     "choices": {
       "A": { "choice": "True" },
       "B": { "choice": "False", "correct": true }
-    }
+    },
+    "bank": "F-24"
   },
   "03_74": {
     "question": "It's not a bad idea to explore and study how other companies/organizations have built a system to address a particular business need.",
     "choices": {
       "A": { "choice": "True", "correct": true },
       "B": { "choice": "False" }
-    }
+    },
+    "bank": "F-24"
   }
 }

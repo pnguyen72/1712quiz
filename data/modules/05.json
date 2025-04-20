@@ -303,7 +303,8 @@
     "choices": {
       "A": { "choice": "True" },
       "B": { "choice": "False", "correct": true }
-    }
+    },
+    "bank": "F-24"
   },
   "05_39": {
     "question": "Are the two diagrams balanced?",
@@ -311,7 +312,8 @@
       "A": { "choice": "Yes", "correct": true },
       "B": { "choice": "No" }
     },
-    "hasImage": true
+    "hasImage": true,
+    "bank": "F-24"
   },
   "05_40": {
     "question": "Which of the following elements appear on a context diagram?",
@@ -321,7 +323,8 @@
       "C": { "choice": "Data Store" },
       "D": { "choice": "External Entities", "correct": true }
     },
-    "multiSelect": true
+    "multiSelect": true,
+    "bank": "F-24"
   },
   "05_41": {
     "question": "How many Level 1 DFDs would you create for the process of buying glasses?",
@@ -331,7 +334,8 @@
       "C": { "choice": "5" },
       "D": { "choice": "6" }
     },
-    "hasImage": true
+    "hasImage": true,
+    "bank": "F-24"
   },
   "05_42": {
     "question": "How many syntax errors does this DFD have?",
@@ -341,6 +345,7 @@
       "C": { "choice": "5", "correct": true },
       "D": { "choice": "7" }
     },
-    "hasImage": true
+    "hasImage": true,
+    "bank": "F-24"
   }
 }
