@@ -1,0 +1,26 @@
+{
+  "modules": {
+    "midterm": [
+      "The software life cycle",
+      "Development methodologies",
+      "Requirements determination",
+      "Use cases",
+      "Data flow diagrams",
+      "Entity relationship diagrams"
+    ],
+    "final": [
+      "Database normalization",
+      "Design strategy",
+      "Architecture design",
+      "User interface design",
+      "Program design",
+      "Data storage design"
+    ]
+  },
+  "cumulative": false,
+  "questionBanks": {
+    "LH": "Learning Hub practice quiz",
+    "F-24": "Fall 2024 exam",
+    "W-25": "Winter 2025 exam"
+  }
+}
