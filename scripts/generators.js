@@ -159,7 +159,6 @@ async function generateQuestionBankSelection() {
         choice.appendChild(choiceLabel);
         selections.appendChild(choice);
     }
-    selections.querySelector("li:first-child:last-child input")?.click();
 }
 
 async function generateQuiz(questionsIds, callback = null) {

@@ -75,8 +75,13 @@ function getSelectedModules() {
 }
 
 function getSelectedQuestionBanks() {
-    const checkedBanks = [...document.querySelectorAll(".bank-input:checked")];
-    return checkedBanks.map((box) => box.id);
+    const inputs = document.querySelectorAll(".bank-input");
+    if (inputs.length == 1) {
+        return [inputs[0].id];
+    }
+
+    const checkedInputs = [...inputs].filter((input) => input.checked);
+    return checkedInputs.map((box) => box.id);
 }
 
 function refreshAttemptsTable() {
