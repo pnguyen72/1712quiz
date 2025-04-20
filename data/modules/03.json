@@ -648,5 +648,143 @@
       "B": { "choice": "False" }
     },
     "bank": "F-24"
+  },
+  "03_75": {
+    "question": "You are gathering requirements for a complex hospital management system where doctors, nurses, and administrative staff interact with the system differently.<p>Which requirement gathering technique alone would be the least effective for capturing all necessary requirements?</p>",
+    "choices": {
+      "A": { "choice": "Interviews", "correct": false },
+      "B": {
+        "choice": "Joint Application Development (JAD) sessions",
+        "correct": false
+      },
+      "C": { "choice": "Observation", "correct": false },
+      "D": { "choice": "Questionnaires", "correct": true }
+    },
+    "bank": "W-25"
+  },
+  "03_76": {
+    "question": "A company is developing an e-commerce website. Which of the following is a non-functional requirement?",
+    "choices": {
+      "A": {
+        "choice": "The system must allow users to filter products by price, category, and rating.",
+        "correct": false
+      },
+      "B": {
+        "choice": "The system must process at least 1,000 transactions per second during peak hours.",
+        "correct": true
+      },
+      "C": {
+        "choice": "The system must provide users with a shopping cart feature to store selected items.",
+        "correct": false
+      },
+      "D": {
+        "choice": "The system must allow customers to submit product reviews after purchasing.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
+  },
+  "03_77": {
+    "question": "A retail store's inventory system frequently runs out of stock, causing delays. The manager suggests ordering more stock every month.<p>Which problem analysis strategy should a systems analyst use to determine if this is the right solution?</p>",
+    "choices": {
+      "A": {
+        "choice": "Root Cause Analysis, to determine if the issue is poor forecasting, supplier delays, or system errors.",
+        "correct": true
+      },
+      "B": {
+        "choice": "Duration Analysis, to examine how long it takes for inventory updates to reflect in the system.",
+        "correct": false
+      },
+      "C": {
+        "choice": "Outcome Analysis, to focus on how improving inventory management would benefit customers.",
+        "correct": false
+      },
+      "D": {
+        "choice": "Benchmarking, to compare how competitors manage inventory.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
+  },
+  "03_78": {
+    "question": "A stakeholder requests: \"The system should be easy to use.\"<p>This is a valid requirement that should be added to the system specification.</p>",
+    "choices": {
+      "A": { "choice": "True", "correct": false },
+      "B": { "choice": "False", "correct": true }
+    },
+    "bank": "W-25"
+  },
+  "03_79": {
+    "question": "Skipping the requirements gathering phase can be justified when a company is using an Agile methodology since requirements can be defined later in development.",
+    "choices": {
+      "A": { "choice": "True", "correct": false },
+      "B": { "choice": "False", "correct": true }
+    }
+  },
+  "03_80": {
+    "question": "A start-up wants to develop an innovative mobile app, but their target audience is unclear.<p>Which of the following is the best approach for gathering initial system requirements?</p>",
+    "choices": {
+      "A": {
+        "choice": "Interviews, with company executives to define the system features.",
+        "correct": false
+      },
+      "B": {
+        "choice": "JAD sessions, to quickly align multiple stakeholders.",
+        "correct": false
+      },
+      "C": {
+        "choice": "Prototyping, to gather iterative feedback from potential users.",
+        "correct": true
+      },
+      "D": {
+        "choice": "Benchmarking, to copy the best practices from competitors.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
+  },
+  "03_81": {
+    "question": "A university's enrollment process takes two weeks, but an analysis shows that only a few hours of actual work occurs within that period.<p>Which technique should be used to optimize the process?</p>",
+    "choices": {
+      "A": {
+        "choice": "Benchmarking, to compare with other universities.",
+        "correct": false
+      },
+      "B": {
+        "choice": "Duration Analysis, to identify inefficiencies in processing time.",
+        "correct": true
+      },
+      "C": {
+        "choice": "Outcome Analysis, to focus on student satisfaction.",
+        "correct": false
+      },
+      "D": {
+        "choice": "Activity Elimination, to remove steps from the process without evaluation.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
+  },
+  "03_82": {
+    "question": "A systems analyst has gathered requirements for a new supply chain management system.<p>Which of the following is the best way to ensure that these requirements accurately reflect business needs?</p>",
+    "choices": {
+      "A": {
+        "choice": "Immediately start development, assuming requirements are correct.",
+        "correct": false
+      },
+      "B": {
+        "choice": "Have users role-play the use cases to confirm completeness.",
+        "correct": true
+      },
+      "C": {
+        "choice": "Rely solely on senior management's approval, as they understand business strategy.",
+        "correct": false
+      },
+      "D": {
+        "choice": "Ignore user feedback, since developers will refine the system as they code.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
   }
 }

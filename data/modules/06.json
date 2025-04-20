@@ -584,12 +584,12 @@
     "bank": "F-24"
   },
   "06_69": {
-    "question": "An intersection/bridge entity, often has two identifiers.",
+    "question": "An intersection entity often has two identifiers.",
     "choices": {
       "A": { "choice": "True" },
       "B": { "choice": "False", "correct": true }
     },
-    "bank": "F-24"
+    "bank": "F-24 W-25"
   },
   "06_70": {
     "question": "\"A pilot cannot be on duty for more than 10 hours during a 24-hour period.\"<p>If the following ERD models the business rule above, what are the required attributes for the entity <code>DUTY</code> so that we can guarantee the constraint on the hours of flights for pilots?",
@@ -618,7 +618,7 @@
       "A": { "choice": "True" },
       "B": { "choice": "False", "correct": true }
     },
-    "bank": "F-24"
+    "bank": "F-24 W-25"
   },
   "06_73": {
     "question": "Select all business rules that are consistent with the following data model.",
@@ -631,5 +631,124 @@
     "multiSelect": true,
     "hasImage": true,
     "bank": "F-24"
+  },
+  "06_74": {
+    "question": "A company is designing a new customer support ticketing system. They want to map out how customer issues move through the system from submission to resolution.<p>Which modeling approach should they use?</p>",
+    "choices": {
+      "A": { "choice": "Use Cases", "correct": false },
+      "B": {
+        "choice": "Entity-Relationship Diagrams (ERDs)",
+        "correct": false
+      },
+      "C": { "choice": "Data Flow Diagrams (DFDs)", "correct": true },
+      "D": { "choice": "Class Diagrams", "correct": false }
+    },
+    "bank": "W-25"
+  },
+  "06_75": {
+    "question": "A systems analyst is designing a ride-sharing app and wants to model:<ul><li>User requests a ride.</li><li>Driver accepts the request.</li><li>Ride is completed, and payment is processed.</li></ul>Which representation is most effective for modeling these interactions?",
+    "choices": {
+      "A": { "choice": "A data flow diagram (DFD)", "correct": false },
+      "B": {
+        "choice": "An entity-relationship diagram (ERD)",
+        "correct": false
+      },
+      "C": { "choice": "A use case diagram", "correct": true },
+      "D": { "choice": "A class diagram", "correct": false }
+    },
+    "bank": "W-25"
+  },
+  "06_76": {
+    "question": "A company tracks employees and projects. Each employee can be assigned to multiple projects, and each project can have multiple employees working on it. In addition each project is assigned to only one employee who manages it.<p>Which of the following ERDs best represents these business rules?</p>",
+    "choices": {
+      "A": {
+        "choice": "EMPLOYEE → is assigned to → PROJECT",
+        "correct": false
+      },
+      "B": {
+        "choice": "EMPLOYEE → is assigned to → PROJECT → manages → MANAGER",
+        "correct": false
+      },
+      "C": {
+        "choice": "EMPLOYEE → is assigned to → PROJECT",
+        "correct": false
+      },
+      "D": {
+        "choice": "EMPLOYEE → is assigned to & manages → PROJECT",
+        "correct": true
+      }
+    },
+    "bank": "W-25"
+  },
+  "06_77": {
+    "question": "A hospital system tracks patients and doctors. A patient must have a doctor assigned, but doctors may have zero or more patients assigned.<p>Which of the following correctly represents this relationship?</p>",
+    "choices": {
+      "A": {
+        "choice": "DOCTOR (1) — is assigned to — (N) PATIENT",
+        "correct": true
+      },
+      "B": {
+        "choice": "DOCTOR (N) — is assigned to — (1) PATIENT",
+        "correct": false
+      },
+      "C": {
+        "choice": "DOCTOR (N) — is assigned to — (N) PATIENT",
+        "correct": false
+      },
+      "D": {
+        "choice": "DOCTOR (1) — is assigned to — (1) PATIENT",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
+  },
+  "06_78": {
+    "question": "A company tracks employee salaries. Managers need to view past salary changes to understand how compensation has evolved.<p>Which is the best approach for modeling this?</p>",
+    "choices": {
+      "A": {
+        "choice": "Only store the current salary of each employee.",
+        "correct": false
+      },
+      "B": {
+        "choice": "Overwrite the salary data each time an employee gets a raise.",
+        "correct": false
+      },
+      "C": {
+        "choice": "Maintain a separate salary history, tracking all salary changes over time.",
+        "correct": true
+      },
+      "D": {
+        "choice": "Store salary information in the employee entity, along with previous salaries in separate columns.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
+  },
+  "06_79": {
+    "question": "An Entity Relationship model may be implemented as a non-relational database.",
+    "choices": {
+      "A": { "choice": "True", "correct": true },
+      "B": { "choice": "False", "correct": false }
+    },
+    "bank": "W-25"
+  },
+  "06_80": {
+    "question": "A library system allows members to check out books. Each member can borrow up to 5 books at a time.<p>Which of the following ERDs best guarantee the borrowing limit of 5 books at a time for a member of the library?</p>",
+    "choices": {
+      "A": {
+        "choice": "MEMBER with NUM_BORROWED attribute connected to BORROWING intersection entity",
+        "correct": true
+      },
+      "B": {
+        "choice": "Simple many-to-many relationship between MEMBER and BOOK",
+        "correct": false
+      },
+      "C": {
+        "choice": "MEMBER with CHECKOUT_STATUS attribute",
+        "correct": false
+      }
+    },
+    "multiSelect": true,
+    "bank": "W-25"
   }
 }

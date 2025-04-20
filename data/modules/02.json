@@ -609,5 +609,107 @@
       "B": { "choice": "False", "correct": true }
     },
     "bank": "F-24"
+  },
+  "02_70": {
+    "question": "You are consulting for a startup that needs a minimum viable product (MVP) quickly, with the ability to continuously refine the system based on user feedback.<p>Which development methodology is best suited?</p>",
+    "choices": {
+      "A": { "choice": "Waterfall", "correct": false },
+      "B": { "choice": "V-Model", "correct": false },
+      "C": { "choice": "Agile", "correct": true },
+      "D": { "choice": "Parallel Development", "correct": false }
+    },
+    "bank": "W-25"
+  },
+  "02_71": {
+    "question": "A company should prioritize projects that provide the highest financial return, even if they do not align with business strategy.",
+    "choices": {
+      "A": { "choice": "True", "correct": false },
+      "B": { "choice": "False", "correct": true }
+    },
+    "bank": "W-25"
+  },
+  "02_72": {
+    "question": "A banking system requires strict regulatory compliance but also needs frequent feature updates.<p>What is the best approach?</p>",
+    "choices": {
+      "A": {
+        "choice": "Waterfall, because compliance requires clear documentation and structured phases.",
+        "correct": false
+      },
+      "B": {
+        "choice": "Agile, because frequent updates are necessary.",
+        "correct": false
+      },
+      "C": {
+        "choice": "A hybrid approach, using Waterfall for compliance-heavy features and Agile for updates.",
+        "correct": true
+      },
+      "D": {
+        "choice": "Neither methodology, because compliance makes development too slow.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
+  },
+  "02_73": {
+    "question": "Which of the following projects would require the most thorough feasibility study before approval?",
+    "choices": {
+      "A": {
+        "choice": "A mobile game startup developing a new app.",
+        "correct": false
+      },
+      "B": {
+        "choice": "A healthcare company developing an AI-based diagnosis system.",
+        "correct": true
+      },
+      "C": {
+        "choice": "A clothing retailer launching an online store.",
+        "correct": false
+      },
+      "D": {
+        "choice": "An e-commerce company testing a new recommendation engine.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
+  },
+  "02_74": {
+    "question": "Which of the following best mitigates the risk of building the wrong product?",
+    "choices": {
+      "A": {
+        "choice": "Skipping analysis and focusing on rapid development.",
+        "correct": false
+      },
+      "B": {
+        "choice": "Using an iterative approach, gathering user feedback at each stage.",
+        "correct": true
+      },
+      "C": {
+        "choice": "Relying on stakeholder opinions rather than testing.",
+        "correct": false
+      },
+      "D": {
+        "choice": "Sticking to Waterfall, because structured plans prevent mistakes.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
+  },
+  "02_75": {
+    "question": "The Agile methodology is always the best choice for all software projects.",
+    "choices": {
+      "A": { "choice": "True", "correct": false },
+      "B": { "choice": "False", "correct": true }
+    },
+    "bank": "W-25"
+  },
+  "02_76": {
+    "question": "A large e-commerce platform wants to upgrade its payment system, recommendation engine, and inventory tracking at the same time.<p>Which development methodology would best suit this scenario?</p>",
+    "choices": {
+      "A": { "choice": "Waterfall", "correct": false },
+      "B": { "choice": "Parallel Development", "correct": true },
+      "C": { "choice": "Agile", "correct": false },
+      "D": { "choice": "Throwaway Prototyping", "correct": false }
+    },
+    "bank": "W-25"
   }
 }

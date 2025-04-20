@@ -682,5 +682,150 @@
       "B": { "choice": "False", "correct": true }
     },
     "bank": "F-24"
+  },
+  "01_79": {
+    "question": "A company is considering two system development projects.<ul><li>Project A has a higher NPV but requires a technology stack that the company has no prior experience with.</li><li>Project B has a lower NPV but fits within the company's existing technical expertise.</li></ul>As a systems analyst, what should you recommend?",
+    "choices": {
+      "A": {
+        "choice": "Select Project A because higher NPV means higher feasibility.",
+        "correct": false
+      },
+      "B": {
+        "choice": "Select Project B because the company has experience with the required technology.",
+        "correct": false
+      },
+      "C": {
+        "choice": "Conduct a technical feasibility assessment to evaluate the risks of Project A before making a decision.",
+        "correct": true
+      },
+      "D": {
+        "choice": "Recommend Project A immediately, since the team can always learn new technologies later.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
+  },
+  "01_80": {
+    "question": "A systems analyst's primary role is to focus on writing efficient code to ensure system performance.",
+    "choices": {
+      "A": { "choice": "True", "correct": false },
+      "B": { "choice": "False", "correct": true }
+    },
+    "bank": "W-25"
+  },
+  "01_81": {
+    "question": "A hospital's appointment scheduling system has long wait times due to manual data entry and inefficient doctor availability tracking.<p>As a systems analyst, what is the most effective long-term solution?</p>",
+    "choices": {
+      "A": {
+        "choice": "Automate appointment booking using AI to minimize human involvement.",
+        "correct": false
+      },
+      "B": {
+        "choice": "Reengineer the entire scheduling process, removing inefficiencies before considering automation.",
+        "correct": true
+      },
+      "C": {
+        "choice": "Train employees to enter data faster to reduce wait times.",
+        "correct": false
+      },
+      "D": {
+        "choice": "Increase staff numbers to handle the scheduling workload more efficiently.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
+  },
+  "01_82": {
+    "question": "A project with a negative Net Present Value (NPV) should always be rejected because it is not economically feasible.",
+    "choices": {
+      "A": { "choice": "True", "correct": false },
+      "B": { "choice": "False", "correct": true },
+      "bank": "W-25"
+    }
+  },
+  "01_83": {
+    "question": "A university is considering an online grading system for faculty. Which stakeholder group is most likely to resist the change and why?",
+    "choices": {
+      "A": {
+        "choice": "Students, because they will need to learn a new system.",
+        "correct": false
+      },
+      "B": {
+        "choice": "IT Department, because maintaining the system adds additional workload.",
+        "correct": false
+      },
+      "C": {
+        "choice": "Professors, because they might not trust the new system's reliability.",
+        "correct": true
+      },
+      "D": {
+        "choice": "University Administration, because they make decisions at a higher level and are not directly affected.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
+  },
+  "01_84": {
+    "question": "A system request should focus on listing the desired technical features rather than the business need for the system.",
+    "choices": {
+      "A": { "choice": "True", "correct": false },
+      "B": { "choice": "False", "correct": true }
+    },
+    "bank": "W-25"
+  },
+
+  "01_85": {
+    "question": "A logistics company is implementing a new inventory tracking system. Employees are reluctant because they fear job loss due to automation.<p>As a systems analyst, what strategy should you recommend to increase adoption?</p>",
+    "choices": {
+      "A": {
+        "choice": "Offer training to employees on how the new system can support their jobs rather than replace them.",
+        "correct": true
+      },
+      "B": {
+        "choice": "Proceed with the system rollout since automation is inevitable.",
+        "correct": false
+      },
+      "C": {
+        "choice": "Recommend canceling the project due to employee resistance.",
+        "correct": false
+      },
+      "D": {
+        "choice": "Reduce features in the new system to minimize disruption.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
+  },
+  "01_86": {
+    "question": "A retail company is evaluating whether to improve its checkout process.<p>Which approach reflects Business Process Improvement (BPI) rather than Business Process Reengineering (BPR)?</p>",
+    "choices": {
+      "A": {
+        "choice": "Redesigning the entire checkout experience with new technology.",
+        "correct": false
+      },
+      "B": {
+        "choice": "Removing unnecessary checkout steps to speed up transactions.",
+        "correct": true
+      },
+      "C": {
+        "choice": "Replacing cashiers with a fully automated system.",
+        "correct": false
+      },
+      "D": {
+        "choice": "Eliminating the checkout process entirely and switching to an online-only store.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
+  },
+  "01_87": {
+    "question": "A team completed a feasibility study but later faced serious technical challenges because they ignored system integration risks.<p>Which feasibility factor did they likely overlook?</p>",
+    "choices": {
+      "A": { "choice": "Economic feasibility", "correct": false },
+      "B": { "choice": "Organizational feasibility", "correct": false },
+      "C": { "choice": "Technical feasibility", "correct": true },
+      "D": { "choice": "Legal feasibility", "correct": false }
+    },
+    "bank": "W-25"
   }
 }

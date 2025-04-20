@@ -347,5 +347,158 @@
     },
     "hasImage": true,
     "bank": "F-24"
+  },
+  "05_43": {
+    "question": "A junior systems analyst has created a context diagram for a university registration system but made some errors.<p>Which issue(s) would make the context diagram incorrect?</p>",
+    "choices": {
+      "A": {
+        "choice": "It includes only one process representing the system as a whole.",
+        "correct": false
+      },
+      "B": {
+        "choice": "It shows data flows between external entities and the system.",
+        "correct": false
+      },
+      "C": {
+        "choice": "It includes a data store, representing student records.",
+        "correct": true
+      }
+    },
+    "multiSelect": true,
+    "bank": "W-25"
+  },
+  "05_44": {
+    "question": "In a level 0 DFD, a data flow should never connect two external entities without passing through a process.",
+    "choices": {
+      "A": { "choice": "True", "correct": true },
+      "B": { "choice": "False", "correct": false }
+    },
+    "bank": "W-25"
+  },
+  "05_45": {
+    "question": "A company is developing an order processing system.<p>The level 0 DFD includes a process \"Handle Order\" that is too complex. The analyst wants to break it down further.</p><p>What is the best approach?</p>",
+    "choices": {
+      "A": {
+        "choice": "Add more external entities to level 0 to clarify order handling.",
+        "correct": false
+      },
+      "B": {
+        "choice": "Create a level 1 DFD, decomposing \"Handle Order\" into smaller processes.",
+        "correct": true
+      },
+      "C": {
+        "choice": "Remove \"Handle Order\" from level 0 and replace it with multiple separate processes.",
+        "correct": false
+      },
+      "D": {
+        "choice": "Change the context diagram to show more system details.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
+  },
+  "05_46": {
+    "question": "A level 0 DFD must always include the same external entities and data flows as the context diagram to be correctly balanced.",
+    "choices": {
+      "A": { "choice": "True", "correct": true },
+      "B": { "choice": "False", "correct": false }
+    },
+    "bank": "W-25"
+  },
+  "05_47": {
+    "question": "A banking system includes a data store for customer transactions. The analyst incorrectly models it as an external entity.<p>Why is this incorrect?</p>",
+    "choices": {
+      "A": {
+        "choice": "Data stores represent persistent system data, while external entities are outside the system.",
+        "correct": true
+      },
+      "B": {
+        "choice": "External entities only interact with other external entities, not data stores.",
+        "correct": false
+      },
+      "C": {
+        "choice": "A system should never include both external entities and data stores in the same DFD.",
+        "correct": false
+      },
+      "D": {
+        "choice": "Data stores should only be included in level 2 DFDs or lower.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
+  },
+  "05_48": {
+    "question": "A DFD process must have at least one input and one output to be correctly modeled.",
+    "choices": {
+      "A": { "choice": "True", "correct": true },
+      "B": { "choice": "False", "correct": false }
+    },
+    "bank": "W-25"
+  },
+  "05_49": {
+    "question": "Which statement best describes a key difference between a DFD and a flowchart?",
+    "choices": {
+      "A": {
+        "choice": "A DFD focuses on data movement, while a flowchart focuses on step-by-step task execution.",
+        "correct": true
+      },
+      "B": {
+        "choice": "A flowchart is used for business process modeling, while a DFD is only used in programming.",
+        "correct": false
+      },
+      "C": {
+        "choice": "Flowcharts always include external entities, while DFDs never do.",
+        "correct": false
+      },
+      "D": {
+        "choice": "DFDs use standardized symbols, while flowcharts do not.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
+  },
+  "05_50": {
+    "question": "A student enrollment system has the following DFD components:<ul><li>Student → Register for Course → Selected Course → Course Database</li></ul>What is wrong with this DFD?",
+    "choices": {
+      "A": {
+        "choice": "The process \"Register for Course\" should be removed.",
+        "correct": false
+      },
+      "B": {
+        "choice": "There should be no direct data flow between Student and Course Database.",
+        "correct": true
+      },
+      "C": {
+        "choice": "\"Student\" should be a process, not an external entity.",
+        "correct": false
+      },
+      "D": {
+        "choice": "The Course Database should be connected to another data store.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
+  },
+  "05_51": {
+    "question": "A company's inventory system has a level 1 DFD with too many processes and data flows, making it hard to interpret.<p>What should the analyst do?</p>",
+    "choices": {
+      "A": {
+        "choice": "Reduce the number of processes by combining multiple activities into one.",
+        "correct": false
+      },
+      "B": {
+        "choice": "Decompose the level 1 DFD into separate level 2 DFDs for major processes.",
+        "correct": true
+      },
+      "C": {
+        "choice": "Remove data stores to simplify the diagram.",
+        "correct": false
+      },
+      "D": {
+        "choice": "Convert the DFD into a flowchart instead.",
+        "correct": false
+      }
+    },
+    "bank": "W-25"
   }
 }
