@@ -458,7 +458,7 @@
     "bank": "W-25"
   },
   "05_50": {
-    "question": "A student enrollment system has the following DFD components:<ul><li>Student → Register for Course → Selected Course → Course Database</li></ul>What is wrong with this DFD?",
+    "question": "What is wrong with this DFD for a student enrollment system?",
     "choices": {
       "A": {
         "choice": "The process \"Register for Course\" should be removed.",
@@ -477,6 +477,7 @@
         "correct": false
       }
     },
+    "hasImage": true,
     "bank": "W-25"
   },
   "05_51": {

@@ -662,19 +662,19 @@
     "question": "A company tracks employees and projects. Each employee can be assigned to multiple projects, and each project can have multiple employees working on it. In addition each project is assigned to only one employee who manages it.<p>Which of the following ERDs best represents these business rules?</p>",
     "choices": {
       "A": {
-        "choice": "EMPLOYEE → is assigned to → PROJECT",
+        "hasImage": { "transparent": true },
         "correct": false
       },
       "B": {
-        "choice": "EMPLOYEE → is assigned to → PROJECT → manages → MANAGER",
+        "hasImage": { "transparent": true },
         "correct": false
       },
       "C": {
-        "choice": "EMPLOYEE → is assigned to → PROJECT",
+        "hasImage": { "transparent": true },
         "correct": false
       },
       "D": {
-        "choice": "EMPLOYEE → is assigned to & manages → PROJECT",
+        "hasImage": { "transparent": true },
         "correct": true
       }
     },
@@ -684,19 +684,19 @@
     "question": "A hospital system tracks patients and doctors. A patient must have a doctor assigned, but doctors may have zero or more patients assigned.<p>Which of the following correctly represents this relationship?</p>",
     "choices": {
       "A": {
-        "choice": "DOCTOR (1) — is assigned to — (N) PATIENT",
-        "correct": true
-      },
-      "B": {
-        "choice": "DOCTOR (N) — is assigned to — (1) PATIENT",
+        "hasImage": { "transparent": true },
         "correct": false
       },
+      "B": {
+        "hasImage": { "transparent": true },
+        "correct": true
+      },
       "C": {
-        "choice": "DOCTOR (N) — is assigned to — (N) PATIENT",
+        "hasImage": { "transparent": true },
         "correct": false
       },
       "D": {
-        "choice": "DOCTOR (1) — is assigned to — (1) PATIENT",
+        "hasImage": { "transparent": true },
         "correct": false
       }
     },
@@ -733,18 +733,18 @@
     "bank": "W-25"
   },
   "06_80": {
-    "question": "A library system allows members to check out books. Each member can borrow up to 5 books at a time.<p>Which of the following ERDs best guarantee the borrowing limit of 5 books at a time for a member of the library?</p>",
+    "question": "A library system allows members to check out books. Each member can borrow up to 5 books at a time.<p>Which of the following ERDs guarantee the borrowing limit of 5 books at a time for a member of the library?</p>",
     "choices": {
       "A": {
-        "choice": "MEMBER with NUM_BORROWED attribute connected to BORROWING intersection entity",
+        "hasImage": { "transparent": true },
         "correct": true
       },
       "B": {
-        "choice": "Simple many-to-many relationship between MEMBER and BOOK",
+        "hasImage": { "transparent": true },
         "correct": false
       },
       "C": {
-        "choice": "MEMBER with CHECKOUT_STATUS attribute",
+        "hasImage": { "transparent": true },
         "correct": false
       }
     },
