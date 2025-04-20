@@ -254,7 +254,7 @@
 }
 
 #quiz:not(.submitted) {
-  li {
+  .question-choices li {
     display: grid;
   }
 }
