@@ -1,12 +1,17 @@
 body {
-  background-color: #262626;
-  color: #eeeeee;
+  background-color: rgb(32, 32, 32);
+  color: #ddd;
+  b,
+  h1 {
+    color: #fff;
+  }
+
   .page {
     footer {
       #footer {
         #github .bx {
           color: rebeccapurple;
-          background-color: #e0e0e0;
+          background-color: #ddd;
           border-radius: 50%;
         }
 
@@ -26,7 +31,7 @@ input {
   accent-color: rebeccapurple;
 }
 select {
-  background-color: #262626;
+  background-color: rgb(32, 32, 32);
   color: #f0f0f0;
 }
 
@@ -51,11 +56,10 @@ td {
 
 #home-page:has(#license-notice.visible) #main #license-notice {
   #hawaiian {
-    /* Make the license image a little nicer on the eyes. */
     opacity: 75%;
   }
   #license-text {
-    background-color: #262626;
+    background-color: rgb(32, 32, 32);
     color: #f0f0f0;
   }
   #license-agree-text {
@@ -72,7 +76,7 @@ td {
 
 .explanation-container {
   div.explanation:not(.empty) {
-    color: hsl(60, 90%, 80%);
+    color: hsl(60, 90%, 85%);
 
     & ~ .bx {
       color: hsl(60, 90%, 80%);
@@ -80,112 +84,42 @@ td {
   }
 
   textarea.explanation {
-    background-color: #262626;
+    background-color: rgb(32, 32, 32);
     color: #fff;
   }
+}
+
+.question-title {
+  background-color: transparent !important;
 }
 
 #quiz.submitted {
   .question-choices {
     li.correct {
-      &:first-child {
-        margin-top: calc(0.55rem + 3px);
-      }
-      &:not(:first-child) {
-        margin-top: calc(0.55rem - 3px);
-      }
-      &:last-child {
-        margin-bottom: calc(0.55rem + 3px);
-      }
-      &:not(:last-child) {
-        margin-bottom: calc(0.55rem - 3px);
-      }
-
-      @media (width < 600px) {
-        &:first-child {
-          margin-top: calc(0.525rem + 3px);
-        }
-        &:not(:first-child) {
-          margin-top: calc(0.525rem - 3px);
-        }
-        &:last-child {
-          margin-bottom: calc(0.525rem + 3px);
-        }
-        &:not(:last-child) {
-          margin-bottom: calc(0.525rem - 3px);
-        }
-      }
-
-      @media (width < 450px) {
-        &:first-child {
-          margin-top: calc(0.5rem + 3px);
-        }
-        &:not(:first-child) {
-          margin-top: calc(0.5rem - 3px);
-        }
-        &:last-child {
-          margin-bottom: calc(0.5rem + 3px);
-        }
-        &:not(:last-child) {
-          margin-bottom: calc(0.5rem - 3px);
-        }
-      }
-
-      @media print {
-        &:first-child {
-          margin-top: calc(0.4rem + 3px);
-        }
-        &:not(:first-child) {
-          margin-top: calc(0.4rem - 3px);
-        }
-        &:last-child {
-          margin-bottom: calc(0.4rem + 3px);
-        }
-        &:not(:last-child) {
-          margin-bottom: calc(0.4rem - 3px);
-        }
-      }
-
-      margin-left: -3px;
-
       label {
-        padding: 3px;
-        border-radius: 6px;
         background-color: #1ed96f24;
         color: #11ce73;
       }
     }
   }
 
-  .question {
-    @media not print {
-      &.incorrect .question-title {
-        background-color: #f133331f;
-        color: #df0c33;
-      }
+  @media not print {
+    .question.incorrect .question-title {
+      color: rgb(255, 51, 51);
     }
   }
 }
 
-.question {
-  @media not print {
-    .question-title {
-      margin-left: -3px;
-      padding: 3px;
-      border-radius: 6px;
-    }
-
-    &.unsure .question-title {
-      background-color: #d0c31222;
-      color: #dfdf0c;
-    }
+@media not print {
+  .question.unsure .question-title {
+    color: rgb(231, 231, 0);
   }
 }
 
 .panel {
-  color: #eee;
+  color: #ddd;
   opacity: 90%;
-  background-color: #363636;
+  background-color: rgb(48, 48, 48);
 }
 
 #review-panel {
@@ -203,7 +137,7 @@ td {
   }
 }
 .bxs-x-circle {
-  background-color: #262626;
+  background-color: rgb(32, 32, 32);
 }
 
 @keyframes blink {
@@ -211,12 +145,12 @@ td {
     background-color: hsl(180, 60%, 50%);
   }
   100% {
-    background-color: #262626;
+    background-color: rgb(32, 32, 32);
   }
 }
 
 #login-form {
-  background-color: #262626;
+  background-color: rgb(32, 32, 32);
   border: 2px solid rebeccapurple;
   box-shadow: 0px 0px 0.8rem rebeccapurple;
 
@@ -230,7 +164,7 @@ td {
   }
 
   input[type="text"] {
-    background-color: #262626;
+    background-color: rgb(32, 32, 32);
     color: white;
     border: 2px solid silver;
   }

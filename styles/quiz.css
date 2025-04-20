@@ -51,7 +51,9 @@
     }
   }
 
-  .question-body {
+  .question-body,
+  .question-choices,
+  .explanation-container {
     margin: 0.7rem 0;
     @media (width < 600px) {
       margin: 0.65rem 0;
@@ -81,11 +83,16 @@
     @media (width >= 900px) {
       padding-inline-start: 2.25rem;
     }
+
+    li {
+      margin: 0.4rem 0;
+    }
   }
 
   .explanation-container {
     display: none;
 
+    padding-top: 3px;
     margin-left: 2.25rem;
     width: calc(100% - 2.25rem);
     @media (width < 900px) {
@@ -253,14 +260,48 @@
 }
 
 #quiz.submitted {
-  li.correct label {
-    background-color: hsl(120, 80%, 80%);
+  li.correct {
+    margin-left: -3px;
+
+    &:last-child {
+      margin-bottom: calc(0.55rem + 3px);
+    }
+
+    @media (width < 600px) {
+      &:last-child {
+        margin-bottom: calc(0.525rem + 3px);
+      }
+    }
+
+    @media (width < 450px) {
+      &:last-child {
+        margin-bottom: calc(0.5rem + 3px);
+      }
+    }
+
+    @media print {
+      &:last-child {
+        margin-bottom: calc(0.4rem + 3px);
+      }
+    }
+
+    label {
+      padding: 6px 6px 3px 3px;
+      border-radius: 6px;
+      background-color: hsl(120, 80%, 80%);
+    }
   }
 
   .question {
     @media not print {
+      .question-title {
+        margin-left: -2px;
+        padding: 4px 2px 2px 2px;
+        border-radius: 4px;
+      }
+
       &.incorrect .question-title {
-        background-color: hsla(0, 80%, 75%, 75%);
+        background-color: hsla(0, 85%, 75%, 75%);
       }
     }
 

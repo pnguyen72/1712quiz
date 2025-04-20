@@ -59,18 +59,18 @@
         <form id="form">
           <h1 class="app-title">COMP 1712 Practice Quiz</h1>
           <div id="exam-selection">
-            <div>Exam:</div>
+            <u>Exam:</u>
           </div>
           <div id="module-selection">
             <div id="modules-header">
-              <span>Modules:</span>
+              <u>Modules:</u>
               <span id="coverage" class="coverage">learned</span>
             </div>
             <ul id="modules-list"></ul>
           </div>
           <div>
             <label>
-              <span>Questions per attempt:</span>
+              <u>Questions per attempt:</u>
               <select id="questions-count-choice" style="font-size: 1rem">
                 <option value="10">10</option>
                 <option value="20">20</option>
@@ -81,7 +81,7 @@
             </label>
           </div>
           <div id="other-options">
-            <span>Other options:</span>
+            <u>Other options:</u>
             <ul class="menu-choices">
               <li id="include-learned" style="display: none">
                 <label>
@@ -157,9 +157,9 @@
                   <input
                     type="text"
                     name="username"
-                    placeholder="3-12 alphanumeric char"
+                    placeholder="3-14 alphanumeric characters"
                     class="username"
-                    pattern="[\w\s\-]{3,12}"
+                    pattern="[\w\s\-]{3,14}"
                   />
                 </div>
 
@@ -168,7 +168,7 @@
                   <input
                     type="text"
                     name="password"
-                    placeholder="if you lost it, it's gone forever"
+                    placeholder="don't tell me you lost it"
                     class="password"
                   />
                 </div>
