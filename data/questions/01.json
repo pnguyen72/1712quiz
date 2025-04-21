@@ -739,9 +739,9 @@
     "question": "A project with a negative Net Present Value (NPV) should always be rejected because it is not economically feasible.",
     "choices": {
       "A": { "choice": "True", "correct": false },
-      "B": { "choice": "False", "correct": true },
-      "bank": "W-25"
-    }
+      "B": { "choice": "False", "correct": true }
+    },
+    "bank": "W-25"
   },
   "01_83": {
     "question": "A university is considering an online grading system for faculty. Which stakeholder group is most likely to resist the change and why?",
