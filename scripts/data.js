@@ -11,15 +11,15 @@ function loadStorage() {
 }
 
 function getImagePath(id, transparent = false) {
-    let path = `./data/images/${id}`;
+    let parentDir = `./data/images`;
     if (transparent) {
         if (darkModeLink.disabled) {
-            path += "-light";
+            parentDir += "/light";
         } else {
-            path += "-dark";
+            parentDir += "/dark";
         }
     }
-    return path + ".png";
+    return `${parentDir}/${id}.png`;
 }
 
 questionsData.load = function (module) {
@@ -29,7 +29,7 @@ questionsData.load = function (module) {
     if (Object.hasOwn(this.__loader, module)) {
         return this.__loader[module];
     }
-    this.__loader[module] = fetch(`./data/modules/${module}.json`)
+    this.__loader[module] = fetch(`./data/questions/${module}.json`)
         .then((response) => response.json())
         .catch(() => new Object())
         .then((questions) => {

@@ -77,7 +77,7 @@
 
     &.choice-image {
       max-width: calc(100% - 2rem);
-      max-height: 25vh;
+      max-height: 20vh;
     }
   }
 

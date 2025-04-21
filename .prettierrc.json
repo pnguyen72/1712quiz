@@ -6,7 +6,7 @@
       "options": { "tabWidth": 4 }
     },
     {
-      "files": ["data/modules/*.json", "elements.js"],
+      "files": ["data/questions/*.json", "elements.js"],
       "options": { "printWidth": 9999 }
     }
   ]
