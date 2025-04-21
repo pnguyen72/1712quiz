@@ -192,7 +192,7 @@ async function generateQuestionBankSelection() {
         });
     }
 
-    if (localStorage.getItem("bank")) {
+    if (localStorage.getItem("bank") != null) {
         localStorage
             .getItem("bank")
             .split(" ")
