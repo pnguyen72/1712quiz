@@ -84,13 +84,17 @@
               </select>
             </label>
           </div>
+          <div id="question-bank-selection" style="display: none">
+            <u>Question banks:</u>
+            <ul id="banks"></ul>
+          </div>
           <div id="behavior" style="display: none">
             <u>Behavior:</u>
             <ul class="menu-choices">
-              <li id="include-learned" style="display: none">
+              <li id="exclude-learned" style="display: none">
                 <label>
-                  <input type="checkbox" checked />
-                  <span>Include learned questions</span>
+                  <input type="checkbox" />
+                  <span>Exclude learned questions</span>
                 </label>
               </li>
               <li id="ignore-unanswered" style="display: none">
