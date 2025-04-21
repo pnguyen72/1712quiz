@@ -1,8 +1,9 @@
 body {
   background-color: rgb(32, 32, 32);
   color: #ddd;
-  b,
-  h1 {
+
+  #home-page :is(b, h1),
+  .question-title {
     color: #fff;
   }
 

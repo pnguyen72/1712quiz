@@ -183,7 +183,7 @@
       }
 
       > :is(ul, ol) {
-        &:only-child {
+        &:first-child {
           padding-inline-start: 1rem;
         }
         margin-top: 0.4rem;
