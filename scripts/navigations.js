@@ -26,7 +26,7 @@ function initalizeSelections() {
         document.getElementById(defaultExam).click();
     }
 
-    if (licenseNotice.matches(".visible")) {
+    if (licenseNotice?.matches(".visible")) {
         form
             .querySelectorAll("input,select")
             .forEach((input) => (input.disabled = true));
