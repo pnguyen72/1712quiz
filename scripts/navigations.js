@@ -15,22 +15,19 @@ function blink(element) {
     }, 1000);
 }
 
-function initalizeSelections() {
+async function initalizeSelections() {
     generateExamSelection();
 
     const defaultExam = Object.keys(metadata.modules)[0];
     const exam = localStorage.getItem("exam") ?? defaultExam;
     if (document.getElementById(exam)) {
-        document.getElementById(exam).click();
+        document.getElementById(exam).checked = true;
     } else {
-        document.getElementById(defaultExam).click();
+        document.getElementById(defaultExam).checked = true;
     }
 
-    if (licenseNotice?.matches(".visible")) {
-        form
-            .querySelectorAll("input,select")
-            .forEach((input) => (input.disabled = true));
-    }
+    generateModuleSelection();
+    const questionBankGenerator = generateQuestionBankSelection();
 
     const questionsCount = localStorage.getItem("questions");
     if (questionsCount) {
@@ -64,9 +61,14 @@ function initalizeSelections() {
         const enabled =
             localStorage.getItem("explain") == "true" && !isLeaderboardPage();
         enableExplanations.checked = enabled;
-        if (!enabled) return;
+        if (enabled) {
+            loadResources();
+        }
+    } else {
+        loadResources();
     }
-    loadResources();
+
+    await questionBankGenerator;
 }
 
 function getSelectedExam() {
@@ -81,13 +83,8 @@ function getSelectedModules() {
 }
 
 function getSelectedQuestionBanks() {
-    const inputs = document.querySelectorAll(".bank-input");
-    if (inputs.length == 1) {
-        return [inputs[0].id];
-    }
-
-    const checkedInputs = [...inputs].filter((input) => input.checked);
-    return checkedInputs.map((box) => box.id);
+    const checkedBoxes = [...document.querySelectorAll(".bank-input:checked")];
+    return checkedBoxes.map((box) => box.id);
 }
 
 function refreshAttemptsTable() {

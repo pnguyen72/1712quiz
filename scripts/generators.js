@@ -10,24 +10,24 @@ function generateExamSelection() {
     }
 
     let indexOffset = 1;
-    for (const exam in metadata.modules) {
-        const choiceInput = document.createElement("input");
-        choiceInput.id = exam;
-        choiceInput.type = "radio";
-        choiceInput.name = "exam";
-        choiceInput.setAttribute("indexOffset", indexOffset);
-        indexOffset += metadata.modules[exam].length;
+    for (const examId in metadata.modules) {
+        const examInput = document.createElement("input");
+        examInput.id = examId;
+        examInput.type = "radio";
+        examInput.name = "exam";
+        examInput.setAttribute("indexOffset", indexOffset);
+        indexOffset += metadata.modules[examId].length;
 
-        const choiceText = document.createElement("span");
-        choiceText.innerText = exam;
+        const examText = document.createElement("span");
+        examText.innerText = examId;
 
-        const choiceLabel = document.createElement("label");
-        choiceLabel.appendChild(choiceInput);
-        choiceLabel.appendChild(choiceText);
+        const examLabel = document.createElement("label");
+        examLabel.appendChild(examInput);
+        examLabel.appendChild(examText);
 
-        const choice = document.createElement("li");
-        choice.appendChild(choiceLabel);
-        selections.appendChild(choice);
+        const exam = document.createElement("li");
+        exam.appendChild(examLabel);
+        selections.appendChild(exam);
     }
 }
 
@@ -61,7 +61,7 @@ function generateModuleSelection() {
 
         const module = document.createElement("li");
         const moduleLabel = document.createElement("label");
-        const moduleSelectBox = document.createElement("input");
+        const moduleInput = document.createElement("input");
         const moduleTitle = document.createElement("span");
         const ongoingLabel = document.createElement("span");
         const moduleCoverage = document.createElement("span");
@@ -70,15 +70,15 @@ function generateModuleSelection() {
         ongoingLabel.className = "ongoing";
         ongoingLabel.innerText = "*";
         moduleCoverage.className = "coverage";
-        moduleSelectBox.className = "module-input";
-        moduleSelectBox.id = moduleId;
-        moduleSelectBox.type = "checkbox";
-        moduleSelectBox.addEventListener("input", () => {
+        moduleInput.className = "module-input";
+        moduleInput.id = moduleId;
+        moduleInput.type = "checkbox";
+        moduleInput.addEventListener("input", () => {
             document.getElementById("module-all").checked =
                 !selections.querySelector(".module-input:not(:checked)");
         });
 
-        moduleLabel.appendChild(moduleSelectBox);
+        moduleLabel.appendChild(moduleInput);
         moduleLabel.appendChild(moduleTitle);
         moduleLabel.appendChild(ongoingLabel);
         module.appendChild(moduleLabel);
@@ -86,27 +86,27 @@ function generateModuleSelection() {
         selections.appendChild(module);
     });
 
-    const module = document.createElement("li");
-    const moduleLabel = document.createElement("label");
-    const moduleSelectBox = document.createElement("input");
-    const moduleTitle = document.createElement("b");
-    const moduleCoverage = document.createElement("span");
+    const allModules = document.createElement("li");
+    const allModulesLabel = document.createElement("label");
+    const allModulesInput = document.createElement("input");
+    const allModulesTitle = document.createElement("b");
+    const allModulesCoverage = document.createElement("span");
 
-    moduleTitle.innerText = "All of them!";
-    moduleCoverage.className = "coverage";
-    moduleSelectBox.type = "checkbox";
-    moduleSelectBox.id = "module-all";
-    moduleSelectBox.addEventListener("click", () =>
+    allModulesTitle.innerText = "All of them!";
+    allModulesCoverage.className = "coverage";
+    allModulesInput.type = "checkbox";
+    allModulesInput.id = "module-all";
+    allModulesInput.addEventListener("click", () =>
         document
             .querySelectorAll(".module-input")
-            .forEach((box) => (box.checked = moduleSelectBox.checked))
+            .forEach((box) => (box.checked = allModulesInput.checked))
     );
 
-    moduleLabel.appendChild(moduleSelectBox);
-    moduleLabel.appendChild(moduleTitle);
-    module.appendChild(moduleLabel);
-    module.appendChild(moduleCoverage);
-    selections.appendChild(module);
+    allModulesLabel.appendChild(allModulesInput);
+    allModulesLabel.appendChild(allModulesTitle);
+    allModules.appendChild(allModulesLabel);
+    allModules.appendChild(allModulesCoverage);
+    selections.appendChild(allModules);
 
     (localStorage.getItem("modules") ?? "")
         .split(" ")
@@ -122,43 +122,83 @@ function generateModuleSelection() {
 }
 
 async function generateQuestionBankSelection() {
+    if (Object.keys(metadata.questionBanks).length < 2) {
+        hide(questionBankSelection);
+    }
+
     const selections = document.createElement("ul");
     selections.id = "banks";
     selections.className = "menu-choices";
     document.getElementById("banks").replaceWith(selections);
 
-    const modules = document.querySelectorAll(".module-input");
-    const storedSelections =
-        localStorage.getItem("bank") ??
-        Object.keys(metadata.questionBanks).join(" ");
-
-    for (const [bank, name] of Object.entries(metadata.questionBanks)) {
+    for (const [bankId, bankName] of Object.entries(metadata.questionBanks)) {
         let size = 0;
-        for (const module of modules) {
-            size += await questionsData.sizeOf(module.id, bank);
+        for (const moduleInput of document.querySelectorAll(".module-input")) {
+            size += await questionsData.sizeOf(moduleInput.id, bankId);
         }
         if (size == 0) {
             continue;
         }
 
-        const choiceInput = document.createElement("input");
-        choiceInput.id = bank;
-        choiceInput.disabled = licenseNotice?.matches(".visible");
-        choiceInput.className = "bank-input";
-        choiceInput.type = "checkbox";
-        choiceInput.name = "bank";
-        choiceInput.checked = storedSelections.includes(bank);
+        const bankInput = document.createElement("input");
+        bankInput.id = bankId;
+        bankInput.className = "bank-input";
+        bankInput.type = "checkbox";
+        bankInput.name = "bank";
 
-        const choiceText = document.createElement("span");
-        choiceText.innerText = name;
+        const bankText = document.createElement("span");
+        bankText.innerText = bankName;
 
-        const choiceLabel = document.createElement("label");
-        choiceLabel.appendChild(choiceInput);
-        choiceLabel.appendChild(choiceText);
+        const bankLabel = document.createElement("label");
+        bankLabel.appendChild(bankInput);
+        bankLabel.appendChild(bankText);
 
-        const choice = document.createElement("li");
-        choice.appendChild(choiceLabel);
-        selections.appendChild(choice);
+        const bank = document.createElement("li");
+        bank.appendChild(bankLabel);
+        selections.appendChild(bank);
+    }
+
+    const onlyBank = selections.querySelector(
+        "li:first-child:last-child input"
+    );
+    if (onlyBank) {
+        onlyBank.checked = onlyBank.disabled = true;
+    } else {
+        const bankInputs = selections.querySelectorAll(".bank-input");
+
+        const allBanks = document.createElement("li");
+        const allBanksInput = document.createElement("input");
+        const allBanksLabel = document.createElement("label");
+        const allBanksText = document.createElement("b");
+
+        allBanksInput.id = "bank-all";
+        allBanksInput.type = "checkbox";
+        allBanksInput.addEventListener("click", () =>
+            bankInputs.forEach((box) => (box.checked = allBanksInput.checked))
+        );
+
+        allBanksText.innerText = "All of them!";
+        allBanksLabel.appendChild(allBanksInput);
+        allBanksLabel.appendChild(allBanksText);
+
+        allBanks.appendChild(allBanksLabel);
+        selections.appendChild(allBanks);
+        bankInputs.forEach((input) => {
+            input.addEventListener("input", () => {
+                allBanksInput.checked = !selections.querySelector(
+                    ".bank-input:not(:checked)"
+                );
+            });
+        });
+    }
+
+    if (localStorage.getItem("bank")) {
+        localStorage
+            .getItem("bank")
+            .split(" ")
+            .forEach((bankId) => document.getElementById(bankId)?.click());
+    } else {
+        document.getElementById("bank-all")?.click();
     }
 }
 

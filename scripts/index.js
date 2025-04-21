@@ -9,10 +9,9 @@ const urlSelectedUser = urlParams.get("user");
 
 (() => {
     if (!isLeaderboardPage()) {
-        licenseLock();
         loadStorage();
         updateAttemptsTable();
-        loadMetadata().then(initalizeSelections);
+        loadMetadata().then(initalizeSelections).then(licenseLock);
         return;
     }
 

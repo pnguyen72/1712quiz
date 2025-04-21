@@ -30,6 +30,7 @@ form.addEventListener("click", () => {
     }
 });
 
+let disabledInputs;
 function licenseLock() {
     if (
         sessionStorage.getItem("licenseAgreed") == "true" ||
@@ -37,6 +38,8 @@ function licenseLock() {
     ) {
         return;
     }
+    disabledInputs = form.querySelectorAll(":is(input,select):not(:disabled)");
+    disabledInputs.forEach((input) => (input.disabled = true));
     unhide(licenseNotice);
     hide(navbar);
 }
@@ -44,9 +47,7 @@ function licenseLock() {
 function licenseUnlock() {
     sessionStorage.setItem("licenseAgreed", true);
     hide(licenseNotice);
-    for (input of form.querySelectorAll("input,select")) {
-        input.disabled = false;
-    }
+    disabledInputs.forEach((input) => (input.disabled = false));
     unhide(navbar);
 }
 

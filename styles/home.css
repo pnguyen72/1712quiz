@@ -130,10 +130,6 @@
       }
     }
 
-    #question-bank-selection:has(li:first-child:last-child) {
-      display: none;
-    }
-
     #behavior {
       &:not(:has(.visible)) {
         display: none;
