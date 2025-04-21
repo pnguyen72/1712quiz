@@ -38,9 +38,6 @@ function licenseLock() {
         return;
     }
     unhide(licenseNotice);
-    for (input of form.querySelectorAll("input,select")) {
-        input.disabled = true;
-    }
     hide(navbar);
 }
 
@@ -50,7 +47,6 @@ function licenseUnlock() {
     for (input of form.querySelectorAll("input,select")) {
         input.disabled = false;
     }
-    document.getElementById("main").style.display = "block";
     unhide(navbar);
 }
 

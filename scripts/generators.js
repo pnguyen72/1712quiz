@@ -143,6 +143,7 @@ async function generateQuestionBankSelection() {
 
         const choiceInput = document.createElement("input");
         choiceInput.id = bank;
+        choiceInput.disabled = licenseNotice.matches(".visible");
         choiceInput.className = "bank-input";
         choiceInput.type = "checkbox";
         choiceInput.name = "bank";

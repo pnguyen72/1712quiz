@@ -26,6 +26,12 @@ function initalizeSelections() {
         document.getElementById(defaultExam).click();
     }
 
+    if (licenseNotice.matches(".visible")) {
+        form
+            .querySelectorAll("input,select")
+            .forEach((input) => (input.disabled = true));
+    }
+
     const questionsCount = localStorage.getItem("questions");
     if (questionsCount) {
         questionsCountChoice.value = questionsCount;
