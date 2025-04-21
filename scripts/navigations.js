@@ -261,15 +261,19 @@ const questionsScroller = {
         return quizPage.querySelectorAll(".question:is(.incorrect,.unsure)");
     },
     next: function () {
-        const target = this.current
+        let target = this.current
             ? this.current.next(":is(.incorrect,.unsure)")
             : nearestElement(this.getQuestions()).next();
-        (target ?? this.current).scrollTo().blink();
+        target = target ?? this.current;
+        target.scrollTo();
+        blink(target);
     },
     previous: function () {
-        const target = this.current
+        let target = this.current
             ? this.current.previous(":is(.incorrect,.unsure)")
             : nearestElement(this.getQuestions()).previous();
-        (target ?? this.current).scrollTo().blink();
+        target = target ?? this.current;
+        target.scrollTo();
+        blink(target);
     },
 };
