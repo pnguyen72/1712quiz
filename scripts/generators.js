@@ -135,6 +135,9 @@ async function generateQuestionBankSelection() {
         let size = 0;
         for (const moduleInput of document.querySelectorAll(".module-input")) {
             size += await questionsData.sizeOf(moduleInput.id, bankId);
+            if (size > 0) {
+                break;
+            }
         }
         if (size == 0) {
             continue;
