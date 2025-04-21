@@ -594,16 +594,16 @@
   "06_70": {
     "question": "\"A pilot cannot be on duty for more than 10 hours during a 24-hour period.\"<p>If the following ERD models the business rule above, what are the required attributes for the entity <code>DUTY</code> so that we can guarantee the constraint on the hours of flights for pilots?",
     "choices": {
-      "A": { "choice": "DUTY_DURATION" },
-      "B": { "choice": "DUTY_DATE, DUTY_DURATION", "correct": true },
-      "C": { "choice": "DUTY_CODE, DUTY_DATE" },
-      "D": { "choice": "DUTY_DATE" }
+      "A": { "choice": "<code>DUTY_DURATION</code>", "correct": true },
+      "B": { "choice": "<code>DUTY_DATE</code>", "correct": true },
+      "C": { "choice": "<code>DUTY_CODE</code>" }
     },
-    "hasImage": true,
+    "multiSelect": true,
+    "hasImage": { "transparent": true },
     "bank": "F-24"
   },
   "06_71": {
-    "question": "What is the type of relationship between PROFESSOR and CLASS as described in the business rule:<p>\"A professor may teach up to four classes during a semester.\"",
+    "question": "What is the type of relationship between <code>PROFESSOR</code> and <code>CLASS</code> as described in the business rule:<p>\"A professor may teach up to four classes during a semester.\"",
     "choices": {
       "A": { "choice": "1:1" },
       "B": { "choice": "1:4" },

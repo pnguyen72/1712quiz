@@ -477,7 +477,7 @@
         "correct": false
       }
     },
-    "hasImage": true,
+    "hasImage": { "transparent": true },
     "bank": "W-25"
   },
   "05_51": {
