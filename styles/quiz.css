@@ -52,6 +52,7 @@
   }
 
   .question-body,
+  .question-body :is(ul, ol),
   .question-choices,
   .explanation-container {
     margin: 0.7rem 0;
@@ -64,6 +65,10 @@
     @media print {
       margin: 0.5rem 0;
     }
+  }
+
+  .question-body li {
+    margin: 0.4rem 0;
   }
 
   figure {
@@ -89,8 +94,23 @@
       padding-inline-start: 2.25rem;
     }
 
-    li {
-      margin: 0.4rem 0;
+    &:has(li img) {
+      @media (width < 900px) {
+        padding-inline-start: 0.75rem;
+      }
+      @media (width < 750px) {
+        padding-inline-start: 0.5rem;
+      }
+      @media (width < 600px) {
+        padding-inline-start: 0.25rem;
+      }
+      @media (width < 450px) {
+        padding-inline-start: 0;
+      }
+    }
+
+    li:has(img) {
+      margin: 1rem 0;
     }
   }
 
