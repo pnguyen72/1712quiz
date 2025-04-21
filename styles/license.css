@@ -3,7 +3,12 @@
     display: none;
   }
 
+  .app-title {
+    color: grey;
+  }
+
   #main {
+    color: grey;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -11,12 +16,16 @@
 
     form {
       width: 100%;
+
+      .coverage {
+        display: none;
+      }
     }
 
     #license-notice {
       margin: 0;
       position: relative;
-      height: 87vh;
+      height: 92vh;
       object-fit: cover;
 
       #hawaiian {
