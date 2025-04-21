@@ -561,22 +561,10 @@
   "04_67": {
     "question": "A use case for placing an online order includes the following steps:<ol><li>User selects items and adds them to the cart.</li><li>User provides payment details and confirms the order.</li><li>System processes the payment and generates a confirmation message.</li></ol>Which of the following could be considered an alternative path for the \"Place Online Order\" use case?",
     "choices": {
-      "A": {
-        "choice": "The user enters an incorrect shipping address and is prompted to fix it",
-        "correct": true
-      },
-      "B": {
-        "choice": "The user successfully places an order and receives a confirmation email",
-        "correct": false
-      },
-      "C": {
-        "choice": "The user decides to log in before selecting items",
-        "correct": false
-      },
-      "D": {
-        "choice": "The system restocks an item that was previously unavailable",
-        "correct": false
-      }
+      "A": { "choice": "The user enters an incorrect shipping address and is prompted to fix it", "correct": true },
+      "B": { "choice": "The user successfully places an order and receives a confirmation email", "correct": false },
+      "C": { "choice": "The user decides to log in before selecting items", "correct": false },
+      "D": { "choice": "The system restocks an item that was previously unavailable", "correct": false }
     },
     "bank": "W-25"
   },
@@ -591,22 +579,10 @@
   "04_69": {
     "question": "A parking management system needs a use case for automatically charging customers.<p>Which is the best trigger for this use case?</p>",
     "choices": {
-      "A": {
-        "choice": "A customer swiping a payment card at the exit.",
-        "correct": true
-      },
-      "B": {
-        "choice": "A system process that automatically deducts fees at midnight.",
-        "correct": false
-      },
-      "C": {
-        "choice": "A parking attendant manually processing a payment.",
-        "correct": false
-      },
-      "D": {
-        "choice": "A customer receiving an invoice via email.",
-        "correct": false
-      }
+      "A": { "choice": "A customer swiping a payment card at the exit.", "correct": false },
+      "B": { "choice": "A system process that automatically deducts fees at midnight.", "correct": true },
+      "C": { "choice": "A parking attendant manually processing a payment.", "correct": false },
+      "D": { "choice": "A customer receiving an invoice via email.", "correct": false }
     },
     "bank": "W-25"
   },
@@ -621,22 +597,10 @@
   "04_71": {
     "question": "A customer is booking a flight online.<p>The normal flow of the \"Book Flight\" use case includes:</p><ol><li>Customer selects a flight.</li><li>Customer provides passenger details.</li><li>Customer makes a payment.</li><li>System generates a booking confirmation.</li></ol>Which scenario should be modeled as an alternative path?",
     "choices": {
-      "A": {
-        "choice": "Customer cancels the booking before completing payment.",
-        "correct": true
-      },
-      "B": {
-        "choice": "Customer selects a first-class seat instead of economy.",
-        "correct": false
-      },
-      "C": {
-        "choice": "Customer checks in for the flight before departure.",
-        "correct": false
-      },
-      "D": {
-        "choice": "Customer books a hotel through the airline's partner website.",
-        "correct": false
-      }
+      "A": { "choice": "Customer cancels the booking before completing payment.", "correct": true },
+      "B": { "choice": "Customer selects a first-class seat instead of economy.", "correct": false },
+      "C": { "choice": "Customer checks in for the flight before departure.", "correct": false },
+      "D": { "choice": "Customer books a hotel through the airline's partner website.", "correct": false }
     },
     "bank": "W-25"
   },
@@ -651,18 +615,9 @@
   "04_73": {
     "question": "A retail company is implementing a new customer loyalty system. The analyst writes the following use case:<p>Use Case Name: Apply Loyalty Points<br>Primary Actor: Customer<br>Steps:<ol><li>Customer uses loyalty points for a purchase.</li><li>System deducts points.</li><li>Customer gets a discount.</li></ol>What is wrong with this use case?</p>",
     "choices": {
-      "A": {
-        "choice": "It does not define a trigger for when this process starts.",
-        "correct": true
-      },
-      "B": {
-        "choice": "It lacks a clear precondition, such as verifying that the customer has enough points.",
-        "correct": true
-      },
-      "C": {
-        "choice": "It does not account for alternative paths, such as insufficient points.",
-        "correct": true
-      }
+      "A": { "choice": "It does not define a trigger for when this process starts.", "correct": true },
+      "B": { "choice": "It lacks a clear precondition, such as verifying that the customer has enough points.", "correct": true },
+      "C": { "choice": "It does not account for alternative paths, such as insufficient points.", "correct": true }
     },
     "multiSelect": true,
     "bank": "W-25"
@@ -670,22 +625,20 @@
   "04_74": {
     "question": "A banking system includes the use case \"Transfer Funds Between Accounts\". The bank notices that many customers initiate transfers but do not complete them.<p>Which process improvement should be considered first?</p>",
     "choices": {
-      "A": {
-        "choice": "Require users to confirm their transfer twice to ensure security.",
-        "correct": false
-      },
-      "B": {
-        "choice": "Allow users to save incomplete transfers and finish them later.",
-        "correct": false
-      },
-      "C": {
-        "choice": "Reduce the number of input fields required for a transfer.",
-        "correct": true
-      },
-      "D": {
-        "choice": "Automate fund transfers for frequent customers.",
-        "correct": false
-      }
+      "A": { "choice": "Require users to confirm their transfer twice to ensure security.", "correct": false },
+      "B": { "choice": "Allow users to save incomplete transfers and finish them later.", "correct": true },
+      "C": { "choice": "Reduce the number of input fields required for a transfer.", "correct": false },
+      "D": { "choice": "Automate fund transfers for frequent customers.", "correct": false }
+    },
+    "bank": "W-25"
+  },
+  "04_75": {
+    "question": "A systems analyst has gathered requirements for a new supply chain management system.<p>Which of the following is the best way to ensure that these requirements accurately reflect business needs?</p>",
+    "choices": {
+      "A": { "choice": "Immediately start development, assuming requirements are correct.", "correct": false },
+      "B": { "choice": "Have users role-play the use cases to confirm completeness.", "correct": true },
+      "C": { "choice": "Rely solely on senior management's approval, as they understand business strategy.", "correct": false },
+      "D": { "choice": "Ignore user feedback, since developers will refine the system as they code.", "correct": false }
     },
     "bank": "W-25"
   }

@@ -636,10 +636,7 @@
     "question": "A company is designing a new customer support ticketing system. They want to map out how customer issues move through the system from submission to resolution.<p>Which modeling approach should they use?</p>",
     "choices": {
       "A": { "choice": "Use Cases", "correct": false },
-      "B": {
-        "choice": "Entity-Relationship Diagrams (ERDs)",
-        "correct": false
-      },
+      "B": { "choice": "Entity-Relationship Diagrams (ERDs)", "correct": false },
       "C": { "choice": "Data Flow Diagrams (DFDs)", "correct": true },
       "D": { "choice": "Class Diagrams", "correct": false }
     },
@@ -649,10 +646,7 @@
     "question": "A systems analyst is designing a ride-sharing app and wants to model:<ul><li>User requests a ride.</li><li>Driver accepts the request.</li><li>Ride is completed, and payment is processed.</li></ul>Which representation is most effective for modeling these interactions?",
     "choices": {
       "A": { "choice": "A data flow diagram (DFD)", "correct": false },
-      "B": {
-        "choice": "An entity-relationship diagram (ERD)",
-        "correct": false
-      },
+      "B": { "choice": "An entity-relationship diagram (ERD)", "correct": false },
       "C": { "choice": "A use case diagram", "correct": true },
       "D": { "choice": "A class diagram", "correct": false }
     },
@@ -671,11 +665,11 @@
       },
       "C": {
         "hasImage": { "transparent": true },
-        "correct": false
+        "correct": true
       },
       "D": {
         "hasImage": { "transparent": true },
-        "correct": true
+        "correct": false
       }
     },
     "bank": "W-25"
@@ -705,22 +699,10 @@
   "06_78": {
     "question": "A company tracks employee salaries. Managers need to view past salary changes to understand how compensation has evolved.<p>Which is the best approach for modeling this?</p>",
     "choices": {
-      "A": {
-        "choice": "Only store the current salary of each employee.",
-        "correct": false
-      },
-      "B": {
-        "choice": "Overwrite the salary data each time an employee gets a raise.",
-        "correct": false
-      },
-      "C": {
-        "choice": "Maintain a separate salary history, tracking all salary changes over time.",
-        "correct": true
-      },
-      "D": {
-        "choice": "Store salary information in the employee entity, along with previous salaries in separate columns.",
-        "correct": false
-      }
+      "A": { "choice": "Only store the current salary of each employee.", "correct": false },
+      "B": { "choice": "Overwrite the salary data each time an employee gets a raise.", "correct": false },
+      "C": { "choice": "Maintain a separate salary history, tracking all salary changes over time.", "correct": true },
+      "D": { "choice": "Store salary information in the employee entity, along with previous salaries in separate columns.", "correct": false }
     },
     "bank": "W-25"
   },
@@ -737,11 +719,11 @@
     "choices": {
       "A": {
         "hasImage": { "transparent": true },
-        "correct": true
+        "correct": false
       },
       "B": {
         "hasImage": { "transparent": true },
-        "correct": false
+        "correct": true
       },
       "C": {
         "hasImage": { "transparent": true },

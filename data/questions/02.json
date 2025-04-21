@@ -631,20 +631,16 @@
   "02_72": {
     "question": "A banking system requires strict regulatory compliance but also needs frequent feature updates.<p>What is the best approach?</p>",
     "choices": {
-      "A": {
-        "choice": "Waterfall, because compliance requires clear documentation and structured phases.",
+      "A": { "choice": "Waterfall, because compliance requires clear documentation and structured phases.",
         "correct": false
       },
-      "B": {
-        "choice": "Agile, because frequent updates are necessary.",
+      "B": { "choice": "Agile, because frequent updates are necessary.",
         "correct": false
       },
-      "C": {
-        "choice": "A hybrid approach, using Waterfall for compliance-heavy features and Agile for updates.",
+      "C": { "choice": "A hybrid approach, using Waterfall for compliance-heavy features and Agile for updates.",
         "correct": true
       },
-      "D": {
-        "choice": "Neither methodology, because compliance makes development too slow.",
+      "D": { "choice": "Neither methodology, because compliance makes development too slow.",
         "correct": false
       }
     },
@@ -653,20 +649,16 @@
   "02_73": {
     "question": "Which of the following projects would require the most thorough feasibility study before approval?",
     "choices": {
-      "A": {
-        "choice": "A mobile game startup developing a new app.",
+      "A": { "choice": "A mobile game startup developing a new app.",
         "correct": false
       },
-      "B": {
-        "choice": "A healthcare company developing an AI-based diagnosis system.",
+      "B": { "choice": "A healthcare company developing an AI-based diagnosis system.",
         "correct": true
       },
-      "C": {
-        "choice": "A clothing retailer launching an online store.",
+      "C": { "choice": "A clothing retailer launching an online store.",
         "correct": false
       },
-      "D": {
-        "choice": "An e-commerce company testing a new recommendation engine.",
+      "D": { "choice": "An e-commerce company testing a new recommendation engine.",
         "correct": false
       }
     },
@@ -675,20 +667,16 @@
   "02_74": {
     "question": "Which of the following best mitigates the risk of building the wrong product?",
     "choices": {
-      "A": {
-        "choice": "Skipping analysis and focusing on rapid development.",
+      "A": { "choice": "Skipping analysis and focusing on rapid development.",
         "correct": false
       },
-      "B": {
-        "choice": "Using an iterative approach, gathering user feedback at each stage.",
+      "B": { "choice": "Using an iterative approach, gathering user feedback at each stage.",
         "correct": true
       },
-      "C": {
-        "choice": "Relying on stakeholder opinions rather than testing.",
+      "C": { "choice": "Relying on stakeholder opinions rather than testing.",
         "correct": false
       },
-      "D": {
-        "choice": "Sticking to Waterfall, because structured plans prevent mistakes.",
+      "D": { "choice": "Sticking to Waterfall, because structured plans prevent mistakes.",
         "correct": false
       }
     },
