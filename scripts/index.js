@@ -34,5 +34,5 @@ const urlSelectedUser = urlParams.get("user");
 
     form.removeEventListener("input", refreshAttemptsTable);
     form.addEventListener("input", updateLeaderboard);
-    loadMetadata().then(initalizeSelections);
+    loadMetadata().then(initalizeSelections).then(updateLeaderboard);
 })();
