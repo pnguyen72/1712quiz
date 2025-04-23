@@ -30,7 +30,7 @@ form.addEventListener("click", () => {
     }
 });
 
-let disabledInputs;
+let disabledInputs = [];
 function licenseLock() {
     if (
         sessionStorage.getItem("licenseAgreed") == "true" ||
