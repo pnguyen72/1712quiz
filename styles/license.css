@@ -111,6 +111,7 @@
         width: calc(100vw-6rem);
         max-width: 450px;
         margin: 0;
+        margin-top: 0.5rem;
 
         #hawaiian {
           width: 100%;
