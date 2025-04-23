@@ -3,16 +3,10 @@ const licenseText = document.getElementById("license-text");
 const licenceAgreeBtn = document.getElementById("license-agree-btn");
 const licenseDisagreeBtn = document.getElementById("license-disagree-btn");
 
-licenseText.addEventListener(
-    "animationend",
-    () => (licenseText.style.animation = "")
-);
-
 licenceAgreeBtn.addEventListener("click", licenseUnlock);
 
 let disagreeNum = localStorage.getItem("disagree") ?? 0;
-const disagreeTarget = 8;
-
+const disagreeTarget = 4;
 licenseDisagreeBtn.addEventListener("click", () => {
     if (++disagreeNum < disagreeTarget) {
         alert("You can't disagree, dummy!");
@@ -25,7 +19,7 @@ licenseDisagreeBtn.addEventListener("click", () => {
 
 form.addEventListener("click", () => {
     if (licenseNotice.matches(".visible")) {
-        licenseText.style.animation = "blink 1s";
+        blink(licenseText);
         window.scrollTo(0, 0);
     }
 });
