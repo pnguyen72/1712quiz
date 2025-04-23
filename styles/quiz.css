@@ -24,7 +24,12 @@
   .question-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: -0.15rem;
+
+    .question-title {
+      margin-left: -2.5px;
+      padding: 2.5px;
+      border-radius: 5px;
+    }
 
     .learned-tag {
       font-size: 0.9em;
@@ -52,23 +57,34 @@
   }
 
   .question-body,
-  .question-body :is(ul, ol),
-  .question-choices,
-  .explanation-container {
-    margin: 0.7rem 0;
+  .question-body :is(ul, ol, p) {
+    margin: 0.55rem 0;
     @media (width < 600px) {
-      margin: 0.65rem 0;
+      margin: 0.5rem 0;
     }
     @media (width < 450px) {
-      margin: 0.6rem 0;
+      margin: 0.45rem 0;
     }
     @media print {
-      margin: 0.5rem 0;
+      margin: 0.4rem 0;
     }
   }
 
   .question-body li {
     margin: 0.4rem 0;
+  }
+
+  .question-choices {
+    margin: 0.8rem 0;
+    @media (width < 600px) {
+      margin: 0.75rem 0;
+    }
+    @media (width < 450px) {
+      margin: 0.7rem 0;
+    }
+    @media print {
+      margin: 0.6rem 0;
+    }
   }
 
   figure {
@@ -279,60 +295,17 @@
 }
 
 #quiz:not(.submitted) {
-  .question-choices li {
-    display: grid;
+  li label {
+    display: flex;
+    &:has(img) {
+      align-items: center;
+    }
   }
-}
-
-.question-choices label:has(img) {
-  display: flex;
-  align-items: center;
 }
 
 #quiz.submitted {
-  li.correct {
-    margin-left: -3px;
-
-    &:last-child {
-      margin-bottom: calc(0.55rem + 3px);
-    }
-
-    @media (width < 600px) {
-      &:last-child {
-        margin-bottom: calc(0.525rem + 3px);
-      }
-    }
-
-    @media (width < 450px) {
-      &:last-child {
-        margin-bottom: calc(0.5rem + 3px);
-      }
-    }
-
-    @media print {
-      &:last-child {
-        margin-bottom: calc(0.4rem + 3px);
-      }
-    }
-
-    label {
-      padding: 6px 6px 3px 3px;
-      &:has(img) {
-        padding-top: 3px;
-      }
-      border-radius: 6px;
-      background-color: hsl(120, 80%, 80%);
-    }
-  }
-
   .question {
     @media not print {
-      .question-title {
-        margin-left: -2px;
-        padding: 4px 2px 2px 2px;
-        border-radius: 4px;
-      }
-
       &.incorrect .question-title {
         background-color: hsla(0, 85%, 75%, 75%);
       }
@@ -340,6 +313,56 @@
 
     &.incorrect .unsure-label {
       display: none;
+    }
+
+    li {
+      label {
+        display: inline-flex;
+      }
+
+      &.correct {
+        margin-left: -2.5px;
+
+        label {
+          padding: 2.5px;
+          border-radius: 5px;
+          background-color: hsl(120, 80%, 80%);
+        }
+      }
+    }
+
+    li + li.correct,
+    li.correct + li {
+      margin-top: calc(0.65rem - 2.5px);
+
+      @media (width < 600px) {
+        margin-top: calc(0.6rem - 2.5px);
+      }
+
+      @media (width < 450px) {
+        margin-top: calc(0.55rem - 2.5px);
+      }
+
+      @media print {
+        margin-top: calc(0.5rem - 2.5px);
+      }
+    }
+
+    li.correct:has(+ li),
+    li:has(+ li.correct) {
+      margin-bottom: calc(0.65rem - 2.5px);
+
+      @media (width < 600px) {
+        margin-bottom: calc(0.6rem - 2.5px);
+      }
+
+      @media (width < 450px) {
+        margin-bottom: calc(0.55rem - 2.5px);
+      }
+
+      @media print {
+        margin-bottom: calc(0.5rem - 2.5px);
+      }
     }
   }
 
