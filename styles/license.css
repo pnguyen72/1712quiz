@@ -3,8 +3,9 @@
     display: none;
   }
 
-  .app-title {
-    color: grey;
+  .app-title,
+  form {
+    color: gray;
   }
 
   footer {
@@ -12,7 +13,6 @@
   }
 
   #main {
-    color: grey;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -20,7 +20,6 @@
 
     form {
       width: 100%;
-
       .coverage {
         display: none;
       }
@@ -111,7 +110,7 @@
         width: calc(100vw-6rem);
         max-width: 450px;
         margin: 0;
-        margin-top: 0.5rem;
+        margin-top: 0.75rem;
 
         #hawaiian {
           width: 100%;
